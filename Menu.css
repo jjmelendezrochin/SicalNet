@@ -1,0 +1,73 @@
+#nav1 { 
+	list-style:none inside; 
+	margin:0; 
+	padding:0; 
+	text-align:left; 
+	font-family: Arial, Geneva, Helvetica, sans-serif; 
+	font-size:10px; 
+	display: block; 
+	width: 900px; /*line-height: 10%;*/ 
+	}
+	
+/* Bloque de menu de despliegue de menu principal*/
+#nav1 li { 
+	display:block; 
+	position:relative; 
+	float:left; 
+	background: #003366; /* menu background color */ 
+	height: 20px; 
+	padding-top: -10px; 
+	}
+	
+/* Bloque de menu de despliegue de submenus*/
+#nav1 li a { 
+	display: inline-block; 
+	padding: 5px 15px 5px 15px; 
+	text-decoration:none; 
+	width:200px; /* ANCHURA DEL RENGLON this is the width of the menu items (155px original)*/ 
+	line-height: 100%; /* ALTURA DEL RENGLON this is the hieght of the menu items (10px original)*/ 
+	color:#ffffff; /* list item font color */ 
+	height: 20px; 
+	background-image: url('/SicalNet/images/orangeDots.gif'); 
+	background-repeat: no-repeat; 
+	background-position: left; 
+	/**/
+	}
+.unico { 
+	display:block; 
+	padding:0; 
+	text-decoration:none; 
+	width:40px; /* ANCHURA DEL RENGLON this is the width of the menu items */ 
+	line-height:-5px; /* ALTURA DEL RENGLON this is the hieght of the menu items (15px original)*/ 
+	color:#ffffff; /* list item font color */ 
+	height:20px; 
+}
+#nav1 li li a { 
+	font-size:80%; 
+}
+/* smaller font size for sub menu items */ 
+#nav1 li:hover { 
+	background:#FF9900; 
+}
+/* highlights current hovered list item and the parent list items when hovering over sub menues */ #nav1 ul { position:absolute; padding:0; left:0; display:none; /* hides sublists */ }
+#nav1 li:hover ul ul 
+{ 
+	display:none; 
+}
+/* hides sub-sublists */ 
+#nav1 li:hover ul 
+{ 
+	display:block; 
+}
+
+/* Muestra lista de submenus*/ 
+#nav1 li li:hover ul 
+{ 
+	display:block; /* shows sub-sublist on hover */ 
+	padding: 5px 15px 5px 15px; 
+	margin-left:185px; /* MISMO TAMAÑO QUE LA ANCHURA DEL RENGLON this should be the same width as the parent list item (155px original)*/ 
+	margin-top:-20px; /* MISMO TAMAÑO QUE LA ALTURA DEL RENGLON aligns top of sub menu with top of list item (original -30px)*/ 
+	line-height: 100%; /* ALTURA DEL RENGLON this is the hieght of the menu items (10px original)*/ 
+	width:200px; /* Original (155px)*/ 
+	height: 20px;
+}

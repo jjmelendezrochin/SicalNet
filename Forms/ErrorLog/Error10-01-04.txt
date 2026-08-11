@@ -1,0 +1,117 @@
+Date and Time	:	1/10/2004 8:11:55 PM
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.EstadoProductoInfo' does not contain a property with the name Description.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at UserInterface.Forms.Structures.Material.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 118
+   at UserInterface.Forms.Structures.Material.prcEntityToCombo() in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 76
+--------------------------------------------------------------
+
+Date and Time	:	1/10/2004 8:14:29 PM
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.EstadoProductoInfo' does not contain a property with the name Description.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at UserInterface.Forms.Structures.Material.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 118
+   at UserInterface.Forms.Structures.Material.prcEntityToCombo() in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 76
+--------------------------------------------------------------
+
+Date and Time	:	1/10/2004 8:16:57 PM
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.EstadoMaterialInfo' does not contain a property with the name Description.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at UserInterface.Forms.Structures.Material.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 118
+   at UserInterface.Forms.Structures.Material.prcEntityToCombo() in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 76
+--------------------------------------------------------------
+
+Date and Time	:	1/10/2004 8:18:46 PM
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.EstadoMaterialInfo' does not contain a property with the name Description.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at UserInterface.Forms.Structures.Material.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 118
+   at UserInterface.Forms.Structures.Material.prcEntityToCombo() in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 76
+--------------------------------------------------------------
+
+Date and Time	:	1/10/2004 8:23:41 PM
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.EspesorInfo' does not contain a property with the name Descripcion.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at UserInterface.Forms.Structures.Material.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 118
+   at UserInterface.Forms.Structures.Material.prcEntityToCombo() in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 96
+--------------------------------------------------------------
+
+Date and Time	:	1/10/2004 8:24:22 PM
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.EspesorInfo' does not contain a property with the name Descripcion.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at UserInterface.Forms.Structures.Material.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 118
+   at UserInterface.Forms.Structures.Material.prcEntityToCombo() in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 96
+--------------------------------------------------------------
+
+Date and Time	:	1/10/2004 8:25:17 PM
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.PresentacionInfo' does not contain a property with the name IdAcabado.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at UserInterface.Forms.Structures.Material.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 118
+   at UserInterface.Forms.Structures.Material.prcEntityToCombo() in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 104
+--------------------------------------------------------------
+
+Date and Time	:	1/10/2004 8:33:02 PM
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.PresentacionInfo' does not contain a property with the name IdAcabado.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at UserInterface.Forms.Structures.Material.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 118
+   at UserInterface.Forms.Structures.Material.prcEntityToCombo() in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 104
+--------------------------------------------------------------
+
+Date and Time	:	1/10/2004 8:35:57 PM
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.PresentacionInfo' does not contain a property with the name IdAcabado.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName, String format)
+   at System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at UserInterface.Forms.Structures.Material.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 118
+   at UserInterface.Forms.Structures.Material.prcEntityToCombo() in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 104
+--------------------------------------------------------------
+

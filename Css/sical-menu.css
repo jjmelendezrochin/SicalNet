@@ -1,0 +1,69 @@
+﻿.sical-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.sical-menu-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+    .sical-menu-item > a,
+    .sical-menu-label {
+        display: block;
+        padding: 7px 12px;
+        text-decoration: none;
+        cursor: pointer;
+        white-space: nowrap;
+        border-right: 1px solid #cccccc;
+        background-color: #eeeeee;
+        color: #333333;
+    }
+
+        .sical-menu-item > a:hover,
+        .sical-menu-label:hover {
+            background-color: #dddddd;
+        }
+
+.sical-submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 220px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 9999;
+    border: 1px solid #bbbbbb;
+    background-color: #ffffff;
+}
+
+.sical-menu-item:hover > .sical-submenu {
+    display: block;
+}
+
+.sical-submenu .sical-menu-item {
+    display: block;
+    width: 100%;
+}
+
+    .sical-submenu .sical-menu-item > a,
+    .sical-submenu .sical-menu-label {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-right: 0;
+        border-bottom: 1px solid #dddddd;
+        background-color: #ffffff;
+    }
+
+        .sical-submenu .sical-menu-item > a:hover,
+        .sical-submenu .sical-menu-label:hover {
+            background-color: #eeeeee;
+        }

@@ -1,0 +1,851 @@
+Date and Time	:	12/26/2003 4:28:10 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:28:21 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:38:42 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\FormAditivos.cs:line 114
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\DataAccessLayer\FormAditivos.cs:line 49
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:39:21 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\FormAditivos.cs:line 114
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\DataAccessLayer\FormAditivos.cs:line 49
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:45:36 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 55
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:46:56 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:47:46 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:48:11 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:50:47 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:50:48 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:50:49 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:51:05 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:51:07 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:51:10 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:51:20 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 135
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:53:53 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 135
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:54:06 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:59:13 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:59:14 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 4:59:15 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_FormAditivos'. Cannot insert duplicate key in object 'FormAditivos'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:06:01 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:06:04 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:09:16 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:10:33 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:10:39 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:10:53 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 127
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:11:00 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 135
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:11:08 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 135
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:33:32 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 139
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:33:43 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 134
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:33:49 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 134
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:33:55 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 139
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:34:12 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdFormAditivos_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 164
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:34:36 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 187
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:34:41 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 187
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:37:34 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 117
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:42:43 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 119
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:43:29 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 119
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:49:48 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 119
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:50:57 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 119
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 5:58:28 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 119
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:01:02 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 119
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:18:16 PM
+Exception	:	You are in the Edit Mode. Please cancel the edit mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 117
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:22:43 PM
+Exception	:	You are in the Edit Mode. Please cancel the edit mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 117
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:22:57 PM
+Exception	:	You are in the Edit Mode. Please cancel the edit mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 117
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:23:00 PM
+Exception	:	You are in the Edit Mode. Please cancel the edit mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 117
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:23:05 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 120
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:23:19 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in e:\sicalnet\dataaccesslayer\formaditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 191
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:33:11 PM
+Exception	:	Color ID should be Alpha Numeric and Not Null
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 87
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:33:29 PM
+Exception	:	Description should be Alpha Numeric and Not Null
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 90
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:33:41 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\Colour.cs:line 106
+   at SICALNet.DataAccessLayer.Colour.InsertColour(ColourInfo BEColour) in E:\SICALNet\DataAccessLayer\Colour.cs:line 41
+   at SICALNet.BusinessLogicLayer.Colour.InsertColour(ColourInfo BEColour) in E:\SICALNet\BusinessLogicLayer\Colour.cs:line 24
+   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 104
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:33:46 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 107
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:35:17 PM
+Exception	:	Descripcion should be Alpha Numeric
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_UpdateCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_UpdateCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 135
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:35:30 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 108
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 6:35:40 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\Colour.cs:line 106
+   at SICALNet.DataAccessLayer.Colour.InsertColour(ColourInfo BEColour) in E:\SICALNet\DataAccessLayer\Colour.cs:line 41
+   at SICALNet.BusinessLogicLayer.Colour.InsertColour(ColourInfo BEColour) in E:\SICALNet\BusinessLogicLayer\Colour.cs:line 24
+   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 105
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:00:48 PM
+Exception	:	You are in the Insert Mode. Please cancel the Insert mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_EditCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_EditCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 113
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:00:58 PM
+Exception	:	You are in the Insert Mode. Please cancel the Insert mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_EditCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_EditCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 113
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:01:17 PM
+Exception	:	You are in the Insert Mode. Please cancel the Insert mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_EditCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_EditCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 113
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:06:11 PM
+Exception	:	You are in the Insert Mode. Please cancel the Insert mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_DeleteCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 194
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:07:51 PM
+Exception	:	You are in the Insert Mode. Please cancel the Insert mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_DeleteCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 194
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:08:03 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\Colour.cs:line 106
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\DataAccessLayer\Colour.cs:line 59
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:09:17 PM
+Exception	:	You are in the Insert Mode. Please cancel the Insert mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_DeleteCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 194
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:09:20 PM
+Exception	:	You are in the Insert Mode. Please cancel the Insert mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_DeleteCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 194
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:09:25 PM
+Exception	:	DELETE statement conflicted with COLUMN REFERENCE constraint 'fk_FormAddColor'. The conflict occurred in database 'SICALNet1', table 'FormAditivos', column 'IdColor'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\Colour.cs:line 106
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\DataAccessLayer\Colour.cs:line 59
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:09:43 PM
+Exception	:	DELETE statement conflicted with COLUMN REFERENCE constraint 'fk_FormAddColor'. The conflict occurred in database 'SICALNet1', table 'FormAditivos', column 'IdColor'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\Colour.cs:line 106
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\DataAccessLayer\Colour.cs:line 59
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:11:02 PM
+Exception	:	DELETE statement conflicted with COLUMN REFERENCE constraint 'fk_FormAddColor'. The conflict occurred in database 'SICALNet1', table 'FormAditivos', column 'IdColor'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\Colour.cs:line 106
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\DataAccessLayer\Colour.cs:line 59
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:13:20 PM
+Exception	:	DELETE statement conflicted with COLUMN REFERENCE constraint 'fk_FormAddColor'. The conflict occurred in database 'SICALNet1', table 'FormAditivos', column 'IdColor'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\Colour.cs:line 106
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\DataAccessLayer\Colour.cs:line 59
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:15:15 PM
+Exception	:	DELETE statement conflicted with COLUMN REFERENCE constraint 'fk_FormAddColor'. The conflict occurred in database 'SICALNet1', table 'FormAditivos', column 'IdColor'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\dataaccesslayer\colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\businesslogiclayer\colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:16:01 PM
+Exception	:	DELETE statement conflicted with COLUMN REFERENCE constraint 'fk_FormAddColor'. The conflict occurred in database 'SICALNet1', table 'FormAditivos', column 'IdColor'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\dataaccesslayer\colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\businesslogiclayer\colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:16:47 PM
+Exception	:	DELETE statement conflicted with COLUMN REFERENCE constraint 'fk_FormAddColor'. The conflict occurred in database 'SICALNet1', table 'FormAditivos', column 'IdColor'.
+The statement has been terminated.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\dataaccesslayer\colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\businesslogiclayer\colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:23:15 PM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\dataaccesslayer\colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\businesslogiclayer\colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:33:52 PM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in e:\sicalnet\dataaccesslayer\colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\dataaccesslayer\colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in e:\sicalnet\businesslogiclayer\colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:36:27 PM
+Exception	:	You are in the Edit. Please cancel it
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_DeleteCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 194
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:36:49 PM
+Exception	:	You are in the Insert. Please cancel it
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_DeleteCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 194
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:37:00 PM
+Exception	:	You are in the Insert Mode. Please cancel the Insert mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_EditCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_EditCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 108
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:43:50 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 120
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:44:49 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 120
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:46:08 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 123
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:46:17 PM
+Exception	:	You are in the Insert. Please cancel it
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_DeleteCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 194
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:47:39 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 123
+--------------------------------------------------------------
+
+Date and Time	:	12/26/2003 7:47:58 PM
+Exception	:	You are in the Insert Mode. Please cancel the Insert mode
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_EditCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_EditCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 108
+--------------------------------------------------------------
+

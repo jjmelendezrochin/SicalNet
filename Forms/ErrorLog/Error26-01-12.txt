@@ -1,0 +1,24 @@
+Date and Time	:	26/01/2012 01:00:35 p.m.
+Exception	:	Referencia a objeto no establecida como instancia de un objeto.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_ItemDataBound
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_ItemDataBound(Object sender, DataGridItemEventArgs e) in C:\inetpub\wwwroot\sicalnet\UserInterface\Controls\ColourGrid.ascx.cs:line 100
+--------------------------------------------------------------
+
+Date and Time	:	26/01/2012 01:01:28 p.m.
+Exception	:	Referencia a objeto no establecida como instancia de un objeto.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_ItemDataBound
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_ItemDataBound(Object sender, DataGridItemEventArgs e) in C:\inetpub\wwwroot\sicalnet\UserInterface\Controls\ColourGrid.ascx.cs:line 100
+--------------------------------------------------------------
+
+Date and Time	:	26/01/2012 01:02:00 p.m.
+Exception	:	Referencia a objeto no establecida como instancia de un objeto.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_ItemDataBound
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_ItemDataBound(Object sender, DataGridItemEventArgs e) in C:\inetpub\wwwroot\sicalnet\UserInterface\Controls\ColourGrid.ascx.cs:line 100
+--------------------------------------------------------------
+

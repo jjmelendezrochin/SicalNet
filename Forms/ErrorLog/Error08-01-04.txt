@@ -1,0 +1,561 @@
+Date and Time	:	1/8/2004 6:17:46 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 133
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 6:18:03 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in d:\jp\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in D:\jp\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 155
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 6:18:12 PM
+Exception	:	Form Cintas is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 160
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 6:18:53 PM
+Exception	:	Form Cintas is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 160
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 6:19:24 PM
+Exception	:	Given CodigoSAP Value does not Exist in Material Table
+Module		:	Structure
+Form		:	FormCintas
+Method		:	dgdFormCintas_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 184
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 6:57:36 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 133
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 6:57:44 PM
+Exception	:	candidad should be a positive real number
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 122
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 6:57:56 PM
+Exception	:	Form Cintas is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 160
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 6:58:14 PM
+Exception	:	Invalid column name 'NoParte'.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 849
+   at SICALNet.DataAccessLayer.FormAditivos.SelectFormAditivos() in d:\jp\sicalnet\dataaccesslayer\formaditivos.cs:line 84
+   at SICALNet.BusinessLogicLayer.FormAditivos.SelectFormAditivos() in D:\jp\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 60
+   at UserInterface.Controls.FormAditivosGrid.BindGrid() in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 72
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:15:32 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdFormAditivos_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 179
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:15:54 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdFormAditivos_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 179
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:18:20 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdFormAditivos_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 179
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:39:06 PM
+Exception	:	Color ID should be Alpha Numeric and Not Null
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 101
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:39:18 PM
+Exception	:	Input string was not in a correct format.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ParseInt32
+Stack		:	   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:39:23 PM
+Exception	:	Input string was not in a correct format.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ParseInt32
+Stack		:	   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:39:58 PM
+Exception	:	Input string was not in a correct format.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ParseInt32
+Stack		:	   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:40:35 PM
+Exception	:	Input string was not in a correct format.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ParseInt32
+Stack		:	   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 110
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:43:25 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\colour.aspx.cs:line 124
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:43:37 PM
+Exception	:	Descripcion should be Alpha Numeric
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_UpdateCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 141
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:43:47 PM
+Exception	:	Input string was not in a correct format.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ParseInt32
+Stack		:	   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at UserInterface.Controls.ColourGrid.dgdColour_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 147
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:45:27 PM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 205
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:45:34 PM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 205
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:46:00 PM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 205
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:46:07 PM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 205
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:46:16 PM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 205
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:46:44 PM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 205
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:46:49 PM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\DataAccessLayer\Colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in D:\jp\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 205
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:47:54 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdFormAditivos_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 179
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:48:03 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdFormAditivos_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 179
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:48:12 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 203
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:48:24 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 203
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:48:42 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 203
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:49:18 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 133
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:49:21 PM
+Exception	:	Input string was not in a correct format.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ParseInt32
+Stack		:	   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:53:05 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 133
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:53:09 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 156
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:53:23 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 203
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:54:06 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 203
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:54:23 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 203
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 7:57:07 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\DataAccessLayer\FormAditivos.cs:line 65
+   at SICALNet.BusinessLogicLayer.FormAditivos.UpdateFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 37
+   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 203
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:00:54 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdFormAditivos_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormAditivosGrid.dgdFormAditivos_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formaditivosgrid.ascx.cs:line 179
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:01:19 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\formaditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in d:\jp\sicalnet\dataaccesslayer\formaditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in D:\jp\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 151
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:02:33 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 156
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:26:11 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	FormColor Information
+Method		:	AddFormColor_Click
+Stack		:	   at UserInterface.Forms.Structures.FormColor.AddFormColor_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcolor.aspx.cs:line 104
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:29:43 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	FormColor Information
+Method		:	dgdFormColor_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormColourGrid.dgdFormColor_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formcolorgrid.ascx.cs:line 132
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:33:52 PM
+Exception	:	CodigoSAP Should Not be Empty
+Module		:	Structure
+Form		:	FormCintas
+Method		:	dgdFormCintas_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 176
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:33:59 PM
+Exception	:	Given CodigoSAP Value does not Exist in Material Table
+Module		:	Structure
+Form		:	FormCintas
+Method		:	dgdFormCintas_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 184
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:34:07 PM
+Exception	:	Given CodigoSAP Value does not Exist in Material Table
+Module		:	Structure
+Form		:	FormCintas
+Method		:	dgdFormCintas_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_UpdateCommand(Object source, DataGridCommandEventArgs e) in d:\jp\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 184
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:35:17 PM
+Exception	:	candidad should be a positive real number
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 122
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:35:26 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 133
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:35:36 PM
+Exception	:	Given CodigoSAP Value Does not Exist in Material Table
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 133
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:35:44 PM
+Exception	:	Form Cintas is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 160
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:36:18 PM
+Exception	:	candidad should be a positive real number
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 122
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:36:24 PM
+Exception	:	candidad should be a positive real number
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 122
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:36:30 PM
+Exception	:	Form Cintas is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 160
+--------------------------------------------------------------
+
+Date and Time	:	1/8/2004 8:40:26 PM
+Exception	:	candidad should be a positive real number
+Module		:	Structure
+Form		:	FormCintas
+Method		:	dgdFormCintas_UpdateCommand
+Stack		:	   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_UpdateCommand(Object source, DataGridCommandEventArgs e) in D:\jp\SICALNet\UserInterface\Controls\FormCintasGrid.ascx.cs:line 168
+--------------------------------------------------------------
+

@@ -1,0 +1,759 @@
+Date and Time	:	1/12/2004 12:26:00 PM
+Exception	:	Descripcion Should Not be Empty
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 242
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:27:12 PM
+Exception	:	Descripcion Should Not be Empty
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 242
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:28:47 PM
+Exception	:	Descripcion Should Not be Empty
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 242
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:28:58 PM
+Exception	:	Descripcion Should Not be Empty
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 242
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:30:46 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 266
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:31:40 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 266
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:33:30 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 266
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:38:44 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 239
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:38:57 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 239
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:39:06 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 239
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:46:31 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 266
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:48:24 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 266
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 12:55:34 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:00:18 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:03:25 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 266
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:03:42 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 266
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:05:03 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 266
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:14:10 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 268
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:18:35 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 269
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:22:11 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 269
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:26:42 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 270
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:36:29 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 270
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:43:11 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:43:18 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:43:56 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:44:41 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:44:54 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:45:01 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:45:02 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:47:51 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:48:41 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 268
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:53:02 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 1:53:21 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 2:50:57 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 2:51:36 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 2:51:48 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 268
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 2:53:40 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 2:58:54 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	Rollback
+Stack		:	   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 159
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 265
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 3:01:21 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 268
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 3:01:38 PM
+Exception	:	Material Information is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 268
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 3:59:12 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 355
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 3:59:32 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 355
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 4:25:59 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 445
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 4:32:33 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 446
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 4:35:36 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 289
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 4:36:05 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 289
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 5:44:24 PM
+Exception	:	Procedure 'sp_sicalnet_Estruct_Selecta_material' expects parameter '@CodigoSAP', which was not supplied.
+Module		:	Structure
+Form		:	Material
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 849
+   at SICALNet.DataAccessLayer.Material.SelectMaterial() in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 124
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial() in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 71
+   at UserInterface.Forms.Structures.Material.imgFind_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 477
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 5:44:27 PM
+Exception	:	Procedure 'sp_sicalnet_Estruct_Selecta_material' expects parameter '@CodigoSAP', which was not supplied.
+Module		:	Structure
+Form		:	Material
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 849
+   at SICALNet.DataAccessLayer.Material.SelectMaterial() in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 124
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial() in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 71
+   at UserInterface.Forms.Structures.Material.imgFind_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 477
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 5:44:28 PM
+Exception	:	Procedure 'sp_sicalnet_Estruct_Selecta_material' expects parameter '@CodigoSAP', which was not supplied.
+Module		:	Structure
+Form		:	Material
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 849
+   at SICALNet.DataAccessLayer.Material.SelectMaterial() in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 124
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial() in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 71
+   at UserInterface.Forms.Structures.Material.imgFind_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 477
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 5:44:29 PM
+Exception	:	Procedure 'sp_sicalnet_Estruct_Selecta_material' expects parameter '@CodigoSAP', which was not supplied.
+Module		:	Structure
+Form		:	Material
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 849
+   at SICALNet.DataAccessLayer.Material.SelectMaterial() in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 124
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial() in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 71
+   at UserInterface.Forms.Structures.Material.imgFind_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 477
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 5:44:44 PM
+Exception	:	Procedure 'sp_sicalnet_Estruct_Selecta_material' expects parameter '@CodigoSAP', which was not supplied.
+Module		:	Structure
+Form		:	Material
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 849
+   at SICALNet.DataAccessLayer.Material.SelectMaterial() in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 124
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial() in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 71
+   at UserInterface.Forms.Structures.Material.imgFind_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 477
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 5:45:08 PM
+Exception	:	Procedure 'sp_sicalnet_Estruct_Selecta_material' expects parameter '@CodigoSAP', which was not supplied.
+Module		:	Structure
+Form		:	Material
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 849
+   at SICALNet.DataAccessLayer.Material.SelectMaterial() in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 124
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial() in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 71
+   at UserInterface.Forms.Structures.Material.imgFind_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 477
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 5:45:47 PM
+Exception	:	Procedure 'sp_sicalnet_Estruct_Selecta_material' expects parameter '@CodigoSAP', which was not supplied.
+Module		:	Structure
+Form		:	Material
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 849
+   at SICALNet.DataAccessLayer.Material.SelectMaterial() in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 124
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial() in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 71
+   at UserInterface.Forms.Structures.Material.imgFind_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 477
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 6:57:13 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 292
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:00:29 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 292
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:01:19 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 292
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:01:34 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 257
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:02:13 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 257
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:02:19 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 186
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 95
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 283
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:03:34 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 452
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:03:58 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 442
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:09:02 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:09:12 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:09:42 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:10:27 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:10:50 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:12:10 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:12:21 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 456
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:13:40 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:14:33 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:15:15 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:15:31 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 456
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:15:50 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 456
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:16:58 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:23:53 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 399
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:23:58 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 399
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:24:01 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 399
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:24:05 PM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 399
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:24:35 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:25:12 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 456
+--------------------------------------------------------------
+
+Date and Time	:	1/12/2004 7:25:47 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 456
+--------------------------------------------------------------
+

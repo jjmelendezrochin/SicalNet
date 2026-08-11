@@ -1,0 +1,1953 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\SICALNet\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\SICALNet\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10BE048C-A8E3-4304-B6D9-9F7DCDB1D3E4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserInterface</RootNamespace>
+    <AssemblyName>UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44364</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\bin\ADODB.dll</HintPath>
+    </Reference>
+    <Reference Include="ASPnetMenu">
+      <HintPath>..\..\bin\ASPnetMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\..\bin\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADODB, Version=2.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Interop.ADODB.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.OWC10, Version=1.2.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Interop.OWC10.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\..\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.ExceptionManagement">
+      <HintPath>..\..\bin\Microsoft.ApplicationBlocks.ExceptionManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces">
+      <HintPath>..\..\bin\Microsoft.ApplicationBlocks.ExceptionManagement.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MSDATASRC, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\bin\MSDATASRC.dll</HintPath>
+    </Reference>
+    <Reference Include="NSFoundation">
+      <HintPath>..\..\bin\NSFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\..\bin\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="Controls\AforoGrid.ascx" />
+    <Content Include="Controls\AnillosGrid.ascx" />
+    <Content Include="Controls\ColourGrid.ascx" />
+    <Content Include="Controls\ConsultBitacora.ascx" />
+    <Content Include="Controls\ConsultProgramGrid.ascx" />
+    <Content Include="Controls\Cubas.ascx" />
+    <Content Include="Controls\EspecificacionesPvcGrid.ascx" />
+    <Content Include="Controls\EspesorGrid.ascx" />
+    <Content Include="Controls\FamiliaProductosGrid.ascx" />
+    <Content Include="Controls\FoliosAditivosGrid.ascx" />
+    <Content Include="Controls\FoliosColorGrid.ascx" />
+    <Content Include="Controls\FormAditivosGrid.ascx" />
+    <Content Include="Controls\FormCintasGrid.ascx" />
+    <Content Include="Controls\FormColorGrid.ascx" />
+    <Content Include="Controls\FormPresentacionGrid.ascx" />
+    <Content Include="Controls\FormPVCGrid.ascx" />
+    <Content Include="Controls\FormTemparaturaGrid.ascx" />
+    <Content Include="Controls\InventarioVidrios.ascx" />
+    <Content Include="Controls\LineaGrid.ascx" />
+    <Content Include="Controls\ListofMaterialGrid.ascx" />
+    <Content Include="Controls\LotesGrid.ascx" />
+    <Content Include="Controls\mainMenu.ascx" />
+    <Content Include="Controls\MaterialGrid.ascx" />
+    <Content Include="Controls\MedidaGrid.ascx" />
+    <Content Include="Controls\OllaGrid.ascx" />
+    <Content Include="Controls\PesosGrid.ascx" />
+    <Content Include="Controls\PlantGrid.ascx" />
+    <Content Include="Controls\PresentacionGrid.ascx" />
+    <Content Include="Controls\ProgramaGridReadOnly.ascx" />
+    <Content Include="Controls\ProgrammaGrid.ascx" />
+    <Content Include="Controls\TarjetaVidrioEspesorEditar.ascx" />
+    <Content Include="Controls\TarjetaVidrioPlanimetriaEditar.ascx" />
+    <Content Include="Controls\TarjetaVidriosEspesor.ascx" />
+    <Content Include="Controls\TarjetaVidriosHistorial.ascx" />
+    <Content Include="Controls\TarjetaVidriosPlanimetria.ascx" />
+    <Content Include="Controls\TipoPMMAGrid.ascx" />
+    <Content Include="Controls\VidriosTamanio.ascx" />
+    <Content Include="Controls\WebUserControl1.ascx" />
+    <Content Include="Controls\WorkOrdersGrid.ascx" />
+    <Content Include="Controls\Zonas.ascx" />
+    <Content Include="Css\sical-menu.css" />
+    <Content Include="CustomError\404Page.aspx" />
+    <Content Include="CustomError\ErrorPage.aspx" />
+    <Content Include="CustomMessages.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="Forms\Administration\ConsultBitacora.aspx" />
+    <Content Include="Forms\Administration\DisconnectAccounts.aspx" />
+    <Content Include="Forms\Administration\EditProfiles.aspx" />
+    <Content Include="Forms\Administration\EditUsers.aspx" />
+    <Content Include="Forms\Administration\Profiles.aspx" />
+    <Content Include="Forms\Administration\UnlockAccounts.aspx" />
+    <Content Include="Forms\Administration\UsersList.aspx" />
+    <Content Include="Forms\ConsultPVCWO1.aspx" />
+    <Content Include="Forms\ConsultReactionWO1.aspx" />
+    <Content Include="Forms\ErrorLog\Error05-03-04.txt" />
+    <Content Include="Forms\ErrorLog\Error06-01-14.txt" />
+    <Content Include="Forms\ErrorLog\Error07-01-04.txt" />
+    <Content Include="Forms\ErrorLog\Error08-01-04.txt" />
+    <Content Include="Forms\ErrorLog\Error10-01-04.txt" />
+    <Content Include="Forms\ErrorLog\Error11-12-20.txt" />
+    <Content Include="Forms\ErrorLog\Error12-01-04.txt" />
+    <Content Include="Forms\ErrorLog\Error12-11-13.txt" />
+    <Content Include="Forms\ErrorLog\Error12-12-20.txt" />
+    <Content Include="Forms\ErrorLog\Error13-01-04.txt" />
+    <Content Include="Forms\ErrorLog\Error14-01-04.txt" />
+    <Content Include="Forms\ErrorLog\Error15-09-08.txt" />
+    <Content Include="Forms\ErrorLog\Error23-10-16.txt" />
+    <Content Include="Forms\ErrorLog\Error26-01-12.txt" />
+    <Content Include="Forms\ErrorLog\Error26-12-03.txt" />
+    <Content Include="Forms\ErrorLog\Error27-12-03.txt" />
+    <Content Include="Forms\ErrorLog\Error29-09-16.txt" />
+    <Content Include="Forms\ErrorLog\Error30-12-03.txt" />
+    <Content Include="Forms\Logistics\Confirmacion.aspx" />
+    <Content Include="Forms\Logistics\Confirmacion1.aspx" />
+    <Content Include="Forms\Logistics\LoadProduccionPrograma.aspx" />
+    <Content Include="Forms\Logistics\OrdenesTrabajo.aspx" />
+    <Content Include="Forms\Logistics\ProgramaProduccionReport.aspx" />
+    <Content Include="Forms\Logistics\ProgrammaProduction.aspx" />
+    <Content Include="Forms\Logistics\SecuenciasCombinadas.aspx" />
+    <Content Include="Forms\Menu.aspx" />
+    <Content Include="Forms\MenuData.aspx" />
+    <Content Include="Forms\NewMenu.aspx" />
+    <Content Include="Forms\Production\AditivosCuantos.aspx" />
+    <Content Include="Forms\Production\AditivosCuarto.aspx" />
+    <Content Include="Forms\Production\AditivosLaminos.aspx" />
+    <Content Include="Forms\Production\AditivosWORpt.aspx" />
+    <Content Include="Forms\Production\AdjustTanque.aspx" />
+    <Content Include="Forms\Production\Calendar.aspx" />
+    <Content Include="Forms\Production\ConsultAditivosWO.aspx" />
+    <Content Include="Forms\Production\ConsultarCured.aspx" />
+    <Content Include="Forms\Production\ConsultAssembleWO.aspx" />
+    <Content Include="Forms\Production\ConsultAssembleWO1.aspx" />
+    <Content Include="Forms\Production\ConsultFillingWO.aspx" />
+    <Content Include="Forms\Production\ConsultFillingWO1.aspx" />
+    <Content Include="Forms\Production\ConsultMessage.aspx" />
+    <Content Include="Forms\Production\ConsultMixturesWO.aspx" />
+    <Content Include="Forms\Production\ConsultMixturesWO1.aspx" />
+    <Content Include="Forms\Production\ConsultPreseparationWO.aspx" />
+    <Content Include="Forms\Production\ConsultPreseparationWO1.aspx" />
+    <Content Include="Forms\Production\ConsultProgram.aspx" />
+    <Content Include="Forms\Production\ConsultPVCWO.aspx" />
+    <Content Include="Forms\Production\ConsultPVCWO1.aspx" />
+    <Content Include="Forms\Production\ConsultQuarantineWO.aspx" />
+    <Content Include="Forms\Production\ConsultQuarantineWO1.aspx" />
+    <Content Include="Forms\Production\ConsultReactionWO.aspx" />
+    <Content Include="Forms\Production\ConsultSeparacionWO.aspx" />
+    <Content Include="Forms\Production\ConsultSeparacionWO1.aspx" />
+    <Content Include="Forms\Production\LoginPopup.aspx" />
+    <Content Include="Forms\Production\MensajePopup.aspx" />
+    <Content Include="Forms\Production\SecuenciasCombinadas.aspx" />
+    <Content Include="Forms\Production\UnLiberer.aspx" />
+    <Content Include="Forms\Production\WorkOrder\InspectionPhase\ConsultInspectionWO.aspx" />
+    <Content Include="Forms\Production\WorkOrder\InspectionPhase\ConsultInspectionWorkOrders.aspx" />
+    <Content Include="Forms\Production\WorkOrder\InterfaceSAP\ConsultInterfaceSAP.aspx" />
+    <Content Include="Forms\Production\WorkOrder\LiberationPhase\ConsultLiberationWO.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasColor\ColorWOFinal.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasColor\ConsultColorWO.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasColor\NoOfVasos.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasColor\VasosDetails.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasEnvioPT\ConsultEnvioPT.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasEnvioPT\EnvioPTFinal.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasEnvioPT\NumeroPaquete.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCured.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasRecepcionPT\ConsultRecepcionPT.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasRecepcionPT\ConsultRecepcionPT1.aspx" />
+    <Content Include="Forms\Reports\ActivePhaseReport.aspx" />
+    <Content Include="Forms\Reports\Bottom.aspx" />
+    <Content Include="Forms\Reports\ConsultaMaterial.aspx" />
+    <Content Include="Forms\Reports\ConsultCuradoReport.aspx" />
+    <Content Include="Forms\Reports\ConsultMezclasReport.aspx" />
+    <Content Include="Forms\Reports\ConsultPostCuradoReport.aspx" />
+    <Content Include="Forms\Reports\ConsultReaccionReport.aspx" />
+    <Content Include="Forms\Reports\ConsultReportMezclas.aspx" />
+    <Content Include="Forms\Reports\ConsumptionAditivosReport.aspx" />
+    <Content Include="Forms\Reports\ConsumptionMezclasReport.aspx" />
+    <Content Include="Forms\Reports\FillingPhaseReports.aspx" />
+    <Content Include="Forms\Reports\FrmColorConsumption.aspx" />
+    <Content Include="Forms\Reports\FrmPrintSticker.aspx" />
+    <Content Include="Forms\Reports\FrmStickerAdditoves.aspx" />
+    <Content Include="Forms\Reports\PartidasColorReports.aspx" />
+    <Content Include="Forms\Reports\PreparationPhaseReport.aspx" />
+    <Content Include="Forms\Reports\ProduccionRpt.aspx" />
+    <Content Include="Forms\Reports\Produccion\VariationofWeight.aspx" />
+    <Content Include="Forms\Reports\ProductionRptSAP.aspx" />
+    <Content Include="Forms\Reports\RastreabilidadRpt.aspx" />
+    <Content Include="Forms\Reports\Report.aspx" />
+    <Content Include="Forms\Reports\ReporteMotivosAjusteProgProd.aspx" />
+    <Content Include="Forms\Reports\top.aspx" />
+    <Content Include="Forms\StructuresError.txt" />
+    <Content Include="Forms\Structures\Aforo.aspx" />
+    <Content Include="Forms\Structures\Anillos.aspx" />
+    <Content Include="Forms\Structures\Bitacora.aspx" />
+    <Content Include="Forms\Structures\CargarFantasmas.aspx" />
+    <Content Include="Forms\Structures\Catalogos.aspx" />
+    <Content Include="Forms\Structures\COLOR.HTM" />
+    <Content Include="Forms\Structures\Colour.aspx" />
+    <Content Include="Forms\Structures\Cubas.aspx" />
+    <Content Include="Forms\Structures\EspecificacionesEmpaquesPvc.aspx" />
+    <Content Include="Forms\Structures\Espesor.aspx" />
+    <Content Include="Forms\Structures\FamiliaProductos.aspx" />
+    <Content Include="Forms\Structures\FindMaterial.aspx" />
+    <Content Include="Forms\Structures\FindMaterialPP.aspx" />
+    <Content Include="Forms\Structures\FoliosAditivos.aspx" />
+    <Content Include="Forms\Structures\FoliosColor.aspx" />
+    <Content Include="Forms\Structures\FormAditivos.aspx" />
+    <Content Include="Forms\Structures\FormCintas.aspx" />
+    <Content Include="Forms\Structures\FormColor.aspx" />
+    <Content Include="Forms\Structures\FormPresentacion.aspx" />
+    <Content Include="Forms\Structures\FormPVC.aspx" />
+    <Content Include="Forms\Structures\FormTemperatura.aspx" />
+    <Content Include="Forms\Structures\Linea.aspx" />
+    <Content Include="Forms\Structures\ListOfMaterial.aspx" />
+    <Content Include="Forms\Structures\Lotes.aspx" />
+    <Content Include="Forms\Structures\Material.aspx" />
+    <Content Include="Forms\Structures\Medida.aspx" />
+    <Content Include="Forms\Structures\Ollas.aspx" />
+    <Content Include="Forms\Structures\Peso.aspx" />
+    <Content Include="Forms\Structures\Plant.aspx" />
+    <Content Include="Forms\Structures\Presentacion.aspx" />
+    <Content Include="Forms\Structures\ProcessFamily.aspx" />
+    <Content Include="Forms\Structures\TipoPMMA.aspx" />
+    <Content Include="Forms\Structures\VidriosTamanio.aspx" />
+    <Content Include="Forms\Structures\Zonas.aspx" />
+    <Content Include="Forms\TestMenu.aspx" />
+    <Content Include="Forms\topFrame.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\administracion\iconoBorrar.gif" />
+    <Content Include="images\administracion\iconoCancelar.gif" />
+    <Content Include="images\administracion\iconoDocumento.gif" />
+    <Content Include="images\administracion\iconoEditar.gif" />
+    <Content Include="images\administracion\iconoGuardar.gif" />
+    <Content Include="images\administracion\iconoImprimir.gif" />
+    <Content Include="images\administracion\icononDocumentoNuevo.gif" />
+    <Content Include="images\arrowmenu.gif" />
+    <Content Include="images\arrow_black.gif" />
+    <Content Include="images\arrow_white.gif" />
+    <Content Include="images\BINOCULR.ICO" />
+    <Content Include="images\break.gif" />
+    <Content Include="images\consultar.gif" />
+    <Content Include="images\Copia de login1.jpg" />
+    <Content Include="images\Copia de loginbg10.jpg" />
+    <Content Include="images\Copy of loginbg10ok.jpg" />
+    <Content Include="images\DELROW.GIF" />
+    <Content Include="images\Email.gif" />
+    <Content Include="images\entrar.gif" />
+    <Content Include="images\EtiquetaColor.jpg" />
+    <Content Include="images\Find.gif" />
+    <Content Include="images\flechita.gif" />
+    <Content Include="images\fondoTop.gif" />
+    <Content Include="images\fotoCentro2.gif" />
+    <Content Include="images\grayDots.gif" />
+    <Content Include="images\headPortlet\editar.gif" />
+    <Content Include="images\headPortlet\eliminar.gif" />
+    <Content Include="images\headPortlet\maximizar.gif" />
+    <Content Include="images\headPortlet\minimizar.gif" />
+    <Content Include="images\headPortlet\mover.gif" />
+    <Content Include="images\i.p.printv.gif" />
+    <Content Include="images\ico-bullet_azul.gif" />
+    <Content Include="images\icon-bullet.gif.gif" />
+    <Content Include="images\icon-calendar.gif" />
+    <Content Include="images\icon-delete.gif" />
+    <Content Include="images\icon-floppy.gif" />
+    <Content Include="images\icon-pencil-x.gif" />
+    <Content Include="images\icon-pencil.gif" />
+    <Content Include="images\iIngreso.gif" />
+    <Content Include="images\img-corte_inicio.gif" />
+    <Content Include="images\img-top.gif" />
+    <Content Include="images\img80x80_03.gif" />
+    <Content Include="images\int_DTS.JPG" />
+    <Content Include="images\int_PGS.JPG" />
+    <Content Include="images\login1 desc.jpg" />
+    <Content Include="images\login1.jpg" />
+    <Content Include="images\login12.jpg" />
+    <Content Include="images\login15.jpg" />
+    <Content Include="images\login1a.jpg" />
+    <Content Include="images\loginbg10 desc.jpg" />
+    <Content Include="images\loginbg10 nueva y mala.jpg" />
+    <Content Include="images\loginbg10.jpg" />
+    <Content Include="images\loginbg105.jpg" />
+    <Content Include="images\loginbg10a.jpg" />
+    <Content Include="images\loginbg10ok.jpg" />
+    <Content Include="images\menuSuperior\ayuda.gif" />
+    <Content Include="images\menuSuperior\contacto.gif" />
+    <Content Include="images\menuSuperior\home.gif" />
+    <Content Include="images\menuSuperior\mapaSitio.gif" />
+    <Content Include="images\menuSuperior\personalizar.gif" />
+    <Content Include="images\menuSuperior\salir.gif" />
+    <Content Include="images\minusButton.JPG" />
+    <Content Include="images\New.gif" />
+    <Content Include="images\orangeDots.gif" />
+    <Content Include="images\PictogramaPeligro.jpg" />
+    <Content Include="images\pix.gif" />
+    <Content Include="images\plusButton.JPG" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\topLogo.gif" />
+    <Content Include="images\waitImage.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="Librerias\bootstrap.min.css" />
+    <Content Include="Librerias\bootstrap.min.js" />
+    <Content Include="Librerias\jquery-3.2.1.min.js" />
+    <Content Include="Librerias\jquery.min.js" />
+    <Content Include="Librerias\popper.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="LogOut.aspx" />
+    <Content Include="Menu.css" />
+    <Content Include="Scripts\sical-menu.js" />
+    <Content Include="styloDESC.CSS" />
+    <Content Include="Test.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bitacora.cs" />
+    <Compile Include="Controls\AforoGrid.ascx.cs">
+      <DependentUpon>AforoGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AnillosGrid.ascx.cs">
+      <DependentUpon>AnillosGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ColourGrid.ascx.cs">
+      <DependentUpon>ColourGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ConsultBitacora.ascx.cs">
+      <DependentUpon>ConsultBitacora.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ConsultProgramGrid.ascx.cs">
+      <DependentUpon>ConsultProgramGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Cubas.ascx.cs">
+      <DependentUpon>Cubas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EspecificacionesPvcGrid.ascx.cs">
+      <DependentUpon>EspecificacionesPvcGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EspesorGrid.ascx.cs">
+      <DependentUpon>EspesorGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FamiliaProductosGrid.ascx.cs">
+      <DependentUpon>FamiliaProductosGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FoliosAditivosGrid.ascx.cs">
+      <DependentUpon>FoliosAditivosGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FoliosColorGrid.ascx.cs">
+      <DependentUpon>FoliosColorGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormAditivosGrid.ascx.cs">
+      <DependentUpon>FormAditivosGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormCintasGrid.ascx.cs">
+      <DependentUpon>FormCintasGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormColorGrid.ascx.cs">
+      <DependentUpon>FormColorGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormPresentacionGrid.ascx.cs">
+      <DependentUpon>FormPresentacionGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormPVCGrid.ascx.cs">
+      <DependentUpon>FormPVCGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormTemparaturaGrid.ascx.cs">
+      <DependentUpon>FormTemparaturaGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InventarioVidrios.ascx.cs">
+      <DependentUpon>InventarioVidrios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LineaGrid.ascx.cs">
+      <DependentUpon>LineaGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ListofMaterialGrid.ascx.cs">
+      <DependentUpon>ListofMaterialGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LotesGrid.ascx.cs">
+      <DependentUpon>LotesGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\mainMenu.ascx.cs">
+      <DependentUpon>mainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MaterialGrid.ascx.cs">
+      <DependentUpon>MaterialGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MedidaGrid.ascx.cs">
+      <DependentUpon>MedidaGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OllaGrid.ascx.cs">
+      <DependentUpon>OllaGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PesosGrid.ascx.cs">
+      <DependentUpon>PesosGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PlantGrid.ascx.cs">
+      <DependentUpon>PlantGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PresentacionGrid.ascx.cs">
+      <DependentUpon>PresentacionGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProgramaGridReadOnly.ascx.cs">
+      <DependentUpon>ProgramaGridReadOnly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProgrammaGrid.ascx.cs">
+      <DependentUpon>ProgrammaGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TarjetaVidrioEspesorEditar.ascx.cs">
+      <DependentUpon>TarjetaVidrioEspesorEditar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TarjetaVidrioPlanimetriaEditar.ascx.cs">
+      <DependentUpon>TarjetaVidrioPlanimetriaEditar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TarjetaVidriosEspesor.ascx.cs">
+      <DependentUpon>TarjetaVidriosEspesor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TarjetaVidriosHistorial.ascx.cs">
+      <DependentUpon>TarjetaVidriosHistorial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TarjetaVidriosPlanimetria.ascx.cs">
+      <DependentUpon>TarjetaVidriosPlanimetria.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TipoPMMAGrid.ascx.cs">
+      <DependentUpon>TipoPMMAGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\VidriosTamanio.ascx.cs">
+      <DependentUpon>VidriosTamanio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkOrdersGrid.ascx.cs">
+      <DependentUpon>WorkOrdersGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Zonas.ascx.cs">
+      <DependentUpon>Zonas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomError\404Page.aspx.cs">
+      <DependentUpon>404Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomError\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomMessages.aspx.cs">
+      <DependentUpon>CustomMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\ConsultBitacora.aspx.cs">
+      <DependentUpon>ConsultBitacora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\DisconnectAccounts.aspx.cs">
+      <DependentUpon>DisconnectAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\EditProfiles.aspx.cs">
+      <DependentUpon>EditProfiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\EditUsers.aspx.cs">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\Profiles.aspx.cs">
+      <DependentUpon>Profiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\UnlockAccounts.aspx.cs">
+      <DependentUpon>UnlockAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\UsersList.aspx.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ConsultPVCWO1.aspx.cs">
+      <DependentUpon>ConsultPVCWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ConsultReactionWO1.aspx.cs">
+      <DependentUpon>ConsultReactionWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\Confirmacion.aspx.cs">
+      <DependentUpon>Confirmacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\Confirmacion1.aspx.cs">
+      <DependentUpon>Confirmacion1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\LoadProduccionPrograma.aspx.cs">
+      <DependentUpon>LoadProduccionPrograma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\OrdenesTrabajo.aspx.cs">
+      <DependentUpon>OrdenesTrabajo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\ProgramaProduccionReport.aspx.cs">
+      <DependentUpon>ProgramaProduccionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\ProgrammaProduction.aspx.cs">
+      <DependentUpon>ProgrammaProduction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\SecuenciasCombinadas.aspx.cs">
+      <DependentUpon>SecuenciasCombinadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuData.aspx.cs">
+      <DependentUpon>MenuData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuData.aspx.designer.cs">
+      <DependentUpon>MenuData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewMenu.aspx.cs">
+      <DependentUpon>NewMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\AditivosConPolvoWORpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AditivosConPolvoWORpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\AditivosCuantos.aspx.cs">
+      <DependentUpon>AditivosCuantos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\AditivosCuarto.aspx.cs">
+      <DependentUpon>AditivosCuarto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\AditivosLaminos.aspx.cs">
+      <DependentUpon>AditivosLaminos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\AditivosWORpt.aspx.cs">
+      <DependentUpon>AditivosWORpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\AditivosWORpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AditivosWORpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\AditivosWORptBySequence.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AditivosWORptBySequence.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\AdjustTanque.aspx.cs">
+      <DependentUpon>AdjustTanque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultAditivosWO.aspx.cs">
+      <DependentUpon>ConsultAditivosWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultarCured.aspx.cs">
+      <DependentUpon>ConsultarCured.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultAssembleWO.aspx.cs">
+      <DependentUpon>ConsultAssembleWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultAssembleWO1.aspx.cs">
+      <DependentUpon>ConsultAssembleWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultFillingWO.aspx.cs">
+      <DependentUpon>ConsultFillingWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultFillingWO1.aspx.cs">
+      <DependentUpon>ConsultFillingWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultMessage.aspx.cs">
+      <DependentUpon>ConsultMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultMixturesWO.aspx.cs">
+      <DependentUpon>ConsultMixturesWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultMixturesWO1.aspx.cs">
+      <DependentUpon>ConsultMixturesWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultPreseparationWO.aspx.cs">
+      <DependentUpon>ConsultPreseparationWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultPreseparationWO1.aspx.cs">
+      <DependentUpon>ConsultPreseparationWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultProgram.aspx.cs">
+      <DependentUpon>ConsultProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultPVCWO.aspx.cs">
+      <DependentUpon>ConsultPVCWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultPVCWO1.aspx.cs">
+      <DependentUpon>ConsultPVCWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultQuarantineWO.aspx.cs">
+      <DependentUpon>ConsultQuarantineWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultQuarantineWO1.aspx.cs">
+      <DependentUpon>ConsultQuarantineWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultReactionWO.aspx.cs">
+      <DependentUpon>ConsultReactionWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultSeparacionWO.aspx.cs">
+      <DependentUpon>ConsultSeparacionWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ConsultSeparacionWO1.aspx.cs">
+      <DependentUpon>ConsultSeparacionWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\EtiquetaMezclas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EtiquetaMezclas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\LoginPopup.aspx.cs">
+      <DependentUpon>LoginPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\MensajePopup.aspx.cs">
+      <DependentUpon>MensajePopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\printStickerAdditivoes1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>printStickerAdditivoes1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\ReporteMezclas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteMezclas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\SecuenciasCombinadas.aspx.cs">
+      <DependentUpon>SecuenciasCombinadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\UnLiberer.aspx.cs">
+      <DependentUpon>UnLiberer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\EtiquetaMezclas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EtiquetaMezclas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\InspectionPhase\ConsultInspectionWO.aspx.cs">
+      <DependentUpon>ConsultInspectionWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\InspectionPhase\ConsultInspectionWorkOrders.aspx.cs">
+      <DependentUpon>ConsultInspectionWorkOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\InterfaceSAP\ConsultInterfaceSAP.aspx.cs">
+      <DependentUpon>ConsultInterfaceSAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\LiberationPhase\ConsultLiberationWO.aspx.cs">
+      <DependentUpon>ConsultLiberationWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\LiberationPhase\EtiquetaLiberacion1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EtiquetaLiberacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorAditivesWOCardReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorAditivesWOCardReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorSticker.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorSticker.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOFinal.aspx.cs">
+      <DependentUpon>ColorWOFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.aspx.cs">
+      <DependentUpon>ColorWOReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorWOReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReportBySequence.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorWOReportBySequence.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ConsultColorWO.aspx.cs">
+      <DependentUpon>ConsultColorWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\Contenedor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contenedor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\EtiquetaColor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EtiquetaColor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\EtiquetaIdentificacionMaterial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EtiquetaIdentificacionMaterial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\FormulationCardWORpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormulationCardWORpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\FormulationCardWORpt1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormulationCardWORpt1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\NewEtiquetaColor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEtiquetaColor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\NewEtiquetaColorbien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEtiquetaColorbien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\NoOfVasos.aspx.cs">
+      <DependentUpon>NoOfVasos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ProductoTerminado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductoTerminado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\RepContenedor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepContenedor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\VasosDetails.aspx.cs">
+      <DependentUpon>VasosDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasEnvioPT\ConsultEnvioPT.aspx.cs">
+      <DependentUpon>ConsultEnvioPT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasEnvioPT\ProductoTerminado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductoTerminado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCured.aspx.cs">
+      <DependentUpon>Consultar_PostCured.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasRecepcionPT\ConsultRecepcionPT.aspx.cs">
+      <DependentUpon>ConsultRecepcionPT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasRecepcionPT\ConsultRecepcionPT1.aspx.cs">
+      <DependentUpon>ConsultRecepcionPT1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\AdditivesPhaseReports.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdditivesPhaseReports.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\AjustesProgramaProduccion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AjustesProgramaProduccion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ColorConsumptionRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorConsumptionRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsultCuradoPhase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultCuradoPhase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsultCuradoReport.aspx.cs">
+      <DependentUpon>ConsultCuradoReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsultMezclas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultMezclas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsultPreSeparationPhase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultPreSeparationPhase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsultReaccion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultReaccion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsultReacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultReacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsultReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsultReportMezclas.aspx.cs">
+      <DependentUpon>ConsultReportMezclas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsultSeparation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultSeparation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsumPostCurado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsumPostCurado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsumptionAditivos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsumptionAditivos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ConsumptionMezclas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsumptionMezclas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\DefectoRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefectoRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\FillingPhase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FillingPhase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\InspectionPhase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InspectionPhase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\MaterialesPvc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialesPvc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\MaterialesPvcCor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialesPvcCor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\MaterialesPvcEti.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialesPvcEti.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\MaterialesPvcEti1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialesPvcEti1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\MaterialesPvcEtqueta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialesPvcEtqueta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\MaterialesPvcIns.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialesPvcIns.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\PartidasColorReports.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartidasColorReports.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\PrintStickerAdditoves.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintStickerAdditoves.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\PrintStickerColor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintStickerColor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ProduccionRpt.aspx.cs">
+      <DependentUpon>ProduccionRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ProduccionRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProduccionRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ProduccionRptSAP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProduccionRptSAP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\Rpt_VariationOfWeights.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_VariationOfWeights.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\StickerAcabado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StickerAcabado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\StickerAditivos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StickerAditivos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\StickerAditivosdetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StickerAditivosdetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\StickerAditivosdetailsSLP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StickerAditivosdetailsSLP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\StickerAditivosrel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StickerAditivosrel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\StickerAditivosrelg.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StickerAditivosrelg.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\StickerColor1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StickerColor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\StickerMateriaPrima.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StickerMateriaPrima.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\StickerSemiTerminado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StickerSemiTerminado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\VariationofWeight.aspx.cs">
+      <DependentUpon>VariationofWeight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Produccion\VariationOfWeights.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VariationOfWeights.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ProductionRptSAP.aspx.cs">
+      <DependentUpon>ProductionRptSAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ProgramaReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramaReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\RastreabilidadRpt.aspx.cs">
+      <DependentUpon>RastreabilidadRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\RastreabilidadRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RastreabilidadRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ReporteMotivosAjusteProgProd.aspx.cs">
+      <DependentUpon>ReporteMotivosAjusteProgProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ReportHelper.cs" />
+    <Compile Include="Forms\Reports\top.aspx.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Aforo.aspx.cs">
+      <DependentUpon>Aforo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Anillos.aspx.cs">
+      <DependentUpon>Anillos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Bitacora.aspx.cs">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\CargarFantasmas.aspx.cs">
+      <DependentUpon>CargarFantasmas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Catalogos.aspx.cs">
+      <DependentUpon>Catalogos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Colour.aspx.cs">
+      <DependentUpon>Colour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Cubas.aspx.cs">
+      <DependentUpon>Cubas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\EspecificacionesEmpaquesPvc.aspx.cs">
+      <DependentUpon>EspecificacionesEmpaquesPvc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Espesor.aspx.cs">
+      <DependentUpon>Espesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FamiliaProductos.aspx.cs">
+      <DependentUpon>FamiliaProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FindMaterial.aspx.cs">
+      <DependentUpon>FindMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FindMaterialPP.aspx.cs">
+      <DependentUpon>FindMaterialPP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FoliosAditivos.aspx.cs">
+      <DependentUpon>FoliosAditivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FoliosColor.aspx.cs">
+      <DependentUpon>FoliosColor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FormAditivos.aspx.cs">
+      <DependentUpon>FormAditivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FormCintas.aspx.cs">
+      <DependentUpon>FormCintas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FormColor.aspx.cs">
+      <DependentUpon>FormColor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FormPresentacion.aspx.cs">
+      <DependentUpon>FormPresentacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FormPVC.aspx.cs">
+      <DependentUpon>FormPVC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\FormTemperatura.aspx.cs">
+      <DependentUpon>FormTemperatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Linea.aspx.cs">
+      <DependentUpon>Linea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\ListOfMaterial.aspx.cs">
+      <DependentUpon>ListOfMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Lotes.aspx.cs">
+      <DependentUpon>Lotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Material.aspx.cs">
+      <DependentUpon>Material.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Medida.aspx.cs">
+      <DependentUpon>Medida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Ollas.aspx.cs">
+      <DependentUpon>Ollas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Peso.aspx.cs">
+      <DependentUpon>Peso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Plant.aspx.cs">
+      <DependentUpon>Plant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Presentacion.aspx.cs">
+      <DependentUpon>Presentacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\ProcessFamily.aspx.cs">
+      <DependentUpon>ProcessFamily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\TipoPMMA.aspx.cs">
+      <DependentUpon>TipoPMMA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\VidriosTamanio.aspx.cs">
+      <DependentUpon>VidriosTamanio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\Zonas.aspx.cs">
+      <DependentUpon>Zonas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TestMenu.aspx.cs">
+      <DependentUpon>TestMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TestMenu.aspx.designer.cs">
+      <DependentUpon>TestMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\topFrame.aspx.cs">
+      <DependentUpon>topFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MenuBuilder.cs" />
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ARIALN.TTF" />
+    <Content Include="ARIALNB.TTF" />
+    <Content Include="ARIALNBI.TTF" />
+    <Content Include="ARIALNI.TTF" />
+    <Content Include="Forms\Production\WorkOrder\PartidasColor\ColorSticker.xsc">
+      <DependentUpon>ColorSticker.xsd</DependentUpon>
+    </Content>
+    <None Include="Forms\Production\WorkOrder\PartidasColor\ColorSticker.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColorSticker.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Forms\Production\WorkOrder\PartidasColor\ColorSticker.xss">
+      <DependentUpon>ColorSticker.xsd</DependentUpon>
+    </Content>
+    <None Include="Forms\Production\WorkOrder\PartidasColor\EtiquetaColor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="images\administracion\Thumbs.db" />
+    <Content Include="images\headPortlet\Thumbs.db" />
+    <Content Include="images\menuSuperior\Thumbs.db" />
+    <Content Include="images\imagenes.zip" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="Forms\SICALNet.chm" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\FoliosColorGrid.ascx.resx">
+      <DependentUpon>FoliosColorGrid.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormPVCGrid.ascx.resx">
+      <DependentUpon>FormPVCGrid.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ListofMaterialGrid.ascx.resx">
+      <DependentUpon>ListofMaterialGrid.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomError\404Page.aspx.resx" />
+    <EmbeddedResource Include="CustomError\ErrorPage.aspx.resx" />
+    <EmbeddedResource Include="Forms\ConsultPVCWO1.aspx.resx">
+      <DependentUpon>ConsultPVCWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConsultReactionWO1.aspx.resx">
+      <DependentUpon>ConsultReactionWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\AditivosConPolvoWORpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AditivosConPolvoWORpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\AditivosCuantos.aspx.resx">
+      <DependentUpon>AditivosCuantos.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\AditivosCuarto.aspx.resx">
+      <DependentUpon>AditivosCuarto.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\AditivosLaminos.aspx.resx">
+      <DependentUpon>AditivosLaminos.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\AditivosWORpt.aspx.resx">
+      <DependentUpon>AditivosWORpt.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\AditivosWORpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AditivosWORpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\AditivosWORptBySequence.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AditivosWORptBySequence.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\AdjustTanque.aspx.resx">
+      <DependentUpon>AdjustTanque.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\Calendar.aspx.resx">
+      <DependentUpon>Calendar.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultAditivosWO.aspx.resx">
+      <DependentUpon>ConsultAditivosWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultarCured.aspx.resx">
+      <DependentUpon>ConsultarCured.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultAssembleWO.aspx.resx">
+      <DependentUpon>ConsultAssembleWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultAssembleWO1.aspx.resx">
+      <DependentUpon>ConsultAssembleWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultFillingWO.aspx.resx">
+      <DependentUpon>ConsultFillingWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultFillingWO1.aspx.resx">
+      <DependentUpon>ConsultFillingWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultMessage.aspx.resx">
+      <DependentUpon>ConsultMessage.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultMixturesWO.aspx.resx">
+      <DependentUpon>ConsultMixturesWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultMixturesWO1.aspx.resx">
+      <DependentUpon>ConsultMixturesWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultPreseparationWO.aspx.resx">
+      <DependentUpon>ConsultPreseparationWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultPreseparationWO1.aspx.resx">
+      <DependentUpon>ConsultPreseparationWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultProgram.aspx.resx">
+      <DependentUpon>ConsultProgram.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultPVCWO.aspx.resx">
+      <DependentUpon>ConsultPVCWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultPVCWO1.aspx.resx">
+      <DependentUpon>ConsultPVCWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultQuarantineWO.aspx.resx">
+      <DependentUpon>ConsultQuarantineWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultQuarantineWO1.aspx.resx">
+      <DependentUpon>ConsultQuarantineWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultReactionWO.aspx.resx">
+      <DependentUpon>ConsultReactionWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultSeparacionWO.aspx.resx">
+      <DependentUpon>ConsultSeparacionWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultSeparacionWO1.aspx.resx">
+      <DependentUpon>ConsultSeparacionWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\EtiquetaMezclas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EtiquetaMezclas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\LoginPopup.aspx.resx">
+      <DependentUpon>LoginPopup.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\MensajePopup.aspx.resx">
+      <DependentUpon>MensajePopup.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\printStickerAdditivoes1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>printStickerAdditivoes1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ReporteMezclas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteMezclas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\SecuenciasCombinadas.aspx.resx">
+      <DependentUpon>SecuenciasCombinadas.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\UnLiberer.aspx.resx">
+      <DependentUpon>UnLiberer.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\EtiquetaMezclas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EtiquetaMezclas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\LiberationPhase\EtiquetaLiberacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EtiquetaLiberacion1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ColorAditivesWOCardReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ColorAditivesWOCardReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ColorWOReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReportBySequence.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ColorWOReportBySequence.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ConsultColorWO.aspx.resx">
+      <DependentUpon>ConsultColorWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\Contenedor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Contenedor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\EtiquetaColor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EtiquetaColor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\EtiquetaIdentificacionMaterial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EtiquetaIdentificacionMaterial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\FormulationCardWORpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FormulationCardWORpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\FormulationCardWORpt1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FormulationCardWORpt1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\NewEtiquetaColor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NewEtiquetaColor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\NewEtiquetaColorbien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NewEtiquetaColorbien.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\NoOfVasos.aspx.resx">
+      <DependentUpon>NoOfVasos.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ProductoTerminado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductoTerminado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\RepContenedor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepContenedor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\VasosDetails.aspx.resx">
+      <DependentUpon>VasosDetails.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasEnvioPT\ConsultEnvioPT.aspx.resx">
+      <DependentUpon>ConsultEnvioPT.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasEnvioPT\ProductoTerminado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductoTerminado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCured.aspx.resx">
+      <DependentUpon>Consultar_PostCured.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasRecepcionPT\ConsultRecepcionPT.aspx.resx">
+      <DependentUpon>ConsultRecepcionPT.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasRecepcionPT\ConsultRecepcionPT1.aspx.resx">
+      <DependentUpon>ConsultRecepcionPT1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\AdditivesPhaseReports.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AdditivesPhaseReports.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\AjustesProgramaProduccion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AjustesProgramaProduccion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ColorConsumptionRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ColorConsumptionRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsultCuradoPhase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultCuradoPhase.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsultCuradoReport.aspx.resx">
+      <DependentUpon>ConsultCuradoReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsultMezclas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultMezclas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsultPreSeparationPhase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultPreSeparationPhase.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsultReaccion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultReaccion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsultReacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultReacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsultReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsultReportMezclas.aspx.resx">
+      <DependentUpon>ConsultReportMezclas.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsultSeparation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultSeparation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsumPostCurado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsumPostCurado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsumptionAditivos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsumptionAditivos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ConsumptionMezclas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsumptionMezclas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\DefectoRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DefectoRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\FillingPhase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FillingPhase.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\InspectionPhase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InspectionPhase.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\MaterialesPvc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MaterialesPvc.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\MaterialesPvcCor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MaterialesPvcCor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\MaterialesPvcEti.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MaterialesPvcEti.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\MaterialesPvcEti1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MaterialesPvcEti1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\MaterialesPvcEtqueta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MaterialesPvcEtqueta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\MaterialesPvcIns.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MaterialesPvcIns.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\PartidasColorReports.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PartidasColorReports.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\PrintStickerAdditoves.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintStickerAdditoves.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\PrintStickerColor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintStickerColor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ProduccionRpt.aspx.resx">
+      <DependentUpon>ProduccionRpt.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ProduccionRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProduccionRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ProduccionRptSAP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProduccionRptSAP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\Rpt_VariationOfWeights.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_VariationOfWeights.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\StickerAcabado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StickerAcabado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\StickerAditivos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StickerAditivos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\StickerAditivosdetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StickerAditivosdetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\StickerAditivosdetailsSLP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StickerAditivosdetailsSLP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\StickerAditivosrel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StickerAditivosrel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\StickerAditivosrelg.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StickerAditivosrelg.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\StickerColor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StickerColor1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\StickerMateriaPrima.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StickerMateriaPrima.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\StickerSemiTerminado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StickerSemiTerminado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\VariationofWeight.aspx.resx">
+      <DependentUpon>VariationofWeight.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Produccion\VariationOfWeights.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VariationOfWeights.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ProductionRptSAP.aspx.resx">
+      <DependentUpon>ProductionRptSAP.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ProgramaReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProgramaReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\RastreabilidadRpt.aspx.resx">
+      <DependentUpon>RastreabilidadRpt.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\RastreabilidadRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RastreabilidadRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Report.aspx.resx">
+      <DependentUpon>Report.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\ReporteMotivosAjusteProgProd.aspx.resx">
+      <DependentUpon>ReporteMotivosAjusteProgProd.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\top.aspx.resx">
+      <DependentUpon>top.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structures\Espesor.aspx.resx">
+      <DependentUpon>Espesor.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structures\Linea.aspx.resx">
+      <DependentUpon>Linea.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structures\Medida.aspx.resx">
+      <DependentUpon>Medida.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structures\Plant.aspx.resx">
+      <DependentUpon>Plant.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structures\Presentacion.aspx.resx">
+      <DependentUpon>Presentacion.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSComctlLib">
+      <Guid>{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SicalNET_Librerias\sicalnet\BusinessEntities\BusinessEntities.csproj">
+      <Project>{e663e032-e3f8-4d60-9e94-a38c28da199e}</Project>
+      <Name>BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SicalNET_Librerias\sicalnet\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{254e01fb-e03a-43ed-8448-05f7a6d50fca}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SicalNET_Librerias\sicalnet\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{4e7b39a3-1989-4568-a1d3-3a649ee39659}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SicalNET_Librerias\sicalnet\Interfaces\Interfaces.csproj">
+      <Project>{4ddebf1a-ee28-475d-94a9-de414901e8ba}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SicalNET_Librerias\sicalnet\Utilities\Utilities.csproj">
+      <Project>{3994436e-f6f3-4a14-a523-e9d0f3655e55}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ErrorLog\" />
+    <Folder Include="Forms\Quality\" />
+    <Folder Include="Forms\Reports\Temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56471</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44364/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!--
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\SICALNet\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\SICALNet\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>1
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

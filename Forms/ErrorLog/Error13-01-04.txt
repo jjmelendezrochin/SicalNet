@@ -1,0 +1,340 @@
+Date and Time	:	1/13/2004 10:14:07 AM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:17:38 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:17:51 AM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:18:22 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:18:49 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:20:28 AM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 294
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:20:47 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:20:57 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:21:12 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:22:19 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:22:39 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:22:55 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:23:06 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:27:54 AM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 295
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:28:08 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:28:16 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:30:03 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:30:14 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:33:10 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:33:24 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:35:41 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:35:49 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:45:43 AM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 295
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:46:03 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:46:11 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:48:43 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:49:14 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:49:23 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:52:41 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:54:24 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 261
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:56:10 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 261
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 10:56:22 AM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 296
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 11:08:00 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 11:11:13 AM
+Exception	:	CodigoSAP should be a either Alpha numeric or Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 259
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 11:21:32 AM
+Exception	:	This Material detail is refered by someother tables
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 186
+   at SICALNet.DataAccessLayer.Material.DeleteMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 113
+   at SICALNet.BusinessLogicLayer.Material.DeleteMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 61
+   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 455
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 11:21:39 AM
+Exception	:	This Material detail is refered by someother tables
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 186
+   at SICALNet.DataAccessLayer.Material.DeleteMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 113
+   at SICALNet.BusinessLogicLayer.Material.DeleteMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 61
+   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 455
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 11:21:52 AM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 457
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 11:22:13 AM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 400
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 11:22:16 AM
+Exception	:	CodigoSAP should be a alpha numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 400
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 11:24:32 AM
+Exception	:	CodigoSAP should be Numeric
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 400
+--------------------------------------------------------------
+
+Date and Time	:	1/13/2004 11:24:48 AM
+Exception	:	successfully Material Information is Deleted
+Module		:	Structure
+Form		:	FormCintas
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 457
+--------------------------------------------------------------
+

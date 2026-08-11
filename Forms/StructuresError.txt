@@ -1,0 +1,344 @@
+Date and Time	:	1/14/2004 1:18:05 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Material Information
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 423
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 1:22:21 PM
+Exception	:	CodigoSAP should be Numeric
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 307
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 1:23:10 PM
+Exception	:	successfully Material Information is saved
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 301
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:17:19 PM
+Exception	:	CodigoSAP should be Numeric
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 309
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:38:48 PM
+Exception	:	successfully Material Information is saved
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 305
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:39:26 PM
+Exception	:	successfully Material Information is saved
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 305
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:39:35 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Material Information
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 425
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:44:44 PM
+Exception	:	CodigoSAP should be Numeric
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 315
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:45:02 PM
+Exception	:	successfully Material Information is saved
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 309
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:45:21 PM
+Exception	:	successfully Material Information is saved
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 309
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:45:29 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Material Information
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 429
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:46:56 PM
+Exception	:	successfully Material Information is saved
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 309
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:47:06 PM
+Exception	:	successfully Material Information is saved
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 309
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:47:19 PM
+Exception	:	successfully Material Information is Deleted
+Module		:	Material Information
+Method		:	imgDel_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgDel_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 429
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:52:21 PM
+Exception	:	successfully Material Information is saved
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 309
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 2:54:41 PM
+Exception	:	successfully Material Information is saved
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 309
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 3:08:54 PM
+Exception	:	CodigoSAP should be Numeric
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 319
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 3:09:09 PM
+Exception	:	Descripcion Should be Alphanumeric
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 317
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 5:16:35 PM
+Exception	:	Procedure or function sp_sicalnet_Estruct_Selecta_material has too many arguments specified.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at SICALNet.DataAccessLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 137
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 81
+   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 392
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 5:47:36 PM
+Exception	:	Procedure or function sp_sicalnet_Estruct_Selecta_material has too many arguments specified.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at SICALNet.DataAccessLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 137
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 81
+   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 392
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 5:49:39 PM
+Exception	:	Procedure or function sp_sicalnet_Estruct_Selecta_material has too many arguments specified.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at SICALNet.DataAccessLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 137
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 81
+   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 392
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 5:52:44 PM
+Exception	:	Procedure or function sp_sicalnet_Estruct_Selecta_material has too many arguments specified.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at SICALNet.DataAccessLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 137
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 81
+   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 392
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 5:55:32 PM
+Exception	:	Procedure or function sp_sicalnet_Estruct_Selecta_material has too many arguments specified.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at SICALNet.DataAccessLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 137
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 81
+   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 392
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 5:58:48 PM
+Exception	:	Procedure or function sp_sicalnet_Estruct_Selecta_material has too many arguments specified.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters, SqlConnectionOwnership connectionOwnership) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 830
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 881
+   at SICALNet.DataAccessLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 137
+   at SICALNet.BusinessLogicLayer.Material.SelectMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 81
+   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 392
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:10:20 PM
+Exception	:	CodigoSAP should be Numeric
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 319
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:10:24 PM
+Exception	:	CodigoSAP should be Numeric
+Module		:	Material Information
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 319
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:18:35 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_Material'. Cannot insert duplicate key in object 'Material'.
+The statement has been terminated.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 198
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 80
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 300
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:18:45 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_Material'. Cannot insert duplicate key in object 'Material'.
+The statement has been terminated.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 198
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 80
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 300
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:18:47 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_Material'. Cannot insert duplicate key in object 'Material'.
+The statement has been terminated.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 198
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 80
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 300
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:19:07 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_Material'. Cannot insert duplicate key in object 'Material'.
+The statement has been terminated.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 198
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 80
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 300
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:19:28 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_Material'. Cannot insert duplicate key in object 'Material'.
+The statement has been terminated.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 198
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 80
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 300
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:19:35 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_Material'. Cannot insert duplicate key in object 'Material'.
+The statement has been terminated.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 198
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 80
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 300
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:26:57 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_Material'. Cannot insert duplicate key in object 'Material'.
+The statement has been terminated.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 198
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\dataaccesslayer\material.cs:line 80
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in d:\jp\sicalnet\businesslogiclayer\material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 300
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:45:41 PM
+Exception	:	CodigoSAP should not be null
+Module		:	Material Information
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 380
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:46:14 PM
+Exception	:	CodigoSAP should not be null
+Module		:	Material Information
+Method		:	imgEdit_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgEdit_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 380
+--------------------------------------------------------------
+
+Date and Time	:	1/21/2004 6:54:17 PM
+Exception	:	Violation of PRIMARY KEY constraint 'pk_Material'. Cannot insert duplicate key in object 'Material'.
+The statement has been terminated.
+Module		:	Material Information
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Material.MaterialDbConnect(MaterialInfo BEMaterial, String SP_NAME, String Mode) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 198
+   at SICALNet.DataAccessLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\DataAccessLayer\Material.cs:line 80
+   at SICALNet.BusinessLogicLayer.Material.InsertMaterial(MaterialInfo BEMaterial) in D:\jp\SICALNet\BusinessLogicLayer\Material.cs:line 35
+   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 295
+--------------------------------------------------------------
+

@@ -1,0 +1,317 @@
+Date and Time	:	12/30/2003 12:54:44 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in E:\SICALNet\SICALNet\DataAccessLayer\FormCintas.cs:line 114
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\DataAccessLayer\FormCintas.cs:line 49
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 12:55:20 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in E:\SICALNet\SICALNet\DataAccessLayer\FormCintas.cs:line 114
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\DataAccessLayer\FormCintas.cs:line 49
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 12:59:04 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in E:\SICALNet\SICALNet\DataAccessLayer\FormCintas.cs:line 114
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\DataAccessLayer\FormCintas.cs:line 49
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 1:06:24 PM
+Exception	:	Data is Null. This method or property cannot be called on Null values.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	get_Value
+Stack		:	   at System.Data.SqlTypes.SqlString.get_Value()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at SICALNet.DataAccessLayer.FormCintas.SelectFormCintas() in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 80
+   at SICALNet.BusinessLogicLayer.FormCintas.SelectFormCintas() in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 60
+   at UserInterface.Controls.FormCintasGrid.BindGrid() in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 70
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 1:14:51 PM
+Exception	:	Data is Null. This method or property cannot be called on Null values.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	get_Value
+Stack		:	   at System.Data.SqlTypes.SqlString.get_Value()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at SICALNet.DataAccessLayer.FormCintas.SelectFormCintas() in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 81
+   at SICALNet.BusinessLogicLayer.FormCintas.SelectFormCintas() in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 60
+   at UserInterface.Controls.FormCintasGrid.BindGrid() in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 70
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 1:18:30 PM
+Exception	:	Data is Null. This method or property cannot be called on Null values.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	get_Value
+Stack		:	   at System.Data.SqlTypes.SqlString.get_Value()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at SICALNet.DataAccessLayer.FormCintas.SelectFormCintas() in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 81
+   at SICALNet.BusinessLogicLayer.FormCintas.SelectFormCintas() in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 60
+   at UserInterface.Controls.FormCintasGrid.BindGrid() in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 70
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 1:21:32 PM
+Exception	:	Data is Null. This method or property cannot be called on Null values.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	get_Value
+Stack		:	   at System.Data.SqlTypes.SqlString.get_Value()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at SICALNet.DataAccessLayer.FormCintas.SelectFormCintas() in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 81
+   at SICALNet.BusinessLogicLayer.FormCintas.SelectFormCintas() in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 60
+   at UserInterface.Controls.FormCintasGrid.BindGrid() in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 70
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 1:23:41 PM
+Exception	:	Data is Null. This method or property cannot be called on Null values.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	get_Value
+Stack		:	   at System.Data.SqlTypes.SqlString.get_Value()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at SICALNet.DataAccessLayer.FormCintas.SelectFormCintas() in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 81
+   at SICALNet.BusinessLogicLayer.FormCintas.SelectFormCintas() in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 60
+   at UserInterface.Controls.FormCintasGrid.BindGrid() in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 70
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:41:26 PM
+Exception	:	Index was outside the bounds of the array.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	PrepareSQLRecord
+Stack		:	   at System.Data.SqlClient.SqlDataReader.PrepareSQLRecord(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetSqlString(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at SICALNet.DataAccessLayer.FormCintas.SelectFormCintas() in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 82
+   at SICALNet.BusinessLogicLayer.FormCintas.SelectFormCintas() in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 60
+   at UserInterface.Controls.FormCintasGrid.BindGrid() in E:\SICALNet\SICALNet\UserInterface\Controls\FormCintasGrid.ascx.cs:line 70
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:49:26 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in E:\SICALNet\SICALNet\UserInterface\Forms\Structures\FormCintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:50:01 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in E:\SICALNet\SICALNet\UserInterface\Forms\Structures\FormCintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:51:44 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in E:\SICALNet\SICALNet\UserInterface\Forms\Structures\FormCintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:51:45 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in E:\SICALNet\SICALNet\UserInterface\Forms\Structures\FormCintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:51:45 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in E:\SICALNet\SICALNet\UserInterface\Forms\Structures\FormCintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:53:23 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:58:10 PM
+Exception	:	Form Cintas is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 145
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:58:42 PM
+Exception	:	Form Cintas is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 145
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 2:58:53 PM
+Exception	:	Object reference not set to an instance of an object.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	prcFillCombo
+Stack		:	   at UserInterface.Controls.FormCintasGrid.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill, String CurValue) in E:\SICALNet\SICALNet\UserInterface\Controls\FormCintasGrid.ascx.cs:line 90
+   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_ItemDataBound(Object sender, DataGridItemEventArgs e) in E:\SICALNet\SICALNet\UserInterface\Controls\FormCintasGrid.ascx.cs:line 114
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 3:00:37 PM
+Exception	:	Object reference not set to an instance of an object.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	prcFillCombo
+Stack		:	   at UserInterface.Controls.FormCintasGrid.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill, String CurValue) in E:\SICALNet\SICALNet\UserInterface\Controls\FormCintasGrid.ascx.cs:line 90
+   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_ItemDataBound(Object sender, DataGridItemEventArgs e) in E:\SICALNet\SICALNet\UserInterface\Controls\FormCintasGrid.ascx.cs:line 114
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 3:05:37 PM
+Exception	:	Object reference not set to an instance of an object.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	prcFillCombo
+Stack		:	   at UserInterface.Controls.FormCintasGrid.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill, String CurValue) in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 90
+   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_ItemDataBound(Object sender, DataGridItemEventArgs e) in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 114
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 3:06:20 PM
+Exception	:	Object reference not set to an instance of an object.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	prcFillCombo
+Stack		:	   at UserInterface.Controls.FormCintasGrid.prcFillCombo(DropDownList cboCntl, String txtFiled, String valField, IList RsCboFill, String CurValue) in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 90
+   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_ItemDataBound(Object sender, DataGridItemEventArgs e) in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 114
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 3:12:54 PM
+Exception	:	Object reference not set to an instance of an object.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	dgdFormCintas_DeleteCommand
+Stack		:	   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 228
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 3:13:15 PM
+Exception	:	Object reference not set to an instance of an object.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	dgdFormCintas_DeleteCommand
+Stack		:	   at UserInterface.Controls.FormCintasGrid.dgdFormCintas_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\sicalnet\userinterface\controls\formcintasgrid.ascx.cs:line 228
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 3:18:08 PM
+Exception	:	Form Cintas is added successfully
+Module		:	Structure
+Form		:	FormCintas
+Method		:	AddFormCintas_Click
+Stack		:	   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 145
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 4:18:48 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 4:18:49 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 140
+--------------------------------------------------------------
+
+Date and Time	:	12/30/2003 4:20:58 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormCintas
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormCintas.FormCintasDbConnect(FormCintasInfo BEFormCintas, String SP_NAME, String Mode) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 115
+   at SICALNet.DataAccessLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in e:\sicalnet\sicalnet\dataaccesslayer\formcintas.cs:line 48
+   at SICALNet.BusinessLogicLayer.FormCintas.InsertFormCintas(FormCintasInfo BEFormCintas) in E:\SICALNet\SICALNet\BusinessLogicLayer\FormCintas.cs:line 24
+   at UserInterface.Forms.Structures.FormCintas.AddFormCintas_Click(Object sender, EventArgs e) in e:\sicalnet\sicalnet\userinterface\forms\structures\formcintas.aspx.cs:line 140
+--------------------------------------------------------------
+

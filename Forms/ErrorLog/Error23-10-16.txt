@@ -1,0 +1,23 @@
+Date and Time	:	23/10/2016 07:32:08 p.m.
+Exception	:	'cboEspesor' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	PerformDataBinding
+Stack		:	   en System.Web.UI.WebControls.ListControl.PerformDataBinding(IEnumerable dataSource)
+   en System.Web.UI.WebControls.ListControl.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.ListControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBind()
+   en System.Web.UI.WebControls.DataGrid.CreateItem(Int32 itemIndex, Int32 dataSourceIndex, ListItemType itemType, Boolean dataBind, Object dataItem, DataGridColumn[] columns, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.DataGrid.CreateControlHierarchy(Boolean useDataSource)
+   en System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e)
+   en System.Web.UI.WebControls.BaseDataList.DataBind()
+   en UserInterface.Controls.ColourGrid.BindGrid() en C:\inetpub\wwwroot\SicalNET\Controls\ColourGrid.ascx.cs:línea 77
+--------------------------------------------------------------
+

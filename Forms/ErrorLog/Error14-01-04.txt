@@ -1,0 +1,16 @@
+Date and Time	:	1/14/2004 1:15:08 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	Material
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 301
+--------------------------------------------------------------
+
+Date and Time	:	1/14/2004 1:17:58 PM
+Exception	:	successfully Material Information is saved
+Module		:	Structure
+Form		:	Material
+Method		:	imgSave_Click
+Stack		:	   at UserInterface.Forms.Structures.Material.imgSave_Click(Object sender, ImageClickEventArgs e) in d:\jp\sicalnet\userinterface\forms\structures\material.aspx.cs:line 301
+--------------------------------------------------------------
+

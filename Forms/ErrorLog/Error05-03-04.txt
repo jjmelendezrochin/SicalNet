@@ -1,0 +1,104 @@
+Date and Time	:	05/03/2004 02:19:35 a.m.
+Exception	:	Specified cast is not valid.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	GetSqlSingle
+Stack		:	   at System.Data.SqlClient.SqlDataReader.GetSqlSingle(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetFloat(Int32 i)
+   at SICALNet.DataAccessLayer.Espesor.LoadEspesor() in e:\nasoft\sicalnet\dataaccesslayer\espesor.cs:line 127
+   at SICALNet.BusinessLogicLayer.Espesor.LoadEspesor() in e:\nasoft\sicalnet\businesslogiclayer\espesor.cs:line 40
+   at UserInterface.Forms.Structures.ColourForm.Page_Load(Object sender, EventArgs e) in E:\Nasoft\SICALNet\UserInterface\Forms\Structures\Colour.aspx.cs:line 50
+--------------------------------------------------------------
+
+Date and Time	:	05/03/2004 02:19:35 a.m.
+Exception	:	Specified cast is not valid.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	GetSqlInt32
+Stack		:	   at System.Data.SqlClient.SqlDataReader.GetSqlInt32(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at SICALNet.DataAccessLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\DataAccessLayer\Colour.cs:line 77
+   at SICALNet.BusinessLogicLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\BusinessLogicLayer\Colour.cs:line 60
+   at UserInterface.Controls.ColourGrid.BindGrid() in E:\Nasoft\SICALNet\UserInterface\Controls\ColourGrid.ascx.cs:line 68
+--------------------------------------------------------------
+
+Date and Time	:	05/03/2004 03:03:15 a.m.
+Exception	:	Specified cast is not valid.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	GetSqlInt32
+Stack		:	   at System.Data.SqlClient.SqlDataReader.GetSqlInt32(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at SICALNet.DataAccessLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\DataAccessLayer\Colour.cs:line 77
+   at SICALNet.BusinessLogicLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\BusinessLogicLayer\Colour.cs:line 60
+   at UserInterface.Controls.ColourGrid.BindGrid() in E:\Nasoft\SICALNet\UserInterface\Controls\ColourGrid.ascx.cs:line 68
+--------------------------------------------------------------
+
+Date and Time	:	05/03/2004 03:12:21 a.m.
+Exception	:	Specified cast is not valid.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	GetSqlInt32
+Stack		:	   at System.Data.SqlClient.SqlDataReader.GetSqlInt32(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at SICALNet.DataAccessLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\DataAccessLayer\Colour.cs:line 77
+   at SICALNet.BusinessLogicLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\BusinessLogicLayer\Colour.cs:line 60
+   at UserInterface.Controls.ColourGrid.BindGrid() in E:\Nasoft\SICALNet\UserInterface\Controls\ColourGrid.ascx.cs:line 68
+--------------------------------------------------------------
+
+Date and Time	:	05/03/2004 01:11:52 p.m.
+Exception	:	Specified cast is not valid.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	GetSqlInt32
+Stack		:	   at System.Data.SqlClient.SqlDataReader.GetSqlInt32(Int32 i)
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at SICALNet.DataAccessLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\DataAccessLayer\Colour.cs:line 77
+   at SICALNet.BusinessLogicLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\BusinessLogicLayer\Colour.cs:line 60
+   at UserInterface.Controls.ColourGrid.BindGrid() in e:\nasoft\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 68
+--------------------------------------------------------------
+
+Date and Time	:	05/03/2004 03:25:48 p.m.
+Exception	:	Data is Null. This method or property cannot be called on Null values.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	get_Value
+Stack		:	   at System.Data.SqlTypes.SqlBoolean.get_Value()
+   at System.Data.SqlClient.SqlDataReader.GetBoolean(Int32 i)
+   at SICALNet.DataAccessLayer.Colour.SelectColour() in e:\nasoft\sicalnet\dataaccesslayer\colour.cs:line 77
+   at SICALNet.BusinessLogicLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\BusinessLogicLayer\Colour.cs:line 60
+   at UserInterface.Controls.ColourGrid.BindGrid() in e:\nasoft\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 68
+--------------------------------------------------------------
+
+Date and Time	:	05/03/2004 03:38:07 p.m.
+Exception	:	Data is Null. This method or property cannot be called on Null values.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	get_Value
+Stack		:	   at System.Data.SqlTypes.SqlBoolean.get_Value()
+   at System.Data.SqlClient.SqlDataReader.GetBoolean(Int32 i)
+   at SICALNet.DataAccessLayer.Colour.SelectColour() in e:\nasoft\sicalnet\dataaccesslayer\colour.cs:line 77
+   at SICALNet.BusinessLogicLayer.Colour.SelectColour() in E:\Nasoft\SICALNet\BusinessLogicLayer\Colour.cs:line 60
+   at UserInterface.Controls.ColourGrid.BindGrid() in e:\nasoft\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 68
+--------------------------------------------------------------
+
+Date and Time	:	05/03/2004 03:46:07 p.m.
+Exception	:	DataBinder.Eval: 'SICALNet.BusinessEntities.ColourInfo' does not contain a property with the name Centimetros.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	GetPropertyValue
+Stack		:	   at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at ASP.ColourGrid_ascx.__DataBind__control25(Object sender, EventArgs e) in http://localhost/UserInterface/Controls/ColourGrid.ascx:line 51
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.DataGrid.CreateItem(Int32 itemIndex, Int32 dataSourceIndex, ListItemType itemType, Boolean dataBind, Object dataItem, DataGridColumn[] columns, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.DataGrid.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.BaseDataList.DataBind()
+   at UserInterface.Controls.ColourGrid.BindGrid() in e:\nasoft\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 73
+--------------------------------------------------------------
+

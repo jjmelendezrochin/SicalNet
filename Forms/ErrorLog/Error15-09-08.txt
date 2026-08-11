@@ -1,0 +1,8 @@
+Date and Time	:	15/09/2008 01:18:05 p.m.
+Exception	:	Referencia a objeto no establecida como instancia de un objeto.
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_ItemDataBound
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_ItemDataBound(Object sender, DataGridItemEventArgs e)
+--------------------------------------------------------------
+

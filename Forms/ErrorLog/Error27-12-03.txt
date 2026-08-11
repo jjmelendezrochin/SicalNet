@@ -1,0 +1,178 @@
+Date and Time	:	12/27/2003 11:18:57 AM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\Colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\DataAccessLayer\Colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:19:18 AM
+Exception	:	This Id is used by someother tables
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.Colour.ColourDbConnect(ColourInfo BEColour, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\Colour.cs:line 110
+   at SICALNet.DataAccessLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\DataAccessLayer\Colour.cs:line 63
+   at SICALNet.BusinessLogicLayer.Colour.DeleteColour(ColourInfo BEColour) in E:\SICALNet\BusinessLogicLayer\Colour.cs:line 50
+   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 204
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:19:33 AM
+Exception	:	You are in the Edit. Please cancel it
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	dgdColour_DeleteCommand
+Stack		:	   at UserInterface.Controls.ColourGrid.dgdColour_DeleteCommand(Object source, DataGridCommandEventArgs e) in e:\sicalnet\userinterface\controls\colourgrid.ascx.cs:line 194
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:44:22 AM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\Colour.aspx.cs:line 123
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:44:58 AM
+Exception	:	Color ID should be Alpha Numeric and Not Null
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\Colour.aspx.cs:line 100
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:45:32 AM
+Exception	:	Color ID should be Alpha Numeric and Not Null
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\Colour.aspx.cs:line 100
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:45:40 AM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\Colour.aspx.cs:line 123
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:48:00 AM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\FormAditivos.aspx.cs:line 142
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:48:43 AM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\FormAditivos.aspx.cs:line 142
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:50:39 AM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\FormAditivos.aspx.cs:line 120
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:52:43 AM
+Exception	:	Color ID should be Alpha Numeric and Not Null
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\Colour.aspx.cs:line 100
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:52:46 AM
+Exception	:	Color ID should be Alpha Numeric and Not Null
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\Colour.aspx.cs:line 100
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 11:52:49 AM
+Exception	:	Color ID should be Alpha Numeric and Not Null
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\Colour.aspx.cs:line 100
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 12:04:16 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 122
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 12:04:19 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 122
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 12:04:32 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 122
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 12:04:38 PM
+Exception	:	The provided Id is already in use
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	ExecuteReader
+Stack		:	   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(SqlTransaction transaction, CommandType commandType, String commandText, SqlParameter[] commandParameters) in C:\user\dnovelo\Proyectos\Nasoft\DotNet\MSApplicationBlocksFor.NET\Source\DataAccess\ApplicationBlocks.Data\SQLHelper.cs:line 424
+   at SICALNet.DataAccessLayer.FormAditivos.FormAditivosDbConnect(FormAditivosInfo BEFormAditivos, String SP_NAME, String Mode) in E:\SICALNet\DataAccessLayer\FormAditivos.cs:line 121
+   at SICALNet.DataAccessLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\DataAccessLayer\FormAditivos.cs:line 51
+   at SICALNet.BusinessLogicLayer.FormAditivos.InsertFormAditivos(FormAditivosInfo BEFormAditivos) in E:\SICALNet\BusinessLogicLayer\FormAditivos.cs:line 24
+   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 139
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 12:04:45 PM
+Exception	:	Form Aditivaos is added successfully
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in e:\sicalnet\userinterface\forms\structures\formaditivos.aspx.cs:line 144
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 3:43:30 PM
+Exception	:	Color ID should be Alpha Numeric and Not Null
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddColour_Click
+Stack		:	   at UserInterface.Forms.Structures.ColourForm.AddColour_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\Colour.aspx.cs:line 100
+--------------------------------------------------------------
+
+Date and Time	:	12/27/2003 3:43:40 PM
+Exception	:	de peso should be a positive real number
+Module		:	Structure
+Form		:	FormAditivos
+Method		:	AddFormAditivos_Click
+Stack		:	   at UserInterface.Forms.Structures.FormAditivos.AddFormAditivos_Click(Object sender, EventArgs e) in E:\SICALNet\UserInterface\Forms\Structures\FormAditivos.aspx.cs:line 122
+--------------------------------------------------------------
+

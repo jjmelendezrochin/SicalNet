@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ColorSticker" targetNamespace="http://tempuri.org/ColorSticker.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/ColorSticker.xsd" xmlns:mstns="http://tempuri.org/ColorSticker.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="ColorSticker" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="element1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Grupo" type="xs:int" minOccurs="0" />
+							<xs:element name="TotalGpo" type="xs:int" minOccurs="0" />
+							<xs:element name="Secuencia" type="xs:string" minOccurs="0" />
+							<xs:element name="IdLinea" type="xs:int" minOccurs="0" />
+							<xs:element name="VasoNo" type="xs:int" minOccurs="0" />
+							<xs:element name="NoLaminas" type="xs:int" minOccurs="0" />
+							<xs:element name="NumeroLote" type="xs:int" minOccurs="0" />
+							<xs:element name="Aforo" type="xs:int" minOccurs="0" />
+							<xs:element name="NoOrden" type="xs:string" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

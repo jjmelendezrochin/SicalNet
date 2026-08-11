@@ -1,0 +1,12 @@
+Date and Time	:	06/01/2014 06:50:04 p.m.
+Exception	:	Los datos tienen valor Null. No se puede llamar a este método o propiedad con valores Null.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	get_Value
+Stack		:	   at System.Data.SqlTypes.SqlString.get_Value()
+   at System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at SICALNet.DataAccessLayer.FormCintas.SelectFormCintas(FormCintasInfo BEFormCintas) in C:\Inetpub\wwwroot\SicalNET_Librerias\sicalnet\DataAccessLayer\FormCintas.cs:line 71
+   at SICALNet.BusinessLogicLayer.FormCintas.SelectFormCintas(FormCintasInfo BEFormCintas) in C:\Inetpub\wwwroot\SicalNET_Librerias\sicalnet\BusinessLogicLayer\FormCintas.cs:line 60
+   at UserInterface.Controls.FormCintasGrid.BindGrid(Int32 idFamiliaProducto, Int32 idMedida, Int32 idPlanta, Boolean AllowEdit) in c:\inetpub\wwwroot\SICALNET\Controls\FormCintasGrid.ascx.cs:line 74
+--------------------------------------------------------------
+

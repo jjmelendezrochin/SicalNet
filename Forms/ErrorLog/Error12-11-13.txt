@@ -1,0 +1,8 @@
+Date and Time	:	12/11/2013 02:29:52 p.m.
+Exception	:	Referencia a objeto no establecida como instancia de un objeto.
+Module		:	Structure
+Form		:	FormCintas
+Method		:	BindGrid
+Stack		:	   at UserInterface.Controls.FormCintasGrid.BindGrid(Int32 idFamiliaProducto, Int32 idMedida, Int32 idPlanta, Boolean AllowEdit) in c:\inetpub\wwwroot\SICALNET\Controls\FormCintasGrid.ascx.cs:line 86
+--------------------------------------------------------------
+
