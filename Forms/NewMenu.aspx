@@ -11,18 +11,13 @@
         <meta name="vs_defaultClientScript" content="JavaScript">
         <meta name="vs_targetSchema"
               content="http://schemas.microsoft.com/intellisense/ie5">
-
-        <LINK rel="stylesheet"
-              type="text/css"
-              href="../styloDESC.CSS">
+                    
 
         <link rel="stylesheet"
               type="text/css"
               href="/SicalNet/Css/sical-menu.css">
 
-        <!-- Script antiguo -->
-        <script type="text/javascript"
-                src="stmenu.js"></script>
+        <script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
 
         <!-- Funciones propias de la página -->
         <script type="text/javascript">
@@ -34,8 +29,7 @@
         </script>
 
         <!-- Nuevo menú -->
-        <script type="text/javascript"
-                src="/SicalNet/Scripts/sical-menu.js"></script>
+        
 
         <script type="text/javascript">
 
@@ -53,9 +47,8 @@
 		<form id="NewMenu" method="post" runat="server">
 			<div align="center">
 				<table border="0" cellSpacing="0" cellPadding="0" width="800">
-					<tr>
-						<td style="FONT-FAMILY: Verdana, Arial; COLOR: white; FONT-SIZE: 10px; FONT-WEIGHT: bold"
-							bgColor="#003366" colSpan="2">							
+					<tr>						
+                        <td align="left" colSpan="4">
 							<div id="sicalMenu"></div>
 						</td>
 					</tr>

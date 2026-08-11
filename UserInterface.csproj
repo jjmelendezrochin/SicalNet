@@ -164,6 +164,8 @@
     <Content Include="Forms\Administration\EditProfiles.aspx" />
     <Content Include="Forms\Administration\EditUsers.aspx" />
     <Content Include="Forms\Administration\Profiles.aspx" />
+    <Content Include="Forms\Administration\stcode.js" />
+    <Content Include="Forms\Administration\stmenu.js" />
     <Content Include="Forms\Administration\UnlockAccounts.aspx" />
     <Content Include="Forms\Administration\UsersList.aspx" />
     <Content Include="Forms\ErrorLog\Error05-03-04.txt" />
@@ -261,6 +263,8 @@
     <Content Include="Forms\Reports\Report.aspx" />
     <Content Include="Forms\Reports\ReporteMotivosAjusteProgProd.aspx" />
     <Content Include="Forms\Reports\top.aspx" />
+    <Content Include="Forms\stcode.js" />
+    <Content Include="Forms\stmenu.js" />
     <Content Include="Forms\StructuresError.txt" />
     <Content Include="Forms\Structures\Aforo.aspx" />
     <Content Include="Forms\Structures\Anillos.aspx" />

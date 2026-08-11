@@ -1,10 +1,12 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
-<%@ Page language="c#" Codebehind="Profiles.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Administration.Profiles" %>
+﻿<%@ Page language="c#" Codebehind="Profiles.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Administration.Profiles" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css">
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+
 		<script language="JavaScript">
 <!--
 <!--
@@ -33,15 +35,25 @@ function ConfirmOperation(Button,strOperationType)
 					window.frames["top"].document.title = "SICAL  - Administración - Catálogo de Perfiles"
 			}	
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+
+		<script type="text/javascript">
+            document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    SicalMenu.init("sicalMenu");
+                }
+            );
+		</script>
+
 	</HEAD>
 	<body onload="ShowTitle()">
 		<form id="ConsultColorWO" method="post" runat="server">
 			<table width="800" align="center" style="BORDER-COLLAPSE: collapse" height="227">
 				<TBODY>
 					<tr>
-						<td align="left" colSpan="4" bgColor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td align="left" colSpan="4">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>

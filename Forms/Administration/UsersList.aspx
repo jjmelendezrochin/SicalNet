@@ -2,37 +2,37 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
-		<title></title>
+		<title>Lista de usuario</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css">
-		<script type="text/javascript" src="stmenu.js"></script>
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+
 		<script language="JavaScript">
-<!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+			<!--
+			function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+			  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+				document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+			  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+			}
+			MM_reloadPage(true);
+			// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
+			function MM_openBrWindow(theURL,winName,features) { //v2.0
+			  window.open(theURL,winName,features);
+			}
 
-function ConfirmOperation(Button)
-{
-	if (confirm("¿Está seguro que desea liberar la cuenta del usuario?")) 
-	{
-		Button.click()
-	}
-}
-//-->
+			function ConfirmOperation(Button)
+			{
+				if (confirm("¿Está seguro que desea liberar la cuenta del usuario?")) 
+				{
+					Button.click()
+				}
+			}
+			//-->
 
 			function ShowTitle()
 			{
-					window.frames["top"].document.title = "SICAL  - Administración - Catálogo Usuarios"
+				window.frames["top"].document.title = "SICAL  - Administración - Catálogo Usuarios"
 			}	
 		</script>
 
@@ -44,14 +44,14 @@ function ConfirmOperation(Button)
                 }
             );
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
 	</HEAD>
 	<body onload="ShowTitle()">
 		<form id="ConsultColorWO" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" height="227" width="800" align="center">
 				<TBODY>
 					<tr>
-						<td align="left" bgColor="#003366" colSpan="4">
+						<td align="left" colSpan="4">
 							<div id="sicalMenu"></div>
 						</td>
 					</tr>
@@ -175,7 +175,8 @@ function ConfirmOperation(Button)
 								<PagerStyle Font-Size="X-Small" Font-Names="Times New Roman" HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
 							</asp:datagrid></td>
 					</tr>
-				</TBODY></table>
-			</TD></TR></TABLE></form>
+				</TBODY>
+			</TABLE>
+		</form>
 	</body>
 </HTML>

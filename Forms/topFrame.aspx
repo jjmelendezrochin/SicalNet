@@ -12,7 +12,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 }
 //-->
 		</script>
-		<link rel="stylesheet" href="../styloDESC.css" type="text/css">
+		<!-- <link rel="stylesheet" href="../styloDESC.css" type="text/css"> -->
 			<meta http-equiv="refresh" content="300">
 	</HEAD>
 	<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
