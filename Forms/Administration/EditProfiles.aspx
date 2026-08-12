@@ -5,8 +5,6 @@
 	<HEAD>
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
-		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
 		<script language="JavaScript">
 <!--
 <!--
@@ -29,27 +27,15 @@ function CheckUnCheckAll(CtrlName)
 }
 //-->
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
-		<script type="text/javascript">document.addEventListener(
-				"DOMContentLoaded",
-				function () {
-					SicalMenu.init("sicalMenu");
-				}
-			);
-		</script>
+		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
 	</HEAD>
 	<body>
 		<form id="ConsultColorWO" method="post" runat="server">
 			<table width="800" align="center" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
-						<td align="left" colSpan="4">
-							<div id="sicalMenu"></div>
-						</td>
-					</tr>
-					<tr>
 						<td align="center" colSpan="4" height="80"><br>
-							<asp:label id="lblTitle" runat="server" Font-Size="14" Font-Bold="True" Font-Names="Arial Narrow"> Catálogo de Perfiles</asp:label>
+							<asp:label id="lblTitle" runat="server" Font-Size="14" Font-Bold="True" Font-Names="Arial Narrow"> Cat�logo de Perfiles</asp:label>
 							<hr>
 						</td>
 					</tr>
@@ -91,7 +77,7 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="checkAll" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">Módulo de Administración</B></TD>
+														<TD><B class="standard-text" style="COLOR: white">M�dulo de Administraci�n</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
@@ -125,7 +111,7 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="Checkbox4" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">Módulo de Logística</B></TD>
+														<TD><B class="standard-text" style="COLOR: white">M�dulo de Log�stica</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
@@ -159,7 +145,7 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="Checkbox3" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">Módulo de Estructuras</B></TD>
+														<TD><B class="standard-text" style="COLOR: white">M�dulo de Estructuras</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
@@ -201,7 +187,7 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="Checkbox2" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">Módulo de Catálogos</B></TD>
+														<TD><B class="standard-text" style="COLOR: white">M�dulo de Cat�logos</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
@@ -236,7 +222,7 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="Checkbox1" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">Módulo de Producción</B></TD>
+														<TD><B class="standard-text" style="COLOR: white">M�dulo de Producci�n</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
@@ -270,7 +256,7 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="chkAll" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">Módulo de Reportes</B></TD>
+														<TD><B class="standard-text" style="COLOR: white">M�dulo de Reportes</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
