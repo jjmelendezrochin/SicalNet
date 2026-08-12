@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="FormColorGrid" Src="../../Controls/FormColorGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Page language="c#" Codebehind="FormColor.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FormColor" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>

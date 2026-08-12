@@ -1,4 +1,4 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿
 <%@ Page language="c#" Codebehind="Material.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.Material" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>

@@ -1,4 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Page language="c#" Codebehind="RastreabilidadRpt.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Reports.RastreabilidadRpt1" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>

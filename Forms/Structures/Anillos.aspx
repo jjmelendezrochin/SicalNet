@@ -1,7 +1,7 @@
-<%@ Register TagPrefix="uc1" TagName="PlantGrid" Src="../../Controls/PlantGrid.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="PlantGrid" Src="../../Controls/PlantGrid.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="AnillosGrid" Src="../../Controls/AnillosGrid.ascx" %>
 <%@ Page language="c#" Codebehind="Anillos.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.Anillos" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

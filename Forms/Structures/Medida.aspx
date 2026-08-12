@@ -1,11 +1,13 @@
-<%@ Register TagPrefix="uc1" TagName="MedidaGrid" Src="../../Controls/MedidaGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="MedidaGrid" Src="../../Controls/MedidaGrid.ascx" %>
 <%@ Page language="c#" Codebehind="Medida.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Structures.Medida" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+
 		<script language="JavaScript">
 <!--
 <!--
@@ -26,7 +28,15 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Medidas"
 			}
 		</script>
-		<link href="../../styloDESC.CSS" rel="stylesheet" type="text/css">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0"
 		marginwidth="0" marginheight="0">
@@ -34,8 +44,8 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			<div align="center">
 				<table width="740" border="0" cellspacing="0" cellpadding="0">
 					<tr>
-						<td colspan="2" class="contenido" bgcolor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td colspan="2" class="contenido">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>

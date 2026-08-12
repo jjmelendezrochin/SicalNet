@@ -1,5 +1,5 @@
 ﻿<%@ Page language="c#" Codebehind="ProduccionRpt.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Reports.ProduccionRpt1" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

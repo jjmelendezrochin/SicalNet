@@ -1,6 +1,6 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="FormPVCGrid" Src="../../Controls/FormPVCGrid.ascx" %>
 <%@ Page language="c#" Codebehind="FormPVC.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FormPVC" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

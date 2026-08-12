@@ -1,5 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="PlantGrid" Src="../../Controls/PlantGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="PlantGrid" Src="../../Controls/PlantGrid.ascx" %>
 <%@ Page language="c#" Codebehind="Linea.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.PlantaForm" %>
 <%@ Register TagPrefix="uc1" TagName="LineaGrid" Src="../../Controls/LineaGrid.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -7,28 +6,39 @@
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css">
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+
 		<script language="JavaScript">
 <!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+			<!--
+			function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+			  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+				document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+			  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+			}
+			MM_reloadPage(true);
+			// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
+			function MM_openBrWindow(theURL,winName,features) { //v2.0
+			  window.open(theURL,winName,features);
+			}
+			//-->
 
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Líneas de Producción"
 			}
 		</script>
-		<link href="../../styloDESC.CSS" rel="stylesheet" type="text/css">
+		<!-- <link href="../../styloDESC.CSS" rel="stylesheet" type="text/css">-->
+		<script type="text/javascript">
+            document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    SicalMenu.init("sicalMenu");
+                }
+            );
+        </script>
 	</HEAD>
 	<body onload="ShowTitle()" bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0"
 		marginwidth="0" marginheight="0">
@@ -36,8 +46,8 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			<div align="center">
 				<table width="740" border="0" cellspacing="0" cellpadding="0">
 					<tr>
-						<td colspan="3" class="contenido" bgcolor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td colspan="3" class="contenido">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>

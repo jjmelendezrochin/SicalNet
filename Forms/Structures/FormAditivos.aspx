@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="FormAditivosGrid" Src="../../Controls/FormAditivosGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Page language="c#" Codebehind="FormAditivos.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FormAditivos" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>

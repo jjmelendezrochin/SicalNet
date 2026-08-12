@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="FormCintasGrid" Src="../../Controls/FormCintasGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Page language="c#" Codebehind="FormCintas.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FormCintas" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>

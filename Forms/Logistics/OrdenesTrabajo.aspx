@@ -1,5 +1,5 @@
 ﻿<%@ Page language="c#" Codebehind="OrdenesTrabajo.aspx.cs" Inherits="UserInterface.Forms.Logistics.OrdenesTrabajo" AutoEventWireup="false" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Register TagPrefix="uc1" TagName="ConsultProgramGrid" Src="../../Controls/ConsultProgramGrid.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>

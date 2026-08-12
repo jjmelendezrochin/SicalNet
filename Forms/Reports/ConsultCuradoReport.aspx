@@ -1,6 +1,6 @@
 <%@ Page language="c#" Codebehind="ConsultCuradoReport.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Reports.ConsultCuradoReport" %>
 <%@ Register TagPrefix="cr" Namespace="CrystalDecisions.Web" Assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

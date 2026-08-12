@@ -1,6 +1,6 @@
 ﻿<%@ Page language="c#" Codebehind="EspecificacionesEmpaquesPvc.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.EspecificacionesEmpaquesPvc" %>
 <%@ Register TagPrefix="uc1" TagName="EspecificacionesPvcGrid" Src="../../Controls/EspecificacionesPvcGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

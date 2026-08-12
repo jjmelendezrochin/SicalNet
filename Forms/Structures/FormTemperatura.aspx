@@ -1,6 +1,6 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="FormTemparaturaGrid" Src="../../Controls/FormTemparaturaGrid.ascx" %>
 <%@ Page language="c#" Codebehind="FormTemperatura.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FormTemperatura" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

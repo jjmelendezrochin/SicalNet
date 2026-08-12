@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="ProgrammaGrid" Src="../../Controls/ProgrammaGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Page language="c#" Codebehind="ConsultProgram.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ConsultProgram" %>
 <script language="javascript">	
 			function ShowTitle()

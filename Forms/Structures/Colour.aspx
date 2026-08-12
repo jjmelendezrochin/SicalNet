@@ -1,12 +1,12 @@
-﻿
-<%@ Register TagPrefix="uc1" TagName="ColourGrid" Src="../../Controls/ColourGrid.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="ColourGrid" Src="../../Controls/ColourGrid.ascx" %>
 <%@ Page language="c#" Codebehind="Colour.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.ColourForm" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
 		<script language="JavaScript">
 <!--
 <!--
@@ -29,8 +29,17 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			}
 		
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+
 		<!--onload="if ('<%= Session["errMsg"]%>' != '') alert('<%= Session["errMsg"]%>')"-->
+
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0"
 		marginheight="0" marginwidth="0">
@@ -38,8 +47,8 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			<div align="center">
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
 					<tr>
-						<td class="contenido" colSpan="2" bgcolor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td class="contenido" colSpan="2">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>

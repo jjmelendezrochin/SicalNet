@@ -1,18 +1,28 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="FoliosAditivosGrid" Src="../../Controls/FoliosAditivosGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Page language="c#" Codebehind="FoliosAditivos.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FoliosAditivos" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+
 		<script language="JavaScript">
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de ollas"
 			}
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0" onload="ShowTitle()"
 		marginwidth="0" marginheight="0" onkeydown="return (event.keyCode!=13)">
@@ -21,7 +31,9 @@
 				<table height="443" cellSpacing="0" cellPadding="0" width="846" border="0">
 					<TBODY>
 						<tr>
-							<td class="contenido" bgColor="#003366" colSpan="3"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+							<td class="contenido" colSpan="3">
+								<div id="sicalMenu"></div>
+							</td>
 						</tr>
 						<tr>
 							<td width="20">&nbsp;</td>

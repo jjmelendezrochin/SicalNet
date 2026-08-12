@@ -1,11 +1,13 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
-<%@ Page language="c#" Codebehind="TipoPMMA.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.TipoPMMAForm" %>
+﻿<%@ Page language="c#" Codebehind="TipoPMMA.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.TipoPMMAForm" %>
 <%@ Register TagPrefix="uc1" TagName="TipoPMMAGrid" Src="../../Controls/TipoPMMAGrid.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
   <HEAD>
-		<title>Gu�a de estilo</title>
+		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+
 		<script language="JavaScript">
 <!--
 <!--
@@ -26,15 +28,23 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					window.frames["top"].document.title = "SICAL  - Cat�logos - Cat�logo de Tipos de prepolimeros"
 			}
 		</script>
-		<link href="../../styloDESC.CSS" rel="stylesheet" type="text/css">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+
+		<script type="text/javascript">document.addEventListener(
+			  "DOMContentLoaded",
+			  function () {
+				  SicalMenu.init("sicalMenu");
+			  }
+		  );
+		</script>
   </HEAD>
 	<body onload="ShowTitle()" bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 		<form id="TipoPMMAForm" method="post" runat="server">
 			<div align="center">
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
 					<tr>
-						<td class="contenido" colSpan="2" bgcolor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td class="contenido" colSpan="2">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>

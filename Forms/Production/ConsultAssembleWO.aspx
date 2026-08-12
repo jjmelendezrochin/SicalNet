@@ -1,5 +1,5 @@
 ﻿<%@ Page language="c#" Codebehind="ConsultAssembleWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ConsultAssembleWO" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
