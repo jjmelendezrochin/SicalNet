@@ -1,4 +1,4 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
 <%@ Page language="c#" Codebehind="DisconnectAccounts.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Administration.DisconnectAccounts" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
@@ -6,7 +6,7 @@
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<script language="JavaScript">
-<!--<a href="../">../</a>
+<!--
 <!--
 function MM_reloadPage(init) {  //reloads the window if Nav4 resized
   if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
@@ -33,7 +33,7 @@ function ConfirmOperation(Button)
 			{
 					window.frames["top"].document.title = "SICAL  - Administración - Sesiones activas"
 			}	
-        </script>
+		</script>
 		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
 	</HEAD>
 	<body onload="ShowTitle()">
