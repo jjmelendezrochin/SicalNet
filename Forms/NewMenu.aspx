@@ -13,10 +13,7 @@
               content="http://schemas.microsoft.com/intellisense/ie5">
                     
 
-        <link rel="stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css">
-        <script type="text/javascript">
-            var sicalApplicationPath = '<%= ResolveUrl("~/") %>';
-        </script>
+        <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
         <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 
         <!-- Funciones propias de la página -->

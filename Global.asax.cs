@@ -76,44 +76,26 @@ namespace UserInterface
 		}
 
 		protected void Application_Error(Object sender, EventArgs e)
-		{			
-			Exception exc = Server.GetLastError();
-						
-			//ExceptionManager.Publish(exc);			
+		{
+			Exception exc = Server.GetLastError();			
 
-			Session["Exception"] = exc.InnerException.Message.ToString();
+			if (exc != null)
+			{
+				string url = Request.RawUrl;
+				string mensaje = exc.GetBaseException().Message;
 
-//			// insertamos el error en el event wiewer de win
-//							        
-//			string EventLogName  = "Application Log";
-//			try
-//			{
-//				if (EventLog.SourceExists(EventLogName)){}
-//				else
-//				{
-//					EventLog.CreateEventSource(EventLogName, EventLogName);
-//				}
-//			}
-//			catch( Exception uu){
-//				string gg=uu.Message.ToString();
-//			}
-//				// insertamos el log
-//				EventLog Log = new EventLog();
-//				Log.Source = EventLogName;
-//				Log.WriteEntry(Session["Exception"].ToString(), EventLogEntryType.Error);
-			
+				System.Diagnostics.Debug.WriteLine(
+					"APPLICATION_ERROR URL: " + url
+				);
 
-			
-			
-			
-//			if (System.Configuration.ConfigurationSettings.AppSettings["PrettyErrors"]=="yes")
-//			    {
-//				// mostramos el errro al usuario
-//				Response.Redirect(Request.ApplicationPath + "/CustomMessages.aspx");
-//				//Server.Transfer("CustomMessages.aspx");
-//				
-//				}
+				System.Diagnostics.Debug.WriteLine(
+					"APPLICATION_ERROR: " + mensaje
+				);
 
+				Session["Exception"] =
+					"URL: " + url +
+					" | Error: " + mensaje;
+			}
 		}
 
 		protected void Session_End(Object sender, EventArgs e)

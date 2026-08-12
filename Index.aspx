@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="Index.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Index"  ResponseEncoding="utf-8"%>
+﻿<%@ Page language="c#" Codebehind="Index.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Index"  ResponseEncoding="utf-8"%>
 <HTML>
 	<HEAD>
 		<TITLE>SICAL - Plastiglás de México.</TITLE>

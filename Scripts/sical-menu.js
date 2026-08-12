@@ -18,9 +18,13 @@
 
             var xhr = new XMLHttpRequest();
 
+            console.log("Página actual = " + window.location.href);
+            console.log("MenuData URL relativa = MenuData.aspx");
+
+
             xhr.open(
                 "GET",
-                sicalApplicationPath + "Forms/MenuData.aspx",
+                "MenuData.aspx",
                 true
             );
 
@@ -40,9 +44,7 @@
                     );
                 }
                 else if (xhr.status === 401) {
-
-                    window.parent.location =
-                        "/SicalNet/Login.aspx";
+                    window.parent.location = "../Login.aspx";
                 }
                 else {
 
