@@ -5,8 +5,8 @@
   <HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
-		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 
 		<script language="JavaScript">
 <!--

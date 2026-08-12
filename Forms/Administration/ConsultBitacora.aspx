@@ -6,8 +6,8 @@
 					window.frames["top"].document.title = "SICAL  - Consultar Programa de Producción"
 			}
 </script>
-<link rel="stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css">
-<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 <script type="text/javascript">
     document.addEventListener(
         "DOMContentLoaded",

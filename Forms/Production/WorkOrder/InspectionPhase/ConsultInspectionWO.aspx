@@ -9,8 +9,8 @@
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
-		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
-		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">		
 			function GetDate(CtrlName)        

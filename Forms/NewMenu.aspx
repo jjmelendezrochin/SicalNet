@@ -17,7 +17,7 @@
               type="text/css"
               href="/SicalNet/Css/sical-menu.css">
 
-        <script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+        <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 
         <!-- Funciones propias de la página -->
         <script type="text/javascript">

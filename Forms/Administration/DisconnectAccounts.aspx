@@ -33,8 +33,8 @@ function ConfirmOperation(Button)
 					window.frames["top"].document.title = "SICAL  - Administración - Sesiones activas"
 			}	
 		</script>
-		<link rel="stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css">
-		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<!--<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">-->
 		<script type="text/javascript">
             document.addEventListener(
