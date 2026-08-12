@@ -20,7 +20,7 @@
 
             xhr.open(
                 "GET",
-                "/SicalNet/Forms/MenuData.aspx",
+                sicalApplicationPath + "Forms/MenuData.aspx",
                 true
             );
 
