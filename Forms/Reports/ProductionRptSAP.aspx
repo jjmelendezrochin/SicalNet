@@ -38,9 +38,6 @@
 						</td>
 					</tr>
 				</table>			
-			<p></p>
-			<p></p>
-			<p></p>
 			<table width="860" align="center">
 				<tr>
 					<td colspan="6" align="center">
