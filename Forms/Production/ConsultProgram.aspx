@@ -15,7 +15,7 @@
 				<TBODY>
 					<tr>
 						<td align="left" colSpan="5" bgColor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+							<uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu>
 						</td>
 					</tr>
 					<tr>
