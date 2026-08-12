@@ -4,34 +4,49 @@
 	<HEAD>
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+
 		<script language="JavaScript">
-<!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+		<!--
+		<!--
+		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+			document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+		  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+		}
+		MM_reloadPage(true);
+		// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+		  window.open(theURL,winName,features);
+		}
 
-function CheckUnCheckAll(CtrlName)
-{
-	alert (CtrlName);
-	alert (CtrlName.indexOf('checkAll'));   
-}
-//-->
+		function CheckUnCheckAll(CtrlName)
+		{
+			alert (CtrlName);
+			alert (CtrlName.indexOf('checkAll'));   
+		}
+		//-->
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body>
 		<form id="ConsultColorWO" method="post" runat="server">
-			<table width="800" align="center" style="BORDER-COLLAPSE: collapse">
+			<table style="BORDER-COLLAPSE: collapse" width="800" align="center">
 				<TBODY>
+					<tr>
+						<td align="left" colSpan="4">
+							<div id="sicalMenu"></div>
+						</td>
+					</tr>
 					<tr>
 						<td align="middle" colSpan="4"><br>
 							<asp:label id="lblTitle" runat="server" Font-Size="14pt" Font-Bold="True" Font-Names="Arial Narrow"> Módulo de Usuarios</asp:label>
