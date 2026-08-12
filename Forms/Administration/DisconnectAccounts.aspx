@@ -6,7 +6,7 @@
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<script language="JavaScript">
-<!--
+<!--<a href="../">../</a>
 <!--
 function MM_reloadPage(init) {  //reloads the window if Nav4 resized
   if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
@@ -33,7 +33,7 @@ function ConfirmOperation(Button)
 			{
 					window.frames["top"].document.title = "SICAL  - Administración - Sesiones activas"
 			}	
-		</script>
+        </script>
 		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
 	</HEAD>
 	<body onload="ShowTitle()">
