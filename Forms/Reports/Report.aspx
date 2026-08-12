@@ -1,4 +1,4 @@
-
+ï»¿
 <%@ Page language="c#" Codebehind="Report.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Reports.Report" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
@@ -8,7 +8,9 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -19,23 +21,32 @@
 					window.frames["top"].document.title = "SICAL  - Reportes"
 			}			
 		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<center>
+			<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
+				<TBODY>
+					<tr>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
+						</td>
+					</tr>
+			</table>
 			<form id="Report" method="post" runat="server">
 				<asp:button style="Z-INDEX: 131; POSITION: absolute; TOP: 296px; LEFT: 424px" id="cmdReporteInspeccion"
-					CssClass="botonesInput" Width="140px" Runat="server" Text="Reporte Pvc Inpección"></asp:button>
+					CssClass="botonesInput" Width="160px" Runat="server" Text="Reporte Pvc InpecciÃ³n"></asp:button>
 				<asp:button style="Z-INDEX: 133; POSITION: absolute; TOP: 296px; LEFT: 760px" id="cmdEtiquetaPvc"
 					Text="Etiqueta Pvc" Runat="server" Width="140px" CssClass="botonesInput"></asp:button>
 				<asp:button style="Z-INDEX: 132; POSITION: absolute; TOP: 296px; LEFT: 592px" id="cmdReporteCorte"
 					Text="Reporte Pvc Corte" Runat="server" Width="140px" CssClass="botonesInput"></asp:button>
 				<br>
-				<br>
-				<br>
-				<p></p>
-				<p></p>
-				<p></p>
-				<p></p>
 				<p></p>
 				<asp:label style="Z-INDEX: 101; POSITION: absolute; TOP: 80px; LEFT: 528px" id="lblTitle" runat="server"
 					Width="317px" Height="19px" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="Larger"
@@ -57,10 +68,10 @@
 					Width="216px" CssClass="standard-text"></asp:ValidationSummary>
 				<asp:RegularExpressionValidator style="Z-INDEX: 127; POSITION: absolute; TOP: 216px; LEFT: 984px" id="RegularExpressionValidator3"
 					runat="server" CssClass="standard-text" ValidationExpression="(^((31(?!-(feb|abr|jun|sep|nov)))|((30|29)(?!-feb?))|(29(?=-feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ene|feb|mar|may|abr|jul|jun|ago|oct|sep|nov|dic)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(FEB|ABR|JUN|SEP|NOV)))|((30|29)(?!-FEB?))|(29(?=-FEB?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ENE|FEB|MAR|MAY|ABR|JUL|JUN|AGO|OCT|SEP|NOV|DIC)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(Feb|Abr|Jun|Sep|Nov)))|((30|29)(?!-Feb?))|(29(?=-Feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(Ene|Feb|Mar|May|Abr|Jul|Jun|Ago|Oct|Sep|Nov|Dic)-((1[6-9]|[2-9]\d)\d{2})$)"
-					ControlToValidate="txtLibFinal" ErrorMessage="Fecha incorrecta en liberación final">*</asp:RegularExpressionValidator>
+					ControlToValidate="txtLibFinal" ErrorMessage="Fecha incorrecta en liberaciÃ³n final">*</asp:RegularExpressionValidator>
 				<asp:RegularExpressionValidator style="Z-INDEX: 126; POSITION: absolute; TOP: 144px; LEFT: 984px" id="RegularExpressionValidator2"
 					runat="server" CssClass="standard-text" ValidationExpression="(^((31(?!-(feb|abr|jun|sep|nov)))|((30|29)(?!-feb?))|(29(?=-feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ene|feb|mar|may|abr|jul|jun|ago|oct|sep|nov|dic)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(FEB|ABR|JUN|SEP|NOV)))|((30|29)(?!-FEB?))|(29(?=-FEB?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ENE|FEB|MAR|MAY|ABR|JUL|JUN|AGO|OCT|SEP|NOV|DIC)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(Feb|Abr|Jun|Sep|Nov)))|((30|29)(?!-Feb?))|(29(?=-Feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(Ene|Feb|Mar|May|Abr|Jul|Jun|Ago|Oct|Sep|Nov|Dic)-((1[6-9]|[2-9]\d)\d{2})$)"
-					ControlToValidate="txtLibInicial" ErrorMessage="Fecha incorrecta en liberación inicial">*</asp:RegularExpressionValidator>
+					ControlToValidate="txtLibInicial" ErrorMessage="Fecha incorrecta en liberaciÃ³n inicial">*</asp:RegularExpressionValidator>
 				<asp:RegularExpressionValidator style="Z-INDEX: 125; POSITION: absolute; TOP: 216px; LEFT: 800px" id="RegularExpressionValidator1"
 					runat="server" CssClass="standard-text" ValidationExpression="(^((31(?!-(feb|abr|jun|sep|nov)))|((30|29)(?!-feb?))|(29(?=-feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ene|feb|mar|may|abr|jul|jun|ago|oct|sep|nov|dic)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(FEB|ABR|JUN|SEP|NOV)))|((30|29)(?!-FEB?))|(29(?=-FEB?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ENE|FEB|MAR|MAY|ABR|JUL|JUN|AGO|OCT|SEP|NOV|DIC)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(Feb|Abr|Jun|Sep|Nov)))|((30|29)(?!-Feb?))|(29(?=-Feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(Ene|Feb|Mar|May|Abr|Jul|Jun|Ago|Oct|Sep|Nov|Dic)-((1[6-9]|[2-9]\d)\d{2})$)"
 					ControlToValidate="txtFechaFinal" ErrorMessage="Fecha incorrecta en programa final">*</asp:RegularExpressionValidator>

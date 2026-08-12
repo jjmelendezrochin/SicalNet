@@ -1,5 +1,4 @@
-﻿
-<%@ Page language="c#" Codebehind="ConsultFillingWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ConsultFillingWO" %>
+﻿<%@ Page language="c#" Codebehind="ConsultFillingWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ConsultFillingWO" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -9,7 +8,9 @@
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -20,13 +21,20 @@
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Llenado"
 			}			
 		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()">
 		<form id="ConsultFillingWO" method="post" runat="server">
 			<table width="700" align="center" style="BORDER-COLLAPSE: collapse">
 				<tr>
-					<td align="left" colSpan="5" bgColor="#003366">
-						<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+					<td align="left" colSpan="5">
+						<div id="sicalMenu"></div>
 					</td>
 				</tr>
 				<tr>

@@ -9,7 +9,9 @@
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
-		<LINK href="..\..\..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{   
@@ -18,8 +20,14 @@
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Post Curado"
-			}			
-			
+			}						
+		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
 		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
@@ -27,8 +35,8 @@
 			<table align="center" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
-						<td align="left" colSpan="5" bgColor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>

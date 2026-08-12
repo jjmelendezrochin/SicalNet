@@ -1,31 +1,39 @@
 ﻿<%@ Page language="c#" Codebehind="OrdenesTrabajo.aspx.cs" Inherits="UserInterface.Forms.Logistics.OrdenesTrabajo" AutoEventWireup="false" %>
-
 <%@ Register TagPrefix="uc1" TagName="ConsultProgramGrid" Src="../../Controls/ConsultProgramGrid.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title>Generar Ordenes Trabajo</title>
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
 		<script language="javascript">
-function showWaitControls()
-{
-	// waitControls.style.display='';
-}			
+		function showWaitControls()
+		{
+			// waitControls.style.display='';
+		}			
 
-function ShowTitle()
-{
-	window.frames["top"].document.title = "SICAL  - Logística - Generar Ordenes de Trabajo";
-}
+		function ShowTitle()
+		{
+			window.frames["top"].document.title = "SICAL  - Logística - Generar Ordenes de Trabajo";
+		}
 		</script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle();" text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0" marginwidth="0" marginheight="0">
 		<form id="PdtLogForm" method="post" runat="server">
 			<table align="center" width="700" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
-						<td align="left" colSpan="5" bgColor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>

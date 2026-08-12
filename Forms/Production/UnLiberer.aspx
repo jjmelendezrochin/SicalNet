@@ -8,20 +8,29 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
-  </HEAD>
-  <script language="JavaScript">  
-		function ShowTitle()
-	{
-		window.frames["top"].document.title = "SICAL  - Logística - Reactivar Secuencia"
-	}
-	</script>
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+	   <script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->  
+	  <script language="JavaScript">  
+			function ShowTitle()
+		{
+			window.frames["top"].document.title = "SICAL  - Logística - Reactivar Secuencia"
+		}
+		</script>
+	    <script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+	    </script>
+	  </HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="UnLiberer" method="post" runat="server">
 			<table align="center" style="BORDER-COLLAPSE: collapse">
 				<tr>
-					<td align="left" colSpan="5" bgColor="#003366">
-						<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+					<td align="left" colSpan="5">
+						<div id="sicalMenu"></div>
 					</td>
 				</tr>
 				<tr>

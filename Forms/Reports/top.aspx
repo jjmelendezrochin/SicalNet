@@ -8,7 +8,10 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<asp:literal id="ltrRefresh" runat="server"></asp:literal><LINK rel="stylesheet" type="text/css" href="..\..\styloDESC.CSS">
+		<asp:literal id="ltrRefresh" runat="server"></asp:literal>
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">
 		function MostrarTabla() {
 			var seleccion = document.getElementById("lstReporte").selectedIndex;
@@ -108,8 +111,14 @@
 
 			return true;
 		}
-		
-		
+				
+		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
 		</script>
 		<style type="text/css">
 			#divWait { HEIGHT: 100%; WIDTH: 100%; POSITION: fixed; TEXT-ALIGN: center; LEFT: 0px; Z-INDEX: 9999; DISPLAY: none; TOP: 0px; BACKGROUND-COLOR: white }
@@ -120,7 +129,9 @@
 		<table style="BORDER-COLLAPSE: collapse" border="0" width="800" align="center">
 			<TBODY>
 				<tr>
-					<td bgColor="#003366" colSpan="6" align="left"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+					<td colSpan="6" align="left">
+						<div id="sicalMenu"></div>
+					</td>
 				</tr>
 			</TBODY>
 		</table>

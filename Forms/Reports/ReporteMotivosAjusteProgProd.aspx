@@ -7,17 +7,17 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<LINK rel="stylesheet" type="text/css" href="../../styloDESC.CSS">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=270,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=yes,resizable=no");
-			}    
-			function ShowTitle()
-			{
-					window.frames["top"].document.title = "SICAL  - Ajustes Reporte Programa de Producción"
-			}			
-		</script>
+            function GetDate(CtrlName) {
+                ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=270,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=yes,resizable=no");
+            }
+            function ShowTitle() {
+                window.frames["top"].document.title = "SICAL  - Ajustes Reporte Programa de Producción"
+            }
+        </script>
 	    <style type="text/css">
             .auto-style1 {
                 font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -30,8 +30,23 @@
                 width: 562px;
             }
         </style>
+		<script type="text/javascript">document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    SicalMenu.init("sicalMenu");
+                }
+            );
+        </script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
+		<table align="center">
+			<tr>
+				<td align="left" colSpan="5">
+					<div id="sicalMenu"></div>
+				</td>
+			</tr>
+		</table>
+		<br /><br /><br /><br />
 		<form id="Form1" method="post" runat="server">
 			<asp:label id="lblTitle" runat="server" Height="19px" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="Medium"
 				CssClass="auto-style1"> Reporte Fase de Ajustes al programa de Producción</asp:label>

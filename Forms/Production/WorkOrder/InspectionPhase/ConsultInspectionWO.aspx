@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="ConsultInspectionWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.InspectionPhase.ConsultInspectionWO" %>
+ï»¿<%@ Page language="c#" Codebehind="ConsultInspectionWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.InspectionPhase.ConsultInspectionWO" %>
 <%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../../../Controls/mainMenu.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
@@ -9,7 +9,9 @@
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
-		<LINK href="..\..\..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -17,21 +19,28 @@
 			}  
 			function ShowTitle()
 			{
-					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Inspección"
+					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de InspecciÃ³n"
 			}		  
+		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
 		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<form id="ConsultInspectionWO" method="post" runat="server">
 			<table align="center" style="BORDER-COLLAPSE: collapse" id="Table1">
 				<tr>
-					<td align="left" colSpan="5" bgColor="#003366">
-						<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+					<td align="left" colSpan="5">
+						<div id="sicalMenu"></div>
 					</td>
 				</tr>
 				<tr>
 					<td align="center" colSpan="5"><br>
-						<asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14">Ordenes de Trabajo - Fase de Inspección</asp:label><hr>
+						<asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14">Ordenes de Trabajo - Fase de InspecciÃ³n</asp:label><hr>
 					</td>
 				</tr>
 				<tr>

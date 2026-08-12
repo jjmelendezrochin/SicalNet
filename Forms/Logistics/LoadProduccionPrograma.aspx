@@ -1,5 +1,4 @@
-﻿
-<%@ Page language="c#" Codebehind="LoadProduccionPrograma.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Logistics.LoadProduccionPrograma" %>
+﻿<%@ Page language="c#" Codebehind="LoadProduccionPrograma.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Logistics.LoadProduccionPrograma" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -8,7 +7,9 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+
 		<script language="JavaScript">
 			function showWaitControls()
 			{
@@ -53,6 +54,13 @@
 				}
 				return true;
 			}
+        </script>
+		<script type="text/javascript">document.addEventListener(
+			"DOMContentLoaded",
+			function () {
+				SicalMenu.init("sicalMenu");
+}
+			);
 		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
@@ -61,7 +69,9 @@
 			<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
 				<TBODY>
 					<tr>
-						<td align="left" bgColor="#003366" colSpan="5"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td align="center" colSpan="3"><br>

@@ -4,31 +4,43 @@
 <HTML>
 	<HEAD>
 		<title>AdjustTanque</title>
+		<meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+
 		<script language="javascript">
-function ConfirmOperation(Button)
-{
-	if (confirm("Do you want the Adjust the Tank")) 
-	{
-		Button.click()
-	}
-}
+			function ConfirmOperation(Button)
+			{
+				if (confirm("Do you want the Adjust the Tank")) 
+				{
+					Button.click()
+				}
+			}
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Tanques Prepolímero"
 			}
 		</script>
-		<meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
-		<meta content="C#" name="CODE_LANGUAGE">
-		<meta content="JavaScript" name="vs_defaultClientScript">
-		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<form id="AdjustTanque" method="post" runat="server">
 			<table align="center">
 				<tr>
-					<td align="left" colSpan="5" bgColor="#003366">
-						<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+					<td align="left" colSpan="5">
+						<div id="sicalMenu"></div>
 					</td>
 				</tr>
 				<tr>

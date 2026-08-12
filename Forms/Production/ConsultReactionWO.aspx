@@ -8,7 +8,9 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<LINK rel="stylesheet" type="text/css" href="../../styloDESC.CSS">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -20,13 +22,22 @@
 			}		
 			
 		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="ConsultReactionWO" method="post" runat="server">
-			<table style="BORDER-COLLAPSE: collapse" align="center">
+			<table align="center" width="700" height="0" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
-						<td bgColor="#003366" colSpan="5" align="left"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td colSpan="5" align="center"><br>

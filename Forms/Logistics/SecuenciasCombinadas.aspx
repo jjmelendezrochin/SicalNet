@@ -8,25 +8,34 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="JavaScript">  
-		function GetDate(CtrlName)        
-	{   
-		ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-	}    
+			function GetDate(CtrlName)        
+			{   
+				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
+			}    
 
-function ShowTitle()
-{
-	window.frames["top"].document.title = "SICAL  - Logística - Secuencias Combinadas"
-}
+			function ShowTitle()
+			{
+				window.frames["top"].document.title = "SICAL  - Logística - Secuencias Combinadas"
+			}
+		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
 		</script>
 	</HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="SecuenciasCombinadas" method="post" runat="server">
 			<table width="700" align="center" style="BORDER-COLLAPSE: collapse">
 				<tr>
-					<td align="left" colSpan="5" bgColor="#003366">
-						<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+					<td align="left" colSpan="5">
+						<div id="sicalMenu"></div>
 					</td>
 				</tr>
 				<tr>
@@ -121,30 +130,30 @@ function ShowTitle()
 														<asp:Label id=lblPrioridad runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Prioridad") %>' CssClass="standard-text" Width="23px">
 														</asp:Label></TD>
 													<TD>
-														<asp:Label id=lblFecha runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Fecha") %>' CssClass="standard-text" Width="60px">
+														<asp:Label id=lblFecha runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Fecha") %>' CssClass="standard-text" Width="60px">
 														</asp:Label></TD>
 													<TD>
-														<asp:Label id=lblLinea runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdLinea") %>' CssClass="standard-text" Width="30px">
+														<asp:Label id=lblLinea runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.IdLinea") %>' CssClass="standard-text" Width="30px">
 														</asp:Label></TD>
 													<TD>
-														<asp:Label id=lblSecuencia runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Secuencia") %>' CssClass="standard-text" Width="70px">
+														<asp:Label id=lblSecuencia runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Secuencia") %>' CssClass="standard-text" Width="70px">
 														</asp:Label></TD>
 													<TD>
-														<asp:Label id=lblLote runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.NumeroLote") %>' CssClass="standard-text" Width="25px">
+														<asp:Label id=lblLote runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.NumeroLote") %>' CssClass="standard-text" Width="25px">
 														</asp:Label></TD>
 													<TD>
-														<asp:Label id=lblCantidad runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Cantidad") %>' CssClass="standard-text" Width="30px">
+														<asp:Label id=lblCantidad runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Cantidad") %>' CssClass="standard-text" Width="30px">
 														</asp:Label></TD>
 													<TD align="right">
-														<asp:Label id=lblMaterial runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.CodigoSAP") %>' CssClass="standard-text" Width="60px">
+														<asp:Label id=lblMaterial runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.CodigoSAP") %>' CssClass="standard-text" Width="60px">
 														</asp:Label></TD>
 													<TD>
-														<asp:Label id=lblDescripcion runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.MaterialDesc") %>' CssClass="standard-text" Width="230px">
+														<asp:Label id=lblDescripcion runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.MaterialDesc") %>' CssClass="standard-text" Width="230px">
 														</asp:Label></TD>
 													<TD>
-														<asp:Label id=lblStatus runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdStatus") %>' CssClass="standard-text" Width="60px" Visible="False">
+														<asp:Label id=lblStatus runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.IdStatus") %>' CssClass="standard-text" Width="60px" Visible="False">
 														</asp:Label>
-														<asp:Label id=lblStatusDesc runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.StatusDesc") %>' CssClass="standard-text" Width="60px">
+														<asp:Label id=lblStatusDesc runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.StatusDesc") %>' CssClass="standard-text" Width="60px">
 														</asp:Label></TD>
 												</TR>
 											</TABLE>

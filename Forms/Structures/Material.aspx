@@ -5,6 +5,8 @@
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
 		<script language="JavaScript">
 <!--
 <!--
@@ -27,7 +29,15 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					window.frames["top"].document.title = "SICAL  - Estructuras - Catálogo de Materiales"
 			}	
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()">
 		<form id="FormMaterial" method="post" runat="server">
@@ -35,8 +45,8 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
 					<TBODY>
 						<tr>
-							<td align="left" colSpan="5" bgColor="#003366">
-								<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+							<td align="left" colSpan="5">
+								<div id="sicalMenu"></div>
 							</td>
 						</tr>
 						<tr>

@@ -6,6 +6,8 @@
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
 		<script language="JavaScript">
 <!--
 <!--
@@ -27,7 +29,14 @@ function ShowTitle()
 
 //-->
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 		<!--onload="if ('<%= Session["errMsg"]%>' != '') alert('<%= Session["errMsg"]%>')"-->
 	</HEAD>
 	<body onload="ShowTitle()" text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0"
@@ -37,8 +46,8 @@ function ShowTitle()
 				<table cellSpacing="0" cellPadding="0" border="0">
 					<TBODY>
 						<tr>
-							<td class="contenido" colSpan="3" bgcolor="#003366">
-								<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+							<td class="contenido" colSpan="3">
+								<div id="sicalMenu"></div>
 							</td>
 						</tr>
 						<tr>

@@ -4,8 +4,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML xmlns:o>
 	<HEAD>
-		<title>Gu�a de estilo</title>
+		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
 		<script language="JavaScript">
 <!--
 <!--
@@ -27,7 +29,14 @@ function ShowTitle()
 }
 
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0" onload="ShowTitle()"
 		marginheight="0" marginwidth="0">
@@ -35,7 +44,9 @@ function ShowTitle()
 			<div align="center">
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
 					<tr>
-						<td class="contenido" bgColor="#003366" colSpan="3"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td class="contenido" colSpan="3">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td width="21" height="11">&nbsp;&nbsp;</td>

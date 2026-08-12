@@ -4,29 +4,31 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
-		<title>Gu�a de estilo</title>
+		<title>Guía de estilo</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
 		<script language="JavaScript">
-<!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+		<!--
+		<!--
+		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+			document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+		  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+		}
+		MM_reloadPage(true);
+		// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
-function ShowTitle()
-{
-	window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de PVC"
-}
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+		  window.open(theURL,winName,features);
+		}
+		//-->
+		function ShowTitle()
+		{
+			window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de PVC"
+		}
 		</script>
-		<LINK rel="stylesheet" type="text/css" href="../../styloDESC.CSS">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 	    <style type="text/css">
             .auto-style1 {
                 FONT-WEIGHT: bold;
@@ -37,6 +39,13 @@ function ShowTitle()
                 height: 13px;
             }
         </style>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" leftMargin="0" topMargin="0" bgColor="#ffffff" text="#000000"
 		marginwidth="0" marginheight="0">
@@ -44,7 +53,9 @@ function ShowTitle()
 			<div align="center">
 				<table border="0" cellSpacing="0" cellPadding="0" width="740">
 					<tr>
-						<td class="contenido" bgColor="#003366" colSpan="3"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td class="contenido" colSpan="3">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td width="21">&nbsp;</td>

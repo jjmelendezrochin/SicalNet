@@ -8,7 +8,11 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<asp:literal id="ltrRefresh" runat="server"></asp:literal><LINK rel="stylesheet" type="text/css" href="..\..\..\..\styloDESC.CSS">
+		<asp:literal id="ltrRefresh" runat="server"></asp:literal>
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<!-- <script src="..\..\..\..\librerias/jquery.min.js"></script> 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>-->
 		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -73,12 +77,22 @@
 		    }
 		    	  
 		</script>
+
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="ConsultInspectionWO" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" id="Table1" align="center">
 				<tr>
-					<td bgColor="#003366" colSpan="5" align="left"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+					<td colSpan="5" align="left">
+						<div id="sicalMenu"></div>
+					</td>
 				</tr>
 				<tr>
 					<td colSpan="5" align="center"><br>
