@@ -1377,7 +1377,7 @@ namespace UserInterface.Helpers
 
             ayuda.Id = "i7.0";
             ayuda.Label = "Ayuda";
-            ayuda.Url = VirtualPathUtility.ToAbsolute("~/Ayuda.chm");
+            ayuda.Url = VirtualPathUtility.ToAbsolute("~/SicalNet.chm");
             ayuda.Icon = "grayDots.gif";
 
             menu.Add(ayuda);

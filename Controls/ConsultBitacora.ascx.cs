@@ -13,6 +13,7 @@ namespace UserInterface.Controls
 	using SICALNet.BusinessEntities;
 	using SICALNet.BusinessLogicLayer;
 	using CrystalDecisions.Shared;
+	using UserInterface.Helpers;
 
 	/// <summary>
 	///		Summary description for ConsultBitacora.
@@ -72,11 +73,9 @@ namespace UserInterface.Controls
 
 //					ddlIdLinea.Items.FindByValue(lineaDefault).Selected=true;
 					
-					txtFecha.Text =  System.DateTime.Now.ToString("dd-MMM-yyyy");
-					txtFechaFin.Text =  System.DateTime.Now.ToString("dd-MMM-yyyy");
+					txtFecha.Text =  System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+					txtFechaFin.Text =  System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 					//Hide the "new record" controls
-					
-					  
 
 				}
 				catch
@@ -130,9 +129,11 @@ namespace UserInterface.Controls
 				                
 				//to fill the fecha from programm production into fecha combo box
 				SICALNet.BusinessLogicLayer.Bitacora bllBitacora = new SICALNet.BusinessLogicLayer.Bitacora();
-								
 
-				gridBitacora.DataSource = bllBitacora.Load(txtFecha.Text, txtFechaFin.Text);
+				UserInterface.Helpers.Funciones fn = new Funciones();
+				gridBitacora.DataSource = bllBitacora.Load(
+					fn.ConvertirFechaMesNumero(txtFecha.Text),
+					fn.ConvertirFechaMesNumero(txtFechaFin.Text));
                 gridBitacora.DataBind();
 
 				gridBitacora.Visible = gridBitacora.Items.Count > 0;
@@ -415,6 +416,14 @@ namespace UserInterface.Controls
 			return true;
 		}
 
+        protected void btnSel_Click1(object sender, EventArgs e)
+        {
 
-	}
+        }
+
+        protected void txtFecha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -619,6 +619,7 @@
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Helpers\Funciones.cs" />
     <Compile Include="MenuData.aspx.cs">
       <DependentUpon>MenuData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1414,7 +1415,7 @@
     <Content Include="images\menuSuperior\Thumbs.db" />
     <Content Include="images\imagenes.zip" />
     <Content Include="images\Thumbs.db" />
-    <Content Include="Forms\SICALNet.chm" />
+    <Content Include="SICALNet.chm" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
