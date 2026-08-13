@@ -11,10 +11,13 @@
         <meta name="vs_defaultClientScript" content="JavaScript">
         <meta name="vs_targetSchema"
               content="http://schemas.microsoft.com/intellisense/ie5">
-                    
 
-        <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+        <script type="text/javascript">
+            window.SicalAppPath = '<%= ResolveUrl("~/") %>';
+        </script>
+
         <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+        <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
 
         <!-- Funciones propias de la página -->
         <script type="text/javascript">

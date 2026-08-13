@@ -21,6 +21,10 @@
 [Rr]elease/
 x64/
 x86/
+bin/*.dll
+bin/UserInterface.dll
+bin/UserInterface.pdb
+obj/*
 
 # Resultados de compilación
 *.dll

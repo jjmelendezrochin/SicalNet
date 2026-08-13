@@ -135,7 +135,6 @@
     <Content Include="Controls\LineaGrid.ascx" />
     <Content Include="Controls\ListofMaterialGrid.ascx" />
     <Content Include="Controls\LotesGrid.ascx" />
-    <Content Include="Controls\mainMenu.ascx" />
     <Content Include="Controls\MaterialGrid.ascx" />
     <Content Include="Controls\MedidaGrid.ascx" />
     <Content Include="Controls\OllaGrid.ascx" />
@@ -194,7 +193,7 @@
     <Content Include="Forms\Logistics\ProgrammaProduction.aspx" />
     <Content Include="Forms\Logistics\SecuenciasCombinadas.aspx" />
     <Content Include="Forms\Menu.aspx" />
-    <Content Include="Forms\MenuData.aspx" />
+    <Content Include="MenuData.aspx" />
     <Content Include="Forms\NewMenu.aspx" />
     <Content Include="Forms\Production\AditivosCuantos.aspx" />
     <Content Include="Forms\Production\AditivosCuarto.aspx" />
@@ -473,10 +472,6 @@
       <DependentUpon>LotesGrid.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\mainMenu.ascx.cs">
-      <DependentUpon>mainMenu.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Controls\MaterialGrid.ascx.cs">
       <DependentUpon>MaterialGrid.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -624,11 +619,11 @@
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\MenuData.aspx.cs">
+    <Compile Include="MenuData.aspx.cs">
       <DependentUpon>MenuData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\MenuData.aspx.designer.cs">
+    <Compile Include="MenuData.aspx.designer.cs">
       <DependentUpon>MenuData.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\NewMenu.aspx.cs">

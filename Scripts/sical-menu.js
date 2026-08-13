@@ -6,7 +6,8 @@
 
         init: function (containerId) {
 
-            var container = document.getElementById(containerId);
+            var container =
+                document.getElementById(containerId);
 
             if (!container) {
                 console.error(
@@ -16,48 +17,137 @@
                 return;
             }
 
-            var xhr = new XMLHttpRequest();
+            var xhr =
+                new XMLHttpRequest();
 
-            console.log("Página actual = " + window.location.href);
-            console.log("MenuData URL relativa = MenuData.aspx");
+            console.log(
+                "Página actual = " +
+                window.location.href
+            );
+
+
+            // ==========================================
+            // DETERMINAR RAÍZ DE LA APLICACIÓN
+            // ==========================================
+
+            var appPath =
+                window.SicalAppPath;
+
+            /*
+             * NewMenu.aspx define SicalAppPath.
+             *
+             * Las demás páginas pueden no tener
+             * definida dicha variable.
+             */
+            if (!appPath) {
+
+                var currentPath =
+                    window.location.pathname.toLowerCase();
+
+                /*
+                 * IIS
+                 *
+                 * http://localhost/SicalNET/
+                 */
+                if (
+                    currentPath.indexOf(
+                        "/sicalnet/"
+                    ) === 0
+                ) {
+                    appPath =
+                        "/SicalNET/";
+                }
+                else {
+
+                    /*
+                     * Visual Studio
+                     *
+                     * https://localhost:44364/
+                     */
+                    appPath = "/";
+                }
+            }
+
+
+            console.log(
+                "SicalAppPath = " +
+                appPath
+            );
+
+
+            // ==========================================
+            // MENU DATA
+            // ==========================================
+
+            var menuDataUrl =
+                appPath +
+                "MenuData.aspx";
+
+            console.log(
+                "MenuData URL = " +
+                menuDataUrl
+            );
 
 
             xhr.open(
                 "GET",
-                "MenuData.aspx",
+                menuDataUrl,
                 true
             );
 
-            xhr.onreadystatechange = function () {
 
-                if (xhr.readyState !== 4) {
-                    return;
-                }
+            xhr.onreadystatechange =
+                function () {
 
-                if (xhr.status === 200) {
+                    if (
+                        xhr.readyState !== 4
+                    ) {
+                        return;
+                    }
 
-                    var menu = JSON.parse(xhr.responseText);
 
-                    SicalMenu.render(
-                        container,
-                        menu
-                    );
-                }
-                else if (xhr.status === 401) {
-                    window.parent.location = "../Login.aspx";
-                }
-                else {
+                    if (
+                        xhr.status === 200
+                    ) {
 
-                    alert(
-                        "Error al cargar el menú. HTTP " +
-                        xhr.status
-                    );
-                }
-            };
+                        var menu =
+                            JSON.parse(
+                                xhr.responseText
+                            );
+
+                        SicalMenu.render(
+                            container,
+                            menu
+                        );
+                    }
+
+                    else if (
+                        xhr.status === 401
+                    ) {
+
+                        window.parent.location =
+                            appPath +
+                            "Login.aspx";
+                    }
+
+                    else {
+
+                        console.error(
+                            "SICAL: Error cargando MenuData",
+                            xhr.status,
+                            menuDataUrl
+                        );
+
+                        alert(
+                            "Error al cargar el menú. HTTP " +
+                            xhr.status
+                        );
+                    }
+                };
+
 
             xhr.send(null);
         },
-
 
         render: function (container, items) {
 

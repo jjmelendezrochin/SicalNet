@@ -18,7 +18,7 @@ namespace UserInterface.Helpers
 
             inicio.Id = "i0.0";
             inicio.Label = "Inicio";
-            inicio.Url = "/SicalNet/Forms/NewMenu.aspx";
+            inicio.Url = VirtualPathUtility.ToAbsolute("~/Forms/NewMenu.aspx");
             inicio.Icon = "grayDots.gif";
 
             menu.Add(inicio);
@@ -47,8 +47,11 @@ namespace UserInterface.Helpers
 
                     usuarios.Id = "i1.1";
                     usuarios.Label = "Usuarios";
-                    usuarios.Url =
-                        "/SicalNet/Forms/Administration/UsersList.aspx";
+                    usuarios.Url = VirtualPathUtility.ToAbsolute(
+                        "~/Forms/Administration/UsersList.aspx"
+                    );
+        //            usuarios.Url =
+        //                        "~/Forms/Administration/UsersList.aspx";
                     usuarios.Icon = "grayDots.gif";
 
                     administracion.Children.Add(usuarios);
@@ -65,8 +68,8 @@ namespace UserInterface.Helpers
 
                     perfiles.Id = "i1.2";
                     perfiles.Label = "Perfiles";
-                    perfiles.Url =
-                        "/SicalNet/Forms/Administration/Profiles.aspx";
+                    perfiles.Url = VirtualPathUtility.ToAbsolute(
+                        "~/Forms/Administration/Profiles.aspx");
                     perfiles.Icon = "grayDots.gif";
 
                     administracion.Children.Add(perfiles);
@@ -83,8 +86,8 @@ namespace UserInterface.Helpers
 
                     desbloqueo.Id = "i1.3";
                     desbloqueo.Label = "Desbloqueo de Cuentas";
-                    desbloqueo.Url =
-                        "/SicalNet/Forms/Administration/UnlockAccounts.aspx";
+                    desbloqueo.Url = VirtualPathUtility.ToAbsolute(
+                        "~/Forms/Administration/UnlockAccounts.aspx");
                     desbloqueo.Icon = "grayDots.gif";
 
                     administracion.Children.Add(desbloqueo);
@@ -101,8 +104,8 @@ namespace UserInterface.Helpers
 
                     bitacora.Id = "i1.4";
                     bitacora.Label = "Bitácora de Sucesos";
-                    bitacora.Url =
-                        "/SicalNet/Forms/Administration/ConsultBitacora.aspx";
+                    bitacora.Url = VirtualPathUtility.ToAbsolute(
+                        "~/Forms/Administration/ConsultBitacora.aspx");
                     bitacora.Icon = "grayDots.gif";
 
                     administracion.Children.Add(bitacora);
@@ -119,8 +122,8 @@ namespace UserInterface.Helpers
 
                     desconectar.Id = "i1.5";
                     desconectar.Label = "Desconectar Cuentas";
-                    desconectar.Url =
-                        "/SicalNet/Forms/Administration/DisconnectAccounts.aspx";
+                    desconectar.Url = VirtualPathUtility.ToAbsolute(
+                        "~/Forms/Administration/DisconnectAccounts.aspx");
                     desconectar.Icon = "grayDots.gif";
 
                     administracion.Children.Add(desconectar);
@@ -156,7 +159,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.1";
                     item.Label = "Plantas";
-                    item.Url = "/SicalNet/Forms/Structures/Plant.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Plant.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -170,7 +173,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.2";
                     item.Label = "Líneas de Producción";
-                    item.Url = "/SicalNet/Forms/Structures/Linea.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Linea.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -184,7 +187,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.3";
                     item.Label = "Presentaciones";
-                    item.Url = "/SicalNet/Forms/Structures/Presentacion.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Presentacion.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -198,7 +201,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.4";
                     item.Label = "Medidas";
-                    item.Url = "/SicalNet/Forms/Structures/Medida.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Medida.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -212,7 +215,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.5";
                     item.Label = "Espesores";
-                    item.Url = "/SicalNet/Forms/Structures/Espesor.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Espesor.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -226,7 +229,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.6";
                     item.Label = "Colores";
-                    item.Url = "/SicalNet/Forms/Structures/Colour.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Colour.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -240,7 +243,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.7";
                     item.Label = "Familias de Producto";
-                    item.Url = "/SicalNet/Forms/Structures/FamiliaProductos.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FamiliaProductos.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -254,7 +257,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.8";
                     item.Label = "Tipos de Prepolímero (PMMA)";
-                    item.Url = "/SicalNet/Forms/Structures/TipoPMMA.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/TipoPMMA.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -268,7 +271,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.9";
                     item.Label = "Lotes";
-                    item.Url = "/SicalNet/Forms/Structures/Lotes.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Lotes.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -282,7 +285,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.10";
                     item.Label = "Ollas";
-                    item.Url = "/SicalNet/Forms/Structures/Ollas.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Ollas.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -296,7 +299,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.11";
                     item.Label = "Cubas Área de Curado";
-                    item.Url = "/SicalNet/Forms/Structures/Cubas.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Cubas.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -310,7 +313,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.12";
                     item.Label = "Cubas Área de Post Curado";
-                    item.Url = "/SicalNet/Forms/Structures/Zonas.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Zonas.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -324,7 +327,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.13";
                     item.Label = "Vidrios";
-                    item.Url = "/SicalNet/Forms/Structures/VidriosTamanio.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/VidriosTamanio.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -338,7 +341,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.14";
                     item.Label = "Aforo";
-                    item.Url = "/SicalNet/Forms/Structures/Aforo.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Aforo.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -352,7 +355,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i2.15";
                     item.Label = "Anillos";
-                    item.Url = "/SicalNet/Forms/Structures/Anillos.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Anillos.aspx");
                     item.Icon = "grayDots.gif";
 
                     catalogos.Children.Add(item);
@@ -379,7 +382,7 @@ namespace UserInterface.Helpers
 
                         item.Id = "i2.11_folios_color";
                         item.Label = "Folios Color";
-                        item.Url = "/SicalNet/Forms/Structures/FoliosColor.aspx";
+                        item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FoliosColor.aspx");
                         item.Icon = "grayDots.gif";
 
                         formulacion.Children.Add(item);
@@ -393,7 +396,7 @@ namespace UserInterface.Helpers
 
                         item.Id = "i2.12_folios_aditivos";
                         item.Label = "Folios Aditivos";
-                        item.Url = "/SicalNet/Forms/Structures/FoliosAditivos.aspx";
+                        item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FoliosAditivos.aspx");
                         item.Icon = "grayDots.gif";
 
                         formulacion.Children.Add(item);
@@ -433,7 +436,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.1";
                     item.Label = "Catálogo de Materiales";
-                    item.Url = "/SicalNet/Forms/Structures/Material.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Material.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -447,7 +450,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.2";
                     item.Label = "Formulación de Color para SAP";
-                    item.Url = "/SicalNet/Forms/Structures/ListOfMaterial.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/ListOfMaterial.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -461,7 +464,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.3";
                     item.Label = "Actualizar Lista de Materiales para SAP";
-                    item.Url = "/SicalNet/Forms/Structures/UpdateMaterialList.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/UpdateMaterialList.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -475,7 +478,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.3.1";
                     item.Label = "Actualizar Lista de Materiales";
-                    item.Url = "/SicalNet/Forms/Structures/UpdateMaterialListDta.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/UpdateMaterialListDta.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -489,7 +492,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.4";
                     item.Label = "Cargar Materiales Fantasmas";
-                    item.Url = "/SicalNet/Forms/Structures/CargarFantasmas.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/CargarFantasmas.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -503,7 +506,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.4.1";
                     item.Label = "Especificaciones de Empaques de PVC y EPDM";
-                    item.Url = "/SicalNet/Forms/Structures/EspecificacionesEmpaquesPvc.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/EspecificacionesEmpaquesPvc.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -517,7 +520,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.5";
                     item.Label = "Tabla de Pesos";
-                    item.Url = "/SicalNet/Forms/Structures/Peso.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/Peso.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -531,7 +534,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.6";
                     item.Label = "Formulación de Color";
-                    item.Url = "/SicalNet/Forms/Structures/FormColor.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FormColor.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -545,7 +548,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.7";
                     item.Label = "Formulación de Aditivos";
-                    item.Url = "/SicalNet/Forms/Structures/FormAditivos.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FormAditivos.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -559,7 +562,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.8";
                     item.Label = "Formulación de PVC";
-                    item.Url = "/SicalNet/Forms/Structures/FormPVC.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FormPVC.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -573,7 +576,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.9";
                     item.Label = "Formulación de Presentaciones";
-                    item.Url = "/SicalNet/Forms/Structures/FormPresentacion.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FormPresentacion.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -587,7 +590,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.10";
                     item.Label = "Formulación de Cintas";
-                    item.Url = "/SicalNet/Forms/Structures/FormCintas.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FormCintas.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -601,7 +604,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.11";
                     item.Label = "Formulación de Temperaturas";
-                    item.Url = "/SicalNet/Forms/Structures/FormTemperatura.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FormTemperatura.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -615,7 +618,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i3.13";
                     item.Label = "Inventario de Vidrios";
-                    item.Url = "/SicalNet/Forms/Structures/invVidrios.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/invVidrios.aspx");
                     item.Icon = "grayDots.gif";
 
                     estructuras.Children.Add(item);
@@ -648,7 +651,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i4.1";
                     item.Label = "Cargar Programa de Producción";
-                    item.Url = "/SicalNet/Forms/Logistics/LoadProduccionPrograma.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Logistics/LoadProduccionPrograma.aspx");
                     item.Icon = "grayDots.gif";
 
                     logistica.Children.Add(item);
@@ -662,7 +665,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i4.2";
                     item.Label = "Consultar Programa de Producción";
-                    item.Url = "/SicalNet/Forms/Logistics/ProgrammaProduction.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Logistics/ProgrammaProduction.aspx");
                     item.Icon = "grayDots.gif";
 
                     logistica.Children.Add(item);
@@ -676,7 +679,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i4.3";
                     item.Label = "Generar Órdenes de Trabajo";
-                    item.Url = "/SicalNet/Forms/Logistics/OrdenesTrabajo.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Logistics/OrdenesTrabajo.aspx");
                     item.Icon = "grayDots.gif";
 
                     logistica.Children.Add(item);
@@ -690,7 +693,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i4.4";
                     item.Label = "Combinar Secuencias";
-                    item.Url = "/SicalNet/Forms/Logistics/SecuenciasCombinadas.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Logistics/SecuenciasCombinadas.aspx");
                     item.Icon = "grayDots.gif";
 
                     logistica.Children.Add(item);
@@ -704,7 +707,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i4.5";
                     item.Label = "Reactivar Secuencias";
-                    item.Url = "/SicalNet/Forms/Production/Unliberer.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/Unliberer.aspx");
                     item.Icon = "grayDots.gif";
 
                     logistica.Children.Add(item);
@@ -718,7 +721,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i4.6";
                     item.Label = "Reporte de Ajustes al Programa de Producción";
-                    item.Url = "/SicalNet/Forms/Reports/ReporteMotivosAjusteProgProd.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Reports/ReporteMotivosAjusteProgProd.aspx");
                     item.Icon = "grayDots.gif";
 
                     logistica.Children.Add(item);
@@ -751,7 +754,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.17";
                     item.Label = "Consultar Programa de Producción";
-                    item.Url = "/SicalNet/Forms/Production/ConsultProgram.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultProgram.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -778,7 +781,7 @@ namespace UserInterface.Helpers
 
                         item.Id = "i5.1.1";
                         item.Label = "Consultar Órdenes de Trabajo";
-                        item.Url = "/SicalNet/Forms/Production/ConsultReactionWO.aspx";
+                        item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultReactionWO.aspx");
                         item.Icon = "grayDots.gif";
 
                         reaccion.Children.Add(item);
@@ -792,7 +795,7 @@ namespace UserInterface.Helpers
 
                         item.Id = "i5.1.2";
                         item.Label = "Ajustar Tanque de PMMA";
-                        item.Url = "/SicalNet/Forms/Production/AdjustTanque.aspx";
+                        item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/AdjustTanque.aspx");
                         item.Icon = "grayDots.gif";
 
                         reaccion.Children.Add(item);
@@ -813,7 +816,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.2";
                     item.Label = "Cuarto de Color";
-                    item.Url = "/SicalNet/Forms/Production/WorkOrder/PartidasColor/ConsultColorWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/WorkOrder/PartidasColor/ConsultColorWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -827,7 +830,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.3";
                     item.Label = "Cuarto de Aditivos";
-                    item.Url = "/SicalNet/Forms/Production/ConsultAditivosWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultAditivosWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -841,7 +844,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.4";
                     item.Label = "Cuarto de PVC";
-                    item.Url = "/SicalNet/Forms/Production/ConsultPVCWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultPVCWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -855,7 +858,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.5";
                     item.Label = "Cuarto de Mezclas";
-                    item.Url = "/SicalNet/Forms/Production/ConsultMixturesWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultMixturesWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -869,7 +872,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.6";
                     item.Label = "Fase de Armado";
-                    item.Url = "/SicalNet/Forms/Production/ConsultAssembleWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultAssembleWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -883,7 +886,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.7";
                     item.Label = "Fase de Llenado";
-                    item.Url = "/SicalNet/Forms/Production/ConsultFillingWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultFillingWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -897,7 +900,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.8";
                     item.Label = "Fase de Curado";
-                    item.Url = "/SicalNet/Forms/Production/ConsultarCured.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultarCured.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -911,7 +914,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.9";
                     item.Label = "Fase de Post-Curado";
-                    item.Url = "/SicalNet/Forms/Production/WorkOrder/PartidasPostCurado/Consultar_PostCured.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/WorkOrder/PartidasPostCurado/Consultar_PostCured.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -925,7 +928,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.10";
                     item.Label = "Fase de Preseparación";
-                    item.Url = "/SicalNet/Forms/Production/ConsultPreseparationWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultPreseparationWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -939,7 +942,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.11";
                     item.Label = "Fase de Separación";
-                    item.Url = "/SicalNet/Forms/Production/ConsultSeparacionWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultSeparacionWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -953,7 +956,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.12";
                     item.Label = "Fase de Inspección";
-                    item.Url = "/SicalNet/Forms/Production/WorkOrder/InspectionPhase/ConsultInspectionWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/WorkOrder/InspectionPhase/ConsultInspectionWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -967,7 +970,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.125";
                     item.Label = "Fase de Liberación";
-                    item.Url = "/SicalNet/Forms/Production/WorkOrder/LiberationPhase/ConsultLiberationWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/WorkOrder/LiberationPhase/ConsultLiberationWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -981,7 +984,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.13";
                     item.Label = "Fase de Pendientes/Cuarentena";
-                    item.Url = "/SicalNet/Forms/Production/ConsultQuarantineWO.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/ConsultQuarantineWO.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -995,7 +998,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.14";
                     item.Label = "Entrega de Producto Terminado";
-                    item.Url = "/SicalNet/Forms/Production/WorkOrder/PartidasEnvioPT/ConsultEnvioPT.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/WorkOrder/PartidasEnvioPT/ConsultEnvioPT.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -1009,7 +1012,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.15";
                     item.Label = "Recepción de Producto Terminado";
-                    item.Url = "/SicalNet/Forms/Production/WorkOrder/PartidasRecepcionPT/ConsultRecepcionPT.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/WorkOrder/PartidasRecepcionPT/ConsultRecepcionPT.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -1023,7 +1026,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i5.16";
                     item.Label = "Interfaz SAP";
-                    item.Url = "/SicalNet/Forms/Production/WorkOrder/InterfaceSAP/ConsultInterfaceSAP.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Production/WorkOrder/InterfaceSAP/ConsultInterfaceSAP.aspx");
                     item.Icon = "grayDots.gif";
 
                     produccion.Children.Add(item);
@@ -1071,7 +1074,7 @@ namespace UserInterface.Helpers
 
                         item.Id = "i6.1";
                         item.Label = "Consumos por Secuencia";
-                        item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Color";
+                        item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Color");
                         item.Icon = "grayDots.gif";
 
                         faseColor.Children.Add(item);
@@ -1085,7 +1088,7 @@ namespace UserInterface.Helpers
 
                         item.Id = "i6.2";
                         item.Label = "Consumos Globales";
-                        item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Consumo de Color";
+                        item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Consumo de Color");
                         item.Icon = "grayDots.gif";
 
                         faseColor.Children.Add(item);
@@ -1121,7 +1124,7 @@ namespace UserInterface.Helpers
 
                         item.Id = "i6.3";
                         item.Label = "Consumos por Secuencia";
-                        item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Aditivos";
+                        item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Aditivos");
                         item.Icon = "grayDots.gif";
 
                         faseAditivos.Children.Add(item);
@@ -1135,7 +1138,7 @@ namespace UserInterface.Helpers
 
                         item.Id = "i6.4";
                         item.Label = "Consumos Globales";
-                        item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Consumo de Aditivos";
+                        item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Consumo de Aditivos");
                         item.Icon = "grayDots.gif";
 
                         faseAditivos.Children.Add(item);
@@ -1156,7 +1159,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.5";
                     item.Label = "Reporte de Producción";
-                    item.Url = "/SicalNet/Forms/Reports/ProduccionRpt.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/ProduccionRpt.aspx");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1170,7 +1173,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.6";
                     item.Label = "Reporte de Rastreabilidad";
-                    item.Url = "/SicalNet/Forms/Reports/RastreabilidadRpt.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/RastreabilidadRpt.aspx");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1184,7 +1187,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.7";
                     item.Label = "Reporte de Consulta de Mezclas";
-                    item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Mezclas";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Mezclas");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1198,7 +1201,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.8";
                     item.Label = "Reporte de Consumo de Mezclas";
-                    item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Consumo de Mezclas";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Consumo de Mezclas");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1212,7 +1215,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.9";
                     item.Label = "Reporte de Reacción";
-                    item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Reacción";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Reacción");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1226,7 +1229,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.10";
                     item.Label = "Reporte de Llenado";
-                    item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Llenado";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Llenado");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1240,7 +1243,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.11";
                     item.Label = "Reporte de Curado";
-                    item.Url = "/SicalNet/Forms/Reports/ConsultCuradoReport.aspx?Title=Curado";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/ConsultCuradoReport.aspx?Title=Curado");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1254,7 +1257,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.12";
                     item.Label = "Reporte de Post-Curado";
-                    item.Url = "/SicalNet/Forms/Reports/ConsultCuradoReport.aspx?Title=PostCurado";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/ConsultCuradoReport.aspx?Title=PostCurado");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1268,7 +1271,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.13";
                     item.Label = "Reporte de Preseparación";
-                    item.Url = "/SicalNet/Forms/Reports/ConsultCuradoReport.aspx?Title=Preseparación";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/ConsultCuradoReport.aspx?Title=Preseparación");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1282,7 +1285,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.14";
                     item.Label = "Reporte de Separación";
-                    item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Separación";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Separación");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1296,7 +1299,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.15";
                     item.Label = "Reporte de Inspección";
-                    item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Inspección";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Inspección");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1310,7 +1313,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.16";
                     item.Label = "Reporte de Variaciones de Peso";
-                    item.Url = "/SicalNet/Forms/Reports/Produccion/VariationofWeight.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Produccion/VariationofWeight.aspx");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1324,7 +1327,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.17";
                     item.Label = "Reporte de UTEC";
-                    item.Url = "/SicalNet/Forms/Reports/ProductionRptSAP.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/ProductionRptSAP.aspx");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1338,7 +1341,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.18";
                     item.Label = "Reporte de Consumo PVC";
-                    item.Url = "/SicalNet/Forms/Reports/Report.aspx?Title=Materiales PVC";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/Report.aspx?Title=Materiales PVC");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1352,7 +1355,7 @@ namespace UserInterface.Helpers
 
                     item.Id = "i6.19";
                     item.Label = "Reporte de Materiales";
-                    item.Url = "/SicalNet/Forms/Reports/top.aspx";
+                    item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Reports/top.aspx");
                     item.Icon = "grayDots.gif";
 
                     reportes.Children.Add(item);
@@ -1374,7 +1377,7 @@ namespace UserInterface.Helpers
 
             ayuda.Id = "i7.0";
             ayuda.Label = "Ayuda";
-            ayuda.Url = "/SicalNet/Forms/SICALNet.chm";
+            ayuda.Url = VirtualPathUtility.ToAbsolute("~/Ayuda.chm");
             ayuda.Icon = "grayDots.gif";
 
             menu.Add(ayuda);
@@ -1387,7 +1390,7 @@ namespace UserInterface.Helpers
 
             salir.Id = "i8.0";
             salir.Label = "Salir";
-            salir.Url = "/SicalNet/LogOut.aspx";
+            salir.Url = VirtualPathUtility.ToAbsolute("~/LogOut.aspx");
             salir.Icon = "grayDots.gif";
             salir.Target = "_parent";
 
