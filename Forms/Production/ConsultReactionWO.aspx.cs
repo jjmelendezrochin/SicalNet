@@ -50,8 +50,8 @@ namespace UserInterface.Forms.Production
 				string tmpFin = (string) Session["FinalDate"];
 				if (tmpInit == null || tmpFin ==null)
 				{				
-					String sFechaIni = DateTime.Now.Date.ToString("dd-MMM-yyyy");
-					String sFechaFin = DateTime.Now.Date.ToString("dd-MMM-yyyy");
+					String sFechaIni = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+					String sFechaFin = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 
 					txtFechaInicial.Text = sFechaIni.Replace(".","");
 					txtFechaFinal.Text = sFechaFin.Replace(".","");
@@ -61,8 +61,8 @@ namespace UserInterface.Forms.Production
 				}
 				else
 				{
-					String sFechaIni = DateTime.Now.Date.ToString("dd-MMM-yyyy");
-					String sFechaFin = DateTime.Now.Date.ToString("dd-MMM-yyyy");
+					String sFechaIni = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+					String sFechaFin = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 
 					txtFechaInicial.Text=sFechaIni.Replace(".","");
 					txtFechaFinal.Text=sFechaFin.Replace(".","");

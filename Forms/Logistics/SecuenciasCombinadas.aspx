@@ -40,14 +40,16 @@
 				</tr>
 				<tr>
 					<td align="center" colSpan="4"><br>
-						<asp:label id="lblTitle" runat="server" Font-Bold="True" Font-Size="14" Font-Names="Arial Narrow"> Secuencias Combinadas</asp:label>
-						<hr>
+						<asp:label id="lblTitle" runat="server" Font-Bold="True" Font-Size="14" Font-Names="Arial Narrow"> Secuencias Combinadas</asp:label>						
 					</td>
 				</tr>
+			</table>
+			<br />			
+			<table width="700" align="center" style="BORDER-COLLAPSE: collapse">
 				<tr>
 					<td align="center" colSpan="4"></td>
 				</tr>
-				<tr>
+				<tr>					
 					<td style="HEIGHT: 2px"><asp:label id="lblInitial" Text="Fecha" Runat="server" CssClass="standard-text">Fecha Inicial</asp:label>
 						<asp:label id="Label3" CssClass="standard-text" Runat="server" Text="(dd-MMM-yyyy)" ForeColor="Red"> * (dd-MMM-aaaa)</asp:label></td>
 					<td style="HEIGHT: 2px"><asp:label id="lblFinal" Text="Fecha" Runat="server" CssClass="standard-text">Fecha Final</asp:label>

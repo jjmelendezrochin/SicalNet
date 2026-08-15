@@ -24,20 +24,30 @@
 				}
 			);
 	    </script>
+	    <style type="text/css">
+            .auto-style1 {
+                height: 65px;
+            }
+        </style>
 	  </HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="UnLiberer" method="post" runat="server">
-			<table align="center" style="BORDER-COLLAPSE: collapse">
+			<table align="center" style="BORDER-COLLAPSE: collapse" class="auto-style1">
 				<tr>
 					<td align="left" colSpan="5">
 						<div id="sicalMenu"></div>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2" align="middle"><br>
-						<asp:Label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14"> Reactivar secuencia</asp:Label><hr>
+					<td align="center" colspan="2"><br />
+						<asp:Label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14">
+							Reactivar secuencia
+						</asp:Label>
 					</td>
 				</tr>
+			</table>
+			<br />			
+			<table width="700" align="center" style="BORDER-COLLAPSE: collapse">
 				<TR>
 					<TD colspan="2">
 						<asp:label id="Label2" runat="server" Width="700px" CssClass="standard-text">Proporcione el número de secuencia que desea reactivar, y posteriormente seleccione las áreas en donde desea que sea reactivada la secuencia proporcionada.</asp:label></TD>

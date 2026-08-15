@@ -1,5 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../../../Controls/mainMenu.ascx" %>
-<%@ Page language="c#" Codebehind="ConsultColorWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ColorRoom.ConsultColorWO" %>
+ï»¿<%@ Page language="c#" Codebehind="ConsultColorWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ColorRoom.ConsultColorWO" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -8,7 +7,11 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<asp:literal id="ltrRefresh" runat="server"></asp:literal><LINK rel="stylesheet" type="text/css" href="..\..\..\..\styloDESC.CSS">
+		<asp:literal id="ltrRefresh" runat="server"></asp:literal>
+		<link rel="stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css">
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{   
@@ -69,7 +72,13 @@
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Color"
 			}			
-			
+		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
 		</script>
 	</HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
@@ -77,7 +86,9 @@
 			<table style="BORDER-COLLAPSE: collapse" border="0" width="800" align="center">
 				<TBODY>
 					<tr>
-						<td bgColor="#003366" colSpan="6" align="left"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td colSpan="6" align="left">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td colSpan="6" align="center"><br>
@@ -89,14 +100,16 @@
 						<td><asp:label id="lblInitial" Runat="server" Text="Fecha Inicial *" CssClass="standard-text">Fecha Inicial</asp:label><asp:label id="Label3" Runat="server" Text="(dd-MMM-yyyy)" CssClass="standard-text" ForeColor="Red"> * (dd-MMM-aaaa)</asp:label></td>
 						<td><asp:label id="lblFinal" Runat="server" Text="Fecha Final" CssClass="standard-text">Fecha Final</asp:label><asp:label id="Label4" Runat="server" Text="(dd-MMM-yyyy)" CssClass="standard-text" ForeColor="Red"> * (dd-MMM-aaaa)</asp:label></td>
 						<td><asp:label id="Label5" Runat="server" Text="Status" CssClass="standard-text">Status</asp:label></td>
-						<td><asp:label id="Label1" Runat="server" Text="Línea de Producción" CssClass="standard-text">Línea de Producción</asp:label></td>
+						<td><asp:label id="Label1" Runat="server" Text="LÃ­nea de ProducciÃ³n" CssClass="standard-text">LÃ­nea de ProducciÃ³n</asp:label></td>
 						<td><asp:label id="Label7" Runat="server" Text="Color" CssClass="standard-text">Color</asp:label></td>
 						<td><asp:label id="Label21" Runat="server" Text="Aforo" CssClass="standard-text">Aforo</asp:label></td>
 					</tr>
 					<tr>
-						<td><asp:textbox id="txtInitial" Runat="server" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox><asp:image id="imgInitial" onmouseup="GetDate('txtInitial');" Runat="server" AlternateText="Inicial Date"
+						<td><asp:textbox id="txtInitial" Runat="server" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox>
+							<asp:image id="imgInitial" onmouseup="GetDate('txtInitial');" Runat="server" AlternateText="Inicial Date"
 								ImageUrl="../../../../Images/icon-calendar.gif"></asp:image></td>
-						<td><asp:textbox id="txtFinal" Runat="server" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox><asp:image id="imgFinal" onmouseup="GetDate('txtFinal');" Runat="server" AlternateText="Final Date"
+						<td><asp:textbox id="txtFinal" Runat="server" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11">
+						    </asp:textbox><asp:image id="imgFinal" onmouseup="GetDate('txtFinal');" Runat="server" AlternateText="Final Date"
 								ImageUrl="../../../../Images/icon-calendar.gif"></asp:image></td>
 						<td><asp:dropdownlist id="cboStatus" Runat="server" CssClass="Standard-text" Width="100px"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboLinea" Runat="server" CssClass="Standard-text" Width="100px"></asp:dropdownlist></td>
@@ -114,7 +127,7 @@
 						<TD></TD>
 						<TD></TD>
 						<TD align="left"></TD>
-						<TD><asp:regularexpressionvalidator id="revAforo" runat="server" CssClass="standard-text" ErrorMessage="Ingrese números"
+						<TD><asp:regularexpressionvalidator id="revAforo" runat="server" CssClass="standard-text" ErrorMessage="Ingrese nÃºmeros"
 								ControlToValidate="txtAforo" ValidationExpression="^[0-9]$" Display="Dynamic"></asp:regularexpressionvalidator></TD>
 					</TR>
 					<tr>
@@ -125,9 +138,9 @@
 					<tr>
 						<td align="center"><asp:button id="btnImprimirEqu" runat="server" Text="Imp. Etiquetas" CssClass="botonesInput"
 								Width="98px" Visible="False"></asp:button></td>
-						<td align="center"><asp:button id="btnRpt" runat="server" Text="Rep. Formulación" CssClass="botonesInput" Width="124px"
+						<td align="center"><asp:button id="btnRpt" runat="server" Text="Rep. FormulaciÃ³n" CssClass="botonesInput" Width="124px"
 								Visible="False"></asp:button>&nbsp;</td>
-						<td align="center"><asp:button id="btnCard" runat="server" Text="Tarj. Formulación" CssClass="botonesInput" Width="124px"
+						<td align="center"><asp:button id="btnCard" runat="server" Text="Tarj. FormulaciÃ³n" CssClass="botonesInput" Width="124px"
 								Visible="False"></asp:button></td>
 						<td align="center"><asp:button id="btnLiberado" runat="server" Text="Liberar" CssClass="botonesInput" Visible="False"></asp:button></td>
 						<td align="center"><asp:button id="btnAgregar" runat="server" Text="Salvar" CssClass="botonesInput" Visible="False"></asp:button></td>
@@ -136,7 +149,7 @@
 					<TR>
 						<TD style="HEIGHT: 1px" align="center"><asp:button id="btnPreform" runat="server" Text="Preformular" CssClass="botonesInput" Width="98px"
 								Visible="False"></asp:button></TD>
-						<TD style="HEIGHT: 1px" align="center"><asp:checkbox id="chkSeparate" runat="server" Text="Páginas separadas" CssClass="standard-text"
+						<TD style="HEIGHT: 1px" align="center"><asp:checkbox id="chkSeparate" runat="server" Text="PÃ¡ginas separadas" CssClass="standard-text"
 								Visible="False"></asp:checkbox></TD>
 						<TD style="HEIGHT: 1px" align="center"></TD>
 						<TD style="HEIGHT: 1px" align="center"></TD>
@@ -162,8 +175,8 @@
 											<TD class="grid-header" align="left"><asp:label id="Label9" Runat="server" Width="30px">KCT</asp:label></TD>
 											<TD class="grid-header" align="left"><asp:label id="Label10" Runat="server" Width="30px">Cant.</asp:label></TD>
 											<TD class="grid-header" align="left"><asp:label id="Label15" Runat="server" Width="30px">Med.</asp:label></TD>
-											<TD class="grid-header" align="left"><asp:label id="Label11" Runat="server" Width="270px">Descripción</asp:label></FONT></TD>
-											<TD class="grid-header" align="left"><asp:label id="Label12" Runat="server" Width="30px">Línea</asp:label></TD>
+											<TD class="grid-header" align="left"><asp:label id="Label11" Runat="server" Width="270px">DescripciÃ³n</asp:label></FONT></TD>
+											<TD class="grid-header" align="left"><asp:label id="Label12" Runat="server" Width="30px">LÃ­nea</asp:label></TD>
 											<TD class="grid-header" align="left"><asp:label id="Label20" Runat="server" Width="60px">Estado</asp:label></TD>
 											<TD class="grid-header" colSpan="3" align="left"><asp:label id="Label16" Runat="server" Width="60px"></asp:label></TD>
 										</TR>

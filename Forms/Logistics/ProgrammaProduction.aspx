@@ -37,7 +37,15 @@
 				<tr>
 					<td colspan="3" align="center"><br>
 						<asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Size="14" Font-Bold="True"> Consultar  Programa de Producción</asp:label>
-						<hr>
+					</td>
+				</tr>
+			</TBODY>
+		</table>
+		<br />
+		<table align="center" width="700" style="BORDER-COLLAPSE: collapse">
+				<TBODY>
+					<tr>
+					<td>
 						<asp:Label id="Label1" runat="server" CssClass="standard-text"> Seleccione la línea de producción y Fecha del Programa de Producción que desea consultar</asp:Label>
 					</td>
 				</tr>

@@ -39,8 +39,8 @@ namespace UserInterface.Controls
 				SICALNet.BusinessLogicLayer.Usuario BLLUser = new SICALNet.BusinessLogicLayer.Usuario();
 				theUser  = BLLUser.Load(theUser);
 
-				String sFechaIni = DateTime.Now.Date.ToString("dd-MMM-yyyy");
-				String sFechaFin = DateTime.Now.Date.ToString("dd-MMM-yyyy");
+				String sFechaIni = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+				String sFechaFin = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 
 				txtFrom.Text = sFechaIni.Replace(".","");
 				txtTo.Text = sFechaFin.Replace(".","");

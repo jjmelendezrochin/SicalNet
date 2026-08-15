@@ -75,10 +75,14 @@
 					</tr>
 					<tr>
 						<td align="center" colSpan="3"><br>
-							<asp:label id="Label1" runat="server" Font-Size="14" Font-Bold="True" Font-Names="Arial Narrow"> Cargar Programa de Producción</asp:label>
-							<hr>
+							<asp:label id="Label1" runat="server" Font-Size="14" Font-Bold="True" Font-Names="Arial Narrow"> Cargar Programa de Producción</asp:label>							
 						</td>
 					</tr>
+				</TBODY>
+			</table>
+			<br />
+			<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
+				<TBODY>
 					<TR>
 						<TD align="center" colSpan="3"><asp:label id="Label2" runat="server" CssClass="standard-text">Proporcione el nombre del archivo en formato Excel (c) que contiene el programa de producción <br> y presione el botón "Cargar Programa" <br></asp:label></TD>
 					</TR>

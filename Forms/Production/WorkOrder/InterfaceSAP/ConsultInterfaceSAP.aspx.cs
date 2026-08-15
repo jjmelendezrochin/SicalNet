@@ -9,6 +9,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using System.Configuration;
+using UserInterface.Helpers;
 
 namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 {
@@ -61,16 +62,16 @@ namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 				this.btnLiberar.Visible = false;
 				if (tmpInit == null || tmpFin ==null)
 				{
-					txtInitial.Text=System.DateTime.Now.ToString("dd-MMM-yyyy");
-					txtFinal.Text=System.DateTime.Now.ToString("dd-MMM-yyyy");
-					this.txtFechaInterfaz.Text = System.DateTime.Now.ToString("dd-MMM-yyyy");
+					txtInitial.Text=System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+					txtFinal.Text=System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+					this.txtFechaInterfaz.Text = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 					BindWorkOrders();
 				}
 				else
 				{
 					txtInitial.Text=tmpInit;
 					txtFinal.Text=tmpFin;
-					this.txtFechaInterfaz.Text = System.DateTime.Now.ToString("dd-MMM-yyyy");
+					this.txtFechaInterfaz.Text = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 					BindWorkOrders();
 				}
 				
@@ -159,12 +160,11 @@ namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 				int IdStatus=int.Parse(cboStatus.SelectedItem.Value);
 				int IdLine=int.Parse(cboLinea.SelectedItem.Value);
 
-//				string InitDt= txtInitial.Text.ToString();
-//				string FinalDt=txtFinal.Text.ToString();
+				UserInterface.Helpers.Funciones fn = new Funciones();
 
-				string InitDt = Convert.ToDateTime(txtInitial.Text).ToString("MM/dd/yy");
-				string FinalDt = Convert.ToDateTime(txtFinal.Text).ToString("MM/dd/yy");
-				
+				string InitDt = Convert.ToDateTime(fn.ConvertirFechaMesNumero(txtInitial.Text)).ToString("MM/dd/yy").Replace(".", "").ToLower();
+				string FinalDt = Convert.ToDateTime(fn.ConvertirFechaMesNumero(txtFinal.Text)).ToString("MM/dd/yy").Replace(".", "").ToLower();
+
 				string InitalHour = (this.txtHoraInical.Text==string.Empty)?"00:00:00":this.txtHoraInical.Text;
 				string FinalHour = (this.txtHoraFinal.Text==string.Empty)?"23:59:59":this.txtHoraFinal.Text;
 				
