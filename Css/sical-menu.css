@@ -1,11 +1,40 @@
-﻿.sical-menu {
+﻿/* =========================================================
+   SICAL - HOJA DE ESTILO DEL MENÚ PRINCIPAL
+   Versión modernizada
+   ========================================================= */
+
+
+/* =========================================================
+   PALETA DE COLORES
+
+   Azul claro:   #075a86
+   Azul medio:   #06385d
+   Azul oscuro:  #031b2e
+   Naranja:      #f15a24
+   Blanco:       #ffffff
+   Gris claro:   #f4f6f8
+   Gris borde:   #d9e1e7
+   ========================================================= */
+
+
+/* =========================================================
+   MENÚ PRINCIPAL
+   ========================================================= */
+
+.sical-menu {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    background-color: #075a86;
 }
+
+
+/* =========================================================
+   ITEM GENERAL
+   ========================================================= */
 
 .sical-menu-item {
     position: relative;
@@ -13,57 +42,359 @@
     padding: 0;
 }
 
-    .sical-menu-item > a,
-    .sical-menu-label {
-        display: block;
-        padding: 7px 12px;
-        text-decoration: none;
-        cursor: pointer;
-        white-space: nowrap;
-        border-right: 1px solid #cccccc;
-        background-color: #eeeeee;
-        color: #333333;
+
+/* =========================================================
+   OPCIONES DEL MENÚ PRINCIPAL
+   ========================================================= */
+
+.sical-menu > .sical-menu-item > a,
+.sical-menu > .sical-menu-item > .sical-menu-label {
+    display: block;
+    padding: 8px 14px;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: transparent;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+
+    /* =========================================================
+   HOVER DEL MENÚ PRINCIPAL
+   ========================================================= */
+
+    .sical-menu > .sical-menu-item > a:hover,
+    .sical-menu > .sical-menu-item > .sical-menu-label:hover {
+        background-color: #f15a24;
+        color: #ffffff;
     }
 
-        .sical-menu-item > a:hover,
-        .sical-menu-label:hover {
-            background-color: #dddddd;
-        }
+
+/* =========================================================
+   SUBMENÚ GENERAL
+   ========================================================= */
 
 .sical-submenu {
     display: none;
     position: absolute;
     left: 0;
     top: 100%;
-    min-width: 220px;
+    min-width: 230px;
     margin: 0;
     padding: 0;
     list-style: none;
     z-index: 9999;
-    border: 1px solid #bbbbbb;
     background-color: #ffffff;
+    border: 1px solid #d9e1e7;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.20);
 }
+
+
+/* =========================================================
+   MOSTRAR SUBMENÚ AL PASAR EL MOUSE
+   ========================================================= */
 
 .sical-menu-item:hover > .sical-submenu {
     display: block;
 }
+
+
+/* =========================================================
+   ITEM DENTRO DE SUBMENÚ
+   ========================================================= */
 
 .sical-submenu .sical-menu-item {
     display: block;
     width: 100%;
 }
 
+
+    /* =========================================================
+   LINKS Y ETIQUETAS DE SUBMENÚ
+   ========================================================= */
+
     .sical-submenu .sical-menu-item > a,
-    .sical-submenu .sical-menu-label {
+    .sical-submenu .sical-menu-item > .sical-menu-label {
         display: block;
         width: 100%;
         box-sizing: border-box;
-        border-right: 0;
-        border-bottom: 1px solid #dddddd;
+        padding: 8px 12px;
+        text-decoration: none;
+        cursor: pointer;
+        white-space: nowrap;
+        color: #031b2e;
         background-color: #ffffff;
+        border-right: 0;
+        border-bottom: 1px solid #e6ebef;
+        transition: background-color 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
     }
 
+
+        /* =========================================================
+   HOVER DE ELEMENTOS DE SUBMENÚ
+   ========================================================= */
+
         .sical-submenu .sical-menu-item > a:hover,
-        .sical-submenu .sical-menu-label:hover {
-            background-color: #eeeeee;
+        .sical-submenu .sical-menu-item > .sical-menu-label:hover {
+            background-color: #075a86;
+            color: #ffffff;
+            padding-left: 16px;
         }
+
+
+/* =========================================================
+   PRIMER NIVEL DE SUBMENÚ
+   Ejemplo:
+
+   Catálogos
+       Plantas
+       Líneas de Producción
+       Presentaciones
+   ========================================================= */
+
+.sical-menu >
+.sical-menu-item >
+.sical-submenu {
+    padding-left: 0;
+}
+
+
+/* =========================================================
+   SEGUNDO NIVEL DE SUBMENÚ
+   Ejemplo:
+
+   Catálogos
+       Formulación
+           Folios Color
+           Folios Aditivos
+
+   Aparece a la derecha del grupo padre.
+   ========================================================= */
+
+.sical-menu
+.sical-submenu
+.sical-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 220px;
+}
+
+
+/* =========================================================
+   GRUPOS INTERNOS
+   Ejemplos:
+
+   Formulación
+   Cuarto de Reacción
+   Fase de Color
+   Fase de Aditivos
+   ========================================================= */
+
+.sical-submenu >
+.has-children >
+.sical-menu-label {
+    font-weight: bold;
+    color: #06385d;
+    background-color: #f4f6f8;
+    border-left: 4px solid #f15a24;
+}
+
+
+    /* =========================================================
+   HOVER DE GRUPOS INTERNOS
+   ========================================================= */
+
+    .sical-submenu >
+    .has-children >
+    .sical-menu-label:hover {
+        background-color: #06385d;
+        color: #ffffff;
+    }
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL DE ICONOS
+   ========================================================= */
+
+.sical-menu-item > a::before,
+.sical-menu-item > .sical-menu-label::before {
+    display: inline-block;
+    width: 16px;
+    margin-right: 6px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #f15a24;
+}
+
+
+/* =========================================================
+   ICONOS DEL MENÚ PRINCIPAL
+   ========================================================= */
+
+/* Elementos normales */
+.sical-menu >
+.sical-menu-item >
+a::before {
+    content: "◆";
+    font-size: 8px;
+}
+
+
+/* Grupos principales:
+   Administración
+   Catálogos
+   Estructuras
+   Logística
+   Producción
+   Reportes
+*/
+.sical-menu >
+.has-children >
+.sical-menu-label::before {
+    content: "▦";
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ICONOS DE PRIMER NIVEL
+   ========================================================= */
+
+.sical-submenu >
+.sical-menu-item >
+a::before {
+    content: "◇";
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ICONO DE GRUPOS INTERNOS
+   ========================================================= */
+
+.sical-submenu >
+.has-children >
+.sical-menu-label::before {
+    content: "◆";
+    font-size: 9px;
+    color: #f15a24;
+}
+
+
+/* =========================================================
+   ICONOS DEL SEGUNDO NIVEL
+   ========================================================= */
+
+.sical-submenu
+.sical-submenu
+.sical-menu-item >
+a::before {
+    content: "•";
+    font-size: 15px;
+    color: #f15a24;
+}
+
+
+/* =========================================================
+   FLECHA DEL MENÚ PRINCIPAL
+   ========================================================= */
+
+.sical-menu >
+.sical-menu-item.has-children >
+.sical-menu-label::after {
+    content: "▾";
+    display: inline-block;
+    margin-left: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: #f15a24;
+}
+
+
+/* =========================================================
+   FLECHA DE SUBMENÚS
+   Ejemplo:
+
+   Formulación >
+   ========================================================= */
+
+.sical-submenu >
+.sical-menu-item.has-children >
+.sical-menu-label::after {
+    content: "›";
+    float: right;
+    margin-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 14px;
+    color: #f15a24;
+}
+
+
+/* =========================================================
+   CONSERVAR LA FLECHA BLANCA CUANDO EL GRUPO
+   INTERNO TIENE HOVER
+   ========================================================= */
+
+.sical-submenu >
+.has-children >
+.sical-menu-label:hover::after {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   CONSERVAR ICONO CLARO DURANTE EL HOVER
+   ========================================================= */
+
+.sical-submenu
+.sical-menu-item >
+a:hover::before,
+.sical-submenu
+.sical-menu-item >
+.sical-menu-label:hover::before {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ÚLTIMO ELEMENTO DEL SUBMENÚ
+   ========================================================= */
+
+.sical-submenu >
+.sical-menu-item:last-child >
+a,
+.sical-submenu >
+.sical-menu-item:last-child >
+.sical-menu-label {
+    border-bottom: 0;
+}
+
+
+/* =========================================================
+   PEQUEÑO REDONDEO EN LAS ESQUINAS INFERIORES
+   ========================================================= */
+
+.sical-submenu {
+    border-radius: 0 0 4px 4px;
+}
+
+
+    /* =========================================================
+   SUBMENÚ DE SEGUNDO NIVEL
+   ========================================================= */
+
+    .sical-submenu
+    .sical-submenu {
+        border-radius: 0 4px 4px 4px;
+    }

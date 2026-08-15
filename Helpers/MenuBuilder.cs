@@ -151,6 +151,59 @@ namespace UserInterface.Helpers
                 catalogos.Label = "Catálogos";
                 catalogos.Icon = "grayDots.gif";
 
+                // =====================================================
+                // SUBMENÚ FORMULACIÓN
+                // =====================================================
+
+                if (context.User.IsInRole("2.11") ||
+                    context.User.IsInRole("2.12"))
+                {
+                    MenuItem formulacion = new MenuItem();
+
+                    formulacion.Id = "i2.0";
+                    formulacion.Label = "Formulación";
+                    formulacion.Icon = "grayDots.gif";
+
+
+                    // 2.11 Folios Color
+                    if (context.User.IsInRole("2.11"))
+                    {
+                        MenuItem item = new MenuItem();
+
+                        item.Id = "i2.11_folios_color";
+                        item.Label = "Folios Color";
+                        item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Structures/FoliosColor.aspx");
+                        item.Icon = "grayDots.gif";
+
+                        formulacion.Children.Add(item);
+                    }
+
+
+                    // 2.12 Folios Aditivos
+                    if (context.User.IsInRole("2.12"))
+                    {
+                        MenuItem item = new MenuItem();
+
+                        item.Id = "i2.12_folios_aditivos";
+                        item.Label = "Folios Aditivos";
+                        item.Url = VirtualPathUtility.ToAbsolute("~/Forms/Structures/FoliosAditivos.aspx");
+                        item.Icon = "grayDots.gif";
+
+                        formulacion.Children.Add(item);
+                    }
+
+
+                    if (formulacion.Children.Count > 0)
+                    {
+                        catalogos.Children.Add(formulacion);
+                    }
+                }
+
+                if (catalogos.Children.Count > 0)
+                {
+                    menu.Add(catalogos);
+                }
+
 
                 // 2.1 Plantas
                 if (context.User.IsInRole("2.1"))
@@ -361,58 +414,6 @@ namespace UserInterface.Helpers
                     catalogos.Children.Add(item);
                 }
 
-                // =====================================================
-                // SUBMENÚ FORMULACIÓN
-                // =====================================================
-
-                if (context.User.IsInRole("2.11") ||
-                    context.User.IsInRole("2.12"))
-                {
-                    MenuItem formulacion = new MenuItem();
-
-                    formulacion.Id = "i2.0";
-                    formulacion.Label = "Formulación";
-                    formulacion.Icon = "grayDots.gif";
-
-
-                    // 2.11 Folios Color
-                    if (context.User.IsInRole("2.11"))
-                    {
-                        MenuItem item = new MenuItem();
-
-                        item.Id = "i2.11_folios_color";
-                        item.Label = "Folios Color";
-                        item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FoliosColor.aspx");
-                        item.Icon = "grayDots.gif";
-
-                        formulacion.Children.Add(item);
-                    }
-
-
-                    // 2.12 Folios Aditivos
-                    if (context.User.IsInRole("2.12"))
-                    {
-                        MenuItem item = new MenuItem();
-
-                        item.Id = "i2.12_folios_aditivos";
-                        item.Label = "Folios Aditivos";
-                        item.Url = VirtualPathUtility.ToAbsolute( "~/Forms/Structures/FoliosAditivos.aspx");
-                        item.Icon = "grayDots.gif";
-
-                        formulacion.Children.Add(item);
-                    }
-
-
-                    if (formulacion.Children.Count > 0)
-                    {
-                        catalogos.Children.Add(formulacion);
-                    }
-                }
-
-                if (catalogos.Children.Count > 0)
-                {
-                    menu.Add(catalogos);
-                }
             }
 
 

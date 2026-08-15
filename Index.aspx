@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="Expires" CONTENT="0">
 	</HEAD>
-	<frameset rows="71,*,20" cols="*" border="0" framespacing="0" bordercolor="#ffffff">
+	<frameset rows="90,*,24" cols="*" border="0" framespacing="0" bordercolor="#ffffff">
 		<frame src="forms/topframe.aspx" name="TopFrame" marginwidth="0" marginheight="0" frameborder="NO"
 			noresize scrolling="no">
 		<frame src="forms/NewMenu.aspx" name="MainFrame" marginwidth="0" marginheight="0" frameborder="NO">

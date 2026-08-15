@@ -11,10 +11,10 @@
   </HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="Test" method="post" runat="server">
-			<table width="780" border="0" cellspacing="0" cellpadding="0" align="center" bgColor="orange">
+			<table width="80%" border="0" cellspacing="0" cellpadding="0" align="center" bgColor="orange">
 				<TR>
-					<td colspan="2" bgColor="#ff6600">&nbsp;
-						<asp:Label id="Label1" runat="server" Width="8%" CssClass="standard-text" Font-Bold="true" ForeColor="White">Usuario:</asp:Label>
+					<td colspan="2" bgColor="#075a86">&nbsp;
+						<asp:Label id="Label1" runat="server" Width="8%" CssClass="standard-text" Font-Bold="false" ForeColor="White">Usuario:</asp:Label>
 						<asp:Label id="lblUsuario" runat="server" Width="90%" CssClass="standard-text" Font-Bold="true" ForeColor="White">Usuario:</asp:Label>
 					</td>
 				</TR>

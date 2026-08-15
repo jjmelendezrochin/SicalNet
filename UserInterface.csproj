@@ -193,6 +193,7 @@
     <Content Include="Forms\Logistics\ProgrammaProduction.aspx" />
     <Content Include="Forms\Logistics\SecuenciasCombinadas.aspx" />
     <Content Include="Forms\Menu.aspx" />
+    <Content Include="images\PG_Verzatec.png" />
     <Content Include="MenuData.aspx" />
     <Content Include="Forms\NewMenu.aspx" />
     <Content Include="Forms\Production\AditivosCuantos.aspx" />

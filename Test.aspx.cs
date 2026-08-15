@@ -25,9 +25,7 @@ namespace UserInterface
 			SICALNet.BusinessEntities.UsuarioInfo objUsuarioInfo = new SICALNet.BusinessEntities.UsuarioInfo(User.Identity.Name);
 			SICALNet.BusinessLogicLayer.Usuario objUsuario = new SICALNet.BusinessLogicLayer.Usuario();
 			SICALNet.BusinessEntities.UsuarioInfo objUser = objUsuario.Load(objUsuarioInfo);
-			this.lblUsuario.Text = objUser.Nombre;
-			//this.lblUsuario.Text = objUser.Nombre;
-
+			this.lblUsuario.Text = objUser.Nombre;			
 		}
 
 		#region Web Form Designer generated code
