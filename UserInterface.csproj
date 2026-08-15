@@ -383,7 +383,7 @@
     <Content Include="LogOut.aspx" />
     <Content Include="Menu.css" />
     <Content Include="Scripts\sical-menu.js" />
-    <Content Include="styloDESC.CSS" />
+    <Content Include="Css\nuevoestilo.css" />
     <Content Include="Test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

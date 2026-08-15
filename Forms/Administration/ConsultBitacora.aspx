@@ -7,7 +7,9 @@
 			}
 </script>
 <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
 <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+
 <script type="text/javascript">
     document.addEventListener(
         "DOMContentLoaded",
@@ -20,7 +22,7 @@
 	<body text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0" marginwidth="0" marginheight="0"
 		onload="ShowTitle()">
 		<form id="ProductionProgram" method="post" runat="server">
-			<table align="center" width="700" height="0" style="BORDER-COLLAPSE: collapse">
+			<table align="center" width="50%" height="0" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
 						<td align="left" colSpan="5">

@@ -4,6 +4,11 @@
 	<HEAD>
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		
 		<script language="JavaScript">
 <!--
 <!--
@@ -33,9 +38,7 @@ function ConfirmOperation(Button)
 					window.frames["top"].document.title = "SICAL  - Administración - Sesiones activas"
 			}	
 		</script>
-		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
-		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!--<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">-->
+		
 		<script type="text/javascript">
             document.addEventListener(
                 "DOMContentLoaded",
@@ -47,7 +50,7 @@ function ConfirmOperation(Button)
 	</HEAD>
 	<body onload="ShowTitle()">
 		<form id="ConsultColorWO" method="post" runat="server">
-			<table style="BORDER-COLLAPSE: collapse" height="227" width="800" align="center">
+			<table style="BORDER-COLLAPSE: collapse" height="227" width="80%" align="center">
 				<TBODY>
 					<tr>
 						<td align="left" colSpan="4">
@@ -85,81 +88,220 @@ function ConfirmOperation(Button)
 						</td>
 					</tr>
 					<tr>
-						<td align="center" colSpan="4" height="294" vAlign="top"><asp:datagrid id="dgdUsers" runat="server" Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
+						<td align="center" colSpan="4" vAlign="top">
+							<asp:datagrid id="dgdUsers" runat="server" Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
 								Font-Name="Verdana" AllowSorting="True" DataKeyField="IdPerfil" BorderColor="White" BorderStyle="None" AllowPaging="True" PagerStyle-HorizontalAlign="Right"
-								PagerStyle-Mode="NumericPages" Width="800px" ShowFooter="True" Font-Size="Small">
+								PagerStyle-Mode="NumericPages" Width="80%" ShowFooter="True" Font-Size="Small"
+								CssClass="GridView">
 								<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 								<Columns>
-									<asp:TemplateColumn HeaderText="Login">
-										<HeaderStyle HorizontalAlign="Left" Width="20%" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle Width="20%" CssClass="grid-first-item"></ItemStyle>
-										<ItemTemplate>
-											<asp:label id=ItemLogin CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Login") %>' Width="30px" Runat="server">
-											</asp:label>
-										</ItemTemplate>
-									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="Nombre">
-										<HeaderStyle HorizontalAlign="Left" Width="35%" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle Width="40%" CssClass="grid-item"></ItemStyle>
-										<ItemTemplate>
-											<asp:label id=ItemNombre CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Nombre") %>' Runat="server">
-											</asp:label>
-										</ItemTemplate>
-									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="Planta">
-										<HeaderStyle HorizontalAlign="Left" Width="10%" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle Width="10%" CssClass="grid-item"></ItemStyle>
-										<ItemTemplate>
-											<asp:label id="ItemPlanta" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.DescripcionPlanta") %>' Runat="server">
-											</asp:label>
-										</ItemTemplate>
-									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="Turno">
-										<HeaderStyle HorizontalAlign="Left" Width="5%" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle Width="5%" CssClass="grid-item"></ItemStyle>
-										<ItemTemplate>
-											<asp:label id="ItemTurno" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Turno") %>' Runat="server">
-											</asp:label>
-										</ItemTemplate>
-									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="Perfil">
-										<HeaderStyle HorizontalAlign="Left" Width="5%" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle Width="5%" CssClass="grid-item"></ItemStyle>
-										<ItemTemplate>
-											<asp:label id="ItemPerfil" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.DescripcionPerfil") %>' Runat="server">
-											</asp:label>
-										</ItemTemplate>
-									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="Area">
-										<HeaderStyle HorizontalAlign="Left" Width="10%" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle Width="10%" CssClass="grid-item"></ItemStyle>
-										<ItemTemplate>
-											<asp:label id="ItemArea" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.DescripcionArea") %>' Runat="server">
-											</asp:label>
-										</ItemTemplate>
-									</asp:TemplateColumn>
-									<asp:TemplateColumn Visible="False" HeaderText="Activo">
-										<HeaderStyle HorizontalAlign="Center" Width="5%" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle HorizontalAlign="Center" Width="5%" CssClass="grid-item"></ItemStyle>
-										<ItemTemplate>
-											<asp:CheckBox id="itemActivo" runat="server" CssClass="standard-text" Enabled="False" Checked='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Activo") %>'>
-											</asp:CheckBox>
-										</ItemTemplate>
-									</asp:TemplateColumn>
-									<asp:TemplateColumn HeaderText="Desconectar">
-										<HeaderStyle HorizontalAlign="Center" Width="5%" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle HorizontalAlign="Center" CssClass="grid-edit-column"></ItemStyle>
-										<ItemTemplate>
-											<asp:imagebutton id="Imagebutton1" runat="server" AlternateText="Edit" CommandName="Release" NAME="Imagebutton1"
-												ImageUrl="../../images/DELROW.GIF" onmouseup="ConfirmOperation(this);" CausesValidation="false"></asp:imagebutton></asp:imagebutton>
-										</ItemTemplate>
-									</asp:TemplateColumn>
-								</Columns>
+                                <asp:TemplateColumn HeaderText="Login">
+                                    <HeaderStyle
+                                        HorizontalAlign="Left"
+                                        Width="16%"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle">
+                                    </HeaderStyle>
+
+                                    <ItemStyle
+                                        Width="16%"
+                                        CssClass="grid-first-item">
+                                    </ItemStyle>
+
+                                    <ItemTemplate>
+                                        <asp:Label
+                                            ID="ItemLogin"
+                                            CssClass="standard-text"
+                                            Text='<%# DataBinder.Eval(Container, "DataItem.Login") %>'
+                                            runat="server">
+                                        </asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateColumn>
+
+
+                                <asp:TemplateColumn HeaderText="Nombre">
+                                    <HeaderStyle
+                                        HorizontalAlign="Left"
+                                        Width="28%"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle">
+                                    </HeaderStyle>
+
+                                    <ItemStyle
+                                        Width="28%"
+                                        CssClass="grid-item">
+                                    </ItemStyle>
+
+                                    <ItemTemplate>
+                                        <asp:Label
+                                            ID="ItemNombre"
+                                            CssClass="standard-text"
+                                            Text='<%# DataBinder.Eval(Container, "DataItem.Nombre") %>'
+                                            runat="server">
+                                        </asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateColumn>
+
+
+                                <asp:TemplateColumn HeaderText="Planta">
+                                    <HeaderStyle
+                                        HorizontalAlign="Left"
+                                        Width="12%"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle">
+                                    </HeaderStyle>
+
+                                    <ItemStyle
+                                        Width="12%"
+                                        CssClass="grid-item">
+                                    </ItemStyle>
+
+                                    <ItemTemplate>
+                                        <asp:Label
+                                            ID="ItemPlanta"
+                                            CssClass="standard-text"
+                                            Text='<%# DataBinder.Eval(Container, "DataItem.DescripcionPlanta") %>'
+                                            runat="server">
+                                        </asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateColumn>
+
+
+                                <asp:TemplateColumn HeaderText="Turno">
+                                    <HeaderStyle
+                                        HorizontalAlign="Left"
+                                        Width="10%"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle">
+                                    </HeaderStyle>
+
+                                    <ItemStyle
+                                        Width="10%"
+                                        CssClass="grid-item">
+                                    </ItemStyle>
+
+                                    <ItemTemplate>
+                                        <asp:Label
+                                            ID="ItemTurno"
+                                            CssClass="standard-text"
+                                            Text='<%# DataBinder.Eval(Container, "DataItem.Turno") %>'
+                                            runat="server">
+                                        </asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateColumn>
+
+
+                                <asp:TemplateColumn HeaderText="Perfil">
+                                    <HeaderStyle
+                                        HorizontalAlign="Left"
+                                        Width="14%"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle">
+                                    </HeaderStyle>
+
+                                    <ItemStyle
+                                        Width="14%"
+                                        CssClass="grid-item">
+                                    </ItemStyle>
+
+                                    <ItemTemplate>
+                                        <asp:Label
+                                            ID="ItemPerfil"
+                                            CssClass="standard-text"
+                                            Text='<%# DataBinder.Eval(Container, "DataItem.DescripcionPerfil") %>'
+                                            runat="server">
+                                        </asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateColumn>
+
+
+                                <asp:TemplateColumn HeaderText="Area">
+                                    <HeaderStyle
+                                        HorizontalAlign="Left"
+                                        Width="12%"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle">
+                                    </HeaderStyle>
+
+                                    <ItemStyle
+                                        Width="12%"
+                                        CssClass="grid-item">
+                                    </ItemStyle>
+
+                                    <ItemTemplate>
+                                        <asp:Label
+                                            ID="ItemArea"
+                                            CssClass="standard-text"
+                                            Text='<%# DataBinder.Eval(Container, "DataItem.DescripcionArea") %>'
+                                            runat="server">
+                                        </asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateColumn>
+
+
+                                <asp:TemplateColumn
+                                    Visible="False"
+                                    HeaderText="Activo">
+
+                                    <HeaderStyle
+                                        HorizontalAlign="Center"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle">
+                                    </HeaderStyle>
+
+                                    <ItemStyle
+                                        HorizontalAlign="Center"
+                                        CssClass="grid-item">
+                                    </ItemStyle>
+
+                                    <ItemTemplate>
+                                        <asp:CheckBox
+                                            ID="itemActivo"
+                                            runat="server"
+                                            CssClass="standard-text"
+                                            Enabled="False"
+                                            Checked='<%# DataBinder.Eval(Container, "DataItem.Activo") %>'>
+                                        </asp:CheckBox>
+                                    </ItemTemplate>
+
+                                </asp:TemplateColumn>
+
+
+                                <asp:TemplateColumn HeaderText="Desconectar">
+
+                                    <HeaderStyle
+                                        HorizontalAlign="Center"
+                                        Width="8%"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle">
+                                    </HeaderStyle>
+
+                                    <ItemStyle
+                                        HorizontalAlign="Center"
+                                        Width="8%"
+                                        CssClass="grid-edit-column">
+                                    </ItemStyle>
+
+                                    <ItemTemplate>
+                                        <asp:ImageButton
+                                            ID="Imagebutton1"
+                                            runat="server"
+                                            AlternateText="Desconectar"
+                                            CommandName="Release"
+                                            ImageUrl="../../images/DELROW.GIF"
+                                            onmouseup="ConfirmOperation(this);"
+                                            CausesValidation="false">
+                                        </asp:ImageButton>
+                                    </ItemTemplate>
+
+                                </asp:TemplateColumn>
+
+                            </Columns>
 								<PagerStyle Font-Size="X-Small" Font-Names="Times New Roman" HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
 							</asp:datagrid></td>
 					</tr>
 				</TBODY>
 			</table>
-			</TD></TR></TABLE></form>
+		</form>
 	</body>
 </HTML>

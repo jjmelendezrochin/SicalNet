@@ -5,6 +5,7 @@
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 
 		<script language="JavaScript">
@@ -29,7 +30,7 @@ function CheckUnCheckAll(CtrlName)
 }
 //-->
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
 				function () {
@@ -133,8 +134,7 @@ function CheckUnCheckAll(CtrlName)
 						</td>
 					</TR>
 				</TBODY>
-			</table>
-			</TD></TR></TABLE>
+			</table>			
 		</form>
 	</body>
 </HTML>

@@ -158,5 +158,9 @@ namespace UserInterface.Forms.Administration
 			}
 		}
 
-	}
+        protected void btnNuevo_Click1(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

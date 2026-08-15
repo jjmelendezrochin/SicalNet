@@ -1,0 +1,1106 @@
+/* =========================================================
+   SICAL - ESTILOS GENERALES DEL SISTEMA
+   Modernización Visual Studio 2019
+   ========================================================= */
+
+
+/* =========================================================
+   PALETA CORPORATIVA
+
+   Azul claro:   #075a86
+   Azul medio:   #06385d
+   Azul oscuro:  #031b2e
+   Naranja:      #f15a24
+   Blanco:       #ffffff
+   Fondo:        #f5f7f9
+   Gris borde:   #d9e1e7
+   Texto:        #263746
+   ========================================================= */
+
+
+/* =========================================================
+   HTML Y BODY
+   ========================================================= */
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #263746;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #263746;
+    background-color: #ffffff;
+}
+
+
+/* =========================================================
+   TEXTO GENERAL
+   ========================================================= */
+
+p {
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+span,
+label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+strong,
+b {
+    font-weight: 600;
+}
+
+small {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ENCABEZADOS HTML
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #031b2e;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a,
+a:link,
+a:visited {
+    color: #075a86;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #f15a24;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: #06385d;
+    }
+
+
+    /* =========================================================
+   LINKS LEGACY
+   ========================================================= */
+
+    a.liganaranja,
+    a.liganaranja:link,
+    a.liganaranja:visited {
+        color: #f15a24;
+        font-weight: 600;
+    }
+
+    a.ligablanca,
+    a.ligablanca:link,
+    a.ligablanca:visited {
+        color: #ffffff;
+    }
+
+    a.ligablancaBold,
+    a.ligablancaBold:link,
+    a.ligablancaBold:visited {
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    a.ligasmallblanca {
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    a.ligaazul,
+    a.ligaazul:link,
+    a.ligaazul:visited {
+        color: #06385d;
+    }
+
+    a.ligaazulClaro,
+    a.ligaazulClaro:link,
+    a.ligaazulClaro:visited {
+        color: #075a86;
+    }
+
+
+/* =========================================================
+   INPUTS DE TEXTO
+   ASP:TextBox genera normalmente INPUT o TEXTAREA
+   ========================================================= */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    box-sizing: border-box;
+    min-height: 32px;
+    padding: 6px 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #263746;
+    background-color: #ffffff;
+    border: 1px solid #b8c5cf;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+    /* Foco */
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="time"]:focus,
+    textarea:focus {
+        border-color: #075a86;
+        box-shadow: 0 0 0 2px rgba(7,90,134,0.15);
+    }
+
+
+    /* Deshabilitados */
+    input:disabled,
+    textarea:disabled,
+    select:disabled {
+        color: #697780;
+        background-color: #eef1f3;
+        border-color: #d5dde3;
+        cursor: not-allowed;
+    }
+
+
+    /* Solo lectura */
+    input[readonly],
+    textarea[readonly] {
+        background-color: #f5f7f9;
+        color: #4d5961;
+    }
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+textarea {
+    min-height: 70px;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   SELECT / DROPDOWNLIST / LISTBOX
+   ========================================================= */
+
+select {
+    box-sizing: border-box;
+    min-height: 32px;
+    padding: 5px 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #263746;
+    background-color: #ffffff;
+    border: 1px solid #b8c5cf;
+    border-radius: 4px;
+    outline: none;
+}
+
+
+    /* ASP:ListBox */
+    select[multiple] {
+        min-height: 90px;
+        padding: 5px;
+    }
+
+
+    select:focus {
+        border-color: #075a86;
+        box-shadow: 0 0 0 2px rgba(7,90,134,0.15);
+    }
+
+
+/* =========================================================
+   CHECKBOX Y RADIOBUTTON
+   ========================================================= */
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    accent-color: #075a86;
+    cursor: pointer;
+}
+
+
+/* Compatibilidad con clase antigua */
+.checkBox {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    accent-color: #075a86;
+}
+
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    margin-left: 3px;
+    cursor: pointer;
+    color: #263746;
+}
+
+
+/* =========================================================
+   BOTONES
+   ASP:Button
+   INPUT SUBMIT
+   BUTTON
+   ========================================================= */
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.botonesInput {
+    min-height: 32px;
+    padding: 6px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #075a86;
+    border: 1px solid #075a86;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+
+    /* Hover */
+    button:hover,
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    .botonesInput:hover {
+        background-color: #06385d;
+        border-color: #06385d;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+
+    /* Click */
+    button:active,
+    input[type="button"]:active,
+    input[type="submit"]:active {
+        background-color: #031b2e;
+        border-color: #031b2e;
+        box-shadow: none;
+    }
+
+
+    /* Botón deshabilitado */
+    button:disabled,
+    input[type="button"]:disabled,
+    input[type="submit"]:disabled {
+        color: #ffffff;
+        background-color: #9eabb3;
+        border-color: #9eabb3;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+
+
+/* =========================================================
+   TABLAS GENERALES
+   ========================================================= */
+
+table {
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #263746;
+}
+
+
+/* =========================================================
+   GRID / DATAGRID / GRIDVIEW
+   ========================================================= */
+
+.grid,
+.data-grid,
+.dataGrid,
+.GridView {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 1px solid #d9e1e7;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   ENCABEZADO DE TABLAS
+   Conserva clases antiguas
+   ========================================================= */
+
+.headTabla,
+.grid-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #075a86;
+}
+
+
+    .headTabla th,
+    .grid-header th,
+    tr.grid-header td {
+        padding: 8px 10px;
+        color: #ffffff;
+        background-color: #075a86;
+        border-right: 1px solid rgba(255,255,255,0.18);
+        text-align: left;
+    }
+
+
+    /* Links dentro del encabezado */
+    .grid-header a,
+    .grid-header a:link,
+    .grid-header a:visited {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+
+        .grid-header a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+
+/* =========================================================
+   SUBENCABEZADOS
+   ========================================================= */
+
+.headTablaSubnivel {
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #06385d;
+}
+
+
+.headTablaSubnivelClara {
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #4382a3;
+}
+
+
+.headTablaSubnivelGris {
+    font-weight: 600;
+    color: #263746;
+    background-color: #e5eaee;
+}
+
+
+/* =========================================================
+   CELDAS DE GRID ANTIGUO
+   ========================================================= */
+
+.grid-first-item,
+.grid-item,
+.grid-last-item,
+.grid-edit-column {
+    padding: 7px 9px;
+    border: 0;
+    border-bottom: 1px solid #e1e7eb;
+    color: #263746;
+    background-color: #ffffff;
+}
+
+
+/* =========================================================
+   RENGLONES PARES Y NONES DE GRIDS / TABLAS DE DATOS
+
+   Renglón non:  blanco
+   Renglón par:  azul muy claro
+   Hover:        azul más visible
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   RENGLÓN NON
+   Fondo blanco
+   --------------------------------------------------------- */
+
+.grid tr:nth-child(even) td,
+.data-grid tr:nth-child(even) td,
+.dataGrid tr:nth-child(even) td,
+.GridView tr:nth-child(even) td {
+    background-color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   RENGLÓN PAR
+   Azul muy claro compatible con #075a86
+   --------------------------------------------------------- */
+
+.grid tr:nth-child(odd):not(.grid-header) td,
+.data-grid tr:nth-child(odd):not(.grid-header) td,
+.dataGrid tr:nth-child(odd):not(.grid-header) td,
+.GridView tr:nth-child(odd):not(.grid-header) td {
+    background-color: #eef6fa;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER DE RENGLÓN
+   --------------------------------------------------------- */
+
+.grid tr:hover td,
+.data-grid tr:hover td,
+.dataGrid tr:hover td,
+.GridView tr:hover td {
+    background-color: #dceef7;
+    transition: background-color 0.15s ease;
+}
+
+
+/* ---------------------------------------------------------
+   NO MODIFICAR ENCABEZADOS DURANTE HOVER
+   --------------------------------------------------------- */
+
+.grid tr.grid-header:hover td,
+.data-grid tr.grid-header:hover td,
+.dataGrid tr.grid-header:hover td,
+.GridView tr.grid-header:hover td {
+    background-color: #075a86;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   COMPATIBILIDAD CON LAS CLASES ANTIGUAS DEL DATAGRID
+   ========================================================= */
+
+.grid-first-item,
+.grid-item,
+.grid-last-item,
+.grid-edit-column {
+    padding: 7px 9px;
+    border: 0;
+    border-bottom: 1px solid #e1e7eb;
+    color: #263746;
+}
+
+
+/* Si las celdas antiguas tienen fondo inline/clase,
+   mantenemos el hover visual */
+tr:hover .grid-first-item,
+tr:hover .grid-item,
+tr:hover .grid-last-item,
+tr:hover .grid-edit-column {
+    background-color: #dceef7;
+}
+
+
+
+.backAzulClaro {
+    background-color: #075a86;
+}
+
+.backAzulMarino {
+    background-color: #031b2e;
+}
+
+.backgris,
+.backgrisClaro {
+    background-color: #f5f7f9;
+}
+
+.backGrisTablaObs {
+    background-color: #e8edf0;
+}
+
+.backGrisTablaClara {
+    background-color: #f5f7f9;
+}
+
+.BackGrisObscuro {
+    background-color: #dce3e8;
+}
+
+
+/* =========================================================
+   CALENDARIOS ASP.NET
+   ========================================================= */
+
+.calendar,
+.aspCalendar,
+.asp-calendar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #263746;
+    background-color: #ffffff;
+    border: 1px solid #d9e1e7;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+
+    /* Encabezado */
+    .calendar-title,
+    .calendar .title,
+    .aspCalendar .title {
+        color: #ffffff;
+        background-color: #075a86;
+        font-weight: bold;
+        padding: 7px;
+    }
+
+
+    /* Días */
+    .calendar td,
+    .aspCalendar td {
+        padding: 5px;
+        text-align: center;
+    }
+
+
+    /* Día seleccionado */
+    .calendar .selected,
+    .aspCalendar .selected {
+        color: #ffffff;
+        background-color: #f15a24;
+        border-radius: 3px;
+    }
+
+
+    /* Día actual */
+    .calendar .today,
+    .aspCalendar .today {
+        font-weight: bold;
+        color: #075a86;
+        background-color: #eef6fa;
+    }
+
+
+/* =========================================================
+   FIELDSET Y LEGEND
+   ========================================================= */
+
+fieldset {
+    margin: 10px 0 15px 0;
+    padding: 15px;
+    border: 1px solid #d9e1e7;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+
+legend {
+    padding: 0 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #06385d;
+}
+
+
+/* =========================================================
+   HR
+   ========================================================= */
+
+hr {
+    height: 1px;
+    border: 0;
+    background-color: #d9e1e7;
+    margin: 15px 0;
+}
+
+
+/* =========================================================
+   IMÁGENES
+   ========================================================= */
+
+img {
+    border: 0;
+}
+
+
+/* =========================================================
+   TÍTULOS LEGACY
+   ========================================================= */
+
+.letra_boldnegra {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #263746;
+}
+
+
+.letra_negra {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #263746;
+    line-height: 1.4;
+}
+
+
+.letra_blanca,
+.letrablancaBold {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+
+.letrablancaBold {
+    font-weight: bold;
+}
+
+
+.letraAzulBold,
+.letraAzulBoldTitle,
+.letratitulotablas {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #06385d;
+}
+
+
+.letraAzulBold {
+    font-size: 13px;
+}
+
+.letraAzulBoldTitle {
+    font-size: 16px;
+}
+
+.letratitulotablas {
+    font-size: 13px;
+}
+
+
+.letraNaranjaBold {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #f15a24;
+}
+
+
+/* =========================================================
+   MENSAJES DE ERROR
+   ========================================================= */
+
+.letraAzulBoldError {
+    display: inline-block;
+    padding: 8px 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #c0392b;
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   POPUPS
+   ========================================================= */
+
+.TituloPopup {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #06385d;
+}
+
+
+/* =========================================================
+   TEXTO ESTÁNDAR
+   ========================================================= */
+
+.standard-text,
+.standard-text-left {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #263746;
+}
+
+
+.standard-text-left {
+    text-align: left;
+}
+
+
+/* =========================================================
+   REPORTES
+   ========================================================= */
+
+.report-main-header {
+    padding: 8px 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #075a86;
+}
+
+
+.report-header {
+    padding: 7px 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #06385d;
+    background-color: #eef3f6;
+}
+
+
+.report-text {
+    padding: 7px 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #263746;
+}
+
+
+/* =========================================================
+   TABS / PESTAÑAS
+   ========================================================= */
+
+.admin-tab-active,
+.tab-active {
+    padding: 7px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #075a86;
+    border: 1px solid #075a86;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+
+.admin-tab-inactive,
+.tab-inactive {
+    padding: 7px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #06385d;
+    background-color: #eef3f6;
+    border: 1px solid #d9e1e7;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+
+    .admin-tab-inactive:hover,
+    .tab-inactive:hover {
+        color: #ffffff;
+        background-color: #06385d;
+    }
+
+
+    /* Links dentro de tabs */
+    .admin-tab-inactive a,
+    .tab-inactive a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+
+/* =========================================================
+   CONTENEDOR DE TABS
+   ========================================================= */
+
+.admin-tan-border,
+.tan-border {
+    padding: 12px;
+    border: 1px solid #d9e1e7;
+    background-color: #ffffff;
+    border-radius: 0 5px 5px 5px;
+}
+
+
+/* =========================================================
+   PORTLETS / PANELES
+   ========================================================= */
+
+.tituloInteriorPortlet {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #06385d;
+}
+
+
+.subtituloInteriorPortlet {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #71808a;
+}
+
+
+.letraAzulInteriorPortlet {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #075a86;
+}
+
+
+/* =========================================================
+   CONTROLES DE ARCHIVO
+   ========================================================= */
+
+input[type="file"] {
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #263746;
+    background-color: #ffffff;
+    border: 1px solid #b8c5cf;
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   CURSOR Y ACCESIBILIDAD
+   ========================================================= */
+
+button,
+input,
+select,
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+    /* Foco accesible */
+    button:focus,
+    input:focus,
+    select:focus,
+    textarea:focus,
+    a:focus {
+        outline: 2px solid rgba(7,90,134,0.25);
+        outline-offset: 1px;
+    }
+
+
+
+/* =========================================================
+   GRID BITÁCORA
+   ========================================================= */
+
+.GridView {
+    width: 70%;
+    max-width: 70%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+
+    /* Evita que las celdas expandan la tabla */
+    .GridView td,
+    .GridView th {
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+
+/* Columna Comando */
+.grid-comando {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   GRID - DESBLOQUEO DE CUENTAS
+   ========================================================= */
+
+.grid-unlock {
+    width: 80%;
+    max-width: 80%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+    /* Encabezados compactos */
+    .grid-unlock .grid-header,
+    .grid-unlock th {
+        height: auto;
+        padding: 8px 10px;
+        font-size: 13px;
+        line-height: 18px;
+        vertical-align: middle;
+        white-space: nowrap;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+
+    /* Celdas */
+    .grid-unlock td {
+        padding: 7px 10px;
+        line-height: 18px;
+        vertical-align: middle;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+
+        /* Login: no cortar letra por letra */
+        .grid-unlock td:first-child {
+            white-space: normal;
+            word-break: normal;
+            overflow-wrap: break-word;
+        }
+
+
+        /* Activo y Liberar */
+        .grid-unlock th:nth-last-child(-n+2),
+        .grid-unlock td:nth-last-child(-n+2) {
+            text-align: center;
+            white-space: nowrap;
+            word-break: normal;
+            overflow-wrap: normal;
+        }
+
+
+/* =========================================================
+   PAGINADOR MODERNO PARA DATAGRID / GRIDVIEW
+   ========================================================= */
+
+.grid-pager {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+
+    /* Celda donde ASP.NET coloca los números */
+    .grid-pager td {
+        padding: 10px 6px;
+        background-color: #ffffff;
+    }
+
+
+    /* Links de las páginas */
+    .grid-pager a,
+    .grid-pager a:link,
+    .grid-pager a:visited {
+        display: inline-block;
+        min-width: 30px;
+        height: 30px;
+        margin: 0 3px;
+        padding: 5px 8px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 18px;
+        color: #075a86;
+        background-color: #ffffff;
+        border: 1px solid #d9e1e7;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    }
+
+
+        /* Hover */
+        .grid-pager a:hover {
+            color: #ffffff;
+            background-color: #075a86;
+            border-color: #075a86;
+            text-decoration: none;
+        }
+
+
+    /* Página actualmente seleccionada */
+    .grid-pager span {
+        display: inline-block;
+        min-width: 30px;
+        height: 30px;
+        margin: 0 3px;
+        padding: 5px 8px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 18px;
+        color: #ffffff;
+        background-color: #f15a24;
+        border: 1px solid #f15a24;
+        border-radius: 4px;
+    }

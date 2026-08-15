@@ -425,5 +425,11 @@ namespace UserInterface.Controls
         {
 
         }
+
+		protected void gridBitacora_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
+		{
+			gridBitacora.CurrentPageIndex = e.NewPageIndex;
+			BindGrid();
+		}
     }
 }

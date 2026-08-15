@@ -261,6 +261,7 @@ a::before {
 .sical-menu-label::before {
     content: "▦";
     font-size: 12px;
+    color:  #ffffff;
 }
 
 
