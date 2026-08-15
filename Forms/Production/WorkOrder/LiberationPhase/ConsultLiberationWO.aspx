@@ -1,5 +1,4 @@
 ﻿<%@ Page language="c#" Codebehind="ConsultLiberationWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.LiberationPhase.ConsultLiberationWO" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../../../Controls/mainMenu.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

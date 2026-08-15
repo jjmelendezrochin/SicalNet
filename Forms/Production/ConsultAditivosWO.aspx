@@ -1,5 +1,4 @@
-﻿
-<%@ Page language="c#" Codebehind="ConsultAditivosWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.PartidasAditivos" %>
+﻿<%@ Page language="c#" Codebehind="ConsultAditivosWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.PartidasAditivos" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -8,7 +7,10 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<asp:literal id="ltrRefresh" runat="server"></asp:literal><LINK rel="stylesheet" type="text/css" href="..\..\styloDESC.CSS">
+		<asp:literal id="ltrRefresh" runat="server"></asp:literal>
+		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
+		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -66,13 +68,22 @@
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Aditivos"
 			}
 		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="ConsultAditivosWO" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" align="center">
 				<TBODY>
 					<tr>
-						<td bgColor="#003366" colSpan="5" align="left"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td colSpan="5" align="left">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td colSpan="5" align="center"><br>

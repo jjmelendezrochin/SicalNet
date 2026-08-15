@@ -81,8 +81,8 @@ namespace UserInterface.Controls
 					ListaLotes(int.Parse(lineaDefault));
 					ListaLotes(0);
 					
-					txtFecha.Text =  System.DateTime.Now.ToString("dd-MMM-yyyy");
-					//Hide the "new record" controls
+					txtFecha.Text =  System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+					
 					lstProgram.ShowFooter=false;
 					this.cmdAdd.Enabled = false;  
 

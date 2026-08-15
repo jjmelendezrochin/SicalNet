@@ -64,8 +64,8 @@ namespace UserInterface.Forms.Production
 				string tmpInit = (string) Session["InitialDate"];
 				string tmpFin = (string) Session["FinalDate"];
 
-				String sFechaIni = DateTime.Now.Date.ToString("dd-MMM-yyyy");
-				String sFechaFin = DateTime.Now.Date.ToString("dd-MMM-yyyy");
+				String sFechaIni = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+				String sFechaFin = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 
 				if (tmpInit == null || tmpFin ==null)
 				{

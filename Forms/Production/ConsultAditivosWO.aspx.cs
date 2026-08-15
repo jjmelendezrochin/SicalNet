@@ -81,8 +81,8 @@ namespace UserInterface.Forms.Production
 				InitDt = (string) Session["InitialDate"];
 				FinalDt = (string) Session["FinalDate"];
 
-				String sFechaIni = DateTime.Now.Date.ToString("dd-MMM-yyyy");
-				String sFechaFin = DateTime.Now.Date.ToString("dd-MMM-yyyy");
+				String sFechaIni = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+				String sFechaFin = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 
 				if (InitDt == null || FinalDt ==null)
 				{					

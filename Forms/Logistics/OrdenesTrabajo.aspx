@@ -39,53 +39,63 @@
 					<tr>
 						<td align="center" colSpan="5"><br>
 							<asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Size="14" Font-Bold="True"> Generar Ordenes de Trabajo</asp:label>
-							<hr>
-							<asp:Label id="Label1" runat="server" CssClass="standard-text">Seleccione las secuencias para las que desea generar todas las órdenes de trabajo. <br> Recuerde que no se volverán a generar aquellas secuencias que ya tengan sus órdenes de trabajo.</asp:Label>
 						</td>
 					</tr>
 					<tr>
-						<td class="contenido" vAlign="top">
-							<TABLE align="center">
-								<TBODY>
-									<TR>
-										<TD colspan="3">
-											<uc1:ConsultProgramGrid id="ConsultPrgGridControl" runat="server"></uc1:ConsultProgramGrid></TD>
-									<TR>
-										<TD align="right" colspan="4">
-											<DIV id="waitControls" style="DISPLAY: none">
-												<TABLE>
-													<TR>
-														<TD align="center">
-															<asp:image id="Image2" runat="server" ImageUrl="../../images/waitImage.gif"></asp:image></TD>
-													</TR>
-													<TR>
-														<TD align="center">
-															<asp:label id="Label4" runat="server" CssClass="standard-text"> Este proceso puede demorar varios segundos, debido a que en este momento estamos generando,<br>para cada área, una orden de trabajo de su Programa de Producción.<br>Agradecemos su paciencia.</asp:label></TD>
-													</TR>
-												</TABLE>
-											</DIV>
-										</TD>
-									</TR>
-									<TR>
-										<TD align="right">
-											<asp:Button id="cmdCreateWO" runat="server" Text="Generar Ordenes de Trabajo" CssClass="botonesInput" Width="165px"></asp:Button></TD>
-										<TD align="right">
-											<asp:Label id="Label2" runat="server" Width="10px" CssClass="standard-text"></asp:Label></TD>
-										<TD align="left">
-											<asp:Button id="cmdExit" runat="server" Text="Regresar" CssClass="botonesInput" Width="64px"></asp:Button></TD>
-									</TR>
-									<TR>
-										<TD class="Normal" align="center" colSpan="4">
-											<!--<DIV id="waitControls" style="DISPLAY: none">-->
-											</DIV>
-										</TD>
-									</TR>
-								</TBODY>
-							</TABLE>
+						<td align="center" colSpan="5"><br>
+							<asp:Label id="Label5" runat="server" CssClass="standard-text">Seleccione las secuencias para las que desea generar todas las órdenes de trabajo. <br> Recuerde que no se volverán a generar aquellas secuencias que ya tengan sus órdenes de trabajo.</asp:Label>
 						</td>
 					</tr>
 				</TBODY>
 			</table>
+			<br />
+			<table align="center" width="700" style="BORDER-COLLAPSE: collapse">
+				<TBODY>
+				<tr>
+					<td class="contenido" vAlign="top">
+						<TABLE align="center">
+							<TBODY>
+								<TR>
+									<TD colspan="3">
+										<uc1:ConsultProgramGrid id="ConsultPrgGridControl" runat="server"></uc1:ConsultProgramGrid>
+									</TD>
+								</TR>
+								<TR>
+									<TD align="right" colspan="4">
+										<DIV id="waitControls" style="DISPLAY: none">
+											<TABLE>
+												<TR>
+													<TD align="center">
+														<asp:image id="Image2" runat="server" ImageUrl="../../images/waitImage.gif"></asp:image></TD>
+												</TR>
+												<TR>
+													<TD align="center">
+														<asp:label id="Label4" runat="server" CssClass="standard-text"> Este proceso puede demorar varios segundos, debido a que en este momento estamos generando,<br>para cada área, una orden de trabajo de su Programa de Producción.<br>Agradecemos su paciencia.</asp:label></TD>
+												</TR>
+											</TABLE>
+										</DIV>
+									</TD>
+								</TR>
+								<TR>
+									<TD align="right">
+										<asp:Button id="cmdCreateWO" runat="server" Text="Generar Ordenes de Trabajo" CssClass="botonesInput" Width="165px"></asp:Button></TD>
+									<TD align="right">
+										<asp:Label id="Label2" runat="server" Width="10px" CssClass="standard-text"></asp:Label></TD>
+									<TD align="left">
+										<asp:Button id="cmdExit" runat="server" Text="Regresar" CssClass="botonesInput" Width="64px"></asp:Button></TD>
+								</TR>
+								<TR>
+									<TD class="Normal" align="center" colSpan="4">
+										<!--<DIV id="waitControls" style="DISPLAY: none">-->
+										</DIV>
+									</TD>
+								</TR>
+							</TBODY>
+						</TABLE>
+					</td>
+				</tr>
+			</TBODY>
+		</table>
 		</form>
 	</body>
 </HTML>
