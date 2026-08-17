@@ -60,7 +60,7 @@
 										</tr>
 										<tr>
 											<td class="contenido" vAlign="top" width="249">
-												<TABLE class="tan-border" id="Table1" height="255" cellSpacing="6" cellPadding="0" width="236"
+												<TABLE  id="Table1" height="255" cellSpacing="6" cellPadding="0" width="236"
 													border="0">
 													<TR vAlign="top">
 														<TD class="letraAzulBold" colSpan="2" height="12">Agregar un folio de Aditivos</TD>
@@ -116,7 +116,7 @@
 											</td>
 											<TD class="contenido" vAlign="top" width="20">&nbsp;</TD>
 											<td class="contenido" vAlign="top" width="100%">
-														<TABLE class="tan-border" id="Table3" cellSpacing="12" cellPadding="0" width="100%" border="0">
+														<TABLE  id="Table3" cellSpacing="12" cellPadding="0" width="100%" border="0">
 															<TBODY>
 																<TR vAlign="top">
 																	<TD width="100%"><uc1:FoliosAditivosGrid id="FoliosAditivosGridControl" runat="server"></uc1:FoliosAditivosGrid></TD>

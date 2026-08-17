@@ -3,9 +3,6 @@
 <HTML>
 	<HEAD>
 		<TITLE>FoliosAditivosGrid</TITLE>
-	
-	
-	
 	<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
 	<meta name="CODE_LANGUAGE" Content="C#">
 	<meta name="vs_defaultClientScript" content="JavaScript">
@@ -62,14 +59,14 @@
 					<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 					<Columns>
 						<asp:TemplateColumn HeaderText="Código&nbsp;SAP">
-							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+							<HeaderStyle HorizontalAlign="Center" Width="70px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="10px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id=ItemCodigoSAP Width="50px" CssClass="standard-text" Runat="server" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.CodigoSAP") %>'>
+								<asp:label id=ItemCodigoSAP Width="70px" CssClass="standard-text" Runat="server" Text='<%#DataBinder.Eval(Container, "DataItem.CodigoSAP") %>'>
 								</asp:label>
 							</ItemTemplate>
 							<EditItemTemplate>
-								<asp:label id=EditCodigoSAP Width="50px" CssClass="standard-text" Runat="server" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.CodigoSAP") %>'>
+								<asp:label id=EditCodigoSAP Width="70px" CssClass="standard-text" Runat="server" Text='<%#DataBinder.Eval(Container, "DataItem.CodigoSAP") %>'>
 								</asp:label>
 							</EditItemTemplate>
 						</asp:TemplateColumn>

@@ -41,11 +41,11 @@ function ConfirmOperation(Button,strOperationType)
 					VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="100px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemPorcentaje Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.PorcentajePeso") %>' CssClass="standard-text">
+					<asp:label id=ItemPorcentaje Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.PorcentajePeso") %>' CssClass="standard-text">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditPorcentaje BorderStyle="Groove" runat="server" Width="100" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.PorcentajePeso") %>' CssClass="Standard-text" MaxLength="50">
+					<asp:textbox id=EditPorcentaje BorderStyle="Groove" runat="server" Width="100" Text='<%# DataBinder.Eval(Container, "DataItem.PorcentajePeso") %>' CssClass="Standard-text" MaxLength="50">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -54,11 +54,11 @@ function ConfirmOperation(Button,strOperationType)
 					VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="100px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemVersion Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Version") %>' CssClass="standard-text">
+					<asp:label id=ItemVersion Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Version") %>' CssClass="standard-text">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:label id=EditVersion Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Version") %>' CssClass="standard-text">
+					<asp:label id=EditVersion Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Version") %>' CssClass="standard-text">
 					</asp:label>
 				</EditItemTemplate>
 			</asp:TemplateColumn>

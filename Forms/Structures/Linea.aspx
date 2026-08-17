@@ -7,7 +7,10 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 		<script language="JavaScript">
 <!--
@@ -30,7 +33,7 @@
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Líneas de Producción"
 			}
 		</script>
-		<!-- <link href="../../styloDESC.CSS" rel="stylesheet" type="text/css">-->
+		
 		<script type="text/javascript">
             document.addEventListener(
                 "DOMContentLoaded",
@@ -75,34 +78,38 @@
 								</tr>
 								<tr>
 									<td width="181" class="contenido" vAlign="top">
-										<TABLE class="tan-border" id="Table1" height="206" cellSpacing="12" cellPadding="0" width="167"
+										<TABLE  id="Table1" height="206" cellSpacing="12" cellPadding="0" width="167"
 											border="0">
+											<TR vAlign="top">
+												<TD class="letraAzulBold" height="13">Agregue una Línea</TD>
+											</TR>
 											<TR>
 												<TD>
 													<asp:Label id="Label2" runat="server" CssClass="standard-text">Identificador:</asp:Label>
-													<asp:TextBox id="txtLineaId" runat="server" CssClass="standard-text" Width="130px"></asp:TextBox>
+													<asp:TextBox id="txtLineaId" runat="server" CssClass="standard-text" Width="100%"></asp:TextBox>
 													<asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="txtLineaId"></asp:RequiredFieldValidator></TD>
 											</TR>
 											<TR>
 												<TD>
 													<asp:Label id="Label3" runat="server" CssClass="standard-text">Descripción:</asp:Label>
-													<asp:TextBox id="txtDescription" runat="server" CssClass="standard-text" Width="130px"></asp:TextBox>
+													<asp:TextBox id="txtDescription" runat="server" CssClass="standard-text" Width="100%"></asp:TextBox>
 													<asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="txtDescription"></asp:RequiredFieldValidator></TD>
 											</TR>
 											<TR>
 												<TD>
 													<asp:Label id="Label4" runat="server" CssClass="standard-text">Planta:</asp:Label>
-													<asp:dropdownlist id="cboplanta" runat="server" CssClass="standard-text" Width="142px" AutoPostBack="True"></asp:dropdownlist>
+													<asp:dropdownlist id="cboplanta" runat="server" CssClass="standard-text" Width="100%" AutoPostBack="True"></asp:dropdownlist>
 												</TD>
 											</TR>
 											<TR vAlign="top">
 												<TD>
 													<TABLE id="Table2" cellSpacing="0" cellPadding="0" border="0">
 														<TR>
-															<TD height="20">
-																<asp:button id="AddLinea" runat="server" Width="64px" CssClass="botonesInput" Text="Agregar"></asp:button></TD>
-															<TD height="20">
-																<asp:button id="cmdCancelC" runat="server" Width="64px" CssClass="botonesInput" Text="Cancelar"
+															<TD height="20" width="40%">
+																<asp:button id="AddLinea" runat="server" Width="80px" CssClass="botonesInput" Text="Agregar"></asp:button></TD>
+															<TD height="20" width="20%"></TD>
+															<TD height="20" width="40%">
+																<asp:button id="cmdCancelC" runat="server" Width="80px" CssClass="botonesInput" Text="Cancelar"
 																	CausesValidation="False"></asp:button></TD>
 														</TR>
 													</TABLE>
@@ -115,7 +122,7 @@
 										<P class="contenido" align="left">
 										</P>
 										<P class="contenido" align="left">
-											<TABLE class="tan-border" id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171"
+											<TABLE id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171"
 												border="0">
 												<TR vAlign="top">
 													<TD>

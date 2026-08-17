@@ -85,7 +85,7 @@
 											<!-- PANEL IZQUIERDO -->
 											<td class="contenido" vAlign="top" width="249" height="367">
 
-												<TABLE id="Table1" class="tan-border" border="0"
+												<TABLE id="Table1" border="0"
 													cellSpacing="6" cellPadding="0" width="236" height="255">
 
 													<TR vAlign="top">
@@ -237,7 +237,7 @@
 											<!-- PANEL DERECHO: OCUPA TODO EL ESPACIO DISPONIBLE -->
 											<td class="contenido" vAlign="top" width="100%" height="367">
 
-												<TABLE id="Table3" class="tan-border"
+												<TABLE id="Table3"
 													border="0"
 													cellSpacing="12"
 													cellPadding="0"
