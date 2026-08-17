@@ -31,9 +31,9 @@
 					</tr>
 					<tr>
 						<td colspan="3" align="center"><br>
-							<asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Size="14" Font-Bold="True"> Consultar Bitacora</asp:label>
+							<asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Size="14" Font-Bold="True">Bitacora de Sucesos</asp:label>
 							<hr>
-							<asp:Label id="Label1" runat="server" CssClass="standard-text"> Seleccione la fecha que desea consultar</asp:Label>
+							<asp:Label id="Label1" runat="server" CssClass="standard-text"> Seleccione la fecha que desea consultar <br />en el formato (dd-MMM-aaaa)</asp:Label>
 						</td>
 					</tr>
 					<tr>

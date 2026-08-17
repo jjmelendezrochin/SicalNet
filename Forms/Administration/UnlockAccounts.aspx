@@ -4,7 +4,13 @@
 <HTML>
 	<HEAD>
 		<title></title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">        
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+        <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>">
+
 		<script language="JavaScript">
 <!--
 <!--
@@ -34,9 +40,7 @@ function ConfirmOperation(Button)
 					window.frames["top"].document.title = "SICAL  - Administración - Catálogo Usuarios"
 			}	
 		</script>
-		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
-        <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
-		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		
 		
 
 		<script type="text/javascript">
@@ -99,11 +103,14 @@ function ConfirmOperation(Button)
                             AutoGenerateColumns="False"
                             AllowSorting="True"
                             DataKeyField="IdPerfil"
+                            BorderColor="White"
+                            BorderStyle="None"
                             AllowPaging="True"
                             PagerStyle-HorizontalAlign="Right"
                             PagerStyle-Mode="NumericPages"
                             Width="80%"
                             ShowFooter="True"
+                            Font-Size="Small"
                             CssClass="GridView grid-unlock">
 
                             <HeaderStyle
@@ -317,9 +324,9 @@ function ConfirmOperation(Button)
                             </Columns>
 
                             <PagerStyle
-                                Font-Size="X-Small"
-                                HorizontalAlign="Right"
-                                Mode="NumericPages">
+                                HorizontalAlign="Center"
+                                Mode="NumericPages"
+                                CssClass="grid-pager">
                             </PagerStyle>
 
                         </asp:DataGrid>

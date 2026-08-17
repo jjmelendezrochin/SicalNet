@@ -1,5 +1,4 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="FoliosAditivosGrid" Src="../../Controls/FoliosAditivosGrid.ascx" %>
-
 <%@ Page language="c#" Codebehind="FoliosAditivos.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FoliosAditivos" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
@@ -7,28 +6,29 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 		<script language="JavaScript">
-			function ShowTitle()
-			{
-					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de ollas"
-			}
-		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+            function ShowTitle() {
+                window.frames["top"].document.title = "SICAL - Catálogos - Catálogo de Folios de Aditivos"
+            }
+		</script>		
 		<script type="text/javascript">document.addEventListener(
-				"DOMContentLoaded",
-				function () {
-					SicalMenu.init("sicalMenu");
-				}
-			);
+                "DOMContentLoaded",
+                function () {
+                    SicalMenu.init("sicalMenu");
+                }
+            );
 		</script>
 	</HEAD>
 	<body text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0" onload="ShowTitle()"
 		marginwidth="0" marginheight="0" onkeydown="return (event.keyCode!=13)">
 		<form id="OllasForm" method="post" runat="server">
 			<div align="center">
-				<table height="443" cellSpacing="0" cellPadding="0" width="846" border="0">
+				<table height="443" cellSpacing="0" cellPadding="0" width="100%" border="0">
 					<TBODY>
 						<tr>
 							<td class="contenido" colSpan="3">
@@ -37,7 +37,7 @@
 						</tr>
 						<tr>
 							<td width="20">&nbsp;</td>
-							<td width="700"><IMG height="7" src="imagenes/ico-bullet.gif" width="7">&nbsp;
+							<td><IMG height="7" src="imagenes/ico-bullet.gif" width="7">&nbsp;
 								<span class="titulo">
 									<SPAN class="letraAzulBold">Catálogo de Folios de Aditivos</SPAN>
 								</span></td>
@@ -45,17 +45,17 @@
 						</tr>
 						<tr>
 							<td width="20">&nbsp;</td>
-							<td width="700"><asp:label id="Label1" runat="server" CssClass="standard-text">Lista de los Folios de Aditivos.</asp:label>&nbsp;</td>
+							<td><asp:label id="Label1" runat="server" CssClass="standard-text">Lista de los Folios de Aditivos.</asp:label>&nbsp;</td>
 							<td width="20">&nbsp;</td>
 						</tr>
 						<tr>
 							<td width="20" height="326">&nbsp;</td>
-							<td width="700" height="326">
-								<table cellSpacing="0" cellPadding="0" width="700" border="0">
+							<td height="326">
+								<table cellSpacing="0" cellPadding="0" width="100%" border="0">
 									<TBODY>
 										<tr>
 											<td width="249" height="12">&nbsp;</td>
-											<TD width="10" height="12"></TD>
+											<TD width="20" height="12"></TD>
 											<td height="12"><span class="letraAzulBold"></span></td>
 										</tr>
 										<tr>
@@ -79,8 +79,13 @@
 																MaxLength="10"></asp:textbox></td>
 													</TR>
 													<TR>
-														<td colSpan="2"><asp:textbox id="txtDescripcion" runat="server" CssClass="standard-text" Width="202px" BorderStyle="None"
-																Enabled="False"></asp:textbox></td>
+														<td colSpan="2">
+															<asp:textbox id="txtDescripcion" 
+															runat="server" CssClass="standard-text" 
+															Width="100%" BorderStyle="None"
+															Enabled="False">
+															</asp:textbox>
+														</td>
 													</TR>
 													<TR vAlign="top">
 														<TD width="47" height="19"><asp:label id="Label5" runat="server" CssClass="standard-text">Folio</asp:label></TD>
@@ -90,14 +95,17 @@
 														<TD width="47" colSpan="2" height="19"><asp:label id="Label6" runat="server" CssClass="standard-text">Observaciones</asp:label></TD>
 													</TR>
 													<tr>
-														<td vAlign="top" colSpan="2" height="59"><asp:textbox id="txtObservaciones" runat="server" CssClass="standard-text" Width="212px" MaxLength="100"
-																TextMode="MultiLine" Height="49px"></asp:textbox></td>
+														<td vAlign="top" colSpan="2" height="59">
+															<asp:textbox id="txtObservaciones" runat="server" CssClass="standard-text" Width="100%" MaxLength="100"
+																TextMode="MultiLine" Height="49px"></asp:textbox>
+														</td>
 													<TR vAlign="top">
 														<TD vAlign="middle" align="center" colSpan="2">
 															<TABLE id="Table2" cellSpacing="0" cellPadding="0" border="0">
 																<TR>
-																	<td height="30" width="70"><asp:button id="cmdFProducto" runat="server" CssClass="botonesInput" Width="64px" Text="Agregar"></asp:button></td>
-																	<TD height="30" width="70"><asp:button id="cmdCancelC" runat="server" CssClass="botonesInput" Width="64px" Text="Cancelar"
+																	<td height="30" width="40%"><asp:button id="cmdFProducto" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar"></asp:button></td>
+																	<td  width="20%"></td>
+																	<TD height="30" width="40%"><asp:button id="cmdCancelC" runat="server" CssClass="botonesInput" Width="80px" Text="Cancelar"
 																			CausesValidation="False"></asp:button></TD>
 																</TR>
 															</TABLE>
@@ -106,19 +114,16 @@
 												</TABLE>
 												<asp:validationsummary id="ValidationSummary1" runat="server"></asp:validationsummary><asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label>
 											</td>
-											<TD class="contenido" vAlign="top" width="10"></TD>
-											<td class="contenido" vAlign="top">
-												<P class="contenido" align="left"></P>
-												<P class="contenido" align="left">
-													<TABLE class="tan-border" id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171"
-														border="0">
-														<TBODY>
-															<TR vAlign="top">
-																<TD><uc1:FoliosAditivosGrid id="FoliosAditivosGridControl" runat="server"></uc1:FoliosAditivosGrid></TD>
-															</TR>
-														</TBODY></TABLE>
-												</P>
-											</td>
+											<TD class="contenido" vAlign="top" width="20">&nbsp;</TD>
+											<td class="contenido" vAlign="top" width="100%">
+														<TABLE class="tan-border" id="Table3" cellSpacing="12" cellPadding="0" width="100%" border="0">
+															<TBODY>
+																<TR vAlign="top">
+																	<TD width="100%"><uc1:FoliosAditivosGrid id="FoliosAditivosGridControl" runat="server"></uc1:FoliosAditivosGrid></TD>
+																</TR>
+															</TBODY>
+														</TABLE>
+													</td>
 										</tr>
 										<tr>
 											<TD colSpan="3"></TD>
@@ -132,7 +137,7 @@
 						</tr>
 						<tr>
 							<td class="contenido" width="20">&nbsp;</td>
-							<td class="contenido" width="700">
+							<td class="contenido">
 								<div align="right"></div>
 							</td>
 							<td class="contenido" width="20">&nbsp;</td>
@@ -147,15 +152,5 @@
 					</TBODY></table>
 			</div>
 		</form>
-		</TD></TR></TBODY>
-		<P></P>
-		</TR></TBODY></TABLE>
-		<P></P>
-		</TD></TR></TBODY>
-		<DIV></DIV>
-		</FORM></TABLE></TD></TR></TBODY>
-		<DIV></DIV>
-		<DIV></DIV>
-		<DIV></DIV>
 	</body>
 </HTML>
