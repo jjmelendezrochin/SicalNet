@@ -29,7 +29,7 @@ function ConfirmOperation(Button,strOperationType)
 			<td colSpan="2">
 				<asp:datagrid id="dgdCubas" Width="100%" runat="server" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
 					PageSize="10" AllowPaging="True" BorderStyle="None" BorderColor="White" AllowSorting="True" FontSize="11px"
-					Font-Name="Verdana" AutoGenerateColumns="False" CellPadding="2" Font-Names="Verdana"  CssClass="GridView grid-header">
+					Font-Name="Verdana" AutoGenerateColumns="False" CellPadding="2" Font-Names="Verdana" CssClass="GridView grid-header">
 					<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 					<Columns>
 						<asp:TemplateColumn HeaderText="Cuba">

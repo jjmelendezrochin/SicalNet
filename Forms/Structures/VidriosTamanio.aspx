@@ -8,9 +8,11 @@
 		<title>Guía de estilo</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
-		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
 
-		</script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		
 		<script language="JavaScript">
 <!--
 <!--
@@ -75,7 +77,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 								</tr>
 								<tr>
 									<td class="contenido" vAlign="top" width="20">
-										<TABLE id="Table1" class="tan-border" border="0" cellSpacing="12" cellPadding="0" width="171"
+										<TABLE id="Table1"  border="0" cellSpacing="12" cellPadding="0" width="171"
 											height="99">
 											<TR vAlign="top">
 												<TD class="letraAzulBold" height="13">Agregar una Medida de Vidrio</TD>
@@ -87,45 +89,46 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 											</TR>
 											<TR>
 												<TD><asp:label id="Label3" runat="server" CssClass="standard-text"> Medida: </asp:label><br>
-													<asp:textbox id="txtMedida" runat="server" CssClass="standard-text" Enabled="False" Width="142px"
+													<asp:textbox id="txtMedida" runat="server" CssClass="standard-text" Enabled="False" Width="100%"
 														MaxLength="20"></asp:textbox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD height="32"><asp:label id="Label4" runat="server" CssClass="standard-text"> Medida Vidrio: </asp:label><br>
-													<asp:textbox id="txtMedidaVidrio" runat="server" CssClass="standard-text" Enabled="False" Width="142px"
+													<asp:textbox id="txtMedidaVidrio" runat="server" CssClass="standard-text" Enabled="False" Width="100%"
 														MaxLength="20"></asp:textbox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD><asp:label id="Label6" runat="server" CssClass="standard-text" style="Z-INDEX: 0">Largo Normal: </asp:label><br>
-													<asp:textbox id="txtLargoNormal" runat="server" CssClass="standard-text" Width="60px" MaxLength="20"
+													<asp:textbox id="txtLargoNormal" runat="server" CssClass="standard-text" Width="100%" MaxLength="20"
 														style="Z-INDEX: 0"></asp:textbox>
 													<asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator5" runat="server" ControlToValidate="txtLargoNormal"
 														ErrorMessage="Largo Normal es un campo requerido">*</asp:requiredfieldvalidator></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD><asp:label id="Label5" runat="server" CssClass="standard-text" style="Z-INDEX: 0">Ancho Normal: </asp:label><br>
-													<asp:textbox id="txtAnchoNormal" runat="server" CssClass="standard-text" Width="60px" MaxLength="20"
+													<asp:textbox id="txtAnchoNormal" runat="server" CssClass="standard-text" Width="100%" MaxLength="20"
 														style="Z-INDEX: 0"></asp:textbox>
 													<asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator1" runat="server" ControlToValidate="txtAnchoNormal"
 														ErrorMessage="Ancho Normal es un campo requerido">*</asp:requiredfieldvalidator></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD><asp:label id="Label8" runat="server" CssClass="standard-text" style="Z-INDEX: 0">Largo Vidrio: </asp:label><br>
-													<asp:textbox style="Z-INDEX: 0" id="txtLargoVidrio" runat="server" CssClass="standard-text" Width="60px"
+													<asp:textbox style="Z-INDEX: 0" id="txtLargoVidrio" runat="server" CssClass="standard-text" Width="100%"
 														MaxLength="20"></asp:textbox>
 													<asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator2" runat="server" ControlToValidate="txtLargoVidrio"
 														ErrorMessage="Largo Vidrio es un campo requerido">*</asp:requiredfieldvalidator></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD><asp:label id="Label7" runat="server" CssClass="standard-text" style="Z-INDEX: 0">Ancho Vidrio:</asp:label><br>
-													<asp:textbox style="Z-INDEX: 0" id="txtAnchoVidrio" runat="server" CssClass="standard-text" Width="60px"
+													<asp:textbox style="Z-INDEX: 0" id="txtAnchoVidrio" runat="server" CssClass="standard-text" 
+														Width="100%"
 														MaxLength="20"></asp:textbox>
 													<asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator3" runat="server" ControlToValidate="txtAnchoVidrio"
 														ErrorMessage="Ancho Vidrio es un campo requerido">*</asp:requiredfieldvalidator></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD><asp:label id="Label9" runat="server" CssClass="standard-text"> Espesor:</asp:label><br>
-													<asp:textbox style="Z-INDEX: 0" id="txtEspesor" runat="server" CssClass="standard-text" Width="60px"
+													<asp:textbox style="Z-INDEX: 0" id="txtEspesor" runat="server" CssClass="standard-text" Width="100%"
 														MaxLength="20"></asp:textbox>
 													<asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator4" runat="server" ControlToValidate="txtEspesor"
 														ErrorMessage="Espesor es un campo requerido">*</asp:requiredfieldvalidator>
@@ -133,7 +136,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 											</TR>
 											<TR vAlign="top">
 												<TD><asp:label id="Label10" runat="server" CssClass="standard-text"> Grosor:</asp:label><br>
-													<asp:textbox style="Z-INDEX: 0" id="txtGrosor" runat="server" CssClass="standard-text" Width="60px"
+													<asp:textbox style="Z-INDEX: 0" id="txtGrosor" runat="server" CssClass="standard-text" Width="100%"
 														MaxLength="2"></asp:textbox>
 													<asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator6" runat="server" ControlToValidate="txtGrosor"
 														ErrorMessage="Grosor es un campo requerido">*</asp:requiredfieldvalidator>
@@ -143,9 +146,14 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 												<TD>
 													<TABLE id="Table2" border="0" cellSpacing="0" cellPadding="0">
 														<TR>
-															<TD height="20"><asp:button id="cmdAdd" runat="server" CssClass="botonesInput" Width="64px" Text="Agregar"></asp:button></TD>
-															<TD height="20"><asp:button id="cmdCancel" runat="server" CssClass="botonesInput" Width="64px" CausesValidation="False"
-																	Text="Cancelar"></asp:button></TD>
+															<TD width="40%">
+																<asp:button id="cmdAdd" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar"></asp:button>
+															</TD>
+															<TD width="20%"></TD>
+															<TD width="40%">
+																<asp:button id="cmdCancel" runat="server" CssClass="botonesInput" Width="80px" CausesValidation="False"
+																	Text="Cancelar"></asp:button>
+															</TD>
 														</TR>
 														<tr>
 															<td colspan="2">&nbsp;
@@ -161,7 +169,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 									<td class="contenido" vAlign="top">
 										<P class="contenido" align="left"></P>
 										<P class="contenido" align="left">
-											<TABLE id="Table3" class="tan-border" border="0" cellSpacing="12" cellPadding="0" width="171"
+											<TABLE id="Table3"  border="0" cellSpacing="12" cellPadding="0" width="1000px"
 												height="99">
 												<TR vAlign="top">
 													<TD><uc1:vidriostamanio id="VidriosTamanio1" runat="server"></uc1:vidriostamanio></TD>
