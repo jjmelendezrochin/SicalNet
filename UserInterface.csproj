@@ -153,6 +153,10 @@
     <Content Include="Controls\WebUserControl1.ascx" />
     <Content Include="Controls\WorkOrdersGrid.ascx" />
     <Content Include="Controls\Zonas.ascx" />
+    <Content Include="Forms\Structures\imagenes\ico-bullet.gif" />
+    <Content Include="Forms\Structures\imagenes\spacer.gif" />
+    <Content Include="Forms\Structures\images\ico-bullet.gif" />
+    <Content Include="Forms\Structures\images\spacer.gif" />
     <Content Include="Scripts\sical-alertas.js" />
     <Content Include="Css\sical-menu.css" />
     <Content Include="CustomError\404Page.aspx" />

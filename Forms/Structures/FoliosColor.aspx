@@ -33,8 +33,7 @@
 
 		<form id="OllasForm" method="post" runat="server">
 			<div align="center">
-
-				<table border="0" cellSpacing="0" cellPadding="0" width="100%" height="443">
+				<table border="0" cellSpacing="0" cellPadding="0" width="800" height="443">
 					<TBODY>
 
 						<tr>

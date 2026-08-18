@@ -6,8 +6,13 @@
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="JavaScript">
 		<!--
 		<!--
@@ -68,7 +73,7 @@
 					<TR>
 						<TD class="contenido" width="21" height="131"></TD>
 						<TD class="contenido" width="700" height="131">
-							<TABLE class="tan-border" id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
+							<TABLE  id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
 								<TR vAlign="top">
 									<TD class="letraAzulBold" colSpan="4" height="13">
 										<P>Seleccione el las caracterísiticas de la lámina:</P>
@@ -111,7 +116,7 @@
 						<td class="contenido" width="21">&nbsp;</td>
 						<td class="contenido" width="700">
 							<DIV align="left">
-								<TABLE class="tan-border" id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
+								<TABLE  id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="2" height="13">
@@ -126,10 +131,9 @@
 										<TD></TD>
 									</TR>
 									<TR vAlign="top">
-										<TD colSpan="2">
-											<TABLE id="Table6" cellSpacing="0" cellPadding="0" border="0">
-											</TABLE>
-											<uc1:formcintasgrid id="FormCintasGridControl" runat="server"></uc1:formcintasgrid></TD>
+										<TD colSpan="2">											
+											<uc1:formcintasgrid id="FormCintasGridControl" runat="server"></uc1:formcintasgrid>
+										</TD>
 									</TR>
 								</TABLE>
 							</DIV>
@@ -140,7 +144,7 @@
 						<td width="21">&nbsp;</td>
 						<td>
 							<div align="left">
-								<TABLE class="tan-border" id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
+								<TABLE  id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="4" height="13">Agregue un componente a la 
@@ -170,7 +174,7 @@
 											<asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label></TD>
 										<TD width="122">
 											<P align="right">
-												<asp:button id="AddFormCintas" runat="server" CssClass="botonesInput" Width="64px" Text="Agregar"
+												<asp:button id="AddFormCintas" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar"
 													CausesValidation="False"></asp:button></P>
 										</TD>
 										<TD></TD>
@@ -183,7 +187,7 @@
 					<tr>
 						<td colspan="1">
 						<td>
-							<TABLE class="tan-border" id="ew" width="700" border="0">
+							<TABLE  id="ew" width="700" border="0">
 								<tr>
 									<td align="center">
 										<asp:button id="cmdSalir" runat="server" CssClass="botonesInput" Text="Salir" Visible="False"></asp:button>

@@ -35,7 +35,7 @@
 						<table cellSpacing="0" cellPadding="0" width="206" border="0">
 							<tr>
 								<td style="WIDTH: 225px" vAlign="top">
-									<TABLE class="tan-border" id="Table1" style="WIDTH: 215px; HEIGHT: 161px" cellSpacing="12" cellPadding="0" width="215" border="0">
+									<TABLE  id="Table1" style="WIDTH: 215px; HEIGHT: 161px" cellSpacing="12" cellPadding="0" width="215" border="0">
 										<TR vAlign="top">
 											<TD class="header-gray">Agregue una Compañía</TD>
 										</TR>
@@ -70,7 +70,7 @@
 					</td>
 					<TD width="11"></TD>
 					<TD vAlign="top"><!-- Right Panel -->
-						<TABLE class="tan-border" style="WIDTH: 505px; HEIGHT: 232px" height="232" cellSpacing="11" cellPadding="0" width="505" border="0">
+						<TABLE  style="WIDTH: 505px; HEIGHT: 232px" height="232" cellSpacing="11" cellPadding="0" width="505" border="0">
 							<TR vAlign="top">
 								<TD height="15"><SPAN class="header-gray">Catálogo&nbsp; de Compañías</SPAN></TD>
 							</TR>

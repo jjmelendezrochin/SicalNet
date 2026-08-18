@@ -22,10 +22,16 @@
         return false;
     }
 </script>
-<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
-<P class="contenido" align="left"><asp:datagrid id="dgdFormAditivos" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
-		PageSize="10" AllowPaging="True" Width="650px" runat="server" Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
-		Font-Name="Verdana" FontSize="11px" AllowSorting="True" BorderColor="White" BorderStyle="None" ItemStyle-Wrap="True" OnItemDataBound="dgdFormAditivos_OnItemDataBound">
+
+<P class="contenido" align="left">
+	<asp:datagrid id="dgdFormAditivos" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
+		PageSize="10" AllowPaging="True" Width="650px" runat="server" 
+		Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
+		Font-Name="Verdana" FontSize="11px" AllowSorting="True" 
+		BorderColor="White" BorderStyle="None" 
+		ItemStyle-Wrap="True" 
+		OnItemDataBound="dgdFormAditivos_OnItemDataBound"
+		CssClass="GridView grid-users">
 		<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 		<Columns>
 			<asp:TemplateColumn HeaderText="Material">
@@ -123,6 +129,10 @@
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 		</Columns>
-		<PagerStyle HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
+		<PagerStyle
+		HorizontalAlign="Center"
+		Mode="NumericPages"
+		CssClass="grid-pager">
+		</PagerStyle>
 	</asp:datagrid></P>
 <P class="contenido" align="left"><asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label></P>

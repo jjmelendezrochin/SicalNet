@@ -40,11 +40,11 @@
 				<HeaderStyle HorizontalAlign="Center" Width="60px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle HorizontalAlign="Center" Width="60px" CssClass="grid-item" VerticalAlign="Middle"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemA Height="12px" Width="60px" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.FechaLectura") %>'>
+					<asp:label id=ItemA Height="12px" Width="60px" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.FechaLectura") %>'>
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditA runat="server" BorderStyle="Groove" Width="60px" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container,"DataItem.FechaLectura") %>' MaxLength="15">
+					<asp:textbox id=EditA runat="server" BorderStyle="Groove" Width="60px" CssClass="Standard-text" Text='<%#DataBinder.Eval(Container,"DataItem.FechaLectura") %>' MaxLength="15">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -52,12 +52,12 @@
 				<HeaderStyle Wrap="False" HorizontalAlign="Center" Width="60px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle HorizontalAlign="Center" Width="60px" CssClass="grid-item" VerticalAlign="Middle"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemB Width="290px" Height="12px" CssClass="standard-text-left" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container,"DataItem.Clasificacion") %>'>
+					<asp:label id=ItemB Width="290px" Height="12px" CssClass="standard-text-left" Runat="server" Text='<%#DataBinder.Eval(Container,"DataItem.Clasificacion") %>'>
 					</asp:label>
 				</ItemTemplate>
 				<FooterStyle HorizontalAlign="Center" VerticalAlign="Middle"></FooterStyle>
 				<EditItemTemplate>
-					<asp:textbox id=EditB Width="258px" BorderStyle="Groove" Height="30px" runat="server" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container,"DataItem.Clasificacion") %>' MaxLength="50">
+					<asp:textbox id=EditB Width="258px" BorderStyle="Groove" Height="30px" runat="server" CssClass="Standard-text" Text='<%#DataBinder.Eval(Container,"DataItem.Clasificacion") %>' MaxLength="50">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -65,11 +65,11 @@
 				<HeaderStyle Wrap="False" HorizontalAlign="Center" Width="60px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle HorizontalAlign="Center" Width="60px" CssClass="grid-item" VerticalAlign="Middle"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemC Width="60px" CssClass="standard-text" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container,"DataItem.FechaRotura") %>'>
+					<asp:label id=ItemC Width="60px" CssClass="standard-text" Runat="server" Text='<%#DataBinder.Eval(Container,"DataItem.FechaRotura") %>'>
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditC Width="30px" BorderStyle="Groove" runat="server" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container,"DataItem.FechaRotura") %>' MaxLength="50">
+					<asp:textbox id=EditC Width="30px" BorderStyle="Groove" runat="server" CssClass="Standard-text" Text='<%#DataBinder.Eval(Container,"DataItem.FechaRotura") %>' MaxLength="50">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>

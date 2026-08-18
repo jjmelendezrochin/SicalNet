@@ -32,11 +32,11 @@
 				<HeaderStyle HorizontalAlign="Center" Width="10px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="10px" CssClass="grid-first-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemAnilloId Width="40px" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdAnillo") %>' Runat="server">
+					<asp:label id=ItemAnilloId Width="40px" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.IdAnillo") %>' Runat="server">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:label id=EditAnilloId Width="40px" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdAnillo") %>' Runat="server">
+					<asp:label id=EditAnilloId Width="40px" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.IdAnillo") %>' Runat="server">
 					</asp:label>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -44,11 +44,11 @@
 				<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemCodigoSap CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.CodigoSap") %>' Runat="server">
+					<asp:label id=ItemCodigoSap CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.CodigoSap") %>' Runat="server">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:label style="Z-INDEX: 0" id=ItemCodigoSap1 CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.CodigoSap") %>' Runat="server">
+					<asp:label style="Z-INDEX: 0" id=ItemCodigoSap1 CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.CodigoSap") %>' Runat="server">
 					</asp:label>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -56,11 +56,11 @@
 				<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemDescripcion CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server">
+					<asp:label id=ItemDescripcion CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:label style="Z-INDEX: 0" id=ItemDescripcion1 CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server">
+					<asp:label style="Z-INDEX: 0" id=ItemDescripcion1 CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server">
 					</asp:label>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -68,11 +68,11 @@
 				<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemLI CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.LI") %>' Runat="server">
+					<asp:label id=ItemLI CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LI") %>' Runat="server">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditLineaI runat="server" Width="120" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.LI") %>' MaxLength="10" BorderStyle="Groove">
+					<asp:textbox id=EditLineaI runat="server" Width="120" CssClass="Standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LI") %>' MaxLength="10" BorderStyle="Groove">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -80,22 +80,22 @@
 				<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemLII CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.LII") %>' Runat="server">
+					<asp:label id=ItemLII CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LII") %>' Runat="server">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditLineaII runat="server" Width="120" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.LII") %>' MaxLength="10" BorderStyle="Groove">
+					<asp:textbox id=EditLineaII runat="server" Width="120" CssClass="Standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LII") %>' MaxLength="10" BorderStyle="Groove">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 			<asp:TemplateColumn HeaderText="L&#237;nea III">
 				<HeaderStyle HorizontalAlign="Center" Width="180px" VerticalAlign="Middle"></HeaderStyle>
 				<ItemTemplate>
-					<asp:label style="Z-INDEX: 0" id=ItemLIII CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.LIII") %>' Runat="server">
+					<asp:label style="Z-INDEX: 0" id=ItemLIII CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LIII") %>' Runat="server">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox style="Z-INDEX: 0" id=EditLineaIII runat="server" Width="120" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.LIII") %>' MaxLength="10" BorderStyle="Groove">
+					<asp:textbox style="Z-INDEX: 0" id=EditLineaIII runat="server" Width="120" CssClass="Standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LIII") %>' MaxLength="10" BorderStyle="Groove">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>

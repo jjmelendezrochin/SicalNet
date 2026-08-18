@@ -7,9 +7,12 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<script language="JavaScript">
-		<!--
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+		<script language="JavaScript">		
 		<!--
 		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
 		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
@@ -29,8 +32,7 @@
 		{
 			window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de Temperatura"
 		}
-		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		</script>		
 		<!--onload="if ('<%= Session["errMsg"]%>' != '') alert('<%= Session["errMsg"]%>')"-->
 
 		<script type="text/javascript">document.addEventListener(
@@ -77,7 +79,7 @@
 										</tr>
 										<tr>
 											<td class="contenido" vAlign="top" width="20">
-												<TABLE class="tan-border" id="tableNewComponents" runat="server" height="99" cellSpacing="12" cellPadding="0" width="171" border="0">
+												<TABLE  id="tableNewComponents" runat="server" height="99" cellSpacing="12" cellPadding="0" width="171" border="0">
 													<TBODY>
 														<TR vAlign="top">
 															<TD class="letraAzulBold" height="13"></TD>
@@ -85,44 +87,49 @@
 														<TR>
 															<TD>
 																<asp:Label id="Label2" runat="server" CssClass="standard-text">Familia de producto:</asp:Label><br>
-																<asp:dropdownlist id="cboFamPdt" runat="server" Width="142px" CssClass="standard-text"></asp:dropdownlist></TD>
+																<asp:dropdownlist id="cboFamPdt" runat="server" Width="100%" CssClass="standard-text"></asp:dropdownlist></TD>
 														</TR>
 														<TR>
 															<TD>
 																<asp:Label id="Label3" runat="server" CssClass="standard-text">Espesor:</asp:Label><br>
-																<asp:dropdownlist id="cboEspesor" runat="server" Width="142px" CssClass="standard-text"></asp:dropdownlist></TD>
+																<asp:dropdownlist id="cboEspesor" runat="server" Width="100%" CssClass="standard-text"></asp:dropdownlist></TD>
 														</TR>
 														<TR vAlign="top">
 															<TD>
 																<asp:Label id="Label4" runat="server" CssClass="standard-text">Linea:</asp:Label><br>
-																<asp:dropdownlist id="cboLinea" runat="server" Width="142px" CssClass="standard-text"></asp:dropdownlist></TD>
+																<asp:dropdownlist id="cboLinea" runat="server" Width="100%" CssClass="standard-text"></asp:dropdownlist></TD>
 														</TR>
 														<TR vAlign="top">
 															<TD>
 																<asp:Label id="Label5" runat="server" CssClass="standard-text">Tiempo de Curado:</asp:Label><br>
-																<asp:textbox id="txtTimeC" runat="server" Width="142px" CssClass="standard-text"></asp:textbox></TD>
+																<asp:textbox id="txtTimeC" runat="server" Width="100%" CssClass="standard-text"></asp:textbox></TD>
 														</TR>
 														<TR vAlign="top">
 															<TD>
 																<asp:Label id="Label6" runat="server" CssClass="standard-text">Temperatura de Curado:</asp:Label><br>
-																<asp:textbox id="txtTempC" runat="server" Width="142px" CssClass="standard-text"></asp:textbox></TD>
+																<asp:textbox id="txtTempC" runat="server" Width="100%" CssClass="standard-text"></asp:textbox></TD>
 														</TR>
 														<TR vAlign="top">
 															<TD>
 																<asp:Label id="Label7" runat="server" CssClass="standard-text">Tiempo de Post Curado:</asp:Label><br>
-																<asp:textbox id="txtTimePC" runat="server" Width="142px" CssClass="standard-text"></asp:textbox></TD>
+																<asp:textbox id="txtTimePC" runat="server" Width="100%" CssClass="standard-text"></asp:textbox></TD>
 														</TR>
 														<TR vAlign="top">
 															<TD>
 																<asp:Label id="Label8" runat="server" CssClass="standard-text">Temperatura de Post Curado:</asp:Label><br>
-																<asp:textbox id="txtTempPc" runat="server" Width="142px" CssClass="standard-text"></asp:textbox></TD>
+																<asp:textbox id="txtTempPc" runat="server" Width="100%" CssClass="standard-text"></asp:textbox></TD>
 														</TR>
 														<TR vAlign="top">
 															<TD>
 																<TABLE id="Table2" cellSpacing="0" cellPadding="0" border="0">
 																	<TR>
-																		<TD height="20"><asp:button id="AddFrmTemp" runat="server" Width="64px" CssClass="botonesInput" CausesValidation="False" Text="Agregar"></asp:button></TD>
-																		<TD height="20"><asp:button id="cmdCancelC" runat="server" Width="64px" CssClass="botonesInput" CausesValidation="False" Text="Cancelar"></asp:button></TD>
+																		<TD width="40%">
+																			<asp:button id="AddFrmTemp" runat="server" Width="80px" CssClass="botonesInput" CausesValidation="False" Text="Agregar"></asp:button>
+																		</TD>
+																		<TD width="20%"></TD>
+																		<TD width="40%">
+																			<asp:button id="cmdCancelC" runat="server" Width="80px" CssClass="botonesInput" CausesValidation="False" Text="Cancelar"></asp:button>
+																		</TD>
 																	</TR>
 																</TABLE>
 															</TD>
@@ -133,7 +140,7 @@
 											<td class="contenido" vAlign="top">
 												<P class="contenido" align="left"></P>
 												<P class="contenido" align="left">
-													<TABLE class="tan-border" id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171" border="0">
+													<TABLE  id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171" border="0">
 														<TR vAlign="top">
 															<TD><uc1:formtemparaturagrid id="FrmTempGridControl" runat="server"></uc1:formtemparaturagrid></TD>
 														</TR>

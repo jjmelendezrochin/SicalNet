@@ -378,7 +378,14 @@ namespace UserInterface.Forms.Structures
 				//to display the error msg
 				errFileWrite.HandleException("User Information",errHnd,Server.MapPath("SICALNet")+"Error.txt");
 				lblErrorMsg.Text=errHnd.Message;
-				Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+ "alert('"+ Message +"')"+ "<" + "/script>");
+				string mensaje = Message.Replace("\\", "\\\\").Replace("'", "\\'");
+
+				Page.RegisterStartupScript(
+					"alert",
+					"<script language='JavaScript'>" +
+					"SicalAlert.mostrar('" + mensaje + "', 'advertencia');" +
+					"</script>"
+				);
 				lblErrorMsg.ForeColor=Color.White;
 				lblErrorMsg.BackColor=Color.Red;
 			}
@@ -392,7 +399,14 @@ namespace UserInterface.Forms.Structures
 			{
 				//to display the warning msg
 				lblErrorMsg.Text=Message;
-				Page.RegisterStartupScript("alert", string.Format("<script language='JavaScript'>alert('{0}')</script>",Message));
+				string mensaje = Message.Replace("\\", "\\\\").Replace("'", "\\'");
+
+				Page.RegisterStartupScript(
+					"alert",
+					"<script language='JavaScript'>" +
+					"SicalAlert.mostrar('" + mensaje + "', 'advertencia');" +
+					"</script>"
+				);
 				lblErrorMsg.ForeColor=Color.White;
 				lblErrorMsg.BackColor=Color.Red;
 			}

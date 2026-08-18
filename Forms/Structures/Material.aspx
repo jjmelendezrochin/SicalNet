@@ -6,30 +6,34 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="JavaScript">
-<!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+		<!--
+		<!--
+		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+			document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+		  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+		}
+		MM_reloadPage(true);
+		// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+		  window.open(theURL,winName,features);
+		}
 
-//-->
+		//-->
 
-			function ShowTitle()
-			{
-					window.frames["top"].document.title = "SICAL  - Estructuras - Catálogo de Materiales"
-			}	
+		function ShowTitle()
+		{
+				window.frames["top"].document.title = "SICAL  - Estructuras - Catálogo de Materiales"
+		}	
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
@@ -41,8 +45,8 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 	</HEAD>
 	<body onload="ShowTitle()">
 		<form id="FormMaterial" method="post" runat="server">
-			<div align="center">
-				<table cellSpacing="0" cellPadding="0" width="740" border="0">
+			<div style="width: 900px; margin-left: auto; margin-right: auto;">
+				<table cellSpacing="0" cellPadding="0" width="900" border="0">
 					<TBODY>
 						<tr>
 							<td align="left" colSpan="5">
@@ -57,7 +61,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 						</tr>
 						<tr>
 							<td width="20">&nbsp;</td>
-							<td width="700"><IMG height="7" src="imagenes/ico-bullet.gif" width="7">
+							<td width="860"><IMG height="7" src="imagenes/ico-bullet.gif" width="7">
 								<span class="titulo">
 									<SPAN class="letraAzulBold">Catalogo 
       de Materiales</SPAN>
@@ -66,7 +70,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 						</tr>
 						<tr>
 							<td width="20">&nbsp;</td>
-							<td width="700">
+							<td width="860">
 								<asp:Label id="Label3" runat="server" Text="Es la lista de todos los materiales que se utilizan en el procesos de fabricación de láminas acrílicas en PLASTIGAS" CssClass="standard-text"></asp:Label>&nbsp;</td>
 							<td width="20">&nbsp;</td>
 						</tr>
@@ -82,7 +86,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 										</tr>
 										<tr>
 											<td class="contenido" vAlign="top" width="20">
-												<TABLE class="tan-border" id="Table1" cellSpacing="0" cellPadding="0" width="200" border="0">
+												<TABLE  id="Table1" cellSpacing="0" cellPadding="0" width="700" border="0">
 													<TBODY>
 														<tr>
 															<td><asp:panel id="pnlCodigo" Width="370" Runat="server">
@@ -119,16 +123,16 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 																</asp:panel>
 															</td>
 															<td class="contenido" vAlign="top">
-																<TABLE class="tan-border" id="Table1" cellSpacing="0" cellPadding="0" width="200" border="0">
+																<TABLE  id="TableOperations" cellSpacing="0" cellPadding="0" width="300" border="0">
 																	<TR>
 																		<asp:panel id="pnlOperation" Runat="server">
 																			<TD>
-																				<asp:button id="btnNew" runat="server" CssClass="standard-text" Text="Nuevo" Width="64px" CausesValidation="False"></asp:button></TD>
+																				<asp:button id="btnNew" runat="server" CssClass="standard-text" Text="Nuevo" Width="80px" CausesValidation="False"></asp:button></TD>
 																			<TD>
-																				<asp:button id="btnEdit" runat="server" CssClass="standard-text" Text="Editar" Width="64px"
+																				<asp:button id="btnEdit" runat="server" CssClass="standard-text" Text="Editar" Width="80px"
 																					CausesValidation="False"></asp:button></TD>
 																			<TD>
-																				<asp:button id="btnDelete" runat="server" CssClass="standard-text" Text="Eliminar" Width="64px"
+																				<asp:button id="btnDelete" runat="server" CssClass="standard-text" Text="Eliminar" Width="80px"
 																					CausesValidation="False"></asp:button></TD>
 																		</asp:panel></TR>
 																</TABLE>
@@ -232,7 +236,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 																			<TD width="120"></TD>
 																			<TD>
 																				<asp:CheckBox id="chkSegundas" runat="server" CssClass="standard-text" Text="Manejar Segundas"
-																					Width="164px"></asp:CheckBox></TD>
+																					Width="180px"></asp:CheckBox></TD>
 																		</TR>
 																	</TABLE>
 																</asp:panel></td>

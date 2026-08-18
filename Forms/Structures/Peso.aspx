@@ -7,7 +7,11 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="JavaScript">
 <!--
 <!--
@@ -29,7 +33,7 @@ function ShowTitle()
 }
 
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
 				function () {
@@ -66,7 +70,7 @@ function ShowTitle()
 					<TR>
 						<TD height="12"></TD>
 						<TD width="700" height="12">
-							<TABLE class="tan-border" id="Table4" cellSpacing="12" cellPadding="0" width="700" border="0">
+							<TABLE  id="Table4" cellSpacing="12" cellPadding="0" width="700" border="0">
 								<TR vAlign="top">
 									<TD class="letraAzulBold" colSpan="4" height="13">Seleccione el color</TD>
 								</TR>
@@ -99,13 +103,13 @@ function ShowTitle()
 									<TD height="22">
 										<asp:textbox id="txtRevisionFiltro" runat="server" CssClass="standard-text" Width="179px" MaxLength="10"></asp:textbox></TD>
 								</TR>
-								<TR vAlign="top">
-									<TD></TD>
-									<TD></TD>
+								<TR vAlign="top">									
 									<TD>
 										<P align="right"><asp:button id="cmdBuscar" runat="server" CssClass="botonesInput" Text="Aceptar"></asp:button></P>
-									</TD>
+									</TD>									
+									<TD></TD>
 									<TD><asp:button id="cmdCancelar" runat="server" CssClass="botonesInput" Text="Cancelar"></asp:button></TD>
+									<TD></TD>
 								</TR>
 							</TABLE>
 						</TD>
@@ -114,7 +118,7 @@ function ShowTitle()
 					<TR>
 						<TD height="12"></TD>
 						<TD width="700" height="12">
-							<TABLE class="tan-border" id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
+							<TABLE  id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
 								border="0" runat="server" visible="false">
 								<TR vAlign="top">
 									<TD class="letraAzulBold" colSpan="2" height="13">
@@ -134,7 +138,7 @@ function ShowTitle()
 					<TR>
 						<TD height="12"></TD>
 						<TD width="700" height="12">
-							<TABLE class="tan-border" id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
+							<TABLE  id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
 								border="0" runat="server">
 								<TR vAlign="top">
 									<TD class="letraAzulBold" colSpan="4" height="13">Agregar un Peso</TD>
@@ -193,16 +197,18 @@ function ShowTitle()
 										<asp:checkbox id="chkActivo" runat="server" CssClass="standard-text" Width="97px" Text="OK"></asp:checkbox></TD>
 								</TR>
 								<TR vAlign="top">
-									<TD colSpan="2">
-										<asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label></TD>
 									<TD>
 										<P align="right">
 											<asp:button id="AddPeso" runat="server" CssClass="botonesInput" Width="85px" Text="Agregar"
 												CausesValidation="False"></asp:button></P>
 									</TD>
 									<TD>
+										<asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label>
+									</TD>									
+									<TD>
 										<asp:button id="cmdCancelC" runat="server" CssClass="botonesInput" Width="85px" Text="Cancelar"
 											CausesValidation="False"></asp:button></TD>
+									<TD></TD>
 								</TR>
 							</TABLE>
 						</TD>

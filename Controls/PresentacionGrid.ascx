@@ -24,7 +24,24 @@
 </script>
 
 <P class="contenido" align="left">
-	<asp:datagrid id="dgdPresentacion" BorderStyle="None" BorderColor="White" DataKeyField="IdPresentacion" AllowSorting="True" FontSize="11px" Font-Name="Verdana" AutoGenerateColumns="False" CellPadding="2" Font-Names="Verdana" runat="server" Width="600px" AllowPaging="True" PageSize="10" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right" CssClass="GridView grid-header">
+	<asp:datagrid 
+		id="dgdPresentacion" 
+		BorderStyle="None" 
+		BorderColor="White" 
+		DataKeyField="IdPresentacion" 
+		AllowSorting="True" 
+		FontSize="11px" 
+		Font-Name="Verdana" 
+		AutoGenerateColumns="False" 
+		CellPadding="2"		
+		runat="server" 
+		Width="600px" 
+		AllowPaging="True" 
+		PageSize="10" 
+		PagerStyle-Mode="NumericPages" 
+		PagerStyle-HorizontalAlign="Right" 
+		CssClass="GridView grid-header">
+
 		<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 		<Columns>
 			<asp:TemplateColumn HeaderText="Id">

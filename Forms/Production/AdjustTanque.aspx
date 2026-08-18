@@ -128,7 +128,7 @@
 										<HeaderStyle HorizontalAlign="Center" Width="30px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 										<ItemStyle Width="30px" CssClass="grid-first-item"></ItemStyle>
 										<ItemTemplate>
-											<asp:label id=lblIdAjuste Width="40px" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdAjuste") %>'>
+											<asp:label id=lblIdAjuste Width="40px" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.IdAjuste") %>'>
 											</asp:label>
 										</ItemTemplate>
 									</asp:TemplateColumn>

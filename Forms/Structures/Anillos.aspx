@@ -28,7 +28,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Plantas"
 			}
 		</script>
-		<LINK rel="stylesheet" type="text/css" href="../../styloDESC.CSS">
+		
 	</HEAD>
 	<body onload="ShowTitle()" leftMargin="0" topMargin="0" bgColor="#ffffff" text="#000000"
 		marginheight="0" marginwidth="0">
@@ -62,7 +62,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 								</tr>
 								<tr>
 									<td class="contenido" vAlign="top" width="20">
-										<TABLE id="Table1" class="tan-border" border="0" cellSpacing="12" cellPadding="0" width="171"
+										<TABLE id="Table1"  border="0" cellSpacing="12" cellPadding="0" width="171"
 											height="99">
 											<TR vAlign="top">
 												<TD class="letraAzulBold" height="13">Agregue un Anillo</TD>
@@ -114,7 +114,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 									<td class="contenido" vAlign="top">
 										<P class="contenido" align="left"></P>
 										<P class="contenido" align="left">
-											<TABLE id="Table3" class="tan-border" border="0" cellSpacing="12" cellPadding="0" width="171"
+											<TABLE id="Table3"  border="0" cellSpacing="12" cellPadding="0" width="171"
 												height="99">
 												<TR vAlign="top">
 													<TD><uc1:anillosgrid id="AnillosGridControl" runat="server"></uc1:anillosgrid></TD>
