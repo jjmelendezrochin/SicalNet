@@ -97,7 +97,7 @@
 										<P class="contenido" align="left">
 											<TABLE  id="Table3" height="99" cellSpacing="12" cellPadding="0" width="300px" border="0">
 												<TR vAlign="top">
-													<TD>
+													<TD style="padding-left:40px;">
 														<uc1:lotesgrid id="LotesGridControl" runat="server"></uc1:lotesgrid>
 													</TD>
 												</TR>

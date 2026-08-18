@@ -132,7 +132,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 											<TABLE id="Table3" height="99" cellSpacing="12" cellPadding="0" width="250px"
 												border="0">
 												<TR vAlign="top">
-													<TD><uc1:colourgrid id="ColourGridControl" runat="server"></uc1:colourgrid></TD>
+													<TD style="padding-left:40px;">
+														<uc1:colourgrid id="ColourGridControl" runat="server"></uc1:colourgrid>
+													</TD>
 												</TR>
 											</TABLE>
 										</P>

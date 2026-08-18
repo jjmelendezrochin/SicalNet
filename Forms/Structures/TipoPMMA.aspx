@@ -116,7 +116,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
     <TD align=middle>
       <TABLE id=Table3 cellSpacing=12 cellPadding=0 width=700 border=0 style="align-content:center">
         <TR vAlign=top>
-          <TD align=middle>
+          <TD style="padding-left:40px;">
 			<uc1:TipoPMMAGrid id=TipoPMMAGridControl runat="server"></uc1:TipoPMMAGrid>
           </TD>
         </TR>

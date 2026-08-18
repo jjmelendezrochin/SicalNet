@@ -244,7 +244,7 @@
 													width="100%">
 													<TBODY>
 														<TR vAlign="top">
-															<TD width="100%">
+															<TD style="padding-left:40px;">
 																<uc1:foliocolorgrid
 																	id="FoliosColorGridControl"
 																	runat="server">

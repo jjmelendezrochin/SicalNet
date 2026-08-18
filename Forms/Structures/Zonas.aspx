@@ -110,8 +110,9 @@
 														height="99">
 														<TBODY>
 															<TR vAlign="top">
-																<TD>
-																	<uc1:Zonas id="Zonas1" runat="server"></uc1:Zonas></TD>
+																<TD style="padding-left:40px;">
+																	<uc1:Zonas id="Zonas1" runat="server"></uc1:Zonas>
+																</TD>
 															</TR>
 														</TBODY></TABLE>
 												</P>

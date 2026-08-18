@@ -13,7 +13,8 @@ function ConfirmOperation(Button,strOperationType)
 <P class="contenido" align="left">
 	<asp:datagrid id="dgdAforo" Width="550px" runat="server" Font-Names="Verdana" CellPadding="2"
 		AutoGenerateColumns="False" Font-Name="Verdana" FontSize="11px" AllowSorting="True" DataKeyField="Id" BorderColor="White"
-		BorderStyle="None" AllowPaging="True" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages" CssClass="GridView grid-header">
+		BorderStyle="None" AllowPaging="True" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages" 
+		CssClass="GridView grid-header">
 		<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 		<Columns>
 			<asp:TemplateColumn Visible="False" HeaderText="Id">

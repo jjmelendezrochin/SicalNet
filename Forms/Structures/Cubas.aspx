@@ -97,7 +97,9 @@
 														height="99">
 														<TBODY>
 															<TR vAlign="top">
-																<TD><uc1:cubas id="Cubas1" runat="server"></uc1:cubas></TD>
+																<TD style="padding-left:40px;">
+																	<uc1:cubas id="Cubas1" runat="server"></uc1:cubas>
+																</TD>
 															</TR>
 														</TBODY></TABLE>
 												</P>

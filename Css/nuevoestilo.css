@@ -385,7 +385,9 @@ table {
 .data-grid,
 .dataGrid,
 .GridView {
-    width: 100%;
+    width: calc(100% - 20px);
+    margin-left: 40px;
+
     border-collapse: collapse;
     background-color: #ffffff;
     border: 1px solid #d9e1e7;
@@ -1285,3 +1287,34 @@ textarea {
     .sical-alert-info .sical-alert-icon {
         background-color: #075a86;
     }
+
+/* =========================================================
+   BOTONES DE CONFIRMACIÓN
+   ========================================================= */
+
+.sical-alert-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 22px;
+}
+
+
+.sical-alert-button-cancelar,
+.sical-alert-button-aceptar {
+    min-width: 110px;
+    height: 42px;
+    margin: 0;
+}
+
+
+.sical-alert-button-cancelar:hover {
+    background-color: #d1d5db;
+}
+
+
+.sical-alert-button-aceptar:hover {
+    background-color: #06385d;
+}

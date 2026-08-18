@@ -172,7 +172,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 											<TABLE id="Table3"  border="0" cellSpacing="12" cellPadding="0" width="1000px"
 												height="99">
 												<TR vAlign="top">
-													<TD><uc1:vidriostamanio id="VidriosTamanio1" runat="server"></uc1:vidriostamanio></TD>
+													<TD style="padding-left:40px;">
+														<uc1:vidriostamanio id="VidriosTamanio1" runat="server"></uc1:vidriostamanio>
+													</TD>
 												</TR>
 											</TABLE>
 										</P>

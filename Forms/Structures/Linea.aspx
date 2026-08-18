@@ -125,8 +125,9 @@
 											<TABLE id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171"
 												border="0">
 												<TR vAlign="top">
-													<TD>
-														<uc1:LineaGrid id="LineaGridControl" runat="server"></uc1:LineaGrid></TD>
+													<TD style="padding-left:40px;">
+														<uc1:LineaGrid id="LineaGridControl" runat="server"></uc1:LineaGrid>
+													</TD>
 												</TR>
 											</TABLE>
 										</P>

@@ -116,7 +116,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 											<TABLE id="Table3"  border="0" cellSpacing="12" cellPadding="0" width="171"
 												height="99">
 												<TR vAlign="top">
-													<TD><uc1:familiaproductosgrid id="FamiliaProductosGridControl" runat="server"></uc1:familiaproductosgrid></TD>
+													<TD style="padding-left:40px;">
+														<uc1:familiaproductosgrid id="FamiliaProductosGridControl" runat="server"></uc1:familiaproductosgrid>
+													</TD>
 												</TR>
 											</TABLE>
 										</P>
