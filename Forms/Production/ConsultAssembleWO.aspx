@@ -55,11 +55,11 @@
 					<tr>
 						<td><asp:textbox id="txtFecha" runat="server" Width="101px" CssClass="Standard-text" BorderStyle="Groove"
 								MaxLength="11"></asp:textbox>
-							<asp:imagebutton id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif" onmouseup="GetDate('txtFecha');"></asp:imagebutton>
+							<asp:imagebutton id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFecha');"></asp:imagebutton>
 						</td>
 						<td><asp:TextBox id="txtFechaTo" runat="server" Width="101px" CssClass="Standard-text" BorderStyle="Groove"
 								MaxLength="11"></asp:TextBox>
-							<asp:ImageButton id="ImgFechaTo" runat="server" ImageUrl="../../Images/icon-calendar.gif" onmouseup="GetDate('txtFechaTo');"></asp:ImageButton>
+							<asp:ImageButton id="ImgFechaTo" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFechaTo');"></asp:ImageButton>
 						</td>
 						<td><asp:dropdownlist id="cboLinea" runat="server" CssClass="Standard-text" Width="125px"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboStatus" runat="server" CssClass="Standard-text" Width="125px"></asp:dropdownlist></td>

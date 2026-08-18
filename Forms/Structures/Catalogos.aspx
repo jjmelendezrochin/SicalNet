@@ -104,10 +104,10 @@
 													<ItemStyle CssClass="grid-edit-column"></ItemStyle>
 													<ItemTemplate>
 														<asp:imagebutton id="Imagebutton5" runat="server" CausesValidation="false" ImageUrl="../../images/icon-pencil.gif" NAME="Imagebutton1" CommandName="Edit" AlternateText="Edit"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
-														<asp:imagebutton onmouseup="ConfirmOperation(this,'eliminar');" id="Imagebutton6" CausesValidation="False" ImageUrl="../../images/icon-delete.gif" NAME="Imagebutton2" CommandName="Delete" AlternateText="Delete" Runat="server"></asp:imagebutton>
+														<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id="Imagebutton6" CausesValidation="False" ImageUrl="../../images/icon-delete.gif" NAME="Imagebutton2" CommandName="Delete" AlternateText="Delete" Runat="server"></asp:imagebutton>
 													</ItemTemplate>
 													<EditItemTemplate>
-														<asp:imagebutton onmouseup="ConfirmOperation(this,'actualizar');" id="Imagebutton7" runat="server" CausesValidation="False" ImageUrl="../../images/icon-floppy.gif" NAME="Imagebutton3" CommandName="Update" AlternateText="Update"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
+														<asp:imagebutton OnClientClick="return ConfirmOperation(this,'actualizar');" id="Imagebutton7" runat="server" CausesValidation="False" ImageUrl="../../images/icon-floppy.gif" NAME="Imagebutton3" CommandName="Update" AlternateText="Update"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
 														<asp:imagebutton id="Imagebutton8" runat="server" CausesValidation="False" ImageUrl="../../images/icon-pencil-x.gif" NAME="Imagebutton4" CommandName="Cancel" AlternateText="Cancel"></asp:imagebutton>
 													</EditItemTemplate>
 												</asp:TemplateColumn>

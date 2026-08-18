@@ -6,7 +6,10 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 		<script language="JavaScript">
 <!--
@@ -71,27 +74,32 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 						<td width="21">&nbsp;</td>
 						<td align=middle>
 							<div align="center">
-								<TABLE class="tan-border" id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700" border="0" runat="server">
+								<TABLE  id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700" border="0" runat="server">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="4" height="13">
+											<p></p>
 											<P>Agregue el Codigo SAP de Material que desea marcar como un tipo de Prepolímero</P>
 										</TD>
 									</TR>
 									<TR>
-										<TD width="122" height="28"><asp:label id="lblMaterial" runat="server" CssClass="standard-text">Material</asp:label></TD>
+										<TD width="122" height="28">
+											<asp:label id="lblMaterial" runat="server" CssClass="standard-text">Material</asp:label></TD>
 										<TD height="28" width="162">
 											<asp:textbox id="txtCodigoSAP" runat="server" CssClass="standard-text" Width="131px" AutoPostBack="True"></asp:textbox>
 											<asp:imagebutton id="cmdFindMaterial" runat="server" Height="23px" ImageUrl="../../Images/Find.gif" DESIGNTIMEDRAGDROP="255"></asp:imagebutton></TD>
-										<TD colSpan="2" height="28"><asp:textbox id="txtDescripcion" runat="server" Width="362px" CssClass="standard-text" BorderStyle="None" Enabled="False"></asp:textbox></TD>
+										<TD colSpan="2" height="28">
+											<asp:textbox id="txtDescripcion" runat="server" Width="362px" CssClass="standard-text" BorderStyle="None" Enabled="False"></asp:textbox>
+										</TD>
 									</TR>
 									<TR vAlign="top">
 										<TD width="122">
 											<P align="right">
-												<asp:button id="AddTipoPMMA" runat="server" Width="64px" CssClass="botonesInput" CausesValidation="False" Text="Agregar"></asp:button></P>
+												<asp:button id="AddTipoPMMA" runat="server" Width="80px" CssClass="botonesInput" CausesValidation="False" Text="Agregar"></asp:button></P>
 										</TD>
+										<TD width="122"></TD>
 										<TD width="162">
 											<P align="left">
-												<asp:button id="cmdCancelC" runat="server" Width="64px" CssClass="botonesInput" CausesValidation="False" Text="Cancelar"></asp:button></P>
+												<asp:button id="cmdCancelC" runat="server" Width="80px" CssClass="botonesInput" CausesValidation="False" Text="Cancelar"></asp:button></P>
 										</TD>
 										<TD>
 											<P align="left">
@@ -106,11 +114,14 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
   <TR>
     <TD width=21></TD>
     <TD align=middle>
-      <TABLE class=tan-border id=Table3 cellSpacing=12 cellPadding=0 width=700 
-      border=0>
+      <TABLE id=Table3 cellSpacing=12 cellPadding=0 width=700 border=0 style="align-content:center">
         <TR vAlign=top>
-          <TD align=middle>
-<uc1:TipoPMMAGrid id=TipoPMMAGridControl runat="server"></uc1:TipoPMMAGrid></TD></TR></TABLE></TD>
+          <TD style="padding-left:40px;">
+			<uc1:TipoPMMAGrid id=TipoPMMAGridControl runat="server"></uc1:TipoPMMAGrid>
+          </TD>
+        </TR>
+      </TABLE>
+    </TD>
     <TD align=middle></TD></TR>
 				</table>
 			</div>

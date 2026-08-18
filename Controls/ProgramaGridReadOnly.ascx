@@ -1,4 +1,4 @@
-<%@ Control Language="c#" AutoEventWireup="false" Codebehind="ProgramaGridReadOnly.ascx.cs" Inherits="UserInterface.Controls.ProgramaGridReadOnly" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
+Ôªø<%@ Control Language="c#" AutoEventWireup="false" Codebehind="ProgramaGridReadOnly.ascx.cs" Inherits="UserInterface.Controls.ProgramaGridReadOnly" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
 <meta content="JavaScript" name="vs_defaultClientScript">
 <script language="javascript">
 
@@ -21,13 +21,27 @@ function GetDate()
 }
 
 
-function ConfirmOperation(Button,strOperationType)
-{
-	if (confirm("øEst· seguro que desea " +strOperationType+ " esta secuencia?")) 
-	{
-		Button.click()
-	}
-}
+    function ConfirmOperation(Button, strOperationType) {
+        if (Button._sicalConfirmado) {
+            Button._sicalConfirmado = false;
+            return true;
+        }
+
+        SicalAlert.confirmar(
+            "¬øEst√° seguro que desea " +
+            strOperationType +
+            " este registro?",
+            "Confirmar operaci√≥n",
+            function () {
+
+                Button._sicalConfirmado = true;
+                Button.click();
+
+            }
+        );
+
+        return false;
+    }
 function ShowHide(CtrlName)
 {
 	var index=CtrlName.substr(0,CtrlName.lastIndexOf("_"))
@@ -51,8 +65,8 @@ function ShowHide(CtrlName)
 			<TD align="center" colSpan="3">
 				<TABLE id="Table2">
 					<TR>
-						<TD><asp:label id="lblLinea" CssClass="standard-text" Text="Linea de produccion" Runat="server">Linea de producciÛn</asp:label></TD>
-						<TD><asp:label id="IdLote" CssClass="standard-text" Text="N˙mero de Lote" Runat="server">N˙mero de Lote</asp:label></TD>
+						<TD><asp:label id="lblLinea" CssClass="standard-text" Text="Linea de produccion" Runat="server">Linea de producci√≥n</asp:label></TD>
+						<TD><asp:label id="IdLote" CssClass="standard-text" Text="N√∫mero de Lote" Runat="server">N√∫mero de Lote</asp:label></TD>
 						<TD><asp:label id="lblDate" CssClass="standard-text" Text="Fecha del Programma" Runat="server">Fecha del Programa</asp:label>
 							<asp:label id="Label3" Runat="server" Text="(dd-MMM-yyyy)" CssClass="standard-text" ForeColor="Red"> * (dd-MMM-aaaa)</asp:label></TD>
 					</TR>
@@ -60,7 +74,7 @@ function ShowHide(CtrlName)
 						<TD><asp:dropdownlist id="ddlIdLinea" CssClass="standard-text" Runat="server"></asp:dropdownlist></TD>
 						<TD><asp:dropdownlist id="ddlLote" CssClass="standard-text" Runat="server"></asp:dropdownlist></TD>
 						<TD colspan="2"><asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" BorderStyle="Groove" Width="77px"
-								MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate();" id="imgInitial" Runat="server" ImageUrl="../Images/icon-calendar.gif"
+								MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate();" id="imgInitial" Runat="server" ImageUrl="../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image><br>
 							<asp:RegularExpressionValidator id="revFecha" CssClass="standard-text" runat="server" ErrorMessage="Fecha incorrecta"
 								ControlToValidate="txtFecha" ValidationExpression="(^((31(?!-(feb|abr|jun|sep|nov)))|((30|29)(?!-feb?))|(29(?=-feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ene|feb|mar|may|abr|jul|jun|ago|oct|sep|nov|dic)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(FEB|ABR|JUN|SEP|NOV)))|((30|29)(?!-FEB?))|(29(?=-FEB?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ENE|FEB|MAR|MAY|ABR|JUL|JUN|AGO|OCT|SEP|NOV|DIC)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(Feb|Abr|Jun|Sep|Nov)))|((30|29)(?!-Feb?))|(29(?=-Feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(Ene|Feb|Mar|May|Abr|Jul|Jun|Ago|Oct|Sep|Nov|Dic)-((1[6-9]|[2-9]\d)\d{2})$)"
@@ -84,14 +98,14 @@ function ShowHide(CtrlName)
 											<TD><asp:label id="Label5" runat="server" Width="20px" ForeColor="White" CssClass="standard-text">P</asp:label></TD>
 											<TD><asp:label id="Label8" runat="server" Width="60px" ForeColor="White" CssClass="standard-text">Fecha</asp:label></TD>
 											<TD><asp:label id="Label9" runat="server" Width="25px" ForeColor="White" CssClass="standard-text">KCT</asp:label></TD>
-											<TD><asp:label id="Label10" runat="server" Width="35px" ForeColor="White" CssClass="standard-text">LÌnea</asp:label></TD>
+											<TD><asp:label id="Label10" runat="server" Width="35px" ForeColor="White" CssClass="standard-text">L√≠nea</asp:label></TD>
 											<TD><asp:label id="Label12" runat="server" Width="60px" ForeColor="White" CssClass="standard-text">Secuencia</asp:label></TD>
 											<TD><asp:label id="Label13" runat="server" Width="40px" ForeColor="White" CssClass="standard-text">Corrida</asp:label></TD>
 											<TD><asp:label id="Label15" runat="server" Width="35px" ForeColor="White" CssClass="standard-text">Lote</asp:label></TD>
 											<TD><asp:label id="Label24" runat="server" Width="30px" ForeColor="White" CssClass="standard-text">Cant.</asp:label></TD>
 											<TD><asp:label id="Label25" runat="server" Width="45px" ForeColor="White" CssClass="standard-text">Material</asp:label></TD>
-											<TD><asp:label id="Label26" runat="server" Width="235px" ForeColor="White" CssClass="standard-text">DescripciÛn</asp:label></TD>
-											<TD><asp:label id="Label27" runat="server" Width="60px" ForeColor="White" CssClass="standard-text">¡rea Actual</asp:label></TD>
+											<TD><asp:label id="Label26" runat="server" Width="235px" ForeColor="White" CssClass="standard-text">Descripci√≥n</asp:label></TD>
+											<TD><asp:label id="Label27" runat="server" Width="60px" ForeColor="White" CssClass="standard-text">√Årea Actual</asp:label></TD>
 											<TD><asp:label id="Label28" runat="server" Width="40px" ForeColor="White" CssClass="standard-text"></asp:label></TD>
 											<TD><asp:label id="Label40" runat="server" Width="13px" ForeColor="White" CssClass="standard-text"></asp:label></TD>
 										</TR>
@@ -109,7 +123,7 @@ function ShowHide(CtrlName)
 										cellPadding="1" bgColor="#dedfde" border="1">
 										<TR>
 											<TD><asp:imagebutton id="Imagebutton3" runat="server" Width="9px"></asp:imagebutton></TD>
-											<TD><asp:textbox id="txtPrioridad" CssClass="standard-text" runat="server" Width="20px" ToolTip="Proporcione la prioridad de fabricaciÛn de la secuencia"
+											<TD><asp:textbox id="txtPrioridad" CssClass="standard-text" runat="server" Width="20px" ToolTip="Proporcione la prioridad de fabricaci√≥n de la secuencia"
 													MaxLength="3" BorderStyle="Groove"></asp:textbox></TD>
 											<TD><asp:label id=lblNewFecha runat="server" Width="60px" Visible='<%# Convert.ToString(DataBinder.Eval(Container, "DataItem.Bitacora")).Trim().Length<=0 %>' CssClass="standard-text"></asp:label></TD>
 											<TD><asp:label id=lkct runat="server" Width="25px" Visible='<%# Convert.ToString(DataBinder.Eval(Container, "DataItem.Bitacora")).Trim().Length<=0 %>' CssClass="standard-text"></asp:label></TD>
@@ -184,9 +198,9 @@ function ShowHide(CtrlName)
 													cellPadding="1" border="1">
 													<TR>
 														<TD bgColor="#dedfde"><asp:label id="Label67" runat="server" Width="100px" CssClass="standard-text">Tipo Molde</asp:label></TD>
-														<TD bgColor="#dedfde"><asp:label id="Label68" runat="server" Width="200px" CssClass="standard-text">Detalle OperaciÛn</asp:label></TD>
+														<TD bgColor="#dedfde"><asp:label id="Label68" runat="server" Width="200px" CssClass="standard-text">Detalle Operaci√≥n</asp:label></TD>
 														<TD bgColor="#dedfde"><asp:label id="Label69" runat="server" Width="200px" CssClass="standard-text">Comentarios</asp:label></TD>
-														<TD bgColor="#dedfde"><asp:label id="Label70" runat="server" Width="200px" CssClass="standard-text">Bit·cora de Piso</asp:label></TD>
+														<TD bgColor="#dedfde"><asp:label id="Label70" runat="server" Width="200px" CssClass="standard-text">Bit√°cora de Piso</asp:label></TD>
 													</TR>
 													<TR>
 														<TD><asp:textbox id="txtTipoMolde" CssClass="standard-text" runat="server" Width="100px" MaxLength="3"
@@ -213,7 +227,7 @@ function ShowHide(CtrlName)
 									<TABLE style="BORDER-COLLAPSE: collapse" id="Table11" border="1" cellSpacing="1" borderColor="white"
 										cellPadding="1">
 										<TR>
-											<TD><asp:image id="Imagebutton2" onmouseup="ShowHide(this.id)" ImageUrl="../images/plusButton.jpg"
+											<TD><asp:image id="Imagebutton2" OnClientClick="return ShowHide(this.id)" ImageUrl="../images/plusButton.jpg"
 													runat="server"></asp:image></TD>
 											<TD><asp:label id=lblPrioridad Text='<%# DataBinder.Eval(Container, "DataItem.Prioridad") %>' CssClass="standard-text" Width="20px" runat="server"></asp:label><asp:textbox id="txtPriority" CssClass="standard-text" MaxLength="3" Width="25px" runat="server"
 													Visible="False"></asp:textbox></TD>
@@ -245,14 +259,14 @@ function ShowHide(CtrlName)
 													<TBODY>
 														<tr>
 															<td><asp:imagebutton id="cmdEdit" ImageUrl="../images/icon-pencil.gif" runat="server" Visible="False"
-																	CommandName="Edit"></asp:imagebutton><asp:imagebutton id="cmdDelete" onmouseup="ConfirmOperation(this,'eliminar');" ImageUrl="../images/icon-delete.gif"
-																	runat="server" Visible="False" CommandName="Delete"></asp:imagebutton><asp:imagebutton id="cmdUpdate" onmouseup="ConfirmOperation(this,'actualizar');" ImageUrl="../images/icon-floppy.gif"
+																	CommandName="Edit"></asp:imagebutton><asp:imagebutton id="cmdDelete" OnClientClick="return ConfirmOperation(this,'eliminar');" ImageUrl="../images/icon-delete.gif"
+																	runat="server" Visible="False" CommandName="Delete"></asp:imagebutton><asp:imagebutton id="cmdUpdate" OnClientClick="return ConfirmOperation(this,'actualizar');" ImageUrl="../images/icon-floppy.gif"
 																	runat="server" Visible="False" CommandName="Update"></asp:imagebutton><asp:imagebutton id="cmdCancel" ImageUrl="../images/icon-pencil-x.gif" runat="server" Visible="False"
 																	CommandName="Cancel"></asp:imagebutton></td>
 											</TD>
 										</TR>
 									</TABLE>
-								<TD><asp:image id=Image1 AlternateText="Consulte la bit·cora de esta secuencia" ImageUrl="../images/New.gif" runat="server" Visible='<%# Convert.ToString(DataBinder.Eval(Container, "DataItem.Bitacora")).Trim().Length>0 %>'>
+								<TD><asp:image id=Image1 AlternateText="Consulte la bit√°cora de esta secuencia" ImageUrl="../images/New.gif" runat="server" Visible='<%# Convert.ToString(DataBinder.Eval(Container, "DataItem.Bitacora")).Trim().Length>0 %>'>
 									</asp:image><asp:label id=Label43 CssClass="standard-text" ForeColor="White" Width="13px" runat="server" Visible='<%# Convert.ToString(DataBinder.Eval(Container, "DataItem.Bitacora")).Trim().Length<=0 %>'>
 									</asp:label></TD>
 							</TR>
@@ -308,9 +322,9 @@ function ShowHide(CtrlName)
 										cellPadding="1">
 										<TR>
 											<TD bgColor="#dedfde"><asp:label id="Label91" CssClass="standard-text" Width="100px" runat="server">Tipo Molde</asp:label></TD>
-											<TD bgColor="#dedfde"><asp:label id="Label92" CssClass="standard-text" Width="200px" runat="server">Detalle OperaciÛn</asp:label></TD>
+											<TD bgColor="#dedfde"><asp:label id="Label92" CssClass="standard-text" Width="200px" runat="server">Detalle Operaci√≥n</asp:label></TD>
 											<TD bgColor="#dedfde"><asp:label id="Label93" CssClass="standard-text" Width="200px" runat="server">Comentarios</asp:label></TD>
-											<TD bgColor="#dedfde"><asp:label id="Label94" CssClass="standard-text" Width="200px" runat="server">Bit·cora de Piso</asp:label></TD>
+											<TD bgColor="#dedfde"><asp:label id="Label94" CssClass="standard-text" Width="200px" runat="server">Bit√°cora de Piso</asp:label></TD>
 										</TR>
 										<TR>
 											<TD><asp:label id=Label95 Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.TipoMolde") %>' CssClass="standard-text" Width="100px" runat="server">

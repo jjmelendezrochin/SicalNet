@@ -289,7 +289,7 @@ function ConfirmOperation(Button)
                                             AlternateText="Desconectar"
                                             CommandName="Release"
                                             ImageUrl="../../images/DELROW.GIF"
-                                            onmouseup="ConfirmOperation(this);"
+                                            OnClientClick="return ConfirmOperation(this);"
                                             CausesValidation="false">
                                         </asp:ImageButton>
                                     </ItemTemplate>
@@ -297,7 +297,11 @@ function ConfirmOperation(Button)
                                 </asp:TemplateColumn>
 
                             </Columns>
-								<PagerStyle Font-Size="X-Small" Font-Names="Times New Roman" HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
+								<PagerStyle Font-Size="X-Small" 
+                                    HorizontalAlign="Center"
+									Mode="NumericPages"
+									CssClass="grid-pager">
+								</PagerStyle>
 							</asp:datagrid></td>
 					</tr>
 				</TBODY>

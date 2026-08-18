@@ -153,6 +153,7 @@
     <Content Include="Controls\WebUserControl1.ascx" />
     <Content Include="Controls\WorkOrdersGrid.ascx" />
     <Content Include="Controls\Zonas.ascx" />
+    <Content Include="Scripts\sical-alertas.js" />
     <Content Include="Css\sical-menu.css" />
     <Content Include="CustomError\404Page.aspx" />
     <Content Include="CustomError\ErrorPage.aspx" />
@@ -621,6 +622,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Helpers\Funciones.cs" />
+    <Compile Include="Helpers\Mensajes.cs" />
     <Compile Include="MenuData.aspx.cs">
       <DependentUpon>MenuData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -132,32 +132,63 @@ namespace UserInterface.Forms.Administration
 
 			try
 			{
-				if (txtLogin.Text.Trim()==string.Empty)
-					throw new Exception("Proporcione el login del usuario");
+				if (txtLogin.Text.Trim() == string.Empty)
+				{
+					string mensaje = "Proporcione el login del usuario";
+					Mensajes.Advertencia(
+						Page,
+						mensaje
+					);
+					return;
+				}
 				if (txtNombre.Text.Trim()==string.Empty)
-					throw new Exception("Proporcione el nombre del usuario");
+				{
+					string mensaje = "Proporcione el nombre del usuario";
+					Mensajes.Advertencia(
+						Page,
+						mensaje
+					);
+					return;
+				}
 				if (txtTurno.Text.Trim()==string.Empty)
-					throw new Exception("Proporcione el turno del usuario");
+				{
+					string mensaje = "Proporcione el turno del usuario";
+					Mensajes.Advertencia(
+						Page,
+						mensaje
+					);
+					return;
+				}
 			}
 			catch (Exception errHand)
 			{
-				string ScriptString="<script language='javascript'>alert('"+errHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Mensajes.Advertencia(
+					Page,
+					errHand.Message
+				);
 			}
 
 			if (currentMode=="Edicion")
 			{
 				updateUserInfo();
 				//to display the msg for user
-				string ScriptString="<script language='javascript'>alert('El usuario fue modificado exitosamente.');self.location.href='UsersList.aspx';</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				string mensaje = "El usuario fue modificado exitosamente";
+
+				Mensajes.Exito(
+					Page,
+					mensaje
+				);
 			}
 			else
 			{
 				insertUserInfo();
 				//to display the msg for user
-				string ScriptString="<script language='javascript'>alert('El usuario fue creado exitosamente.');self.location.href='UsersList.aspx';</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				string mensaje = "El usuario fue creado exitosamente";
+
+				Mensajes.Exito(
+					Page,
+					mensaje
+				);
 			}
 		}
 
@@ -171,8 +202,10 @@ namespace UserInterface.Forms.Administration
 			}
 			catch (Exception errHand)
 			{
-				string ScriptString="<script language='javascript'>alert('"+errHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Mensajes.Advertencia(
+					Page,
+					errHand.Message
+				);
 			}
 		}
 
@@ -186,8 +219,10 @@ namespace UserInterface.Forms.Administration
 			}
 			catch (Exception errHand)
 			{
-				string ScriptString="<script language='javascript'>alert('"+errHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Mensajes.Advertencia(
+					Page,
+					errHand.Message
+				);
 			}
 		}
 

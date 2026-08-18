@@ -53,9 +53,9 @@
 				</TR>
 				<TR>
 					<TD><asp:textbox id="txtFecha" runat="server" Width="101px" CssClass="Standard-text" BorderStyle="Groove"
-							ToolTip="* formato: dd-MMM-aaaa" MaxLength="11"></asp:textbox><asp:imagebutton onmouseup="GetDate('txtFecha');" id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></TD>
+							ToolTip="* formato: dd-MMM-aaaa" MaxLength="11"></asp:textbox><asp:imagebutton OnClientClick="return GetDate('txtFecha');" id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></TD>
 					<TD><asp:textbox id="txtFechaFinal" runat="server" Width="101px" CssClass="Standard-text" BorderStyle="Groove"
-							ToolTip="* formato: dd-MMM-aaaa" MaxLength="11"></asp:textbox><asp:imagebutton onmouseup="GetDate('txtFechaFinal');" id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></TD>
+							ToolTip="* formato: dd-MMM-aaaa" MaxLength="11"></asp:textbox><asp:imagebutton OnClientClick="return GetDate('txtFechaFinal');" id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></TD>
 					<TD><asp:dropdownlist id="cboLinea" runat="server" Width="125px" CssClass="Standard-text"></asp:dropdownlist></TD>
 					<TD><asp:dropdownlist id="cboStatus" runat="server" Width="125px" CssClass="Standard-text"></asp:dropdownlist></TD>
 					<TD><asp:button id="cmdAceptar" CssClass="botonesInput" Runat="server" Text="Aceptar"></asp:button></TD>

@@ -60,7 +60,7 @@
 								<tr>
 									<td style="WIDTH: 366px"><asp:dropdownlist id="cboLinea" Width="125px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 									<td style="WIDTH: 369px"><asp:textbox id="txtSecInicial" runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox></td>
-									<td style="WIDTH: 306px"><asp:textbox id="txtFechaInicial" Width="125px" CssClass="Standard-text" Runat="server" MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtFechaInicial');" id="imgPrgInit" Runat="server" ImageUrl="../../../Images/icon-calendar.gif"
+									<td style="WIDTH: 306px"><asp:textbox id="txtFechaInicial" Width="125px" CssClass="Standard-text" Runat="server" MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtFechaInicial');" id="imgPrgInit" Runat="server" ImageUrl="../../../Images/icon-calendar.gif"
 											AlternateText="Inicial Date"></asp:image></td>
 									<td></td>
 								</tr>
@@ -81,7 +81,7 @@
 								<tr>
 									<td style="WIDTH: 366px"><asp:dropdownlist id="cboCodigo" Width="125px" CssClass="standard-text" Runat="server"></asp:dropdownlist></td>
 									<td style="WIDTH: 369px"><asp:textbox id="txtSecFinal" runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox></td>
-									<td style="WIDTH: 306px"><asp:textbox id="txtFechaFinal" Width="125px" CssClass="Standard-text" Runat="server" MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtFechaFinal');" id="Image2" Runat="server" ImageUrl="../../../Images/icon-calendar.gif"
+									<td style="WIDTH: 306px"><asp:textbox id="txtFechaFinal" Width="125px" CssClass="Standard-text" Runat="server" MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtFechaFinal');" id="Image2" Runat="server" ImageUrl="../../../Images/icon-calendar.gif"
 											AlternateText="Inicial Date"></asp:image></td>
 									<td></td>
 								</tr>

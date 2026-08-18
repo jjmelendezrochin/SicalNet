@@ -61,16 +61,26 @@ namespace UserInterface.Forms.Administration
 		{
 			try
 			{
-				if (txtCriterio.Text.Trim()==string.Empty)
-					throw new Exception("Favor de proporcionar el criterio de búsqueda!");
-				dgdUsers.CurrentPageIndex=0;
-				performSearch(txtCriterio.Text,cboCriterio.SelectedItem.Value);
+				if (txtCriterio.Text.Trim() == string.Empty)
+				{
+					throw new Exception(
+						"Favor de proporcionar el criterio de búsqueda."
+					);
+				}
+
+				dgdUsers.CurrentPageIndex = 0;
+
+				performSearch(
+					txtCriterio.Text,
+					cboCriterio.SelectedItem.Value
+				);
 			}
 			catch (Exception errHand)
 			{
-				//to display the msg for user
-				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Mensajes.Advertencia(
+					Page,
+					errHand.Message
+				);
 			}
 		}
 

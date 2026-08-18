@@ -7,7 +7,10 @@
 		<title>Guía de estilo</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 		<script language="JavaScript">
 <!--
@@ -29,7 +32,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Familia de Producto"
 			}
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
@@ -73,29 +76,32 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 								</tr>
 								<tr>
 									<td class="contenido" vAlign="top" width="20">
-										<TABLE id="Table1" class="tan-border" border="0" cellSpacing="12" cellPadding="0" width="171"
+										<TABLE id="Table1"  border="0" cellSpacing="12" cellPadding="0" width="171"
 											height="99">
 											<TR vAlign="top">
 												<TD class="letraAzulBold" height="13">Agregar una Familia de Productos</TD>
 											</TR>
 											<TR>
-												<TD><asp:label id="Label2" runat="server" CssClass="standard-text">Descripción</asp:label><asp:textbox id="txtDescripcion" runat="server" CssClass="standard-text" MaxLength="50" Width="142px"></asp:textbox></TD>
+												<TD><asp:label id="Label2" runat="server" CssClass="standard-text">Descripción</asp:label><asp:textbox id="txtDescripcion" runat="server" CssClass="standard-text" MaxLength="50" Width="100%"></asp:textbox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD height="22">
-													<P><asp:label id="Label3" runat="server" CssClass="standard-text">Tipo de PMMA (Prepolimero)</asp:label><asp:dropdownlist id="cbotipodePMMA" runat="server" CssClass="standard-text" Width="143px"></asp:dropdownlist></P>
+													<P><asp:label id="Label3" runat="server" CssClass="standard-text">Tipo de PMMA (Prepolimero)</asp:label><asp:dropdownlist id="cbotipodePMMA" runat="server" CssClass="standard-text" Width="100%"></asp:dropdownlist></P>
 												</TD>
 											</TR>
 											<TR>
-												<TD height="22"><asp:label id="Label4" runat="server" CssClass="standard-text">Temp. Preseparación</asp:label><asp:textbox id="txtTempPre" runat="server" CssClass="standard-text" MaxLength="5" Width="142px"></asp:textbox></TD>
+												<TD height="22"><asp:label id="Label4" runat="server" CssClass="standard-text">Temp. Preseparación</asp:label><asp:textbox id="txtTempPre" runat="server" CssClass="standard-text" MaxLength="5" Width="100%"></asp:textbox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD>
 													<TABLE id="Table2" border="0" cellSpacing="0" cellPadding="0">
 														<TR>
-															<td height="20"><asp:button id="cmdFProducto" runat="server" CssClass="botonesInput" Width="64px" CausesValidation="False"
+															<td height="20" width="40%">
+																<asp:button id="cmdFProducto" runat="server" CssClass="botonesInput" Width="80px" CausesValidation="False"
 																	Text="Agregar"></asp:button></td>
-															<TD height="20"><asp:button id="cmdCancelC" runat="server" CssClass="botonesInput" Width="64px" CausesValidation="False"
+															<TD height="20" width="20%"></TD>
+															<TD height="20"  width="40%">
+																<asp:button id="cmdCancelC" runat="server" CssClass="botonesInput" Width="80px" CausesValidation="False"
 																	Text="Cancelar"></asp:button></TD>
 														</TR>
 													</TABLE>
@@ -107,10 +113,12 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 									<td class="contenido" vAlign="top">
 										<P class="contenido" align="left"></P>
 										<P class="contenido" align="left">
-											<TABLE id="Table3" class="tan-border" border="0" cellSpacing="12" cellPadding="0" width="171"
+											<TABLE id="Table3"  border="0" cellSpacing="12" cellPadding="0" width="171"
 												height="99">
 												<TR vAlign="top">
-													<TD><uc1:familiaproductosgrid id="FamiliaProductosGridControl" runat="server"></uc1:familiaproductosgrid></TD>
+													<TD style="padding-left:40px;">
+														<uc1:familiaproductosgrid id="FamiliaProductosGridControl" runat="server"></uc1:familiaproductosgrid>
+													</TD>
 												</TR>
 											</TABLE>
 										</P>

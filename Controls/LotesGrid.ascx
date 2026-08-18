@@ -5,13 +5,28 @@
 		<TITLE>LoteGrid</TITLE>
 	</HEAD>
 	<script language="javascript">
-function ConfirmOperation(Button,strOperationType)
-{
-	if (confirm("Esta seguro que desea "+strOperationType+" este registro?")) 
-		Button.click()
-			
-}
-	</script>
+        function ConfirmOperation(Button, strOperationType) {
+            if (Button._sicalConfirmado) {
+                Button._sicalConfirmado = false;
+                return true;
+            }
+
+            SicalAlert.confirmar(
+                "¿Está seguro que desea " +
+                strOperationType +
+                " este registro?",
+                "Confirmar operación",
+                function () {
+
+                    Button._sicalConfirmado = true;
+                    Button.click();
+
+                }
+            );
+
+            return false;
+        }
+    </script>
 	<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
 	<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
 	<meta name="CODE_LANGUAGE" Content="C#">
@@ -19,30 +34,34 @@ function ConfirmOperation(Button,strOperationType)
 	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 	<table>
 		<tr>
-			<td width="47"><asp:label id="Label2" runat="server" CssClass="standard-text" Width="51px">No Lote</asp:label></td>
-			<td><asp:textbox id="txtNoLote" runat="server" CssClass="standard-text" Width="48px" MaxLength="6"></asp:textbox></td>
-			<td width="47" height="19"><asp:label id="Label3" runat="server" CssClass="standard-text">Línea</asp:label></td>
-			<td><asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text" Width="101px"></asp:dropdownlist></td>
-			<td><asp:Button id="aceptar" Text="Aceptar" Runat="server" CssClass="botonesInput" Width="64px"
+			<td width="30%" colspan="2">
+				<asp:label id="Label2" runat="server" CssClass="standard-text" Width="51px">No Lote</asp:label>
+				<asp:textbox id="txtNoLote" runat="server" CssClass="standard-text" Width="48px" MaxLength="6"></asp:textbox>
+			</td>
+			<td width="70%" colspan="3">
+				<asp:label id="Label3" runat="server" CssClass="standard-text">Línea</asp:label>
+				<asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text" Width="101px"></asp:dropdownlist>
+				<asp:Button id="aceptar" Text="Aceptar" Runat="server" CssClass="botonesInput" Width="80px"
 					CausesValidation="False"></asp:Button>
 			</td>
+			
 		</tr>
 		<tr>
 			<td colspan="5">
-				<asp:datagrid id="dgdLote" runat="server" Width="448px" Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
+				<asp:datagrid id="dgdLote" runat="server" Width="700px" Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
 					Font-Name="Verdana" FontSize="11px" AllowSorting="True" DataKeyField="NumeroLote" BorderColor="White"
-					BorderStyle="None" AllowPaging="True" PageSize="10" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right">
+					BorderStyle="None" AllowPaging="True" PageSize="10" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right" CssClass="GridView grid-header">
 					<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 					<Columns>
 						<asp:TemplateColumn HeaderText="Número de Lote">
 							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="10px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id=ItemNumeroLote Width="50px" CssClass="standard-text" Runat="server" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
+								<asp:label id=ItemNumeroLote Width="50px" CssClass="standard-text" Runat="server" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
 								</asp:label>
 							</ItemTemplate>
 							<EditItemTemplate>
-								<asp:label id=EditNumeroLote Width="50px" CssClass="standard-text" Runat="server" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
+								<asp:label id=EditNumeroLote Width="50px" CssClass="standard-text" Runat="server" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
 								</asp:label>
 							</EditItemTemplate>
 						</asp:TemplateColumn>
@@ -50,11 +69,11 @@ function ConfirmOperation(Button,strOperationType)
 							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="50px" CssClass="grid-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id=ItemLinea CssClass="standard-text" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdLinea") %>' Runat="server">
+								<asp:label id=ItemLinea CssClass="standard-text" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdLinea") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<EditItemTemplate>
-								<asp:label id="EditLinea" CssClass="standard-text" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdLinea") %>' Runat="server">
+								<asp:label id="EditLinea" CssClass="standard-text" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdLinea") %>' Runat="server">
 								</asp:label>
 							</EditItemTemplate>
 						</asp:TemplateColumn>
@@ -62,11 +81,11 @@ function ConfirmOperation(Button,strOperationType)
 							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="50px" CssClass="grid-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id=ItemPiezas CssClass="standard-text" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container,"DataItem.Piezas") %>'>
+								<asp:label id=ItemPiezas CssClass="standard-text" Runat="server" Text='<%# DataBinder.Eval(Container,"DataItem.Piezas") %>'>
 								</asp:label>
 							</ItemTemplate>
 							<EditItemTemplate>
-								<asp:textbox id=EditPiezas BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container,"DataItem.Piezas") %>' MaxLength="50">
+								<asp:textbox id=EditPiezas BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='<%# DataBinder.Eval(Container,"DataItem.Piezas") %>' MaxLength="50">
 								</asp:textbox>
 							</EditItemTemplate>
 						</asp:TemplateColumn>
@@ -88,12 +107,12 @@ function ConfirmOperation(Button,strOperationType)
 							<ItemTemplate>
 								<asp:imagebutton id="Imagebutton5" runat="server" CausesValidation="false" ImageUrl="../images/icon-pencil.gif"
 									NAME="Imagebutton1" CommandName="Edit" AlternateText="Edit"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
-								<asp:imagebutton onmouseup="ConfirmOperation(this,'eliminar');" id="Imagebutton6" Runat="server"
+								<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id="Imagebutton6" Runat="server"
 									CausesValidation="False" ImageUrl="../images/icon-delete.gif" NAME="Imagebutton2" CommandName="Delete"
 									AlternateText="Delete"></asp:imagebutton>
 							</ItemTemplate>
 							<EditItemTemplate>
-								<asp:imagebutton onmouseup="ConfirmOperation(this,'actualizar');" id="Imagebutton7" runat="server"
+								<asp:imagebutton OnClientClick="return ConfirmOperation(this,'actualizar');" id="Imagebutton7" runat="server"
 									CausesValidation="False" ImageUrl="../images/icon-floppy.gif" NAME="Imagebutton3" CommandName="Update"
 									AlternateText="Update"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
 								<asp:imagebutton id="Imagebutton8" runat="server" CausesValidation="False" ImageUrl="../images/icon-pencil-x.gif"
@@ -101,7 +120,11 @@ function ConfirmOperation(Button,strOperationType)
 							</EditItemTemplate>
 						</asp:TemplateColumn>
 					</Columns>
-					<PagerStyle HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
+					<PagerStyle
+						HorizontalAlign="Center"
+						Mode="NumericPages"
+						CssClass="grid-pager">
+					</PagerStyle>
 				</asp:datagrid>
 			</td>
 		</tr>

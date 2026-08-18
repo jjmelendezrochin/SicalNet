@@ -1,12 +1,26 @@
-<%@ Control Language="c#" AutoEventWireup="false" Codebehind="FormPVCGrid.ascx.cs" Inherits="UserInterface.Controls.FormPVCGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
+﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="FormPVCGrid.ascx.cs" Inherits="UserInterface.Controls.FormPVCGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <script language="javascript">
-function ConfirmOperation(Button,strOperationType)
-{
-	if (confirm("Esta seguro que desea "+strOperationType+" este registro?")) 
-	{
-		Button.click()
-	}
-}
+    function ConfirmOperation(Button, strOperationType) {
+        if (Button._sicalConfirmado) {
+            Button._sicalConfirmado = false;
+            return true;
+        }
+
+        SicalAlert.confirmar(
+            "¿Está seguro que desea " +
+            strOperationType +
+            " este registro?",
+            "Confirmar operación",
+            function () {
+
+                Button._sicalConfirmado = true;
+                Button.click();
+
+            }
+        );
+
+        return false;
+    }
 
 </script>
 <LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
@@ -87,11 +101,11 @@ function ConfirmOperation(Button,strOperationType)
 				<ItemTemplate>
 					<asp:imagebutton id="Imagebutton5" runat="server" AlternateText="Edit" NAME="Imagebutton1" CausesValidation="false"
 						CommandName="Edit" ImageUrl="../images/icon-pencil.gif"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
-					<asp:imagebutton onmouseup="ConfirmOperation(this,'eliminar');" id="Imagebutton6" Runat="server"
+					<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id="Imagebutton6" Runat="server"
 						AlternateText="Delete" NAME="Imagebutton2" CausesValidation="False" CommandName="Delete" ImageUrl="../images/icon-delete.gif"></asp:imagebutton>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:imagebutton onmouseup="ConfirmOperation(this,'actualizar');" id="Imagebutton7" runat="server"
+					<asp:imagebutton OnClientClick="return ConfirmOperation(this,'actualizar');" id="Imagebutton7" runat="server"
 						AlternateText="Update" NAME="Imagebutton3" CausesValidation="False" CommandName="Update" ImageUrl="../images/icon-floppy.gif"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
 					<asp:imagebutton id="Imagebutton8" runat="server" AlternateText="Cancel" NAME="Imagebutton4" CausesValidation="False"
 						CommandName="Cancel" ImageUrl="../images/icon-pencil-x.gif"></asp:imagebutton>

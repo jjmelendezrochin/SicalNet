@@ -6,7 +6,11 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="JavaScript">
 <!--
 <!--
@@ -29,7 +33,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			}
 		
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 
 		<!--onload="if ('<%= Session["errMsg"]%>' != '') alert('<%= Session["errMsg"]%>')"-->
 
@@ -76,7 +80,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 								</tr>
 								<tr>
 									<td class="contenido" vAlign="top" width="20">
-										<TABLE class="tan-border" id="Table1" height="99" cellSpacing="12" cellPadding="0" width="171"
+										<TABLE  id="Table1" height="99" cellSpacing="12" cellPadding="0" width="171"
 											border="0">
 											<TR vAlign="top">
 												<TD class="letraAzulBold" height="13">Agregar color</TD>
@@ -84,22 +88,22 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 											<TR>
 												<TD>
 													<asp:Label id="Label2" runat="server" CssClass="standard-text">Identificador de color</asp:Label>
-													<asp:textbox id="txtColourId" runat="server" Width="142px" CssClass="standard-text" MaxLength="10"></asp:textbox></TD>
+													<asp:textbox id="txtColourId" runat="server" Width="100%" CssClass="standard-text" MaxLength="10"></asp:textbox></TD>
 											</TR>
 											<TR>
 												<TD>
 													<asp:Label id="Label3" runat="server" CssClass="standard-text">Descripción del color </asp:Label>
-													<asp:textbox id="txtDescripcion" runat="server" Width="142px" CssClass="standard-text" MaxLength="50"></asp:textbox></TD>
+													<asp:textbox id="txtDescripcion" runat="server" Width="100%" CssClass="standard-text" MaxLength="50"></asp:textbox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD>
 													<asp:Label id="Label4" runat="server" CssClass="standard-text">Identificador de Exportación </asp:Label>
-													<asp:textbox id="txtIdExportacion" runat="server" Width="142px" CssClass="standard-text" MaxLength="25"></asp:textbox></TD>
+													<asp:textbox id="txtIdExportacion" runat="server" Width="100%" CssClass="standard-text" MaxLength="25"></asp:textbox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD>
 													<asp:Label id="Label5" runat="server" CssClass="standard-text">Espesor Base (Cent.) </asp:Label>
-													<asp:dropdownlist id="cboIdEspesor" runat="server" Width="142px" CssClass="standard-text"></asp:dropdownlist></TD>
+													<asp:dropdownlist id="cboIdEspesor" runat="server" Width="100%" CssClass="standard-text"></asp:dropdownlist></TD>
 											</TR>
 											<TR vAlign="top" align="center">
 												<td><asp:checkbox id="chkTransparente" runat="server" Text="Transparente" CssClass="standard-text"></asp:checkbox></td>
@@ -108,9 +112,12 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 												<TD>
 													<TABLE id="Table2" cellSpacing="0" cellPadding="0" border="0">
 														<TR>
-															<TD height="20"><asp:button id="AddColour" runat="server" Width="64px" CssClass="botonesInput" Text="Agregar"
+															<TD height="20" width="40%">
+																<asp:button id="AddColour" runat="server" Width="80px" CssClass="botonesInput" Text="Agregar"
 																	CausesValidation="False"></asp:button></TD>
-															<TD height="20"><asp:button id="cmdCancelC" runat="server" Width="64px" CssClass="botonesInput" Text="Cancelar"
+															<TD height="20" width="20%"></TD>
+															<TD height="20" width="40%">
+																<asp:button id="cmdCancelC" runat="server" Width="80px" CssClass="botonesInput" Text="Cancelar"
 																	CausesValidation="False"></asp:button></TD>
 														</TR>
 													</TABLE>
@@ -122,10 +129,12 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 									<td class="contenido" vAlign="top">
 										<P class="contenido" align="left"></P>
 										<P class="contenido" align="left">
-											<TABLE class="tan-border" id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171"
+											<TABLE id="Table3" height="99" cellSpacing="12" cellPadding="0" width="250px"
 												border="0">
 												<TR vAlign="top">
-													<TD><uc1:colourgrid id="ColourGridControl" runat="server"></uc1:colourgrid></TD>
+													<TD style="padding-left:40px;">
+														<uc1:colourgrid id="ColourGridControl" runat="server"></uc1:colourgrid>
+													</TD>
 												</TR>
 											</TABLE>
 										</P>

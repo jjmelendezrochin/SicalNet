@@ -233,5 +233,20 @@ namespace UserInterface.Controls
            BindGrid();
 
 		}
-	}
+
+        protected void Imagebutton7_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void Imagebutton5_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void btnBuscar_Click1(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

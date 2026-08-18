@@ -8,7 +8,10 @@
 		<title>Guía de estilo</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 		<script language="JavaScript">
 <!--
@@ -73,7 +76,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 								</tr>
 								<tr>
 									<td class="contenido" vAlign="top" width="20">
-										<TABLE id="Table1" class="tan-border" border="0" cellSpacing="12" cellPadding="0" width="171"
+										<TABLE id="Table1"  border="0" cellSpacing="12" cellPadding="0" width="171"
 											height="272">
 											<TR vAlign="top">
 												<TD class="letraAzulBold" height="13">
@@ -82,33 +85,45 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 											</TR>
 											<TR>
 												<TD><asp:label style="Z-INDEX: 0" id="Label3" runat="server" CssClass="standard-text">Color</asp:label><BR>
-													<asp:dropdownlist style="Z-INDEX: 0" id="cboColor" runat="server" CssClass="standard-text" Width="143px"></asp:dropdownlist></TD>
+													<asp:dropdownlist style="Z-INDEX: 0" id="cboColor" runat="server" CssClass="standard-text" Width="100%">
+													</asp:dropdownlist>
+												</TD>
 											</TR>
 											<TR vAlign="top">
 												<TD height="22"><asp:label style="Z-INDEX: 0" id="Label2" runat="server" CssClass="standard-text">Componente</asp:label><br>
-													<asp:textbox style="Z-INDEX: 0" id="txtComponente" runat="server" CssClass="standard-text" Width="142px"
+													<asp:textbox style="Z-INDEX: 0" id="txtComponente" runat="server" CssClass="standard-text" Width="100%"
 														MaxLength="50"></asp:textbox></TD>
 											</TR>
 											<TR>
 												<TD height="22"><asp:label id="Label4" runat="server" CssClass="standard-text">Aforo</asp:label><br>
-													<asp:textbox id="txtAforo" runat="server" CssClass="standard-text" Width="142px" MaxLength="5"></asp:textbox></TD>
+													<asp:textbox id="txtAforo" runat="server" CssClass="standard-text" Width="100%" MaxLength="5"></asp:textbox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD>
-													<TABLE style="Z-INDEX: 0" id="Table2" border="0" cellSpacing="0" cellPadding="0" height="59">
-														<TR>
-															<TD height="20"><asp:button id="cmdAgregarAforo" runat="server" CssClass="botonesInput" Width="64px" CausesValidation="False"
-																	Text="Agregar"></asp:button></TD>
-															<TD height="20"><asp:button id="cmdCancelAforo" runat="server" CssClass="botonesInput" Width="64px" CausesValidation="False"
-																	Text="Cancelar"></asp:button></TD>
-														</TR>
+													<TABLE style="Z-INDEX: 0" id="Table2" border="0" cellSpacing="0" cellPadding="0">
 														<tr>
-															<td colSpan="2"></td>
+															<td colSpan="3" heidth="20px"><p></p>
+															</td>
 														</tr>
 														<TR>
-															<TD height="20" align="center"><asp:button style="Z-INDEX: 0" id="cmdConsulta" runat="server" CssClass="botonesInput" Width="64px"
+															<TD width="40%">
+																<asp:button id="cmdAgregarAforo" runat="server" CssClass="botonesInput" Width="80px" CausesValidation="False"
+																	Text="Agregar"></asp:button></TD>
+															<td width="20%"></td>
+															<TD width="40%">
+																<asp:button id="cmdCancelAforo" runat="server" CssClass="botonesInput" Width="80px" CausesValidation="False"
+																	Text="Cancelar"></asp:button>
+															</TD>
+														</TR>
+														<tr>
+															<td colSpan="3" heidth="20px"><p></p>
+															</td>
+														</tr>
+														<TR>
+															<TD width="40%" align="center"><asp:button style="Z-INDEX: 0" id="cmdConsulta" runat="server" CssClass="botonesInput" Width="80px"
 																	CausesValidation="False" Text="Consulta"></asp:button></TD>
-															<TD height="20" align="center"><asp:button style="Z-INDEX: 0" id="cmdMostrarTodos" runat="server" CssClass="botonesInput" Width="64px"
+															<td width="20%"></td>
+															<TD width="40%" align="center"><asp:button style="Z-INDEX: 0" id="cmdMostrarTodos" runat="server" CssClass="botonesInput" Width="80px"
 																	CausesValidation="False" Text="Todos"></asp:button></TD>
 														</TR>
 													</TABLE>
@@ -120,10 +135,12 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 									<TD class="contenido" vAlign="top">
 										<P class="contenido" align="left"></P>
 										<P class="contenido" align="left">
-											<TABLE id="Table3" class="tan-border" border="0" cellSpacing="12" cellPadding="0" width="171"
+											<TABLE id="Table3"  border="0" cellSpacing="12" cellPadding="0" width="171"
 												height="99">
 												<TR vAlign="top">
-													<TD><uc1:aforogrid id="AforoGrid" runat="server"></uc1:aforogrid></TD>
+													<TD style="padding-left:40px;">
+														<uc1:aforogrid id="AforoGrid" runat="server"></uc1:aforogrid>
+													</TD>
 												</TR>
 											</TABLE>
 										</P>

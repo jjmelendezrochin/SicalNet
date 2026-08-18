@@ -7,7 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
     <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+    
     <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>">
 
 
     <script language="JavaScript">
@@ -331,7 +333,7 @@
                                             CommandName="Release"
                                             NAME="Imagebutton1"
                                             ImageUrl="../../images/DELROW.GIF"
-                                            onmouseup="ConfirmOperation(this);"
+                                            OnClientClick="return ConfirmOperation(this);"
                                             CausesValidation="false"></asp:ImageButton>
                                     </ItemTemplate>
                                 </asp:TemplateColumn>

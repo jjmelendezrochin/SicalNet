@@ -214,10 +214,10 @@
 						<table width="700" align="center">
 							<TR>
 								<TD vAlign="top" width="120" align="center"><asp:button id="btnMensaje" Width="115px" CssClass="botonesInput" Runat="server" Text="Mensaje de Piso"></asp:button></TD>
-								<TD vAlign="top" width="140" align="center"><asp:button id="btnQuarentine" onmouseup="getConfirmQuarentine(this.id)" Width="156px" CssClass="botonesInput"
+								<TD vAlign="top" width="140" align="center"><asp:button id="btnQuarentine" OnClientClick="return getConfirmQuarentine(this.id)" Width="156px" CssClass="botonesInput"
 										Runat="server" Text="Liberar Pend./Cuarentena"></asp:button></TD>
 								<TD vAlign="top" width="150" align="center">&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnLiberar" onmouseup="getConfirmEnvio(this.id)" Width="145px" CssClass="botonesInput"
+									<asp:button id="btnLiberar" OnClientClick="return getConfirmEnvio(this.id)" Width="145px" CssClass="botonesInput"
 										Runat="server" Text="Liberar a Entrega de PT"></asp:button></TD>
 								<TD vAlign="top" width="120" align="center"><asp:button id="btnAceptar" Width="80px" CssClass="botonesInput" Runat="server" Text="Aceptar"></asp:button></TD>
 								<TD vAlign="top" width="120" align="center"><asp:button id="btnCancelar" runat="server" Width="80px" CssClass="botonesInput" Text="Regresar"></asp:button></TD>

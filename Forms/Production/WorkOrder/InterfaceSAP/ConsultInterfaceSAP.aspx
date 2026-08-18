@@ -94,9 +94,9 @@
 						<td align="left"></td>
 					</tr>
 					<tr>
-						<td><asp:textbox id="txtInitial" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox><asp:image onmouseup="GetDate('txtInitial');" id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+						<td><asp:textbox id="txtInitial" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox><asp:image OnClientClick="return GetDate('txtInitial');" id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image></td>
-						<td><asp:textbox id="txtFinal" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox><asp:image onmouseup="GetDate('txtFinal');" id="imgFinal" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+						<td><asp:textbox id="txtFinal" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox><asp:image OnClientClick="return GetDate('txtFinal');" id="imgFinal" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
 								AlternateText="Final Date"></asp:image></td>
 						<td><asp:dropdownlist id="cboStatus" Width="100px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<TD><asp:dropdownlist id="cboLinea" Width="100px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></TD>
@@ -132,7 +132,7 @@
 						<TD style="WIDTH: 154px; HEIGHT: 22px"><asp:textbox id="txtHoraFinal" Width="116px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"
 								MaxLength="5"></asp:textbox></TD>
 						<TD style="WIDTH: 166px; HEIGHT: 22px"><asp:textbox id="txtFechaInterfaz" CssClass="Standard-text" Runat="server" BorderStyle="Groove"
-								MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtFinal');" id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+								MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtFinal');" id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
 								AlternateText="Final Date"></asp:image></TD>
 						<TD style="HEIGHT: 22px" align="center"><asp:button id="btnSel" CssClass="botonesInput" Text="Aceptar" Runat="server"></asp:button></TD>
 						<TD style="HEIGHT: 22px" align="left"></TD>
@@ -309,7 +309,7 @@
 				<td>
 					<table cellSpacing="4" width="900">
 						<tr>
-							<td align="center"><asp:button onmouseup="getConfirm(this.id)" id="btnLiberar" CssClass="botonesInput" Text="Liberar"
+							<td align="center"><asp:button OnClientClick="return getConfirm(this.id)" id="btnLiberar" CssClass="botonesInput" Text="Liberar"
 									Runat="server"></asp:button></td>
 						</tr>
 					</table>

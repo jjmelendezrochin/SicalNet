@@ -80,9 +80,9 @@
 						<td><asp:label id="Label1" Runat="server" Text="Línea de Producción" CssClass="standard-text">Línea de Producción</asp:label></td>
 					</tr>
 					<tr>
-						<td><asp:textbox id="txtInitial" Runat="server" BorderStyle="Groove" CssClass="Standard-text" MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtInitial');" id="imgInitial" Runat="server" AlternateText="Inicial Date"
+						<td><asp:textbox id="txtInitial" Runat="server" BorderStyle="Groove" CssClass="Standard-text" MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtInitial');" id="imgInitial" Runat="server" AlternateText="Inicial Date"
 								ImageUrl="../../../../Images/icon-calendar.gif"></asp:image></td>
-						<td><asp:textbox id="txtFinal" Runat="server" BorderStyle="Groove" CssClass="Standard-text" MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtFinal');" id="imgFinal" Runat="server" AlternateText="Final Date"
+						<td><asp:textbox id="txtFinal" Runat="server" BorderStyle="Groove" CssClass="Standard-text" MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtFinal');" id="imgFinal" Runat="server" AlternateText="Final Date"
 								ImageUrl="../../../../Images/icon-calendar.gif"></asp:image></td>
 						<td><asp:dropdownlist id="cboStatus" Runat="server" CssClass="Standard-text" Width="100px"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboLinea" Runat="server" CssClass="Standard-text" Width="100px"></asp:dropdownlist></td>
@@ -128,7 +128,7 @@
 											<TD class="grid-header" width="12">
 												<asp:label id="sp" Runat="server" Width="13px"></asp:label></TD>
 											<TD class="grid-header">
-												<asp:CheckBox id="chkAllCheck" onmouseup="CheckAllDataGridCheckBoxes()" Runat="server"></asp:CheckBox></TD>
+												<asp:CheckBox id="chkAllCheck" OnClientClick="return CheckAllDataGridCheckBoxes()" Runat="server"></asp:CheckBox></TD>
 											<TD class="grid-header" align="left"><B>
 													<asp:label id="Label8" Runat="server" Width="25px">P</asp:label></B></TD>
 											<TD class="grid-header" align="left"><B>
@@ -157,7 +157,7 @@
 									<TABLE style="BORDER-COLLAPSE: collapse" border="1">
 										<TR>
 											<TD align="middle" height="0px">
-												<asp:image onmouseup="ShowHide(this.id)" id="Plus" style="CURSOR: hand" Runat="server" ImageUrl="../../../../Images/plusButton.JPG"
+												<asp:image OnClientClick="return ShowHide(this.id)" id="Plus" style="CURSOR: hand" Runat="server" ImageUrl="../../../../Images/plusButton.JPG"
 													Visible="False"></asp:image>
 												<asp:label id="spacer" Runat="server" CssClass="standard-text" Width="9px"></asp:label></TD>
 											<TD align="middle">

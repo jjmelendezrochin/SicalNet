@@ -1,4 +1,4 @@
-<%@ Control Language="c#" AutoEventWireup="false" Codebehind="WorkOrdersGrid.ascx.cs" Inherits="UserInterface.Controls.WorkOrdersGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
+﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="WorkOrdersGrid.ascx.cs" Inherits="UserInterface.Controls.WorkOrdersGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <LINK href="D:\jp\SICALNet\UserInterface\styloDESC.CSS" type="text/css" rel="stylesheet">
 <P class="contenido" align="left">
 	<TABLE width="600" border="0">
@@ -23,7 +23,7 @@
 							<HeaderStyle HorizontalAlign="Center" Width="20px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="20px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblKct" Width="20px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.KCT") %>' Runat="server">
+								<asp:label id="lblKct" Width="20px" Text='<%# DataBinder.Eval(Container, "DataItem.KCT") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
@@ -34,7 +34,7 @@
 							<HeaderStyle HorizontalAlign="Center" Width="90px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="130px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblCorrida" Width="90px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Corrida") %>' Runat="server">
+								<asp:label id="lblCorrida" Width="90px" Text='<%# DataBinder.Eval(Container, "DataItem.Corrida") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
@@ -45,14 +45,14 @@
 							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="50px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblLoteinfo" Width="50px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.NumeroLote") %>' Runat="server">
+								<asp:label id="lblLoteinfo" Width="50px" Text='<%# DataBinder.Eval(Container, "DataItem.NumeroLote") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
 								<asp:DropDownList ID="ddlLote" Runat="server"></asp:DropDownList>
 							</FooterTemplate>
 							<EditItemTemplate>
-								<asp:Label ID="lblLote" Runat=server Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
+								<asp:Label ID="lblLote" Runat=server Text='<%# DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
 								</asp:Label>
 							</EditItemTemplate>
 						</asp:TemplateColumn>
@@ -60,14 +60,14 @@
 							<HeaderStyle HorizontalAlign="Center" Width="70px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="70px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblSecuencia1" Width="70px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Secuencia") %>' Runat="server">
+								<asp:label id="lblSecuencia1" Width="70px" Text='<%# DataBinder.Eval(Container, "DataItem.Secuencia") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
 								<asp:TextBox ID="txtSecuencia" Runat="server"></asp:TextBox>
 							</FooterTemplate>
 							<EditItemTemplate>
-								<asp:Label ID = "lblSecuencia" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Secuencia") %>' Runat="server">
+								<asp:Label ID = "lblSecuencia" Text='<%# DataBinder.Eval(Container, "DataItem.Secuencia") %>' Runat="server">
 								</asp:Label>
 							</EditItemTemplate>
 						</asp:TemplateColumn>
@@ -75,7 +75,7 @@
 							<HeaderStyle HorizontalAlign="Center" Width="70px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="70px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblNoOrder" Width="70px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.NoOrden") %>' Runat="server">
+								<asp:label id="lblNoOrder" Width="70px" Text='<%# DataBinder.Eval(Container, "DataItem.NoOrden") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
@@ -86,7 +86,7 @@
 							<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="40px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblCodigoSAP" Width="40px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.CodigoSAP") %>' Runat="server">
+								<asp:label id="lblCodigoSAP" Width="40px" Text='<%# DataBinder.Eval(Container, "DataItem.CodigoSAP") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
@@ -97,14 +97,14 @@
 							<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="40px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblCantidad" Width="40px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Cantidad") %>' Runat="server">
+								<asp:label id="lblCantidad" Width="40px" Text='<%# DataBinder.Eval(Container, "DataItem.Cantidad") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
 								<asp:TextBox ID="txtfCantidad" Runat="server"></asp:TextBox>
 							</FooterTemplate>
 							<EditItemTemplate>
-								<asp:TextBox ID="txtCantidad" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Cantidad") %>'>
+								<asp:TextBox ID="txtCantidad" Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Cantidad") %>'>
 								</asp:TextBox>
 							</EditItemTemplate>
 						</asp:TemplateColumn>
@@ -112,7 +112,7 @@
 							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="50px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblDescripcion" Width="50px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server">
+								<asp:label id="lblDescripcion" Width="50px" Text='<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
@@ -123,7 +123,7 @@
 							<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="40px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblRendimiento" Width="40px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Rendimiento") %>' Runat="server">
+								<asp:label id="lblRendimiento" Width="40px" Text='<%# DataBinder.Eval(Container, "DataItem.Rendimiento") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
@@ -134,7 +134,7 @@
 							<HeaderStyle HorizontalAlign="Center" Width="60px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="60px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblFechaEmbarque" Width="60px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.FechaEmbarque") %>' Runat="server">
+								<asp:label id="lblFechaEmbarque" Width="60px" Text='<%# DataBinder.Eval(Container, "DataItem.FechaEmbarque") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>
@@ -145,7 +145,7 @@
 							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="50px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id="lblDetails" Width="50px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.DetalleOperacion") %>' Runat="server">
+								<asp:label id="lblDetails" Width="50px" Text='<%# DataBinder.Eval(Container, "DataItem.DetalleOperacion") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<FooterTemplate>

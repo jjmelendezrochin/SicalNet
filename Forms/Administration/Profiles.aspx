@@ -74,10 +74,24 @@ function ConfirmOperation(Button,strOperationType)
 					</tr>
 					<tr>
 						<td colSpan="4" align="center">
-							<asp:datagrid id="dgdPerfiles" runat="server" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right"
-								PageSize="10" AllowPaging="True" BorderStyle="None" BorderColor="White" DataKeyField="IdPerfil"
-								AllowSorting="True" FontSize="11px" Font-Name="Verdana" AutoGenerateColumns="False" CellPadding="2"
-								Font-Names="Verdana" CssClass="GridView">
+							<asp:datagrid 
+								id="dgdPerfiles" 
+								runat="server" 
+								PagerStyle-Mode="NumericPages" 
+								PagerStyle-HorizontalAlign="Right"
+								PageSize="10" 
+								AllowPaging="True" 
+								BorderStyle="None" 
+								BorderColor="White" 
+								DataKeyField="IdPerfil"
+								AllowSorting="True" 
+								FontSize="11px" 
+								Font-Name="Verdana" 
+								AutoGenerateColumns="False" 
+								CellPadding="2"
+								Font-Names="Verdana" 
+								CssClass="GridView">
+
 								<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 								<Columns>
 									<asp:TemplateColumn HeaderText="Id">
@@ -102,7 +116,7 @@ function ConfirmOperation(Button,strOperationType)
 										<ItemTemplate>
 											<asp:imagebutton id="Imagebutton5" runat="server" CausesValidation="false" ImageUrl="../../images/icon-pencil.gif"
 												NAME="Imagebutton1" CommandName="Edit" AlternateText="Edit"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
-											<asp:imagebutton onmouseup="ConfirmOperation(this,'eliminar');" id="Imagebutton6" Runat="server"
+											<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id="Imagebutton6" Runat="server"
 												CausesValidation="False" ImageUrl="../../images/icon-delete.gif" NAME="Imagebutton2" CommandName="Delete"
 												AlternateText="Delete"></asp:imagebutton>
 										</ItemTemplate>

@@ -1,12 +1,26 @@
-<%@ Control Language="c#" AutoEventWireup="false" Codebehind="FormCintasGrid.ascx.cs" Inherits="UserInterface.Controls.FormCintasGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
+﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="FormCintasGrid.ascx.cs" Inherits="UserInterface.Controls.FormCintasGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <script language="javascript">
-function ConfirmOperation(Button,strOperationType)
-{
-	if (confirm("�Esta seguro que desea "+strOperationType+" este registro?")) 
-	{
-		Button.click()
-	}
-}
+    function ConfirmOperation(Button, strOperationType) {
+        if (Button._sicalConfirmado) {
+            Button._sicalConfirmado = false;
+            return true;
+        }
+
+        SicalAlert.confirmar(
+            "¿Está seguro que desea " +
+            strOperationType +
+            " este registro?",
+            "Confirmar operación",
+            function () {
+
+                Button._sicalConfirmado = true;
+                Button.click();
+
+            }
+        );
+
+        return false;
+    }
 </script>
 <LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
 <P class="contenido" align="left"><asp:datagrid id="dgdFormCintas" ItemStyle-Wrap="True" BorderStyle="None" BorderColor="White"
@@ -70,11 +84,11 @@ function ConfirmOperation(Button,strOperationType)
 				<ItemTemplate>
 					<asp:imagebutton id="imgEdit" runat="server" CausesValidation="false" ImageUrl="../images/icon-pencil.gif"
 						NAME="imgEdit" CommandName="Edit" AlternateText="Edit"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
-					<asp:imagebutton onmouseup="ConfirmOperation(this,'eliminar');" id="imgDelete" Runat="server" CausesValidation="False"
+					<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id="imgDelete" Runat="server" CausesValidation="False"
 						ImageUrl="../images/icon-delete.gif" NAME="imgDelete" CommandName="Delete" AlternateText="Delete"></asp:imagebutton>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:imagebutton onmouseup="ConfirmOperation(this,'actualizar');" id="imgUpdate" runat="server" CausesValidation="False"
+					<asp:imagebutton OnClientClick="return ConfirmOperation(this,'actualizar');" id="imgUpdate" runat="server" CausesValidation="False"
 						ImageUrl="../images/icon-floppy.gif" NAME="imgUpdate" CommandName="Update" AlternateText="Update"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
 					<asp:imagebutton id="imgCancel" runat="server" CausesValidation="False" ImageUrl="../images/icon-pencil-x.gif"
 						NAME="imgCancel" CommandName="Cancel" AlternateText="Cancel"></asp:imagebutton>

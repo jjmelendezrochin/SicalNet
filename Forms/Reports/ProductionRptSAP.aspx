@@ -63,13 +63,13 @@
 						<asp:Label id="Label5" runat="server" CssClass="standard-text">Fecha programa Inicial</asp:Label>
 						<asp:textbox id="txtFechaInicial" runat="server" Width="126px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="cmdCalInicial" runat="server" ImageUrl="../../Images/icon-calendar.gif" onmouseup="GetDate('txtFechaInicial');"></asp:imagebutton>
+						<asp:imagebutton id="cmdCalInicial" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFechaInicial');"></asp:imagebutton>
 					</td>
 					<td>
 						<asp:Label id="Label6" runat="server" CssClass="standard-text">Fecha Liberación Inicial</asp:Label>
 						<asp:textbox id="txtLibInicial" runat="server" Width="128px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif" onmouseup="GetDate('txtLibInicial');"></asp:imagebutton>
+						<asp:imagebutton id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtLibInicial');"></asp:imagebutton>
 					</td>
 				</tr>
 				<TR>
@@ -103,13 +103,13 @@
 						<asp:Label id="Label11" runat="server" CssClass="standard-text">Fecha programa Final:</asp:Label>
 						<asp:textbox id="txtFechaFinal" runat="server" Width="126px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="Imagebutton2" runat="server" ImageUrl="../../Images/icon-calendar.gif" onmouseup="GetDate('txtFechaFinal');"></asp:imagebutton>
+						<asp:imagebutton id="Imagebutton2" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFechaFinal');"></asp:imagebutton>
 					</td>
 					<td>
 						<asp:Label id="Label12" runat="server" CssClass="standard-text">Fecha Liberación Final:</asp:Label>
 						<asp:textbox id="txtLibFinal" runat="server" Width="128px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="Imagebutton3" runat="server" ImageUrl="../../Images/icon-calendar.gif" onmouseup="GetDate('txtLibFinal');"></asp:imagebutton>
+						<asp:imagebutton id="Imagebutton3" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtLibFinal');"></asp:imagebutton>
 					</td>
 				</tr>
 				<tr>

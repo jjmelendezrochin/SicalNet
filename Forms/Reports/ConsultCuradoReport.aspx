@@ -63,13 +63,13 @@
 					runat="server" CssClass="standard-text" Width="121px"></asp:textbox>
 				<asp:button CssClass="botonesInput" id="cmdprint" style="Z-INDEX: 114; POSITION: absolute; TOP: 280px; LEFT: 752px"
 					Runat="server" Text="Imprimir"></asp:button>
-				<asp:image onmouseup="GetDate('txtFechaFinal');" id="imgProgrammaFinal" style="Z-INDEX: 113; POSITION: absolute; TOP: 216px; LEFT: 912px"
+				<asp:image OnClientClick="return GetDate('txtFechaFinal');" id="imgProgrammaFinal" style="Z-INDEX: 113; POSITION: absolute; TOP: 216px; LEFT: 912px"
 					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:image>
-				<asp:image onmouseup="GetDate('txtLibFinal');" id="imgLieractionFinal" style="Z-INDEX: 112; POSITION: absolute; TOP: 216px; LEFT: 1080px"
+				<asp:image OnClientClick="return GetDate('txtLibFinal');" id="imgLieractionFinal" style="Z-INDEX: 112; POSITION: absolute; TOP: 216px; LEFT: 1080px"
 					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:image>
-				<asp:image onmouseup="GetDate('txtLibInicial');" id="imgLieractionInitial" style="Z-INDEX: 111; POSITION: absolute; TOP: 136px; LEFT: 1080px"
+				<asp:image OnClientClick="return GetDate('txtLibInicial');" id="imgLieractionInitial" style="Z-INDEX: 111; POSITION: absolute; TOP: 136px; LEFT: 1080px"
 					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:image>
-				<asp:image onmouseup="GetDate('txtFechaInicial');" id="imgProgrammaInitial" style="Z-INDEX: 110; POSITION: absolute; TOP: 136px; LEFT: 912px"
+				<asp:image OnClientClick="return GetDate('txtFechaInicial');" id="imgProgrammaInitial" style="Z-INDEX: 110; POSITION: absolute; TOP: 136px; LEFT: 912px"
 					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:image>
 				<asp:label CssClass="standard-text" id="LblSequencia2" style="Z-INDEX: 105; POSITION: absolute; TOP: 184px; LEFT: 464px"
 					Runat="server">Secuencia Final</asp:label>
