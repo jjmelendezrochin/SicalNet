@@ -116,7 +116,7 @@ function ConfirmOperation(Button,strOperationType)
 										<ItemTemplate>
 											<asp:imagebutton id="Imagebutton5" runat="server" CausesValidation="false" ImageUrl="../../images/icon-pencil.gif"
 												NAME="Imagebutton1" CommandName="Edit" AlternateText="Edit"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
-											<asp:imagebutton onmouseup="ConfirmOperation(this,'eliminar');" id="Imagebutton6" Runat="server"
+											<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id="Imagebutton6" Runat="server"
 												CausesValidation="False" ImageUrl="../../images/icon-delete.gif" NAME="Imagebutton2" CommandName="Delete"
 												AlternateText="Delete"></asp:imagebutton>
 										</ItemTemplate>

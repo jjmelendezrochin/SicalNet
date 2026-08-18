@@ -333,7 +333,7 @@
                                             CommandName="Release"
                                             NAME="Imagebutton1"
                                             ImageUrl="../../images/DELROW.GIF"
-                                            onmouseup="ConfirmOperation(this);"
+                                            OnClientClick="return ConfirmOperation(this);"
                                             CausesValidation="false"></asp:ImageButton>
                                     </ItemTemplate>
                                 </asp:TemplateColumn>

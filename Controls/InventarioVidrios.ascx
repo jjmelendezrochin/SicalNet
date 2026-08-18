@@ -1,15 +1,30 @@
-<%@ Control Language="c#" AutoEventWireup="false" Codebehind="InventarioVidrios.ascx.cs" Inherits="UserInterface.Controls.InventarioVidrios" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
+ï»¿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="InventarioVidrios.ascx.cs" Inherits="UserInterface.Controls.InventarioVidrios" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
-		<title>Tamaño Vidrios</title>
+		<title>TamaÃ±o Vidrios</title>
 		<script language="javascript">
-function ConfirmOperation(Button,strOperationType)
-{
-	if (confirm("Esta seguro que desea "+strOperationType+" este registro?"))
-	Button.click()
-			
-}
+            function ConfirmOperation(Button, strOperationType) {
+                if (Button._sicalConfirmado) {
+                    Button._sicalConfirmado = false;
+                    return true;
+                }
+
+                SicalAlert.confirmar(
+                    "Â¿EstÃ¡ seguro que desea " +
+                    strOperationType +
+                    " este registro?",
+                    "Confirmar operaciÃ³n",
+                    function () {
+
+                        Button._sicalConfirmado = true;
+                        Button.click();
+
+                    }
+                );
+
+                return false;
+            }
 
 function Ruta(idVidrio){
 if (confirm("Esta seguro que desea editar este registro?")) {
@@ -17,7 +32,7 @@ if (confirm("Esta seguro que desea editar este registro?")) {
 	window.location = ruta;
 	}
 }
-		</script>
+        </script>
 		<LINK rel="stylesheet" type="text/css" href="../styloDESC.CSS">
 		<meta name="GENERATOR" content="Microsoft Visual Studio 7.0">
 		<meta name="CODE_LANGUAGE" content="C#">
@@ -28,17 +43,17 @@ if (confirm("Esta seguro que desea editar este registro?")) {
 		<table>
 			<tr>
 				<td align="right"><asp:label style="Z-INDEX: 0" id="Label2" Width="50px" CssClass="standard-text" Runat="server"
-						Text="Línea :   ">Línea:</asp:label><asp:dropdownlist style="Z-INDEX: 0" id="cboLinea" Width="90px" CssClass="standard-text" runat="server"
+						Text="LÃ­nea :   ">LÃ­nea:</asp:label><asp:dropdownlist style="Z-INDEX: 0" id="cboLinea" Width="90px" CssClass="standard-text" runat="server"
 						Height="19px">
 						<asp:ListItem Value="-- L&#237;nea --" Selected="True">-- L&#237;nea --</asp:ListItem>
 					</asp:dropdownlist></td>
 				<td align="right"><asp:label style="Z-INDEX: 0" id="Label1" Width="50px" CssClass="standard-text" Runat="server"
-						Text="Línea :   ">Tamaño:</asp:label><asp:dropdownlist style="Z-INDEX: 0" id="cboVidrioTamanio" Width="90px" CssClass="standard-text" runat="server"
+						Text="LÃ­nea :   ">TamaÃ±o:</asp:label><asp:dropdownlist style="Z-INDEX: 0" id="cboVidrioTamanio" Width="90px" CssClass="standard-text" runat="server"
 						Height="19px">
 						<asp:ListItem Value="-- Tama&#241;o --" Selected="True">-- Tama&#241;o --</asp:ListItem>
 					</asp:dropdownlist></td>
 				<td align="right"><asp:label style="Z-INDEX: 0" id="Label3" Width="50px" CssClass="standard-text" Runat="server"
-						Text="Línea :   ">Tipo:</asp:label>&nbsp;
+						Text="LÃ­nea :   ">Tipo:</asp:label>&nbsp;
 					<asp:dropdownlist style="Z-INDEX: 0" id="cboTipo" Width="90px" CssClass="standard-text" runat="server">
 						<asp:ListItem Value="-- Tipo --" Selected="True">-- Tipo --</asp:ListItem>
 					</asp:dropdownlist>&nbsp;
@@ -178,11 +193,11 @@ if (confirm("Esta seguro que desea editar este registro?")) {
 								<ItemStyle CssClass="grid-edit-column"></ItemStyle>
 								<ItemTemplate>
 									&nbsp;
-									<asp:imagebutton id="Imagebutton6" onmouseup="ConfirmOperation(this,'eliminar');" Runat="server"
+									<asp:imagebutton id="Imagebutton6" OnClientClick="return ConfirmOperation(this,'eliminar');" Runat="server"
 										CausesValidation="False" AlternateText="Delete" CommandName="Delete" NAME="Imagebutton2" ImageUrl="../images/icon-delete.gif"></asp:imagebutton>
 								</ItemTemplate>
 								<EditItemTemplate>
-									<asp:imagebutton id="Imagebutton7" onmouseup="ConfirmOperation(this,'actualizar');" runat="server"
+									<asp:imagebutton id="Imagebutton7" OnClientClick="return ConfirmOperation(this,'actualizar');" runat="server"
 										CausesValidation="False" AlternateText="Update" CommandName="Update" NAME="Imagebutton3" ImageUrl="../images/icon-floppy.gif"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
 									<asp:imagebutton id="Imagebutton8" runat="server" CausesValidation="False" AlternateText="Cancel"
 										CommandName="Cancel" NAME="Imagebutton4" ImageUrl="../images/icon-pencil-x.gif"></asp:imagebutton>

@@ -40,14 +40,14 @@
 			<asp:textbox id="txtFechaInicial" style="Z-INDEX: 104; LEFT: 375px; POSITION: absolute; TOP: 84px"
 				runat="server" Width="121px" CssClass="standard-text" ReadOnly="True" BorderStyle="Groove"
 				MaxLength="11"></asp:textbox>
-			<asp:imagebutton onmouseup="GetDate('txtFechaInicial');" id="imgFInicial" style="Z-INDEX: 105; LEFT: 495px; POSITION: absolute; TOP: 83px"
+			<asp:imagebutton OnClientClick="return GetDate('txtFechaInicial');" id="imgFInicial" style="Z-INDEX: 105; LEFT: 495px; POSITION: absolute; TOP: 83px"
 				runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 			<asp:textbox id="txtFechaFinal" style="Z-INDEX: 107; LEFT: 375px; POSITION: absolute; TOP: 151px"
 				runat="server" Width="119px" CssClass="standard-text" ReadOnly="True" BorderStyle="Groove"
 				MaxLength="11"></asp:textbox>
 			<asp:label id="lblFechaFinal" style="Z-INDEX: 106; LEFT: 375px; POSITION: absolute; TOP: 127px"
 				runat="server" Height="22px" Width="142px" CssClass="standard-text"> Fecha Programa Final</asp:label>
-			<asp:imagebutton onmouseup="GetDate('txtFechaFinal');" id="imgFFinal" style="Z-INDEX: 108; LEFT: 493px; POSITION: absolute; TOP: 149px"
+			<asp:imagebutton OnClientClick="return GetDate('txtFechaFinal');" id="imgFFinal" style="Z-INDEX: 108; LEFT: 493px; POSITION: absolute; TOP: 149px"
 				runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 			<asp:button id="cmdprint" style="Z-INDEX: 109; LEFT: 280px; POSITION: absolute; TOP: 200px"
 				CssClass="botonesInput" Text="Imprimir" Runat="server"></asp:button>

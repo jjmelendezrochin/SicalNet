@@ -289,7 +289,7 @@ function ConfirmOperation(Button)
                                             AlternateText="Desconectar"
                                             CommandName="Release"
                                             ImageUrl="../../images/DELROW.GIF"
-                                            onmouseup="ConfirmOperation(this);"
+                                            OnClientClick="return ConfirmOperation(this);"
                                             CausesValidation="false">
                                         </asp:ImageButton>
                                     </ItemTemplate>

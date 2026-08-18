@@ -53,10 +53,10 @@
 						<td align="left"><asp:label id="Label1" Text="Linea de Produccion" Runat="server" CssClass="standard-text">Linea de Produccion</asp:label></td>
 						<td align="left"><asp:label id="Status" Text="Status" Runat="server" CssClass="standard-text">Status</asp:label></td>
 					<tr align="center">
-						<td align="left"><asp:textbox id="txtFecha" Runat="server" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtFecha');" id="imgInitial" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+						<td align="left"><asp:textbox id="txtFecha" Runat="server" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtFecha');" id="imgInitial" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image></td>
 						<td align="left"><asp:textbox id="txtFechaFinal" Runat="server" CssClass="Standard-text" BorderStyle="Groove"
-								MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtFechaFinal');" id="imgFinal" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+								MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtFechaFinal');" id="imgFinal" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image></td>
 						<td align="left"><asp:dropdownlist id="cboLinea" Runat="server" CssClass="Standard-text"></asp:dropdownlist></td>
 						<td align="left"><asp:dropdownlist id="cboStatus" Runat="server" CssClass="Standard-text"></asp:dropdownlist></td>

@@ -1309,12 +1309,87 @@ textarea {
     margin: 0;
 }
 
+.sical-alert-button-cancelar {
+    background-color: #5f6871;
+}
+
 
 .sical-alert-button-cancelar:hover {
-    background-color: #d1d5db;
+    background-color: #5f6871;
 }
 
 
 .sical-alert-button-aceptar:hover {
     background-color: #06385d;
 }
+
+
+/* =========================================================
+   BOTONES DE ACCIÓN
+   SICALNET
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   ACEPTAR / GUARDAR / CONFIRMAR
+   Verde = acción positiva
+   --------------------------------------------------------- */
+.btn-aceptar,
+input.btn-aceptar,
+button.btn-aceptar,
+.botonAceptar {
+    color: #ffffff !important;
+    background-color: #2E7D32 !important;
+    border-color: #2E7D32 !important;
+}
+
+    .btn-aceptar:hover,
+    input.btn-aceptar:hover,
+    button.btn-aceptar:hover,
+    .botonAceptar:hover {
+        color: #ffffff !important;
+        background-color: #256628 !important;
+        border-color: #256628 !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.18);
+    }
+
+    .btn-aceptar:active,
+    input.btn-aceptar:active,
+    button.btn-aceptar:active,
+    .botonAceptar:active {
+        background-color: #1B4D1E !important;
+        border-color: #1B4D1E !important;
+        box-shadow: none;
+    }
+
+
+/* ---------------------------------------------------------
+   CANCELAR / CERRAR
+   Rojo discreto = cancelar operación
+   --------------------------------------------------------- */
+.btn-cancelar,
+input.btn-cancelar,
+button.btn-cancelar,
+.botonCancelar {
+    color: #ffffff !important;
+    background-color: #B5473C !important;
+    border-color: #B5473C !important;
+}
+
+    .btn-cancelar:hover,
+    input.btn-cancelar:hover,
+    button.btn-cancelar:hover,
+    .botonCancelar:hover {
+        color: #ffffff !important;
+        background-color: #963A32 !important;
+        border-color: #963A32 !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.18);
+    }
+
+    .btn-cancelar:active,
+    input.btn-cancelar:active,
+    button.btn-cancelar:active,
+    .botonCancelar:active {
+        background-color: #742D27 !important;
+        border-color: #742D27 !important;
+        box-shadow: none;
+    }

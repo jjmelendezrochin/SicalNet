@@ -35,13 +35,13 @@
 				ValidationExpression="(^((31(?!-(feb|abr|jun|sep|nov)))|((30|29)(?!-feb?))|(29(?=-feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ene|feb|mar|may|abr|jul|jun|ago|oct|sep|nov|dic)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(FEB|ABR|JUN|SEP|NOV)))|((30|29)(?!-FEB?))|(29(?=-FEB?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ENE|FEB|MAR|MAY|ABR|JUL|JUN|AGO|OCT|SEP|NOV|DIC)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(Feb|Abr|Jun|Sep|Nov)))|((30|29)(?!-Feb?))|(29(?=-Feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(Ene|Feb|Mar|May|Abr|Jul|Jun|Ago|Oct|Sep|Nov|Dic)-((1[6-9]|[2-9]\d)\d{2})$)">*</asp:RegularExpressionValidator>
 			<asp:button id="cmdprint" style="Z-INDEX: 120; LEFT: 468px; POSITION: absolute; TOP: 233px"
 				Runat="server" Text="Imprimir" CssClass="botonesInput"></asp:button>
-			<asp:image onmouseup="GetDate('TxtFechaPrograma2');" id="imgProgrammaFinal" style="Z-INDEX: 119; LEFT: 632px; POSITION: absolute; TOP: 170px"
+			<asp:image OnClientClick="return GetDate('TxtFechaPrograma2');" id="imgProgrammaFinal" style="Z-INDEX: 119; LEFT: 632px; POSITION: absolute; TOP: 170px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
-			<asp:image onmouseup="GetDate('TxtLiberacion2');" id="imgLieractionFinal" style="Z-INDEX: 117; LEFT: 800px; POSITION: absolute; TOP: 168px"
+			<asp:image OnClientClick="return GetDate('TxtLiberacion2');" id="imgLieractionFinal" style="Z-INDEX: 117; LEFT: 800px; POSITION: absolute; TOP: 168px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
-			<asp:image onmouseup="GetDate('TxtLiberacion1');" id="imgLieractionInitial" style="Z-INDEX: 116; LEFT: 800px; POSITION: absolute; TOP: 91px"
+			<asp:image OnClientClick="return GetDate('TxtLiberacion1');" id="imgLieractionInitial" style="Z-INDEX: 116; LEFT: 800px; POSITION: absolute; TOP: 91px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
-			<asp:image onmouseup="GetDate('TxtFechaPrograma1');" id="imgProgrammaInitial" style="Z-INDEX: 115; LEFT: 632px; POSITION: absolute; TOP: 91px"
+			<asp:image OnClientClick="return GetDate('TxtFechaPrograma1');" id="imgProgrammaInitial" style="Z-INDEX: 115; LEFT: 632px; POSITION: absolute; TOP: 91px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
 			<asp:Label id="LblSequencia2" style="Z-INDEX: 106; LEFT: 178px; POSITION: absolute; TOP: 139px"
 				Runat="server" CssClass="standard-text">Secuencia Final</asp:Label>

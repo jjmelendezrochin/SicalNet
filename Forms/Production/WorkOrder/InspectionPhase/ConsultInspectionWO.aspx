@@ -54,12 +54,12 @@
 					<td>
 						<asp:TextBox id="txtFechaInicial" runat="server" Width="100px" CssClass="standard-text" BorderStyle="Groove"
 							MaxLength="11">10-Sep-2019</asp:TextBox>
-						<asp:ImageButton id="ImgFechaInicial" runat="server" onmouseup="GetDate('txtFechaInicial');" ImageUrl="../../../../Images/icon-calendar.gif"></asp:ImageButton>
+						<asp:ImageButton id="ImgFechaInicial" runat="server" OnClientClick="return GetDate('txtFechaInicial');" ImageUrl="../../../../Images/icon-calendar.gif"></asp:ImageButton>
 					</td>
 					<td>
 						<asp:TextBox id="txtFechaFinal" runat="server" Width="100px" CssClass="standard-text" BorderStyle="Groove"
 							MaxLength="11">10-Sep-2019</asp:TextBox>
-						<asp:ImageButton id="ImgFechaFinal" runat="server" onmouseup="GetDate('txtFechaFinal');" ImageUrl="../../../../Images/icon-calendar.gif"></asp:ImageButton>
+						<asp:ImageButton id="ImgFechaFinal" runat="server" OnClientClick="return GetDate('txtFechaFinal');" ImageUrl="../../../../Images/icon-calendar.gif"></asp:ImageButton>
 					</td>
 					<td><asp:dropdownlist id="cboLinea" runat="server" Width="125px" CssClass="standard-text"></asp:dropdownlist></td>
 					<td><asp:dropdownlist id="cboStatus" runat="server" Width="125px" CssClass="standard-text"></asp:dropdownlist></td>

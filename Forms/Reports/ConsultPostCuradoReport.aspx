@@ -35,13 +35,13 @@
 				Width="216px" CssClass="standard-text"></asp:ValidationSummary>
 			<asp:button id="cmdprint" style="Z-INDEX: 120; LEFT: 468px; POSITION: absolute; TOP: 233px"
 				Runat="server" Text="Imprimir" CssClass="botonesInput"></asp:button>
-			<asp:image onmouseup="GetDate('TxtFechaPrograma2');" id="imgProgrammaFinal" style="Z-INDEX: 119; LEFT: 632px; POSITION: absolute; TOP: 170px"
+			<asp:image OnClientClick="return GetDate('TxtFechaPrograma2');" id="imgProgrammaFinal" style="Z-INDEX: 119; LEFT: 632px; POSITION: absolute; TOP: 170px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
-			<asp:image onmouseup="GetDate('TxtLiberacion2');" id="imgLieractionFinal" style="Z-INDEX: 117; LEFT: 800px; POSITION: absolute; TOP: 168px"
+			<asp:image OnClientClick="return GetDate('TxtLiberacion2');" id="imgLieractionFinal" style="Z-INDEX: 117; LEFT: 800px; POSITION: absolute; TOP: 168px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
-			<asp:image onmouseup="GetDate('TxtLiberacion1');" id="imgLieractionInitial" style="Z-INDEX: 116; LEFT: 800px; POSITION: absolute; TOP: 91px"
+			<asp:image OnClientClick="return GetDate('TxtLiberacion1');" id="imgLieractionInitial" style="Z-INDEX: 116; LEFT: 800px; POSITION: absolute; TOP: 91px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
-			<asp:image onmouseup="GetDate('TxtFechaPrograma1');" id="imgProgrammaInitial" style="Z-INDEX: 115; LEFT: 632px; POSITION: absolute; TOP: 91px"
+			<asp:image OnClientClick="return GetDate('TxtFechaPrograma1');" id="imgProgrammaInitial" style="Z-INDEX: 115; LEFT: 632px; POSITION: absolute; TOP: 91px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
 			<asp:Label id="LblSequencia2" style="Z-INDEX: 106; LEFT: 178px; POSITION: absolute; TOP: 139px"
 				Runat="server" CssClass="standard-text">Secuencia Final</asp:Label>

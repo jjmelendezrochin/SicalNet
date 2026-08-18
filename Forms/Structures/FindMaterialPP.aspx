@@ -89,7 +89,7 @@
 
 <ItemTemplate>
 <asp:imagebutton id=imgEdit runat="server" CommandName="Edit" CausesValidation="false" AlternateText="Edit" NAME="imgEdit" ImageUrl="../../images/icon-pencil.gif"></asp:imagebutton><IMG src="images/spacer.gif" width=3> 
-<asp:imagebutton onmouseup="ConfirmOperation(this,'eliminar');" id=imgDelete Runat="server" CommandName="Delete" CausesValidation="False" AlternateText="Delete" NAME="imgDelete" ImageUrl="../../images/icon-delete.gif"></asp:imagebutton>
+<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id=imgDelete Runat="server" CommandName="Delete" CausesValidation="False" AlternateText="Delete" NAME="imgDelete" ImageUrl="../../images/icon-delete.gif"></asp:imagebutton>
 </ItemTemplate>
 
 <EditItemTemplate>

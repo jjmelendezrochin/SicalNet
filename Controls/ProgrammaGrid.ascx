@@ -13,13 +13,27 @@ function OperacionBorrar(Button,strOperationType){
 	Button.click();
 }
 
-function ConfirmOperation(Button,strOperationType)
-{	
-	if (confirm("¿Está seguro que desea " +strOperationType+ " esta secuencia?")) 
-	{
-		Button.click();
-	}
-}
+    function ConfirmOperation(Button, strOperationType) {
+        if (Button._sicalConfirmado) {
+            Button._sicalConfirmado = false;
+            return true;
+        }
+
+        SicalAlert.confirmar(
+            "¿Está seguro que desea " +
+            strOperationType +
+            " este registro?",
+            "Confirmar operación",
+            function () {
+
+                Button._sicalConfirmado = true;
+                Button.click();
+
+            }
+        );
+
+        return false;
+    }
 
 function ShowHide(CtrlName)
 {
@@ -53,7 +67,7 @@ function ShowHide(CtrlName)
 						<TD colSpan="2">
 							<center>
 								<asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" BorderStyle="Groove" Width="77px"
-									MaxLength="11"></asp:textbox><asp:image id="imgInitial" onmouseup="GetDate();" Runat="server" ImageUrl="../Images/icon-calendar.gif"
+									MaxLength="11"></asp:textbox><asp:image id="imgInitial" OnClientClick="return GetDate();" Runat="server" ImageUrl="../Images/icon-calendar.gif"
 									AlternateText="Inicial Date"></asp:image><asp:regularexpressionvalidator id="revFecha" CssClass="standard-text" runat="server" ErrorMessage="Fecha incorrecta"
 									ControlToValidate="txtFecha" ValidationExpression="(^((31(?!-(feb|abr|jun|sep|nov)))|((30|29)(?!-feb?))|(29(?=-feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ene|feb|mar|may|abr|jul|jun|ago|oct|sep|nov|dic)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(FEB|ABR|JUN|SEP|NOV)))|((30|29)(?!-FEB?))|(29(?=-FEB?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ENE|FEB|MAR|MAY|ABR|JUL|JUN|AGO|OCT|SEP|NOV|DIC)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(Feb|Abr|Jun|Sep|Nov)))|((30|29)(?!-Feb?))|(29(?=-Feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(Ene|Feb|Mar|May|Abr|Jul|Jun|Ago|Oct|Sep|Nov|Dic)-((1[6-9]|[2-9]\d)\d{2})$)"
 									Display="Dynamic"></asp:regularexpressionvalidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -122,7 +136,7 @@ function ShowHide(CtrlName)
 												<table id="Table14" border="0" width="40">
 													<TBODY>
 														<tr>
-															<td><asp:imagebutton id="Imagebutton4" onmouseup="ConfirmOperation(this,'agregar');" ImageUrl="../images/icon-floppy.gif"
+															<td><asp:imagebutton id="Imagebutton4" OnClientClick="return ConfirmOperation(this,'agregar');" ImageUrl="../images/icon-floppy.gif"
 																	runat="server" CommandName="Save"></asp:imagebutton><asp:imagebutton id="Imagebutton5" ImageUrl="../images/icon-pencil-x.gif" runat="server" CommandName="CancelNew"></asp:imagebutton></td>
 														</tr>
 													</TBODY>
@@ -210,7 +224,7 @@ function ShowHide(CtrlName)
 										<TR>
 											<td><input id="chkBorrar" type="checkbox" runat="server">
 											</td>
-											<TD><asp:image id="Imagebutton2" onmouseup="ShowHide(this.id)" ImageUrl="../images/plusButton.jpg"
+											<TD><asp:image id="Imagebutton2" OnClientClick="return ShowHide(this.id)" ImageUrl="../images/plusButton.jpg"
 													runat="server"></asp:image></TD>
 											<TD><asp:label id=lblPrioridad Text='<%# DataBinder.Eval(Container, "DataItem.Prioridad") %>' CssClass="standard-text" Width="20px" runat="server"></asp:label><asp:textbox id="txtPriority" CssClass="standard-text" MaxLength="3" Width="25px" runat="server"
 													Visible="False"></asp:textbox></TD>
@@ -242,8 +256,8 @@ function ShowHide(CtrlName)
 												<table id="buttonsTable" border="0" width="40">
 													<TBODY>
 														<tr>
-															<td><asp:imagebutton id="cmdEdit" ImageUrl="../images/icon-pencil.gif" runat="server" CommandName="Edit"></asp:imagebutton><asp:imagebutton id="cmdDelete" onmouseup="OperacionBorrar(this,'eliminar');" ImageUrl="../images/icon-delete.gif"
-																	runat="server" CommandName="Delete"></asp:imagebutton><asp:imagebutton id="cmdUpdate" onmouseup="ConfirmOperation(this,'actualizar');" ImageUrl="../images/icon-floppy.gif"
+															<td><asp:imagebutton id="cmdEdit" ImageUrl="../images/icon-pencil.gif" runat="server" CommandName="Edit"></asp:imagebutton><asp:imagebutton id="cmdDelete" OnClientClick="return OperacionBorrar(this,'eliminar');" ImageUrl="../images/icon-delete.gif"
+																	runat="server" CommandName="Delete"></asp:imagebutton><asp:imagebutton id="cmdUpdate" OnClientClick="return ConfirmOperation(this,'actualizar');" ImageUrl="../images/icon-floppy.gif"
 																	runat="server" Visible="False" CommandName="Update"></asp:imagebutton><asp:imagebutton id="cmdCancel" ImageUrl="../images/icon-pencil-x.gif" runat="server" Visible="False"
 																	CommandName="Cancel"></asp:imagebutton></td>
 											</TD>

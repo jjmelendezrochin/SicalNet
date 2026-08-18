@@ -53,10 +53,10 @@
 					</tr>
 					<tr>
 						<td><asp:textbox id="txtFechaInicial" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"
-								Width="100px"></asp:textbox><asp:image id="imgInitial" onmouseup="GetDate('txtFechaInicial');" Runat="server" AlternateText="Inicial Date"
+								Width="100px"></asp:textbox><asp:image id="imgInitial" OnClientClick="return GetDate('txtFechaInicial');" Runat="server" AlternateText="Inicial Date"
 								ImageUrl="../../Images/icon-calendar.gif"></asp:image></td>
 						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"
-								Width="100px"></asp:textbox><asp:image id="imgFinal" onmouseup="GetDate('txtFechaFinal');" Runat="server" AlternateText="Inicial Date"
+								Width="100px"></asp:textbox><asp:image id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" AlternateText="Inicial Date"
 								ImageUrl="../../Images/icon-calendar.gif"></asp:image></td>
 						<td><asp:dropdownlist id="cboLinea" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboStatus" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>

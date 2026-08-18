@@ -187,7 +187,7 @@
                             ID="imgFInicial"
                             runat="server"
                             ImageUrl="../../Images/icon-calendar.gif"
-                            onmouseup="GetDate('txtFechaInicial');">
+                            OnClientClick="return GetDate('txtFechaInicial');">
                         </asp:ImageButton>
 
                         <asp:RegularExpressionValidator
@@ -218,7 +218,7 @@
                             ID="imgFFinal"
                             runat="server"
                             ImageUrl="../../Images/icon-calendar.gif"
-                            onmouseup="GetDate('txtFechaFinal');">
+                            OnClientClick="return GetDate('txtFechaFinal');">
                         </asp:ImageButton>
 
                         <asp:RegularExpressionValidator

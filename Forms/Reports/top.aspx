@@ -183,7 +183,7 @@
 						</td>
 						<td>
 							<asp:textbox id="txtInitial" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"></asp:textbox>
-							<asp:image id="imgInitial" onmouseup="GetDate('txtInitial');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+							<asp:image id="imgInitial" OnClientClick="return GetDate('txtInitial');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image>
 						</td>
 						<td align="center">
@@ -191,7 +191,7 @@
 						</td>
 						<td>
 							<asp:textbox id="txtFinal" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"></asp:textbox>
-							<asp:image id="imgFinal" onmouseup="GetDate('txtFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+							<asp:image id="imgFinal" OnClientClick="return GetDate('txtFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Final Date"></asp:image>
 						</td>
 					</tr>

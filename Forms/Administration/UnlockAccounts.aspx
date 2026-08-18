@@ -314,7 +314,7 @@ function ConfirmOperation(Button)
                                             AlternateText="Liberar"
                                             CommandName="Release"
                                             ImageUrl="../../images/DELROW.GIF"
-                                            onmouseup="ConfirmOperation(this);"
+                                            OnClientClick="return ConfirmOperation(this);"
                                             CausesValidation="false">
                                         </asp:ImageButton>
                                     </ItemTemplate>

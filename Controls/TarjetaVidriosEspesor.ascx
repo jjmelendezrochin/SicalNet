@@ -1,17 +1,32 @@
-<%@ Control Language="c#" AutoEventWireup="false" Codebehind="TarjetaVidriosEspesor.ascx.cs" Inherits="UserInterface.Controls.TarjetaVidriosEspesor" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
+﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="TarjetaVidriosEspesor.ascx.cs" Inherits="UserInterface.Controls.TarjetaVidriosEspesor" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
 <HTML>
 	<HEAD>
 		<TITLE>MedidaGrid</TITLE>
 	</HEAD>
 	<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
 	<script language="javascript">
-function ConfirmOperation(Button,strOperationType)
-{
-	if (confirm("Esta seguro que desea "+strOperationType+" este registro?")) 
-		Button.click()
-			
-}
-	</script>
+        function ConfirmOperation(Button, strOperationType) {
+            if (Button._sicalConfirmado) {
+                Button._sicalConfirmado = false;
+                return true;
+            }
+
+            SicalAlert.confirmar(
+                "¿Está seguro que desea " +
+                strOperationType +
+                " este registro?",
+                "Confirmar operación",
+                function () {
+
+                    Button._sicalConfirmado = true;
+                    Button.click();
+
+                }
+            );
+
+            return false;
+        }
+    </script>
 	<asp:datagrid id="dgdEspesor" runat="server" Font-Names="Verdana" AutoGenerateColumns="False"
 		Font-Name="Verdana" FontSize="11px" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right"
 		Width="248px" Height="128px" Caption="Espesor" CaptionAlign="Left" BorderStyle="None" Font-Size="X-Small"

@@ -99,10 +99,10 @@
 						<td><asp:label id="Label2" CssClass="standard-text" Text="Fecha" Runat="server">Olla formulación en 1 paso:</asp:label></td>
 					<tr>
 						<td><asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" MaxLength="11" Width="86px"
-								BorderStyle="Groove"></asp:textbox><asp:image id="imgInitial" onmouseup="GetDate('txtFecha');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+								BorderStyle="Groove"></asp:textbox><asp:image id="imgInitial" OnClientClick="return GetDate('txtFecha');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image></td>
 						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" Width="86px"
-								BorderStyle="Groove"></asp:textbox><asp:image id="imgFinal" onmouseup="GetDate('txtFechaFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+								BorderStyle="Groove"></asp:textbox><asp:image id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image></td>
 						<td><asp:dropdownlist id="cboLinea" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboStatus" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
@@ -151,7 +151,7 @@
 									<TABLE style="BORDER-COLLAPSE: collapse" id="Table13" border="1" bgColor="#276187">
 										<TR>
 											<TD class="grid-header" width="12">
-												<asp:image style="CURSOR: hand" id="imgPlus" onmouseup="ShowHideAll(this.id)" Runat="server"
+												<asp:image style="CURSOR: hand" id="imgPlus" OnClientClick="return ShowHideAll(this.id)" Runat="server"
 													ImageUrl="../../Images/plusButton.JPG"></asp:image>
 												<asp:label id="sp" Runat="server" Width="13px"></asp:label></TD>
 											<TD class="grid-header">
@@ -186,7 +186,7 @@
 									<TABLE style="BORDER-COLLAPSE: collapse" border="1">
 										<TR>
 											<TD align="center">
-												<asp:image style="CURSOR: hand" id="jsPlus" onmouseup="ShowHide(this.id)" Runat="server" ImageUrl="../../Images/minusButton.JPG"
+												<asp:image style="CURSOR: hand" id="jsPlus" OnClientClick="return ShowHide(this.id)" Runat="server" ImageUrl="../../Images/minusButton.JPG"
 													Visible="False"></asp:image>
 												<asp:label id="spacer" CssClass="standard-text" Runat="server" Width="9px"></asp:label>
 												<asp:ImageButton id="aspPlus" runat="server" ImageUrl="../../Images/plusButton.JPG" Visible="False"

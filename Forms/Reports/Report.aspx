@@ -104,25 +104,25 @@
 				<asp:textbox style="Z-INDEX: 105; POSITION: absolute; TOP: 144px; LEFT: 656px" id="txtFechaInicial"
 					runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox>
 				<asp:imagebutton style="Z-INDEX: 106; POSITION: absolute; TOP: 144px; LEFT: 776px" id="imgFInicial"
-					onmouseup="GetDate('txtFechaInicial');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+					OnClientClick="return GetDate('txtFechaInicial');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 				<asp:label style="Z-INDEX: 107; POSITION: absolute; TOP: 192px; LEFT: 656px" id="lblFechaFinal"
 					runat="server" Width="142px" Height="22px" CssClass="standard-text"> Fecha Programa Final</asp:label>
 				<asp:textbox style="Z-INDEX: 108; POSITION: absolute; TOP: 216px; LEFT: 656px" id="txtFechaFinal"
 					runat="server" Width="119px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox>
 				<asp:imagebutton style="Z-INDEX: 109; POSITION: absolute; TOP: 216px; LEFT: 776px" id="imgFFinal"
-					onmouseup="GetDate('txtFechaFinal');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+					OnClientClick="return GetDate('txtFechaFinal');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 				<asp:label style="Z-INDEX: 110; POSITION: absolute; TOP: 128px; LEFT: 840px" id="lblLibInicial"
 					runat="server" Width="154px" Height="22px" CssClass="standard-text">Fecha Liberacion Inicial</asp:label>
 				<asp:textbox style="Z-INDEX: 111; POSITION: absolute; TOP: 144px; LEFT: 840px" id="txtLibInicial"
 					runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox>
 				<asp:imagebutton style="Z-INDEX: 112; POSITION: absolute; TOP: 144px; LEFT: 960px" id="imgLInicial"
-					onmouseup="GetDate('txtLibInicial');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+					OnClientClick="return GetDate('txtLibInicial');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 				<asp:label style="Z-INDEX: 113; POSITION: absolute; TOP: 192px; LEFT: 840px" id="lblLibFinal"
 					runat="server" Width="154px" Height="22px" CssClass="standard-text">Fecha Liberacion Final</asp:label>
 				<asp:textbox style="Z-INDEX: 114; POSITION: absolute; TOP: 216px; LEFT: 840px" id="txtLibFinal"
 					runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox>
 				<asp:imagebutton style="Z-INDEX: 115; POSITION: absolute; TOP: 216px; LEFT: 960px" id="imgLFinal"
-					onmouseup="GetDate('txtLibFinal');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+					OnClientClick="return GetDate('txtLibFinal');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 				<asp:button style="Z-INDEX: 116; POSITION: absolute; TOP: 256px; LEFT: 616px" id="cmdprint"
 					CssClass="botonesInput" Text="Imprimir" Runat="server"></asp:button>
 				<asp:label style="Z-INDEX: 117; POSITION: absolute; TOP: 392px; LEFT: 344px" id="lblErrMsg"

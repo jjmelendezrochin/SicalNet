@@ -1,20 +1,35 @@
-<%@ Control Language="c#" AutoEventWireup="false" Codebehind="TarjetaVidriosPlanimetria.ascx.cs" Inherits="UserInterface.Controls.TarjetaVidriosPlanimetria" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
+﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="TarjetaVidriosPlanimetria.ascx.cs" Inherits="UserInterface.Controls.TarjetaVidriosPlanimetria" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
 <HTML>
 	<HEAD>
 		<TITLE>MedidaGrid</TITLE>
 	</HEAD>
 	<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
 	<script language="javascript">
-function ConfirmOperation(Button,strOperationType)
-{
-	if (confirm("Esta seguro que desea "+strOperationType+" este registro?")) 
-		Button.click()
-			
-}
-	</script>
+        function ConfirmOperation(Button, strOperationType) {
+            if (Button._sicalConfirmado) {
+                Button._sicalConfirmado = false;
+                return true;
+            }
+
+            SicalAlert.confirmar(
+                "¿Está seguro que desea " +
+                strOperationType +
+                " este registro?",
+                "Confirmar operación",
+                function () {
+
+                    Button._sicalConfirmado = true;
+                    Button.click();
+
+                }
+            );
+
+            return false;
+        }
+    </script>
 	<asp:datagrid id="dgdEspesor" runat="server" Font-Names="Verdana" AutoGenerateColumns="False"
 		Font-Name="Verdana" FontSize="11px" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right"
-		Height="128px" Caption="Planimetr�a" CaptionAlign="Left" BorderStyle="None" Font-Size="X-Small"
+		Height="128px" Caption="Planimetría" CaptionAlign="Left" BorderStyle="None" Font-Size="X-Small"
 		BorderColor="#3366CC" BorderWidth="1px" BackColor="White" CellPadding="4" Width="48px">
 		<FooterStyle ForeColor="#003399" BackColor="#99CCCC"></FooterStyle>
 		<SelectedItemStyle Font-Bold="True" ForeColor="#CCFF99" BackColor="#009999"></SelectedItemStyle>

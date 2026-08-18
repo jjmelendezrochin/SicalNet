@@ -37,11 +37,11 @@
 	<TR>
 		<TD>
 			<asp:textbox id="txtFrom" Runat="server" CssClass="Standard-text" Width="100px" MaxLength="11"></asp:textbox>
-			<asp:image onmouseup="GetDate('ConsultPrgGridControl_txtFrom');" id="imgFrom" name="imgFrom" Runat="server"
+			<asp:image OnClientClick="return GetDate('ConsultPrgGridControl_txtFrom');" id="imgFrom" name="imgFrom" Runat="server"
 				ImageUrl="../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image></TD>
 		<TD>
 			<asp:textbox id="txtTo" Runat="server" CssClass="Standard-text" Width="100px" MaxLength="11"></asp:textbox>
-			<asp:image onmouseup="GetDate('ConsultPrgGridControl_txtTo');" id="imgTo" Runat="server" ImageUrl="../Images/icon-calendar.gif"
+			<asp:image OnClientClick="return GetDate('ConsultPrgGridControl_txtTo');" id="imgTo" Runat="server" ImageUrl="../Images/icon-calendar.gif"
 				AlternateText="Final Date"></asp:image></TD>
 		<TD>
 			<asp:dropdownlist id="cboIdLinea" Runat="server" CssClass="standard-text"></asp:dropdownlist></TD>
@@ -111,7 +111,7 @@
 						cellPadding="1" bgColor="#dedfde" border="1">
 						<TR>
 							<TD>
-								<asp:Image id="cmdExpand" onmouseup="ShowHide(this.id);" ImageUrl="../images/plusButton.jpg"
+								<asp:Image id="cmdExpand" OnClientClick="return ShowHide(this.id);" ImageUrl="../images/plusButton.jpg"
 									runat="server"></asp:Image></TD>
 							<TD>
 								<asp:CheckBox id="chkSelected" Width="20px" CssClass="standard-text" runat="server" ForeColor="White"></asp:CheckBox></TD>
