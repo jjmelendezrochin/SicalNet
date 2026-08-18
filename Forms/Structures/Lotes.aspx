@@ -6,16 +6,17 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
-		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
 
-		</script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="JavaScript">
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Lotes"
 			}
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
 
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
@@ -58,21 +59,21 @@
 								</tr>
 								<tr>
 									<td class="contenido" vAlign="top" width="192">
-										<TABLE class="tan-border" id="Table1" height="99" cellSpacing="12" cellPadding="0" width="171" border="0">
+										<TABLE  id="Table1" height="99" cellSpacing="12" cellPadding="0" width="171" border="0">
 											<TR vAlign="top">
 												<TD class="letraAzulBold" colSpan="2" height="13">Agregar un lote</TD>
 											</TR>
 											<TR>
 												<TD width="47"><asp:label id="Label2" runat="server" CssClass="standard-text" Width="51px">No Lote</asp:label></TD>
-												<td><asp:textbox id="txtNoLote" runat="server" CssClass="standard-text" Width="48px" MaxLength="6"></asp:textbox><asp:requiredfieldvalidator id="RequiredFieldValidatorNoLote" runat="server" ControlToValidate="txtNoLote" ErrorMessage="El número de Lote es un campo requerido">*</asp:requiredfieldvalidator><asp:rangevalidator id="RangeValidatorNoLote" runat="server" ControlToValidate="txtNoLote" ErrorMessage="RangeValidator" MaximumValue="999999" MinimumValue="1" Type="Integer">*</asp:rangevalidator></td>
+												<td><asp:textbox id="txtNoLote" runat="server" CssClass="standard-text" Width="100%" MaxLength="6"></asp:textbox><asp:requiredfieldvalidator id="RequiredFieldValidatorNoLote" runat="server" ControlToValidate="txtNoLote" ErrorMessage="El número de Lote es un campo requerido">*</asp:requiredfieldvalidator><asp:rangevalidator id="RangeValidatorNoLote" runat="server" ControlToValidate="txtNoLote" ErrorMessage="RangeValidator" MaximumValue="999999" MinimumValue="1" Type="Integer">*</asp:rangevalidator></td>
 											</TR>
 											<TR vAlign="top">
 												<TD width="47" height="19"><asp:label id="Label3" runat="server" CssClass="standard-text">Línea</asp:label></TD>
-												<td><asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text" Width="101px"></asp:dropdownlist></td>
+												<td><asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text" Width="100%"></asp:dropdownlist></td>
 											</TR>
 											<TR>
 												<TD width="47" height="22"><asp:label id="Label4" runat="server" CssClass="standard-text" Width="53px">Piezas</asp:label></TD>
-												<td><asp:textbox id="txtPiezas" runat="server" CssClass="standard-text" Width="48px" MaxLength="6"></asp:textbox><asp:requiredfieldvalidator id="RequiredFieldValidatorPiezas" runat="server" ControlToValidate="txtPiezas" ErrorMessage="El n�mero de Piezas es un campo requerido">*</asp:requiredfieldvalidator><asp:rangevalidator id="RangeValidatorPiezas" runat="server" ControlToValidate="txtPiezas" ErrorMessage="RangeValidator" MaximumValue="999999" MinimumValue="1" Type="Integer">*</asp:rangevalidator></td>
+												<td><asp:textbox id="txtPiezas" runat="server" CssClass="standard-text" Width="100%" MaxLength="6"></asp:textbox><asp:requiredfieldvalidator id="RequiredFieldValidatorPiezas" runat="server" ControlToValidate="txtPiezas" ErrorMessage="El n�mero de Piezas es un campo requerido">*</asp:requiredfieldvalidator><asp:rangevalidator id="RangeValidatorPiezas" runat="server" ControlToValidate="txtPiezas" ErrorMessage="RangeValidator" MaximumValue="999999" MinimumValue="1" Type="Integer">*</asp:rangevalidator></td>
 											</TR>
 											<TR>
 												<TD align="middle" colSpan="2"><asp:checkbox id="chkActivo" runat="server" CssClass="standard-text" Text="Activo"></asp:checkbox></TD>
@@ -81,8 +82,9 @@
 												<TD vAlign="center" align="middle" colSpan="2">
 													<TABLE id="Table2" cellSpacing="0" cellPadding="0" border="0">
 														<TR>
-															<td height="20"><asp:button id="cmdFProducto" runat="server" CssClass="botonesInput" Width="64px" Text="Agregar"></asp:button></td>
-															<TD height="20"><asp:button id="cmdCancelC" runat="server" CssClass="botonesInput" Width="64px" Text="Cancelar" CausesValidation="False"></asp:button></TD>
+															<td height="20" width="40%"><asp:button id="cmdFProducto" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar" OnClick="cmdFProducto_Click1"></asp:button></td>
+															<TD height="20" width="20%"></TD>
+															<TD height="20" width="40%"><asp:button id="cmdCancelC" runat="server" CssClass="botonesInput" Width="80px" Text="Cancelar" CausesValidation="False"></asp:button></TD>
 														</TR>
 													</TABLE>
 												</TD>
@@ -93,9 +95,11 @@
 									<td class="contenido" vAlign="top">
 										<P class="contenido" align="left"></P>
 										<P class="contenido" align="left">
-											<TABLE class="tan-border" id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171" border="0">
+											<TABLE  id="Table3" height="99" cellSpacing="12" cellPadding="0" width="300px" border="0">
 												<TR vAlign="top">
-													<TD><uc1:lotesgrid id="LotesGridControl" runat="server"></uc1:lotesgrid></TD>
+													<TD>
+														<uc1:lotesgrid id="LotesGridControl" runat="server"></uc1:lotesgrid>
+													</TD>
 												</TR>
 											</TABLE>
 										</P>

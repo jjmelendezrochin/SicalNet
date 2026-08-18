@@ -14,18 +14,18 @@ function ConfirmOperation(Button,strOperationType)
 	<asp:datagrid id="dgdFamiliaProductos" Width="550px" runat="server" Font-Names="Verdana" CellPadding="2"
 		AutoGenerateColumns="False" Font-Name="Verdana" FontSize="11px" AllowSorting="True" DataKeyField="IdFamiliaProductos"
 		BorderColor="White" BorderStyle="None" AllowPaging="True" PagerStyle-HorizontalAlign="Right"
-		PagerStyle-Mode="NumericPages">
+		PagerStyle-Mode="NumericPages" CssClass="GridView grid-header">
 		<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 		<Columns>
 			<asp:TemplateColumn HeaderText="Id">
-				<HeaderStyle HorizontalAlign="Center" Width="30px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+				<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="30px" CssClass="grid-first-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=lblIdFamiliadeProductos Width="30px" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdFamiliaProductos") %>' Runat="server">
+					<asp:label id=lblIdFamiliadeProductos Width="30px" CssClass="standard-text" Text='<%# DataBinder.Eval(Container, "DataItem.IdFamiliaProductos") %>' Runat="server">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:label id=EditFamiliadeProductosId Width="30px" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdFamiliaProductos") %>' Runat="server">
+					<asp:label id=EditFamiliadeProductosId Width="30px" CssClass="standard-text" Text='<%# DataBinder.Eval(Container, "DataItem.IdFamiliaProductos") %>' Runat="server">
 					</asp:label>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -33,11 +33,11 @@ function ConfirmOperation(Button,strOperationType)
 				<HeaderStyle HorizontalAlign="Center" Width="200px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="200px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemDescripcion CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server">
+					<asp:label id=ItemDescripcion CssClass="standard-text" Text='<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditDescripcion BorderStyle="Groove" runat="server" Width="100px" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' MaxLength="50">
+					<asp:textbox id=EditDescripcion BorderStyle="Groove" runat="server" Width="100px" CssClass="Standard-text" Text='<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' MaxLength="50">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -45,13 +45,13 @@ function ConfirmOperation(Button,strOperationType)
 				<HeaderStyle HorizontalAlign="Center" Width="200px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="200px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemTipoPMMAId CssClass="standard-text" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdTipoPMMA") %>' Visible="False">
+					<asp:label id=ItemTipoPMMAId CssClass="standard-text" Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.IdTipoPMMA") %>' Visible="False">
 					</asp:label>
-					<asp:label id=lblTipoPMMA CssClass="standard-text" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.DescPrepolimero") %>'>
+					<asp:label id=lblTipoPMMA CssClass="standard-text" Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.DescPrepolimero") %>'>
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:label id=lblTipoPMMAId CssClass="standard-text" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdTipoPMMA") %>' Visible="False">
+					<asp:label id=lblTipoPMMAId CssClass="standard-text" Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.IdTipoPMMA") %>' Visible="False">
 					</asp:label>
 					<asp:DropDownList id="cboTipoPMMA" Width="220" runat="server" CssClass="Standard-text"></asp:DropDownList>
 				</EditItemTemplate>
@@ -60,11 +60,11 @@ function ConfirmOperation(Button,strOperationType)
 				<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id="lblTempPre" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.TempPreseparcion") %>' CssClass="standard-text">
+					<asp:label id="lblTempPre" Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.TempPreseparcion") %>' CssClass="standard-text">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id="txtTempPre" BorderStyle="Groove" runat="server" Width="50px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.TempPreseparcion") %>' CssClass="Standard-text" MaxLength="8">
+					<asp:textbox id="txtTempPre" BorderStyle="Groove" runat="server" Width="50px" Text='<%# DataBinder.Eval(Container, "DataItem.TempPreseparcion") %>' CssClass="Standard-text" MaxLength="8">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -87,7 +87,11 @@ function ConfirmOperation(Button,strOperationType)
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 		</Columns>
-		<PagerStyle Font-Size="X-Small" HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
+		<PagerStyle
+			HorizontalAlign="Center"
+			Mode="NumericPages"
+			CssClass="grid-pager">
+		</PagerStyle>
 	</asp:datagrid></P>
 <INPUT id="ItemDescripcionhtml" name="ItemDescripcionhtml" type="hidden" runat="server">
 <P class="contenido" align="left"><asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label></P>

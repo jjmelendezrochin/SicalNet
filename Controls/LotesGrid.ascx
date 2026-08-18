@@ -19,30 +19,34 @@ function ConfirmOperation(Button,strOperationType)
 	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 	<table>
 		<tr>
-			<td width="47"><asp:label id="Label2" runat="server" CssClass="standard-text" Width="51px">No Lote</asp:label></td>
-			<td><asp:textbox id="txtNoLote" runat="server" CssClass="standard-text" Width="48px" MaxLength="6"></asp:textbox></td>
-			<td width="47" height="19"><asp:label id="Label3" runat="server" CssClass="standard-text">Línea</asp:label></td>
-			<td><asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text" Width="101px"></asp:dropdownlist></td>
-			<td><asp:Button id="aceptar" Text="Aceptar" Runat="server" CssClass="botonesInput" Width="64px"
+			<td width="30%" colspan="2">
+				<asp:label id="Label2" runat="server" CssClass="standard-text" Width="51px">No Lote</asp:label>
+				<asp:textbox id="txtNoLote" runat="server" CssClass="standard-text" Width="48px" MaxLength="6"></asp:textbox>
+			</td>
+			<td width="70%" colspan="3">
+				<asp:label id="Label3" runat="server" CssClass="standard-text">Línea</asp:label>
+				<asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text" Width="101px"></asp:dropdownlist>
+				<asp:Button id="aceptar" Text="Aceptar" Runat="server" CssClass="botonesInput" Width="80px"
 					CausesValidation="False"></asp:Button>
 			</td>
+			
 		</tr>
 		<tr>
 			<td colspan="5">
-				<asp:datagrid id="dgdLote" runat="server" Width="448px" Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
+				<asp:datagrid id="dgdLote" runat="server" Width="700px" Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
 					Font-Name="Verdana" FontSize="11px" AllowSorting="True" DataKeyField="NumeroLote" BorderColor="White"
-					BorderStyle="None" AllowPaging="True" PageSize="10" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right">
+					BorderStyle="None" AllowPaging="True" PageSize="10" PagerStyle-Mode="NumericPages" PagerStyle-HorizontalAlign="Right" CssClass="GridView grid-header">
 					<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 					<Columns>
 						<asp:TemplateColumn HeaderText="Número de Lote">
 							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="10px" CssClass="grid-first-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id=ItemNumeroLote Width="50px" CssClass="standard-text" Runat="server" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
+								<asp:label id=ItemNumeroLote Width="50px" CssClass="standard-text" Runat="server" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
 								</asp:label>
 							</ItemTemplate>
 							<EditItemTemplate>
-								<asp:label id=EditNumeroLote Width="50px" CssClass="standard-text" Runat="server" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
+								<asp:label id=EditNumeroLote Width="50px" CssClass="standard-text" Runat="server" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.NumeroLote") %>'>
 								</asp:label>
 							</EditItemTemplate>
 						</asp:TemplateColumn>
@@ -50,11 +54,11 @@ function ConfirmOperation(Button,strOperationType)
 							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="50px" CssClass="grid-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id=ItemLinea CssClass="standard-text" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdLinea") %>' Runat="server">
+								<asp:label id=ItemLinea CssClass="standard-text" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdLinea") %>' Runat="server">
 								</asp:label>
 							</ItemTemplate>
 							<EditItemTemplate>
-								<asp:label id="EditLinea" CssClass="standard-text" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdLinea") %>' Runat="server">
+								<asp:label id="EditLinea" CssClass="standard-text" Text='<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdLinea") %>' Runat="server">
 								</asp:label>
 							</EditItemTemplate>
 						</asp:TemplateColumn>
@@ -62,11 +66,11 @@ function ConfirmOperation(Button,strOperationType)
 							<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 							<ItemStyle Width="50px" CssClass="grid-item"></ItemStyle>
 							<ItemTemplate>
-								<asp:label id=ItemPiezas CssClass="standard-text" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container,"DataItem.Piezas") %>'>
+								<asp:label id=ItemPiezas CssClass="standard-text" Runat="server" Text='<%# DataBinder.Eval(Container,"DataItem.Piezas") %>'>
 								</asp:label>
 							</ItemTemplate>
 							<EditItemTemplate>
-								<asp:textbox id=EditPiezas BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container,"DataItem.Piezas") %>' MaxLength="50">
+								<asp:textbox id=EditPiezas BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='<%# DataBinder.Eval(Container,"DataItem.Piezas") %>' MaxLength="50">
 								</asp:textbox>
 							</EditItemTemplate>
 						</asp:TemplateColumn>
@@ -101,7 +105,11 @@ function ConfirmOperation(Button,strOperationType)
 							</EditItemTemplate>
 						</asp:TemplateColumn>
 					</Columns>
-					<PagerStyle HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
+					<PagerStyle
+						HorizontalAlign="Center"
+						Mode="NumericPages"
+						CssClass="grid-pager">
+					</PagerStyle>
 				</asp:datagrid>
 			</td>
 		</tr>

@@ -3,7 +3,11 @@
 <HTML>
 	<HEAD>
 		<title>FindMaterial</title>
-		<LINK href="..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 	</HEAD>
 	<body>
 		<form id="FindMaterial" method="post" runat="server">
@@ -13,19 +17,20 @@
 					</td>
 				</tr>
 				<TR vAlign="top">
-					<TD><asp:datagrid id="dgdFindMaterial" runat="server" ShowFooter="True" Width="550px" Font-Names="Verdana"
+					<TD>
+						<asp:datagrid id="dgdFindMaterial" runat="server" ShowFooter="True" Width="550px" Font-Names="Verdana"
 							CellPadding="2" AutoGenerateColumns="False" Font-Name="Verdana" FontSize="11px" AllowSorting="True"
-							BorderColor="White" BorderStyle="None">
+							BorderColor="White" BorderStyle="None" CssClass="GridView grid-header">
 							<Columns>
 								<asp:TemplateColumn Visible="False" HeaderText="Characteristic">
 									<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 									<ItemStyle Width="70px" CssClass="grid-first-item"></ItemStyle>
 									<ItemTemplate>
-										<asp:label id=lblCharCancel Width="130px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Characteristic") %>' Runat="server" Visible="true" CssClass="standard-text">
+										<asp:label id=lblCharCancel Width="130px" Text='<%# DataBinder.Eval(Container, "DataItem.Characteristic") %>' Runat="server" Visible="true" CssClass="standard-text">
 										</asp:label>
-										<asp:label id=lblEqualCancel Width="130px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Equal") %>' Runat="server" Visible="true" CssClass="standard-text">
+										<asp:label id=lblEqualCancel Width="130px" Text='<%# DataBinder.Eval(Container, "DataItem.Equal") %>' Runat="server" Visible="true" CssClass="standard-text">
 										</asp:label>
-										<asp:label id=lblIdEqual Width="130px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdEqual") %>' Runat="server" Visible="true" CssClass="standard-text">
+										<asp:label id=lblIdEqual Width="130px" Text='<%# DataBinder.Eval(Container, "DataItem.IdEqual") %>' Runat="server" Visible="true" CssClass="standard-text">
 										</asp:label>
 									</ItemTemplate>
 									<FooterStyle HorizontalAlign="Right"></FooterStyle>
@@ -34,7 +39,7 @@
 									<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 									<ItemStyle Width="70px" CssClass="grid-first-item"></ItemStyle>
 									<ItemTemplate>
-										<asp:label id=lblChar Width="130px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Characteristic") %>' Runat="server" Visible="true" CssClass="standard-text">
+										<asp:label id=lblChar Width="130px" Text='<%# DataBinder.Eval(Container, "DataItem.Characteristic") %>' Runat="server" Visible="true" CssClass="standard-text">
 										</asp:label>
 									</ItemTemplate>
 									<FooterStyle HorizontalAlign="Right"></FooterStyle>
@@ -50,7 +55,7 @@
 									<HeaderStyle HorizontalAlign="Center" Width="130px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 									<ItemStyle Width="130px" CssClass="grid-first-item"></ItemStyle>
 									<ItemTemplate>
-										<asp:label id=lblEqual Width="250px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Equal") %>' Runat="server" CssClass="standard-text">
+										<asp:label id=lblEqual Width="250px" Text='<%# DataBinder.Eval(Container, "DataItem.Equal") %>' Runat="server" CssClass="standard-text">
 										</asp:label>
 									</ItemTemplate>
 									<FooterStyle HorizontalAlign="Left"></FooterStyle>
@@ -93,7 +98,7 @@
 									<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 									<ItemStyle Width="30px" CssClass="grid-first-item"></ItemStyle>
 									<ItemTemplate>
-										<asp:label id=lblCodigo Width="60px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.CodigoSAP") %>' Runat="server" CssClass="standard-text">
+										<asp:label id=lblCodigo Width="60px" Text='<%# DataBinder.Eval(Container, "DataItem.CodigoSAP") %>' Runat="server" CssClass="standard-text">
 										</asp:label>
 									</ItemTemplate>
 								</asp:TemplateColumn>
@@ -101,7 +106,7 @@
 									<HeaderStyle HorizontalAlign="Center" Width="100px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 									<ItemStyle Width="100px" CssClass="grid-first-item"></ItemStyle>
 									<ItemTemplate>
-										<asp:label id=lblDesc Width="300px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server" CssClass="standard-text">
+										<asp:label id=lblDesc Width="300px" Text='<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' Runat="server" CssClass="standard-text">
 										</asp:label>
 									</ItemTemplate>
 								</asp:TemplateColumn>

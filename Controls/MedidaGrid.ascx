@@ -27,56 +27,57 @@ function ConfirmOperation(Button,strOperationType)
 			</TR>
 			<TR vAlign="top">
 				<TD height="1"></TD>
-				<TD rowSpan="2" colSpan="3"><asp:datagrid id="dgdMedida" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
+				<TD rowSpan="2" colSpan="3">
+					<asp:datagrid id="dgdMedida" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
 						AllowPaging="True" BorderStyle="None" BorderColor="White" DataKeyField="IdMedida" AllowSorting="True" FontSize="11px"
-						Font-Name="Verdana" AutoGenerateColumns="False" CellPadding="2" Font-Names="Verdana" Width="448px" runat="server">
+						Font-Name="Verdana" AutoGenerateColumns="False" CellPadding="2" Font-Names="Verdana" Width="700px" runat="server" CssClass="GridView grid-header">
 						<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 						<Columns>
 							<asp:TemplateColumn HeaderText="IdMedida">
-								<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+								<HeaderStyle HorizontalAlign="Center" Width="70px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 								<ItemStyle Width="10px" CssClass="grid-first-item"></ItemStyle>
 								<ItemTemplate>
-									<asp:label id=ItemIdMedida Width="50px" CssClass="standard-text" Runat="server" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdMedida") %>'>
+									<asp:label id=ItemIdMedida Width="60px" CssClass="standard-text" Runat="server" Text='<%#DataBinder.Eval(Container, "DataItem.IdMedida") %>'>
 									</asp:label>
 								</ItemTemplate>
 								<EditItemTemplate>
-									<asp:label id=EditIdMedida Width="50px" CssClass="standard-text" Runat="server" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.IdMedida") %>'>
+									<asp:label id=EditIdMedida Width="60px" CssClass="standard-text" Runat="server" Text='<%#DataBinder.Eval(Container, "DataItem.IdMedida") %>'>
 									</asp:label>
 								</EditItemTemplate>
 							</asp:TemplateColumn>
 							<asp:TemplateColumn HeaderText="Cent&#237;metros">
-								<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-								<ItemStyle Width="50px" CssClass="grid-item"></ItemStyle>
+								<HeaderStyle HorizontalAlign="Center" Width="80px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+								<ItemStyle Width="70px" CssClass="grid-item"></ItemStyle>
 								<ItemTemplate>
-									<asp:label id=ItemCentimetros CssClass="standard-text" Text='&nbsp;<%# &#13;&#13;&#10;DataBinder.Eval(Container, "DataItem.Centimetros") %>' Runat="server">
+									<asp:label id=ItemCentimetros CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Centimetros") %>' Runat="server">
 									</asp:label>
 								</ItemTemplate>
 								<EditItemTemplate>
-									<asp:textbox id=EditCentimetros BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, &#13;&#13;&#10;"DataItem.Centimetros") %>' MaxLength="50">
+									<asp:textbox id=EditCentimetros BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='<%# DataBinder.Eval(Container, "DataItem.Centimetros") %>' MaxLength="50">
 									</asp:textbox>
 								</EditItemTemplate>
 							</asp:TemplateColumn>
 							<asp:TemplateColumn HeaderText="Pulgadas">
-								<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-								<ItemStyle Width="50px" CssClass="grid-item"></ItemStyle>
+								<HeaderStyle HorizontalAlign="Center" Width="70px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+								<ItemStyle Width="70px" CssClass="grid-item"></ItemStyle>
 								<ItemTemplate>
-									<asp:label id=ItemPulgadas CssClass="standard-text" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, &#13;&#13;&#10;"DataItem.Pulgadas") %>'>
+									<asp:label id=ItemPulgadas CssClass="standard-text" Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Pulgadas") %>'>
 									</asp:label>
 								</ItemTemplate>
 								<EditItemTemplate>
-									<asp:textbox id=EditPulgadas BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, &#13;&#13;&#10;"DataItem.Pulgadas") %>' MaxLength="50">
+									<asp:textbox id=EditPulgadas BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='<%# DataBinder.Eval(Container, "DataItem.Pulgadas") %>' MaxLength="50">
 									</asp:textbox>
 								</EditItemTemplate>
 							</asp:TemplateColumn>
 							<asp:TemplateColumn HeaderText="Nominal">
-								<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-								<ItemStyle Width="50px" CssClass="grid-item"></ItemStyle>
+								<HeaderStyle HorizontalAlign="Center" Width="70px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+								<ItemStyle Width="70px" CssClass="grid-item"></ItemStyle>
 								<ItemTemplate>
-									<asp:label id=ItemNominal CssClass="standard-text" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, &#13;&#13;&#10;"DataItem.Nominal") %>'>
+									<asp:label id=ItemNominal CssClass="standard-text" Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Nominal") %>'>
 									</asp:label>
 								</ItemTemplate>
 								<EditItemTemplate>
-									<asp:textbox id=EditNominal BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, &#13;&#13;&#10;"DataItem.Nominal") %>' MaxLength="50">
+									<asp:textbox id=EditNominal BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='<%# DataBinder.Eval(Container, "DataItem.Nominal") %>' MaxLength="50">
 									</asp:textbox>
 								</EditItemTemplate>
 							</asp:TemplateColumn>
@@ -84,11 +85,11 @@ function ConfirmOperation(Button,strOperationType)
 								<HeaderStyle HorizontalAlign="Center" Width="50px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 								<ItemStyle Width="50px" CssClass="grid-item"></ItemStyle>
 								<ItemTemplate>
-									<asp:label id=ItemOtro CssClass="standard-text" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, &#13;&#13;&#10;"DataItem.Otro") %>'>
+									<asp:label id=ItemOtro CssClass="standard-text" Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Otro") %>'>
 									</asp:label>
 								</ItemTemplate>
 								<EditItemTemplate>
-									<asp:textbox id=EditOtro BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Otro") &#13;&#13;&#10;%>' MaxLength="50">
+									<asp:textbox id=EditOtro BorderStyle="Groove" Width="70" runat="server" CssClass="Standard-text" Text='<%# DataBinder.Eval(Container, "DataItem.Otro") %>' MaxLength="50">
 									</asp:textbox>
 								</EditItemTemplate>
 							</asp:TemplateColumn>
@@ -111,7 +112,11 @@ function ConfirmOperation(Button,strOperationType)
 								</EditItemTemplate>
 							</asp:TemplateColumn>
 						</Columns>
-						<PagerStyle HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
+						<PagerStyle
+							HorizontalAlign="Center"
+							Mode="NumericPages"
+							CssClass="grid-pager">
+						</PagerStyle>
 					</asp:datagrid></TD>
 			</TR>
 			<TR vAlign="top">

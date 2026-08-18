@@ -149,6 +149,9 @@ namespace UserInterface.Forms.Structures
 			}
 		}
 
+        protected void cmdFProducto_Click1(object sender, EventArgs e)
+        {
 
-	}
+        }
+    }
 }
