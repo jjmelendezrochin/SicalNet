@@ -91,3 +91,10 @@ Desktop.ini
 *.old
 *.orig
 *.userprefs
+
+bin/
+obj/
+.vs/
+*.dll
+*.pdb
+*.suo

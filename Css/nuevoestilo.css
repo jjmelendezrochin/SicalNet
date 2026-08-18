@@ -475,6 +475,7 @@ table {
     border-bottom: 1px solid #e1e7eb;
     color: #263746;
     background-color: #ffffff;
+    font-weight: normal;
 }
 
 
@@ -551,6 +552,7 @@ table {
     border: 0;
     border-bottom: 1px solid #e1e7eb;
     color: #263746;
+    font-weight: normal;
 }
 
 
@@ -1393,3 +1395,18 @@ button.btn-cancelar,
         border-color: #742D27 !important;
         box-shadow: none;
     }
+
+/* =========================================================
+   TEXTO NORMAL EN CONTENIDO DE GRIDS
+   ========================================================= */
+
+.grid td,
+.data-grid td,
+.dataGrid td,
+.GridView td,
+.grid-first-item,
+.grid-item,
+.grid-last-item,
+.grid-edit-column {
+    font-weight: normal;
+}
