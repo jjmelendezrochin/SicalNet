@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="ConsultProgramGrid.ascx.cs" Inherits="UserInterface.Controls.ConsultProgramGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
-<LINK href="..\styloDESC.CSS" type="text/css" rel="stylesheet">
+
 <script language="javascript">
 
 	function GetDate(CtrlName)        

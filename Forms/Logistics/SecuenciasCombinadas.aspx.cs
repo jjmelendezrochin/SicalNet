@@ -256,6 +256,10 @@ namespace UserInterface.Forms.Logistics
 			return (selectedItems>1);
 		}
 
-	}
+        protected void cmdConsultar_Click1(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
 

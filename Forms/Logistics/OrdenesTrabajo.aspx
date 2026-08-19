@@ -5,7 +5,11 @@
 	<HEAD>
 		<title>Generar Ordenes Trabajo</title>
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">
 		function showWaitControls()
 		{
@@ -78,11 +82,11 @@
 								</TR>
 								<TR>
 									<TD align="right">
-										<asp:Button id="cmdCreateWO" runat="server" Text="Generar Ordenes de Trabajo" CssClass="botonesInput" Width="165px"></asp:Button></TD>
+										<asp:Button id="cmdCreateWO" runat="server" Text="Generar Ordenes de Trabajo" CssClass="botonesInput" Width="210px"></asp:Button></TD>
 									<TD align="right">
 										<asp:Label id="Label2" runat="server" Width="10px" CssClass="standard-text"></asp:Label></TD>
 									<TD align="left">
-										<asp:Button id="cmdExit" runat="server" Text="Regresar" CssClass="botonesInput" Width="64px"></asp:Button></TD>
+										<asp:Button id="cmdExit" runat="server" Text="Regresar" CssClass="botonesInput" Width="80px"></asp:Button></TD>
 								</TR>
 								<TR>
 									<TD class="Normal" align="center" colSpan="4">

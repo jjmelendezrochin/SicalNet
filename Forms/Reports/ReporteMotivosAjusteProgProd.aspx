@@ -7,9 +7,14 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
-		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
+        <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+        <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+        <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+
 		<script language="javascript">		
             function GetDate(CtrlName) {
                 ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=270,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=yes,resizable=no");
