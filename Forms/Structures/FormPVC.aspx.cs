@@ -509,9 +509,13 @@ namespace UserInterface.Forms.Structures
 
 			return;
 		}
-		#endregion
 
 
+        #endregion
 
-	}
+        protected void imgSaveMessage_Click1(object sender, ImageClickEventArgs e)
+        {
+
+        }
+    }
 }

@@ -3,9 +3,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
-		<title>Confirmaci�n de Ajustes al Programa de Producci�n</title>
+		<title>Confirmación de Ajustes al Programa de Producci�n</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-		<LINK rel="stylesheet" type="text/css" href="../../styloDESC.CSS">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 	</HEAD>
 	<body leftMargin="0" topMargin="0" bgColor="#ffffff" text="#000000" marginwidth="0" marginheight="0"
 		ms_positioning="GridLayout">
@@ -23,7 +29,7 @@
 						<tr>
 							<td height="22" width="29"></td>
 							<td height="22" vAlign="middle">
-								<h3 align="center">Confirmaci�n de Acciones en Programa de Producci�n</h3>
+								<h3 align="center">Confirmación de Acciones en Programa de Producción</h3>
 							</td>
 						</tr>
 						<TR vAlign="top">
@@ -46,7 +52,7 @@
 											<TD colSpan="3"><asp:label id="lblLinea" runat="server" Height="17px" Width="112px"></asp:label><asp:label id="lblOperacion" runat="server" Height="17px" Width="104px" Visible="False"></asp:label></TD>
 										</TR>
 										<TR vAlign="top">
-											<TD width="199"><asp:label id="Label5" runat="server" Font-Bold="True" Height="16px" Width="136px">Operaci�n:</asp:label></TD>
+											<TD width="199"><asp:label id="Label5" runat="server" Font-Bold="True" Height="16px" Width="136px">Operación:</asp:label></TD>
 											<TD colSpan="3"><asp:label id="lblMensajeOperacion" runat="server" Height="17px" Width="296px"></asp:label></TD>
 										</TR>
 										<TR vAlign="top">
@@ -59,7 +65,7 @@
 											</TD>
 										</TR>
 										<TR vAlign="top">
-											<TD height="32" width="199"><asp:label id="Label3" runat="server" Font-Bold="True" Height="9px" Width="136px">Cat�logo de Motivo</asp:label>
+											<TD height="32" width="199"><asp:label id="Label3" runat="server" Font-Bold="True" Height="9px" Width="136px">Catálogo de Motivo</asp:label>
 												<asp:comparevalidator id="Comparevalidator1" runat="server" Font-Bold="True" CssClass="standard-text"
 													ValueToCompare="0" Operator="NotEqual" ErrorMessage="* Dato Requerido" ControlToValidate="cboMotivo"></asp:comparevalidator>
 											</TD>

@@ -9,8 +9,11 @@
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		
 		<script language="JavaScript">  
 			function GetDate(CtrlName)        
 			{   
@@ -57,14 +60,14 @@
 					<td><asp:label id="Label1" Text="Fecha" Runat="server" CssClass="standard-text">Línea Producción</asp:label></td>
 					<td></td>
 				<tr>
-					<td style="HEIGHT: 2px"><asp:textbox id="txtFecha" Runat="server" Width="77px" CssClass="Standard-text" BorderStyle="Groove"
+					<td style="HEIGHT: 2px"><asp:textbox id="txtFecha" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtFecha');" id="imgInitial" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 							AlternateText="Inicial Date"></asp:image></td>
-					<td style="HEIGHT: 2px"><asp:textbox id="txtFechaFinal" Runat="server" Width="77px" CssClass="Standard-text" BorderStyle="Groove"
+					<td style="HEIGHT: 2px"><asp:textbox id="txtFechaFinal" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtFechaFinal');" id="imgFinal" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 							AlternateText="Inicial Date"></asp:image></td>
 					<TD style="HEIGHT: 2px"><asp:dropdownlist id="cboLinea" Runat="server" CssClass="standard-text"></asp:dropdownlist></TD>
-					<td style="HEIGHT: 2px"><asp:button id="cmdConsultar" runat="server" Text="Consultar" CssClass="botonesInput"></asp:button></td>
+					<td style="HEIGHT: 2px"><asp:button id="cmdConsultar" runat="server" Text="Consultar" CssClass="botonesInput" OnClick="cmdConsultar_Click1"></asp:button></td>
 				</tr>
 				<TR>
 					<TD style="HEIGHT: 2px">
@@ -123,8 +126,12 @@
 									cellPadding="1" border="1">
 									<TR>
 										<TD>
-											<TABLE id="Table8" style="BORDER-COLLAPSE: collapse" borderColor="white" cellSpacing="1"
-												cellPadding="1" bgColor="#dedfde" border="1">
+											<TABLE id="Table8" style="BORDER-COLLAPSE: collapse" 
+												borderColor="white" 
+												cellSpacing="1"
+												cellPadding="1" 												
+												border="1"
+												CssClass="GridView grid-header">
 												<TR>
 													<TD>
 														<asp:CheckBox id="chkSelected" runat="server" CssClass="standard-text" Width="20px" ForeColor="White"></asp:CheckBox></TD>
@@ -165,11 +172,11 @@
 							</ItemTemplate>
 						</asp:datalist></TD>
 				</TR>
-				<TR>
-					<td colspan="2" style="WIDTH: 265px"></td>
-					<td colspan="2">
+				<TR>					
+					<td colspan="4" align="center">
 						<asp:Button id="cmdCombinar" runat="server" CssClass="botonesInput" Text="Combina Secuencias"
-							Width="124px" Visible="False" DESIGNTIMEDRAGDROP="99"></asp:Button></td>
+							Width="180px" Visible="False" DESIGNTIMEDRAGDROP="99"></asp:Button>
+					</td>
 				</TR>
 			</table>
 		</form>

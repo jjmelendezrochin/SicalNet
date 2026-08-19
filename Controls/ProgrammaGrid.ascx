@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="ProgrammaGrid.ascx.cs" Inherits="UserInterface.Controls.ProgrammaGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
-<LINK rel="stylesheet" type="text/css" href="../styloDESC.CSS">
+
 <meta name="vs_defaultClientScript" content="JavaScript">
 <script language="javascript">
 	
@@ -51,6 +51,11 @@ function ShowHide(CtrlName)
 	}				
 }
 </script>
+<style type="text/css">
+    .auto-style1 {
+        width: 660px;
+    }
+</style>
 <TABLE id="Table1" border="0">
 	<TBODY>
 		<TR vAlign="top">
@@ -66,8 +71,11 @@ function ShowHide(CtrlName)
 						<TD><asp:dropdownlist id="ddlLote" CssClass="standard-text" Runat="server"></asp:dropdownlist></TD>
 						<TD colSpan="2">
 							<center>
-								<asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" BorderStyle="Groove" Width="77px"
-									MaxLength="11"></asp:textbox><asp:image id="imgInitial" OnClientClick="return GetDate();" Runat="server" ImageUrl="../Images/icon-calendar.gif"
+								<asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" BorderStyle="Groove" 
+									Width="100px"
+									MaxLength="11">
+
+								</asp:textbox><asp:image id="imgInitial" OnClientClick="return GetDate();" Runat="server" ImageUrl="../Images/icon-calendar.gif"
 									AlternateText="Inicial Date"></asp:image><asp:regularexpressionvalidator id="revFecha" CssClass="standard-text" runat="server" ErrorMessage="Fecha incorrecta"
 									ControlToValidate="txtFecha" ValidationExpression="(^((31(?!-(feb|abr|jun|sep|nov)))|((30|29)(?!-feb?))|(29(?=-feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ene|feb|mar|may|abr|jul|jun|ago|oct|sep|nov|dic)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(FEB|ABR|JUN|SEP|NOV)))|((30|29)(?!-FEB?))|(29(?=-FEB?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ENE|FEB|MAR|MAY|ABR|JUL|JUN|AGO|OCT|SEP|NOV|DIC)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(Feb|Abr|Jun|Sep|Nov)))|((30|29)(?!-Feb?))|(29(?=-Feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(Ene|Feb|Mar|May|Abr|Jul|Jun|Ago|Oct|Sep|Nov|Dic)-((1[6-9]|[2-9]\d)\d{2})$)"
 									Display="Dynamic"></asp:regularexpressionvalidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -337,20 +345,21 @@ function ShowHide(CtrlName)
 									</TABLE>
 								</TD>
 							</TR>
-						</TABLE></TD>
+						</TABLE>
+					</TD>
 		</TR>
 	</TBODY>
 </TABLE>
 </ItemTemplate> </asp:datalist></TD></TR>
 <TR>
 	<TD colSpan="3" align="center">
-		<TABLE id="Table18" border="0" cellSpacing="1" cellPadding="1" width="50">
+		<TABLE id="Table18" border="0" cellSpacing="1" cellPadding="1" class="auto-style1">
 			<TR>
-				<TD><asp:button id="cmdAdd" CssClass="botonesInput" Text="Agregar Secuencia" Width="130px" runat="server"></asp:button></TD>
-				<TD><asp:button id="btnCancelarSecuencias" CssClass="botonesInput" Text="Borrar Secuencia(s)" Width="130px"
+				<TD width="25%"><asp:button id="cmdAdd" CssClass="botonesInput" Text="Agregar Secuencia" Width="180px" runat="server"></asp:button></TD>
+				<TD width="25%"><asp:button id="btnCancelarSecuencias" CssClass="botonesInput" Text="Borrar Secuencia(s)" Width="180px"
 						runat="server"></asp:button></TD>
-				<TD><asp:button id="cmdprint" CssClass="botonesInput" Text="Imprimir" Runat="server"></asp:button></TD>
-				<TD><asp:button id="cmdCancelar" CssClass="botonesInput" Text="Cancelar" Runat="server"></asp:button></TD>
+				<TD width="25%"><asp:button id="cmdprint" CssClass="botonesInput" Text="Imprimir" Runat="server"></asp:button></TD>
+				<TD width="25%"><asp:button id="cmdCancelar" CssClass="botonesInput" Text="Cancelar" Runat="server"></asp:button></TD>
 			</TR>
 		</TABLE>
 	</TD>

@@ -7,7 +7,10 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 		<script language="JavaScript">
 		<!--
 		<!--
@@ -65,7 +68,7 @@
 					<TR>
 						<TD class="contenido" width="21" height="131"></TD>
 						<TD class="contenido" width="700" height="131">
-							<TABLE class="tan-border" id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
+							<TABLE  id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
 								<TR vAlign="top">
 									<TD class="letraAzulBold" colSpan="4" height="13">Indique las características del 
 										producto</TD>
@@ -100,10 +103,12 @@
 								</TR>
 								<TR vAlign="top">
 									<TD></TD>
-									<TD></TD>
 									<TD>
 										<P align="right">
-											<asp:button id="cmdEditForm" runat="server" CssClass="botonesInput" Text="Aceptar"></asp:button></P>
+											<asp:button id="cmdEditForm" runat="server" CssClass="botonesInput" Text="Aceptar"></asp:button>
+										</P>
+									</TD>
+									<TD>										
 									</TD>
 									<TD>
 										<asp:button id="cmdCancelar" runat="server" CssClass="botonesInput" Text="Cancelar"></asp:button></TD>
@@ -116,7 +121,7 @@
 						<td class="contenido" width="21">&nbsp;</td>
 						<td class="contenido" width="700">
 							<DIV align="left">
-								<TABLE class="tan-border" id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
+								<TABLE  id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="2" height="13">
@@ -145,7 +150,7 @@
 						<td>&nbsp;</td>
 						<td>
 							<div align="left">
-								<TABLE class="tan-border" id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
+								<TABLE  id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="4" height="13">Agregue un componente a la 
@@ -182,7 +187,7 @@
 					<tr>
 						<td colspan="1">
 						<td>
-							<TABLE class="tan-border" id="ew" width="700" border="0">
+							<TABLE  id="ew" width="700" border="0">
 								<tr>
 									<td align="center">
 										<asp:button id="cmdSalir" runat="server" CssClass="botonesInput" Text="Salir" Visible="False"></asp:button>

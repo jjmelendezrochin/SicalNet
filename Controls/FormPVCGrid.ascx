@@ -23,10 +23,25 @@
     }
 
 </script>
-<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
-<P class="contenido" align="left"><asp:datagrid id="dgdFormPVC" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
-		AllowPaging="True" BorderStyle="None" BorderColor="White" DataKeyField="IdFamiliaProducto" AllowSorting="True" FontSize="11px"
-		Font-Name="Verdana" AutoGenerateColumns="False" CellPadding="2" Font-Names="Verdana" runat="server">
+
+<P class="contenido" align="left">
+	<asp:datagrid 
+		id="dgdFormPVC" 
+		PagerStyle-HorizontalAlign="Right" 
+		PagerStyle-Mode="NumericPages"
+		AllowPaging="True" 
+		BorderStyle="None" 
+		BorderColor="White" 
+		DataKeyField="IdFamiliaProducto" 
+		AllowSorting="True" 
+		FontSize="11px"
+		Font-Name="Verdana" 
+		AutoGenerateColumns="False" 
+		CellPadding="2" 
+		Font-Names="Verdana" 
+		runat="server" 
+		CssClass="GridView grid-users">
+
 		<HeaderStyle Font-Names="Verdana" CssClass="letraAzulBold"></HeaderStyle>
 		<Columns>
 			<asp:TemplateColumn HeaderText="Material">
@@ -56,11 +71,11 @@
 					VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="100px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemCantidad BorderStyle="None" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Cantidad") %>' CssClass="standard-text">
+					<asp:label id=ItemCantidad BorderStyle="None" Runat="server" Text='<%#DataBinder.Eval(Container, "DataItem.Cantidad") %>' CssClass="standard-text">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditCantidad Width="100" runat="server" BorderStyle="Groove" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Cantidad") %>' CssClass="Standard-text" MaxLength="50">
+					<asp:textbox id=EditCantidad Width="100" runat="server" BorderStyle="Groove" Text='<%#DataBinder.Eval(Container, "DataItem.Cantidad") %>' CssClass="Standard-text" MaxLength="50">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -69,7 +84,7 @@
 					VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="100px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemUnidad Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.DescUnidad") %>' CssClass="standard-text">
+					<asp:label id=ItemUnidad Runat="server" Text='<%#DataBinder.Eval(Container, "DataItem.DescUnidad") %>' CssClass="standard-text">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
@@ -83,7 +98,7 @@
 					VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="100px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id="Label1" Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.DescLinea") %>' CssClass="standard-text">
+					<asp:label id="Label1" Runat="server" Text='<%#DataBinder.Eval(Container, "DataItem.DescLinea") %>' CssClass="standard-text">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
@@ -112,7 +127,11 @@
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 		</Columns>
-		<PagerStyle HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
+		<PagerStyle
+		HorizontalAlign="Center"
+		Mode="NumericPages"
+		CssClass="grid-pager">
+		</PagerStyle>
 	</asp:datagrid></P>
 <P class="contenido" align="left"><asp:label id="lblErrorMsg" runat="server"></asp:label>
 	<asp:Label id="lblallowedit" runat="server" Visible="False">Label</asp:Label></P>

@@ -1,5 +1,4 @@
 ﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="FormColorGrid.ascx.cs" Inherits="UserInterface.Controls.FormColourGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
-<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
 <script language="javascript">
     function ConfirmOperation(Button, strOperationType) {
         if (Button._sicalConfirmado) {
@@ -27,7 +26,7 @@
 	<asp:datagrid id="dgdFormColor" BorderStyle="None" BorderColor="White" DataKeyField="IdColor"
 		AllowSorting="True" FontSize="11px" Font-Name="Verdana" AutoGenerateColumns="False" CellPadding="2"
 		Font-Names="Verdana" runat="server" Width="650px" AllowPaging="True" PageSize="10" PagerStyle-Mode="NumericPages"
-		PagerStyle-HorizontalAlign="Right">
+		PagerStyle-HorizontalAlign="Right" CssClass="GridView grid-users">
 		<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 		<Columns>
 			<asp:TemplateColumn HeaderText="Material">
@@ -57,11 +56,11 @@
 					VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="100px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemPorcentaje CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Porcentage","{0:N6}") %>' Runat="server">
+					<asp:label id=ItemPorcentaje CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Porcentage","{0:N6}") %>' Runat="server">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditPorcentaje Width="100" runat="server" CssClass="Standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Porcentage","{0:N6}") %>' MaxLength="50">
+					<asp:textbox id=EditPorcentaje Width="100" runat="server" CssClass="Standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Porcentage","{0:N6}") %>' MaxLength="50">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -70,11 +69,11 @@
 					VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="50px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemGrupo Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Grupo") %>' CssClass="standard-text">
+					<asp:label id=ItemGrupo Runat="server" Text='<%#DataBinder.Eval(Container, "DataItem.Grupo") %>' CssClass="standard-text">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditGrupo Width="50" runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Grupo") %>' CssClass="Standard-text" MaxLength="50">
+					<asp:textbox id=EditGrupo Width="50" runat="server" Text='<%#DataBinder.Eval(Container, "DataItem.Grupo") %>' CssClass="Standard-text" MaxLength="50">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>

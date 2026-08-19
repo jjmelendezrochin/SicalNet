@@ -7,7 +7,10 @@
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 		<script language="JavaScript">
 		<!--
@@ -31,7 +34,7 @@
 			window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de Aditivos"
 		}
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 		<!--onload="if ('<%= Session["errMsg"]%>' != '') alert('<%= Session["errMsg"]%>')"-->
 
 		<script type="text/javascript">document.addEventListener(
@@ -71,7 +74,7 @@
 					<TR>
 						<TD class="contenido" width="21" height="131"></TD>
 						<TD class="contenido" width="700" height="131">
-							<TABLE class="tan-border" id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
+							<TABLE  id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
 								<TR vAlign="top">
 									<TD class="letraAzulBold" colSpan="4" height="13">Seleccione el Color, Espesor, 
 										Línea y Planta</TD>
@@ -107,12 +110,12 @@
 								<TR vAlign="top">
 									<TD>
 										<P align="right">&nbsp;</P>
-									</TD>
-									<TD></TD>
+									</TD>									
 									<TD>
 										<P align="right">
 											<asp:button id="cmdEditForm" runat="server" CssClass="botonesInput" Text="Aceptar"></asp:button></P>
 									</TD>
+									<TD></TD>
 									<TD>
 										<asp:button id="cmdCancelar" runat="server" CssClass="botonesInput" Text="Cancelar"></asp:button></TD>
 								</TR>
@@ -123,8 +126,8 @@
 					<tr>
 						<td class="contenido" width="21">&nbsp;</td>
 						<td class="contenido" width="700">
-							<DIV align="left">
-								<TABLE class="tan-border" id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
+							<DIV align="center">
+								<TABLE  id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="2" height="13">
@@ -163,10 +166,9 @@
 						<td class="contenido" width="20">&nbsp;</td>
 					</tr>
 					<tr>
-						<td width="21">&nbsp;</td>
-						<td>
-							<div>
-								<TABLE class="tan-border" id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
+						<td colspan="3">
+							<div align="center">
+								<TABLE  id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="4" height="13">
@@ -197,7 +199,7 @@
 											<asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label></TD>
 										<TD width="122">
 											<P align="right">
-												<asp:button id="AddFormAditivos" runat="server" CssClass="botonesInput" Width="64px" Text="Agregar"
+												<asp:button id="AddFormAditivos" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar"
 													CausesValidation="False"></asp:button></P>
 										</TD>
 										<TD></TD>
@@ -205,20 +207,18 @@
 								</TABLE>
 							</div>
 						</td>
-						<TD>&nbsp;</TD>
+						
 					</tr>
 					<tr>
-						<td></td>
-						<td>
-							<TABLE class="tan-border" id="ew" width="700" border="0">
+						<td colspan="3">
+							<TABLE  id="ew" width="700" border="0">
 								<tr>
 									<td align="center">
 										<asp:button id="cmdSalir" runat="server" CssClass="botonesInput" Text="Salir" Visible="False"></asp:button>
 									</td>
 								</tr>
 							</TABLE>
-						</td>
-						<td></td>
+						</td>						
 					</tr>
 				</table>
 			</div>

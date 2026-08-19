@@ -41,17 +41,14 @@
 
 		<form id="OllasForm" method="post" runat="server">
 
-			<div>
-
+			<div align="center">
 				<table 
 					   cellSpacing="0"
-					   cellPadding="0"
-					   width="80%"
+					   cellPadding="0"					   
 					   border="0"
-					   style="width:100%; margin:0; padding:0;">
+					   width="800">
 
 					<TBODY>
-
 						<!-- MENÚ -->
 						<tr>
 							<td class="contenido">

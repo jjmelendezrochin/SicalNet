@@ -7,8 +7,13 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 
 		<script language="JavaScript">
 			function showWaitControls()
@@ -111,8 +116,12 @@
 						<TD align="center" colSpan="3"><asp:label id="lblErrMsg" runat="server" Font-Size="X-Small" Font-Bold="True" CssClass="standard-text"></asp:label></TD>
 					<tr>
 						<TD colSpan="3">
-							<asp:datagrid id="dgdPrograma" runat="server" Height="61px" Width="700px" Visible="False" AutoGenerateColumns="False"
-								AlternatingItemStyle-BackColor="Honeydew">
+							<asp:datagrid id="dgdPrograma" runat="server" 
+								Height="61px" Width="700px" Visible="False" 
+								AutoGenerateColumns="False"
+								AlternatingItemStyle-BackColor="Honeydew"
+								CssClass="GridView grid-header">
+
 								<AlternatingItemStyle BackColor="Honeydew"></AlternatingItemStyle>
 								<ItemStyle Height="40px"></ItemStyle>
 								<HeaderStyle Font-Bold="True" Height="50px" ForeColor="Blue" CssClass="grid-header" BackColor="GhostWhite"></HeaderStyle>
@@ -150,6 +159,12 @@
 										<FooterStyle HorizontalAlign="Center"></FooterStyle>
 									</asp:TemplateColumn>
 								</Columns>
+								<PagerStyle
+									HorizontalAlign="Center"
+									Mode="NumericPages"
+									CssClass="grid-pager">
+								</PagerStyle>
+
 							</asp:datagrid>
 						</TD>
 					</tr>

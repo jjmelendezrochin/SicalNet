@@ -57,9 +57,13 @@ namespace UserInterface.Controls
 			this.dgdFrmTemp.EditCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.dgdFrmTemp_EditCommand);
 			this.dgdFrmTemp.UpdateCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.dgdFrmTemp_UpdateCommand);
 			this.dgdFrmTemp.DeleteCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.dgdFrmTemp_DeleteCommand);
-			this.dgdFrmTemp.ItemDataBound += new System.Web.UI.WebControls.DataGridItemEventHandler(this.dgdFrmTemp_ItemDataBound);
-			this.Load += new System.EventHandler(this.Page_Load);
+			this.dgdFrmTemp.ItemDataBound += new System.Web.UI.WebControls.DataGridItemEventHandler(this.dgdFrmTemp_ItemDataBound);	
 
+			this.dgdFrmTemp.PageIndexChanged +=
+			new System.Web.UI.WebControls.DataGridPageChangedEventHandler(
+				this.dgdFrmTemp_PageIndexChanged
+			);
+			this.Load += new System.EventHandler(this.Page_Load);
 		}
 		#endregion
 
@@ -243,6 +247,20 @@ namespace UserInterface.Controls
 //			{
 //				throw;
 //			}
+		}
+
+		private void dgdFrmTemp_PageIndexChanged(
+		object source,
+		System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
+		{
+			// Cambiar a la página seleccionada
+			dgdFrmTemp.CurrentPageIndex = e.NewPageIndex;
+
+			// Salir del modo edición
+			dgdFrmTemp.EditItemIndex = -1;
+
+			// Volver a llenar el grid
+			BindGrid(System.Convert.ToBoolean(lblallowedit.Text));
 		}
 	}
 }

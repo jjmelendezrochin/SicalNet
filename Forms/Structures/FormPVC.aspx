@@ -7,9 +7,12 @@
 		<title>Guía de estilo</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<script language="JavaScript">
-		<!--
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+		<script language="JavaScript">		
 		<!--
 		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
 		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
@@ -28,7 +31,7 @@
 			window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de PVC"
 		}
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 	    <style type="text/css">
             .auto-style1 {
                 FONT-WEIGHT: bold;
@@ -36,7 +39,10 @@
                 COLOR: #003366;
                 FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
                 font-weight: bold;
-                height: 13px;
+                height: 12px;
+            }
+            .auto-style2 {
+                height: 30px;
             }
         </style>
 		<script type="text/javascript">document.addEventListener(
@@ -69,26 +75,26 @@
 					<tr>
 						<td height="14" width="21">&nbsp;</td>
 						<td height="14" width="700"><asp:label id="Label2" runat="server" CssClass="standard-text">En este módulo podrá definir y modificar las formulaciones de PVC para los distintos tipos de producto.</asp:label></td>
-						<td height="13" width="20">&nbsp;</td>
+						<td height="13" width="20"><p></p></td>
 					</tr>
 					<TR>
 						<TD class="contenido" height="131" width="21"></TD>
 						<TD class="contenido" height="131" width="700">
-							<TABLE id="Table1" class="tan-border" border="0" cellSpacing="12" cellPadding="0" width="700">
+							<TABLE id="Table1"  border="0" cellSpacing="12" cellPadding="0" width="700">
 								<TR vAlign="top">
-									<TD class="auto-style1" colSpan="4">Indique las características del 
+									<TD class="auto-style1" colSpan="4"><P></P>Indique las características del 
 										producto</TD>
 								</TR>
 								<TR vAlign="top">
-									<TD height="22">
+									<TD height="22" class="auto-style2">
 										<P align="right"><asp:label id="lblFproducto" runat="server" CssClass="standard-text">Familia de Producto:</asp:label></P>
 									</TD>
-									<TD height="22"><asp:dropdownlist id="cboIdFamiliaProducto" runat="server" CssClass="standard-text" Width="143px"></asp:dropdownlist></TD>
-									<TD height="22">
+									<TD height="22" class="auto-style2"><asp:dropdownlist id="cboIdFamiliaProducto" runat="server" CssClass="standard-text" Width="143px"></asp:dropdownlist></TD>
+									<TD height="22" class="auto-style2">
 										<P align="right">&nbsp;
 											<asp:label id="lblEspesor" runat="server" CssClass="standard-text">Espesor:</asp:label></P>
 									</TD>
-									<TD height="22"><asp:dropdownlist id="cboIdEspesor" runat="server" CssClass="standard-text" Width="143px"></asp:dropdownlist></TD>
+									<TD height="22" class="auto-style2"><asp:dropdownlist id="cboIdEspesor" runat="server" CssClass="standard-text" Width="143px"></asp:dropdownlist></TD>
 								</TR>
 								<TR vAlign="top">
 									<TD height="22">
@@ -115,11 +121,13 @@
 								</TR>
 								<TR vAlign="top">
 									<TD></TD>
-									<TD></TD>
 									<TD>
 										<P align="right"><asp:button id="cmdEditForm" runat="server" CssClass="botonesInput" Text="Aceptar"></asp:button></P>
 									</TD>
-									<TD><asp:button id="cmdCancelar" runat="server" CssClass="botonesInput" Text="Cancelar"></asp:button></TD>
+									<TD></TD>
+									<TD>
+										<asp:button id="cmdCancelar" runat="server" CssClass="botonesInput" Text="Cancelar"></asp:button>
+									</TD>
 								</TR>
 							</TABLE>
 						</TD>
@@ -129,7 +137,7 @@
 						<td class="contenido" width="21">&nbsp;</td>
 						<td class="contenido" width="700">
 							<DIV align="left">
-								<TABLE id="tableComponents" class="tan-border" border="0" cellSpacing="12" cellPadding="0"
+								<TABLE id="tableComponents"  border="0" cellSpacing="12" cellPadding="0"
 									width="700" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" height="13" colSpan="2">
@@ -139,7 +147,7 @@
 									<TR>
 										<TD>
 											<P align="left"><asp:label id="Label1" runat="server" CssClass="standard-text">Mensaje:</asp:label><asp:textbox id="txtMensajePiso" runat="server" CssClass="standard-text" Width="585px"></asp:textbox><asp:imagebutton id="imgSaveMessage" runat="server" AlternateText="Save" CommandName="Save" NAME="imgSave"
-													CausesValidation="False" ImageUrl="../../images/icon-floppy.gif"></asp:imagebutton></P>
+													CausesValidation="False" ImageUrl="../../images/icon-floppy.gif" OnClick="imgSaveMessage_Click1"></asp:imagebutton></P>
 										</TD>
 										<TD></TD>
 									</TR>
@@ -158,7 +166,7 @@
 						<td class="contenido" width="21">&nbsp;</td>
 						<td class="contenido" width="700">
 							<div align="center">
-								<TABLE id="tableNewComponents" class="tan-border" border="0" cellSpacing="12" cellPadding="0"
+								<TABLE id="tableNewComponents"  border="0" cellSpacing="12" cellPadding="0"
 									width="700" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" height="13" colSpan="2">Agregue un componente a la 
@@ -196,7 +204,7 @@
 					<tr>
 						<td>
 						<td>
-							<TABLE id="ew" class="tan-border" border="0" width="700">
+							<TABLE id="ew"  border="0" width="700">
 								<tr>
 									<td align="center"><asp:button id="cmdSalir" runat="server" CssClass="botonesInput" Text="Salir" Visible="False"></asp:button></td>
 								</tr>
