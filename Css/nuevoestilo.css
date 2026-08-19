@@ -1459,3 +1459,519 @@ button.btn-cancelar,
             border-color: #06385d;
         }
 
+/* =========================================================
+   ICONO DE EDICIÒN
+   ========================================================= */
+
+.grid-edit-button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 4px;
+    vertical-align: middle;
+}
+
+    .grid-edit-button:hover {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+
+
+
+/* =========================================
+   PANEL AJUSTE DE TANQUE
+   ========================================= */
+
+.panel-ajuste-tanque {
+    margin: 20px auto 0 auto;
+    border: 1px solid #d7e1e8;
+    border-radius: 6px;
+    background: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Encabezado */
+
+.panel-ajuste-header {
+    background: #075a86;
+    color: #ffffff;
+    padding: 11px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 3px solid #f15c31;
+}
+
+
+/* Contenido */
+
+.panel-ajuste-body {
+    padding: 20px;
+}
+
+
+/* Tanque seleccionado */
+
+.ajuste-row {
+    display: flex;
+    align-items: center;
+    padding: 11px 14px;
+    margin-bottom: 18px;
+    background: #f3f7fa;
+    border: 1px solid #dce6ec;
+    border-radius: 4px;
+}
+
+.ajuste-label {
+    width: 180px;
+    color: #455560;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.ajuste-value {
+    flex: 1;
+}
+
+.ajuste-dato-destacado {
+    color: #075a86;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* Dos columnas */
+
+.ajuste-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 18px;
+    margin-bottom: 18px;
+}
+
+
+/* Campo */
+
+.ajuste-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.ajuste-field-full {
+    margin-top: 4px;
+}
+
+.ajuste-field-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #344b5c;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Datos actuales */
+
+.ajuste-dato-actual {
+    min-height: 34px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    background: #f4f6f8;
+    border: 1px solid #d9e0e5;
+    border-radius: 4px;
+    color: #263746;
+    font-weight: bold;
+}
+
+.ajuste-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+    .ajuste-cantidad .ajuste-dato-actual {
+        flex: 1;
+    }
+
+.ajuste-unidad {
+    color: #66757f;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Inputs */
+
+.ajuste-control {
+    width: 100%;
+    height: 36px;
+    padding: 6px 9px;
+    box-sizing: border-box;
+    border: 1px solid #bccbd5;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #263746;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+    .ajuste-control:focus {
+        border-color: #075a86;
+        box-shadow: 0 0 0 2px rgba(7, 90, 134, 0.12);
+    }
+
+.ajuste-textarea {
+    height: 70px;
+    resize: vertical;
+}
+
+
+/* Botones */
+
+.ajuste-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8ec;
+}
+
+.boton-aceptar {
+    background: #075a86 !important;
+    color: #ffffff !important;
+}
+
+    .boton-aceptar:hover {
+        background: #06385d !important;
+    }
+
+.boton-cancelar {
+    background: #6c757d !important;
+    color: #ffffff !important;
+}
+
+    .boton-cancelar:hover {
+        background: #545b62 !important;
+    }
+
+
+/* Mensajes */
+
+.ajuste-error {
+    display: block;
+    margin-top: 12px;
+    color: #c62828;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   AJUSTE DE TANQUE
+   ========================================================= */
+
+.panel-ajuste-tanque {
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Encabezado */
+
+.tabla-ajuste-titulo {
+    border-collapse: collapse;
+    background: #075a86;
+    border-radius: 5px 5px 0 0;
+}
+
+    .tabla-ajuste-titulo td {
+        padding: 11px 15px;
+        border-bottom: 3px solid #f15c31;
+    }
+
+.titulo-ajuste-tanque {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* Tabla principal */
+
+.tabla-ajuste {
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-left: 1px solid #d6e0e6;
+    border-right: 1px solid #d6e0e6;
+    border-bottom: 1px solid #d6e0e6;
+}
+
+    .tabla-ajuste td {
+        padding: 10px 12px;
+        border-bottom: 1px solid #e5ebef;
+        vertical-align: middle;
+    }
+
+    .tabla-ajuste tr:last-child td {
+        border-bottom: 0;
+    }
+
+
+/* Etiquetas */
+
+.celda-etiqueta {
+    width: 155px;
+    background: #f4f7f9;
+}
+
+.etiqueta-ajuste {
+    color: #344b5c;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Datos actuales */
+
+.celda-dato,
+.celda-dato-destacado {
+    background: #ffffff;
+}
+
+.dato-actual {
+    color: #263746;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dato-destacado {
+    color: #075a86;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.unidad-ajuste {
+    margin-left: 5px;
+    color: #657681;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+/* Controles */
+
+.celda-control {
+    background: #ffffff;
+}
+
+.control-ajuste {
+    width: 100%;
+    height: 34px;
+    box-sizing: border-box;
+    padding: 5px 8px;
+    border: 1px solid #b9c8d2;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #263746;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    .control-ajuste:focus {
+        outline: none;
+        border-color: #075a86;
+        box-shadow: 0 0 0 2px rgba(7, 90, 134, 0.12);
+    }
+
+.textarea-ajuste {
+    height: 58px;
+    resize: vertical;
+}
+
+.celda-etiqueta-superior {
+    vertical-align: top !important;
+    padding-top: 13px !important;
+}
+
+
+/* Tabla de botones */
+
+.tabla-ajuste-botones {
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+    .tabla-ajuste-botones td {
+        padding: 6px;
+    }
+
+
+/* Botones */
+
+.boton-aceptar {
+    min-width: 95px;
+    background: #075a86 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 4px;
+    padding: 7px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+    .boton-aceptar:hover {
+        background: #06385d !important;
+    }
+
+.boton-cancelar {
+    min-width: 95px;
+    background: #6b7780 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 4px;
+    padding: 7px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+    .boton-cancelar:hover {
+        background: #515b62 !important;
+    }
+
+
+/* Error */
+
+.celda-mensaje-error {
+    padding-top: 8px !important;
+}
+
+.mensaje-error-ajuste {
+    display: block;
+    color: #c62828;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+.tabla-ajuste {
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border: 1px solid #d6e0e6;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    .tabla-ajuste td {
+        padding: 10px 12px;
+        border-bottom: 1px solid #e5ebef;
+        vertical-align: middle;
+    }
+
+    .tabla-ajuste tr:last-child td {
+        border-bottom: 0;
+    }
+
+
+/* Barra superior */
+
+.tabla-ajuste-encabezado {
+    height: 5px;
+    padding: 0 !important;
+    background: #075a86;
+    border-bottom: 3px solid #f15c31 !important;
+}
+
+
+/* Etiquetas */
+
+.celda-etiqueta {
+    width: 18%;
+    background: #f4f7f9;
+}
+
+.etiqueta-ajuste {
+    color: #344b5c;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Celdas de controles */
+
+.celda-control {
+    width: 32%;
+    background: #ffffff;
+}
+
+
+/* ComboBox y TextBox */
+
+.control-ajuste {
+    width: 100%;
+    height: 34px;
+    padding: 5px 8px;
+    box-sizing: border-box;
+    border: 1px solid #b9c8d2;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #263746;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+    .control-ajuste:focus {
+        border-color: #075a86;
+        box-shadow: 0 0 0 2px rgba(7, 90, 134, 0.12);
+    }
+
+
+
+
+.tabla-ajuste-titulo {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid #d6e0e6;
+}
+
+
+    /* Encabezado azul con línea naranja */
+
+    .tabla-ajuste-titulo thead td {
+        padding: 11px 15px;
+        background: #075a86;
+        border-bottom: 3px solid #f15c31;
+    }
+
+
+    /* Renglones normales */
+
+    .tabla-ajuste-titulo tbody td {
+        padding: 10px 12px;
+        border-bottom: 1px solid #e5ebef;
+        vertical-align: middle;
+    }
+
+
+    /* Última fila */
+
+    .tabla-ajuste-titulo tbody tr:last-child td {
+        border-bottom: 0;
+    }
+
+
+.titulo-ajuste-tanque {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}

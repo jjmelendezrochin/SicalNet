@@ -19,12 +19,12 @@
 
             var xhr =
                 new XMLHttpRequest();
-
+            /*
             console.log(
                 "Página actual = " +
                 window.location.href
             );
-
+            */
 
             // ==========================================
             // DETERMINAR RAÍZ DE LA APLICACIÓN
@@ -68,11 +68,12 @@
                 }
             }
 
-
+            /*
             console.log(
                 "SicalAppPath = " +
                 appPath
             );
+            */
 
 
             // ==========================================
@@ -82,11 +83,11 @@
             var menuDataUrl =
                 appPath +
                 "MenuData.aspx";
-
+            /*
             console.log(
                 "MenuData URL = " +
                 menuDataUrl
-            );
+            );*/
 
 
             xhr.open(

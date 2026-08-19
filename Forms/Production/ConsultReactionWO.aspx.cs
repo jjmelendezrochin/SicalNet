@@ -48,30 +48,32 @@ namespace UserInterface.Forms.Production
 				BindEntryFields();
 				string tmpInit = (string) Session["InitialDate"];
 				string tmpFin = (string) Session["FinalDate"];
+				
+
 				if (tmpInit == null || tmpFin ==null)
-				{				
-					String sFechaIni = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
-					String sFechaFin = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
+				{
+					string fechaActual = DateTime.Now
+						.ToString("dd-MMM-yyyy")
+						.Replace(".", "")
+						.ToLower();
 
-					txtFechaInicial.Text = sFechaIni.Replace(".","");
-					txtFechaFinal.Text = sFechaFin.Replace(".","");
-
-					// txtFechaInicial.Text=System.DateTime.Now.ToString("dd-MMM-yyyy");
-					// txtFechaFinal.Text=System.DateTime.Now.ToString("dd-MMM-yyyy");
+					txtFechaInicial.Text = fechaActual;
+					txtFechaFinal.Text = fechaActual;
 				}
 				else
 				{
-					String sFechaIni = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
-					String sFechaFin = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
-
-					txtFechaInicial.Text=sFechaIni.Replace(".","");
-					txtFechaFinal.Text=sFechaFin.Replace(".","");
-
-					//txtFechaInicial.Text=tmpInit.Replace(".","");
-					//txtFechaFinal.Text=tmpFin.Replace(".","");
-
+					txtFechaInicial.Text = tmpInit;
+					txtFechaFinal.Text = tmpFin;
 				}
-				BindGrid(txtFechaInicial.Text,txtFechaFinal.Text,Convert.ToInt32(cboLinea.SelectedItem.Value),Convert.ToInt32(cboStatus.SelectedItem.Value));
+
+				dgdOTReaccion.CurrentPageIndex = 0;
+
+				BindGrid(
+					txtFechaInicial.Text,
+					txtFechaFinal.Text,
+					Convert.ToInt32(cboLinea.SelectedItem.Value),
+					Convert.ToInt32(cboStatus.SelectedItem.Value)
+				);
 			}
 		}
 
@@ -93,6 +95,7 @@ namespace UserInterface.Forms.Production
 		{    
 			this.cmdGo.Click += new System.EventHandler(this.cmdGo_Click);
 			this.dgdOTReaccion.SelectedIndexChanged += new System.EventHandler(this.dgdOTReaccion_SelectedIndexChanged);
+			this.dgdOTReaccion.PageIndexChanged += new System.Web.UI.WebControls.DataGridPageChangedEventHandler(this.dgdOTReaccion_PageIndexChanged);
 			this.Load += new System.EventHandler(this.Page_Load);
 
 		}
@@ -225,11 +228,17 @@ namespace UserInterface.Forms.Production
 
 		private void cmdGo_Click(object sender, System.EventArgs e)
 		{
-			string FechaInicial = txtFechaInicial.Text;
-			string FechaFinal = txtFechaFinal.Text;
-			int IdLinea = Convert.ToInt32(cboLinea.SelectedItem.Value);
-			int IdStatus = Convert.ToInt32(cboStatus.SelectedItem.Value);
-			BindGrid(FechaInicial, FechaFinal, IdLinea, IdStatus);
+
+			// Siempre regresar a la primera página
+			// cuando se realiza una nueva consulta.
+			dgdOTReaccion.CurrentPageIndex = 0;
+
+			BindGrid(
+				txtFechaInicial.Text,
+				txtFechaFinal.Text,
+				Convert.ToInt32(cboLinea.SelectedItem.Value),
+				Convert.ToInt32(cboStatus.SelectedItem.Value)
+			);
 		}
 
 		private void dgdOTReaccion_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -244,6 +253,19 @@ namespace UserInterface.Forms.Production
 				+ "&IdLinea=" + IdLinea 
 				+ "&LineaDesc=" + LineaDesc 
 				+ "&IdOrdenTrabajo=" + IdOrdenTrabajo );
+		}
+
+		private void dgdOTReaccion_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
+		{
+			dgdOTReaccion.CurrentPageIndex = e.NewPageIndex;
+
+			BindGrid(
+				txtFechaInicial.Text,
+				txtFechaFinal.Text,
+				Convert.ToInt32(cboLinea.SelectedItem.Value),
+				Convert.ToInt32(cboStatus.SelectedItem.Value)
+			);
+
 		}
 	}
 }

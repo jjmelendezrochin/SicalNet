@@ -9,8 +9,11 @@
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -72,9 +75,23 @@
 						<TD></TD>
 					</TR>
 					<tr>
-						<td colSpan="5"><asp:datagrid id="dgdOTReaccion" runat="server" Font-Names="Verdana" BorderStyle="None" Width="700px"
-								BorderColor="White" DataKeyField="IdOrdenTrabajo" AllowSorting="True" FontSize="11px" Font-Name="Verdana"
-								AutoGenerateColumns="False" CellPadding="2">
+						<td colSpan="5" align="center">
+							<br />
+							<asp:datagrid id="dgdOTReaccion" 
+								runat="server" 
+								Font-Names="Verdana" 
+								BorderStyle="None" Width="700px"
+								BorderColor="White" 
+								DataKeyField="IdOrdenTrabajo" 
+								AllowSorting="True" 
+								FontSize="11px" 								
+								AutoGenerateColumns="False" 
+								CellPadding="2"								
+								AllowPaging="True"
+								PagerStyle-Mode="NumericPages"
+								PagerStyle-HorizontalAlign="Right"
+								CssClass="GridView grid-header">
+
 								<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 								<Columns>
 									<asp:TemplateColumn HeaderText="Fecha">
@@ -113,12 +130,33 @@
 											</asp:label>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:ButtonColumn Text="Consultar" HeaderText="Consultar" CommandName="Select">
-										<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle CssClass="grid-item"></ItemStyle>
-									</asp:ButtonColumn>
+									<asp:TemplateColumn HeaderText="Editar">
+                                    <HeaderStyle
+                                        HorizontalAlign="Center"
+                                        Width="8%"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle"></HeaderStyle>
+                                    <ItemStyle CssClass="grid-edit-column"></ItemStyle>
+                                    <ItemTemplate>
+                                        <asp:ImageButton
+                                            ID="Imagebutton5"
+                                            runat="server"
+                                            CausesValidation="false"
+                                            ImageUrl="../../images/icon-pencil.gif"
+                                            NAME="Imagebutton1"
+                                            CommandName="Select"
+                                            AlternateText="Editar"
+                                            ToolTip="Ajustar tanque"></asp:ImageButton>
+                                    </ItemTemplate>
+                                </asp:TemplateColumn>									
 								</Columns>
-							</asp:datagrid></td>
+								<PagerStyle
+									HorizontalAlign="Center"
+									Mode="NumericPages"
+									CssClass="grid-pager">
+								</PagerStyle>
+							</asp:datagrid>
+						</td>
 					</tr>
 				</TBODY>
 			</table>

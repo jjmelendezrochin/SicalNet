@@ -4,22 +4,24 @@
 <HTML>
 	<HEAD>
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 	<script language="javascript">	
 		function ShowTitle()
 		{
 				window.frames["top"].document.title = "SICAL  - Consultar Programa de Producción"
 		}
+	</script>	
+	<script type="text/javascript">document.addEventListener(
+			"DOMContentLoaded",
+			function () {
+				SicalMenu.init("sicalMenu");
+			}
+		);
 	</script>
-	<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
-		<script type="text/javascript">document.addEventListener(
-				"DOMContentLoaded",
-				function () {
-					SicalMenu.init("sicalMenu");
-				}
-			);
-		</script>
 	</HEAD>
 
 	<body text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0" marginwidth="0" marginheight="0"

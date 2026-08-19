@@ -36,7 +36,7 @@ function ConfirmOperation(Button,strOperationType)
 					window.frames["top"].document.title = "SICAL  - Administración - Catálogo de Perfiles"
 			}	
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 
 		<script type="text/javascript">
             document.addEventListener(
@@ -115,10 +115,13 @@ function ConfirmOperation(Button,strOperationType)
 										<ItemStyle CssClass="grid-edit-column"></ItemStyle>
 										<ItemTemplate>
 											<asp:imagebutton id="Imagebutton5" runat="server" CausesValidation="false" ImageUrl="../../images/icon-pencil.gif"
-												NAME="Imagebutton1" CommandName="Edit" AlternateText="Edit"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
+												NAME="Imagebutton1" CommandName="Edit" AlternateText="Edit">
+											</asp:imagebutton>
+												<IMG src="images/spacer.gif" width="3">
 											<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id="Imagebutton6" Runat="server"
 												CausesValidation="False" ImageUrl="../../images/icon-delete.gif" NAME="Imagebutton2" CommandName="Delete"
-												AlternateText="Delete"></asp:imagebutton>
+												AlternateText="Delete">
+											</asp:imagebutton>
 										</ItemTemplate>
 									</asp:TemplateColumn>
 								</Columns>
