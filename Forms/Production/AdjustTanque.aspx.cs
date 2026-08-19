@@ -154,10 +154,6 @@ namespace UserInterface.Forms.Production
 			}
 			catch
 			{
-//				lblErrorMsg.Text=ex.Message;
-//				Page.RegisterStartupScript("focus", "<script language='JavaScript'>"+
-//					"AdjustTanque." + txtCantFin2.ClientID + ".focus();"+
-//					"<" + "/script>");
 
 				throw;
 			}

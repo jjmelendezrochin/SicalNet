@@ -142,3 +142,4 @@ C:\inetpub\wwwroot\SicalNET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatfo
 C:\inetpub\wwwroot\SicalNET\obj\Debug\UserInterface.csproj.CopyComplete
 C:\inetpub\wwwroot\SicalNET\obj\Debug\UserInterface.dll
 C:\inetpub\wwwroot\SicalNET\obj\Debug\UserInterface.pdb
+C:\inetpub\wwwroot\SicalNET\obj\Debug\UserInterface.Forms.Production.ConsultReactionWO1.resources
