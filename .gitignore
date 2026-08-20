@@ -95,6 +95,8 @@ Desktop.ini
 bin/
 obj/
 .vs/
+
 *.dll
 *.pdb
+*.cache
 *.suo
