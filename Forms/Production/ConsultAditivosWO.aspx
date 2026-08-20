@@ -8,9 +8,12 @@
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 		<asp:literal id="ltrRefresh" runat="server"></asp:literal>
-		<link rel="Stylesheet" type="text/css" href="/SicalNet/Css/sical-menu.css" />
-		<script type="text/javascript" src="/SicalNet/Scripts/sical-menu.js"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -98,10 +101,10 @@
 						<td><asp:label id="Status" CssClass="standard-text" Text="Status" Runat="server">Status</asp:label></td>
 						<td><asp:label id="Label2" CssClass="standard-text" Text="Fecha" Runat="server">Olla formulación en 1 paso:</asp:label></td>
 					<tr>
-						<td><asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" MaxLength="11" Width="86px"
+						<td><asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" MaxLength="11" Width="96px"
 								BorderStyle="Groove"></asp:textbox><asp:image id="imgInitial" OnClientClick="return GetDate('txtFecha');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image></td>
-						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" Width="86px"
+						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" Width="96px"
 								BorderStyle="Groove"></asp:textbox><asp:image id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image></td>
 						<td><asp:dropdownlist id="cboLinea" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
@@ -125,9 +128,9 @@
 					</TR>
 					<tr>
 						<td style="HEIGHT: 23px" align="center"><asp:button id="btnImprimirEqu" runat="server" CssClass="botonesInput" Text="Imp. Etiquetas"
-								Width="98px"></asp:button><asp:button id="btnImprimirSLPC" runat="server" CssClass="botonesInput" Text="Imp. Etiquetas Color"
-								Width="98px"></asp:button></td>
-						<td style="HEIGHT: 23px" vAlign="middle" align="center"><asp:button id="btnRpt" CssClass="botonesInput" Text="Rep. Formulación" Runat="server" Width="104px"></asp:button>&nbsp;</td>
+								Width="120px"></asp:button><asp:button id="btnImprimirSLPC" runat="server" CssClass="botonesInput" Text="Imp. Etiquetas Color"
+								Width="120px"></asp:button></td>
+						<td style="HEIGHT: 23px" vAlign="middle" align="center"><asp:button id="btnRpt" CssClass="botonesInput" Text="Rep. Formulación" Runat="server" Width="150px"></asp:button>&nbsp;</td>
 						<td style="HEIGHT: 23px" align="center"><asp:button id="btnCard" runat="server" CssClass="botonesInput" Text="Tarj. Form." Width="107px"></asp:button></td>
 						<td style="HEIGHT: 23px" align="center"><asp:button id="btnLiberar" runat="server" CssClass="botonesInput" Text="Liberar"></asp:button>&nbsp;&nbsp;
 							<asp:button id="btnAgregar" runat="server" CssClass="botonesInput" Text="Salvar"></asp:button></td>

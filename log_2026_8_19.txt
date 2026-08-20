@@ -1,0 +1,15 @@
+19/08/2026 07:36:07 p. m. - Dentro de cmdEjecutaReporte_Click
+19/08/2026 07:36:07 p. m. - Las secuencias son 
+19/08/2026 07:36:07 p. m. - Las ordenes son  
+19/08/2026 07:36:07 p. m. - Truncando la tabla tbl_QrCode
+19/08/2026 07:36:07 p. m. - Truncando la tabla tbl_QrCode_orden
+19/08/2026 07:36:07 p. m. - secuencia 
+19/08/2026 07:36:07 p. m. - orden 
+19/08/2026 07:36:07 p. m. - sRutaImagenes http://localhost/ServicioWebCbb/ImagenesCbb/
+19/08/2026 07:36:07 p. m. - sRutaRemota http://localhost/ServicioWebCbb/ImagenesCbb/.png
+19/08/2026 07:36:07 p. m. - sRutaImagenesLocales C:\Inetpub\wwwroot\SicalNET\Temp\Qrs\
+19/08/2026 07:36:07 p. m. - sRutaLocal C:\Inetpub\wwwroot\SicalNET\Temp\Qrs\.png
+19/08/2026 07:36:07 p. m. - sRutaLocal1 C:\Inetpub\wwwroot\SicalNET\Temp\Qrs\.png
+19/08/2026 07:36:07 p. m. - Descargando http://localhost/ServicioWebCbb/ImagenesCbb/.png en C:\Inetpub\wwwroot\SicalNET\Temp\Qrs\.png
+19/08/2026 07:36:07 p. m. - Descargando http://localhost/ServicioWebCbb/ImagenesCbb/.png en C:\Inetpub\wwwroot\SicalNET\Temp\Qrs\.png
+19/08/2026 07:36:07 p. m. - Error Excepción durante una solicitud WebClient.
