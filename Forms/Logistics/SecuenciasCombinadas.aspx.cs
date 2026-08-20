@@ -116,7 +116,7 @@ namespace UserInterface.Forms.Logistics
 			if (txtFecha.Text.Trim()==string.Empty || txtFechaFinal.Text.Trim()==string.Empty)
 			{
 				string ScriptString="<script language='javascript'>alert('Proporcione una fecha inicial y final');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 			else
 				//Load the sequences that match stablished criteria
@@ -180,19 +180,19 @@ namespace UserInterface.Forms.Logistics
 				{
 					performCombination(selectedSequences);
 					string ScriptString="<script language='javascript'>alert('Las secuencias seleccionadas fueron combinadas exitosamente');</script>"; 
-					Page.RegisterStartupScript("ClientScript",ScriptString);
+					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 					BindGrid(txtFecha.Text.Trim(),txtFechaFinal.Text.Trim(),Convert.ToInt32(cboLinea.SelectedItem.Value));
 				}
 				else
 				{
 					string ScriptString="<script language='javascript'>alert('Las secuencias seleccionadas son de distintos materiales. Solo materiales del mismo código pueden combinarse. Seleccione secuencias que sean del mismo material (mismo CodigoSAP)');</script>"; 
-					Page.RegisterStartupScript("ClientScript",ScriptString);
+					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				}
 			}
 			else
 			{
 				string ScriptString="<script language='javascript'>alert('Seleccione cuando menos dos secuencias que desee combinar.');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 
 		}

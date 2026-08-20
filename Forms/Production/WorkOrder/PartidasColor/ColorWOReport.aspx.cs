@@ -34,8 +34,11 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasColor
 		}
 
 		#region Web Form Designer generated code
-		override protected void OnInit(EventArgs e)
-		{
+		[Obsolete]
+#pragma warning disable CS0809 // El miembro obsoleto invalida un miembro no obsoleto
+        override protected void OnInit(EventArgs e)
+#pragma warning restore CS0809 // El miembro obsoleto invalida un miembro no obsoleto
+        {
 			//
 			// CODEGEN: This call is required by the ASP.NET Web Form Designer.
 			//
@@ -43,10 +46,10 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasColor
 			base.OnInit(e);
 			crReportDocument = new UserInterface.Forms.Production.WorkOrder.PartidasColor.ColorWOReport();
 			crConnectionInfo = new ConnectionInfo();
-			crConnectionInfo.ServerName = ConfigurationSettings.AppSettings["server"];
-			crConnectionInfo.UserID = ConfigurationSettings.AppSettings["user id"];
-			crConnectionInfo.Password = ConfigurationSettings.AppSettings["Password"];
-			crConnectionInfo.DatabaseName = ConfigurationSettings.AppSettings["database"];
+			crConnectionInfo.ServerName = ConfigurationManager.AppSettings["server"];
+			crConnectionInfo.UserID = ConfigurationManager.AppSettings["user id"];
+			crConnectionInfo.Password = ConfigurationManager.AppSettings["Password"];
+			crConnectionInfo.DatabaseName = ConfigurationManager.AppSettings["database"];
 
 			//Get the tables collection from the report object
 			crDatabase = crReportDocument.Database;

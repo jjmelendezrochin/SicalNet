@@ -191,14 +191,14 @@ namespace UserInterface.Controls
 				BindGrid();
 				//throw new Exception("La formulación de color fue eliminada");
 				string ScriptString="<script language='javascript'>alert('La formulación de color fue eliminada');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 			}
 			catch
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('Ya existe una formulación de color para el color solicitado');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);								
+				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);								
 			}
 //			catch
 //			{				
@@ -251,13 +251,13 @@ namespace UserInterface.Controls
 				BindGrid();
 				//throw new Exception("Los Datos fueron actualizados existosamente"); 
 				string ScriptString="<script language='javascript'>alert('Los Datos fueron actualizados existosamente');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 			catch
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('El ID Identificador ya esta siendo usado por el sistema');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 //			catch
 //			{

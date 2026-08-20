@@ -50,8 +50,8 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 			Response.Cache.SetNoStore();
 			Response.Cache.SetValidUntilExpires(false);
 
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 
 			if (!IsPostBack)
@@ -145,7 +145,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 			//
 			InitializeComponent();
 			base.OnInit(e);
-			localAreaId=Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]); // Area Id For PVC Room
+			localAreaId=Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]); // Area Id For PVC Room
 		}
 		
 		/// <summary>
@@ -264,7 +264,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				{
 					int Sts=Convert.ToInt32(((Label)e.Item.FindControl("ItemIdStatus")).Text);
 					string Secuencia =((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-					int PendingStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]);
+					int PendingStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]);
 
 					if (Sts == PendingStatus) 
 					{
@@ -292,7 +292,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				{
 					//to display the msg for user
 					string ScriptString="<script language='javascript'>alert('"+ ex.Message +"');</script>"; 
-					Page.RegisterStartupScript("ClientScript",ScriptString);
+					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				}
 
 					
@@ -320,7 +320,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 						e.Item.BackColor = Color.LightBlue;
 				}
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 			}
 		}

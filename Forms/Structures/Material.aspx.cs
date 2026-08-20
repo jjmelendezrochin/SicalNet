@@ -200,11 +200,12 @@ namespace UserInterface.Forms.Structures
 			InitializeComponent();
 			base.OnInit(e);
 		}
-		
+
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+		[Obsolete]
 		private void InitializeComponent()
 		{    
 			this.imgFind.Click += new System.Web.UI.ImageClickEventHandler(this.imgFind_Click);
@@ -286,7 +287,7 @@ namespace UserInterface.Forms.Structures
 		private void cboEstMaterial_SelectedIndexChanged(object sender, System.EventArgs e)
 		{
 			prcToshowFinishPdt();
-			if (Convert.ToInt32(cboEstMaterial.SelectedItem.Value) == Convert.ToInt32(ConfigurationSettings.AppSettings["IdProductoTerminado"]))
+			if (Convert.ToInt32(cboEstMaterial.SelectedItem.Value) == Convert.ToInt32(ConfigurationManager.AppSettings["IdProductoTerminado"]))
 			{
 				//to enable or disable the image button or panel
 				prcEnableDisable("0111001100");
@@ -305,7 +306,7 @@ namespace UserInterface.Forms.Structures
 
 		private void prcToshowFinishPdt()
 		{
-			if (Convert.ToInt32(cboEstMaterial.SelectedItem.Value) == Convert.ToInt32(ConfigurationSettings.AppSettings["IdProductoTerminado"]))
+			if (Convert.ToInt32(cboEstMaterial.SelectedItem.Value) == Convert.ToInt32(ConfigurationManager.AppSettings["IdProductoTerminado"]))
 			{
 				//to enable or disable the image button or panel
 				prcEnableDisable("0111001100");
@@ -347,7 +348,7 @@ namespace UserInterface.Forms.Structures
 							//Correction made by Daniel Novelo
 							//Determine if the material is "Finished Product", then save all the data,
 							//to assign the control box values into variables
-							if (Convert.ToInt32(cboEstMaterial.SelectedItem.Value)==Convert.ToInt32(ConfigurationSettings.AppSettings["IdProductoTerminado"]))
+							if (Convert.ToInt32(cboEstMaterial.SelectedItem.Value)==Convert.ToInt32(ConfigurationManager.AppSettings["IdProductoTerminado"]))
 							{
 								string Codigo = txtCodigo.Text.ToString().Trim();
 								string Desc = txtDesc.Text.ToString().Trim();
@@ -533,7 +534,7 @@ namespace UserInterface.Forms.Structures
 					}
 				
 
-				if(BEMat.IdEstadoMaterial==Convert.ToInt32(ConfigurationSettings.AppSettings["IdProductoTerminado"]))
+				if(BEMat.IdEstadoMaterial==Convert.ToInt32(ConfigurationManager.AppSettings["IdProductoTerminado"]))
 				{
 					lblPlanta.Visible = true;
 					cboPlanta.Visible = true;
@@ -554,7 +555,7 @@ namespace UserInterface.Forms.Structures
 				chkEtiquetaColor.Checked = BEMat.EtiquetaColor;
 				chkMezclado.Checked=BEMat.Mezclado;
 
-				if (BEMat.IdEstadoMaterial==Convert.ToInt32(ConfigurationSettings.AppSettings["IdProductoTerminado"]))
+				if (BEMat.IdEstadoMaterial==Convert.ToInt32(ConfigurationManager.AppSettings["IdProductoTerminado"]))
 				{
 					prcToSetIndex(cboFamPdt,BEMat.IdFamiliaProducto.ToString());
 					prcToSetIndex(cboColor,BEMat.IdColor);
@@ -613,6 +614,7 @@ namespace UserInterface.Forms.Structures
 
 		}
 
+		[Obsolete]
 		private void imgFind_Click(object sender, System.Web.UI.ImageClickEventArgs e)
 		{
 			try

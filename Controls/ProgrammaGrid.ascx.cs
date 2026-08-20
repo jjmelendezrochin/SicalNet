@@ -143,9 +143,9 @@ namespace UserInterface.Controls
 		{
 			// *************************
 			string	sConsultaLotes = " sp_sicalnet_Logistica_Get_Lote_By_Linea1 @IdLinea = '" + iLinea + "'";
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
-				using(SqlDataReader dsLote = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings["SICALConnString"],CommandType.Text,sConsultaLotes))
+				using(SqlDataReader dsLote = SqlHelper.ExecuteReader(ConfigurationManager.AppSettings["SICALConnString"],CommandType.Text,sConsultaLotes))
 				{
 					ddlLote.DataSource=dsLote;
 					ddlLote.DataValueField="NumeroLote";
@@ -204,7 +204,7 @@ namespace UserInterface.Controls
 				IdLineaLote = IdLinea;
 				//get IdPlanta from web config file
 
-				//IdPlanta = Int32.Parse(ConfigurationSettings.AppSettings["LocalPlant"]);
+				//IdPlanta = Int32.Parse(ConfigurationManager.AppSettings["LocalPlant"]);
 				if(IdLinea >3 && IdLinea!=9)
 					IdPlanta = 2;
 				else
@@ -352,7 +352,7 @@ namespace UserInterface.Controls
 				
 				FormAditivosInfo faInfo = new FormAditivosInfo(string.Empty,string.Empty,IdLinea,IdPlanta,CodigoSAP,0);
 				FormAditivos FormAditivos = new FormAditivos();
-				if(!FormAditivos.isExistMaterialFormAditivos(faInfo) && (BEMaterial.IdEstadoMaterial!=Convert.ToInt32(ConfigurationSettings.AppSettings["IdInstrucciones"])))
+				if(!FormAditivos.isExistMaterialFormAditivos(faInfo) && (BEMaterial.IdEstadoMaterial!=Convert.ToInt32(ConfigurationManager.AppSettings["IdInstrucciones"])))
 				{
 					lblmsg.Text = "El material " + CodigoSAP + " " + BEMaterial.IdColor + "/" + BEMaterial.IdEspesor + "/" + BEMaterial.VersionAditivos + " no tiene formulación de Aditivos";
 					return false;
@@ -362,7 +362,7 @@ namespace UserInterface.Controls
 						
 				FormColorInfo fcInfo = new FormColorInfo(IdPlanta,CodigoSAP);
 				FormColor FormColor = new FormColor();
-				if(!FormColor.isExistMaterialFormColor(fcInfo) && (BEMaterial.IdEstadoMaterial==Convert.ToInt32(ConfigurationSettings.AppSettings["IdProductoTerminado"])))
+				if(!FormColor.isExistMaterialFormColor(fcInfo) && (BEMaterial.IdEstadoMaterial==Convert.ToInt32(ConfigurationManager.AppSettings["IdProductoTerminado"])))
 				{
 					ColourInfo BEColor = new ColourInfo(BEMaterial.IdColor,string.Empty,string.Empty,string.Empty,0,false);
 					Colour BLLColor = new Colour();
@@ -381,7 +381,7 @@ namespace UserInterface.Controls
 				{
 					
 					// add the programma information
-					int IdStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusInProcess"]);
+					int IdStatus = Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusInProcess"]);
 
 					//To Get the IdArea based on Parametro
 					//In default Area is 'Color Room', the Corresponding IdParametro Value for Area is 1.
@@ -777,7 +777,7 @@ namespace UserInterface.Controls
 				rptHelper.setPermission(reporte);
 				string reportFullName = rptHelper.exportReport(reporte,reportName,Page.User.Identity.Name);
 
-				string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"] + reportFullName + ".pdf";
+				string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"] + reportFullName + ".pdf";
 				Response.Redirect(redirectPath);
 			}
 			catch(Exception errHand)
@@ -810,9 +810,9 @@ namespace UserInterface.Controls
 
 				string	sConsultaSecuencia = " Select Cantidad, Isnull(CantidadOriginal,Cantidad) CantidadOriginal, Prioridad, isnull(PrioridadOriginal, Prioridad) PrioridadOriginal, corrida " ;
 				sConsultaSecuencia += " from ProgramaProduccion where Secuencia = '" + sSecuencia + "'";				
-				using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+				using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 				{
-					using(SqlDataReader sdrSec = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings["SICALConnString"],CommandType.Text,sConsultaSecuencia))
+					using(SqlDataReader sdrSec = SqlHelper.ExecuteReader(ConfigurationManager.AppSettings["SICALConnString"],CommandType.Text,sConsultaSecuencia))
 					{
 						while(sdrSec.Read())
 						{
@@ -856,7 +856,7 @@ namespace UserInterface.Controls
 				{
 					e.Item.BackColor = Color.Violet;
 				}
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["SequenceStatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["SequenceStatusCancel"]) 
 				{
 					e.Item.BackColor = Color.Tomato;
 				}	
@@ -1015,11 +1015,11 @@ namespace UserInterface.Controls
 		
 			if(bllProgramma.HasWorkOrders(belProgramma))
 			{
-				if(IdStatus==Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusReleased"]))
+				if(IdStatus==Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusReleased"]))
 					throw new Exception("La Secuencia "+ Sequence+" ya está cancelada, no puede ser cancelada nuevamente");
-				else if(IdStatus==Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusCancel"]))
+				else if(IdStatus==Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusCancel"]))
 					throw new Exception("La Secuencia "+ Sequence+" ya está cancelada, no puede ser cancelada nuevamente");
-				SICALNet.BusinessEntities.OrdenesTrabajoInfo oInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(Sequence,0,Convert.ToInt32(ConfigurationSettings.AppSettings["StatusCancel"]),Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusCancel"]));						
+				SICALNet.BusinessEntities.OrdenesTrabajoInfo oInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(Sequence,0,Convert.ToInt32(ConfigurationManager.AppSettings["StatusCancel"]),Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusCancel"]));						
 				bllProgramma.CancelSecuence(oInfo);
 				//to get the weight of each Laminas for the codigosap of that secuencia
 				bllProgramma.UpdateReaccion(Sequence,DateTime.Parse(txtFecha.Text).ToString("dd/MMM/yyyy"),Convert.ToInt32(ddlIdLinea.SelectedItem.Value),Cantidad);

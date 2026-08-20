@@ -47,8 +47,8 @@ namespace UserInterface.Forms.Production
 			Response.Cache.SetCacheability(HttpCacheability.NoCache);
 			Response.Cache.SetValidUntilExpires(false);
 			Response.Cache.SetNoStore();
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 			// Put user code to initialize the page here
 			if (!IsPostBack)
@@ -92,7 +92,7 @@ namespace UserInterface.Forms.Production
 			//
 			InitializeComponent();
 			base.OnInit(e);
-			localAreaId=Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]);
+			localAreaId=Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]);
 		}
 		
 		/// <summary>
@@ -172,7 +172,7 @@ namespace UserInterface.Forms.Production
 			string FechaFinal=txtFechaFinal.Text;
 			int IdLinea = (cboLinea.SelectedItem.Text == "ALL" ? 0 : Convert.ToInt32(cboLinea.SelectedItem.Value));
 			int IdStatus = (cboStatus.SelectedItem.Text == "ALL" ? 0 : Convert.ToInt32(cboStatus.SelectedItem.Value));
-			int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]);; // Area Id For Filling Room
+			int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]);; // Area Id For Filling Room
 			BindGrid(FechaInicial,FechaFinal,IdLinea, IdStatus, IdArea);
 
     	}
@@ -265,7 +265,7 @@ namespace UserInterface.Forms.Production
 					//pnlConsult.Visible = true;
 					int Sts=Convert.ToInt32(((Label)e.Item.FindControl("ItemIdStatus")).Text);
 					string Secuencia=((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-					int PendingStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]);
+					int PendingStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]);
 
 					if (Sts == PendingStatus) 
 					{
@@ -291,7 +291,7 @@ namespace UserInterface.Forms.Production
 //					pkInfo=PPeso.SelectPeso(ppInfo);
 //					txtKilos.Text=pkInfo.Kilos.ToString();
 //					txtTolen.Text=pkInfo.Tolerancia.ToString();
-//					MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]));
+//					MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]));
 //					SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();
 //					
 //					IList mPisoList=mPiso.Select(mpInfo);
@@ -306,9 +306,9 @@ namespace UserInterface.Forms.Production
 //						}
 //					}
 
-					int ReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
-					int InProcessStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusInProcess"]);
-					int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]);; // Area Id For Filling Room
+					int ReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
+					int InProcessStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusInProcess"]);
+					int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]);; // Area Id For Filling Room
 
 					if(Sts==ReleaseStatus)
 					{
@@ -351,7 +351,7 @@ namespace UserInterface.Forms.Production
 				if (e.CommandName=="Agregar")
 				{
 					string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-					string IdArea= ConfigurationSettings.AppSettings["FillingRoomId"].ToString();
+					string IdArea= ConfigurationManager.AppSettings["FillingRoomId"].ToString();
 					string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 					string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 					RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -361,7 +361,7 @@ namespace UserInterface.Forms.Production
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ ex.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}
 
@@ -381,14 +381,14 @@ namespace UserInterface.Forms.Production
 				}
 
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 			}
 		}
 
 //		private void btnLiberar_Click(object sender, System.EventArgs e)
 //		{
-//			int AreaId= Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]);
+//			int AreaId= Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]);
 //			//Status=2 denotes INPROCESS
 //			OrdenesTrabajoInfo WOInfo = new OrdenesTrabajoInfo(txtSecuencia.Text,AreaId,5,DateTime.Now.Date.ToString("dd/MMM/yyyy"),this.Context.User.Identity.Name);
 //			SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
@@ -415,7 +415,7 @@ namespace UserInterface.Forms.Production
 //		{
 //			try
 //			{
-//				MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,txtMsg.Text,Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]));
+//				MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,txtMsg.Text,Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]));
 //				SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();
 //				mPiso.Insert(mpInfo);
 //				Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+

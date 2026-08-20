@@ -256,7 +256,7 @@ namespace UserInterface.Controls
 				//el producto no se puede borrar por estar usado por el sistema
                 //throw;
 				string ScriptString="<script language='javascript'>alert('" + errHand.Message.ToString()  + "');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 
 

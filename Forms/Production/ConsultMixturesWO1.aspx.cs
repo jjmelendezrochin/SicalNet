@@ -194,7 +194,7 @@ namespace UserInterface.Forms.Production
 			// Calculo del numero de containers cuando tiene cero
 			if (NoContainer==0)
 			{
-				int IdAreaAditivos = Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]);
+				int IdAreaAditivos = Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]);
 				SICALNet.BusinessLogicLayer.PartidasAditivos PAditivos = new SICALNet.BusinessLogicLayer.PartidasAditivos();
 					NoContainer = PAditivos.GetNoContainers(Request.QueryString["Secuencia"], IdAreaAditivos);
 			}
@@ -253,7 +253,7 @@ namespace UserInterface.Forms.Production
 			//sBitacora = string.Format("CreateTab()", this.User.Identity.Name.ToString());
 			//BLLBitacora.Insertcomando(sBitacora ,this.User.Identity.Name.ToString());
 
-			int IdReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
+			int IdReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
 
 			//sBitacora = string.Format("idReleaseStatus es {0}", IdReleaseStatus.ToString());
 			//BLLBitacora.Insertcomando(sBitacora ,this.User.Identity.Name.ToString());
@@ -321,11 +321,13 @@ namespace UserInterface.Forms.Production
 			InitializeComponent();
 			base.OnInit(e);
 		}
-		
+
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+
+		[Obsolete]
 		private void InitializeComponent()
 		{    
 			this.tabMixture.MenuItemSelected += new CYBERAKT.WebControls.Navigation.ASPnetMenu.MenuItemSelectedEvent(this.tabMixture_MenuItemSelected);
@@ -368,9 +370,9 @@ namespace UserInterface.Forms.Production
 			// Display the Messages in Multiline Text box
 			MensajePisoInfo mpInfo;
 			if(this.blnSecuenciaCombinada)
-				mpInfo = new MensajePisoInfo(this.secuenciaCombinada.Substring(0,this.secuenciaCombinada.IndexOf(",")),string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["MixturesRoomId"]));
+				mpInfo = new MensajePisoInfo(this.secuenciaCombinada.Substring(0,this.secuenciaCombinada.IndexOf(",")),string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["MixturesRoomId"]));
 			else
-				mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["MixturesRoomId"]));
+				mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["MixturesRoomId"]));
 
 			SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();					
 			IList mPisoList=mPiso.Select(mpInfo);
@@ -503,7 +505,7 @@ namespace UserInterface.Forms.Production
 			{
 				//				//to display the msg for user
 				//				string ScriptString="<script language='javascript'>alert('"+ ex.Message +"');</script>"; 
-				//				Page.RegisterStartupScript("ClientScript",ScriptString);
+				//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 				throw;
 			}
@@ -600,7 +602,7 @@ namespace UserInterface.Forms.Production
 			{
 				//				//to display the msg for user
 				//				string ScriptString="<script language='javascript'>alert('"+ ex.Message +"');</script>"; 
-				//				Page.RegisterStartupScript("ClientScript",ScriptString);
+				//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 				throw;
 			}
@@ -697,7 +699,7 @@ namespace UserInterface.Forms.Production
 				string[] ArrSecuencias = txtSecuencia.Text.Split(delimiter);				
 				
 			
-				int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["MixturesRoomId"]);
+				int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["MixturesRoomId"]);
 				
 				
 				for(int i=0;i<NoContainer-1;i++)
@@ -761,7 +763,7 @@ namespace UserInterface.Forms.Production
 						//Delete the Existing Records in PartidasColor to adopt the Modification & Insertion
 						PMezclas.Delete(currentSecuence);
 						PMezclas.Insert(tmpList);
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(currentSecuence,Convert.ToInt32(ConfigurationSettings.AppSettings["MixturesRoomId"]),Context.User.Identity.Name);
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(currentSecuence,Convert.ToInt32(ConfigurationManager.AppSettings["MixturesRoomId"]),Context.User.Identity.Name);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						BLOrdenes.UpdateLoginForm(OTInfo);					
 					}
@@ -792,7 +794,7 @@ namespace UserInterface.Forms.Production
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 				ChangeTab(CurrentTab);
 				string sec;
@@ -855,7 +857,7 @@ namespace UserInterface.Forms.Production
 			// Extract Data for Aditivos Room
 			for(int i = 0; i < NoContainer; i++)
 			{	
-				int AditivosRoomId = Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]);
+				int AditivosRoomId = Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]);
 				SICALNet.BusinessLogicLayer.PartidasAditivos PAditivos = new SICALNet.BusinessLogicLayer.PartidasAditivos();
 				AditivosList[i] = (ArrayList) PAditivos.SelectCombined(this.secuenciaCombinada, AditivosRoomId, i+1);
 			}
@@ -868,7 +870,7 @@ namespace UserInterface.Forms.Production
 			IList pcList = (IList) BLLPC.GetNoVaso(Request.QueryString["Secuencia"].ToString());
 			*/
 			
-			int ColorRoomId = Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]);
+			int ColorRoomId = Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]);
 
 			SICALNet.BusinessLogicLayer.PartidasColor PColor = new SICALNet.BusinessLogicLayer.PartidasColor();
 			ArrayList AuxAllColorDetails = (ArrayList) PColor.GetPieceCantidadCombinado(initialSequence,ColorRoomId);
@@ -1053,7 +1055,7 @@ namespace UserInterface.Forms.Production
 			// Extract Data for Aditivos Room
 			for(int i = 0; i < NoContainer; i++)
 			{	
-				int AditivosRoomId = Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]);
+				int AditivosRoomId = Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]);
 				SICALNet.BusinessLogicLayer.PartidasAditivos PAditivos = new SICALNet.BusinessLogicLayer.PartidasAditivos();
 				AditivosList[i] = (ArrayList) PAditivos.Select(txtSecuencia.Text, AditivosRoomId, i+1);
 			}
@@ -1064,7 +1066,7 @@ namespace UserInterface.Forms.Production
 			BLLBitacora.Insertcomando(sBitacora ,this.User.Identity.Name.ToString());
 				
 			// Extract Data for Color Room
-			int ColorRoomId = Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]);
+			int ColorRoomId = Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]);
 			
 			SICALNet.BusinessLogicLayer.PartidasColor PColor = new SICALNet.BusinessLogicLayer.PartidasColor();
 			ArrayList AuxAllColorDetails = (ArrayList) PColor.GetPieceCantidad(txtSecuencia.Text, ColorRoomId);
@@ -1258,6 +1260,8 @@ namespace UserInterface.Forms.Production
 			}
 		}
 
+
+		[Obsolete]
 		private void btnLiberar_Click(object sender, System.EventArgs e)
 		{
 			
@@ -1276,7 +1280,7 @@ namespace UserInterface.Forms.Production
 				string delimStr = ",";
 				char [] delimiter = delimStr.ToCharArray();			
 				string[] ArrSecuencias = txtSecuencia.Text.Split(delimiter);
-				int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["MixturesRoomId"]);
+				int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["MixturesRoomId"]);
 
 				//			int NoAgitador = (txtAgitador.Text.Trim()==""?0:Convert.ToInt32(txtAgitador.Text.Trim()));
 
@@ -1402,12 +1406,12 @@ namespace UserInterface.Forms.Production
 						//Delete the Existing Records in PartidasColor to adopt the Modification & Insertion
 						PMezclas.Delete(currentSecuence);
 						PMezclas.Insert(tmpList);
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(currentSecuence,Convert.ToInt32(ConfigurationSettings.AppSettings["MixturesRoomId"]),Context.User.Identity.Name);
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(currentSecuence,Convert.ToInt32(ConfigurationManager.AppSettings["MixturesRoomId"]),Context.User.Identity.Name);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						BLOrdenes.UpdateLoginForm(OTInfo);
 				
 					}
-					int IdStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]); 
+					int IdStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]); 
 
 					//Activate Next Area And update Active Area in Programma Production for this currentSecuence
 					//Depending on sequence available in "FlujoArea" Table
@@ -1443,8 +1447,8 @@ namespace UserInterface.Forms.Production
 			catch (Exception ex)
 			{
 				//to display the msg for user
-								string ScriptString="<script language='javascript'>alert('"+ ex.Message+"');</script>"; 
-								Page.RegisterStartupScript("ClientScript",ScriptString);
+								string ScriptString="<script language='javascript'>alert('"+ ex.Message+"');</script>"; 								
+								ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				//throw;
 			}
 			
@@ -1456,6 +1460,7 @@ namespace UserInterface.Forms.Production
 			Response.Redirect("ConsultMixturesWO.aspx");
 		}
 
+		[Obsolete]
 		private void btnAgregarMensaje_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia;
@@ -1464,7 +1469,7 @@ namespace UserInterface.Forms.Production
 			else
 				Secuencia = txtSecuencia.Text.ToString();
 				
-			string IdArea= ConfigurationSettings.AppSettings["MixturesRoomId"].ToString();
+			string IdArea= ConfigurationManager.AppSettings["MixturesRoomId"].ToString();
 			string CodigoSAP=Request.QueryString["CodigoSAP"].ToString();
 			string matDesc=txtUTEC.Text.Trim();
 			RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodigoSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -1630,7 +1635,7 @@ namespace UserInterface.Forms.Production
 		private void SumRegisterPerOlla()
 		{
 			float sum=0;
-			int IdReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
+			int IdReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
 			if (IdStatus == IdReleaseStatus)
 			{
 				for(int i=0;i<dgdPMMA.Items.Count;i++)

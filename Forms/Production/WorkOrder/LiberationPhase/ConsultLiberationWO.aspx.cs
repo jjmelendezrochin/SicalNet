@@ -67,8 +67,8 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 			Response.Cache.SetNoStore();
 			Response.Cache.SetValidUntilExpires(false);
 
-			//if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-			//	ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			//if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+			//	ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 			string path = HttpContext.Current.Request.MapPath("~");
 			UserInterface.Forms.Production.WorkOrder.LiberationPhase.Log log
@@ -334,7 +334,7 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 					string sConsulta = "Select datos" +
 									"	from Vw_datos_etiqueta_liberacion Vw  " +
 									"	where Vw.Secuencia = '" + secuencia[i] + "';";
-					using(SqlDataReader rsOrden = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings["SICALConnString"], CommandType.Text, sConsulta)) 
+					using(SqlDataReader rsOrden = SqlHelper.ExecuteReader(ConfigurationManager.AppSettings["SICALConnString"], CommandType.Text, sConsulta)) 
 					{
 						while (rsOrden.Read()) 
 						{			
@@ -365,7 +365,7 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 				// ********************************
 				// obteniendo la lista de ordenes
 				string sConsulta = "Select NoOrden from Vw_etiqueta_liberacion WHERE Secuencia = '" + secuencia[k].Trim() + "';";
-				using(SqlDataReader rsOrden = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings["SICALConnString"], CommandType.Text, sConsulta)) 
+				using(SqlDataReader rsOrden = SqlHelper.ExecuteReader(ConfigurationManager.AppSettings["SICALConnString"], CommandType.Text, sConsulta)) 
 				{
 					while (rsOrden.Read()) 
 					{			
@@ -382,7 +382,7 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 			listasecuencias = listasecuencias.Substring(3,listasecuencias.Length-3);
 			listadatosencbb = listadatosencbb.Substring(3,listadatosencbb.Length-3);
 			listaordenes = listaordenes.Substring(3,listaordenes.Length-3);
-			string servercbb = ConfigurationSettings.AppSettings["servercbb"];
+			string servercbb = ConfigurationManager.AppSettings["servercbb"];
 			
 			oLog.Add("Lista secuencias " + listasecuencias);
 			oLog.Add("Lista datos en cbb " + listadatosencbb);							
@@ -435,7 +435,7 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 				// Tuncando la tabla tbl_qrcode
 				string sIns = "Truncate table tbl_QrCode";				
 				using (SqlConnection cn = 
-						   new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+						   new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 				{
 					using( SqlCommand sqlcmd = new SqlCommand(sIns,cn))
 					{
@@ -449,7 +449,7 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 				// Tuncando la tabla tbl_qrcode
 				sIns = "Truncate table tbl_QrCode_orden";				
 				using (SqlConnection cn = 
-						   new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+						   new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 				{
 					using( SqlCommand sqlcmd = new SqlCommand(sIns,cn))
 					{
@@ -469,10 +469,10 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 					oLog.Add("secuencia " +  secuencia[k]);
 					oLog.Add("orden " +  orden[k]);
 
-					string sRutaImagenes = ConfigurationSettings.AppSettings["servercbb_images"];
+					string sRutaImagenes = ConfigurationManager.AppSettings["servercbb_images"];
 					string sRutaRemota  = sRutaImagenes + secuencia[k].Trim()+".png";
 					string sRutaRemota1 = sRutaImagenes + orden[k].Trim()+".png";
-					string sRutaImagenesLocales = ConfigurationSettings.AppSettings["servercbb_local_images"];
+					string sRutaImagenesLocales = ConfigurationManager.AppSettings["servercbb_local_images"];
 					string sRutaLocal   =  @sRutaImagenesLocales + secuencia[k].Trim()+".png";
 					string sRutaLocal1  =  @sRutaImagenesLocales + orden[k].Trim()+".png";
 
@@ -495,7 +495,7 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 					//oLog.Add("Longitud "+  photo.Length);
 
 					using (SqlConnection cn = 
-							   new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+							   new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 					{
 						String sIns1= "INSERT INTO tbl_qrcode(Secuencia,Document) VALUES(@Secuencia, @Document)";
 
@@ -515,7 +515,7 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 					//oLog.Add("Longitud "+  photo.Length);
 
 					using (SqlConnection cn = 
-							   new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+							   new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 					{
 						String sIns1= "INSERT INTO tbl_qrcode_orden(Secuencia,Document) VALUES(@Secuencia, @Document)";
 
@@ -548,10 +548,10 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 				
 				rptHelper.setPermission(reporte);
 				string reportName = rptHelper.exportReport(reporte,"Liberación",User.Identity.Name);				
-				string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";			
+				string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";			
 				string ScriptString="<script language='javascript'>window.open('" + redirectPath + "','Reporte', 'width=550,height=600,top=100,left=200,toolbars=no,scrollbars=yes,status=yes,resizable=yes');</script>"; 
 				oLog.Add("Impresión de reporte");
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				
 			}
 			catch(Exception ex)

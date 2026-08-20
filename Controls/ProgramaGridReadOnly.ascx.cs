@@ -300,11 +300,11 @@ namespace UserInterface.Controls
 			
 				if(bllProgramma.HasWorkOrders(belProgramma))
 				{
-					if(IdStatus==Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusReleased"]))
+					if(IdStatus==Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusReleased"]))
 						throw new Exception("La Secuencia "+ Sequence+" ya está cancelada, no puede ser cancelada nuevamente");
-					else if(IdStatus==Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusCancel"]))
+					else if(IdStatus==Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusCancel"]))
 						throw new Exception("La Secuencia "+ Sequence+" ya está cancelada, no puede ser cancelada nuevamente");
-					SICALNet.BusinessEntities.OrdenesTrabajoInfo oInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(Sequence,0,Convert.ToInt32(ConfigurationSettings.AppSettings["StatusCancel"]),Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusCancel"]));						
+					SICALNet.BusinessEntities.OrdenesTrabajoInfo oInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(Sequence,0,Convert.ToInt32(ConfigurationManager.AppSettings["StatusCancel"]),Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusCancel"]));						
 					bllProgramma.CancelSecuence(oInfo);
 					//to get the weight of each Laminas for the codigosap of that secuencia
 					bllProgramma.UpdateReaccion(Sequence,DateTime.Parse(txtFecha.Text).ToString("dd/MMM/yyyy"),Convert.ToInt32(ddlIdLinea.SelectedItem.Value),Cantidad);
@@ -491,7 +491,7 @@ namespace UserInterface.Controls
 				rptHelper.setPermission(reporte);
 				string reportFullName= rptHelper.exportReport(reporte,reportName,Page.User.Identity.Name);
 
-				string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+reportFullName+".pdf";
+				string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+reportFullName+".pdf";
 				Response.Redirect(redirectPath);
 
 			}
@@ -520,7 +520,7 @@ namespace UserInterface.Controls
 					e.Item.BackColor = Color.LightBlue;   
 
 				Label lblStatus = (Label)e.Item.FindControl("Label16");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["SequenceStatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["SequenceStatusCancel"]) 
 				{
 					e.Item.BackColor = Color.Tomato;
 				}	

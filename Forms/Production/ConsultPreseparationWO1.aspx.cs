@@ -69,7 +69,7 @@ namespace UserInterface.Forms.Production
 			//string IdEspesor;
 			//int Cantidad;
 
-			//int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["PreseparationRoomId"]);  //Area for Preseparation Room
+			//int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["PreseparationRoomId"]);  //Area for Preseparation Room
 
 			txtSecuencia.Text = Request.QueryString["Secuencia"].ToString();
 			txtFecha.Text =  Request.QueryString["Fecha1"].ToString();
@@ -82,7 +82,7 @@ namespace UserInterface.Forms.Production
 			SICALNet.BusinessLogicLayer.FamiliaProducto FProducto = new SICALNet.BusinessLogicLayer.FamiliaProducto();
 			float TempPreseparacion = FProducto.GetTempPreseparacion(IdFamiliaProducto);
 
-			SICALNet.BusinessEntities.PartidasPreseparacionInfo PPreInfo = new PartidasPreseparacionInfo( txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationSettings.AppSettings["PreseparationRoomId"].ToString()),0);
+			SICALNet.BusinessEntities.PartidasPreseparacionInfo PPreInfo = new PartidasPreseparacionInfo( txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationManager.AppSettings["PreseparationRoomId"].ToString()),0);
 			SICALNet.BusinessLogicLayer.PartidasPreseparacion BLPreSeparacion = new SICALNet.BusinessLogicLayer.PartidasPreseparacion();
 			IList ListPreSe = BLPreSeparacion.Select(PPreInfo); 
 			if(ListPreSe.Count > 0)
@@ -99,7 +99,7 @@ namespace UserInterface.Forms.Production
 			//Cantidad = Convert.ToInt32(Request.QueryString["Cantidad"].ToString());
 			string Status = Request.QueryString["Status"].ToString();
 
-			string ReleaseStatus = ConfigurationSettings.AppSettings["StatusRelease"].ToString(); //Get Release Status Code
+			string ReleaseStatus = ConfigurationManager.AppSettings["StatusRelease"].ToString(); //Get Release Status Code
 			if (Status == ReleaseStatus)
 			{
 				//The sequences in status RELEASED can only be consulted in READ ONLY mode
@@ -143,7 +143,7 @@ namespace UserInterface.Forms.Production
 		private void DisplayFloorMessage()
 		{
 			// Display the Messages in Multiline Text box
-			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["PreseparationRoomId"]));
+			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["PreseparationRoomId"]));
 			SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();					
 			IList mPisoList=mPiso.Select(mpInfo);
 			if(mPisoList.Count>0)
@@ -163,7 +163,7 @@ namespace UserInterface.Forms.Production
 		private void btnLiberar_Click(object sender, System.EventArgs e)
 		{
 //			// To Get Next WorkOrder Number and Change that status to Activo
-//			FlujoAreaInfo FAInfo = new FlujoAreaInfo ( Convert.ToInt32(ConfigurationSettings.AppSettings["PreseparationRoomId"]), 0 );
+//			FlujoAreaInfo FAInfo = new FlujoAreaInfo ( Convert.ToInt32(ConfigurationManager.AppSettings["PreseparationRoomId"]), 0 );
 //			SICALNet.BusinessLogicLayer.FlujoArea FArea = new SICALNet.BusinessLogicLayer.FlujoArea();
 //
 //			ArrayList FAreaList = new ArrayList();
@@ -171,7 +171,7 @@ namespace UserInterface.Forms.Production
 //			FAInfo = (FlujoAreaInfo)FAreaList[0];
 //
 //			// To Change the Next Work Order Status To Active
-//			int ActiveStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"].ToString());
+//			int ActiveStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"].ToString());
 //			OrdenesTrabajoInfo WOInfo1 = new OrdenesTrabajoInfo(txtSecuencia.Text, FAInfo.IdAreaPadre, ActiveStatus); // 2 - Active
 //			SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder1 = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 //			WorkOrder1.UpdateWO(WOInfo1);
@@ -179,8 +179,8 @@ namespace UserInterface.Forms.Production
 
 			try
 			{
-				int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["PreseparationRoomId"]);
-				int IdStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"].ToString());
+				int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["PreseparationRoomId"]);
+				int IdStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"].ToString());
 
 				//Activate Next Area And update Active Area in Programma Production for this Secuencia
 				//Depending on sequence available in "FlujoArea" Table
@@ -188,7 +188,7 @@ namespace UserInterface.Forms.Production
 				objFlujoArea.ActivateDependingAreas(txtSecuencia.Text,IdArea);
 
 			
-				SICALNet.BusinessEntities.PartidasPreseparacionInfo PPreInfo = new PartidasPreseparacionInfo( txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationSettings.AppSettings["PreseparationRoomId"].ToString()),Convert.ToSingle(this.txtTempPre.Text));
+				SICALNet.BusinessEntities.PartidasPreseparacionInfo PPreInfo = new PartidasPreseparacionInfo( txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationManager.AppSettings["PreseparationRoomId"].ToString()),Convert.ToSingle(this.txtTempPre.Text));
 				SICALNet.BusinessLogicLayer.PartidasPreseparacion BLPreSeparacion = new SICALNet.BusinessLogicLayer.PartidasPreseparacion();
 				BLPreSeparacion.Insert(PPreInfo); 
 
@@ -216,7 +216,7 @@ namespace UserInterface.Forms.Production
 		private void btnAgrigar_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia = txtSecuencia.Text.ToString();
-			string IdArea= ConfigurationSettings.AppSettings["PreseparationRoomId"].ToString();
+			string IdArea= ConfigurationManager.AppSettings["PreseparationRoomId"].ToString();
 			string CodigoSAP=Request.QueryString["CodigoSAP"].ToString();
 			string matDesc=txtUTEC.Text.Trim();
 			RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodigoSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -228,7 +228,7 @@ namespace UserInterface.Forms.Production
 			{
 				//Registrar cambio en la base de datos
 
-				SICALNet.BusinessEntities.PartidasPreseparacionInfo PPreInfo = new PartidasPreseparacionInfo( txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationSettings.AppSettings["PreseparationRoomId"].ToString()),Convert.ToSingle(this.txtTempPre.Text));
+				SICALNet.BusinessEntities.PartidasPreseparacionInfo PPreInfo = new PartidasPreseparacionInfo( txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationManager.AppSettings["PreseparationRoomId"].ToString()),Convert.ToSingle(this.txtTempPre.Text));
 				SICALNet.BusinessLogicLayer.PartidasPreseparacion BLPreSeparacion = new SICALNet.BusinessLogicLayer.PartidasPreseparacion();
 				BLPreSeparacion.Insert(PPreInfo); 
 			}

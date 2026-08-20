@@ -164,7 +164,7 @@ namespace WebApplication1
 			string scriptString = string.Empty;
 
 			scriptString+="<script language='javascript'>ReturnDate();</script>"; 
-			Page.RegisterStartupScript("ClientScript",scriptString);		
+			ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",scriptString);		
 		}
 	
 	}

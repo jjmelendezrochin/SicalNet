@@ -304,7 +304,7 @@ namespace UserInterface.Forms.Production
 //			{
 //				//to display the msg for user
 //				string ScriptString="<script language='javascript'>alert('"+ ErrHand.Message +" Favor de capturar solo números en número de láminas por olla y Sobrante');</script>"; 
-//				Page.RegisterStartupScript("ClientScript",ScriptString);
+//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 //			}
 		}
 		

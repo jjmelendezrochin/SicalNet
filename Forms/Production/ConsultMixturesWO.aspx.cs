@@ -61,8 +61,8 @@ namespace UserInterface.Forms.Production
 			Response.Cache.SetNoStore();
 			*/
 
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 			// Put user code to initialize the page here
 			if (!IsPostBack)
@@ -104,7 +104,7 @@ namespace UserInterface.Forms.Production
 			//
 			InitializeComponent();
 			base.OnInit(e);
-			localAreaId=Convert.ToInt32(ConfigurationSettings.AppSettings["MixturesRoomId"]);
+			localAreaId=Convert.ToInt32(ConfigurationManager.AppSettings["MixturesRoomId"]);
 		}
 		
 		/// <summary>
@@ -181,7 +181,7 @@ namespace UserInterface.Forms.Production
 			
 			
 			//			cboStatus.Items.Add("ALL");
-			//			string IdActiveStatus = ConfigurationSettings.AppSettings["StatusActive"]; // For ACTIVO
+			//			string IdActiveStatus = ConfigurationManager.AppSettings["StatusActive"]; // For ACTIVO
 			//			cboStatus.Items.FindByValue(IdActiveStatus).Selected = true;
 		}
 
@@ -324,16 +324,16 @@ namespace UserInterface.Forms.Production
 			if (e.CommandName=="Consult")
 			{
 				int IdStatus = Convert.ToInt32(((Label) e.Item.FindControl("ItemIdStatus")).Text);
-				int IdCancelStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusCancel"]);
-				int IdPendienteStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]);
-				int IdReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
-				int IdActiveStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"]);
+				int IdCancelStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusCancel"]);
+				int IdPendienteStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]);
+				int IdReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
+				int IdActiveStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"]);
 				string Secuencia;
 				Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text;
 				if ((IdStatus == IdCancelStatus)||(IdStatus == IdPendienteStatus)) 
 				{
 					string ScriptString="<script language='javascript'>alert('La secuencia " + Secuencia + " esta en estado PENDIENTE, no puede ser consultada');</script>"; 
-					Page.RegisterStartupScript("ClientScript",ScriptString);
+					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 					//lblErrorMsg.Text = "Una secuencia en estado PENDIENTE no se puede consultar";
 					return;
 				}
@@ -353,7 +353,7 @@ namespace UserInterface.Forms.Production
 						IdPlanta=((Label)e.Item.FindControl("ItemIdPlanta")).Text;
 
 
-						IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]);
+						IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]);
 						SICALNet.BusinessLogicLayer.PartidasAditivos PAditivos = new SICALNet.BusinessLogicLayer.PartidasAditivos();
 						NoContainer = PAditivos.GetNoContainers(Secuencia, IdArea);
 
@@ -384,7 +384,7 @@ namespace UserInterface.Forms.Production
 			if (e.CommandName=="Agregar")
 			{
 				string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-				string IdArea= ConfigurationSettings.AppSettings["MixturesRoomId"].ToString();
+				string IdArea= ConfigurationManager.AppSettings["MixturesRoomId"].ToString();
 				string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 				string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 				RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -406,7 +406,7 @@ namespace UserInterface.Forms.Production
 				}
 
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 			}
 		}
@@ -449,9 +449,9 @@ namespace UserInterface.Forms.Production
 				rptHelper.setPermission(reporte);
 				reportName = rptHelper.exportReport(reporte,"Etiqueta Identificación",User.Identity.Name);
 
-				string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";			
+				string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";			
 				string ScriptString="<script language='javascript'>window.open('" + redirectPath + "','Reporte', 'width=550,height=600,top=100,left=200,toolbars=no,scrollbars=yes,status=yes,resizable=yes');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 			catch
 			{
@@ -464,7 +464,7 @@ namespace UserInterface.Forms.Production
 			SqlParameter[] Parms=Parametros();
 			EstableceParametrosSecuencia(Parms, Secuencia, sUsuario);
 			
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -485,7 +485,7 @@ namespace UserInterface.Forms.Production
 
 		public  void TruncaTablaReporte()
 		{												
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -508,12 +508,12 @@ namespace UserInterface.Forms.Production
 		public static SqlParameter[] Parametros()
 		{
 			SqlParameter[] parms;
-			parms = SqlHelperParameterCache.GetCachedParameterSet(ConfigurationSettings.AppSettings["SICALConnString"],"Proc_EtiquetaMezclas");
+			parms = SqlHelperParameterCache.GetCachedParameterSet(ConfigurationManager.AppSettings["SICALConnString"],"Proc_EtiquetaMezclas");
 			parms= new SqlParameter[]{
 										 new SqlParameter(PARM_SECUENCIA,SqlDbType.VarChar),
 										 new SqlParameter(PARM_USUARIO,SqlDbType.VarChar)
 									 };
-			SqlHelperParameterCache.CacheParameterSet(ConfigurationSettings.AppSettings["SICALConnString"],"Proc_EtiquetaMezclas",parms);
+			SqlHelperParameterCache.CacheParameterSet(ConfigurationManager.AppSettings["SICALConnString"],"Proc_EtiquetaMezclas",parms);
 			return parms;
 		}
 

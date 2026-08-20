@@ -45,8 +45,8 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 			Response.Cache.SetNoStore();
 			Response.Cache.SetValidUntilExpires(false);
 
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 
 			if(!IsPostBack)
@@ -181,7 +181,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 		private bool BindWorkOrders()
 		{
 			SICALNet.BusinessLogicLayer.OrdenesTrabajo BLLOrdTra= new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
-			int IdArea=Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]);
+			int IdArea=Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]);
 			int IdStatus=int.Parse(cboStatus.SelectedItem.Value);
 			int IdLine=int.Parse(cboLinea.SelectedItem.Value);
 			string InitDt=txtInitial.Text.ToString();
@@ -207,7 +207,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 				string secuencia=((Label)lstWorkOrder.Items[i].FindControl("ItemSecuencia")).Text;
 				int IdStatuss = Convert.ToInt32(((Label)lstWorkOrder.Items[i].FindControl("ItemIdStatus")).Text);
 				DataGrid dgdRecepcion = ((DataGrid)lstWorkOrder.Items[i].FindControl("dgdRecepcionPT"));
-				SICALNet.BusinessEntities.PartidasRecepcionPTInfo PRInfo = new SICALNet.BusinessEntities.PartidasRecepcionPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]),string.Empty,0,0,string.Empty);
+				SICALNet.BusinessEntities.PartidasRecepcionPTInfo PRInfo = new SICALNet.BusinessEntities.PartidasRecepcionPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]),string.Empty,0,0,string.Empty);
 				SICALNet.BusinessLogicLayer.PartidasRecepcionPT BlPRPT = new SICALNet.BusinessLogicLayer.PartidasRecepcionPT();
 				IList RecepcionList=BlPRPT.Select(PRInfo);
 				if(RecepcionList.Count==0)
@@ -230,7 +230,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 					dtPaquete.Columns.Add(dcTarima);
 					//Add the tables to the DataSet.
 					dsPaquete.Tables.Add(dtPaquete);
-					SICALNet.BusinessEntities.PartidasEnvioPTInfo PEInfo = new SICALNet.BusinessEntities.PartidasEnvioPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["SendFinishProductRoomId"]),string.Empty,0,string.Empty);
+					SICALNet.BusinessEntities.PartidasEnvioPTInfo PEInfo = new SICALNet.BusinessEntities.PartidasEnvioPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["SendFinishProductRoomId"]),string.Empty,0,string.Empty);
 					SICALNet.BusinessLogicLayer.PartidasEnvioPT BlPEPT = new SICALNet.BusinessLogicLayer.PartidasEnvioPT();
 					IList EnvioList=BlPEPT.Select(PEInfo);
 					for (int iLoop=1; iLoop <= EnvioList.Count; iLoop++)
@@ -252,11 +252,11 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 					dgdRecepcion.DataSource=RecepcionList;
 					dgdRecepcion.DataBind();
 				}
-				if(IdStatuss!=Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]))
+				if(IdStatuss!=Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]))
 				{
 					lstWorkOrder.Items[i].FindControl("Plus").Visible=true;
 				}
-				if(IdStatuss==Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"])||IdStatuss==Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]))
+				if(IdStatuss==Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"])||IdStatuss==Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]))
 				{
 					((CheckBox)lstWorkOrder.Items[i].FindControl("chkSelect")).Enabled=false;
 					dgdRecepcion.Columns[3].Visible=false;
@@ -286,7 +286,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 						e.Item.BackColor = Color.LightBlue;   
 				}
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 
 			}
@@ -301,7 +301,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 					case "Consult":
 						string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 						Session["CodigoSAP"]=CodeSAP;
-						int IdPendingStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]);
+						int IdPendingStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]);
 						string secuencia=((Label)e.Item.FindControl("ItemSecuencia")).Text;
 						string Descripcion = ((Label)e.Item.FindControl("ItemDescripcion")).Text;
 						string Fecha = ((Label)e.Item.FindControl("ItemFecha")).Text;
@@ -313,7 +313,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 
 					case "Mensaje":
 						string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-						string IdArea= ConfigurationSettings.AppSettings["SendFinishProductRoomId"].ToString();
+						string IdArea= ConfigurationManager.AppSettings["SendFinishProductRoomId"].ToString();
 						CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 						string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 						RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('../../MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -335,7 +335,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 				{
 					string secuencia=((Label)lstWorkOrder.Items[i].FindControl("ItemSecuencia")).Text;
 					int IdStatuss = Convert.ToInt32(((Label)lstWorkOrder.Items[i].FindControl("ItemIdStatus")).Text);
-					if(IdStatuss==Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"])&& ((CheckBox)lstWorkOrder.Items[i].FindControl("chkSelect")).Checked==true)
+					if(IdStatuss==Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"])&& ((CheckBox)lstWorkOrder.Items[i].FindControl("chkSelect")).Checked==true)
 					{
 						DataGrid dgdRecepcionPT = ((DataGrid)lstWorkOrder.Items[i].FindControl("dgdRecepcionPT"));
 						IList RecepcionList=new ArrayList();
@@ -345,15 +345,15 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 							int Laminas=Convert.ToInt32(((Label)dgdRecepcionPT.Items[iloop].FindControl("lblLaminas")).Text);
 							int LaminasReal = Convert.ToInt32(((TextBox)dgdRecepcionPT.Items[iloop].FindControl("txtLaminasReal")).Text);
 							string Tarima = ((Label)dgdRecepcionPT.Items[iloop].FindControl("lblTarima")).Text;
-							SICALNet.BusinessEntities.PartidasRecepcionPTInfo PRInfo = new SICALNet.BusinessEntities.PartidasRecepcionPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]),Paquete,Laminas,LaminasReal,Tarima);
+							SICALNet.BusinessEntities.PartidasRecepcionPTInfo PRInfo = new SICALNet.BusinessEntities.PartidasRecepcionPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]),Paquete,Laminas,LaminasReal,Tarima);
 							RecepcionList.Add(PRInfo);
 						}
 						if(RecepcionList.Count>0)
 						{
 							SICALNet.BusinessLogicLayer.PartidasRecepcionPT BlPRPT = new SICALNet.BusinessLogicLayer.PartidasRecepcionPT();
-							BlPRPT.Delete(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]));
+							BlPRPT.Delete(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]));
 							BlPRPT.Insert(RecepcionList);
-							SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]),Context.User.Identity.Name);
+							SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]),Context.User.Identity.Name);
 							SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 							BLOrdenes.UpdateLoginForm(OTInfo);
 							Page.RegisterStartupScript("alert", "<script language='JavaScript'>" + "alert('"+"The WorkOrder Saved Successfully..."+"')" + "<" + "/script>");
@@ -379,7 +379,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 					int sumLaminasReal=0;
 					string secuencia=((Label)lstWorkOrder.Items[i].FindControl("ItemSecuencia")).Text;
 					int IdStatuss = Convert.ToInt32(((Label)lstWorkOrder.Items[i].FindControl("ItemIdStatus")).Text);
-					if(IdStatuss==Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"])&& ((CheckBox)lstWorkOrder.Items[i].FindControl("chkSelect")).Checked==true)
+					if(IdStatuss==Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"])&& ((CheckBox)lstWorkOrder.Items[i].FindControl("chkSelect")).Checked==true)
 					{
 						DataGrid dgdRecepcionPT = ((DataGrid)lstWorkOrder.Items[i].FindControl("dgdRecepcionPT"));
 						IList RecepcionList=new ArrayList();
@@ -389,11 +389,11 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 							int Laminas=Convert.ToInt32(((Label)dgdRecepcionPT.Items[iloop].FindControl("lblLaminas")).Text);
 							int LaminasReal = Convert.ToInt32(((TextBox)dgdRecepcionPT.Items[iloop].FindControl("txtLaminasReal")).Text);
 							string Tarima = ((Label)dgdRecepcionPT.Items[iloop].FindControl("lblTarima")).Text;
-							SICALNet.BusinessEntities.PartidasRecepcionPTInfo PRInfo = new SICALNet.BusinessEntities.PartidasRecepcionPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]),Paquete,Laminas,LaminasReal,Tarima);
+							SICALNet.BusinessEntities.PartidasRecepcionPTInfo PRInfo = new SICALNet.BusinessEntities.PartidasRecepcionPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]),Paquete,Laminas,LaminasReal,Tarima);
 							RecepcionList.Add(PRInfo);
 							sumLaminasReal+=LaminasReal;
 						}
-						SICALNet.BusinessEntities.PartidasInspeccionInfo PIInfo = new SICALNet.BusinessEntities.PartidasInspeccionInfo(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]));
+						SICALNet.BusinessEntities.PartidasInspeccionInfo PIInfo = new SICALNet.BusinessEntities.PartidasInspeccionInfo(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]));
 						SICALNet.BusinessLogicLayer.PartidasInspeccion BLIns = new SICALNet.BusinessLogicLayer.PartidasInspeccion();
 						int Laminas1=BLIns.ActiveLaminas(PIInfo);
 						if(sumLaminasReal!=Laminas1)
@@ -401,9 +401,9 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 						if(RecepcionList.Count>0)
 						{
 							SICALNet.BusinessLogicLayer.PartidasRecepcionPT BlPRPT = new SICALNet.BusinessLogicLayer.PartidasRecepcionPT();
-							BlPRPT.Delete(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]));
+							BlPRPT.Delete(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]));
 							BlPRPT.Insert(RecepcionList);
-							SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]),Context.User.Identity.Name);
+							SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]),Context.User.Identity.Name);
 							SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 							BLOrdenes.UpdateLoginForm(OTInfo);
 							Page.RegisterStartupScript("alert", "<script language='JavaScript'>" + "alert('"+"The WorkOrder Saved Successfully..."+"')" + "<" + "/script>");
@@ -416,17 +416,17 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT
 					string secuencia=((Label)lstWorkOrder.Items[i].FindControl("ItemSecuencia")).Text;
 					DataGrid dgdRecepcionPT = ((DataGrid)lstWorkOrder.Items[i].FindControl("dgdRecepcionPT"));
 					int IdStatuss = Convert.ToInt32(((Label)lstWorkOrder.Items[i].FindControl("ItemIdStatus")).Text);
-					if(IdStatuss==Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"])&& ((CheckBox)lstWorkOrder.Items[i].FindControl("chkSelect")).Checked==true)
+					if(IdStatuss==Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"])&& ((CheckBox)lstWorkOrder.Items[i].FindControl("chkSelect")).Checked==true)
 					{
 						//Activate Next Area And update Active Area in Programma Production for this Secuencia
 						//Depending on sequence available in "FlujoArea" Table
 						SICALNet.BusinessLogicLayer.FlujoArea objFlujoArea = new SICALNet.BusinessLogicLayer.FlujoArea();
-						objFlujoArea.ActivateDependingAreas(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]));
+						objFlujoArea.ActivateDependingAreas(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]));
 						// To Release the Work Order
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo WOInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia, Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]), Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]), DateTime.Now.Date.ToString("dd/MMM/yyyy"), Context.User.Identity.Name); 
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo WOInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia, Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]), Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]), DateTime.Now.Date.ToString("dd/MMM/yyyy"), Context.User.Identity.Name); 
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						WorkOrder.UpdateStatus(WOInfo);
-						SICALNet.BusinessEntities.PartidasRecepcionPTInfo PRInfo1 = new SICALNet.BusinessEntities.PartidasRecepcionPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]),string.Empty,0,0,string.Empty);
+						SICALNet.BusinessEntities.PartidasRecepcionPTInfo PRInfo1 = new SICALNet.BusinessEntities.PartidasRecepcionPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]),string.Empty,0,0,string.Empty);
 						SICALNet.BusinessLogicLayer.PartidasRecepcionPT BlPRPT1 = new SICALNet.BusinessLogicLayer.PartidasRecepcionPT();
 						IList RecepcionList=BlPRPT1.Select(PRInfo1);
 						dgdRecepcionPT.DataSource=RecepcionList;

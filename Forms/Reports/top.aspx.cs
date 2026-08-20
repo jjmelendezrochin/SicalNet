@@ -112,7 +112,7 @@ namespace UserInterface.Forms.Reports
 			// Introducir aquí el código de usuario para inicializar la página
 			string strSQL = "";			
 			// Introducir aquí el código de usuario para inicializar la página
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 
@@ -182,7 +182,7 @@ namespace UserInterface.Forms.Reports
 
 						string sProc = "Exec Proc_Completa_Interface_Datasul @FechaIni = '" + dFechaIni.ToString("yyyy/MM/dd") + "',  @FechaFin = '" + dFechaFin.ToString("yyyy/MM/dd")  + "'";
 						using (SqlConnection cn = 
-								   new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+								   new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 						{
 							using( SqlCommand sqlcmd = new SqlCommand(sProc,cn))
 							{

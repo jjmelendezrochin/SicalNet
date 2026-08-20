@@ -49,8 +49,8 @@ namespace UserInterface.Forms.Production
 			Response.Cache.SetCacheability(HttpCacheability.NoCache);
 			Response.Cache.SetValidUntilExpires(false);
 			Response.Cache.SetNoStore();
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 
 			// Put user code to initialize the page here
@@ -94,7 +94,7 @@ namespace UserInterface.Forms.Production
 			//
 			InitializeComponent();
 			base.OnInit(e);
-			localAreaId=Convert.ToInt32(ConfigurationSettings.AppSettings["CuredRoomId"]);
+			localAreaId=Convert.ToInt32(ConfigurationManager.AppSettings["CuredRoomId"]);
 		}
 		
 		/// <summary>
@@ -206,7 +206,7 @@ namespace UserInterface.Forms.Production
 				{
 					int Sts=Convert.ToInt32(((Label)e.Item.FindControl("ItemIdStatus")).Text);
 					string secuance=((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-					int PendingStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]);
+					int PendingStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]);
 
 					if (Sts == PendingStatus) 
 					{
@@ -245,7 +245,7 @@ namespace UserInterface.Forms.Production
 				else if (e.CommandName=="Agregar")
 				{
 					string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-					string IdArea= ConfigurationSettings.AppSettings["CuredRoomId"].ToString();
+					string IdArea= ConfigurationManager.AppSettings["CuredRoomId"].ToString();
 					string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 					string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 					RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -255,7 +255,7 @@ namespace UserInterface.Forms.Production
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ ex.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		} 
 		private void BindEntryFields()
@@ -328,7 +328,7 @@ namespace UserInterface.Forms.Production
 						e.Item.BackColor = Color.LightBlue;   					
 				}
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 			}
 		}

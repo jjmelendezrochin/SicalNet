@@ -51,11 +51,13 @@ namespace UserInterface.Forms.Structures
 			InitializeComponent();
 			base.OnInit(e);
 		}
-		
+
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+		
+		[Obsolete]
 		private void InitializeComponent()
 		{    
 			this.dgdFindMaterial.ItemCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.dgdFindMaterial_ItemCommand);
@@ -447,6 +449,9 @@ namespace UserInterface.Forms.Structures
 			ToSetEditMode(sCharCurText,sEqualCurText,(int) e.Item.ItemIndex,sIdEqualCurText);
 		}
 
+
+
+		[Obsolete]
 		private void dgdMaterial_ItemCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
 	

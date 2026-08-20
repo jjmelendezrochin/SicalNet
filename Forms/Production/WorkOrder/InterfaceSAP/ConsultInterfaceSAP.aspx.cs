@@ -120,7 +120,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 			for(int i=0;i<RsStatus.Count;i++)
 			{
 				SICALNet.BusinessEntities.StatusInfo Aux = (SICALNet.BusinessEntities.StatusInfo)RsStatus[i]; 
-				if(Aux.IdStatus  != Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"]) && Aux.IdStatus != Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]))
+				if(Aux.IdStatus  != Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"]) && Aux.IdStatus != Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]))
 																																							{					
 						RsStatus.Remove(Aux);
 						i--;
@@ -156,7 +156,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 			try
 			{
 				SICALNet.BusinessLogicLayer.InterfazSAP BLLOrdTra= new SICALNet.BusinessLogicLayer.InterfazSAP();
-				//int IdArea=Convert.ToInt32(ConfigurationSettings.AppSettings["InterfazSAP"]);
+				//int IdArea=Convert.ToInt32(ConfigurationManager.AppSettings["InterfazSAP"]);
 				int IdStatus=int.Parse(cboStatus.SelectedItem.Value);
 				int IdLine=int.Parse(cboLinea.SelectedItem.Value);
 
@@ -221,7 +221,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 					case "Consult":
 						string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 						Session["CodigoSAP"]=CodeSAP;
-						int IdPendingStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]);
+						int IdPendingStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]);
 						string secuencia=((Label)e.Item.FindControl("ItemSecuencia")).Text;
 						string Descripcion = ((Label)e.Item.FindControl("ItemDescripcion")).Text;
 						string Fecha = ((Label)e.Item.FindControl("ItemFecha")).Text;
@@ -230,7 +230,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 							throw new Exception(string.Format("La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada",secuencia));
 						if(((CheckBox)e.Item.FindControl("chkSelect")).Checked==true)
 						{
-							SICALNet.BusinessEntities.PartidasInspeccionInfo PIInfo = new SICALNet.BusinessEntities.PartidasInspeccionInfo(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]));
+							SICALNet.BusinessEntities.PartidasInspeccionInfo PIInfo = new SICALNet.BusinessEntities.PartidasInspeccionInfo(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]));
 							SICALNet.BusinessLogicLayer.PartidasInspeccion BLIns = new SICALNet.BusinessLogicLayer.PartidasInspeccion();
 							int Laminas=BLIns.ActiveLaminas(PIInfo);
 							Response.Redirect("EnvioPTFinal.aspx?InitialDate="+txtInitial.Text+"&FinalDate="+txtFinal.Text+"&cboStatus="+cboStatus.SelectedItem.Value+"&cboLinea="+cboLinea.SelectedItem.Value+"&Reflag=True&Packages=1&Secuencia="+secuencia+"&Descripcion="+Descripcion+"&Laminas="+Laminas+"&Flag=New&IdStatus="+IdStatus+"&Fecha="+Fecha);
@@ -241,7 +241,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 
 					case "Mensaje":
 						string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-						string IdArea= ConfigurationSettings.AppSettings["SendFinishProductRoomId"].ToString();
+						string IdArea= ConfigurationManager.AppSettings["SendFinishProductRoomId"].ToString();
 						CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 						string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 						RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('../../MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -283,13 +283,13 @@ namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 
 
 						// To Release the Work Order
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo WOInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia, Convert.ToInt32(ConfigurationSettings.AppSettings["InterfazSAP"]), Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]), DateTime.Now.Date.ToString("dd/MMM/yyyy"), Context.User.Identity.Name); 
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo WOInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia, Convert.ToInt32(ConfigurationManager.AppSettings["InterfazSAP"]), Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]), DateTime.Now.Date.ToString("dd/MMM/yyyy"), Context.User.Identity.Name); 
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						WorkOrder.UpdateStatus(WOInfo);
 						bool bolPF = ((CheckBox)lstWorkOrder.Items[i].FindControl("chkEF")).Checked;
 						
 
-						//string.Empty,secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ReceiveFinishProductRoomId"]),string.Empty,0,0,string.Empty);
+						//string.Empty,secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ReceiveFinishProductRoomId"]),string.Empty,0,0,string.Empty);
 						SICALNet.BusinessLogicLayer.InterfazSAP BlPRPT1 = new SICALNet.BusinessLogicLayer.InterfazSAP();
 						BlPRPT1.SaveInterfazSAP(secuencia,bolPF,fInterfaz,Context.User.Identity.Name);
 						bliberar=true;						
@@ -306,7 +306,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InterfaceSAP
 			{
 				//to display the msg for user
 //				string ScriptString="<script language='javascript'>alert('"+ ex.Message +"');</script>"; 
-//				Page.RegisterStartupScript("ClientScript",ScriptString);
+//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 				throw;
 			}		

@@ -285,7 +285,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ ErrHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}
 

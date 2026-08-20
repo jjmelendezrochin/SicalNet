@@ -305,7 +305,7 @@ namespace UserInterface.Forms.Reports
 			reporte.DataDefinition.RecordSelectionFormula=SelFormula;			
 			rptHelper.setPermission(reporte);
 			reportName=rptHelper.exportReport(reporte,"ConsultCuradoReport",User.Identity.Name);
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 					
 			Response.Redirect(redirectPath, false);
 		}
@@ -438,7 +438,7 @@ namespace UserInterface.Forms.Reports
 			reporte.DataDefinition.RecordSelectionFormula=SelFormula;
 			rptHelper.setPermission(reporte);
 			reportName= rptHelper.exportReport(reporte, "ConsultPostCuradoRep",User.Identity.Name);/***/
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 					
 			Response.Redirect(redirectPath);
 		}
@@ -563,7 +563,7 @@ namespace UserInterface.Forms.Reports
 			reporte.DataDefinition.RecordSelectionFormula=SelFormula;
 			rptHelper.setPermission(reporte);
 			reportName= rptHelper.exportReport(reporte, "ConsultPreseparacionReport",User.Identity.Name );
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 					
 			Response.Redirect(redirectPath);
 		}
@@ -719,7 +719,7 @@ namespace UserInterface.Forms.Reports
 //					reporte.DataDefinition.RecordSelectionFormula=SelFormula;			
 //					rptHelper.setPermission(reporte);
 //					reportName=rptHelper.exportReport(reporte,"ConsultCuradoReport",User.Identity.Name);
-//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 //					
 //					Response.Redirect(redirectPath, false);
 					#endregion
@@ -832,7 +832,7 @@ namespace UserInterface.Forms.Reports
 		//					reporte.DataDefinition.RecordSelectionFormula=SelFormula;
 		//					rptHelper.setPermission(reporte);
 		//					reportName= rptHelper.exportReport(reporte, "ConsultPostCuradoRep",User.Identity.Name);/***/
-		//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+		//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 		//					
 		//					Response.Redirect(redirectPath);
 //					 
@@ -958,7 +958,7 @@ namespace UserInterface.Forms.Reports
 //			
 //					rptHelper.setPermission(reporte);
 //					reportName= rptHelper.exportReport(reporte, "ConsultPreseparacionReport",User.Identity.Name );
-//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 //					
 //					Response.Redirect(redirectPath);
 //										

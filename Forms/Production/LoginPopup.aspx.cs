@@ -69,8 +69,8 @@ namespace UserInterface.Forms.Production
 			try
 			{
 				
-				string ldapPath = ConfigurationSettings.AppSettings["ldapPath"].ToString();
-				string domainName= ConfigurationSettings.AppSettings["domainName"].ToString();
+				string ldapPath = ConfigurationManager.AppSettings["ldapPath"].ToString();
+				string domainName= ConfigurationManager.AppSettings["domainName"].ToString();
 				LdapAuthentication adsAuth = new LdapAuthentication(ldapPath);
 
 				if (adsAuth.IsAuthenticated(domainName,txtLogin.Text.Trim(),txtPassword.Text.Trim()))                
@@ -97,7 +97,7 @@ namespace UserInterface.Forms.Production
 							throw new Exception("La Orden de Trabajo para la secuencia "+ Request.QueryString["Secuencia"] +" No se ha liberado dado que no tienes el permiso de liberarla antes de su tiempo");
 						}
 
-						int localAreaId=Convert.ToInt32(ConfigurationSettings.AppSettings["CuredRoomId"]);
+						int localAreaId=Convert.ToInt32(ConfigurationManager.AppSettings["CuredRoomId"]);
 						//Update the data on Partidas Curado (regarding the Sequence)
 						SICALNet.BusinessEntities.PartidasCuradoInfo pcInfo = new SICALNet.BusinessEntities.PartidasCuradoInfo(Request.QueryString["Secuencia"],localAreaId,Convert.ToInt32(Request.QueryString["IdLinea"]),Convert.ToInt32(Request.QueryString["Cuba"]),0,DateTime.Now,DateTime.Now,DateTime.Now,string.Empty);
 						SICALNet.BusinessLogicLayer.PartidasCurado blPC = new SICALNet.BusinessLogicLayer.PartidasCurado();
@@ -111,7 +111,7 @@ namespace UserInterface.Forms.Production
 						SICALNet.BusinessLogicLayer.FlujoArea objFlujoArea = new SICALNet.BusinessLogicLayer.FlujoArea();
 						objFlujoArea.ActivateDependingAreas(Request.QueryString["Secuencia"],localAreaId);
 						//Release the work Order from the Current Area.
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo orInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(Request.QueryString["Secuencia"],localAreaId,Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]),DateTime.Now.Date.ToString("dd/MMM/yyyy"),Context.User.Identity.Name);
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo orInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(Request.QueryString["Secuencia"],localAreaId,Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]),DateTime.Now.Date.ToString("dd/MMM/yyyy"),Context.User.Identity.Name);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo blOr = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						blOr.UpdateStatus(orInfo);
 						Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
@@ -137,7 +137,7 @@ namespace UserInterface.Forms.Production
 						
 						if(!ExistInRole)throw new Exception("La Orden de Trabajo para la secuencia "+ Request.QueryString["Secuencia"] +" No se ha liberado dado que no tienes el permiso de liberarla antes de su tiempo");
 
-						int localAreaId=Convert.ToInt32(ConfigurationSettings.AppSettings["PostCuredRoomId"]);
+						int localAreaId=Convert.ToInt32(ConfigurationManager.AppSettings["PostCuredRoomId"]);
 						//Update PartidasPostCurado 
 						SICALNet.BusinessEntities.PartidasPostCuradoInfo BEPPC = new SICALNet.BusinessEntities.PartidasPostCuradoInfo(Request.QueryString["Secuencia"],localAreaId,Convert.ToInt32(Request.QueryString["IdLinea"]),Convert.ToInt32(Request.QueryString["Zonas"]),0,DateTime.Now,DateTime.Now,DateTime.Now,string.Empty);
 						SICALNet.BusinessLogicLayer.PartidasPostCurado BLLPPC = new SICALNet.BusinessLogicLayer.PartidasPostCurado();
@@ -168,7 +168,7 @@ namespace UserInterface.Forms.Production
 			catch(Exception errHand)
 			{
 				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 			}
 		}

@@ -62,7 +62,7 @@ namespace UserInterface.Forms.Production
 			// Put user code to initialize the page here
 			if (!IsPostBack)
 			{
-				IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["AssembleRoomId"]);  //Area for Assemble Room
+				IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["AssembleRoomId"]);  //Area for Assemble Room
 				Secuencia = Request.QueryString["Secuencia"].ToString();
 				Fecha1 =  Request.QueryString["Fecha1"].ToString();
 				UTEC = Request.QueryString["UTEC"].ToString();
@@ -81,7 +81,7 @@ namespace UserInterface.Forms.Production
 				txtCantidad.Text = Cantidad;
 				txtDescFamiliaProducto.Text = DescFamiliaProducto;
 
-				if (IdStatus==Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]))
+				if (IdStatus==Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]))
 				{
 					btnLiberar.Enabled=false;
 					btnAgregar.Enabled=false;
@@ -103,8 +103,8 @@ namespace UserInterface.Forms.Production
 			// Verifica si el estatus esta StatusInProcess = 3
 
 			/*
-			if (Request.QueryString["IdStatus"].ToString()==ConfigurationSettings.AppSettings["StatusActive"].ToString() 
-				&& Request.QueryString["IdStatus"].ToString()==ConfigurationSettings.AppSettings["StatusInProcess"].ToString())
+			if (Request.QueryString["IdStatus"].ToString()==ConfigurationManager.AppSettings["StatusActive"].ToString() 
+				&& Request.QueryString["IdStatus"].ToString()==ConfigurationManager.AppSettings["StatusInProcess"].ToString())
 			*/
 
 			if (IdStatus==2 && IdStatus==3)
@@ -153,8 +153,8 @@ namespace UserInterface.Forms.Production
 		{
 			try
 			{
-				int idArea=Convert.ToInt32(ConfigurationSettings.AppSettings["AssembleRoomId"]);
-				int idStatus=Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
+				int idArea=Convert.ToInt32(ConfigurationManager.AppSettings["AssembleRoomId"]);
+				int idStatus=Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
 	
 				//Activate Next Area And update Active Area in Programma Production for this Secuencia
 				//Depending on sequence available in "FlujoArea" Table
@@ -183,7 +183,7 @@ namespace UserInterface.Forms.Production
 		private void DisplayFloorMessage()
 		{
 			// Display the Messages in Multiline Text box
-			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["AssembleRoomId"]));
+			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["AssembleRoomId"]));
 			SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();					
 			IList mPisoList=mPiso.Select(mpInfo);
 			if(mPisoList.Count>0)
@@ -201,7 +201,7 @@ namespace UserInterface.Forms.Production
 		private void btnAgregarMensaje_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia = txtSecuencia.Text.ToString();
-			string IdArea= ConfigurationSettings.AppSettings["AssembleRoomId"].ToString();
+			string IdArea= ConfigurationManager.AppSettings["AssembleRoomId"].ToString();
 			string CodigoSAP=Request.QueryString["CodigoSAP"].ToString();
 			string matDesc=txtUTEC.Text.Trim();
 			RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodigoSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");	

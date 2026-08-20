@@ -76,8 +76,8 @@ namespace UserInterface.Forms.Production.ColorRoom
 			Response.Cache.SetNoStore();
 			Response.Cache.SetValidUntilExpires(false);
 
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenesColorAditivos"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenesColorAditivos"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenesColorAditivos"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenesColorAditivos"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenesColorAditivos"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenesColorAditivos"] + "'>" ;			
 
 			// Put user code to initialize the page here
 			if (!IsPostBack)
@@ -123,7 +123,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 				Session[this.Context.User.Identity.Name+"selectedIdStatus"] = cboStatus.SelectedItem.Value;
 
 				SICALNet.BusinessLogicLayer.OrdenesTrabajo BLLOrdTra= new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
-				int IdArea=Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]);
+				int IdArea=Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]);
 				int IdStatus=int.Parse(cboStatus.SelectedItem.Value);
 				int IdLine=int.Parse(cboLinea.SelectedItem.Value);
 				string IdColor=cboColor.SelectedItem.Value;
@@ -191,11 +191,12 @@ namespace UserInterface.Forms.Production.ColorRoom
 			base.OnInit(e);
 			prcCboFill();
 		}
-		
+
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+		[Obsolete]
 		private void InitializeComponent()
 		{    
 			this.btnImprimirEqu.Click += new System.EventHandler(this.btnImprimirEqu_Click);
@@ -332,7 +333,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 				//to display the msg for user
 //				string prtMsg=errHand.Message.Replace("'"," ");
 //				string ScriptString = "<script language = 'javascript'> alert('" + prtMsg + "'); </script>"; 
-//				Page.RegisterStartupScript("ClientScript",ScriptString);
+//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 				throw;
 			}
@@ -359,7 +360,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 					SICALNet.BusinessEntities.PartidasColorInfo bePCol = new SICALNet.BusinessEntities.PartidasColorInfo();
 					bePCol=(SICALNet.BusinessEntities.PartidasColorInfo)RsPC[inloop];
 					SICALNet.BusinessLogicLayer.PartidasColor blPCol=new SICALNet.BusinessLogicLayer.PartidasColor();
-					IList VasoList=blPCol.Load(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),bePCol.VasoNo);
+					IList VasoList=blPCol.Load(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),bePCol.VasoNo);
 					DataGrid dgdColor = ((DataGrid)lstLaminas.Items[inloop].FindControl("dgdColorWO"));
 					dgdColor.DataSource=VasoList;
 					dgdColor.DataBind();
@@ -398,7 +399,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 				int NoGroup=0;
 				/*** fin de modificación ***/
 
-				if(IdStatusAux ==ConfigurationSettings.AppSettings["StatusCancel"].ToString())
+				if(IdStatusAux ==ConfigurationManager.AppSettings["StatusCancel"].ToString())
 				{
 					throw new Exception("La Secuencia "+SecuanceAux+" ya se encuentra cancelada por lo cual no puede ser consultada");
 				}
@@ -651,7 +652,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 								//string[] secuencia = (string[])Session[this.Context.User.Identity.Name+"Secuencia"];
 								if(BLLPC.IsExistSecuencia(secuencia[0]))
 								{
-									//SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia[0],Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),0);
+									//SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia[0],Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),0);
 									//SICALNet.BusinessLogicLayer.OrdenesTrabajo blOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 									//int Status=blOrdenes.GetStatus(OInfo);
 									//Session[this.Context.User.Identity.Name+"IdStatus"] = Status;
@@ -741,7 +742,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 						break;
 					case "Mensaje":
 						string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-						string IdArea= ConfigurationSettings.AppSettings["ColorRoomId"].ToString();
+						string IdArea= ConfigurationManager.AppSettings["ColorRoomId"].ToString();
 						string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 						string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 						RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('../../MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -759,7 +760,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 				if (errHand.Message.IndexOf("se refiere a una lámina de color transparente, por lo tanto no tiene componentes de color.") >0)
 				{
 					string ScriptString="<script language='javascript'>alert('" + errHand.Message.ToString() + "');</script>"; 
-					Page.RegisterStartupScript("ClientScript",ScriptString);
+					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				}
 				else{
 					throw;
@@ -791,9 +792,9 @@ namespace UserInterface.Forms.Production.ColorRoom
 			{
 				IList aryClrRm = new ArrayList();
 				//Obtain IdArea of Color Area
-				int IdArea= Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"].ToString());
+				int IdArea= Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"].ToString());
 				//Obtain status for released work order
-				int releasedStatus=Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
+				int releasedStatus=Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
 				
 				//Loop parent list
 				for(int iloop=0;iloop<lstWorkOrder.Items.Count;iloop++)
@@ -844,7 +845,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 						PAd.Delete(secuencia);
 						PAd.Insert(aryClrRm);
 						aryClrRm.Clear();
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),this.Context.User.Identity.Name);
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),this.Context.User.Identity.Name);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						BLOrdenes.UpdateLoginForm(OTInfo);
 					}
@@ -857,7 +858,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 //				string sErrMsg;
 //				sErrMsg=ErrHand.Message;
 //				string ScriptString="<script language='javascript'>alert('"+ sErrMsg +"');</script>"; 
-//				Page.RegisterStartupScript("ClientScript",ScriptString);
+//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 				throw;
 			}
@@ -889,9 +890,9 @@ namespace UserInterface.Forms.Production.ColorRoom
 				{
 					IList aryClrRm = new ArrayList();
 					//Obtain IdArea of Color Area
-					int IdArea= Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"].ToString());
+					int IdArea= Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"].ToString());
 					//Obtain status for released work order
-					//int releasedStatus=Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
+					//int releasedStatus=Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
 					for(int iloop=0;iloop<lstWorkOrder.Items.Count;iloop++)
 					{
 						string secuencia=((Label)lstWorkOrder.Items[iloop].FindControl("ItemSecuencia")).Text.ToString();
@@ -932,7 +933,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 							PAd.Delete(secuencia);
 							PAd.Insert(aryClrRm);
 							aryClrRm.Clear();
-							SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),this.Context.User.Identity.Name);
+							SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),this.Context.User.Identity.Name);
 							SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 							BLOrdenes.UpdateLoginForm(OTInfo);				
 
@@ -941,7 +942,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 							SICALNet.BusinessLogicLayer.FlujoArea objFlujoArea = new SICALNet.BusinessLogicLayer.FlujoArea();
 							objFlujoArea.ActivateDependingAreas(secuencia,IdArea);
 							
-							SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo1 = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,2,Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]),Convert.ToInt32(ConfigurationSettings.AppSettings["PVCRoomId"]),Convert.ToInt32(ConfigurationSettings.AppSettings["MixtureRoomId"]),5,DateTime.Now.Date.ToString("dd-MMM-yyyy"),Context.User.Identity.Name);
+							SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo1 = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia,2,Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]),Convert.ToInt32(ConfigurationManager.AppSettings["PVCRoomId"]),Convert.ToInt32(ConfigurationManager.AppSettings["MixtureRoomId"]),5,DateTime.Now.Date.ToString("dd-MMM-yyyy"),Context.User.Identity.Name);
 							SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes1 = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 							BLOrdenes1.ColorUpdate(OTInfo1);
 							Page.RegisterStartupScript("alert", "<script language='JavaScript'>" + "alert('"+"La Orden de Trabajo se libero exitosamente"+"')" + "<" + "/script>");
@@ -958,7 +959,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 //				string sErrMsg;
 //				sErrMsg=ErrHand.Message.Replace("'","-");
 //				string ScriptString="<script language='javascript'>alert('"+ sErrMsg +"');</script>"; 
-//				Page.RegisterStartupScript("ClientScript",ScriptString);
+//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 				throw;
 			}
@@ -1053,11 +1054,11 @@ namespace UserInterface.Forms.Production.ColorRoom
 			rptHelper.setPermission(reporte);
 			string reportName = rptHelper.exportReport(reporte,"FormulacionColor",User.Identity.Name);
 
-			string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 
 			//window.open('..\\..\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=270,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=yes,resizable=no");
 			string ScriptString="<script language='javascript'>window.open('" + redirectPath + "','Reporte', 'width=550,height=600,top=100,left=200,toolbars=no,scrollbars=yes,status=yes,resizable=yes');</script>"; 
-			Page.RegisterStartupScript("ClientScript",ScriptString);
+			ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 			//Response.Redirect(redirectPath);
 			
@@ -1092,11 +1093,11 @@ namespace UserInterface.Forms.Production.ColorRoom
 			rptHelper.setPermission(reporte);
 			string reportName = rptHelper.exportReport(reporte,"FormulacionColor",User.Identity.Name);
 
-			string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 
 			//window.open('..\\..\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=270,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=yes,resizable=no");
 			string ScriptString="<script language='javascript'>window.open('" + redirectPath + "','Reporte', 'width=550,height=600,top=100,left=200,toolbars=no,scrollbars=yes,status=yes,resizable=yes');</script>"; 
-			Page.RegisterStartupScript("ClientScript",ScriptString);
+			ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 			//Response.Redirect(redirectPath);
 			
@@ -1116,10 +1117,10 @@ namespace UserInterface.Forms.Production.ColorRoom
 			//objReporte = new WorkOrder.PartidasColor.NewEtiquetaColor2();
 			rptHelper.setPermission(objReporte);
 			string reportname = rptHelper.exportReport(objReporte, "StickerColor", User.Identity.Name);
-			string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportname + ".pdf";
+			string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportname + ".pdf";
 			
 			string ScriptString="<script language='javascript'>window.open('" + redirectPath + "','Reporte', 'width=550,height=600,top=100,left=200,toolbars=no,scrollbars=yes,status=yes,resizable=yes');</script>"; 
-			Page.RegisterStartupScript("ClientScript",ScriptString);	
+			ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);	
 		}
 
 		public void ConsultNextSecuencia(int ItemIndex,string ShortCut)
@@ -1274,7 +1275,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 						//string[] secuencia = (string[])Session[this.Context.User.Identity.Name+"Secuencia"];
 						if(BLLPC.IsExistSecuencia(secuencia[0]))
 						{
-							//SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia[0],Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),0);
+							//SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia[0],Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),0);
 							//SICALNet.BusinessLogicLayer.OrdenesTrabajo blOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 							//int Status=blOrdenes.GetStatus(OInfo);
 							//Session[this.Context.User.Identity.Name+"IdStatus"] = Status;
@@ -1400,7 +1401,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 				SICALNet.BusinessEntities.PartidasColorInfo bePCol = new SICALNet.BusinessEntities.PartidasColorInfo();
 				bePCol=(SICALNet.BusinessEntities.PartidasColorInfo)RsPC[inloop];
 				SICALNet.BusinessLogicLayer.PartidasColor blPCol=new SICALNet.BusinessLogicLayer.PartidasColor();
-				IList VasoList=blPCol.Load(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),bePCol.VasoNo,0);
+				IList VasoList=blPCol.Load(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),bePCol.VasoNo,0);
 				DataGrid dgdColor = ((DataGrid)lstLaminas.Items[inloop].FindControl("dgdColorWO"));
 				dgdColor.DataSource=VasoList;
 				dgdColor.DataBind();
@@ -1415,7 +1416,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 			}
 		}
 
-
+		[Obsolete]
 		private void btnImprimirEqu_Click(object sender, System.EventArgs e)
 		{			
 
@@ -1457,23 +1458,24 @@ namespace UserInterface.Forms.Production.ColorRoom
 			if(i==0)
 			{
 				string ScriptString = "<script language = 'javascript'> alert('Seleccione una secuencia para generar un reporte'); </script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				
 				return;
 			}
 
-			SqlHelper.ExecuteNonQuery(ConfigurationSettings.AppSettings["SICALConnString"],CommandType.Text,"Truncate table Tempo;");
+			SqlHelper.ExecuteNonQuery(ConfigurationManager.AppSettings["SICALConnString"],CommandType.Text,"Truncate table Tempo;");
 			StringBuilder SecuenciaStr = new StringBuilder();
 			for(int k=0;k<i;k++)
 			{
 				string sSecuenciaAdicional = "PP.Secuencia='" + secuencia[k].ToString() + "'";
 				string sProc = "Exec sp_sicalnet_Reportes_NuevaEtiquetaColor @Secuencia=\"" + sSecuenciaAdicional + "\"";
-				SqlHelper.ExecuteNonQuery(ConfigurationSettings.AppSettings["SICALConnString"],CommandType.Text,sProc);				
+				SqlHelper.ExecuteNonQuery(ConfigurationManager.AppSettings["SICALConnString"],CommandType.Text,sProc);				
 			}
 			PrepareStickerReport();
 			
 		}
 
+		[Obsolete]
 		private void printNewStickers()
 		{
 			try
@@ -1598,6 +1600,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 			}
 		}
 
+		[Obsolete]
 		private void PrepareNewStickerReport(string secuencias, TipoEtiqueta tipoEtiqueta)
 		{
 			Reports.ReportHelper rptHelper = new Reports.ReportHelper();
@@ -1687,7 +1690,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 		
 			rptHelper.setPermission(objReporte);
 			string reportname = rptHelper.exportReport(objReporte, tipoEtiqueta.ToString(), User.Identity.Name);
-			string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportname + ".pdf";
+			string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportname + ".pdf";
 			string ScriptString="<script language='javascript'>window.open('" + redirectPath + "','"+tipoEtiqueta.ToString()+"', 'width=550,height=600,top=100,left=200,toolbars=no,scrollbars=yes,status=yes,resizable=yes');</script>"; 
 			Page.RegisterClientScriptBlock("ClientScript_"+tipoEtiqueta.ToString(),ScriptString);
 			//se evaluar el estatus de impresión
@@ -1710,12 +1713,13 @@ namespace UserInterface.Forms.Production.ColorRoom
 				}
 	
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 
 			}
 		}
 
+		[Obsolete]
 		private void btnCard_Click(object sender, System.EventArgs e)
 		{
 			try
@@ -1813,11 +1817,11 @@ namespace UserInterface.Forms.Production.ColorRoom
 				//Planta OCO
 				if (theUser.IdPlanta.Equals(1))
 				{
-					textoReporte = ConfigurationSettings.AppSettings["TextoOCO"];
+					textoReporte = ConfigurationManager.AppSettings["TextoOCO"];
 				}
 				else
 				{
-					textoReporte = ConfigurationSettings.AppSettings["TextoSLP"];
+					textoReporte = ConfigurationManager.AppSettings["TextoSLP"];
 				}
 
 				Reports.ReportHelper rptHelper = new Reports.ReportHelper();
@@ -1858,16 +1862,17 @@ namespace UserInterface.Forms.Production.ColorRoom
 					reportName = rptHelper.exportReport(reporte,"TarjetaFormulacion",User.Identity.Name);
 				}
 
-				string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";			
+				string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";			
 				string ScriptString="<script language='javascript'>window.open('" + redirectPath + "','Reporte', 'width=550,height=600,top=100,left=200,toolbars=no,scrollbars=yes,status=yes,resizable=yes');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 			catch
 			{
 				throw;
 			}
 		}
-	
+
+		[Obsolete]
 		private void btnPreform_Click(object sender, System.EventArgs e)
 		{
 			 try
@@ -1942,20 +1947,20 @@ namespace UserInterface.Forms.Production.ColorRoom
 		/// <returns>Parameter array</returns>
 		private static SqlParameter[] GetUserParaSingle() 
 		{			
-			SqlParameter[] parms = SqlHelperParameterCache.GetCachedParameterSet(ConfigurationSettings.AppSettings["SICALConnString"],PROC_INSERTAPMAA_TARJETAFORMULACION);
+			SqlParameter[] parms = SqlHelperParameterCache.GetCachedParameterSet(ConfigurationManager.AppSettings["SICALConnString"],PROC_INSERTAPMAA_TARJETAFORMULACION);
 			if (parms == null) 
 			{
 				parms = new SqlParameter[] {
 											   new SqlParameter(SECUENCIA, SqlDbType.VarChar, 10)};
 
-				SqlHelperParameterCache.CacheParameterSet(ConfigurationSettings.AppSettings["SICALConnString"],PROC_INSERTAPMAA_TARJETAFORMULACION, parms);
+				SqlHelperParameterCache.CacheParameterSet(ConfigurationManager.AppSettings["SICALConnString"],PROC_INSERTAPMAA_TARJETAFORMULACION, parms);
 			}
 			return parms;
 		}
 
 		public void TruncaRep_PMMA_TarjetaFormulacion()
 		{	
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -1976,7 +1981,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 
 		public void TruncaRep_PMMA_TarjetaFormulacion_Sludy()
 		{	
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -1999,7 +2004,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 		{
 			SqlParameter[] UserParms = GetUserParaSingle();
 			UserParms[0].Value=secuencia;	
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -2022,7 +2027,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 		{
 			SqlParameter[] UserParms = GetUserParaSingle();
 			UserParms[0].Value=secuencia;			
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -2043,7 +2048,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 
 		public void Proc_ActualizaSumaColorAditivos()
 		{		
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -2067,7 +2072,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 			SqlParameter[] UserParms = GetUserParaSingle();
 			UserParms[0].Value=secuencia;
 			
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 

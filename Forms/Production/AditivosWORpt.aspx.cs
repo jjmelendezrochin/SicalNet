@@ -42,10 +42,10 @@ namespace UserInterface.Forms.Production
 			base.OnInit(e);
 			crReportDocument = new UserInterface.Forms.Production.AditivosWORpt();
 			crConnectionInfo = new ConnectionInfo();
-			crConnectionInfo.ServerName = ConfigurationSettings.AppSettings["server"];
-			crConnectionInfo.UserID = ConfigurationSettings.AppSettings["user id"];
-			crConnectionInfo.Password = ConfigurationSettings.AppSettings["Password"];
-			crConnectionInfo.DatabaseName = ConfigurationSettings.AppSettings["database"];
+			crConnectionInfo.ServerName = ConfigurationManager.AppSettings["server"];
+			crConnectionInfo.UserID = ConfigurationManager.AppSettings["user id"];
+			crConnectionInfo.Password = ConfigurationManager.AppSettings["Password"];
+			crConnectionInfo.DatabaseName = ConfigurationManager.AppSettings["database"];
 
 			//Get the tables collection from the report object
 			crDatabase = crReportDocument.Database;

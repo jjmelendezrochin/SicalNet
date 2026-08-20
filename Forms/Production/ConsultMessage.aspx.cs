@@ -64,7 +64,7 @@ namespace UserInterface.Forms.Production
 			String SQL_CONSULTA_COMENTARIOS = 
 					" Select top 1 ('En fecha ' + Convert(varchar(10), fecha, 103)  + ' '  + comando) as textoBitacora from Bitacora "  +
 					" where comando like '%" + lblSecuecniaNo.Text.Trim() + "%'  and comando like '%por el motivo%'  order by idBitacora desc;";
-			using (SqlDataReader rsBitacora = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings["SICALConnString"], CommandType.Text, SQL_CONSULTA_COMENTARIOS)) 
+			using (SqlDataReader rsBitacora = SqlHelper.ExecuteReader(ConfigurationManager.AppSettings["SICALConnString"], CommandType.Text, SQL_CONSULTA_COMENTARIOS)) 
 			{
 				while (rsBitacora.Read()) 
 				{
@@ -195,7 +195,7 @@ namespace UserInterface.Forms.Production
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ erHnd.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}*/
 	}

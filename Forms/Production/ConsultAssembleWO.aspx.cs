@@ -49,8 +49,8 @@ namespace UserInterface.Forms.Production
 			Response.Cache.SetCacheability(HttpCacheability.NoCache);
 			Response.Cache.SetValidUntilExpires(false);
 			Response.Cache.SetNoStore();
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 			// Put user code to initialize the page here
 			if (!IsPostBack)
@@ -95,7 +95,7 @@ namespace UserInterface.Forms.Production
 			//
 			InitializeComponent();
 			base.OnInit(e);
-			localAreaId=Convert.ToInt32(ConfigurationSettings.AppSettings["AssembleRoomId"]);
+			localAreaId=Convert.ToInt32(ConfigurationManager.AppSettings["AssembleRoomId"]);
 		}
 		
 		/// <summary>
@@ -262,16 +262,16 @@ namespace UserInterface.Forms.Production
 				string idStatus= ((Label) e.Item.FindControl("ItemIdStatus")).Text;
 				int IddStatus = Convert.ToInt32(((Label) e.Item.FindControl("ItemIdStatus")).Text);
 
-				int IdReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
-				int IdActiveStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"]);
-			    int IdProcessStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusInProcess"]);
-				int IdCancelStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusCancel"]);
-				int IdPendienteStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]);
+				int IdReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
+				int IdActiveStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"]);
+			    int IdProcessStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusInProcess"]);
+				int IdCancelStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusCancel"]);
+				int IdPendienteStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]);
 
 				if ((IddStatus == IdCancelStatus)||(IddStatus == IdPendienteStatus)) 
 				{
 					string ScriptString="<script language='javascript'>alert('La secuencia " + Secuencia + " esta en estado PENDIENTE, no puede ser consultada');</script>"; 
-					Page.RegisterStartupScript("ClientScript",ScriptString);
+					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 					//lblErrorMsg.Text = "Una secuencia en estado PENDIENTE no se puede consultar";
 					return;
 				}
@@ -289,7 +289,7 @@ namespace UserInterface.Forms.Production
 					string IdEspesor;
 
 									
-					int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["AssembleRoomId"]);  //Area for Assemble Room
+					int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["AssembleRoomId"]);  //Area for Assemble Room
 					//pnlConsultAssemble.Visible = true;
 //					txtSecuencia.Text = ((Label)e.Item.FindControl("ItemSecuencia")).Text;
 //					txtFecha1.Text =  ((Label)e.Item.FindControl("ItemFecha")).Text;
@@ -337,7 +337,7 @@ namespace UserInterface.Forms.Production
 			if (e.CommandName=="Agregar")
 			{
 				string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-				string IdArea= ConfigurationSettings.AppSettings["AssembleRoomId"].ToString();
+				string IdArea= ConfigurationManager.AppSettings["AssembleRoomId"].ToString();
 				string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 				string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 				RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -359,7 +359,7 @@ namespace UserInterface.Forms.Production
 				}
 
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 			}
 

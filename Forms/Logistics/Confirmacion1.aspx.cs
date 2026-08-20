@@ -239,11 +239,11 @@ namespace UserInterface.Forms.Production
 		
 			if(bllProgramma.HasWorkOrders(belProgramma))
 			{
-				if(IdStatus==Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusReleased"]))
+				if(IdStatus==Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusReleased"]))
 					throw new Exception("La Secuencia "+ Sequence+" ya está cancelada, no puede ser cancelada nuevamente");
-				else if(IdStatus==Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusCancel"]))
+				else if(IdStatus==Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusCancel"]))
 					throw new Exception("La Secuencia "+ Sequence+" ya está cancelada, no puede ser cancelada nuevamente");
-				SICALNet.BusinessEntities.OrdenesTrabajoInfo oInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(Sequence,0,Convert.ToInt32(ConfigurationSettings.AppSettings["StatusCancel"]),Convert.ToInt32(ConfigurationSettings.AppSettings["SequenceStatusCancel"]));						
+				SICALNet.BusinessEntities.OrdenesTrabajoInfo oInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(Sequence,0,Convert.ToInt32(ConfigurationManager.AppSettings["StatusCancel"]),Convert.ToInt32(ConfigurationManager.AppSettings["SequenceStatusCancel"]));						
 				bllProgramma.CancelSecuence(oInfo); 
 				bllProgramma.AddLog(Sequence, sComentario);
 				//to get the weight of each Laminas for the codigosap of that secuencia
@@ -347,7 +347,7 @@ namespace UserInterface.Forms.Production
 				{
 					//to display the msg for user
 					string ScriptString="<script language='javascript'>alert('"+ erHnd.Message +"');</script>"; 
-					Page.RegisterStartupScript("ClientScript",ScriptString);
+					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				}
 			}*/
 	}
