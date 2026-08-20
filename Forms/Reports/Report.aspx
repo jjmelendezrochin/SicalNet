@@ -8,9 +8,13 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+				
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -123,12 +127,16 @@
 					runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox>
 				<asp:imagebutton style="Z-INDEX: 115; POSITION: absolute; TOP: 216px; LEFT: 960px" id="imgLFinal"
 					OnClientClick="return GetDate('txtLibFinal');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<asp:button style="Z-INDEX: 116; POSITION: absolute; TOP: 256px; LEFT: 616px" id="cmdprint"
 					CssClass="botonesInput" Text="Imprimir" Runat="server"></asp:button>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<asp:label style="Z-INDEX: 117; POSITION: absolute; TOP: 392px; LEFT: 344px" id="lblErrMsg"
 					runat="server" Width="658px" Height="20px" CssClass="standard-text" ForeColor="Red"></asp:label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<asp:button style="Z-INDEX: 118; POSITION: absolute; TOP: 256px; LEFT: 704px" id="btnCancelar"
 					runat="server" CssClass="botonesInput" Text="Cancelar"></asp:button>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<asp:label style="Z-INDEX: 121; POSITION: absolute; TOP: 192px; LEFT: 504px" id="lblSecFinal"
 					runat="server" Width="113px" Height="21px" CssClass="standard-text">Secuencia Final</asp:label>
 			</form>

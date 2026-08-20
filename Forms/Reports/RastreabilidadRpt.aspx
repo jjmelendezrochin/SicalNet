@@ -8,9 +8,13 @@
 		<meta name="CODE_LANGUAGE" Content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">		
 				function ShowTitle()
 			{
@@ -43,7 +47,7 @@
 				<asp:Button id="btnImprimir" style="Z-INDEX: 101; POSITION: absolute; TOP: 192px; LEFT: 584px"
 					runat="server" Width="83px" Height="21px" Text="Imprimir" CssClass="botonesInput"></asp:Button>
 				<asp:Button id="btnCancelar" style="Z-INDEX: 102; POSITION: absolute; TOP: 192px; LEFT: 696px"
-					runat="server" Width="66px" Height="21px" Text="Cancelar" CssClass="botonesInput"></asp:Button>
+					runat="server" Width="83px" Height="21px" Text="Cancelar" CssClass="botonesInput"></asp:Button>
 				<asp:Label id="Label1" style="Z-INDEX: 104; POSITION: absolute; TOP: 128px; LEFT: 592px" runat="server"
 					Width="57px" Height="13px" CssClass="Standard-text">Secuencia:</asp:Label>
 			</form>
