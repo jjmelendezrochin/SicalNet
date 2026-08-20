@@ -196,7 +196,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
-		[Obsolete]
+		
 		private void InitializeComponent()
 		{    
 			this.btnImprimirEqu.Click += new System.EventHandler(this.btnImprimirEqu_Click);
@@ -1416,7 +1416,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 			}
 		}
 
-		[Obsolete]
+		
 		private void btnImprimirEqu_Click(object sender, System.EventArgs e)
 		{			
 
@@ -1475,7 +1475,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 			
 		}
 
-		[Obsolete]
+		
 		private void printNewStickers()
 		{
 			try
@@ -1600,7 +1600,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 			}
 		}
 
-		[Obsolete]
+		
 		private void PrepareNewStickerReport(string secuencias, TipoEtiqueta tipoEtiqueta)
 		{
 			Reports.ReportHelper rptHelper = new Reports.ReportHelper();
@@ -1719,7 +1719,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 			}
 		}
 
-		[Obsolete]
+		
 		private void btnCard_Click(object sender, System.EventArgs e)
 		{
 			try
@@ -1872,7 +1872,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 			}
 		}
 
-		[Obsolete]
+		
 		private void btnPreform_Click(object sender, System.EventArgs e)
 		{
 			 try

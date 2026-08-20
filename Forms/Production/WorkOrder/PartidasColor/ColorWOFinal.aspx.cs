@@ -147,7 +147,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasColor
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
-		[Obsolete]
+		
 		private void InitializeComponent()
 		{    
 			this.tabColor.MenuItemSelected += new CYBERAKT.WebControls.Navigation.ASPnetMenu.MenuItemSelectedEvent(this.tabColor_MenuItemSelected);
@@ -667,7 +667,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasColor
 			}
 		}
 
-		[Obsolete]
+		
 		private void btnAgregarMensaje_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia = txtSecuencia.Text.ToString();

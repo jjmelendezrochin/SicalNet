@@ -102,7 +102,7 @@ namespace UserInterface.Forms.Production.Work_Order.Post_Cured
 		}
 		#endregion
 
-		[Obsolete]
+		
 		private void dgdPostCuredWO_ItemCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
 			if (e.CommandName == "Consult")

@@ -205,7 +205,7 @@ namespace UserInterface.Forms.Structures
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
-		[Obsolete]
+		
 		private void InitializeComponent()
 		{    
 			this.imgFind.Click += new System.Web.UI.ImageClickEventHandler(this.imgFind_Click);
@@ -614,7 +614,7 @@ namespace UserInterface.Forms.Structures
 
 		}
 
-		[Obsolete]
+		
 		private void imgFind_Click(object sender, System.Web.UI.ImageClickEventArgs e)
 		{
 			try

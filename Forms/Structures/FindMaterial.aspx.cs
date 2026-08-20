@@ -57,7 +57,7 @@ namespace UserInterface.Forms.Structures
 		/// the contents of this method with the code editor.
 		/// </summary>
 		
-		[Obsolete]
+		
 		private void InitializeComponent()
 		{    
 			this.dgdFindMaterial.ItemCommand += new System.Web.UI.WebControls.DataGridCommandEventHandler(this.dgdFindMaterial_ItemCommand);
@@ -451,7 +451,7 @@ namespace UserInterface.Forms.Structures
 
 
 
-		[Obsolete]
+		
 		private void dgdMaterial_ItemCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
 	

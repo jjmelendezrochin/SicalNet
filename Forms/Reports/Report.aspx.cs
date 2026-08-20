@@ -144,7 +144,7 @@ namespace UserInterface.Forms.Reports
 		}
 		#region Web Form Designer generated code
 
-		[Obsolete]
+		
 #pragma warning disable CS0809 // El miembro obsoleto invalida un miembro no obsoleto
         override protected void OnInit(EventArgs e)
 #pragma warning restore CS0809 // El miembro obsoleto invalida un miembro no obsoleto
@@ -161,7 +161,7 @@ namespace UserInterface.Forms.Reports
 		/// the contents of this method with the code editor.
 		/// </summary>
 		/// 
-		[Obsolete]
+		
 		private void InitializeComponent()
 		{    
 			this.cmdExportaPvc.Click += new System.EventHandler(this.cmdExportaPvc_Click);
@@ -2575,14 +2575,14 @@ namespace UserInterface.Forms.Reports
 		}
 
 
-		[Obsolete]
+		
 		private void cmdExportaPvc_Click(object sender, System.EventArgs e)
 		{					
 			ExportaPvc();
 		}
 
 
-		[Obsolete]
+		
 		private void ExportaPvc()
 		{
 			int idLinea;
@@ -2671,7 +2671,7 @@ namespace UserInterface.Forms.Reports
 
 		// ********************
 		// Reporte de inspección
-		[Obsolete]
+		
 		private void cmdReporteInspeccion_Click(object sender, System.EventArgs e)
 		{
 			string redirectPath = "";
@@ -2737,7 +2737,7 @@ namespace UserInterface.Forms.Reports
 			Response.Redirect(redirectPath);
 		}
 
-		[Obsolete]
+		
 		private void cmdReporteCorte_Click(object sender, System.EventArgs e)
 		{
 			string redirectPath = "";
@@ -2804,7 +2804,7 @@ namespace UserInterface.Forms.Reports
 
 		}
 
-        [Obsolete]
+        
         private void cmdEtiquetaPvc_Click(object sender, System.EventArgs e)
 		{
 			string redirectPath = "";

@@ -142,7 +142,7 @@ namespace UserInterface.Forms.Production
 		/// the contents of this method with the code editor.
 		/// </summary>
 
-		[Obsolete]
+		
 		private void InitializeComponent()
 		{    
 			this.cboLinea.SelectedIndexChanged += new System.EventHandler(this.cboLinea_SelectedIndexChanged);
@@ -1377,7 +1377,7 @@ namespace UserInterface.Forms.Production
 			}
 		}
 
-		[Obsolete]
+		
 		private void btnImprimirEqu_Click(object sender, System.EventArgs e)
 		{
 			// Limpieza de cache
@@ -1402,7 +1402,7 @@ namespace UserInterface.Forms.Production
 			}
 		}
 
-		[Obsolete]
+		
 		private void printNewStickers()
 		{
 			try
@@ -1509,7 +1509,7 @@ namespace UserInterface.Forms.Production
 			}
 		}
 
-		[Obsolete]
+		
 		private void printNewStickersSLPColor()
 		{
 			// Limpieza de cache
@@ -1565,7 +1565,7 @@ namespace UserInterface.Forms.Production
 			}
 		}
 
-		[Obsolete]
+		
 		private void PrepareNewStickerReport(string secuencias, TipoEtiqueta tipoEtiqueta)
 		{
 			Reports.ReportHelper rptHelper = new Reports.ReportHelper();
@@ -1649,7 +1649,7 @@ namespace UserInterface.Forms.Production
 		
 		}
 
-		[Obsolete]
+		
 		private void printRegularStickers()
 		{
 			try
@@ -1858,7 +1858,7 @@ namespace UserInterface.Forms.Production
 			CmbOlla.Items[0].Selected=true;
 
 		}
-		[Obsolete]
+		
 		private void btnCard_Click(object sender, System.EventArgs e)
 		{
 			// Limpieza de cache
@@ -2004,7 +2004,7 @@ namespace UserInterface.Forms.Production
 				throw;
 			}
 		}
-		[Obsolete]
+		
 		private void btnPreform_Click(object sender, System.EventArgs e)
 		{
 			// Limpieza de cache
@@ -2077,7 +2077,7 @@ namespace UserInterface.Forms.Production
 				throw;
 			}
 		}
-		[Obsolete]
+		
 		private void btnDust_Click(object sender, System.EventArgs e)
 		{
 			// Limpieza de cache
@@ -2165,7 +2165,7 @@ namespace UserInterface.Forms.Production
 			}
 		}
 
-		[Obsolete]
+		
 		private void btnImprimirSLPC_Click(object sender, System.EventArgs e)
 		{
 				printNewStickersSLPColor();
