@@ -9,9 +9,13 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -63,6 +67,7 @@
 					runat="server" CssClass="standard-text" Width="121px"></asp:textbox>
 				<asp:button CssClass="botonesInput" id="cmdprint" style="Z-INDEX: 114; POSITION: absolute; TOP: 280px; LEFT: 752px"
 					Runat="server" Text="Imprimir"></asp:button>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<asp:image OnClientClick="return GetDate('txtFechaFinal');" id="imgProgrammaFinal" style="Z-INDEX: 113; POSITION: absolute; TOP: 216px; LEFT: 912px"
 					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:image>
 				<asp:image OnClientClick="return GetDate('txtLibFinal');" id="imgLieractionFinal" style="Z-INDEX: 112; POSITION: absolute; TOP: 216px; LEFT: 1080px"
@@ -87,6 +92,7 @@
 					runat="server" Width="143px" Height="22px">Fecha Liberacion Final</asp:label>
 				<asp:label CssClass="standard-text" id="LblLiberacion1" style="Z-INDEX: 109; POSITION: absolute; TOP: 104px; LEFT: 968px"
 					runat="server" Width="152px" Height="22px">Fecha Liberacion inicial</asp:label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<asp:button CssClass="botonesInput" id="cmdCancelar" style="Z-INDEX: 115; POSITION: absolute; TOP: 280px; LEFT: 832px"
 					Runat="server" Text="Regresar"></asp:button>
 				<asp:dropdownlist id="cboFamilia" style="Z-INDEX: 116; POSITION: absolute; TOP: 216px; LEFT: 288px"

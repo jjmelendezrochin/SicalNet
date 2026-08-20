@@ -8,9 +8,14 @@
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
+		
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{   
@@ -47,7 +52,7 @@
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<form id="ConsultEnvioPT" method="post" runat="server">
-			<table width="700" align="center" style="BORDER-COLLAPSE: collapse">
+			<table width="900" align="center" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
 						<td align="left" colSpan="5">

@@ -9,9 +9,14 @@
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
+		
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -59,7 +64,7 @@
 							Width="101px" MaxLength="11"></asp:textbox><asp:imagebutton OnClientClick="return GetDate('txtFechaFinal');" id="ImgFechaFinal" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></td>
 					<td><asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text"></asp:dropdownlist></td>
 					<td><asp:dropdownlist id="cboStatus" runat="server" CssClass="standard-text"></asp:dropdownlist></td>
-					<td><asp:button id="cmdAceptar" runat="server" CssClass="botonesInput" Width="62px" Text="Aceptar"></asp:button></td>
+					<td><asp:button id="cmdAceptar" runat="server" CssClass="botonesInput" Width="80px" Text="Aceptar"></asp:button></td>
 				</tr>
 				<TR>
 					<TD>
