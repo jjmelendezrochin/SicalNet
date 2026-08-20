@@ -327,7 +327,7 @@ namespace UserInterface.Forms.Production
 		/// the contents of this method with the code editor.
 		/// </summary>
 
-		[Obsolete]
+		
 		private void InitializeComponent()
 		{    
 			this.tabMixture.MenuItemSelected += new CYBERAKT.WebControls.Navigation.ASPnetMenu.MenuItemSelectedEvent(this.tabMixture_MenuItemSelected);
@@ -1261,7 +1261,7 @@ namespace UserInterface.Forms.Production
 		}
 
 
-		[Obsolete]
+		
 		private void btnLiberar_Click(object sender, System.EventArgs e)
 		{
 			
@@ -1460,7 +1460,7 @@ namespace UserInterface.Forms.Production
 			Response.Redirect("ConsultMixturesWO.aspx");
 		}
 
-		[Obsolete]
+		
 		private void btnAgregarMensaje_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia;

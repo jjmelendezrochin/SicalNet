@@ -34,7 +34,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasColor
 		}
 
 		#region Web Form Designer generated code
-		[Obsolete]
+		
 #pragma warning disable CS0809 // El miembro obsoleto invalida un miembro no obsoleto
         override protected void OnInit(EventArgs e)
 #pragma warning restore CS0809 // El miembro obsoleto invalida un miembro no obsoleto

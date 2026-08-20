@@ -177,7 +177,7 @@ namespace UserInterface.Controls
 			
 		}
 
-		[Obsolete]
+		
 		private void lstProgram_ItemCommand(object source, System.Web.UI.WebControls.DataListCommandEventArgs e)
 		{
 			switch (e.CommandName)
