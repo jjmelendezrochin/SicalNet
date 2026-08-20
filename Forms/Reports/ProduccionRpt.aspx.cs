@@ -244,7 +244,7 @@ namespace UserInterface.Forms.Reports
 
 			if (this.cmbLinea.SelectedItem.Text == const_All) 
 			{
-				//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 				parameterDiscreteValue.Value=const_All;
 				reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -255,14 +255,14 @@ namespace UserInterface.Forms.Reports
 				reporte.Section1.ReportObjects["FldAllPlanta"].Width =0;  
 				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =3015;  
 			}
-			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 			parameterValue.Add(parameterDiscreteValue);
 			reporte.DataDefinition.ParameterFields["Planta"].ApplyCurrentValues(parameterValue);
 //			campoPlanta.Add(valorPlanta);
 
 //			if (this.cmbLinea.SelectedItem.Text == const_All) 
 //			{
-//				//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+//				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 //				valorPlanta.Value=const_All;
 //				reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 //				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -273,7 +273,7 @@ namespace UserInterface.Forms.Reports
 //				reporte.Section1.ReportObjects["FldAllPlanta"].Width =0;  
 //				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =3015;  
 //			}
-//			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+//			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 //			campoPlanta.Add(valorPlanta);
 
 			
@@ -617,7 +617,7 @@ namespace UserInterface.Forms.Reports
 			reporte.OpenSubreport("DefectoRpt.rpt - 01").RecordSelectionFormula=SelFormula.ToString();
 
 			string reportName = rptHelper.exportReport(reporte,"ProduccionReport",User.Identity.Name);
-			string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 			Response.Redirect(redirectPath);
 		}
 

@@ -132,9 +132,9 @@ namespace UserInterface.Forms.Structures
 				string	sConsultaSecuencia = " Select COUNT(*) as Cta from FoliosAditivos ";
 				sConsultaSecuencia += " where codigoSap = " + codigoSAP + " and idLinea = " + this.cboLinea.SelectedItem.Value + " and Activo = 1";
 				sConsultaSecuencia += " group by CodigoSap, idLinea, Activo;" ;				
-				using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+				using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 				{
-					using(SqlDataReader sdrSec = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings["SICALConnString"],CommandType.Text,sConsultaSecuencia))
+					using(SqlDataReader sdrSec = SqlHelper.ExecuteReader(ConfigurationManager.AppSettings["SICALConnString"],CommandType.Text,sConsultaSecuencia))
 					{
 						while(sdrSec.Read())
 						{

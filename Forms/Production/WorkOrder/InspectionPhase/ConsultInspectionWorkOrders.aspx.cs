@@ -96,7 +96,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 			dgdEmpaque.DataBind();
 			
 			// To Load the WO List Grid
-			int IdArea = Convert.ToInt32( ConfigurationSettings.AppSettings["InspeccionRoomId"]);
+			int IdArea = Convert.ToInt32( ConfigurationManager.AppSettings["InspeccionRoomId"]);
 			PartidasInspeccionInfo piInfo2 = new PartidasInspeccionInfo(txtSecuencia.Text.ToString(),IdArea);
 			// SICALNet.BusinessLogicLayer.PartidasInspeccion paIns1 = new SICALNet.BusinessLogicLayer.PartidasInspeccion();
 			IList LmList = (IList)paIns.LoadLamina(piInfo2);
@@ -110,14 +110,14 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				ArrayList LaminaCount= new ArrayList();
 				for(int i=1; i<=Convert.ToInt32(txtCantidad.Text); i++)
 				{
-					PartidasInspeccionInfo InspecInfo = new PartidasInspeccionInfo(i,0,string.Empty ,Convert.ToInt32(ConfigurationSettings.AppSettings["SendFinishProductRoomId"]),false,false,false,false);
+					PartidasInspeccionInfo InspecInfo = new PartidasInspeccionInfo(i,0,string.Empty ,Convert.ToInt32(ConfigurationManager.AppSettings["SendFinishProductRoomId"]),false,false,false,false);
 					LaminaCount.Add(InspecInfo);
 				}
 				dgdDefecto.DataSource = LaminaCount;
 				dgdDefecto.DataBind();
 			}
 
-			int ReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"].ToString());
+			int ReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"].ToString());
 			if(Sts==ReleaseStatus)
 			{
 				btnLiberar.Enabled=false;
@@ -183,7 +183,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 		private void DisplayFloorMessage()
 		{
 			// Display the Messages in Multiline Text box
-			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]));
+			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]));
 			SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();					
 			IList mPisoList=mPiso.Select(mpInfo);
 			if(mPisoList.Count>0)
@@ -207,7 +207,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				int i = dgdDefecto.Items.Count+1;	
 				if (i==0) return;
 				
-				// string FPRoomId = ConfigurationSettings.AppSettings["SendFinishProductRoomId"].ToString();
+				// string FPRoomId = ConfigurationManager.AppSettings["SendFinishProductRoomId"].ToString();
 				switch(((Label)dgdDefecto.Controls[0].Controls[i].FindControl("lblAreaId")).Text)
 				{
 					case "15":
@@ -268,9 +268,9 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				
 					string sDefecto = "";
 					string sConsulta = "Select Descripcion from Defecto where idDefecto = " + IdDefecto.Text ;
-					using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+					using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 					{						
-						using (SqlDataReader RsDefecto = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings["SICALConnString"], CommandType.Text, sConsulta)) 
+						using (SqlDataReader RsDefecto = SqlHelper.ExecuteReader(ConfigurationManager.AppSettings["SICALConnString"], CommandType.Text, sConsulta)) 
 						{
 							while (RsDefecto.Read()) 
 							{			
@@ -321,7 +321,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				}
 
 				//If the Status of this Secuencia is Released, Disable combo boxes
-				int ReleaseStatus = Convert.ToInt32( ConfigurationSettings.AppSettings["StatusRelease"].ToString());
+				int ReleaseStatus = Convert.ToInt32( ConfigurationManager.AppSettings["StatusRelease"].ToString());
 				if (Sts==ReleaseStatus)
 				{
 					DDLDefecto.Enabled=false;
@@ -364,17 +364,17 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 			{
 				case 1:
 					ddDefecto.Visible=false;
-					IdAreaDestino.Text=ConfigurationSettings.AppSettings["SendFinishProductRoomId"];
+					IdAreaDestino.Text=ConfigurationManager.AppSettings["SendFinishProductRoomId"];
 					AreaDestino.Text="Envio Producto Terminado";
 					break;
 				case 2:
 					ddDefecto.Visible=true;
-					IdAreaDestino.Text=ConfigurationSettings.AppSettings["SegundasRoomId"];
+					IdAreaDestino.Text=ConfigurationManager.AppSettings["SegundasRoomId"];
 					AreaDestino.Text="Segundas";
 					break;
 				case 3:
 					ddDefecto.Visible=true;
-					IdAreaDestino.Text=ConfigurationSettings.AppSettings["TercerasRoomId"];
+					IdAreaDestino.Text=ConfigurationManager.AppSettings["TercerasRoomId"];
 					AreaDestino.Text="Terceras";
 					break;
 
@@ -411,10 +411,10 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 			try
 			{
 				InsertInspection();
-				int AreaId= Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]);
-				int IdRelease = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"].ToString());
-				int IdActive = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"]);
-				int QuarantineRoomId= Convert.ToInt32(ConfigurationSettings.AppSettings["QuarantineRoomId"]);
+				int AreaId= Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]);
+				int IdRelease = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"].ToString());
+				int IdActive = Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"]);
+				int QuarantineRoomId= Convert.ToInt32(ConfigurationManager.AppSettings["QuarantineRoomId"]);
 
 				//Release the Inspeccion Phase
 				OrdenesTrabajoInfo WOInfo = new OrdenesTrabajoInfo(txtSecuencia.Text,AreaId,IdRelease,DateTime.Now.Date.ToString("dd/MMM/yyyy"),Context.User.Identity.Name);
@@ -458,7 +458,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				WorkOrder.UpdateStatus(WOInfo1);
 
 				//Active - to Send Finish Product Phase
-				int IdAreaFP= Convert.ToInt32(ConfigurationSettings.AppSettings["SendFinishProductRoomId"]);
+				int IdAreaFP= Convert.ToInt32(ConfigurationManager.AppSettings["SendFinishProductRoomId"]);
 				OrdenesTrabajoInfo WOInfo2 = new OrdenesTrabajoInfo(txtSecuencia.Text,IdAreaFP,IdActive,DateTime.Now.Date.ToString("dd/MMM/yyyy"),Context.User.Identity.Name);
 				SICALNet.BusinessLogicLayer.OrdenesTrabajo WOFP = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 				WOFP.UpdateStatus(WOInfo2);
@@ -508,7 +508,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 		private void InsertInspection()
 		{
 			IList InspList = new ArrayList();
-			int IdInspectArea = Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]);
+			int IdInspectArea = Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]);
 
 			for (int i=0; i<dgdDefecto.Items.Count; i++)
 			{
@@ -519,17 +519,17 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				switch(Calificacion)
 				{
 					case 1:
-						PartidasInspeccionInfo pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,IdInspectArea,NoLamina,Calificacion,0,Convert.ToInt32(ConfigurationSettings.AppSettings["SendFinishProductRoomId"]));
+						PartidasInspeccionInfo pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,IdInspectArea,NoLamina,Calificacion,0,Convert.ToInt32(ConfigurationManager.AppSettings["SendFinishProductRoomId"]));
 						InspList.Add(pInfo);
 						break;
 					case 2:
 						int IdDefecto = Convert.ToInt32(((DropDownList)dgdDefecto.Items[i].FindControl("ddlDefecto")).SelectedItem.Value);
-						pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,IdInspectArea,NoLamina,Calificacion,IdDefecto,Convert.ToInt32(ConfigurationSettings.AppSettings["SegundasRoomId"]));
+						pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,IdInspectArea,NoLamina,Calificacion,IdDefecto,Convert.ToInt32(ConfigurationManager.AppSettings["SegundasRoomId"]));
 						InspList.Add(pInfo);
 						break;
 					case 3:
 						IdDefecto = Convert.ToInt32(((DropDownList)dgdDefecto.Items[i].FindControl("ddlDefecto")).SelectedItem.Value);
-						pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,IdInspectArea,NoLamina,Calificacion,IdDefecto,Convert.ToInt32(ConfigurationSettings.AppSettings["TercerasRoomId"]));
+						pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,IdInspectArea,NoLamina,Calificacion,IdDefecto,Convert.ToInt32(ConfigurationManager.AppSettings["TercerasRoomId"]));
 						InspList.Add(pInfo);
 						break;
 
@@ -543,7 +543,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				}
 				else
 				{
-					PartidasInspeccionInfo pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,IdInspectArea,NoLamina,Calificacion,0,Convert.ToInt32(ConfigurationSettings.AppSettings["FinishProductRoomId"]));
+					PartidasInspeccionInfo pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,IdInspectArea,NoLamina,Calificacion,0,Convert.ToInt32(ConfigurationManager.AppSettings["FinishProductRoomId"]));
 					InspList.Add(pInfo);
 				}*/					
 			}
@@ -555,7 +555,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 		private void btnMensaje_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia = txtSecuencia.Text.ToString();
-			string IdArea = ConfigurationSettings.AppSettings["InspeccionRoomId"].ToString();
+			string IdArea = ConfigurationManager.AppSettings["InspeccionRoomId"].ToString();
 			string CodigoSAP = Request.QueryString["CodigoSAP"].ToString();
 			string MaterialDescription=txtUtec.Text.Trim();
 			RegisterClientScriptBlock("Enviar Mensaje de Piso", string.Format("<script language='JavaScript'> window.open('../../MensajePopup.aspx?Secuencia={0}&AreaId={1}&CodigoSAP={2}&MaterialDescription={3}','anycontent','width=600, height=550,left=100, top=150, status, scrollbars=no'); </script>",Secuencia,IdArea,CodigoSAP,MaterialDescription));			
@@ -566,7 +566,7 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 			try
 			{
 				InsertInspection();
-				int AreaId= Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]);
+				int AreaId= Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]);
 				IList InspList = new ArrayList();
 				for (int i=0; i<dgdDefecto.Items.Count; i++)
 				{
@@ -581,10 +581,10 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				}
 				SICALNet.BusinessLogicLayer.PartidasInspeccion BLLInsp = new SICALNet.BusinessLogicLayer.PartidasInspeccion();
 				BLLInsp.UpdateCuarentena(InspList);
-				//int AreaId= Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]);
-				int IdRelease = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"].ToString());
-				int IdActive = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"]);
-				int QuarantineRoomId= Convert.ToInt32(ConfigurationSettings.AppSettings["QuarantineRoomId"]);
+				//int AreaId= Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]);
+				int IdRelease = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"].ToString());
+				int IdActive = Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"]);
+				int QuarantineRoomId= Convert.ToInt32(ConfigurationManager.AppSettings["QuarantineRoomId"]);
 
 				//Release the Inspeccion Phase
 				OrdenesTrabajoInfo WOInfo = new OrdenesTrabajoInfo(txtSecuencia.Text,AreaId,IdRelease,DateTime.Now.Date.ToString("dd/MMM/yyyy"),Context.User.Identity.Name);

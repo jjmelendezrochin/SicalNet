@@ -50,10 +50,10 @@ namespace UserInterface.Forms.Production
 					if(Session[this.Context.User.Identity.Name+"IdStatus"].ToString()=="5")
 						txtCuanto.Enabled=false;
 					SICALNet.BusinessLogicLayer.PartidasAditivos blPartidasAdi = new SICALNet.BusinessLogicLayer.PartidasAditivos();
-					if(blPartidasAdi.IsExistSecuencia(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"])))
+					if(blPartidasAdi.IsExistSecuencia(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"])))
 					{
 						flag="1";
-						Container=(int)blPartidasAdi.GetNoContainers(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]));
+						Container=(int)blPartidasAdi.GetNoContainers(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]));
 						txtCuanto.Text=Container.ToString();
 					}
 				}
@@ -71,7 +71,7 @@ namespace UserInterface.Forms.Production
 					if(Request.QueryString["ReFlag"].ToString()=="False")
 					{
 						flag="1";
-						Container=(int)blPartidasAdi.GetNoContainers(secuencia[0],Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]));
+						Container=(int)blPartidasAdi.GetNoContainers(secuencia[0],Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]));
 						txtCuanto.Text=Container.ToString();
 					}
 
@@ -133,7 +133,7 @@ namespace UserInterface.Forms.Production
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ ErrHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}
 

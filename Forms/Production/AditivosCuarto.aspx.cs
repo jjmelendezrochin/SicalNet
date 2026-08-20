@@ -182,7 +182,7 @@ namespace UserInterface.Forms.Production
 				
 				txtPiso.Text=BEprg.DetalleOperacion;
 				//			txtArea.Text=BEprg.IdArea.ToString();
-				txtArea.Text= ConfigurationSettings.AppSettings["AditivosRoomId"];
+				txtArea.Text= ConfigurationManager.AppSettings["AditivosRoomId"];
 			}
 			catch
 			{
@@ -207,7 +207,7 @@ namespace UserInterface.Forms.Production
 				txtUtec.Text=BEprg.MaterialDesc;
 				//txtCantidad.Text=BEprg.Cantidad.ToString();
 				txtCantidad.Text= Request.QueryString["CantidadSum"];
-				txtArea.Text= ConfigurationSettings.AppSettings["AditivosRoomId"];
+				txtArea.Text= ConfigurationManager.AppSettings["AditivosRoomId"];
 				for(int i=0;i<Convert.ToInt32(Session[this.Context.User.Identity.Name+"FormularFlag"]);i++)
 				txtSecuencia.Text+=Secuencia[i]+",";
 				
@@ -264,7 +264,7 @@ namespace UserInterface.Forms.Production
 				decimal Cantidad=Convert.ToDecimal(((Label) dgdAditivos.Items[inLoop].FindControl("AditivosCantidad")).Text.ToString());
 				decimal CantidadReal;
 				string folio;
-				if(status==ConfigurationSettings.AppSettings["StatusRelease"].ToString())
+				if(status==ConfigurationManager.AppSettings["StatusRelease"].ToString())
 				{
 					CantidadReal=Convert.ToDecimal(((Label) dgdAditivos.Items[inLoop].Cells[2].FindControl("lblCantidadReal")).Text.ToString());
 					folio=((Label) dgdAditivos.Items[inLoop].Cells[2].FindControl("lblFolio")).Text;
@@ -315,7 +315,7 @@ namespace UserInterface.Forms.Production
 					SICALNet.BusinessLogicLayer.PartidasAditivos PAd = new SICALNet.BusinessLogicLayer.PartidasAditivos();
 					PAd.Delete(txtSecuencia.Text);
                     PAd.Insert(aryClrRm);
-					SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]),Context.User.Identity.Name);
+					SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]),Context.User.Identity.Name);
 					SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 					BLOrdenes.UpdateLoginForm(OTInfo);
 					/*SICALNet.BusinessEntities.SecuenciaCombinasInfo SCInfo = new SICALNet.BusinessEntities.SecuenciaCombinasInfo(txtSecuencia.Text,1);
@@ -368,8 +368,8 @@ namespace UserInterface.Forms.Production
 							//sec+="','";
 						}
 					}
-					SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(sec.ToString(),Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),Context.User.Identity.Name);
-					//SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(sec,Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),Context.User.Identity.Name);
+					SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(sec.ToString(),Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),Context.User.Identity.Name);
+					//SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(sec,Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),Context.User.Identity.Name);
 					/**** fin modificación ****/
 					SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 					BLOrdenes.UpdateLoginFormCombined(OTInfo);
@@ -392,7 +392,7 @@ namespace UserInterface.Forms.Production
 			catch(System.Data.SqlClient.SqlException)
 			{
 				string ScriptString="<script language='javascript'>alert('El ID Identificador ya esta siendo usado');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 			catch
 			{				
@@ -469,7 +469,7 @@ namespace UserInterface.Forms.Production
 						"' and NumeroOlla = '" + iLoop + 
 						"' and LoteReferencia = '" + BEparti.LoteReferencia + "';";
 						double dCantidadReal = 0;
-						using(SqlDataReader fadReader=SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings["SICALConnString"],CommandType.Text,sSql))
+						using(SqlDataReader fadReader=SqlHelper.ExecuteReader(ConfigurationManager.AppSettings["SICALConnString"],CommandType.Text,sSql))
 						{
 							while(fadReader.Read())
 							{
@@ -502,7 +502,7 @@ namespace UserInterface.Forms.Production
 			//Update the session object with the Aditives List
 			Session[this.Context.User.Identity.Name+"ListaAds"]=theAditivosList;
 
-			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]));
+			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]));
 			SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();					
 			IList mPisoList=mPiso.Select(mpInfo);
 
@@ -618,15 +618,15 @@ namespace UserInterface.Forms.Production
 					for(int j=0;j<Convert.ToInt32(Session[this.Context.User.Identity.Name+"FormularFlag"]);j++)
 					{
 						SICALNet.BusinessLogicLayer.PartidasAditivos blPAdd=new SICALNet.BusinessLogicLayer.PartidasAditivos();
-						IList SecuenciaLaminaList=(IList)blPAdd.SelectEachLaminaCombined(secuencia[j],Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]));
+						IList SecuenciaLaminaList=(IList)blPAdd.SelectEachLaminaCombined(secuencia[j],Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]));
 						SecuenciaOlla[j]=(ArrayList)SecuenciaLaminaList;
 					}
 					for (int iLoop = 1; iLoop <= iVaso; iLoop++)
 					{
 						SICALNet.BusinessLogicLayer.PartidasAditivos blPAdd=new SICALNet.BusinessLogicLayer.PartidasAditivos();
 						/*********modificado por alejandro.hernandez@nasoft.com 21022006********/
-						IList OllaList=blPAdd.SelectCombined(sec.ToString(),Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]),iLoop);
-						//IList OllaList=blPAdd.SelectCombined(sec,Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]),iLoop);
+						IList OllaList=blPAdd.SelectCombined(sec.ToString(),Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]),iLoop);
+						//IList OllaList=blPAdd.SelectCombined(sec,Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]),iLoop);
 						/*********fin modificación****************/
 						if (OllaList.Count > 0)
 						{
@@ -645,7 +645,7 @@ namespace UserInterface.Forms.Production
 				//Update the session object with the Aditives List
 				Session[this.Context.User.Identity.Name+"ListaAds"]=theAditivosList;
 
-				MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]));
+				MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]));
 				SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();					
 				IList mPisoList=mPiso.Select(mpInfo);
 
@@ -752,10 +752,10 @@ namespace UserInterface.Forms.Production
 			rptHelper.setPermission(AdiSticker);
 			string reportname = rptHelper.exportReport(AdiSticker,"StickerAditivos", User.Identity.Name);
 
-			string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportname + ".pdf";
+			string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportname + ".pdf";
 			//Response.Redirect(redirectPath);
 			string ScriptString="<script language='javascript'>window.open('" + redirectPath + "','Reporte', 'width=550,height=600,top=100,left=200,toolbars=no,scrollbars=yes,status=yes,resizable=yes');</script>"; 
-			Page.RegisterStartupScript("ClientScript",ScriptString);
+			ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 
 
 
@@ -811,7 +811,7 @@ namespace UserInterface.Forms.Production
 		{
 			try
 			{				
-				if(status==ConfigurationSettings.AppSettings["StatusRelease"].ToString())
+				if(status==ConfigurationManager.AppSettings["StatusRelease"].ToString())
 				{
 					Page.RegisterStartupScript("alert", "<script language='JavaScript'>" + "alert('"+"Esta orden de trabajo ya está liberada !"+"')" + "<" + "/script>");	
 				}
@@ -823,14 +823,14 @@ namespace UserInterface.Forms.Production
 					SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo;
 					if(Session[this.Context.User.Identity.Name+"FormularFlag"].ToString()=="0")
 					{
-						OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text.ToString(),2,Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]),Convert.ToInt32(ConfigurationSettings.AppSettings["PVCRoomId"]),Convert.ToInt32(ConfigurationSettings.AppSettings["MixturesRoomId"]),5,DateTime.Now.Date.ToString("dd-MMM-yyyy"),Context.User.Identity.Name);
+						OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text.ToString(),2,Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]),Convert.ToInt32(ConfigurationManager.AppSettings["PVCRoomId"]),Convert.ToInt32(ConfigurationManager.AppSettings["MixturesRoomId"]),5,DateTime.Now.Date.ToString("dd-MMM-yyyy"),Context.User.Identity.Name);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						BLOrdenes.AdditivesUpdate(OTInfo);
 					}
 					else
 					{	
 						
-						OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,2,Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]),Convert.ToInt32(ConfigurationSettings.AppSettings["PVCRoomId"]),Convert.ToInt32(ConfigurationSettings.AppSettings["MixturesRoomId"]),5,DateTime.Now.Date.ToString("dd-MMM-yyyy"),Context.User.Identity.Name);
+						OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,2,Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]),Convert.ToInt32(ConfigurationManager.AppSettings["PVCRoomId"]),Convert.ToInt32(ConfigurationManager.AppSettings["MixturesRoomId"]),5,DateTime.Now.Date.ToString("dd-MMM-yyyy"),Context.User.Identity.Name);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						BLOrdenes.AdditivesUpdateCombined(OTInfo);
 					}
@@ -854,7 +854,7 @@ namespace UserInterface.Forms.Production
 //				string sErrMsg;
 //				sErrMsg=ErrHand.Message.Replace("'","-");
 //				string ScriptString="<script language='javascript'>alert('"+ sErrMsg +"');</script>"; 
-//				Page.RegisterStartupScript("ClientScript",ScriptString);
+//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				
 				throw;
 			}
@@ -865,7 +865,7 @@ namespace UserInterface.Forms.Production
 		private void btnAgregarMensaje_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia = txtSecuencia.Text.ToString();
-			string IdArea= ConfigurationSettings.AppSettings["AditivosRoomId"].ToString();
+			string IdArea= ConfigurationManager.AppSettings["AditivosRoomId"].ToString();
 			string CodigoSAP=Session[this.Context.User.Identity.Name+"CodigoSAP"].ToString();
 			string matDesc=txtUtec.Text.Trim();
 			RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodigoSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -928,7 +928,7 @@ namespace UserInterface.Forms.Production
 							decimal CantidadReal=0;
 							if(PAInfo1.CantidadReal!=0)
 								CantidadReal=(PAInfo1.CantidadReal/iVasoQty[inloop])*PAInfo.NoLaminas;	
-							SICALNet.BusinessEntities.PartidasAditivosInfo PAInfo2 = new SICALNet.BusinessEntities.PartidasAditivosInfo(PAInfo.Secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["AditivosRoomId"]),PAInfo1.CodigoSAP,PAInfo.NumeroOlla,PAInfo.NoLaminas,Cantidad,CantidadReal,string.Empty,PAInfo.LoteReferencia,PAInfo.CapacidadOlla,PAInfo.Sobrante);
+							SICALNet.BusinessEntities.PartidasAditivosInfo PAInfo2 = new SICALNet.BusinessEntities.PartidasAditivosInfo(PAInfo.Secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["AditivosRoomId"]),PAInfo1.CodigoSAP,PAInfo.NumeroOlla,PAInfo.NoLaminas,Cantidad,CantidadReal,string.Empty,PAInfo.LoteReferencia,PAInfo.CapacidadOlla,PAInfo.Sobrante);
 							Dummy1.Add(PAInfo2);
 						}						
 					}
@@ -1017,7 +1017,7 @@ namespace UserInterface.Forms.Production
 					SICALNet.BusinessLogicLayer.PartidasColor BLLPC = new SICALNet.BusinessLogicLayer.PartidasColor();
 					if(BLLPC.IsExistSecuencia(txtSecuencia.Text))
 					{
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),0);
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),0);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo blOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						int Status=blOrdenes.GetStatus(OInfo);
 						if(Status==2)
@@ -1102,7 +1102,7 @@ namespace UserInterface.Forms.Production
 					string[] secuencia = (string[])Session[this.Context.User.Identity.Name+"Secuencia"];
 					if(BLLPC.IsExistSecuencia(secuencia[0]))
 					{
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia[0],Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),0);
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia[0],Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),0);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo blOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						int Status=blOrdenes.GetStatus(OInfo);
 						Session[this.Context.User.Identity.Name+"IdStatus"] = Status;
@@ -1156,7 +1156,7 @@ namespace UserInterface.Forms.Production
 					}
 					else
 					{
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia[0],Convert.ToInt32(ConfigurationSettings.AppSettings["ColorRoomId"]),0);
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo OInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(secuencia[0],Convert.ToInt32(ConfigurationManager.AppSettings["ColorRoomId"]),0);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo blOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						int Status=blOrdenes.GetStatus(OInfo);
 						Session[this.Context.User.Identity.Name+"IdStatus"] = Status;
@@ -1196,7 +1196,7 @@ namespace UserInterface.Forms.Production
 			EstableceParametrosSecuencia(TamanioParms, Secuencia);
 			double Sobrante = 0;
 
-			using (SqlDataReader pltRdr = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings["SICALConnString"], CommandType.StoredProcedure,"Proc_Consulta_Sobrante_Aditivos_Secuencia",TamanioParms)) 
+			using (SqlDataReader pltRdr = SqlHelper.ExecuteReader(ConfigurationManager.AppSettings["SICALConnString"], CommandType.StoredProcedure,"Proc_Consulta_Sobrante_Aditivos_Secuencia",TamanioParms)) 
 			{
 				try
 				{
@@ -1216,11 +1216,11 @@ namespace UserInterface.Forms.Production
 		public static SqlParameter[] ParametrosSecuencia()
 		{
 			SqlParameter[] parms;
-			parms = SqlHelperParameterCache.GetCachedParameterSet(ConfigurationSettings.AppSettings["SICALConnString"],"Proc_Consulta_Sobrante_Aditivos_Secuencia");
+			parms = SqlHelperParameterCache.GetCachedParameterSet(ConfigurationManager.AppSettings["SICALConnString"],"Proc_Consulta_Sobrante_Aditivos_Secuencia");
 			parms= new SqlParameter[]{
 										 new SqlParameter(PARM_SECUENCIA,SqlDbType.VarChar)
 									 };
-			SqlHelperParameterCache.CacheParameterSet(ConfigurationSettings.AppSettings["SICALConnString"],"Proc_Consulta_Sobrante_Aditivos_Secuencia",parms);
+			SqlHelperParameterCache.CacheParameterSet(ConfigurationManager.AppSettings["SICALConnString"],"Proc_Consulta_Sobrante_Aditivos_Secuencia",parms);
 			return parms;
 		}
 

@@ -51,8 +51,8 @@ namespace UserInterface.Forms.Production
 			Response.Cache.SetValidUntilExpires(false);
 			Response.Cache.SetNoStore();
 
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-			ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+			ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 			// Put user code to initialize the page here
 			if (!IsPostBack)
@@ -178,7 +178,7 @@ namespace UserInterface.Forms.Production
 		{
 			int IdLinea = (Convert.ToInt32(cboLinea.SelectedItem.Value));
 			int IdStatus = (Convert.ToInt32(cboStatus.SelectedItem.Value));
-			int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["PVCRoomId"]); // Area Id For PVC Room
+			int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["PVCRoomId"]); // Area Id For PVC Room
 			BindGrid(initialDate,finalDate,IdLinea, IdStatus, IdArea);		
 		}
 
@@ -262,7 +262,7 @@ namespace UserInterface.Forms.Production
 			Session["CodigoSAP"]=CodigoSAPmain;
 
 			int Status = Convert.ToInt32(((Label) e.Item.FindControl("ItemIdStatus")).Text);
-			int PendingStatus = Convert.ToInt32( ConfigurationSettings.AppSettings["StatusPending"]);
+			int PendingStatus = Convert.ToInt32( ConfigurationManager.AppSettings["StatusPending"]);
 
 			if (e.CommandName=="Consult")
 			{
@@ -300,7 +300,7 @@ namespace UserInterface.Forms.Production
 			if (e.CommandName=="Agregar")
 			{
 				string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-				string IdArea= ConfigurationSettings.AppSettings["PVCRoomId"].ToString();
+				string IdArea= ConfigurationManager.AppSettings["PVCRoomId"].ToString();
 				string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 				string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 				RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -322,7 +322,7 @@ namespace UserInterface.Forms.Production
 				}
 
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 			}
 		}

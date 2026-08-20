@@ -103,14 +103,14 @@ namespace UserInterface.Forms.Production
 
 
 				// To Load the WO List
-				int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]);
+				int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]);
 				PartidasInspeccionInfo piInfo2 = new PartidasInspeccionInfo(txtSecuencia.Text.ToString(),IdArea);	
 				//SICALNet.BusinessLogicLayer.PartidasInspeccion paIns1 = new SICALNet.BusinessLogicLayer.PartidasInspeccion();
 				IList LmList = (IList)paIns.LoadLamina(piInfo2);
 				dgdDefecto.DataSource = LmList;
 				dgdDefecto.DataBind();
 
-				int ReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
+				int ReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
 				if(Sts==ReleaseStatus)
 				{
 					
@@ -163,7 +163,7 @@ namespace UserInterface.Forms.Production
 		private void DisplayFloorMessage()
 		{
 			// Display the Messages in Multiline Text box
-			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["QuarantineRoomId"]));
+			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["QuarantineRoomId"]));
 			SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();					
 			IList mPisoList=mPiso.Select(mpInfo);
 			if(mPisoList.Count>0)
@@ -187,7 +187,7 @@ namespace UserInterface.Forms.Production
 				int i = dgdDefecto.Items.Count+1;	
 				if (i==0) return;
 
-				//string FPRoomId = ConfigurationSettings.AppSettings["SendFinishProductRoomId"].ToString();
+				//string FPRoomId = ConfigurationManager.AppSettings["SendFinishProductRoomId"].ToString();
 				switch(((Label)dgdDefecto.Controls[0].Controls[i].FindControl("lblDefArea")).Text)
 				{
 					case "15":
@@ -268,7 +268,7 @@ namespace UserInterface.Forms.Production
 
 
 				//If the Status of this Secuencia is Released, Disable combo boxes
-				int ReleaseStatus = Convert.ToInt32( ConfigurationSettings.AppSettings["StatusRelease"].ToString());
+				int ReleaseStatus = Convert.ToInt32( ConfigurationManager.AppSettings["StatusRelease"].ToString());
 				if (Sts==ReleaseStatus)
 				{
 					DDLDefecto.Enabled =false;
@@ -283,8 +283,8 @@ namespace UserInterface.Forms.Production
 			{
 				UpdateInspection();
 
-				int IdRelease = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"].ToString());
-				int IdArea= Convert.ToInt32(ConfigurationSettings.AppSettings["QuarantineRoomId"]);
+				int IdRelease = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"].ToString());
+				int IdArea= Convert.ToInt32(ConfigurationManager.AppSettings["QuarantineRoomId"]);
 
 				//			// To Get Next Area to Change that status to Activo for this WorkOrder Number
 				//			FlujoAreaInfo FAInfo = new FlujoAreaInfo ( AreaId, 0 );
@@ -294,7 +294,7 @@ namespace UserInterface.Forms.Production
 				//			FAInfo = (FlujoAreaInfo)FAreaList[0];
 				//
 				//			// To Change the Next Area Status To Active for this Work Order 
-				//			int ActiveStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"].ToString());
+				//			int ActiveStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"].ToString());
 				//			OrdenesTrabajoInfo WOInfo1 = new OrdenesTrabajoInfo(txtSecuencia.Text, FAInfo.IdArea, ActiveStatus); 
 				//			SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder1 = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 				//			WorkOrder1.UpdateWO(WOInfo1);
@@ -339,7 +339,7 @@ namespace UserInterface.Forms.Production
 		private void btnMensaje_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia = txtSecuencia.Text.ToString();
-			string IdArea= ConfigurationSettings.AppSettings["QuarantineRoomId"].ToString();
+			string IdArea= ConfigurationManager.AppSettings["QuarantineRoomId"].ToString();
 			string CodigoSAP=Request.QueryString["CodigoSAP"].ToString();
 			string matDesc=txtUtec.Text.Trim();
 			RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodigoSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");		
@@ -358,7 +358,7 @@ namespace UserInterface.Forms.Production
 			{
 				//to display the msg for user
 //				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-//				Page.RegisterStartupScript("ClientScript",ScriptString);
+//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				
 				throw;
 			}
@@ -371,7 +371,7 @@ namespace UserInterface.Forms.Production
 		{
 		
 			IList InspList = new ArrayList();
-//			int IdQuarantineArea = Convert.ToInt32(ConfigurationSettings.AppSettings["QuarantineRoomId"]);
+//			int IdQuarantineArea = Convert.ToInt32(ConfigurationManager.AppSettings["QuarantineRoomId"]);
 			SICALNet.Utilities.Validation pltVlt = new SICALNet.Utilities.Validation();
 			if(txtMaterialRecuperado.Text!=string.Empty||txtMaterialRecuperado.Text!="")
 				if(!pltVlt.IsWholeNumber(txtOrdenRecuperacion.Text)||txtOrdenRecuperacion.Text==string.Empty||txtOrdenRecuperacion.Text=="")
@@ -391,17 +391,17 @@ namespace UserInterface.Forms.Production
 				switch(Calificacion)
 				{
 					case 1:
-						PartidasInspeccionInfo pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,0,NoLamina,Calificacion,0,Convert.ToInt32(ConfigurationSettings.AppSettings["SendFinishProductRoomId"]));
+						PartidasInspeccionInfo pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,0,NoLamina,Calificacion,0,Convert.ToInt32(ConfigurationManager.AppSettings["SendFinishProductRoomId"]));
 						InspList.Add(pInfo);
 						break;
 					case 2:
 						int IdDefecto = Convert.ToInt32(((DropDownList)dgdDefecto.Items[i].FindControl("ddlDefecto")).SelectedItem.Value);
-						pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,0,NoLamina,Calificacion,IdDefecto,Convert.ToInt32(ConfigurationSettings.AppSettings["SegundasRoomId"]));
+						pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,0,NoLamina,Calificacion,IdDefecto,Convert.ToInt32(ConfigurationManager.AppSettings["SegundasRoomId"]));
 						InspList.Add(pInfo);
 						break;
 					case 3:
 						IdDefecto = Convert.ToInt32(((DropDownList)dgdDefecto.Items[i].FindControl("ddlDefecto")).SelectedItem.Value);
-						pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,0,NoLamina,Calificacion,IdDefecto,Convert.ToInt32(ConfigurationSettings.AppSettings["TercerasRoomId"]));
+						pInfo = new PartidasInspeccionInfo(txtSecuencia.Text,0,NoLamina,Calificacion,IdDefecto,Convert.ToInt32(ConfigurationManager.AppSettings["TercerasRoomId"]));
 						InspList.Add(pInfo);
 						break;
 
@@ -433,7 +433,7 @@ namespace UserInterface.Forms.Production
 			}
 			*/
 			blPrograma.UpdateRecuperado(txtSecuencia.Text,txtMaterialRecuperado.Text,txtOrdenRecuperacion.Text);
-			SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationSettings.AppSettings["QuarantineRoomId"]),Context.User.Identity.Name);
+			SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationManager.AppSettings["QuarantineRoomId"]),Context.User.Identity.Name);
 			SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 			BLOrdenes.UpdateLoginForm(OTInfo);
 			
@@ -477,7 +477,7 @@ namespace UserInterface.Forms.Production
 			{
 //				//to display the msg for user
 //				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-//				Page.RegisterStartupScript("ClientScript",ScriptString);
+//				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 //				txtDescripcion.Text=string.Empty;
 
 				throw;

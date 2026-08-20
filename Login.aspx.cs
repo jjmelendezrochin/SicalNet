@@ -68,8 +68,8 @@ string version =
 		private void cmdSignIn_Click(object sender, System.EventArgs e)
 		{
 
-			string ldapPath = ConfigurationSettings.AppSettings["ldapPath"].ToString();
-			string domainName= ConfigurationSettings.AppSettings["domainName"].ToString();
+			string ldapPath = ConfigurationManager.AppSettings["ldapPath"].ToString();
+			string domainName= ConfigurationManager.AppSettings["domainName"].ToString();
 			LdapAuthentication adsAuth = new LdapAuthentication(ldapPath);
 			
 			try

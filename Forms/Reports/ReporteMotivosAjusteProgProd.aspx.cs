@@ -170,7 +170,7 @@ namespace UserInterface.Forms.Reports
 
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"AjustesProgramaProduccion",User.Identity.Name  );
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 			Response.Redirect(redirectPath);
 		}
 
@@ -262,7 +262,7 @@ namespace UserInterface.Forms.Reports
 
 
 			string strSQL = "Exec Proc_ExportaMotivosAjuste @idPlanta=" + idPlanta.ToString() + ", @IdLinea=" + idLinea.ToString() + ", @FechaIni = '" + sFechaIni + "', @FechaFin = '" + sFechaFin + "'";	
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				// Cración de adaptador

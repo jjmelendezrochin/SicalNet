@@ -88,9 +88,9 @@ namespace UserInterface.Forms.Production
 			ArrayList ArrLib = new ArrayList();
 			
 			//Obtain active status
-			int IdStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"]);
+			int IdStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"]);
 			//Obtain released status
-			int IdReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
+			int IdReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
 			//determine if the user didnt select an area
 			bool areaWasSelected = false;
 

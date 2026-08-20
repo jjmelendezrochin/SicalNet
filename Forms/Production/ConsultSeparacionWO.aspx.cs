@@ -51,12 +51,12 @@ namespace UserInterface.Forms.Production
 			Response.Cache.SetValidUntilExpires(false);
 			Response.Cache.SetNoStore();
 
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 
 			// Put user code to initialize the page here
-			ActiveStatus = ConfigurationSettings.AppSettings["StatusActive"].ToString();
+			ActiveStatus = ConfigurationManager.AppSettings["StatusActive"].ToString();
 
 			if (!IsPostBack)
 			{
@@ -96,7 +96,7 @@ namespace UserInterface.Forms.Production
 			//
 			InitializeComponent();
 			base.OnInit(e);
-			localAreaId=Convert.ToInt32(ConfigurationSettings.AppSettings["SeparacionRoomId"]);  // Area Id For Preseparation Room
+			localAreaId=Convert.ToInt32(ConfigurationManager.AppSettings["SeparacionRoomId"]);  // Area Id For Preseparation Room
 		}
 		
 		/// <summary>
@@ -258,8 +258,8 @@ namespace UserInterface.Forms.Production
 				try
 				{
 				
-					string PendingStatus = ConfigurationSettings.AppSettings["StatusPending"].ToString();
-					string ReleaseStatus = ConfigurationSettings.AppSettings["StatusRelease"].ToString();
+					string PendingStatus = ConfigurationManager.AppSettings["StatusPending"].ToString();
+					string ReleaseStatus = ConfigurationManager.AppSettings["StatusRelease"].ToString();
 
 					string Status = ((Label) e.Item.FindControl("ItemIdStatus")).Text;
 				
@@ -297,7 +297,7 @@ namespace UserInterface.Forms.Production
 				{
 					//to display the msg for user
 					string ScriptString="<script language='javascript'>alert('"+ ex.Message +"');</script>"; 
-					Page.RegisterStartupScript("ClientScript",ScriptString);
+					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				}
 
 			}
@@ -326,7 +326,7 @@ namespace UserInterface.Forms.Production
 									
 				}
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 			}
 

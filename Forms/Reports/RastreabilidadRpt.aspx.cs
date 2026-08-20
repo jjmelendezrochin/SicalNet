@@ -78,13 +78,13 @@ namespace UserInterface.Forms.Reports
 			
 				rptHelper.setPermission(reporte);
 				string reportName = rptHelper.exportReport(reporte,"RastreabilidadRpt",User.Identity.Name);
-				string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+				string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 				Response.Redirect(redirectPath);
 			}
 			catch(Exception errHand)
 			{
 				string ScriptString = "<script language = 'javascript'> alert('" + errHand.Message  + "'); </script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}
 

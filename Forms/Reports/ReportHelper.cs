@@ -35,7 +35,7 @@ namespace UserInterface.Forms.Reports
 				// Set the disk file options.
 				//Get filepath from Configuration Settings
 				string allReportName = GetNewReportName(reportName,userName);
-				diskOpts.DiskFileName = ConfigurationSettings.AppSettings["reportsLocalPath"].ToString() + allReportName +".pdf";
+				diskOpts.DiskFileName = ConfigurationManager.AppSettings["reportsLocalPath"].ToString() + allReportName +".pdf";
 				exportOpts.DestinationOptions = diskOpts;
 				// Export the report.
 				pReport.Export();
@@ -54,7 +54,7 @@ namespace UserInterface.Forms.Reports
 		{
 			try
 			{
-				DirectoryInfo dir = new DirectoryInfo(ConfigurationSettings.AppSettings["reportsLocalPath"].ToString());
+				DirectoryInfo dir = new DirectoryInfo(ConfigurationManager.AppSettings["reportsLocalPath"].ToString());
 				foreach(FileInfo file in dir.GetFiles())
 				{
 					if( file.Name.IndexOf(reportName + "_" + userName) != -1)
@@ -89,10 +89,10 @@ namespace UserInterface.Forms.Reports
 			
 			CrystalDecisions.Shared.TableLogOnInfo logOn = new CrystalDecisions.Shared.TableLogOnInfo();
 
-			logOn.ConnectionInfo.ServerName = ConfigurationSettings.AppSettings["server"].ToString();
-			logOn.ConnectionInfo.DatabaseName= ConfigurationSettings.AppSettings["database"].ToString();
-			logOn.ConnectionInfo.UserID = ConfigurationSettings.AppSettings["user id"].ToString();
-			logOn.ConnectionInfo.Password= ConfigurationSettings.AppSettings["password"].ToString();
+			logOn.ConnectionInfo.ServerName = ConfigurationManager.AppSettings["server"].ToString();
+			logOn.ConnectionInfo.DatabaseName= ConfigurationManager.AppSettings["database"].ToString();
+			logOn.ConnectionInfo.UserID = ConfigurationManager.AppSettings["user id"].ToString();
+			logOn.ConnectionInfo.Password= ConfigurationManager.AppSettings["password"].ToString();
 		
 			// int intSuccess=0;
 			foreach(CrystalDecisions.CrystalReports.Engine.Table tbl in currentReport.Database.Tables)
@@ -106,7 +106,7 @@ namespace UserInterface.Forms.Reports
 					{
 						// intSuccess = 2;
 
-						throw new Exception("Error al conectar reporte a la base de datos " + ConfigurationSettings.AppSettings["database"].ToString() + " en el servidor " + ConfigurationSettings.AppSettings["server"].ToString());
+						throw new Exception("Error al conectar reporte a la base de datos " + ConfigurationManager.AppSettings["database"].ToString() + " en el servidor " + ConfigurationManager.AppSettings["server"].ToString());
 						
 					}
 				}

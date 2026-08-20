@@ -210,7 +210,7 @@ namespace UserInterface.Forms.Structures
 //				string ScriptString="<script language='javascript'>alert('El ID Identificador ya esta siendo usado');</script>"; 
 				/*** fin modificación ***/
 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				// se quita la siguente linea para que sea desplegado el mensaje
 				//throw;
 			}
@@ -219,7 +219,7 @@ namespace UserInterface.Forms.Structures
 				// alta correcta
 				//throw;
 				string ScriptString="<script language='javascript'>alert('Alta de temperatura correcta');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}
 

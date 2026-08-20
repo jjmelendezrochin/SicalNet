@@ -143,19 +143,25 @@ namespace UserInterface.Forms.Reports
 
 		}
 		#region Web Form Designer generated code
-		override protected void OnInit(EventArgs e)
-		{
+
+		[Obsolete]
+#pragma warning disable CS0809 // El miembro obsoleto invalida un miembro no obsoleto
+        override protected void OnInit(EventArgs e)
+#pragma warning restore CS0809 // El miembro obsoleto invalida un miembro no obsoleto
+        {
 			//
 			// CODEGEN: This call is required by the ASP.NET Web Form Designer.
 			//
 			InitializeComponent();
 			base.OnInit(e);
 		}
-		
+
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+		/// 
+		[Obsolete]
 		private void InitializeComponent()
 		{    
 			this.cmdExportaPvc.Click += new System.EventHandler(this.cmdExportaPvc_Click);
@@ -256,7 +262,7 @@ namespace UserInterface.Forms.Reports
 			
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"PartidasReaccionReport",User.Identity.Name  );
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 			Response.Redirect(redirectPath);
 		}
 
@@ -316,10 +322,10 @@ namespace UserInterface.Forms.Reports
 
 			campoPlanta= new ParameterValues(); 
 			valorPlanta= new ParameterDiscreteValue();
-			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 			if (cboLinea.SelectedItem.Text == const_All) 
 			{
-				//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 				valorPlanta.Value=const_All;
 				reporte.Section1.ReportObjects["FldAllPlanta"].Width =1535;  
 				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -382,7 +388,7 @@ namespace UserInterface.Forms.Reports
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"PartidasMezclasReport",User.Identity.Name);
 
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 			Response.Redirect(redirectPath);
 
 
@@ -481,7 +487,7 @@ namespace UserInterface.Forms.Reports
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"PartidasColorReport",User.Identity.Name);
 
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 			Response.Redirect(redirectPath);
 		}
 
@@ -574,7 +580,7 @@ namespace UserInterface.Forms.Reports
 			reporte.DataDefinition.RecordSelectionFormula=SelFormula;
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"PartidasAditivosReport",User.Identity.Name);
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 			Response.Redirect(redirectPath);
 
 		}
@@ -636,10 +642,10 @@ namespace UserInterface.Forms.Reports
 
 			campoPlanta= new ParameterValues(); 
 			valorPlanta= new ParameterDiscreteValue();
-			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 			if (cboLinea.SelectedItem.Text == const_All) 
 			{
-				//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 				valorPlanta.Value=const_All;
 				reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -689,7 +695,7 @@ namespace UserInterface.Forms.Reports
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"ConsumptionMezclasReport",User.Identity.Name);
 
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 			Response.Redirect(redirectPath);
 		}
 
@@ -745,7 +751,7 @@ namespace UserInterface.Forms.Reports
 			valorPlanta= new ParameterDiscreteValue();
 			if (cboLinea.SelectedItem.Text == const_All) 
 			{
-				//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 				valorPlanta.Value=const_All;
 				reporte.Section1.ReportObjects["FldAllPlanta"].Width =1535;  
 				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -794,7 +800,7 @@ namespace UserInterface.Forms.Reports
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"ConsumptionAditivosReport",User.Identity.Name);
 
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 			Response.Redirect(redirectPath);
 		}
 
@@ -857,10 +863,10 @@ namespace UserInterface.Forms.Reports
 
 			campoPlanta= new ParameterValues();
 			valorPlanta= new ParameterDiscreteValue();
-			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 			if (cboLinea.SelectedItem.Text == const_All) 
 			{
-				//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 				valorPlanta.Value=const_All;
 				reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -908,7 +914,7 @@ namespace UserInterface.Forms.Reports
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"ConsumptionColorReport",User.Identity.Name);
 
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 			Response.Redirect(redirectPath);
 
 			//Response.Redirect("FrmColorConsumption.aspx?Title=" + Title + "&IdLinea=" + cboLinea.SelectedItem.Value + "&Linea=" + cboLinea.SelectedItem.Text + "&SecInicial=" + cboSecInicial.SelectedItem.Text + "&SecFinal=" + cboSecFinal.SelectedItem.Text + "&txtFechaInicial.Text=" + txtFechaInicial.Text + "&txtFechaFinal.Text=" + txtFechaFinal.Text + "&txtLibInicial.Text=" + txtLibInicial.Text + "&txtLibFinal.Text=" + txtLibFinal.Text);
@@ -977,7 +983,7 @@ namespace UserInterface.Forms.Reports
 			valorPlanta= new ParameterDiscreteValue();
 			if (cboLinea.SelectedItem.Text == const_All) 
 			{
-				//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 				valorPlanta.Value=const_All;
 				reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -1038,7 +1044,7 @@ namespace UserInterface.Forms.Reports
 			
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"ConsultFillReport",User.Identity.Name);
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 			Response.Redirect(redirectPath);
 
 		}
@@ -1104,10 +1110,10 @@ namespace UserInterface.Forms.Reports
 
 			campoPlanta= new ParameterValues(); 
 			valorPlanta= new ParameterDiscreteValue();
-			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 			if (cboLinea.SelectedItem.Text == const_All) 
 			{
-				//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 				valorPlanta.Value=const_All;
 				reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -1169,7 +1175,7 @@ namespace UserInterface.Forms.Reports
 			
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"ConsultSeparationRep",User.Identity.Name);
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 			Response.Redirect(redirectPath);
 		}
 
@@ -1235,10 +1241,10 @@ namespace UserInterface.Forms.Reports
 
 			campoPlanta= new ParameterValues(); 
 			valorPlanta= new ParameterDiscreteValue();
-			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 			if (cboLinea.SelectedItem.Text == const_All) 
 			{
-				//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 				valorPlanta.Value=const_All;
 				reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -1316,7 +1322,7 @@ namespace UserInterface.Forms.Reports
 			
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"ConsultInspectionPhase",User.Identity.Name  );
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 			Response.Redirect(redirectPath);
 
 		}
@@ -1392,7 +1398,7 @@ namespace UserInterface.Forms.Reports
 			reporte.DataDefinition.ParameterFields["System"].ApplyCurrentValues(campoSystem);
 
 			// Selección de Planta
-			SelFormula = "{Vw_MaterialesPVC_ProgramaProduccion.IdPlanta}=" + Convert.ToInt32(ConfigurationSettings.AppSettings["LocalPlant"]);
+			SelFormula = "{Vw_MaterialesPVC_ProgramaProduccion.IdPlanta}=" + Convert.ToInt32(ConfigurationManager.AppSettings["LocalPlant"]);
 
 			if (txtFechaInicial.Text != null && txtFechaFinal.Text != null && txtFechaInicial.Text != "" && txtFechaFinal.Text != "")
 				SelFormula = SelFormula + " " + (SelFormula!=string.Empty?"AND":"") + " {Vw_MaterialesPVC_ProgramaProduccion.Fecha}>=Date(" + DateTime.Parse(txtFechaInicial.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("MM") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("dd") + ") AND {Vw_MaterialesPVC_ProgramaProduccion.Fecha}<=Date(" + DateTime.Parse(txtFechaFinal.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("MM") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("dd") + ")";
@@ -1405,7 +1411,7 @@ namespace UserInterface.Forms.Reports
 			
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"ReporteConsumoPvc",User.Identity.Name  );
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 			Response.Redirect(redirectPath);
 		}
 
@@ -1486,10 +1492,10 @@ namespace UserInterface.Forms.Reports
 					//
 					//					campoPlanta= new ParameterValues(); 
 					//					valorPlanta= new ParameterDiscreteValue();
-					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						//reporte.Section1.ReportObjects["Field7"].Width =0;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
@@ -1554,7 +1560,7 @@ namespace UserInterface.Forms.Reports
 					//			
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"PartidasReaccionReport",User.Identity.Name  );
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 					//					Response.Redirect(redirectPath);
 					#endregion
 				}
@@ -1599,10 +1605,10 @@ namespace UserInterface.Forms.Reports
 					//
 					//					campoPlanta= new ParameterValues(); 
 					//					valorPlanta= new ParameterDiscreteValue();
-					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =1535;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -1665,7 +1671,7 @@ namespace UserInterface.Forms.Reports
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"PartidasMezclasReport",User.Identity.Name);
 					//
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 					//					Response.Redirect(redirectPath);
 					//
 					//
@@ -1707,7 +1713,7 @@ namespace UserInterface.Forms.Reports
 					//					valorPlanta= new ParameterDiscreteValue();
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -1718,7 +1724,7 @@ namespace UserInterface.Forms.Reports
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =0;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =3015;  
 					//					}
-					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 					//					campoPlanta.Add(valorPlanta);
 					//
 					//					campoUser= new ParameterValues();
@@ -1763,7 +1769,7 @@ namespace UserInterface.Forms.Reports
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"PartidasColorReport",User.Identity.Name);
 					//
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 					//					Response.Redirect(redirectPath);
 					//
 					//					//Response.Redirect("ActivePhaseReport.aspx?Title=" + Title + "&IdLinea=" + cboLinea.SelectedItem.Value + "&Linea=" + cboLinea.SelectedItem.Text + "&SecInicial=" + cboSecInicial.SelectedItem.Text + "&SecFinal=" + cboSecFinal.SelectedItem.Text + "&txtFechaInicial.Text=" + txtFechaInicial.Text + "&txtFechaFinal.Text=" + txtFechaFinal.Text + "&txtLibInicial.Text=" + txtLibInicial.Text + "&txtLibFinal.Text=" + txtLibFinal.Text);
@@ -1795,7 +1801,7 @@ namespace UserInterface.Forms.Reports
 					//					valorPlanta= new ParameterDiscreteValue();
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =1535;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -1864,7 +1870,7 @@ namespace UserInterface.Forms.Reports
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"PartidasAditivosReport",User.Identity.Name);
 					//
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 					//					Response.Redirect(redirectPath);
 					//
 					//					//Response.Redirect("ActivePhaseReport.aspx?Title=" + Title + "&IdLinea=" + cboLinea.SelectedItem.Value + "&Linea=" + cboLinea.SelectedItem.Text + "&SecInicial=" + cboSecInicial.SelectedItem.Text + "&SecFinal=" + cboSecFinal.SelectedItem.Text + "&txtFechaInicial.Text=" + txtFechaInicial.Text + "&txtFechaFinal.Text=" + txtFechaFinal.Text + "&txtLibInicial.Text=" + txtLibInicial.Text + "&txtLibFinal.Text=" + txtLibFinal.Text);
@@ -1910,10 +1916,10 @@ namespace UserInterface.Forms.Reports
 					//
 					//					campoPlanta= new ParameterValues(); 
 					//					valorPlanta= new ParameterDiscreteValue();
-					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -1975,8 +1981,8 @@ namespace UserInterface.Forms.Reports
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"ConsumptionMezclasReport",User.Identity.Name);
 					//
-					//					//string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+"ConsumptionAditivosReport.pdf";
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+					//					//string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+"ConsumptionAditivosReport.pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 					//					Response.Redirect(redirectPath);
 					//					//Response.Redirect("ConsumptionMezclasReport.aspx?Title=" + Title + "&IdLinea=" + cboLinea.SelectedItem.Value + "&Linea=" + cboLinea.SelectedItem.Text + "&SecInicial=" + cboSecInicial.SelectedItem.Text + "&SecFinal=" + cboSecFinal.SelectedItem.Text + "&txtFechaInicial.Text=" + txtFechaInicial.Text + "&txtFechaFinal.Text=" + txtFechaFinal.Text + "&txtLibInicial.Text=" + txtLibInicial.Text + "&txtLibFinal.Text=" + txtLibFinal.Text);
 					#endregion
@@ -2014,7 +2020,7 @@ namespace UserInterface.Forms.Reports
 					//					valorPlanta= new ParameterDiscreteValue();
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =1535;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -2076,7 +2082,7 @@ namespace UserInterface.Forms.Reports
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"ConsumptionAditivosReport",User.Identity.Name);
 					//
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 					//					Response.Redirect(redirectPath);
 					//
 					//					//Response.Redirect("ConsumptionAditivosReport.aspx?Title=" + Title + "&IdLinea=" + cboLinea.SelectedItem.Value + "&Linea=" + cboLinea.SelectedItem.Text + "&SecInicial=" + cboSecInicial.SelectedItem.Text + "&SecFinal=" + cboSecFinal.SelectedItem.Text + "&txtFechaInicial.Text=" + txtFechaInicial.Text + "&txtFechaFinal.Text=" + txtFechaFinal.Text + "&txtLibInicial.Text=" + txtLibInicial.Text + "&txtLibFinal.Text=" + txtLibFinal.Text);
@@ -2120,10 +2126,10 @@ namespace UserInterface.Forms.Reports
 					//
 					//					campoPlanta= new ParameterValues();
 					//					valorPlanta= new ParameterDiscreteValue();
-					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -2187,7 +2193,7 @@ namespace UserInterface.Forms.Reports
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"ConsumptionColorReport",User.Identity.Name);
 					//
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 					//					Response.Redirect(redirectPath);
 					//
 					//					//Response.Redirect("FrmColorConsumption.aspx?Title=" + Title + "&IdLinea=" + cboLinea.SelectedItem.Value + "&Linea=" + cboLinea.SelectedItem.Text + "&SecInicial=" + cboSecInicial.SelectedItem.Text + "&SecFinal=" + cboSecFinal.SelectedItem.Text + "&txtFechaInicial.Text=" + txtFechaInicial.Text + "&txtFechaFinal.Text=" + txtFechaFinal.Text + "&txtLibInicial.Text=" + txtLibInicial.Text + "&txtLibFinal.Text=" + txtLibFinal.Text);
@@ -2237,7 +2243,7 @@ namespace UserInterface.Forms.Reports
 					//					valorPlanta= new ParameterDiscreteValue();
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -2298,7 +2304,7 @@ namespace UserInterface.Forms.Reports
 					//			
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"ConsultFillReport",User.Identity.Name);
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 					//					Response.Redirect(redirectPath);
 					#endregion
 				}
@@ -2344,10 +2350,10 @@ namespace UserInterface.Forms.Reports
 					//
 					//					campoPlanta= new ParameterValues(); 
 					//					valorPlanta= new ParameterDiscreteValue();
-					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -2409,7 +2415,7 @@ namespace UserInterface.Forms.Reports
 					//			
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"ConsultSeparationRep",User.Identity.Name);
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 					//					Response.Redirect(redirectPath);
 					//
 					#endregion
@@ -2456,10 +2462,10 @@ namespace UserInterface.Forms.Reports
 					//
 					//					campoPlanta= new ParameterValues(); 
 					//					valorPlanta= new ParameterDiscreteValue();
-					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationSettings.AppSettings["LocalPlantText"]);
+					//					//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
 					//					if (cboLinea.SelectedItem.Text == const_All) 
 					//					{
-					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationSettings.AppSettings["AllPlantText"]);
+					//						//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
 					//						valorPlanta.Value=const_All;
 					//						reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
 					//						reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
@@ -2537,7 +2543,7 @@ namespace UserInterface.Forms.Reports
 					//			
 					//					rptHelper.setPermission(reporte);
 					//					reportName = rptHelper.exportReport(reporte,"ConsultInspectionPhase",User.Identity.Name  );
-					//					redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+					//					redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 					//					Response.Redirect(redirectPath);
 					#endregion
 				}
@@ -2568,13 +2574,15 @@ namespace UserInterface.Forms.Reports
 		
 		}
 
+
+		[Obsolete]
 		private void cmdExportaPvc_Click(object sender, System.EventArgs e)
 		{					
 			ExportaPvc();
 		}
 
-		
 
+		[Obsolete]
 		private void ExportaPvc()
 		{
 			int idLinea;
@@ -2592,7 +2600,7 @@ namespace UserInterface.Forms.Reports
 			}
 
 			string strSQL = "Exec Proc_Materiales_Pvc1 @IdLinea=" + idLinea.ToString() + ", @Initdate = '" + sFechaIni + "', @Finaldate = '" + sFechaFin + "'";	
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				// Cración de adaptador
@@ -2663,6 +2671,7 @@ namespace UserInterface.Forms.Reports
 
 		// ********************
 		// Reporte de inspección
+		[Obsolete]
 		private void cmdReporteInspeccion_Click(object sender, System.EventArgs e)
 		{
 			string redirectPath = "";
@@ -2701,7 +2710,7 @@ namespace UserInterface.Forms.Reports
 
 			// *************************
 			// Ejecución de instrucción
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -2724,11 +2733,11 @@ namespace UserInterface.Forms.Reports
 			
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"ReporteConsumoPvcInspección",User.Identity.Name  );
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 			Response.Redirect(redirectPath);
 		}
 
-
+		[Obsolete]
 		private void cmdReporteCorte_Click(object sender, System.EventArgs e)
 		{
 			string redirectPath = "";
@@ -2767,7 +2776,7 @@ namespace UserInterface.Forms.Reports
 
 			// *************************
 			// Ejecución de instrucción
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -2790,12 +2799,13 @@ namespace UserInterface.Forms.Reports
 			
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"ReporteConsumoPvcCorte",User.Identity.Name  );
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 			Response.Redirect(redirectPath);
 
 		}
 
-		private void cmdEtiquetaPvc_Click(object sender, System.EventArgs e)
+        [Obsolete]
+        private void cmdEtiquetaPvc_Click(object sender, System.EventArgs e)
 		{
 			string redirectPath = "";
 			string reportName = "";
@@ -2833,7 +2843,7 @@ namespace UserInterface.Forms.Reports
 
 			// *************************
 			// Ejecución de instrucción
-			using (SqlConnection conn = new SqlConnection(ConfigurationSettings.AppSettings["SICALConnString"])) 
+			using (SqlConnection conn = new SqlConnection(ConfigurationManager.AppSettings["SICALConnString"])) 
 			{
 				conn.Open();
 				using (SqlTransaction trans = conn.BeginTransaction()) 
@@ -2856,7 +2866,7 @@ namespace UserInterface.Forms.Reports
 			
 			rptHelper.setPermission(reporte);
 			reportName = rptHelper.exportReport(reporte,"EtiquetaConsumoPvc",User.Identity.Name  );
-			redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
+			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 			Response.Redirect(redirectPath);
 		}
 		// ********************

@@ -44,8 +44,8 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 			Response.Cache.SetNoStore();
 			Response.Cache.SetValidUntilExpires(false);
 		
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 			if(!IsPostBack)
 			{
@@ -171,9 +171,9 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 				rptHelper.setPermission(reporte);
 				reportName = rptHelper.exportReport(reporte,"ProductoTerminado",User.Identity.Name);
 			
-				string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";			
+				string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";			
 				string ScriptString="<script language='javascript'>window.open('" + redirectPath + "','Reporte', 'width=550,height=600,top=100,left=200,toolbars=no,scrollbars=yes,status=yes,resizable=yes');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 			catch
 			{
@@ -277,7 +277,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 		private bool BindWorkOrders()
 		{
 			SICALNet.BusinessLogicLayer.OrdenesTrabajo BLLOrdTra= new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
-			int IdArea=Convert.ToInt32(ConfigurationSettings.AppSettings["SendFinishProductRoomId"]);
+			int IdArea=Convert.ToInt32(ConfigurationManager.AppSettings["SendFinishProductRoomId"]);
 			int IdStatus=int.Parse(cboStatus.SelectedItem.Value);
 			int IdLine=int.Parse(cboLinea.SelectedItem.Value);
 			string InitDt=txtInitial.Text.ToString();
@@ -302,12 +302,12 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 				string secuencia=((Label)lstWorkOrder.Items[i].FindControl("ItemSecuencia")).Text;
 				int IdStatuss = Convert.ToInt32(((Label)lstWorkOrder.Items[i].FindControl("ItemIdStatus")).Text);
 				DataGrid dgdEnvio = ((DataGrid)lstWorkOrder.Items[i].FindControl("dgdEnvioPT"));
-				SICALNet.BusinessEntities.PartidasEnvioPTInfo PEInfo = new SICALNet.BusinessEntities.PartidasEnvioPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["SendFinishProductRoomId"]),string.Empty,0,string.Empty);
+				SICALNet.BusinessEntities.PartidasEnvioPTInfo PEInfo = new SICALNet.BusinessEntities.PartidasEnvioPTInfo(string.Empty,secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["SendFinishProductRoomId"]),string.Empty,0,string.Empty);
 				SICALNet.BusinessLogicLayer.PartidasEnvioPT BlPEPT = new SICALNet.BusinessLogicLayer.PartidasEnvioPT();
 				IList EnvioList=BlPEPT.Select(PEInfo);
 				dgdEnvio.DataSource=EnvioList;
 				dgdEnvio.DataBind();
-				if(BlPEPT.GetPacks(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["SendFinishProductRoomId"]))!=0)
+				if(BlPEPT.GetPacks(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["SendFinishProductRoomId"]))!=0)
 					lstWorkOrder.Items[i].FindControl("Plus").Visible=true;
 				if(IdStatuss==5)
 					((CheckBox)lstWorkOrder.Items[i].FindControl("chkSelect")).Enabled=false;
@@ -335,7 +335,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 						e.Item.BackColor = Color.LightBlue;   
 				}
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 
 			}
@@ -351,7 +351,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 					case "Consult":
 						string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 						Session["CodigoSAP"]=CodeSAP;
-						int IdPendingStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusPending"]);
+						int IdPendingStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusPending"]);
 						string secuencia=((Label)e.Item.FindControl("ItemSecuencia")).Text;
 						string Descripcion = ((Label)e.Item.FindControl("ItemDescripcion")).Text;
 						string Fecha = ((Label)e.Item.FindControl("ItemFecha")).Text;
@@ -360,7 +360,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 							throw new Exception(string.Format("La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada",secuencia));
 						if(((CheckBox)e.Item.FindControl("chkSelect")).Checked==true)
 						{
-							SICALNet.BusinessEntities.PartidasInspeccionInfo PIInfo = new SICALNet.BusinessEntities.PartidasInspeccionInfo(secuencia,Convert.ToInt32(ConfigurationSettings.AppSettings["InspeccionRoomId"]));
+							SICALNet.BusinessEntities.PartidasInspeccionInfo PIInfo = new SICALNet.BusinessEntities.PartidasInspeccionInfo(secuencia,Convert.ToInt32(ConfigurationManager.AppSettings["InspeccionRoomId"]));
 							SICALNet.BusinessLogicLayer.PartidasInspeccion BLIns = new SICALNet.BusinessLogicLayer.PartidasInspeccion();
 							int Laminas=BLIns.ActiveLaminas(PIInfo);
 							Response.Redirect("EnvioPTFinal.aspx?InitialDate="+txtInitial.Text+"&FinalDate="+txtFinal.Text+"&cboStatus="+cboStatus.SelectedItem.Value+"&cboLinea="+cboLinea.SelectedItem.Value+"&Reflag=True&Packages=1&Secuencia="+secuencia+"&Descripcion="+Descripcion+"&Laminas="+Laminas+"&Flag=New&IdStatus="+IdStatus+"&Fecha="+Fecha);
@@ -371,7 +371,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 
 					case "Mensaje":
 						string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-						string IdArea= ConfigurationSettings.AppSettings["SendFinishProductRoomId"].ToString();
+						string IdArea= ConfigurationManager.AppSettings["SendFinishProductRoomId"].ToString();
 						CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 						string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 						RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('../../MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -382,7 +382,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ ex.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}
 

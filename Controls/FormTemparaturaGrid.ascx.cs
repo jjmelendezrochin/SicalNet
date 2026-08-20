@@ -181,7 +181,7 @@ namespace UserInterface.Controls
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('El ID Identificador esta siendo ya usado');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 //			catch
 //			{
@@ -241,7 +241,7 @@ namespace UserInterface.Controls
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('El ID Identificador esta siendo ya usado');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 //			catch
 //			{

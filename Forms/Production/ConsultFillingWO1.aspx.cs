@@ -84,7 +84,7 @@ namespace UserInterface.Forms.Production
 				int IdPlanta=Convert.ToInt32(Request.QueryString["IdPlanta"].ToString());	
 				string KCT=Request.QueryString["KCT"].ToString();
 
-				int ReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
+				int ReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
 				if(Sts==ReleaseStatus)
 				{
 					btnLiberar.Enabled=false;
@@ -145,7 +145,7 @@ namespace UserInterface.Forms.Production
 
 		private void DisplayFloorMessage()
 		{
-			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]));
+			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]));
 			SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();
 					
 			IList mPisoList=mPiso.Select(mpInfo);
@@ -167,9 +167,9 @@ namespace UserInterface.Forms.Production
 			try
 			{
 				UpdateFillingWO();
-				int IdArea= Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]);
-				int IdStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]); 
-				SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]),this.Context.User.Identity.Name);
+				int IdArea= Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]);
+				int IdStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]); 
+				SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]),this.Context.User.Identity.Name);
 				SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 				BLOrdenes.UpdateLoginForm(OTInfo);
 				//Activate Next Area in OrdernesTrabajo And update Active Area in Programma Production for this Secuencia
@@ -212,10 +212,10 @@ namespace UserInterface.Forms.Production
 
 		private void UpdateFillingWO()
 		{
-			int IdArea= Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]);
+			int IdArea= Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]);
 			SICALNet.BusinessLogicLayer.Programa Prog = new SICALNet.BusinessLogicLayer.Programa();
 			Prog.UpdateKCT(txtSecuencia.Text,txtKCT.Text,IdArea);
-			SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationSettings.AppSettings["FillingRoomId"]),this.Context.User.Identity.Name);
+			SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationManager.AppSettings["FillingRoomId"]),this.Context.User.Identity.Name);
 			SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 			BLOrdenes.UpdateLoginForm(OTInfo);
 		}
@@ -223,7 +223,7 @@ namespace UserInterface.Forms.Production
 		private void btnAgregarMensaje_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia = txtSecuencia.Text.ToString();
-			string IdArea= ConfigurationSettings.AppSettings["FillingRoomId"].ToString();
+			string IdArea= ConfigurationManager.AppSettings["FillingRoomId"].ToString();
 			string CodigoSAP=Request.QueryString["CodigoSAP"].ToString();
 			string matDesc=txtUTEC.Text.Trim();
 			RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodigoSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");

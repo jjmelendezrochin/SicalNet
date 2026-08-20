@@ -47,8 +47,8 @@ namespace UserInterface.Forms.Production
 			Response.Cache.SetValidUntilExpires(false);
 			Response.Cache.SetNoStore();
 
-			if((ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
-				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationSettings.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
+			if((ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] != "0") && (ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"]!=""))
+				ltrRefresh.Text = "<META http-equiv='Refresh' content='" + ConfigurationManager.AppSettings["TiempoRefreshListadoOrdenes"] + "'>" ;			
 
 
 			if (!IsPostBack)
@@ -123,7 +123,7 @@ namespace UserInterface.Forms.Production
 			Session["selectedLine"] = IdLinea.ToString();
 			Session["selectedIdStatus"] = cboStatus.SelectedItem.Value;
 
-			int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["QuarantineRoomId"]); // Area Id For Quarantine Room
+			int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["QuarantineRoomId"]); // Area Id For Quarantine Room
 			OrdenesTrabajoInfo WOInfo = new OrdenesTrabajoInfo(dmy2ymd(txtFecha.Text), dmy2ymd(txtFechaFinal.Text), IdLinea, IdStatus, IdArea);
 			// To Load the WO List
 			SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
@@ -231,7 +231,7 @@ namespace UserInterface.Forms.Production
 				if (e.CommandName=="Agregar")
 				{
 					string Secuencia = ((Label)e.Item.FindControl("ItemSecuencia")).Text.ToString();
-					string IdArea=ConfigurationSettings.AppSettings["QuarantineRoomId"].ToString(); // Area Id For Quarantine Room
+					string IdArea=ConfigurationManager.AppSettings["QuarantineRoomId"].ToString(); // Area Id For Quarantine Room
 					string CodeSAP=((Label)e.Item.FindControl("ItemCodigoSAP")).Text.ToString();
 					string matDesc=((Label)e.Item.FindControl("ItemDescripcion")).Text.ToString();
 					RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodeSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -312,7 +312,7 @@ namespace UserInterface.Forms.Production
 						e.Item.BackColor = Color.LightBlue;
 				}
 				Label lblStatus = (Label)e.Item.FindControl("ItemIdStatus");
-				if (lblStatus.Text == ConfigurationSettings.AppSettings["StatusCancel"]) 
+				if (lblStatus.Text == ConfigurationManager.AppSettings["StatusCancel"]) 
 					e.Item.BackColor = Color.Tomato;
 			}
 		}

@@ -86,7 +86,7 @@ namespace UserInterface.Forms
 
 
 				//The sequences in status RELEASED can only be consulted in READ ONLY mode
-				IdPVCArea = Convert.ToInt32(ConfigurationSettings.AppSettings["PVCRoomId"]);  //Area for PVC Room
+				IdPVCArea = Convert.ToInt32(ConfigurationManager.AppSettings["PVCRoomId"]);  //Area for PVC Room
 				sBitacora = string.Format("6");
 				BLLBitacora.Insertcomando(sBitacora ,this.User.Identity.Name.ToString());
 
@@ -143,8 +143,8 @@ namespace UserInterface.Forms
         private void LoadWOInfo(int status, string secuencia, string idEspesor, int idMedida, int idFamiliaProducto, int cantidad, string _codigoSAP)
 		{
 
-			int ReleaseStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]);
-			int ActiveStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"]);
+			int ReleaseStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]);
+			int ActiveStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"]);
 
 			if (status==ReleaseStatus)
 			{
@@ -293,7 +293,7 @@ namespace UserInterface.Forms
 					float Cantidad=Convert.ToSingle(((Label)dgdPartidasPVC.Items[i].FindControl("ItemMCantidad")).Text.ToString());
 					float CantidadReal=Convert.ToSingle(((TextBox)dgdPartidasPVC.Items[i].FindControl("txtCantidadReal")).Text.ToString());
 					string FolioCompuesto = ((TextBox)dgdPartidasPVC.Items[i].FindControl("txtFolioCompuesto")).Text.ToString();
-					SICALNet.BusinessEntities.PartidasPVCInfo PVCInfo = new SICALNet.BusinessEntities.PartidasPVCInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationSettings.AppSettings["PVCRoomId"]),Codigo,Cantidad,CantidadReal,DateTime.Now.Date.ToString("dd/MMM/yyyy"),string.Empty,FolioCompuesto);
+					SICALNet.BusinessEntities.PartidasPVCInfo PVCInfo = new SICALNet.BusinessEntities.PartidasPVCInfo(txtSecuencia.Text,Convert.ToInt32(ConfigurationManager.AppSettings["PVCRoomId"]),Codigo,Cantidad,CantidadReal,DateTime.Now.Date.ToString("dd/MMM/yyyy"),string.Empty,FolioCompuesto);
 					SICALNet.BusinessLogicLayer.PartidasPVC PartidasPVC = new SICALNet.BusinessLogicLayer.PartidasPVC();
 					PartidasPVC.Insert(PVCInfo);
 
@@ -305,8 +305,8 @@ namespace UserInterface.Forms
 				if (proceedToRelease)
 				{
 					// To Release the Work Order
-					int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["PVCRoomId"]);
-					int IdStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]); 
+					int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["PVCRoomId"]);
+					int IdStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]); 
 					OrdenesTrabajoInfo WOInfo = new OrdenesTrabajoInfo(txtSecuencia.Text, IdArea, IdStatus, DateTime.Now.Date.ToString("dd/MMM/yyyy"),Context.User.Identity.Name); // 1 - Active
 					SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 					WorkOrder.UpdateStatus(WOInfo);
@@ -333,7 +333,7 @@ namespace UserInterface.Forms
 		private void cmdMensaje_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia = txtSecuencia.Text.ToString();
-			string IdArea= ConfigurationSettings.AppSettings["PVCRoomId"].ToString();
+			string IdArea= ConfigurationManager.AppSettings["PVCRoomId"].ToString();
 			string CodigoSAP=Session["CodigoSAP"].ToString();
 			string matDesc=txtUTEC.Text.Trim();
 			RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodigoSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");
@@ -344,7 +344,7 @@ namespace UserInterface.Forms
 			try
 			{
 				int sequenceStatus = Convert.ToInt32(Request.QueryString["status"].ToString());
-				if (sequenceStatus==Convert.ToInt32(ConfigurationSettings.AppSettings["StatusRelease"]))
+				if (sequenceStatus==Convert.ToInt32(ConfigurationManager.AppSettings["StatusRelease"]))
 				{
 					Response.Redirect("ConsultPVCWO.aspx");
 				}
@@ -359,7 +359,7 @@ namespace UserInterface.Forms
 						SICALNet.BusinessEntities.PartidasPVCInfo PVCInfo = new SICALNet.BusinessEntities.PartidasPVCInfo(txtSecuencia.Text,IdPVCArea,Codigo,Cantidad,CantidadReal,string.Empty,string.Empty,FolioCompuesto);
 						SICALNet.BusinessLogicLayer.PartidasPVC PartidasPVC = new SICALNet.BusinessLogicLayer.PartidasPVC();
 						PartidasPVC.Insert(PVCInfo);
-						SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo( txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationSettings.AppSettings["PVCRoomId"]),Context.User.Identity.Name);
+						SICALNet.BusinessEntities.OrdenesTrabajoInfo OTInfo = new SICALNet.BusinessEntities.OrdenesTrabajoInfo( txtSecuencia.Text.ToString(),Convert.ToInt32(ConfigurationManager.AppSettings["PVCRoomId"]),Context.User.Identity.Name);
 						SICALNet.BusinessLogicLayer.OrdenesTrabajo BLOrdenes = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 						BLOrdenes.UpdateLoginForm(OTInfo);
 					}			

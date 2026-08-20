@@ -69,7 +69,7 @@ namespace UserInterface.Forms.Production
 				Status = Request.QueryString["StatusId"];
 				//CodigoSAP = Request.QueryString["CodigoSAP"];
 
-				string ReleaseStatus = ConfigurationSettings.AppSettings["StatusRelease"].ToString();
+				string ReleaseStatus = ConfigurationManager.AppSettings["StatusRelease"].ToString();
 				if (Status == ReleaseStatus)
 				{
 					btnAgregar.Enabled=false;
@@ -111,7 +111,7 @@ namespace UserInterface.Forms.Production
 		private void DisplayFloorMessage()
 		{
 			// Display the Messages in Multiline Text box
-			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationSettings.AppSettings["SeparacionRoomId"]));
+			MensajePisoInfo mpInfo = new MensajePisoInfo(txtSecuencia.Text,string.Empty,Convert.ToInt32(ConfigurationManager.AppSettings["SeparacionRoomId"]));
 			SICALNet.BusinessLogicLayer.MensajePiso mPiso = new SICALNet.BusinessLogicLayer.MensajePiso();					
 			IList mPisoList=mPiso.Select(mpInfo);
 			if(mPisoList.Count>0)
@@ -132,14 +132,14 @@ namespace UserInterface.Forms.Production
 		{
 			
 //			// To Get Next Area to Change that status to Activo for this WorkOrder Number
-//			FlujoAreaInfo FAInfo = new FlujoAreaInfo ( Convert.ToInt32(ConfigurationSettings.AppSettings["SeparacionRoomId"]), 0 );
+//			FlujoAreaInfo FAInfo = new FlujoAreaInfo ( Convert.ToInt32(ConfigurationManager.AppSettings["SeparacionRoomId"]), 0 );
 //			SICALNet.BusinessLogicLayer.FlujoArea FArea = new SICALNet.BusinessLogicLayer.FlujoArea();
 //			ArrayList FAreaList = new ArrayList();
 //			FAreaList = (ArrayList) FArea.Load(FAInfo);
 //			FAInfo = (FlujoAreaInfo)FAreaList[0];
 //
 //			// To Change the Next Area Status To Active for this Work Order 
-//			int ActiveStatus = Convert.ToInt32(ConfigurationSettings.AppSettings["StatusActive"].ToString());
+//			int ActiveStatus = Convert.ToInt32(ConfigurationManager.AppSettings["StatusActive"].ToString());
 //			OrdenesTrabajoInfo WOInfo1 = new OrdenesTrabajoInfo(txtSecuencia.Text, FAInfo.IdArea, ActiveStatus); // 2 - Active
 //			SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder1 = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
 //			WorkOrder1.UpdateWO(WOInfo1);
@@ -151,8 +151,8 @@ namespace UserInterface.Forms.Production
 			
 			try
 			{
-				int IdArea = Convert.ToInt32(ConfigurationSettings.AppSettings["SeparacionRoomId"]);
-				int IdStatus =  Convert.ToInt32( ConfigurationSettings.AppSettings["StatusRelease"].ToString());
+				int IdArea = Convert.ToInt32(ConfigurationManager.AppSettings["SeparacionRoomId"]);
+				int IdStatus =  Convert.ToInt32( ConfigurationManager.AppSettings["StatusRelease"].ToString());
 			
 				//Activate Next Area in OrdernesTrabajo And update Active Area in Programma Production for this Secuencia
 				//Depending on sequence available in "FlujoArea" Table
@@ -182,7 +182,7 @@ namespace UserInterface.Forms.Production
 		private void cmdAgregar_Click(object sender, System.EventArgs e)
 		{
 			string Secuencia = txtSecuencia.Text.ToString();
-			string IdArea= ConfigurationSettings.AppSettings["SeparacionRoomId"].ToString();
+			string IdArea= ConfigurationManager.AppSettings["SeparacionRoomId"].ToString();
 			string CodigoSAP=Request.QueryString["CodigoSAP"].ToString();
 			string matDesc=txtUTEC.Text.Trim();
 			RegisterClientScriptBlock("", "<script language='JavaScript'> window.open('MensajePopup.aspx?Secuencia="+Secuencia+"&AreaId="+IdArea+"&CodigoSAP="+CodigoSAP+"&MaterialDescription="+matDesc+"','anycontent','width=600,height=550,left=100, top=150,status,scrollbars=no'); </script>");

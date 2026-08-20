@@ -49,10 +49,10 @@ namespace UserInterface.Forms.Logistics
 			crReportDocument = new UserInterface.Forms.Reports.ProgramaReport();
 
 			crConnectionInfo = new ConnectionInfo();
-			crConnectionInfo.ServerName = ConfigurationSettings.AppSettings["server"];
-			crConnectionInfo.UserID = ConfigurationSettings.AppSettings["user id"];
-			crConnectionInfo.Password = ConfigurationSettings.AppSettings["password"];
-			crConnectionInfo.DatabaseName = ConfigurationSettings.AppSettings["database"];
+			crConnectionInfo.ServerName = ConfigurationManager.AppSettings["server"];
+			crConnectionInfo.UserID = ConfigurationManager.AppSettings["user id"];
+			crConnectionInfo.Password = ConfigurationManager.AppSettings["password"];
+			crConnectionInfo.DatabaseName = ConfigurationManager.AppSettings["database"];
 
 			//Get the tables collection from the report object
 			crDatabase = crReportDocument.Database;

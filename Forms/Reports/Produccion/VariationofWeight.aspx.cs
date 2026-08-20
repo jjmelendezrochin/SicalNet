@@ -252,7 +252,7 @@ namespace UserInterface.Forms.Reports.Production
 			
 			rptHelper.setPermission(reporte);
 			string reportName = rptHelper.exportReport(reporte,"CompareReport",User.Identity.Name);
-			string redirectPath=ConfigurationSettings.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+			string redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
 			Response.Redirect(redirectPath);
 		}
 

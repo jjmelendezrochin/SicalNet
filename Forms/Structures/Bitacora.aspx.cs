@@ -103,9 +103,9 @@ namespace BitacoraExportacion1
 				string _path = "";
 
 				if (rdbSicalnet.Checked == true)
-					_path = ConfigurationSettings.AppSettings["ExportBitDirectory"];
+					_path = ConfigurationManager.AppSettings["ExportBitDirectory"];
 					else
-					_path = ConfigurationSettings.AppSettings["ImportBitDirectory"];
+					_path = ConfigurationManager.AppSettings["ImportBitDirectory"];
 
 				string archivo = ((Label)e.Item.FindControl("Label2")).Text;
 				string tamano = ((Label)e.Item.FindControl("Label4")).Text;
@@ -222,8 +222,8 @@ namespace BitacoraExportacion1
 			dt.Columns.Add(new DataColumn("NombreValue", typeof(String)));
 			dt.Columns.Add(new DataColumn("TamañoValue", typeof(String)));
 
-			string ArchivosDatasul=ConfigurationSettings.AppSettings["ImportBitDirectory"];
-			string ArchivosSical=ConfigurationSettings.AppSettings["ExportBitDirectory"];
+			string ArchivosDatasul=ConfigurationManager.AppSettings["ImportBitDirectory"];
+			string ArchivosSical=ConfigurationManager.AppSettings["ExportBitDirectory"];
 
 			string _path;
 			

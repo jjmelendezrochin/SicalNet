@@ -96,7 +96,7 @@ namespace UserInterface.Forms.Logistics
 						// to Call the Select method
 						if (!BLLPrg.HasWorkOrders(BEPrg))
 						{
-							if (IdStatus==int.Parse(ConfigurationSettings.AppSettings["SequenceStatusCancel"]))
+							if (IdStatus==int.Parse(ConfigurationManager.AppSettings["SequenceStatusCancel"]))
 							{
 								/****modificado por alejandro.hernandez@nasoft.com 21022006****/
 								if (strCancelledSequences.Length == 0)
@@ -128,7 +128,7 @@ namespace UserInterface.Forms.Logistics
 								else
 								{
 									SICALNet.BusinessEntities.MaterialInfo BEmaterial = (SICALNet.BusinessEntities.MaterialInfo) RsMaterial[0];
-									if(BEmaterial.IdEstadoMaterial!=int.Parse(ConfigurationSettings.AppSettings["IdInstrucciones"]))
+									if(BEmaterial.IdEstadoMaterial!=int.Parse(ConfigurationManager.AppSettings["IdInstrucciones"]))
 									{
 										//to get the instance for Business entities
 										SICALNet.BusinessEntities.OrdenesTrabajoInfo BEOrdTra= new SICALNet.BusinessEntities.OrdenesTrabajoInfo(sSec,0,0,null,Context.User.Identity.Name);
@@ -217,7 +217,7 @@ namespace UserInterface.Forms.Logistics
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ erHnd.Message.Replace("'"," ") +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}		
 		}
 

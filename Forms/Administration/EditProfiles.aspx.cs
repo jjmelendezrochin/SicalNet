@@ -219,7 +219,7 @@ namespace UserInterface.Forms.Administration
 
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('El perfil ha sido salvado exitosamente');self.location.href='Profiles.aspx';</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 				
 				//Response.Redirect("Profiles.aspx");
 
@@ -228,7 +228,7 @@ namespace UserInterface.Forms.Administration
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}
 
@@ -255,7 +255,7 @@ namespace UserInterface.Forms.Administration
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}
 
@@ -277,7 +277,7 @@ namespace UserInterface.Forms.Administration
 			{
 				//to display the msg for user
 				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-				Page.RegisterStartupScript("ClientScript",ScriptString);
+				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
 			}
 		}
 
