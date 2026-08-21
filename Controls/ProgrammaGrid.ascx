@@ -72,7 +72,7 @@ function ShowHide(CtrlName)
 						<TD colSpan="2">
 							<center>
 								<asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" BorderStyle="Groove" 
-									Width="100px"
+									Width="99px"
 									MaxLength="11">
 								</asp:textbox>
 									<asp:imagebutton 
