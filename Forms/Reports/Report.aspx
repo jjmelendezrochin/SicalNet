@@ -107,8 +107,16 @@
 					runat="server" Width="154px" Height="22px" CssClass="standard-text">Fecha Programa Inicial</asp:label>
 				<asp:textbox style="Z-INDEX: 105; POSITION: absolute; TOP: 144px; LEFT: 656px" id="txtFechaInicial"
 					runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox>
-				<asp:imagebutton style="Z-INDEX: 106; POSITION: absolute; TOP: 144px; LEFT: 776px" id="imgFInicial"
-					OnClientClick="return GetDate('txtFechaInicial');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+				<asp:imagebutton 
+					style="Z-INDEX: 106; 
+					POSITION: absolute; 
+					TOP: 144px; 
+					LEFT: 776px" 
+					id="imgFInicial"
+					OnClientClick="return GetDate('txtFechaInicial');" 
+					runat="server" 
+					ImageUrl="../../Images/icon-calendar.gif">
+				</asp:imagebutton>
 				<asp:label style="Z-INDEX: 107; POSITION: absolute; TOP: 192px; LEFT: 656px" id="lblFechaFinal"
 					runat="server" Width="142px" Height="22px" CssClass="standard-text"> Fecha Programa Final</asp:label>
 				<asp:textbox style="Z-INDEX: 108; POSITION: absolute; TOP: 216px; LEFT: 656px" id="txtFechaFinal"

@@ -56,11 +56,13 @@
 					</tr>
 					<tr>
 						<td><asp:textbox id="txtFechaInicial" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"
-								Width="100px"></asp:textbox><asp:image id="imgInitial" OnClientClick="return GetDate('txtFechaInicial');" Runat="server" AlternateText="Inicial Date"
-								ImageUrl="../../Images/icon-calendar.gif"></asp:image></td>
+								Width="100px"></asp:textbox>
+							<asp:imagebutton id="imgInitial" OnClientClick="return GetDate('txtFechaInicial');" Runat="server" AlternateText="Inicial Date"
+								ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></td>
 						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"
-								Width="100px"></asp:textbox><asp:image id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" AlternateText="Inicial Date"
-								ImageUrl="../../Images/icon-calendar.gif"></asp:image></td>
+								Width="100px"></asp:textbox>
+							<asp:imagebutton id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" AlternateText="Inicial Date"
+								ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboLinea" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboStatus" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:button id="cmdGo" CssClass="botonesInput" Runat="server" Text="Aceptar"></asp:button></td>

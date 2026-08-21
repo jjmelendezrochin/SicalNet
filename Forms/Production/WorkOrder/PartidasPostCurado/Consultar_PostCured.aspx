@@ -55,11 +55,13 @@
 						<td><asp:Label ID="Status" Text="Status" Runat="server" CssClass="standard-text">Status</asp:Label></td>
 					<tr>
 						<td><asp:textbox id="txtFecha" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
-								MaxLength="11"></asp:textbox><asp:image id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Inicial Date"
-								OnClientClick="return GetDate('txtFecha');"></asp:image></td>
+								MaxLength="11"></asp:textbox>
+							<asp:imagebutton id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Inicial Date"
+								OnClientClick="return GetDate('txtFecha');"></asp:imagebutton></td>
 						<td><asp:textbox id="txtFechaFinal" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
-								MaxLength="11"></asp:textbox><asp:image id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Final Date"
-								OnClientClick="return GetDate('txtFechaFinal');"></asp:image></td>
+								MaxLength="11"></asp:textbox>
+							<asp:imagebutton id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Final Date"
+								OnClientClick="return GetDate('txtFechaFinal');"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboLinea" Runat="server" CssClass="Standard-text"></asp:dropdownlist></td>
 						<td><asp:DropDownList ID="cboStatus" Runat="server" CssClass="Standard-text"></asp:DropDownList></td>
 						<td><asp:Button ID="btnSel" Runat="server" Text="Aceptar" CssClass="botonesInput"></asp:Button></td>

@@ -37,12 +37,14 @@
 	<TR>
 		<TD>
 			<asp:textbox id="txtFrom" Runat="server" CssClass="Standard-text" Width="100px" MaxLength="11"></asp:textbox>
-			<asp:image OnClientClick="return GetDate('ConsultPrgGridControl_txtFrom');" id="imgFrom" name="imgFrom" Runat="server"
-				ImageUrl="../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image></TD>
+			<asp:imagebutton OnClientClick="return GetDate('ConsultPrgGridControl_txtFrom');" id="imgFrom" name="imgFrom" Runat="server"
+				ImageUrl="../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:imagebutton>
+		</TD>
 		<TD>
 			<asp:textbox id="txtTo" Runat="server" CssClass="Standard-text" Width="100px" MaxLength="11"></asp:textbox>
-			<asp:image OnClientClick="return GetDate('ConsultPrgGridControl_txtTo');" id="imgTo" Runat="server" ImageUrl="../Images/icon-calendar.gif"
-				AlternateText="Final Date"></asp:image></TD>
+			<asp:imagebutton OnClientClick="return GetDate('ConsultPrgGridControl_txtTo');" id="imgTo" Runat="server" ImageUrl="../Images/icon-calendar.gif"
+				AlternateText="Final Date"></asp:imagebutton>
+		</TD>
 		<TD>
 			<asp:dropdownlist id="cboIdLinea" Runat="server" CssClass="standard-text"></asp:dropdownlist></TD>
 		<TD align="center"><asp:button id="btnAceptar" Text="Aceptar" CssClass="botonesInput" runat="server"></asp:button></TD>
