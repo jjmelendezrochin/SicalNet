@@ -108,12 +108,12 @@
 						<td><asp:label id="Label21" Runat="server" Text="Aforo" CssClass="standard-text">Aforo</asp:label></td>
 					</tr>
 					<tr>
-						<td><asp:textbox id="txtInitial" Runat="server" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox>
-							<asp:image id="imgInitial" OnClientClick="return GetDate('txtInitial');" Runat="server" AlternateText="Inicial Date"
-								ImageUrl="../../../../Images/icon-calendar.gif"></asp:image></td>
-						<td><asp:textbox id="txtFinal" Runat="server" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11">
-						    </asp:textbox><asp:image id="imgFinal" OnClientClick="return GetDate('txtFinal');" Runat="server" AlternateText="Final Date"
-								ImageUrl="../../../../Images/icon-calendar.gif"></asp:image></td>
+						<td><asp:textbox id="txtInitial" Runat="server" Width="99px" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox>
+							<asp:imagebutton id="imgInitial" OnClientClick="return GetDate('txtInitial');" Runat="server" AlternateText="Inicial Date"
+								ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
+						<td><asp:textbox id="txtFinal" Runat="server" Width="99px" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11">
+						    </asp:textbox><asp:imagebutton id="imgFinal" OnClientClick="return GetDate('txtFinal');" Runat="server" AlternateText="Final Date"
+								ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboStatus" Runat="server" CssClass="Standard-text" Width="100px"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboLinea" Runat="server" CssClass="Standard-text" Width="100px"></asp:dropdownlist></td>
 						<td align="left"><asp:dropdownlist id="cboColor" Runat="server" CssClass="Standard-text" Width="100px"></asp:dropdownlist></td>

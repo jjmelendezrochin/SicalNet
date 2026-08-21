@@ -102,11 +102,14 @@
 						<td><asp:label id="Label2" CssClass="standard-text" Text="Fecha" Runat="server">Olla formulación en 1 paso:</asp:label></td>
 					<tr>
 						<td><asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" MaxLength="11" Width="96px"
-								BorderStyle="Groove"></asp:textbox><asp:image id="imgInitial" OnClientClick="return GetDate('txtFecha');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
-								AlternateText="Inicial Date"></asp:image></td>
+								BorderStyle="Groove"></asp:textbox>
+							<asp:imagebutton id="imgInitial" OnClientClick="return GetDate('txtFecha');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+								AlternateText="Inicial Date"></asp:imagebutton></td>
 						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" Width="96px"
-								BorderStyle="Groove"></asp:textbox><asp:image id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
-								AlternateText="Inicial Date"></asp:image></td>
+								BorderStyle="Groove">
+						    </asp:textbox>
+							<asp:imagebutton id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+								AlternateText="Inicial Date"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboLinea" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboStatus" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="CmbOlla" runat="server" CssClass="Standard-text" Width="85px"></asp:dropdownlist></td>

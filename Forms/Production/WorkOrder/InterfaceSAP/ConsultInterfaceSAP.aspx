@@ -99,10 +99,12 @@
 						<td align="left"></td>
 					</tr>
 					<tr>
-						<td><asp:textbox id="txtInitial" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox><asp:image OnClientClick="return GetDate('txtInitial');" id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
-								AlternateText="Inicial Date"></asp:image></td>
-						<td><asp:textbox id="txtFinal" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox><asp:image OnClientClick="return GetDate('txtFinal');" id="imgFinal" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
-								AlternateText="Final Date"></asp:image></td>
+						<td><asp:textbox id="txtInitial" Width="99px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox>
+							<asp:imagebutton OnClientClick="return GetDate('txtInitial');" id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+								AlternateText="Inicial Date"></asp:imagebutton></td>
+						<td><asp:textbox id="txtFinal" Width="99px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox>
+							<asp:imagebutton OnClientClick="return GetDate('txtFinal');" id="imgFinal" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+								AlternateText="Final Date"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboStatus" Width="100px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<TD><asp:dropdownlist id="cboLinea" Width="100px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></TD>
 						<TD align="left"></TD>
@@ -136,9 +138,11 @@
 								MaxLength="5"></asp:textbox></TD>
 						<TD style="WIDTH: 154px; HEIGHT: 22px"><asp:textbox id="txtHoraFinal" Width="116px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"
 								MaxLength="5"></asp:textbox></TD>
-						<TD style="WIDTH: 166px; HEIGHT: 22px"><asp:textbox id="txtFechaInterfaz" CssClass="Standard-text" Runat="server" BorderStyle="Groove"
-								MaxLength="11"></asp:textbox><asp:image OnClientClick="return GetDate('txtFinal');" id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
-								AlternateText="Final Date"></asp:image></TD>
+						<TD style="WIDTH: 166px; HEIGHT: 22px">
+							<asp:textbox id="txtFechaInterfaz" Width="99px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"
+								MaxLength="11"></asp:textbox>
+							<asp:imagebutton OnClientClick="return GetDate('txtFinal');" id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+								AlternateText="Final Date"></asp:imagebutton></TD>
 						<TD style="HEIGHT: 22px" align="center"><asp:button id="btnSel" CssClass="botonesInput" Text="Aceptar" Runat="server"></asp:button></TD>
 						<TD style="HEIGHT: 22px" align="left"></TD>
 					</TR>

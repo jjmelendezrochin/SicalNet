@@ -9,9 +9,14 @@
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
+		
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -53,9 +58,11 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td style="HEIGHT: 14px"><asp:textbox id="txtFecha" runat="server" CssClass="standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox>
+					<td style="HEIGHT: 14px">
+						<asp:textbox id="txtFecha" Width="99px" runat="server" CssClass="standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox>
 						<asp:imagebutton id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFecha')"></asp:imagebutton></td>
-					<td style="HEIGHT: 14px"><asp:textbox id="txtFechaFinal" runat="server" CssClass="standard-text" BorderStyle="Groove"
+					<td style="HEIGHT: 14px">
+						<asp:textbox id="txtFechaFinal" Width="99px" runat="server" CssClass="standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
 						<asp:imagebutton id="ImgFechaFinal" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFechaFinal')"></asp:imagebutton></td>
 					<td style="HEIGHT: 14px"><asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text"></asp:dropdownlist></td>
