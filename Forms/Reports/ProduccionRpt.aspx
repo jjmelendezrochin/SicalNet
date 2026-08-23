@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
-		<title>ProduccionRpt</title>
+		<title>ProduccionRpt</title><a href="ProduccionRpt.aspx">ProduccionRpt.aspx</a>
 		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
 		<meta name="CODE_LANGUAGE" Content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
@@ -75,7 +75,7 @@
 						<asp:Label id="Label6" runat="server" CssClass="standard-text">Fecha Liberación Inicial</asp:Label>
 						<asp:textbox id="txtLibInicial" runat="server" Width="128px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtLibInicial');"></asp:imagebutton>
+						<asp:imagebutton id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtLibInicial');" OnClick="Imagebutton1_Click"></asp:imagebutton>
 					</td>
 				</tr>
 				<TR>
@@ -139,7 +139,7 @@
 				</tr>
 				<tr>
 					<td align="center" colspan="6">
-						<asp:button id="cmdImprimir" runat="server" Width="80px" Text="Imprimir" CssClass="botonesInput"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<asp:button id="cmdImprimir" runat="server" Width="80px" Text="Imprimir" CssClass="botonesInput" OnClick="cmdImprimir_Click1"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<asp:button id="cmdCancelar" runat="server" Width="80px" Text="Cancelar" CssClass="botonesInput"></asp:button>
 					</td>
 				</tr>

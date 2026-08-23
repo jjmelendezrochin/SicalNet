@@ -131,9 +131,16 @@ namespace UserInterface.Forms.Production
 			}
 			catch(Exception ErrHand)
 			{
-				//to display the msg for user
-				string ScriptString="<script language='javascript'>alert('"+ ErrHand.Message +"');</script>"; 
-				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
+				string mensaje = HttpUtility.JavaScriptStringEncode(ErrHand.Message);
+
+				string script = "SicalAlert.error('" + mensaje + "');";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ClientScript",
+					script,
+					true
+				);
 			}
 		}
 

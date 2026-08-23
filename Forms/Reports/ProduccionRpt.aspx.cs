@@ -12,7 +12,7 @@ using System.Configuration;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using SICALNet.BusinessEntities;
-
+using UserInterface.Helpers;
 
 namespace UserInterface.Forms.Reports
 {
@@ -58,7 +58,7 @@ namespace UserInterface.Forms.Reports
 		protected System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator4;
 	
 		const string const_All = "Todas";
-		
+		private UserInterface.Helpers.Funciones fn = new UserInterface.Helpers.Funciones();
 
 		private void Page_Load(object sender, System.EventArgs e)
 		{
@@ -324,17 +324,17 @@ namespace UserInterface.Forms.Reports
 					.Append(" ")
 					.Append(strTemp)
 					.Append(" {ProgramaProduccion.Fecha}>=Date(")
-					.Append(DateTime.Parse(txtFechaInicial.Text).ToString("yyyy"))
+					.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtFechaInicial.Text)).ToString("yyyy"))
 					.Append(",")
-					.Append(DateTime.Parse(txtFechaInicial.Text).ToString("MM"))
+					.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtFechaInicial.Text)).ToString("MM"))
 					.Append(",")
-					.Append(DateTime.Parse(txtFechaInicial.Text).ToString("dd"))
+					.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtFechaInicial.Text)).ToString("dd"))
 					.Append(") AND {ProgramaProduccion.Fecha}<=Date(")
-					.Append(DateTime.Parse(txtFechaFinal.Text).ToString("yyyy"))
+					.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtFechaFinal.Text)).ToString("yyyy"))
 					.Append(",")
-					.Append(DateTime.Parse(txtFechaFinal.Text).ToString("MM"))
+					.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtFechaFinal.Text)).ToString("MM"))
 					.Append("," )
-					.Append(DateTime.Parse(txtFechaFinal.Text).ToString("dd"))
+					.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtFechaFinal.Text)).ToString("dd"))
 					.Append(")");
 			}
 
@@ -360,7 +360,7 @@ namespace UserInterface.Forms.Reports
 								.Append(" ")
 								.Append(strTemp)
 								.Append(" {OrdenesTrabajo.FechaLiberacion}>=Date(" )
-								.Append(DateTime.Parse(txtLibInicial.Text).ToString("yyyy") )
+								.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("yyyy"))
 								.Append("," )
 								.Append(DateTime.Parse(txtLibInicial.Text).ToString("MM") )
 								.Append("," )
@@ -376,7 +376,8 @@ namespace UserInterface.Forms.Reports
 						else
 						{
 							// turno abarca al dia siguiente
-							Dtt = System.DateTime.Parse(txtLibFinal.Text); 
+							
+							Dtt = System.DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibFinal.Text));							
 							StartTicks= Dtt.Ticks; 							
 							Tick = StartTicks + 864000000000;
 							Dff = new DateTime(Tick);
@@ -387,11 +388,11 @@ namespace UserInterface.Forms.Reports
 								.Append(" " )
 								.Append(strTemp)
 								.Append(" {OrdenesTrabajo.FechaLiberacion}>=Date(" )
-								.Append(DateTime.Parse(txtLibInicial.Text).ToString("yyyy") )
+								.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("yyyy") )
 								.Append("," )
-								.Append(DateTime.Parse(txtLibInicial.Text).ToString("MM") )
+								.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("MM") )
 								.Append("," )
-								.Append(DateTime.Parse(txtLibInicial.Text).ToString("dd") )
+								.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("dd") )
 								.Append(") AND {OrdenesTrabajo.FechaLiberacion}<=Date(" )
 								.Append(Dff.Year )
 								.Append("," )
@@ -406,8 +407,9 @@ namespace UserInterface.Forms.Reports
 					{
 						// el dia actual pero tomando los 3 horarios
 						// turno abarca al dia siguiente
-						Dtt = System.DateTime.Parse(txtLibFinal.Text); 
-						StartTicks= Dtt.Ticks; 							
+						
+						Dtt = System.DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibFinal.Text));
+						StartTicks = Dtt.Ticks; 							
 						Tick = StartTicks + 864000000000;
 						Dff = new DateTime(Tick);
 						strTemp = (SelFormula.ToString()!=string.Empty?"AND":"");
@@ -521,11 +523,11 @@ namespace UserInterface.Forms.Reports
 							.Append(strTemp)
 							.Append(" {OrdenesTrabajo.FechaLiberacion} > ")
 							.Append("CDateTime(" )
-							.Append(DateTime.Parse(txtLibInicial.Text).ToString("yyyy") )
+							.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("yyyy") )
 							.Append("," )
-							.Append(DateTime.Parse(txtLibInicial.Text).ToString("MM"))
+							.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("MM"))
 							.Append("," )
-							.Append(DateTime.Parse(txtLibInicial.Text).ToString("dd") )
+							.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("dd") )
 							.Append("," )
 							.Append(turno.HoraInicial.Hour.ToString() )
 							.Append("," )
@@ -555,8 +557,8 @@ namespace UserInterface.Forms.Reports
 				//todas las lineas y los 3 turnos
 				Dff = DateTime.Now;
 				if (txtLibFinal.Text!="")
-				{
-					DateTime dt = System.DateTime.Parse(txtLibFinal.Text); 
+				{					
+					DateTime dt = System.DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibFinal.Text)); 
 					StartTicks= dt.Ticks; 							
 					Tick = StartTicks + 864000000000;
 					Dff = new DateTime(Tick);
@@ -569,11 +571,11 @@ namespace UserInterface.Forms.Reports
 						.Append(strTemp)
 						.Append(" {OrdenesTrabajo.FechaLiberacion} > " )
 						.Append("CDateTime(" )
-						.Append(DateTime.Parse(txtLibInicial.Text).ToString("yyyy") )
+						.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("yyyy") )
 						.Append("," )
-						.Append(DateTime.Parse(txtLibInicial.Text).ToString("MM"))
+						.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("MM"))
 						.Append("," )
-						.Append(DateTime.Parse(txtLibInicial.Text).ToString("dd") )
+						.Append(DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("dd") )
 						.Append(",07,00,00)");
 				}
 
@@ -661,5 +663,194 @@ namespace UserInterface.Forms.Reports
 			}
 
 		}
-	}
+
+        protected void Imagebutton1_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void cmdImprimir_Click1(object sender, EventArgs e)
+        {
+			/*** comentado por alejandro.hernandez@nasoft.com ***/
+			//			string Prg_Ini = null;
+			//			string Prg_Fin = null;
+			//			string Lib_Ini = null;
+			//			string Lib_Fin = null;
+			//			if(txtFechaInicial.Text!=string.Empty || txtFechaInicial.Text!="")
+			//				Prg_Ini = txtFechaInicial.Text;
+			//			if(txtFechaFinal.Text!=string.Empty || txtFechaFinal.Text!="")
+			//				Prg_Fin = txtFechaFinal.Text;
+			//			if(txtLibInicial.Text!=string.Empty || txtLibInicial.Text!="")
+			//				Lib_Ini = txtLibInicial.Text;
+			//			if(txtLibFinal.Text!=string.Empty || txtLibFinal.Text!="")
+			//				Lib_Fin = txtLibFinal.Text;
+
+			//HRV Código comentado 26 Enero 2005
+			/*SICALNet.BusinessLogicLayer.PartidasInspeccion pIns = new SICALNet.BusinessLogicLayer.PartidasInspeccion();
+			pIns.DefectsRpt(string.Empty,string.Empty,Convert.ToInt32(cmbMedida.SelectedItem.Value),cmbColor.SelectedItem.Value,Convert.ToInt32(cmbFamilia.SelectedItem.Value),Prg_Ini,Prg_Fin,Lib_Ini,Lib_Fin,Convert.ToInt32(cmbLinea.SelectedItem.Value));
+			*/
+
+			Reports.ReportHelper rptHelper = new Reports.ReportHelper();
+			Reports.ProduccionRptSAP reporte = new Reports.ProduccionRptSAP();
+
+			//Reports.DefectoRpt DefReporte = new Reports.DefectoRpt();
+
+			ParameterValues campoFecha = new ParameterValues();
+			ParameterDiscreteValue valorFecha = new ParameterDiscreteValue();
+			if (txtFechaInicial.Text != string.Empty && txtFechaFinal.Text != string.Empty)
+				valorFecha.Value = string.Format("Fecha Programa del {0} al {1}", txtFechaInicial.Text, txtFechaFinal.Text);
+			else
+				valorFecha.Value = string.Empty;
+
+			campoFecha.Add(valorFecha);
+
+			ParameterValues campoLibFecha = new ParameterValues();
+			ParameterDiscreteValue valorLibFecha = new ParameterDiscreteValue();
+			if (txtLibInicial.Text != string.Empty && txtLibFinal.Text != string.Empty)
+				valorLibFecha.Value = string.Format("Fecha Liberación del {0} al {1}", txtLibInicial.Text, txtLibFinal.Text);
+			else
+				valorLibFecha.Value = string.Empty;
+			//valorLibFecha.Value=string.Format("Fecha Liberación Del {0} al {1}",txtLibInicial.Text,txtLibFinal.Text);
+			campoLibFecha.Add(valorLibFecha);
+
+			/*ParameterValues campoSecuencia= new ParameterValues();
+			ParameterDiscreteValue valorSecuencia= new ParameterDiscreteValue();
+			valorSecuencia.Value=string.Format("Del {0} al {1}",cmbSecInicial.SelectedItem.Text,cmbSecFinal.SelectedItem.Text);
+			campoSecuencia.Add(valorSecuencia);*/
+
+			ParameterValues campoLinea = new ParameterValues();
+			ParameterDiscreteValue valorLinea = new ParameterDiscreteValue();
+			if (cmbLinea.SelectedItem.Text != string.Empty)
+				valorLinea.Value = string.Format("Linea: {0}", cmbLinea.SelectedItem.Text);
+			else
+				valorLinea.Value = string.Empty;
+
+			campoLinea.Add(valorLinea);
+
+			ParameterValues campoPlanta = new ParameterValues();
+			ParameterDiscreteValue valorPlanta = new ParameterDiscreteValue();
+			if (this.cmbLinea.SelectedItem.Text == const_All)
+			{
+				//valorPlanta.Value=string.Format(" {0}",ConfigurationManager.AppSettings["AllPlantText"]);
+				valorPlanta.Value = const_All;
+				reporte.Section1.ReportObjects["FldAllPlanta"].Width = 3015;
+				reporte.Section1.ReportObjects["FldSinglePlanta"].Width = 0;
+			}
+			else
+			{
+				valorPlanta.Value = "";
+				reporte.Section1.ReportObjects["FldAllPlanta"].Width = 0;
+				reporte.Section1.ReportObjects["FldSinglePlanta"].Width = 3015;
+			}
+			//valorPlanta.Value=string.Format("Planta: {0}",ConfigurationManager.AppSettings["LocalPlantText"]);
+			campoPlanta.Add(valorPlanta);
+
+			ParameterValues campoUser = new ParameterValues();
+			ParameterDiscreteValue valorUser = new ParameterDiscreteValue();
+			valorUser.Value = Context.User.Identity.Name;
+			campoUser.Add(valorUser);
+
+
+			ParameterValues campoSystem = new ParameterValues();
+			ParameterDiscreteValue valorSystem = new ParameterDiscreteValue();
+			valorSystem.Value = Context.User.Identity.Name;
+			campoSystem.Add(valorSystem);
+
+			reporte.DataDefinition.ParameterFields["Title1"].ApplyCurrentValues(campoFecha);
+			reporte.DataDefinition.ParameterFields["Title"].ApplyCurrentValues(campoLinea);
+			//reporte.DataDefinition.ParameterFields["Title2"].ApplyCurrentValues(campoSecuencia);
+			reporte.DataDefinition.ParameterFields["Title3"].ApplyCurrentValues(campoLibFecha);
+			reporte.DataDefinition.ParameterFields["Planta"].ApplyCurrentValues(campoPlanta);
+			reporte.DataDefinition.ParameterFields["UserName"].ApplyCurrentValues(campoUser);
+			reporte.DataDefinition.ParameterFields["System"].ApplyCurrentValues(campoSystem);
+
+			string SelFormula = "";
+			if (cmbLinea.SelectedItem.Value != "0")
+				SelFormula = "{ProgramaProduccion.IdLinea}=" + cmbLinea.SelectedItem.Value;
+			//
+			//			string FechaStartDate = txtFechaInicial.Text;
+			//			string FechaEndDate = txtFechaFinal.Text;
+
+			if (txtFechaInicial.Text != null && txtFechaFinal.Text != null && txtFechaInicial.Text != "" && txtFechaFinal.Text != "")
+				SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " {ProgramaProduccion.Fecha}>=Date(" + DateTime.Parse(txtFechaInicial.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("MM") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("dd") + ") AND {ProgramaProduccion.Fecha}<=Date(" + DateTime.Parse(txtFechaFinal.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("MM") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("dd") + ")";
+
+			//			string FechaStartDate = txtFechaInicial.Text;
+			//			string FechaEndDate = txtFechaFinal.Text;
+			//
+			//			if (FechaStartDate != null && FechaEndDate != null && FechaStartDate != "" && FechaEndDate != "")
+			//				SelFormula = SelFormula + " " + (SelFormula!=string.Empty?"AND":"") + " {ProgramaProduccion.Fecha}>=Date(" + DateTime.Parse(FechaStartDate).ToString("yyyy") + "," + DateTime.Parse(FechaStartDate).ToString("MM") + "," + DateTime.Parse(FechaStartDate).ToString("dd") + ") AND {ProgramaProduccion.Fecha}<=Date(" + DateTime.Parse(FechaEndDate).ToString("yyyy") + "," + DateTime.Parse(FechaEndDate).ToString("MM") + "," + DateTime.Parse(FechaEndDate).ToString("dd") + ")";
+
+			/*string SecInicial = cmbSecInicial.SelectedItem.Text;
+			string SecFinal = cmbSecFinal.SelectedItem.Text;
+
+			if (SecInicial != null && SecFinal != null && SecInicial != "" && SecFinal != "")
+				SelFormula = SelFormula + " " + (SelFormula!=string.Empty?"AND":"") + " Val({OrdenesTrabajo.Secuencia}) >= " + SecInicial + " AND " + "Val({OrdenesTrabajo.Secuencia}) <= " + SecFinal;*/
+
+			//			string LibStartDate = txtLibInicial.Text;
+			//			string LibEndDate = txtLibFinal.Text;
+
+			//if (LibStartDate != null && LibEndDate != null && LibStartDate != "" && LibEndDate != "")
+			if (txtLibFinal.Text != null && txtLibFinal.Text != null && txtLibFinal.Text != "" && txtLibFinal.Text != "")
+				SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " {OrdenesTrabajo.FechaLiberacion}>=Date(" + DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("yyyy") + "," + DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("MM") + "," + DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibInicial.Text)).ToString("dd") + ") AND {OrdenesTrabajo.FechaLiberacion}<=Date(" + DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibFinal.Text)).ToString("yyyy") + "," + DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibFinal.Text)).ToString("MM") + "," + DateTime.Parse(fn.ConvertirFechaMesNumero(txtLibFinal.Text)).ToString("dd") + ")";
+
+			if (cmbColor.SelectedItem.Value != "0")
+				SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " {Material.IdColor}='" + cmbColor.SelectedItem.Text + "'";
+
+			if (cmbMedida.SelectedItem.Value != "0")
+				SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " {Material.IdMedida}=" + cmbMedida.SelectedItem.Value;
+
+			if (cmbDefecto.SelectedItem.Value != "0")
+				SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " {PartidasInspeccion.IdDefecto}=" + cmbDefecto.SelectedItem.Value;
+
+			if (cmbFamilia.SelectedItem.Value != "0")
+				SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " {Material.IdFamiliaProducto}=" + cmbFamilia.SelectedItem.Value;
+			if (cmbTurno.Items.Count > 0)
+			{
+				if (cmbTurno.SelectedItem.Value != "0")
+				{
+
+					SICALNet.BusinessLogicLayer.Usuario BLLUsuario = new SICALNet.BusinessLogicLayer.Usuario();
+					TurnoInfo turno = BLLUsuario.SelectTurno(int.Parse(cmbTurno.SelectedItem.Value));
+					if (turno.HoraFinal.Hour > turno.HoraInicial.Hour)
+					{
+						SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND (" : "(") + " Time({OrdenesTrabajo.FechaLiberacion})> Time( " + turno.HoraInicial.Hour.ToString() + "," + turno.HoraInicial.Minute.ToString() + ",00)";
+						SelFormula = SelFormula + " AND " + " Time({OrdenesTrabajo.FechaLiberacion})<= Time( " + turno.HoraFinal.Hour.ToString() + "," + turno.HoraFinal.Minute.ToString() + ",00))";
+					}
+					else
+					{
+						SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND (" : "(") + " Time({OrdenesTrabajo.FechaLiberacion})> Time( " + turno.HoraInicial.Hour.ToString() + "," + turno.HoraInicial.Minute.ToString() + ",00)";
+						SelFormula = SelFormula + " OR " + " Time({OrdenesTrabajo.FechaLiberacion})<= Time( " + turno.HoraFinal.Hour.ToString() + "," + turno.HoraFinal.Minute.ToString() + ",00))";
+					}
+				}
+			}
+			string EspInicial = cmbEspInicial.SelectedItem.Text;
+			string EspFinal = cmbEspFinal.SelectedItem.Text;
+
+
+			if (EspInicial != null && EspFinal != null && EspInicial != "" && EspFinal != "")
+				SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " {Espesor.Centimetros} >= " + EspInicial + " AND " + "{Espesor.Centimetros} <= " + EspFinal;
+
+
+
+			//CRViewer.SelectionFormula="{ProgramaProduccion.Fecha}=Date(" + DateTime.Parse(Fecha).ToString("yyyy") + "," + DateTime.Parse(Fecha).ToString("MM") + "," + DateTime.Parse(Fecha).ToString("dd") + ") and {ProgramaProduccion.IdLinea}=" + IdLinea;
+
+			SelFormula = SelFormula + " AND {OrdenesTrabajo.IdArea}=12 AND {OrdenesTrabajo.IdStatus}=5";
+
+
+			reporte.DataDefinition.RecordSelectionFormula = SelFormula;
+			reporte.OpenSubreport("DefectoRpt.rpt - 01").RecordSelectionFormula = SelFormula;
+
+			//DefReporte.DataDefinition.RecordSelectionFormula=SelFormula;			
+			//rptHelper.setPermission(DefReporte);
+
+			rptHelper.setPermission(reporte);
+			rptHelper.setPermission(reporte.OpenSubreport("DefectoRpt.rpt - 01"));
+
+			string reportName = rptHelper.exportReport(reporte, "ProduccionReportSAP", User.Identity.Name);
+			//rptHelper.exportReport(DefReporte,"ProduccionReportSAP");
+
+			string redirectPath = ConfigurationManager.AppSettings["reportsWebPath"] + reportName + ".pdf";
+			Response.Redirect(redirectPath);
+		}
+    }
 }
