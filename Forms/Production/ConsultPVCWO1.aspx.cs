@@ -321,8 +321,9 @@ namespace UserInterface.Forms
 					Response.Redirect("ConsultPVCWO.aspx");
 				}
 				else
-					//Confirm operation to the user via message.
-					Page.RegisterStartupScript("alert", "<script language='JavaScript'>" + "alert('"+"Para poder liberar, proporcione la cantidad de material solicitada !"+"')" + "<" + "/script>");
+					MostrarAlerta("Para poder liberar, proporcione la cantidad de material solicitada !");
+				//Confirm operation to the user via message.
+				
 			}
 			catch
 			{
@@ -374,6 +375,16 @@ namespace UserInterface.Forms
 		private void cmdCancelar_Click(object sender, System.EventArgs e)
 		{
 			Response.Redirect("ConsultPVCWO.aspx");
+		}
+
+		private void MostrarAlerta(string mensaje)
+		{
+			ClientScript.RegisterStartupScript(
+				this.GetType(),
+				"SicalAlerta",
+				"SicalAlert.mostrar('" + mensaje.Replace("\\", "\\\\").Replace("'", "\\'") + "');",
+				true
+			);
 		}
 
 	}
