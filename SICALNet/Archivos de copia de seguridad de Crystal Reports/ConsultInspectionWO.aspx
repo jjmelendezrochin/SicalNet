@@ -1,5 +1,4 @@
-<%@ Page language="c#" Codebehind="ConsultInspectionWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.InspectionPhase.ConsultInspectionWO" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../../../Controls/mainMenu.ascx" %>
+ï»¿<%@ Page language="c#" Codebehind="ConsultInspectionWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.InspectionPhase.ConsultInspectionWO" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -9,7 +8,13 @@
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
-		<LINK href="..\..\..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -17,21 +22,28 @@
 			}  
 			function ShowTitle()
 			{
-					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Inspección"
+					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de InspecciÃ³n"
 			}		  
+		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
 		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<form id="ConsultInspectionWO" method="post" runat="server">
 			<table align="center" style="BORDER-COLLAPSE: collapse" id="Table1">
 				<tr>
-					<td align="left" colSpan="5" bgColor="#003366">
-						<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+					<td align="left" colSpan="5">
+						<div id="sicalMenu"></div>
 					</td>
 				</tr>
 				<tr>
 					<td align="center" colSpan="5"><br>
-						<asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14">Ordenes de Trabajo - Fase de Inspección</asp:label><hr>
+						<asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14">Ordenes de Trabajo - Fase de InspecciÃ³n</asp:label><hr>
 					</td>
 				</tr>
 				<tr>
@@ -46,16 +58,16 @@
 					<td>
 						<asp:TextBox id="txtFechaInicial" runat="server" Width="100px" CssClass="standard-text" BorderStyle="Groove"
 							MaxLength="11">10-Sep-2019</asp:TextBox>
-						<asp:ImageButton id="ImgFechaInicial" runat="server" onmouseup="GetDate('txtFechaInicial');" ImageUrl="../../../../Images/icon-calendar.gif"></asp:ImageButton>
+						<asp:ImageButton id="ImgFechaInicial" runat="server" OnClientClick="return GetDate('txtFechaInicial');" ImageUrl="../../../../Images/icon-calendar.gif"></asp:ImageButton>
 					</td>
 					<td>
 						<asp:TextBox id="txtFechaFinal" runat="server" Width="100px" CssClass="standard-text" BorderStyle="Groove"
 							MaxLength="11">10-Sep-2019</asp:TextBox>
-						<asp:ImageButton id="ImgFechaFinal" runat="server" onmouseup="GetDate('txtFechaFinal');" ImageUrl="../../../../Images/icon-calendar.gif"></asp:ImageButton>
+						<asp:ImageButton id="ImgFechaFinal" runat="server" OnClientClick="return GetDate('txtFechaFinal');" ImageUrl="../../../../Images/icon-calendar.gif"></asp:ImageButton>
 					</td>
 					<td><asp:dropdownlist id="cboLinea" runat="server" Width="125px" CssClass="standard-text"></asp:dropdownlist></td>
 					<td><asp:dropdownlist id="cboStatus" runat="server" Width="125px" CssClass="standard-text"></asp:dropdownlist></td>
-					<td><asp:button id="cmdAceptar" runat="server" Width="62px" Text="Aceptar" CssClass="botonesInput"></asp:button></td>
+					<td><asp:button id="cmdAceptar" runat="server" Width="80px" Text="Aceptar" CssClass="botonesInput"></asp:button></td>
 				</tr>
 				<TR>
 					<TD>

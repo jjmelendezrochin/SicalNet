@@ -1,33 +1,47 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="FormCintasGrid" Src="../../Controls/FormCintasGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Page language="c#" Codebehind="FormCintas.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FormCintas" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="JavaScript">
-<!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+		<!--
+		<!--
+		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+			document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+		  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+		}
+		MM_reloadPage(true);
+		// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+		  window.open(theURL,winName,features);
+		}
 
-//-->
-function ShowTitle()
-{
-	window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de Cintas"
-}
+		//-->
+		function ShowTitle()
+		{
+			window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de Cintas"
+		}
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 		<!--onload="if ('<%= Session["errMsg"]%>' != '') alert('<%= Session["errMsg"]%>')"-->
 	</HEAD>
 	<body onload="ShowTitle()" text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0"
@@ -36,8 +50,8 @@ function ShowTitle()
 			<div align="center">
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
 					<tr>
-						<td class="contenido" colSpan="3" bgColor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td class="contenido" colSpan="3">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>
@@ -59,7 +73,7 @@ function ShowTitle()
 					<TR>
 						<TD class="contenido" width="21" height="131"></TD>
 						<TD class="contenido" width="700" height="131">
-							<TABLE class="tan-border" id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
+							<TABLE  id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
 								<TR vAlign="top">
 									<TD class="letraAzulBold" colSpan="4" height="13">
 										<P>Seleccione el las caracterísiticas de la lámina:</P>
@@ -102,7 +116,7 @@ function ShowTitle()
 						<td class="contenido" width="21">&nbsp;</td>
 						<td class="contenido" width="700">
 							<DIV align="left">
-								<TABLE class="tan-border" id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
+								<TABLE  id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="2" height="13">
@@ -117,10 +131,9 @@ function ShowTitle()
 										<TD></TD>
 									</TR>
 									<TR vAlign="top">
-										<TD colSpan="2">
-											<TABLE id="Table6" cellSpacing="0" cellPadding="0" border="0">
-											</TABLE>
-											<uc1:formcintasgrid id="FormCintasGridControl" runat="server"></uc1:formcintasgrid></TD>
+										<TD colSpan="2">											
+											<uc1:formcintasgrid id="FormCintasGridControl" runat="server"></uc1:formcintasgrid>
+										</TD>
 									</TR>
 								</TABLE>
 							</DIV>
@@ -131,7 +144,7 @@ function ShowTitle()
 						<td width="21">&nbsp;</td>
 						<td>
 							<div align="left">
-								<TABLE class="tan-border" id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
+								<TABLE  id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="4" height="13">Agregue un componente a la 
@@ -161,7 +174,7 @@ function ShowTitle()
 											<asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label></TD>
 										<TD width="122">
 											<P align="right">
-												<asp:button id="AddFormCintas" runat="server" CssClass="botonesInput" Width="64px" Text="Agregar"
+												<asp:button id="AddFormCintas" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar"
 													CausesValidation="False"></asp:button></P>
 										</TD>
 										<TD></TD>
@@ -174,7 +187,7 @@ function ShowTitle()
 					<tr>
 						<td colspan="1">
 						<td>
-							<TABLE class="tan-border" id="ew" width="700" border="0">
+							<TABLE  id="ew" width="700" border="0">
 								<tr>
 									<td align="center">
 										<asp:button id="cmdSalir" runat="server" CssClass="botonesInput" Text="Salir" Visible="False"></asp:button>

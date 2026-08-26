@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="ConsultProgramGrid.ascx.cs" Inherits="UserInterface.Controls.ConsultProgramGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
-<LINK href="..\styloDESC.CSS" type="text/css" rel="stylesheet">
+
 <script language="javascript">
 
 	function GetDate(CtrlName)        
@@ -37,12 +37,14 @@
 	<TR>
 		<TD>
 			<asp:textbox id="txtFrom" Runat="server" CssClass="Standard-text" Width="100px" MaxLength="11"></asp:textbox>
-			<asp:image onmouseup="GetDate('ConsultPrgGridControl_txtFrom');" id="imgFrom" name="imgFrom" Runat="server"
-				ImageUrl="../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image></TD>
+			<asp:imagebutton OnClientClick="return GetDate('ConsultPrgGridControl_txtFrom');" id="imgFrom" name="imgFrom" Runat="server"
+				ImageUrl="../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:imagebutton>
+		</TD>
 		<TD>
 			<asp:textbox id="txtTo" Runat="server" CssClass="Standard-text" Width="100px" MaxLength="11"></asp:textbox>
-			<asp:image onmouseup="GetDate('ConsultPrgGridControl_txtTo');" id="imgTo" Runat="server" ImageUrl="../Images/icon-calendar.gif"
-				AlternateText="Final Date"></asp:image></TD>
+			<asp:imagebutton OnClientClick="return GetDate('ConsultPrgGridControl_txtTo');" id="imgTo" Runat="server" ImageUrl="../Images/icon-calendar.gif"
+				AlternateText="Final Date"></asp:imagebutton>
+		</TD>
 		<TD>
 			<asp:dropdownlist id="cboIdLinea" Runat="server" CssClass="standard-text"></asp:dropdownlist></TD>
 		<TD align="center"><asp:button id="btnAceptar" Text="Aceptar" CssClass="botonesInput" runat="server"></asp:button></TD>
@@ -111,7 +113,7 @@
 						cellPadding="1" bgColor="#dedfde" border="1">
 						<TR>
 							<TD>
-								<asp:Image id="cmdExpand" onmouseup="ShowHide(this.id);" ImageUrl="../images/plusButton.jpg"
+								<asp:Image id="cmdExpand" OnClientClick="return ShowHide(this.id);" ImageUrl="../images/plusButton.jpg"
 									runat="server"></asp:Image></TD>
 							<TD>
 								<asp:CheckBox id="chkSelected" Width="20px" CssClass="standard-text" runat="server" ForeColor="White"></asp:CheckBox></TD>
@@ -119,36 +121,36 @@
 								<asp:Label id=lblPrioridad Text='<%# DataBinder.Eval(Container, "DataItem.Prioridad") %>' Width="23px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD>
-								<asp:Label id=lblFecha Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Fecha") %>' Width="60px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblFecha Text='<%#DataBinder.Eval(Container, "DataItem.Fecha") %>' Width="60px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD>
-								<asp:Label id=lblKct Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.KCT") %>' Width="30px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblKct Text='<%#DataBinder.Eval(Container, "DataItem.KCT") %>' Width="30px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD>
-								<asp:Label id=lblLinea Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdLinea") %>' Width="30px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblLinea Text='<%#DataBinder.Eval(Container, "DataItem.IdLinea") %>' Width="30px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD>
-								<asp:Label id=lblSecuencia Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Secuencia") %>' Width="70px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblSecuencia Text='<%#DataBinder.Eval(Container, "DataItem.Secuencia") %>' Width="70px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD>
-								<asp:Label id=lblCorrida Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Corrida") %>' Width="40px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblCorrida Text='<%#DataBinder.Eval(Container, "DataItem.Corrida") %>' Width="40px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD>
-								<asp:Label id=lblLote Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.NumeroLote") %>' Width="25px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblLote Text='<%#DataBinder.Eval(Container, "DataItem.NumeroLote") %>' Width="25px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD align="right">
-								<asp:Label id=lblCantidad Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Cantidad") %>' Width="30px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblCantidad Text='<%#DataBinder.Eval(Container, "DataItem.Cantidad") %>' Width="30px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD>
-								<asp:Label id=lblMaterial Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.CodigoSAP") %>' Width="60px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblMaterial Text='<%#DataBinder.Eval(Container, "DataItem.CodigoSAP") %>' Width="60px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD>
-								<asp:Label id=lblDescripcion Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.MaterialDesc") %>' Width="230px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblDescripcion Text='<%#DataBinder.Eval(Container, "DataItem.MaterialDesc") %>' Width="230px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 							<TD>
-								<asp:Label id=lblStatus Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdStatus") %>' Width="60px" CssClass="standard-text" runat="server" Visible="False">
+								<asp:Label id=lblStatus Text='<%#DataBinder.Eval(Container, "DataItem.IdStatus") %>' Width="60px" CssClass="standard-text" runat="server" Visible="False">
 								</asp:Label>
-								<asp:Label id=lblStatusDesc Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.StatusDesc") %>' Width="60px" CssClass="standard-text" runat="server">
+								<asp:Label id=lblStatusDesc Text='<%#DataBinder.Eval(Container, "DataItem.StatusDesc") %>' Width="60px" CssClass="standard-text" runat="server">
 								</asp:Label></TD>
 						</TR>
 					</TABLE>
@@ -180,27 +182,27 @@
 									</TR>
 									<TR>
 										<TD>
-											<asp:Label id=lblOrden Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.NoOrden") %>' Width="40px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblOrden Text='<%#DataBinder.Eval(Container, "DataItem.NoOrden") %>' Width="40px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 										<TD>
-											<asp:Label id=lblPedido Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Pedido") %>' Width="70px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblPedido Text='<%#DataBinder.Eval(Container, "DataItem.Pedido") %>' Width="70px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 										<TD align="left">
-											<asp:Label id=lblLoteInsp Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.LoteInspeccion") %>' Width="70px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblLoteInsp Text='<%#DataBinder.Eval(Container, "DataItem.LoteInspeccion") %>' Width="70px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 										<TD align="right">
-											<asp:Label id=lblRendimiento Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Rendimiento") %>' Width="40px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblRendimiento Text='<%#DataBinder.Eval(Container, "DataItem.Rendimiento") %>' Width="40px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 										<TD>
-											<asp:Label id=lblCliente Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Cliente") %>' Width="150px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblCliente Text='<%#DataBinder.Eval(Container, "DataItem.Cliente") %>' Width="150px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 										<TD>
-											<asp:Label id=lblFechaEmb Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.FechaEmbarque") %>' Width="100px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblFechaEmb Text='<%#DataBinder.Eval(Container, "DataItem.FechaEmbarque") %>' Width="100px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 										<TD>
-											<asp:Label id=lblArea Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdArea") %>' Width="150px" CssClass="standard-text" runat="server" Visible="False">
+											<asp:Label id=lblArea Text='<%#DataBinder.Eval(Container, "DataItem.IdArea") %>' Width="150px" CssClass="standard-text" runat="server" Visible="False">
 											</asp:Label>
-											<asp:Label id=lblAreaDesc Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.AreaDesc") %>' Width="150px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblAreaDesc Text='<%#DataBinder.Eval(Container, "DataItem.AreaDesc") %>' Width="150px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 									</TR>
 								</TABLE>
@@ -225,13 +227,13 @@
 									</TR>
 									<TR>
 										<TD>
-											<asp:Label id=lblTipoMolde Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.TipoMolde") %>' Width="100px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblTipoMolde Text='<%#DataBinder.Eval(Container, "DataItem.TipoMolde") %>' Width="100px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 										<TD>
-											<asp:Label id=lblDetalleOp Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.DetalleOperacion") %>' Width="330px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblDetalleOp Text='<%#DataBinder.Eval(Container, "DataItem.DetalleOperacion") %>' Width="330px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 										<TD align="left">
-											<asp:Label id=lblComentarios Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Comentarios") %>' Width="255px" CssClass="standard-text" runat="server">
+											<asp:Label id=lblComentarios Text='<%#DataBinder.Eval(Container, "DataItem.Comentarios") %>' Width="255px" CssClass="standard-text" runat="server">
 											</asp:Label></TD>
 									</TR>
 								</TABLE>

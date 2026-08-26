@@ -1,17 +1,37 @@
 ﻿<%@ Control Language="c#" AutoEventWireup="false" Codebehind="FormAditivosGrid.ascx.cs" Inherits="UserInterface.Controls.FormAditivosGrid" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <script language="javascript">
-function ConfirmOperation(Button,strOperationType)
-{
-	if (confirm("Esta seguro que desea "+strOperationType+" este registro?")) 
-	{
-		Button.click()
-	}
-}
+    function ConfirmOperation(Button, strOperationType) {
+        if (Button._sicalConfirmado) {
+            Button._sicalConfirmado = false;
+            return true;
+        }
+
+        SicalAlert.confirmar(
+            "¿Está seguro que desea " +
+            strOperationType +
+            " este registro?",
+            "Confirmar operación",
+            function () {
+
+                Button._sicalConfirmado = true;
+                Button.click();
+
+            }
+        );
+
+        return false;
+    }
 </script>
-<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
-<P class="contenido" align="left"><asp:datagrid id="dgdFormAditivos" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
-		PageSize="10" AllowPaging="True" Width="650px" runat="server" Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
-		Font-Name="Verdana" FontSize="11px" AllowSorting="True" BorderColor="White" BorderStyle="None" ItemStyle-Wrap="True" OnItemDataBound="dgdFormAditivos_OnItemDataBound">
+
+<P class="contenido" align="left">
+	<asp:datagrid id="dgdFormAditivos" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
+		PageSize="10" AllowPaging="True" Width="650px" runat="server" 
+		Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
+		Font-Name="Verdana" FontSize="11px" AllowSorting="True" 
+		BorderColor="White" BorderStyle="None" 
+		ItemStyle-Wrap="True" 
+		OnItemDataBound="dgdFormAditivos_OnItemDataBound"
+		CssClass="GridView grid-users">
 		<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 		<Columns>
 			<asp:TemplateColumn HeaderText="Material">
@@ -41,11 +61,11 @@ function ConfirmOperation(Button,strOperationType)
 					VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="100px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemPorcentaje Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.PorcentajePeso") %>' CssClass="standard-text">
+					<asp:label id=ItemPorcentaje Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.PorcentajePeso") %>' CssClass="standard-text">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:textbox id=EditPorcentaje BorderStyle="Groove" runat="server" Width="100" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.PorcentajePeso") %>' CssClass="Standard-text" MaxLength="50">
+					<asp:textbox id=EditPorcentaje BorderStyle="Groove" runat="server" Width="100" Text='<%# DataBinder.Eval(Container, "DataItem.PorcentajePeso") %>' CssClass="Standard-text" MaxLength="50">
 					</asp:textbox>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -54,11 +74,11 @@ function ConfirmOperation(Button,strOperationType)
 					VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="100px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
-					<asp:label id=ItemVersion Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Version") %>' CssClass="standard-text">
+					<asp:label id=ItemVersion Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Version") %>' CssClass="standard-text">
 					</asp:label>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:label id=EditVersion Runat="server" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Version") %>' CssClass="standard-text">
+					<asp:label id=EditVersion Runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Version") %>' CssClass="standard-text">
 					</asp:label>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
@@ -97,18 +117,22 @@ function ConfirmOperation(Button,strOperationType)
 				<ItemTemplate>
 					<asp:imagebutton id="imgEdit" runat="server" AlternateText="Edit" CommandName="Edit" NAME="imgEdit"
 						ImageUrl="../images/icon-pencil.gif" CausesValidation="false"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
-					<asp:imagebutton id="imgDelete" onmouseup="ConfirmOperation(this,'eliminar');" AlternateText="Delete"
+					<asp:imagebutton id="imgDelete" OnClientClick="return ConfirmOperation(this,'eliminar');" AlternateText="Delete"
 						CommandName="Delete" NAME="imgDelete" ImageUrl="../images/icon-delete.gif" CausesValidation="False"
 						Runat="server"></asp:imagebutton>
 				</ItemTemplate>
 				<EditItemTemplate>
-					<asp:imagebutton id="imgUpdate" onmouseup="ConfirmOperation(this,'actualizar');" runat="server" AlternateText="Update"
+					<asp:imagebutton id="imgUpdate" OnClientClick="return ConfirmOperation(this,'actualizar');" runat="server" AlternateText="Update"
 						CommandName="Update" NAME="imgUpdate" ImageUrl="../images/icon-floppy.gif" CausesValidation="False"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
 					<asp:imagebutton id="imgCancel" runat="server" AlternateText="Cancel" CommandName="Cancel" NAME="imgCancel"
 						ImageUrl="../images/icon-pencil-x.gif" CausesValidation="False"></asp:imagebutton>
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 		</Columns>
-		<PagerStyle HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
+		<PagerStyle
+		HorizontalAlign="Center"
+		Mode="NumericPages"
+		CssClass="grid-pager">
+		</PagerStyle>
 	</asp:datagrid></P>
 <P class="contenido" align="left"><asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label></P>

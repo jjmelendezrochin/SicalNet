@@ -27,9 +27,9 @@
 </ItemStyle>
 
 <ItemTemplate>
-<asp:label id=lblCharCancel Width="130px" Visible="true" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Characteristic") %>'></asp:label>
-<asp:label id=lblEqualCancel Width="130px" Visible="true" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Equal") %>'></asp:label>
-<asp:label id=lblIdEqual Width="130px" Visible="true" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdEqual") %>'></asp:label>
+<asp:label id=lblCharCancel Width="130px" Visible="true" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Characteristic") %>'></asp:label>
+<asp:label id=lblEqualCancel Width="130px" Visible="true" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Equal") %>'></asp:label>
+<asp:label id=lblIdEqual Width="130px" Visible="true" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.IdEqual") %>'></asp:label>
 </ItemTemplate>
 
 <FooterStyle HorizontalAlign="Right">
@@ -43,7 +43,7 @@
 </ItemStyle>
 
 <ItemTemplate>
-<asp:label id=lblChar Width="130px" Visible="true" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Characteristic") %>'></asp:label>
+<asp:label id=lblChar Width="130px" Visible="true" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Characteristic") %>'></asp:label>
 </ItemTemplate>
 
 <FooterStyle HorizontalAlign="Right">
@@ -65,7 +65,7 @@
 </ItemStyle>
 
 <ItemTemplate>
-<asp:label id=lblEqual Width="130px" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Equal") %>'></asp:label>
+<asp:label id=lblEqual Width="130px" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Equal") %>'></asp:label>
 </ItemTemplate>
 
 <FooterStyle HorizontalAlign="Left">
@@ -89,7 +89,7 @@
 
 <ItemTemplate>
 <asp:imagebutton id=imgEdit runat="server" CommandName="Edit" CausesValidation="false" AlternateText="Edit" NAME="imgEdit" ImageUrl="../../images/icon-pencil.gif"></asp:imagebutton><IMG src="images/spacer.gif" width=3> 
-<asp:imagebutton onmouseup="ConfirmOperation(this,'eliminar');" id=imgDelete Runat="server" CommandName="Delete" CausesValidation="False" AlternateText="Delete" NAME="imgDelete" ImageUrl="../../images/icon-delete.gif"></asp:imagebutton>
+<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id=imgDelete Runat="server" CommandName="Delete" CausesValidation="False" AlternateText="Delete" NAME="imgDelete" ImageUrl="../../images/icon-delete.gif"></asp:imagebutton>
 </ItemTemplate>
 
 <EditItemTemplate>
@@ -126,7 +126,7 @@
 </ItemStyle>
 
 <ItemTemplate>
-<asp:label id=lblCodigo Width="50px" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.CodigoSAP") %>'></asp:label>
+<asp:label id=lblCodigo Width="50px" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.CodigoSAP") %>'></asp:label>
 </ItemTemplate>
 </asp:TemplateColumn>
 <asp:TemplateColumn HeaderText="Descripcion">
@@ -137,7 +137,7 @@
 </ItemStyle>
 
 <ItemTemplate>
-<asp:label id=lblDesc Width="250px" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>'></asp:label>
+<asp:label id=lblDesc Width="250px" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.Descripcion") %>'></asp:label>
 </ItemTemplate>
 </asp:TemplateColumn>
 <asp:TemplateColumn HeaderText="Estado Producto">
@@ -148,7 +148,7 @@
 </ItemStyle>
 
 <ItemTemplate>
-<asp:label id=lblEstadoProductoDesc Width="80px" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.EstadoProductoDesc") %>'></asp:label>
+<asp:label id=lblEstadoProductoDesc Width="80px" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.EstadoProductoDesc") %>'></asp:label>
 </ItemTemplate>
 </asp:TemplateColumn>
 <asp:TemplateColumn HeaderText="Estado Material">
@@ -159,8 +159,8 @@
 </ItemStyle>
 
 <ItemTemplate>
-<asp:label id=lblIdEstadoMaterial Width="80px" Visible="False" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.IdEstadoMaterial") %>'></asp:label>
-<asp:label id=lblEstadoMaterialDesc Width="80px" Runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.EstadoMaterialDesc") %>'></asp:label>
+<asp:label id=lblIdEstadoMaterial Width="80px" Visible="False" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.IdEstadoMaterial") %>'></asp:label>
+<asp:label id=lblEstadoMaterialDesc Width="80px" Runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.EstadoMaterialDesc") %>'></asp:label>
 </ItemTemplate>
 </asp:TemplateColumn>
 </Columns>

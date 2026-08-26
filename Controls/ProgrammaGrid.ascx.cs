@@ -731,7 +731,7 @@ namespace UserInterface.Controls
 			if(NotEmpty())
 			{
 				int IdLinea =Int32.Parse(ddlIdLinea.SelectedItem.Value);
-				string Fecha = DateTime.Parse(txtFecha.Text).ToString("dd/MMM/yyyy");
+				string Fecha = DateTime.Parse(txtFecha.Text).ToString("dd/MMM/yyyy").Replace(".","");
 				PrepareReport(Fecha,IdLinea);
 			}
 		}
@@ -1036,6 +1036,10 @@ namespace UserInterface.Controls
 		{
 		
 		}
-	
-	}
+
+        protected void cmdprint_Click1(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

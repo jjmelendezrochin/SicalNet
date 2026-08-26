@@ -631,6 +631,18 @@
       <DependentUpon>ConsultReactionWO1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorWOReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\PrintStickerAdditovesS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintStickerAdditovesS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Helpers\Funciones.cs" />
     <Compile Include="Helpers\Mensajes.cs" />
     <Compile Include="MenuData.aspx.cs">
@@ -842,12 +854,6 @@
     <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.aspx.cs">
       <DependentUpon>ColorWOReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ColorWOReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReportBySequence.cs">
       <AutoGen>True</AutoGen>
@@ -1575,6 +1581,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ColorAditivesWOCardReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.aspx.resx">
+      <DependentUpon>ColorWOReport.aspx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ColorWOReport.cs</LastGenOutput>
@@ -1757,6 +1766,10 @@
     <EmbeddedResource Include="Forms\Reports\PrintStickerAdditoves.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PrintStickerAdditoves.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\PrintStickerAdditovesS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintStickerAdditovesS.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reports\PrintStickerColor.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

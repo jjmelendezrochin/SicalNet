@@ -1,4 +1,4 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿
 <%@ Page language="c#" Codebehind="UnLiberer.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.UnLiberer" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
@@ -8,27 +8,49 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
-  </HEAD>
-  <script language="JavaScript">  
-		function ShowTitle()
-	{
-		window.frames["top"].document.title = "SICAL  - Logística - Reactivar Secuencia"
-	}
-	</script>
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+	  <script language="JavaScript">  
+			function ShowTitle()
+		{
+			window.frames["top"].document.title = "SICAL  - Logística - Reactivar Secuencia"
+		}
+		</script>
+	    <script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+	    </script>
+	    <style type="text/css">
+            .auto-style1 {
+                height: 65px;
+            }
+        </style>
+	  </HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="UnLiberer" method="post" runat="server">
-			<table align="center" style="BORDER-COLLAPSE: collapse">
+			<table align="center" style="BORDER-COLLAPSE: collapse" class="auto-style1">
 				<tr>
-					<td align="left" colSpan="5" bgColor="#003366">
-						<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+					<td align="left" colSpan="5">
+						<div id="sicalMenu"></div>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2" align="middle"><br>
-						<asp:Label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14"> Reactivar secuencia</asp:Label><hr>
+					<td align="center" colspan="2"><br />
+						<asp:Label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14">
+							Reactivar secuencia
+						</asp:Label>
 					</td>
 				</tr>
+			</table>
+			<br />			
+			<table width="700" align="center" style="BORDER-COLLAPSE: collapse">
 				<TR>
 					<TD colspan="2">
 						<asp:label id="Label2" runat="server" Width="700px" CssClass="standard-text">Proporcione el número de secuencia que desea reactivar, y posteriormente seleccione las áreas en donde desea que sea reactivada la secuencia proporcionada.</asp:label></TD>

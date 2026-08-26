@@ -36,13 +36,13 @@
 				Width="216px" CssClass="standard-text"></asp:ValidationSummary>
 			<asp:Label id="lblcaption" style="Z-INDEX: 122; LEFT: 194px; POSITION: absolute; TOP: 21px"
 				Runat="server" Font-Bold="True" Font-Size="Larger" CssClass="standard-text"> Reporte Fase de Llenado</asp:Label>
-			<asp:image onmouseup="GetDate('TxtPrograma2');" id="imgProgrammaFinal" style="Z-INDEX: 119; LEFT: 456px; POSITION: absolute; TOP: 170px"
+			<asp:image OnClientClick="return GetDate('TxtPrograma2');" id="imgProgrammaFinal" style="Z-INDEX: 119; LEFT: 456px; POSITION: absolute; TOP: 170px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
-			<asp:image onmouseup="GetDate('TxtLieracion2');" id="imgLieractionFinal" style="Z-INDEX: 118; LEFT: 624px; POSITION: absolute; TOP: 168px"
+			<asp:image OnClientClick="return GetDate('TxtLieracion2');" id="imgLieractionFinal" style="Z-INDEX: 118; LEFT: 624px; POSITION: absolute; TOP: 168px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
-			<asp:image onmouseup="GetDate('TxtLieracion1');" id="imgLieractionInitial" style="Z-INDEX: 117; LEFT: 624px; POSITION: absolute; TOP: 91px"
+			<asp:image OnClientClick="return GetDate('TxtLieracion1');" id="imgLieractionInitial" style="Z-INDEX: 117; LEFT: 624px; POSITION: absolute; TOP: 91px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
-			<asp:image onmouseup="GetDate('TxtPrograma1');" id="imgProgrammaInitial" style="Z-INDEX: 116; LEFT: 456px; POSITION: absolute; TOP: 91px"
+			<asp:image OnClientClick="return GetDate('TxtPrograma1');" id="imgProgrammaInitial" style="Z-INDEX: 116; LEFT: 456px; POSITION: absolute; TOP: 91px"
 				Runat="server" ImageUrl="../../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:image>
 			<asp:Label id="LblSequencia2" style="Z-INDEX: 107; LEFT: 178px; POSITION: absolute; TOP: 139px"
 				Runat="server" CssClass="standard-text">Secuencia Final</asp:Label>

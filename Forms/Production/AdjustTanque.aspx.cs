@@ -53,7 +53,24 @@ namespace UserInterface.Forms.Production
 			{
 				if(!IsPostBack)
 				{
-					btnAceptar.Attributes.Add("onclick","return confirm('¿Esta seguro de hacer este ajuste al tanque?')");
+					btnAceptar.Attributes.Add(
+					   "onclick",
+					   "if (this.getAttribute('data-confirmado') == '1') {" +
+						   "this.setAttribute('data-confirmado', '0');" +
+						   "return true;" +
+					   "}" +
+					   "var boton=this;" +
+					   "SicalAlert.confirmar(" +
+						   "'¿Está seguro de hacer este ajuste al tanque?', " +
+						   "'Confirmar ajuste', " +
+						   "function() {" +
+							   "boton.setAttribute('data-confirmado','1');" +
+							   "boton.click();" +
+						   "}" +
+					   ");" +
+					   "return false;"
+				   );
+
 					BindGrid();
 				}
 			}

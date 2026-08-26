@@ -1,5 +1,4 @@
 ﻿<%@ Page language="c#" Codebehind="ConsultRecepcionPT.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.PartidasRecepcionPT.ConsultRecepcionPT" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../../../Controls/mainMenu.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -9,7 +8,13 @@
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
-		<LINK href="..\..\..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{   
@@ -49,14 +54,21 @@
 					window.frames["top"].document.title = "SICAL  - Ordenes de Trabajo - Fase de Recepción de Producto Terminado"
 			}   
 		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<form id="ConsultRecepcionPT" method="post" runat="server">
 			<table width="700" align="center" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
-						<td align="left" colSpan="4" bgColor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td align="left" colSpan="4">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>
@@ -72,10 +84,12 @@
 						<td><asp:label id="Label1" Runat="server" Text="Línea de Producción" CssClass="standard-text">Línea de Producción</asp:label></td>
 					</tr>
 					<tr>
-						<td><asp:textbox id="txtInitial" Runat="server" BorderStyle="Groove" CssClass="Standard-text" MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtInitial');" id="imgInitial" Runat="server" AlternateText="Inicial Date"
-								ImageUrl="../../../../Images/icon-calendar.gif"></asp:image></td>
-						<td><asp:textbox id="txtFinal" Runat="server" BorderStyle="Groove" CssClass="Standard-text" MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtFinal');" id="imgFinal" Runat="server" AlternateText="Final Date"
-								ImageUrl="../../../../Images/icon-calendar.gif"></asp:image></td>
+						<td><asp:textbox id="txtInitial" Width="99px" Runat="server" BorderStyle="Groove" CssClass="Standard-text" MaxLength="11"></asp:textbox>
+							<asp:imagebutton OnClientClick="return GetDate('txtInitial');" id="imgInitial" Runat="server" AlternateText="Inicial Date"
+								ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
+						<td><asp:textbox id="txtFinal" Width="99px" Runat="server" BorderStyle="Groove" CssClass="Standard-text" MaxLength="11"></asp:textbox>
+							<asp:imagebutton OnClientClick="return GetDate('txtFinal');" id="imgFinal" Runat="server" AlternateText="Final Date"
+								ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboStatus" Runat="server" CssClass="Standard-text" Width="100px"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboLinea" Runat="server" CssClass="Standard-text" Width="100px"></asp:dropdownlist></td>
 					</tr>
@@ -120,7 +134,7 @@
 											<TD class="grid-header" width="12">
 												<asp:label id="sp" Runat="server" Width="13px"></asp:label></TD>
 											<TD class="grid-header">
-												<asp:CheckBox id="chkAllCheck" onmouseup="CheckAllDataGridCheckBoxes()" Runat="server"></asp:CheckBox></TD>
+												<asp:CheckBox id="chkAllCheck" OnClientClick="return CheckAllDataGridCheckBoxes()" Runat="server"></asp:CheckBox></TD>
 											<TD class="grid-header" align="left"><B>
 													<asp:label id="Label8" Runat="server" Width="25px">P</asp:label></B></TD>
 											<TD class="grid-header" align="left"><B>
@@ -149,7 +163,7 @@
 									<TABLE style="BORDER-COLLAPSE: collapse" border="1">
 										<TR>
 											<TD align="middle" height="0px">
-												<asp:image onmouseup="ShowHide(this.id)" id="Plus" style="CURSOR: hand" Runat="server" ImageUrl="../../../../Images/plusButton.JPG"
+												<asp:image OnClientClick="return ShowHide(this.id)" id="Plus" style="CURSOR: hand" Runat="server" ImageUrl="../../../../Images/plusButton.JPG"
 													Visible="False"></asp:image>
 												<asp:label id="spacer" Runat="server" CssClass="standard-text" Width="9px"></asp:label></TD>
 											<TD align="middle">

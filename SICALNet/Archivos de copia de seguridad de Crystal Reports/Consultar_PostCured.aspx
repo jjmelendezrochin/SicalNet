@@ -1,5 +1,4 @@
 ﻿<%@ Page language="c#" Codebehind="Consultar_PostCured.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.Work_Order.Post_Cured.Consultar_PostCured" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../../../Controls/mainMenu.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -9,7 +8,13 @@
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
-		<LINK href="..\..\..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{   
@@ -18,8 +23,14 @@
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Post Curado"
-			}			
-			
+			}						
+		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
 		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
@@ -27,8 +38,8 @@
 			<table align="center" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
-						<td align="left" colSpan="5" bgColor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>
@@ -44,11 +55,13 @@
 						<td><asp:Label ID="Status" Text="Status" Runat="server" CssClass="standard-text">Status</asp:Label></td>
 					<tr>
 						<td><asp:textbox id="txtFecha" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
-								MaxLength="11"></asp:textbox><asp:image id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Inicial Date"
-								onmouseup="GetDate('txtFecha');"></asp:image></td>
+								MaxLength="11"></asp:textbox>
+							<asp:imagebutton id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Inicial Date"
+								OnClientClick="return GetDate('txtFecha');"></asp:imagebutton></td>
 						<td><asp:textbox id="txtFechaFinal" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
-								MaxLength="11"></asp:textbox><asp:image id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Final Date"
-								onmouseup="GetDate('txtFechaFinal');"></asp:image></td>
+								MaxLength="11"></asp:textbox>
+							<asp:imagebutton id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Final Date"
+								OnClientClick="return GetDate('txtFechaFinal');"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboLinea" Runat="server" CssClass="Standard-text"></asp:dropdownlist></td>
 						<td><asp:DropDownList ID="cboStatus" Runat="server" CssClass="Standard-text"></asp:DropDownList></td>
 						<td><asp:Button ID="btnSel" Runat="server" Text="Aceptar" CssClass="botonesInput"></asp:Button></td>

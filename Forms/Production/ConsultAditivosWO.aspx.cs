@@ -954,11 +954,8 @@ namespace UserInterface.Forms.Production
 				}
 				if(i==0)
 				{
-					// throw new Exception("Seleccione alguna(s) secuencia(s) para generar el reporte");
-					
-					Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-						"alert('"+"Seleccione alguna(s) secuencia(s) para generar el reporte"+"');</script>");
-
+					MostrarAlerta("Seleccione alguna(s) secuencia(s) para generar el reporte");
+				
 					return;
 				}
 				/*** modificado por alejandro.hernandez@nasoft.com 22022006 ***/
@@ -1665,11 +1662,8 @@ namespace UserInterface.Forms.Production
 					}
 				}
 				if(i==0)
-				{
-					// throw new Exception(" Select Secuencias to generate report");
-
-					Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-						"alert('"+"Seleccione alguna(s) secuencia(s) para generar el reporte"+"');</script>");
+				{					
+					MostrarAlerta("Seleccione alguna(s) secuencia(s) para generar el reporte");
 
 					return;
 				}
@@ -1722,23 +1716,17 @@ namespace UserInterface.Forms.Production
 				Reports.ReportHelper rptHelper = new Reports.ReportHelper();
 				Production.AditivosWORpt reporte = new Production.AditivosWORpt();
 
+				
 				ParameterValues campoFecha= new ParameterValues();
 				ParameterDiscreteValue valorFecha= new ParameterDiscreteValue();
 				valorFecha.Value=string.Format("{0} al {1}",fechaInicial,fechaFinal);
 				campoFecha.Add(valorFecha);
 				
 				reporte.DataDefinition.ParameterFields["Fecha"].ApplyCurrentValues(campoFecha);
+				
 
 				string	SelectionStr="";
-				/*
-				if(linea!=0)
-					SelectionStr= "{ProgramaProduccion.IdLinea}="+linea.ToString()+" AND ";
-				if(status!=0)
-					SelectionStr+= "{OrdenesTrabajo.IdStatus}="+ status.ToString() +" AND ";
-
-				SelectionStr+="{ProgramaProduccion.Fecha}>=Date("+DateTime.Parse(fechaInicial).ToString("yyyy")+","+DateTime.Parse(fechaInicial).ToString("MM")+","+DateTime.Parse(fechaInicial).ToString("dd")+")";
-				SelectionStr+=" AND {ProgramaProduccion.Fecha}<=Date("+DateTime.Parse(fechaFinal).ToString("yyyy")+","+DateTime.Parse(fechaFinal).ToString("MM")+","+DateTime.Parse(fechaFinal).ToString("dd")+")";
-				*/
+				
 				SelectionStr+=secuencias + " AND {OrdenesTrabajo.IdArea}=2";
 
 				reporte.DataDefinition.RecordSelectionFormula=SelectionStr;
@@ -1803,9 +1791,12 @@ namespace UserInterface.Forms.Production
 		
 			try
 			{
+				UserInterface.Helpers.Funciones fn = new UserInterface.Helpers.Funciones();				
+
 				Reports.ReportHelper rptHelper = new Reports.ReportHelper();
 				Reports.PrintStickerAdditoves AdiSticker = new Reports.PrintStickerAdditoves();
-				//Reports.PrintStickerAdditoves1 AdiSticker  = new Reports.PrintStickerAdditoves1();
+				fechaInicial = fn.ConvertirFechaMesNumero(fechaInicial);
+				fechaFinal = fn.ConvertirFechaMesNumero(fechaFinal);
 
 				string	SelectionStr="";
 				if(linea!=0)
@@ -1882,12 +1873,9 @@ namespace UserInterface.Forms.Production
 				}
 				
 				if(i==0)
-				{
-					// throw new Exception(" Select Secuencias to generate report");
-
-					Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-						"alert('Seleccione una secuencia para generar una tarjeta');</script>");
-
+				{					
+					MostrarAlerta("Seleccione una secuencia para generar una tarjeta");
+					
 					return;
 				}
 
@@ -2102,10 +2090,7 @@ namespace UserInterface.Forms.Production
 				
 				if(i==0)
 				{
-					// throw new Exception(" Select Secuencias to generate report");
-
-					Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-						"alert('Seleccione una secuencia para generar una tarjeta');</script>");
+					MostrarAlerta("Seleccione una secuencia para generar una tarjeta");
 
 					return;
 				}
@@ -2325,6 +2310,18 @@ namespace UserInterface.Forms.Production
 				}
 			}
 		}
+
+		private void MostrarAlerta(string mensaje)
+		{
+			ClientScript.RegisterStartupScript(
+				this.GetType(),
+				"SicalAlerta",
+				"SicalAlert.mostrar('" + mensaje.Replace("\\", "\\\\").Replace("'", "\\'") + "');",
+				true
+			);
+		}
+
+
 
 	}
 }

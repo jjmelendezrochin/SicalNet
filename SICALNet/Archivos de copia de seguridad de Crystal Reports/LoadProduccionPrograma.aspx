@@ -1,5 +1,4 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
-<%@ Page language="c#" Codebehind="LoadProduccionPrograma.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Logistics.LoadProduccionPrograma" %>
+﻿<%@ Page language="c#" Codebehind="LoadProduccionPrograma.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Logistics.LoadProduccionPrograma" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -8,7 +7,14 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+
 		<script language="JavaScript">
 			function showWaitControls()
 			{
@@ -53,6 +59,13 @@
 				}
 				return true;
 			}
+        </script>
+		<script type="text/javascript">document.addEventListener(
+			"DOMContentLoaded",
+			function () {
+				SicalMenu.init("sicalMenu");
+}
+			);
 		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
@@ -61,14 +74,20 @@
 			<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
 				<TBODY>
 					<tr>
-						<td align="left" bgColor="#003366" colSpan="5"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td align="center" colSpan="3"><br>
-							<asp:label id="Label1" runat="server" Font-Size="14" Font-Bold="True" Font-Names="Arial Narrow"> Cargar Programa de Producción</asp:label>
-							<hr>
+							<asp:label id="Label1" runat="server" Font-Size="14" Font-Bold="True" Font-Names="Arial Narrow"> Cargar Programa de Producción</asp:label>							
 						</td>
 					</tr>
+				</TBODY>
+			</table>
+			<br />
+			<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
+				<TBODY>
 					<TR>
 						<TD align="center" colSpan="3"><asp:label id="Label2" runat="server" CssClass="standard-text">Proporcione el nombre del archivo en formato Excel (c) que contiene el programa de producción <br> y presione el botón "Cargar Programa" <br></asp:label></TD>
 					</TR>
@@ -97,8 +116,12 @@
 						<TD align="center" colSpan="3"><asp:label id="lblErrMsg" runat="server" Font-Size="X-Small" Font-Bold="True" CssClass="standard-text"></asp:label></TD>
 					<tr>
 						<TD colSpan="3">
-							<asp:datagrid id="dgdPrograma" runat="server" Height="61px" Width="700px" Visible="False" AutoGenerateColumns="False"
-								AlternatingItemStyle-BackColor="Honeydew">
+							<asp:datagrid id="dgdPrograma" runat="server" 
+								Height="61px" Width="700px" Visible="False" 
+								AutoGenerateColumns="False"
+								AlternatingItemStyle-BackColor="Honeydew"
+								CssClass="GridView grid-header">
+
 								<AlternatingItemStyle BackColor="Honeydew"></AlternatingItemStyle>
 								<ItemStyle Height="40px"></ItemStyle>
 								<HeaderStyle Font-Bold="True" Height="50px" ForeColor="Blue" CssClass="grid-header" BackColor="GhostWhite"></HeaderStyle>
@@ -136,6 +159,12 @@
 										<FooterStyle HorizontalAlign="Center"></FooterStyle>
 									</asp:TemplateColumn>
 								</Columns>
+								<PagerStyle
+									HorizontalAlign="Center"
+									Mode="NumericPages"
+									CssClass="grid-pager">
+								</PagerStyle>
+
 							</asp:datagrid>
 						</TD>
 					</tr>

@@ -34,6 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>0618, 0612</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -135,7 +136,6 @@
     <Content Include="Controls\LineaGrid.ascx" />
     <Content Include="Controls\ListofMaterialGrid.ascx" />
     <Content Include="Controls\LotesGrid.ascx" />
-    <Content Include="Controls\mainMenu.ascx" />
     <Content Include="Controls\MaterialGrid.ascx" />
     <Content Include="Controls\MedidaGrid.ascx" />
     <Content Include="Controls\OllaGrid.ascx" />
@@ -154,6 +154,12 @@
     <Content Include="Controls\WebUserControl1.ascx" />
     <Content Include="Controls\WorkOrdersGrid.ascx" />
     <Content Include="Controls\Zonas.ascx" />
+    <Content Include="Forms\Production\ConsultReactionWO1.aspx" />
+    <Content Include="Forms\Structures\imagenes\ico-bullet.gif" />
+    <Content Include="Forms\Structures\imagenes\spacer.gif" />
+    <Content Include="Forms\Structures\images\ico-bullet.gif" />
+    <Content Include="Forms\Structures\images\spacer.gif" />
+    <Content Include="Scripts\sical-alertas.js" />
     <Content Include="Css\sical-menu.css" />
     <Content Include="CustomError\404Page.aspx" />
     <Content Include="CustomError\ErrorPage.aspx" />
@@ -164,10 +170,10 @@
     <Content Include="Forms\Administration\EditProfiles.aspx" />
     <Content Include="Forms\Administration\EditUsers.aspx" />
     <Content Include="Forms\Administration\Profiles.aspx" />
+    <Content Include="Forms\Administration\stcode.js" />
+    <Content Include="Forms\Administration\stmenu.js" />
     <Content Include="Forms\Administration\UnlockAccounts.aspx" />
     <Content Include="Forms\Administration\UsersList.aspx" />
-    <Content Include="Forms\ConsultPVCWO1.aspx" />
-    <Content Include="Forms\ConsultReactionWO1.aspx" />
     <Content Include="Forms\ErrorLog\Error05-03-04.txt" />
     <Content Include="Forms\ErrorLog\Error06-01-14.txt" />
     <Content Include="Forms\ErrorLog\Error07-01-04.txt" />
@@ -194,7 +200,8 @@
     <Content Include="Forms\Logistics\ProgrammaProduction.aspx" />
     <Content Include="Forms\Logistics\SecuenciasCombinadas.aspx" />
     <Content Include="Forms\Menu.aspx" />
-    <Content Include="Forms\MenuData.aspx" />
+    <Content Include="images\PG_Verzatec.png" />
+    <Content Include="MenuData.aspx" />
     <Content Include="Forms\NewMenu.aspx" />
     <Content Include="Forms\Production\AditivosCuantos.aspx" />
     <Content Include="Forms\Production\AditivosCuarto.aspx" />
@@ -263,6 +270,8 @@
     <Content Include="Forms\Reports\Report.aspx" />
     <Content Include="Forms\Reports\ReporteMotivosAjusteProgProd.aspx" />
     <Content Include="Forms\Reports\top.aspx" />
+    <Content Include="Forms\stcode.js" />
+    <Content Include="Forms\stmenu.js" />
     <Content Include="Forms\StructuresError.txt" />
     <Content Include="Forms\Structures\Aforo.aspx" />
     <Content Include="Forms\Structures\Anillos.aspx" />
@@ -381,7 +390,7 @@
     <Content Include="LogOut.aspx" />
     <Content Include="Menu.css" />
     <Content Include="Scripts\sical-menu.js" />
-    <Content Include="styloDESC.CSS" />
+    <Content Include="Css\nuevoestilo.css" />
     <Content Include="Test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -469,10 +478,6 @@
     </Compile>
     <Compile Include="Controls\LotesGrid.ascx.cs">
       <DependentUpon>LotesGrid.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\mainMenu.ascx.cs">
-      <DependentUpon>mainMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\MaterialGrid.ascx.cs">
@@ -590,14 +595,6 @@
       <DependentUpon>UsersList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\ConsultPVCWO1.aspx.cs">
-      <DependentUpon>ConsultPVCWO1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\ConsultReactionWO1.aspx.cs">
-      <DependentUpon>ConsultReactionWO1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Forms\Logistics\Confirmacion.aspx.cs">
       <DependentUpon>Confirmacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -630,11 +627,23 @@
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\MenuData.aspx.cs">
+    <Compile Include="Forms\Production\ConsultReactionWO1.aspx.cs">
+      <DependentUpon>ConsultReactionWO1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorWOReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\Funciones.cs" />
+    <Compile Include="Helpers\Mensajes.cs" />
+    <Compile Include="MenuData.aspx.cs">
       <DependentUpon>MenuData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\MenuData.aspx.designer.cs">
+    <Compile Include="MenuData.aspx.designer.cs">
       <DependentUpon>MenuData.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\NewMenu.aspx.cs">
@@ -839,12 +848,6 @@
     <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.aspx.cs">
       <DependentUpon>ColorWOReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ColorWOReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReportBySequence.cs">
       <AutoGen>True</AutoGen>
@@ -1425,7 +1428,7 @@
     <Content Include="images\menuSuperior\Thumbs.db" />
     <Content Include="images\imagenes.zip" />
     <Content Include="images\Thumbs.db" />
-    <Content Include="Forms\SICALNet.chm" />
+    <Content Include="SICALNet.chm" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1446,12 +1449,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomError\404Page.aspx.resx" />
     <EmbeddedResource Include="CustomError\ErrorPage.aspx.resx" />
-    <EmbeddedResource Include="Forms\ConsultPVCWO1.aspx.resx">
-      <DependentUpon>ConsultPVCWO1.aspx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ConsultReactionWO1.aspx.resx">
-      <DependentUpon>ConsultReactionWO1.aspx.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Production\AditivosConPolvoWORpt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>AditivosConPolvoWORpt.cs</LastGenOutput>
@@ -1533,6 +1530,9 @@
     <EmbeddedResource Include="Forms\Production\ConsultReactionWO.aspx.resx">
       <DependentUpon>ConsultReactionWO.aspx.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultReactionWO1.aspx.resx">
+      <DependentUpon>ConsultReactionWO1.aspx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Production\ConsultSeparacionWO.aspx.resx">
       <DependentUpon>ConsultSeparacionWO.aspx.cs</DependentUpon>
     </EmbeddedResource>
@@ -1574,6 +1574,9 @@
     <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ColorAditivesWOCardReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ColorAditivesWOCardReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.aspx.resx">
+      <DependentUpon>ColorWOReport.aspx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasColor\ColorWOReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

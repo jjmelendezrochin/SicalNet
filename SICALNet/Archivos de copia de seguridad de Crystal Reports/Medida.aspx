@@ -1,11 +1,16 @@
-<%@ Register TagPrefix="uc1" TagName="MedidaGrid" Src="../../Controls/MedidaGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿<%@ Register TagPrefix="uc1" TagName="MedidaGrid" Src="../../Controls/MedidaGrid.ascx" %>
 <%@ Page language="c#" Codebehind="Medida.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Structures.Medida" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="JavaScript">
 <!--
 <!--
@@ -26,7 +31,15 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Medidas"
 			}
 		</script>
-		<link href="../../styloDESC.CSS" rel="stylesheet" type="text/css">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0"
 		marginwidth="0" marginheight="0">
@@ -34,8 +47,8 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			<div align="center">
 				<table width="740" border="0" cellspacing="0" cellpadding="0">
 					<tr>
-						<td colspan="2" class="contenido" bgcolor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td colspan="2" class="contenido">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>
@@ -63,7 +76,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 								</tr>
 								<tr>
 									<td width="20" class="contenido" vAlign="top">
-										<TABLE class="tan-border" id="Table1" height="99" cellSpacing="12" cellPadding="0" width="171"
+										<TABLE  id="Table1" height="99" cellSpacing="12" cellPadding="0" width="171"
 											border="0">
 											<TR vAlign="top">
 												<TD class="letraAzulBold" height="13">Agregar una Medida</TD>
@@ -71,37 +84,38 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 											<TR>
 												<TD>
 													<asp:Label id="Label1" runat="server" CssClass="standard-text">Id medida:</asp:Label><br>
-													<asp:TextBox id="txtIdMedida" runat="server" CssClass="standard-text" Width="142px" Enabled="False"
+													<asp:TextBox id="txtIdMedida" runat="server" CssClass="standard-text" Width="100%" Enabled="False"
 														Visible="False"></asp:TextBox></TD>
 											</TR>
 											<TR>
 												<TD>
 													<asp:Label id="Label3" runat="server" CssClass="standard-text">Medida en Centímetros : </asp:Label><br>
-													<asp:TextBox id="txtCentimetros" runat="server" CssClass="standard-text" Width="142px" MaxLength="20"></asp:TextBox></TD>
+													<asp:TextBox id="txtCentimetros" runat="server" CssClass="standard-text" Width="100%" MaxLength="20"></asp:TextBox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD height="32">
 													<asp:Label id="Label4" runat="server" CssClass="standard-text">Medida en Pulgadas : </asp:Label><br>
-													<asp:TextBox id="txtPulgadas" runat="server" CssClass="standard-text" Width="142px" MaxLength="20"></asp:TextBox></TD>
+													<asp:TextBox id="txtPulgadas" runat="server" CssClass="standard-text" Width="100%" MaxLength="20"></asp:TextBox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD>
 													<asp:Label id="Label5" runat="server" CssClass="standard-text">Medida Nominal : </asp:Label><br>
-													<asp:TextBox id="txtNominal" runat="server" CssClass="standard-text" Width="142px" MaxLength="20"></asp:TextBox></TD>
+													<asp:TextBox id="txtNominal" runat="server" CssClass="standard-text" Width="100%" MaxLength="20"></asp:TextBox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD>
 													<asp:Label id="Label6" runat="server" CssClass="standard-text">Otra Medida : </asp:Label><br>
-													<asp:TextBox id="txtOtro" runat="server" CssClass="standard-text" Width="142px" MaxLength="20"></asp:TextBox></TD>
+													<asp:TextBox id="txtOtro" runat="server" CssClass="standard-text" Width="100%" MaxLength="20"></asp:TextBox></TD>
 											</TR>
 											<TR vAlign="top">
 												<TD>
 													<TABLE id="Table2" cellSpacing="0" cellPadding="0" border="0">
 														<TR>
-															<TD height="20">
-																<asp:button id="cmdAdd" runat="server" Width="64px" CssClass="botonesInput" Text="Agregar" CausesValidation="False"></asp:button></TD>
-															<TD height="20">
-																<asp:button id="cmdCancel" runat="server" Width="64px" CssClass="botonesInput" Text="Cancelar"
+															<TD height="20" width="40%">
+																<asp:button id="cmdAdd" runat="server" Width="80px" CssClass="botonesInput" Text="Agregar" CausesValidation="False"></asp:button></TD>
+															<TD height="20" width="20%"></TD>
+															<TD height="20"  width="40%">
+																<asp:button id="cmdCancel" runat="server" Width="80px" CssClass="botonesInput" Text="Cancelar"
 																	CausesValidation="False"></asp:button></TD>
 														</TR>
 														<tr>
@@ -117,10 +131,10 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 										<P class="contenido" align="left">
 										</P>
 										<P class="contenido" align="left">
-											<TABLE class="tan-border" id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171"
+											<TABLE  id="Table3" height="99" cellSpacing="12" cellPadding="0" width="400px"
 												border="0">
 												<TR vAlign="top">
-													<TD>
+													<TD style="padding-left:40px;">
 														<uc1:MedidaGrid id="dgMedida" runat="server"></uc1:MedidaGrid>
 													</TD>
 												</TR>

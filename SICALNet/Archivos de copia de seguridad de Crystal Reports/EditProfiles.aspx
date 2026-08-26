@@ -1,10 +1,14 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿
 <%@ Page language="c#" Codebehind="EditProfiles.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Administration.EditProfiles" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script language="JavaScript">
 <!--
 <!--
@@ -27,15 +31,27 @@ function CheckUnCheckAll(CtrlName)
 }
 //-->
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body>
 		<form id="ConsultColorWO" method="post" runat="server">
 			<table width="800" align="center" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
+						<td align="left" colSpan="4">
+							<div id="sicalMenu"></div>
+						</td>
+					</tr>
+					<tr>
 						<td align="center" colSpan="4" height="80"><br>
-							<asp:label id="lblTitle" runat="server" Font-Size="14" Font-Bold="True" Font-Names="Arial Narrow"> Cat�logo de Perfiles</asp:label>
+							<asp:label id="lblTitle" runat="server" Font-Size="14" Font-Bold="True" Font-Names="Arial Narrow"> Catálogo de Perfiles</asp:label>
 							<hr>
 						</td>
 					</tr>
@@ -68,22 +84,22 @@ function CheckUnCheckAll(CtrlName)
 					</tr>
 					<TR>
 						<TD width="20%" colSpan="4">
-							<TABLE style="BORDER-COLLAPSE: collapse" align="center">
+							<TABLE style="BORDER-COLLAPSE: collapse" align="center" CssClass="GridView">
 								<TR>
 									<TD align="center" height="102">
 										<asp:datalist id="lstAdminModules" runat="server" CssClass="grid-item" RepeatColumns="4" RepeatDirection="Horizontal">
 											<HeaderTemplate>
-												<TABLE>
+												<TABLE >
 													<TR>
 														<TD>
 															<asp:CheckBox id="checkAll" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">M�dulo de Administraci�n</B></TD>
+														<TD><B class="standard-text" style="color:white">Módulo de Administración</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
-											<ItemStyle Font-Size="2pt" CssClass="grid-first-item"></ItemStyle>
+											<ItemStyle Font-Size="2pt" CssClass="grid-item"></ItemStyle>
 											<ItemTemplate>
-												<TABLE>
+												<TABLE >
 													<TR>
 														<TD align="center">
 															<asp:CheckBox id="chkSelect" CssClass="standard-text" Width="30px" Runat="server"></asp:CheckBox></TD>
@@ -111,11 +127,11 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="Checkbox4" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">M�dulo de Log�stica</B></TD>
+														<TD><B class="standard-text" style="color:white">Módulo de Logística</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
-											<ItemStyle Font-Size="2pt" CssClass="grid-first-item"></ItemStyle>
+											<ItemStyle Font-Size="2pt" CssClass="grid-item"></ItemStyle>
 											<ItemTemplate>
 												<TABLE>
 													<TR>
@@ -145,11 +161,11 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="Checkbox3" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">M�dulo de Estructuras</B></TD>
+														<TD><B class="standard-text" style="color:white">Módulo de Estructuras</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
-											<ItemStyle Font-Size="2pt" CssClass="grid-first-item"></ItemStyle>
+											<ItemStyle Font-Size="2pt" CssClass="grid-item"></ItemStyle>
 											<ItemTemplate>
 												<TABLE>
 													<TR>
@@ -187,11 +203,11 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="Checkbox2" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">M�dulo de Cat�logos</B></TD>
+														<TD><B class="standard-text" style="color:white">Módulo de Catálogos</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
-											<ItemStyle Font-Size="2pt" CssClass="grid-first-item"></ItemStyle>
+											<ItemStyle Font-Size="2pt" CssClass="grid-item"></ItemStyle>
 											<ItemTemplate>
 												<TABLE>
 													<TR>
@@ -222,11 +238,11 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="Checkbox1" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">M�dulo de Producci�n</B></TD>
+														<TD><B class="standard-text" style="color:white">Módulo de Producción</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
-											<ItemStyle Font-Size="2pt" CssClass="grid-first-item"></ItemStyle>
+											<ItemStyle Font-Size="2pt" CssClass="grid-item"></ItemStyle>
 											<ItemTemplate>
 												<TABLE>
 													<TR>
@@ -256,11 +272,11 @@ function CheckUnCheckAll(CtrlName)
 													<TR>
 														<TD>
 															<asp:CheckBox id="chkAll" CssClass="standard-text" Runat="server"></asp:CheckBox></TD>
-														<TD><B class="standard-text" style="COLOR: white">M�dulo de Reportes</B></TD>
+														<TD><B class="standard-text" style="color:white">Módulo de Reportes</B></TD>
 													</TR>
 												</TABLE>
 											</HeaderTemplate>
-											<ItemStyle Font-Size="2pt" CssClass="grid-first-item"></ItemStyle>
+											<ItemStyle Font-Size="2pt" CssClass="grid-item"></ItemStyle>
 											<ItemTemplate>
 												<TABLE>
 													<TR>

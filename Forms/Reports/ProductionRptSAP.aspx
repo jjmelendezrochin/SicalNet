@@ -137,7 +137,7 @@
 				</tr>
 				<tr>
 					<td align="center" colspan="6">
-						<asp:button id="cmdImprimir" runat="server" Width="90px" Text="Imprimir" CssClass="botonesInput"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<asp:button id="cmdImprimir" runat="server" Width="90px" Text="Imprimir" CssClass="botonesInput" OnClick="cmdImprimir_Click1"></asp:button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<asp:button id="cmdCancelar" runat="server" Width="90px" Text="Cancelar" CssClass="botonesInput"></asp:button>
 					</td>
 				</tr>

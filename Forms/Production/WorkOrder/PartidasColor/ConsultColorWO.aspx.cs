@@ -67,6 +67,7 @@ namespace UserInterface.Forms.Production.ColorRoom
 		private const string PROC_CALCULOPMMA_TARJETAFORMULACION = "Proc_CalculoPmma";
 		protected System.Web.UI.WebControls.Literal ltrRefresh;
 		private const string PROC_ACTUALIZASUMACOMOLADITIVOS_TARJETAFORMULACION = "Proc_ActualizColorAditivos";
+		private UserInterface.Helpers.Funciones fn = new UserInterface.Helpers.Funciones();
 
 		private void Page_Load(object sender, System.EventArgs e)
 		{
@@ -321,11 +322,16 @@ namespace UserInterface.Forms.Production.ColorRoom
 					chkSeparate.Visible = false;
 					btnCard.Visible = false;
 					btnPreform.Visible=false;
-	
-					// throw new Exception("No se encontraron órdenes de trabajo para los valores solicitados...");
+											
+					string mensaje = "No se encontraron órdenes de trabajo para los valores solicitados.";
 
-					Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-						"alert('"+"No se encontraron órdenes de trabajo para los valores solicitados..."+"');</script>");
+					Page.RegisterStartupScript(
+						"alert",
+						"<script language='JavaScript'>" +
+						"SicalAlert.mostrar('" + mensaje + "', 'advertencia');" +
+						"</script>"
+					);
+
 				}
 			}
 			catch
@@ -981,12 +987,8 @@ namespace UserInterface.Forms.Production.ColorRoom
 				}
 				
 				if(i==0)
-				{
-					// throw new Exception(" Select Secuencias to generate report");
-
-					Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-						"alert('Seleccione una secuencia para generar un reporte');</script>");
-
+				{					
+					MostrarAlerta("Seleccione una secuencia para generar un reporte");
 					return;
 				}
 
@@ -1028,7 +1030,9 @@ namespace UserInterface.Forms.Production.ColorRoom
 
 		private void PrepareReport(string fechaInicial, string fechaFinal, int linea,int status, string secuencias)
 		{
-		
+			fechaInicial = fn.ConvertirFechaMesNumero(fechaInicial);
+			fechaFinal = fn.ConvertirFechaMesNumero(fechaFinal);
+
 			Reports.ReportHelper rptHelper = new Reports.ReportHelper();
 			Production.WorkOrder.PartidasColor.ColorWOReport reporte = new Production.WorkOrder.PartidasColor.ColorWOReport();
 
@@ -1067,7 +1071,10 @@ namespace UserInterface.Forms.Production.ColorRoom
 
 		private void PrepareReportSeparate(string fechaInicial, string fechaFinal, int linea,int status, string secuencias)
 		{
-		
+			UserInterface.Helpers.Funciones fn = new UserInterface.Helpers.Funciones();
+			fechaInicial = fn.ConvertirFechaMesNumero(fechaInicial);
+			fechaFinal = fn.ConvertirFechaMesNumero(fechaFinal);
+
 			Reports.ReportHelper rptHelper = new Reports.ReportHelper();
 			Production.WorkOrder.PartidasColor.ColorWOReportBySequence reporte = new Production.WorkOrder.PartidasColor.ColorWOReportBySequence();
 
@@ -1456,10 +1463,8 @@ namespace UserInterface.Forms.Production.ColorRoom
 			}
 			
 			if(i==0)
-			{
-				string ScriptString = "<script language = 'javascript'> alert('Seleccione una secuencia para generar un reporte'); </script>"; 
-				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
-				
+			{				
+				MostrarAlerta("Seleccione una secuencia para generar un reporte");
 				return;
 			}
 
@@ -1736,12 +1741,8 @@ namespace UserInterface.Forms.Production.ColorRoom
 				}
 				
 				if(i==0)
-				{
-					// throw new Exception(" Select Secuencias to generate report");
-
-					Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-						"alert('Seleccione una secuencia para generar una tarjeta');</script>");
-
+				{					
+					MostrarAlerta("Seleccione alguna(s) secuencia(s) para generar una tarjeta");
 					return;
 				}
 				/*** modificado por alejandro.hernandez@nasoft.com 22022006 ***/
@@ -2091,6 +2092,14 @@ namespace UserInterface.Forms.Production.ColorRoom
 			}
 		}
 
-
+		private void MostrarAlerta(string mensaje)
+		{
+			ClientScript.RegisterStartupScript(
+				this.GetType(),
+				"SicalAlerta",
+				"SicalAlert.mostrar('" + mensaje.Replace("\\", "\\\\").Replace("'", "\\'") + "');",
+				true
+			);
+		}
 	}
 }
