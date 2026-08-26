@@ -1,13 +1,19 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="ListMaterialGrid" Src="../../Controls/ListofMaterialGrid.ascx" %>
 <%@ Page language="c#" Codebehind="ListOfMaterial.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.ListOfMaterial" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="JavaScript">
-<!--
 <!--
 function MM_reloadPage(init) {  //reloads the window if Nav4 resized
   if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
@@ -27,18 +33,25 @@ function ShowTitle()
 
 //-->
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 		<!--onload="if ('<%= Session["errMsg"]%>' != '') alert('<%= Session["errMsg"]%>')"-->
 	</HEAD>
 	<body onload="ShowTitle()" text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0"
 		marginheight="0" marginwidth="0">
 		<form id="ListMat" method="post" runat="server">
 			<div align="center">
-				<table cellSpacing="0" cellPadding="0" border="0">
+				<table cellSpacing="0" cellPadding="0" border="0" width="800">
 					<TBODY>
 						<tr>
-							<td class="contenido" colSpan="3" bgcolor="#003366">
-								<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+							<td class="contenido" colSpan="3">
+								<div id="sicalMenu"></div>
 							</td>
 						</tr>
 						<tr>
@@ -63,7 +76,7 @@ function ShowTitle()
 									<TBODY>
 										<tr>
 											<td width="20" height="12">&nbsp;
-												<TABLE class="tan-border" id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
+												<TABLE  id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
 													<TR vAlign="top">
 														<TD colspan="4" class="letraAzulBold" width="256" height="12">Lista de Materiales</TD>
 													</TR>
@@ -113,13 +126,14 @@ function ShowTitle()
 															<asp:dropdownlist id="cboPlanta" runat="server" CssClass="standard-text" Width="142px" AutoPostBack="True"></asp:dropdownlist></TD>
 													</TR>
 													<TR vAlign="top">
-														<TD width="105">
+														<TD width="20%">
 															<P align="right">
-																<asp:button id="AddLstMat" runat="server" CssClass="botonesInput" Width="64px" Text="Agregar"
+																<asp:button id="AddLstMat" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar"
 																	CausesValidation="False"></asp:button></P>
 														</TD>
-														<TD width="139">
-															<asp:button id="cmdCancelC" runat="server" CssClass="botonesInput" Width="64px" Text="Cancelar"
+														<TD width="20%"></TD>
+														<TD width="20%">
+															<asp:button id="cmdCancelC" runat="server" CssClass="botonesInput" Width="80px" Text="Cancelar"
 																CausesValidation="False"></asp:button></TD>
 														<TD colspan="2">
 															<asp:Label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:Label></TD>
@@ -135,7 +149,7 @@ function ShowTitle()
 										<tr>
 											<td class="contenido" vAlign="top" width="20">
 												<P class="contenido" align="left">
-													<TABLE class="tan-border" id="Table3" cellSpacing="12" cellPadding="0" width="700" border="0">
+													<TABLE  id="Table3" cellSpacing="12" cellPadding="0" width="1000" border="0">
 														<TR vAlign="top">
 															<TD>
 																<uc1:ListMaterialGrid id="LstMatGrid" runat="server"></uc1:ListMaterialGrid></TD>

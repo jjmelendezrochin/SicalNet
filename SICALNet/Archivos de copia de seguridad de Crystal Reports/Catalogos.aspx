@@ -35,7 +35,7 @@
 						<table cellSpacing="0" cellPadding="0" width="206" border="0">
 							<tr>
 								<td style="WIDTH: 225px" vAlign="top">
-									<TABLE class="tan-border" id="Table1" style="WIDTH: 215px; HEIGHT: 161px" cellSpacing="12" cellPadding="0" width="215" border="0">
+									<TABLE  id="Table1" style="WIDTH: 215px; HEIGHT: 161px" cellSpacing="12" cellPadding="0" width="215" border="0">
 										<TR vAlign="top">
 											<TD class="header-gray">Agregue una Compañía</TD>
 										</TR>
@@ -70,7 +70,7 @@
 					</td>
 					<TD width="11"></TD>
 					<TD vAlign="top"><!-- Right Panel -->
-						<TABLE class="tan-border" style="WIDTH: 505px; HEIGHT: 232px" height="232" cellSpacing="11" cellPadding="0" width="505" border="0">
+						<TABLE  style="WIDTH: 505px; HEIGHT: 232px" height="232" cellSpacing="11" cellPadding="0" width="505" border="0">
 							<TR vAlign="top">
 								<TD height="15"><SPAN class="header-gray">Catálogo&nbsp; de Compañías</SPAN></TD>
 							</TR>
@@ -104,10 +104,10 @@
 													<ItemStyle CssClass="grid-edit-column"></ItemStyle>
 													<ItemTemplate>
 														<asp:imagebutton id="Imagebutton5" runat="server" CausesValidation="false" ImageUrl="../../images/icon-pencil.gif" NAME="Imagebutton1" CommandName="Edit" AlternateText="Edit"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
-														<asp:imagebutton onmouseup="ConfirmOperation(this,'eliminar');" id="Imagebutton6" CausesValidation="False" ImageUrl="../../images/icon-delete.gif" NAME="Imagebutton2" CommandName="Delete" AlternateText="Delete" Runat="server"></asp:imagebutton>
+														<asp:imagebutton OnClientClick="return ConfirmOperation(this,'eliminar');" id="Imagebutton6" CausesValidation="False" ImageUrl="../../images/icon-delete.gif" NAME="Imagebutton2" CommandName="Delete" AlternateText="Delete" Runat="server"></asp:imagebutton>
 													</ItemTemplate>
 													<EditItemTemplate>
-														<asp:imagebutton onmouseup="ConfirmOperation(this,'actualizar');" id="Imagebutton7" runat="server" CausesValidation="False" ImageUrl="../../images/icon-floppy.gif" NAME="Imagebutton3" CommandName="Update" AlternateText="Update"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
+														<asp:imagebutton OnClientClick="return ConfirmOperation(this,'actualizar');" id="Imagebutton7" runat="server" CausesValidation="False" ImageUrl="../../images/icon-floppy.gif" NAME="Imagebutton3" CommandName="Update" AlternateText="Update"></asp:imagebutton><IMG src="images/spacer.gif" width="3">
 														<asp:imagebutton id="Imagebutton8" runat="server" CausesValidation="False" ImageUrl="../../images/icon-pencil-x.gif" NAME="Imagebutton4" CommandName="Cancel" AlternateText="Cancel"></asp:imagebutton>
 													</EditItemTemplate>
 												</asp:TemplateColumn>

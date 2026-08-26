@@ -1,5 +1,5 @@
-﻿<%@ Page language="c#" Codebehind="AditivosWORpt.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.AditivosWORpt1" %>
-<%@ Register TagPrefix="cr" Namespace="CrystalDecisions.Web" Assembly="CrystalDecisions.Web, Version=9.1.3300.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" %>
+<%@ Page language="c#" Codebehind="AditivosWORpt.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.AditivosWORpt1" %>
+<%@ Register TagPrefix="cr" Namespace="CrystalDecisions.Web" Assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>

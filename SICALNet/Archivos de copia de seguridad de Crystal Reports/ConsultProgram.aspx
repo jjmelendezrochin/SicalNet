@@ -1,21 +1,37 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="ProgrammaGrid" Src="../../Controls/ProgrammaGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Page language="c#" Codebehind="ConsultProgram.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ConsultProgram" %>
-<script language="javascript">	
-			function ShowTitle()
-			{
-					window.frames["top"].document.title = "SICAL  - Consultar Programa de Producción"
+<HTML>
+	<HEAD>
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+	<script language="javascript">	
+		function ShowTitle()
+		{
+				window.frames["top"].document.title = "SICAL  - Consultar Programa de Producción"
+		}
+	</script>	
+	<script type="text/javascript">document.addEventListener(
+			"DOMContentLoaded",
+			function () {
+				SicalMenu.init("sicalMenu");
 			}
-</script>
-<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		);
+	</script>
+	</HEAD>
+
 	<body text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0" marginwidth="0" marginheight="0"
 		onload="ShowTitle()">
 		<form id="ProductionProgram" method="post" runat="server">
 			<table align="center" width="700" height="0" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
-						<td align="left" colSpan="5" bgColor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>
@@ -34,3 +50,4 @@
 			</table>
 		</form>
 	</body>
+</HTML>

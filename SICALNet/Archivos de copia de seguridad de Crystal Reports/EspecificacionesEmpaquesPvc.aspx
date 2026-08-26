@@ -1,6 +1,6 @@
 ﻿<%@ Page language="c#" Codebehind="EspecificacionesEmpaquesPvc.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.EspecificacionesEmpaquesPvc" %>
 <%@ Register TagPrefix="uc1" TagName="EspecificacionesPvcGrid" Src="../../Controls/EspecificacionesPvcGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -64,7 +64,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 								</tr>
 								<tr>
 									<td width="20" class="contenido" vAlign="top">
-										<TABLE class="tan-border" id="Table1" height="99" cellSpacing="12" cellPadding="0" width="171"
+										<TABLE  id="Table1" height="99" cellSpacing="12" cellPadding="0" width="171"
 											border="0">
 											<TR vAlign="top">
 												<TD class="letraAzulBold" height="13">Agregar una Medida</TD>
@@ -88,7 +88,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 										<P class="contenido" align="left">
 										</P>
 										<P class="contenido" align="left">
-											<TABLE class="tan-border" id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171"
+											<TABLE  id="Table3" height="99" cellSpacing="12" cellPadding="0" width="171"
 												border="0">
 												<TR vAlign="top">
 													<TD>

@@ -393,9 +393,9 @@
 																		cellPadding="1" width="100%" bgColor="gainsboro" border="1">
 																		<TR>
 																			<TD width="5%">
-																				<asp:image onmouseup="ShowHide(this.id)" id="Imagebutton2" runat="server" ImageUrl="../../images/plusButton.jpg"></asp:image></TD>
+																				<asp:image OnClientClick="return ShowHide(this.id)" id="Imagebutton2" runat="server" ImageUrl="../../images/plusButton.jpg"></asp:image></TD>
 																			<TD width="10%">
-																				<asp:label id=lblNoGrupo runat="server" CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.GroupNo") %>'>
+																				<asp:label id=lblNoGrupo runat="server" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.GroupNo") %>'>
 																				</asp:label></TD>
 																			<TD width="30%">
 																				<asp:label id=Label22 runat="server" CssClass="standard-text" Text='<%# DataBinder.Eval(Container, "DataItem.Cantidad", "{0:f3}") %>'>

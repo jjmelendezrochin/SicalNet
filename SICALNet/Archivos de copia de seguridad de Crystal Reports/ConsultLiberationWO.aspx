@@ -1,5 +1,4 @@
 ﻿<%@ Page language="c#" Codebehind="ConsultLiberationWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.LiberationPhase.ConsultLiberationWO" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../../../Controls/mainMenu.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -8,9 +7,15 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<asp:literal id="ltrRefresh" runat="server"></asp:literal><LINK rel="stylesheet" type="text/css" href="..\..\..\..\styloDESC.CSS">
-		<!-- <script src="..\..\..\..\librerias/jquery.min.js"></script> 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>-->
+		<asp:literal id="ltrRefresh" runat="server"></asp:literal>
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 		<script language="javascript">		
 			function GetDate(CtrlName)        
@@ -73,12 +78,22 @@
 		    }
 		    	  
 		</script>
+
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="ConsultInspectionWO" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" id="Table1" align="center">
 				<tr>
-					<td bgColor="#003366" colSpan="5" align="left"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+					<td colSpan="5" align="left">
+						<div id="sicalMenu"></div>
+					</td>
 				</tr>
 				<tr>
 					<td colSpan="5" align="center"><br>
@@ -94,12 +109,12 @@
 				</tr>
 				<tr>
 					<td><asp:textbox id="txtFechaInicial" runat="server" CssClass="standard-text" Width="100px" MaxLength="11"
-							BorderStyle="Groove">10-Sep-2019</asp:textbox><asp:imagebutton id="ImgFechaInicial" onmouseup="GetDate('txtFechaInicial');" runat="server" ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
+							BorderStyle="Groove">10-Sep-2019</asp:textbox><asp:imagebutton id="ImgFechaInicial" OnClientClick="return GetDate('txtFechaInicial');" runat="server" ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
 					<td><asp:textbox id="txtFechaFinal" runat="server" CssClass="standard-text" Width="100px" MaxLength="11"
-							BorderStyle="Groove">10-Sep-2019</asp:textbox><asp:imagebutton id="ImgFechaFinal" onmouseup="GetDate('txtFechaFinal');" runat="server" ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
+							BorderStyle="Groove">10-Sep-2019</asp:textbox><asp:imagebutton id="ImgFechaFinal" OnClientClick="return GetDate('txtFechaFinal');" runat="server" ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
 					<td><asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text" Width="125px"></asp:dropdownlist></td>
 					<td><asp:dropdownlist id="cboStatus" runat="server" CssClass="standard-text" Width="125px"></asp:dropdownlist></td>
-					<td><asp:button id="cmdAceptar" runat="server" CssClass="botonesInput" Text="Aceptar" Width="62px"></asp:button></td>
+					<td><asp:button id="cmdAceptar" runat="server" CssClass="botonesInput" Text="Aceptar" Width="80px"></asp:button></td>
 				</tr>
 				<TR>
 					<TD><asp:regularexpressionvalidator id="revInitial" runat="server" CssClass="standard-text" Display="Dynamic" ValidationExpression="(^((31(?!-(feb|abr|jun|sep|nov)))|((30|29)(?!-feb?))|(29(?=-feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ene|feb|mar|may|abr|jul|jun|ago|oct|sep|nov|dic)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(FEB|ABR|JUN|SEP|NOV)))|((30|29)(?!-FEB?))|(29(?=-FEB?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ENE|FEB|MAR|MAY|ABR|JUL|JUN|AGO|OCT|SEP|NOV|DIC)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(Feb|Abr|Jun|Sep|Nov)))|((30|29)(?!-Feb?))|(29(?=-Feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(Ene|Feb|Mar|May|Abr|Jul|Jun|Ago|Oct|Sep|Nov|Dic)-((1[6-9]|[2-9]\d)\d{2})$)"
@@ -117,12 +132,20 @@
 						<asp:image style="Z-INDEX: 0" id="Image1" runat="server" Width="1px" Visible="False" Height="8px"></asp:image></TD>
 				</TR>
 				<tr>
-					<td style="HEIGHT: 23px" colSpan="5" align="center"><asp:button id="btnImprimir" runat="server" CssClass="botonesInput" Text="Imprimir Etiqueta de Lote"
-							Width="150px"></asp:button><asp:button style="Z-INDEX: 0" id="cmdEjecutaReporte" runat="server" CssClass="botonesInput"
-							Text="Ejecuta" Width="0px" Height="0px"></asp:button>
-						<asp:textbox id="txtSecuenciasSelectionFormula" Runat="server" Width="0px" Height="0px"></asp:textbox>
-						<asp:textbox id="txtSecuencias" Runat="server" Width="0px" Height="0px"></asp:textbox>
-						<asp:textbox id="txtOrdenes" Runat="server" Width="0px" Height="0px"></asp:textbox>
+					<td style="HEIGHT: 23px" colSpan="5" align="center">
+							<asp:button id="btnImprimir" runat="server" CssClass="botonesInput" Text="Imprimir Etiqueta de Lote"
+							Width="180px"></asp:button>
+							<asp:button style="Z-INDEX: 0," 
+								id="cmdEjecutaReporte" 
+								runat="server" 								
+								CssClass="botonesInput"
+								Text="Ejecuta" Width="0px" 
+								Height="0px"
+								Visible="False">
+							</asp:button>
+						<asp:textbox id="txtSecuenciasSelectionFormula" Runat="server" Width="0px" Height="0px" Visible="False"></asp:textbox>
+						<asp:textbox id="txtSecuencias" Runat="server" Width="0px" Height="0px" Visible="False"></asp:textbox>
+						<asp:textbox id="txtOrdenes" Runat="server" Width="0px" Height="0px" Visible="False"></asp:textbox>
 					</td>
 					</TD></tr>
 				<TR>

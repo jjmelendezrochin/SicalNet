@@ -1,5 +1,4 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
-<%@ Page language="c#" Codebehind="ConsultAditivosWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.PartidasAditivos" %>
+﻿<%@ Page language="c#" Codebehind="ConsultAditivosWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.PartidasAditivos" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -8,7 +7,13 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<asp:literal id="ltrRefresh" runat="server"></asp:literal><LINK rel="stylesheet" type="text/css" href="..\..\styloDESC.CSS">
+		<asp:literal id="ltrRefresh" runat="server"></asp:literal>
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -66,13 +71,22 @@
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Aditivos"
 			}
 		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="ConsultAditivosWO" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" align="center">
 				<TBODY>
 					<tr>
-						<td bgColor="#003366" colSpan="5" align="left"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td colSpan="5" align="left">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td colSpan="5" align="center"><br>
@@ -87,12 +101,15 @@
 						<td><asp:label id="Status" CssClass="standard-text" Text="Status" Runat="server">Status</asp:label></td>
 						<td><asp:label id="Label2" CssClass="standard-text" Text="Fecha" Runat="server">Olla formulación en 1 paso:</asp:label></td>
 					<tr>
-						<td><asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" MaxLength="11" Width="86px"
-								BorderStyle="Groove"></asp:textbox><asp:image id="imgInitial" onmouseup="GetDate('txtFecha');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
-								AlternateText="Inicial Date"></asp:image></td>
-						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" Width="86px"
-								BorderStyle="Groove"></asp:textbox><asp:image id="imgFinal" onmouseup="GetDate('txtFechaFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
-								AlternateText="Inicial Date"></asp:image></td>
+						<td><asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" MaxLength="11" Width="96px"
+								BorderStyle="Groove"></asp:textbox>
+							<asp:imagebutton id="imgInitial" OnClientClick="return GetDate('txtFecha');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+								AlternateText="Inicial Date"></asp:imagebutton></td>
+						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" Width="96px"
+								BorderStyle="Groove">
+						    </asp:textbox>
+							<asp:imagebutton id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+								AlternateText="Inicial Date"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboLinea" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboStatus" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="CmbOlla" runat="server" CssClass="Standard-text" Width="85px"></asp:dropdownlist></td>
@@ -114,9 +131,9 @@
 					</TR>
 					<tr>
 						<td style="HEIGHT: 23px" align="center"><asp:button id="btnImprimirEqu" runat="server" CssClass="botonesInput" Text="Imp. Etiquetas"
-								Width="98px"></asp:button><asp:button id="btnImprimirSLPC" runat="server" CssClass="botonesInput" Text="Imp. Etiquetas Color"
-								Width="98px"></asp:button></td>
-						<td style="HEIGHT: 23px" vAlign="middle" align="center"><asp:button id="btnRpt" CssClass="botonesInput" Text="Rep. Formulación" Runat="server" Width="104px"></asp:button>&nbsp;</td>
+								Width="120px"></asp:button><asp:button id="btnImprimirSLPC" runat="server" CssClass="botonesInput" Text="Imp. Etiquetas Color"
+								Width="120px"></asp:button></td>
+						<td style="HEIGHT: 23px" vAlign="middle" align="center"><asp:button id="btnRpt" CssClass="botonesInput" Text="Rep. Formulación" Runat="server" Width="150px"></asp:button>&nbsp;</td>
 						<td style="HEIGHT: 23px" align="center"><asp:button id="btnCard" runat="server" CssClass="botonesInput" Text="Tarj. Form." Width="107px"></asp:button></td>
 						<td style="HEIGHT: 23px" align="center"><asp:button id="btnLiberar" runat="server" CssClass="botonesInput" Text="Liberar"></asp:button>&nbsp;&nbsp;
 							<asp:button id="btnAgregar" runat="server" CssClass="botonesInput" Text="Salvar"></asp:button></td>
@@ -140,7 +157,7 @@
 									<TABLE style="BORDER-COLLAPSE: collapse" id="Table13" border="1" bgColor="#276187">
 										<TR>
 											<TD class="grid-header" width="12">
-												<asp:image style="CURSOR: hand" id="imgPlus" onmouseup="ShowHideAll(this.id)" Runat="server"
+												<asp:image style="CURSOR: hand" id="imgPlus" OnClientClick="return ShowHideAll(this.id)" Runat="server"
 													ImageUrl="../../Images/plusButton.JPG"></asp:image>
 												<asp:label id="sp" Runat="server" Width="13px"></asp:label></TD>
 											<TD class="grid-header">
@@ -175,7 +192,7 @@
 									<TABLE style="BORDER-COLLAPSE: collapse" border="1">
 										<TR>
 											<TD align="center">
-												<asp:image style="CURSOR: hand" id="jsPlus" onmouseup="ShowHide(this.id)" Runat="server" ImageUrl="../../Images/minusButton.JPG"
+												<asp:image style="CURSOR: hand" id="jsPlus" OnClientClick="return ShowHide(this.id)" Runat="server" ImageUrl="../../Images/minusButton.JPG"
 													Visible="False"></asp:image>
 												<asp:label id="spacer" CssClass="standard-text" Runat="server" Width="9px"></asp:label>
 												<asp:ImageButton id="aspPlus" runat="server" ImageUrl="../../Images/plusButton.JPG" Visible="False"

@@ -1,5 +1,4 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../../../Controls/mainMenu.ascx" %>
-<%@ Page language="c#" Codebehind="ConsultInterfaceSAP.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.InterfaceSAP.ConsultInterfaceSAP" %>
+﻿<%@ Page language="c#" Codebehind="ConsultInterfaceSAP.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.InterfaceSAP.ConsultInterfaceSAP" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -8,7 +7,14 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="..\..\..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{   
@@ -60,13 +66,22 @@
 					window.frames["top"].document.title = "SICAL  - Ordenes de Trabajo - Fase de Interfase SAP"
 			}				
 		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<form id="ConsultInterfaceSAP" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
 				<TBODY>
 					<tr>
-						<td align="left" bgColor="#003366" colSpan="5"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td align="center" colSpan="5"><br>
@@ -84,10 +99,12 @@
 						<td align="left"></td>
 					</tr>
 					<tr>
-						<td><asp:textbox id="txtInitial" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox><asp:image onmouseup="GetDate('txtInitial');" id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
-								AlternateText="Inicial Date"></asp:image></td>
-						<td><asp:textbox id="txtFinal" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox><asp:image onmouseup="GetDate('txtFinal');" id="imgFinal" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
-								AlternateText="Final Date"></asp:image></td>
+						<td><asp:textbox id="txtInitial" Width="99px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox>
+							<asp:imagebutton OnClientClick="return GetDate('txtInitial');" id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+								AlternateText="Inicial Date"></asp:imagebutton></td>
+						<td><asp:textbox id="txtFinal" Width="99px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox>
+							<asp:imagebutton OnClientClick="return GetDate('txtFinal');" id="imgFinal" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+								AlternateText="Final Date"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboStatus" Width="100px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<TD><asp:dropdownlist id="cboLinea" Width="100px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></TD>
 						<TD align="left"></TD>
@@ -121,9 +138,11 @@
 								MaxLength="5"></asp:textbox></TD>
 						<TD style="WIDTH: 154px; HEIGHT: 22px"><asp:textbox id="txtHoraFinal" Width="116px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"
 								MaxLength="5"></asp:textbox></TD>
-						<TD style="WIDTH: 166px; HEIGHT: 22px"><asp:textbox id="txtFechaInterfaz" CssClass="Standard-text" Runat="server" BorderStyle="Groove"
-								MaxLength="11"></asp:textbox><asp:image onmouseup="GetDate('txtFinal');" id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
-								AlternateText="Final Date"></asp:image></TD>
+						<TD style="WIDTH: 166px; HEIGHT: 22px">
+							<asp:textbox id="txtFechaInterfaz" Width="99px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"
+								MaxLength="11"></asp:textbox>
+							<asp:imagebutton OnClientClick="return GetDate('txtFinal');" id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+								AlternateText="Final Date"></asp:imagebutton></TD>
 						<TD style="HEIGHT: 22px" align="center"><asp:button id="btnSel" CssClass="botonesInput" Text="Aceptar" Runat="server"></asp:button></TD>
 						<TD style="HEIGHT: 22px" align="left"></TD>
 					</TR>
@@ -299,7 +318,7 @@
 				<td>
 					<table cellSpacing="4" width="900">
 						<tr>
-							<td align="center"><asp:button onmouseup="getConfirm(this.id)" id="btnLiberar" CssClass="botonesInput" Text="Liberar"
+							<td align="center"><asp:button OnClientClick="return getConfirm(this.id)" id="btnLiberar" CssClass="botonesInput" Text="Liberar"
 									Runat="server"></asp:button></td>
 						</tr>
 					</table>

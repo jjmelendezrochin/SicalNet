@@ -1,4 +1,4 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿
 <%@ Page language="c#" Codebehind="FormPresentacion.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FormPresentacion" %>
 <%@ Register TagPrefix="uc1" TagName="FormPresentacionGrid" Src="../../Controls/FormPresentacionGrid.ascx" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
@@ -6,27 +6,39 @@
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<script language="JavaScript">
-<!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
-function ShowTitle()
-{
-	window.frames["top"].document.title = "SICAL  - Estructuras - Formulaciones de Presentaciones"
-}
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script language="JavaScript">
+		<!--
+		<!--
+		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+			document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+		  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+		}
+		MM_reloadPage(true);
+		// -->
+
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+		  window.open(theURL,winName,features);
+		}
+		//-->
+		function ShowTitle()
+		{
+			window.frames["top"].document.title = "SICAL  - Estructuras - Formulaciones de Presentaciones"
+		}
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0"
 		marginheight="0" marginwidth="0">
@@ -34,8 +46,8 @@ function ShowTitle()
 			<div align="center">
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
 					<tr>
-						<td class="contenido" colSpan="2" bgcolor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td class="contenido" colSpan="2">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>
@@ -56,7 +68,7 @@ function ShowTitle()
 					<TR>
 						<TD class="contenido" width="21" height="131"></TD>
 						<TD class="contenido" width="700" height="131">
-							<TABLE class="tan-border" id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
+							<TABLE  id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
 								<TR vAlign="top">
 									<TD class="letraAzulBold" colSpan="4" height="13">Indique las características del 
 										producto</TD>
@@ -91,10 +103,12 @@ function ShowTitle()
 								</TR>
 								<TR vAlign="top">
 									<TD></TD>
-									<TD></TD>
 									<TD>
 										<P align="right">
-											<asp:button id="cmdEditForm" runat="server" CssClass="botonesInput" Text="Aceptar"></asp:button></P>
+											<asp:button id="cmdEditForm" runat="server" CssClass="botonesInput" Text="Aceptar"></asp:button>
+										</P>
+									</TD>
+									<TD>										
 									</TD>
 									<TD>
 										<asp:button id="cmdCancelar" runat="server" CssClass="botonesInput" Text="Cancelar"></asp:button></TD>
@@ -107,7 +121,7 @@ function ShowTitle()
 						<td class="contenido" width="21">&nbsp;</td>
 						<td class="contenido" width="700">
 							<DIV align="left">
-								<TABLE class="tan-border" id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
+								<TABLE  id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="2" height="13">
@@ -136,7 +150,7 @@ function ShowTitle()
 						<td>&nbsp;</td>
 						<td>
 							<div align="left">
-								<TABLE class="tan-border" id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
+								<TABLE  id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="4" height="13">Agregue un componente a la 
@@ -173,7 +187,7 @@ function ShowTitle()
 					<tr>
 						<td colspan="1">
 						<td>
-							<TABLE class="tan-border" id="ew" width="700" border="0">
+							<TABLE  id="ew" width="700" border="0">
 								<tr>
 									<td align="center">
 										<asp:button id="cmdSalir" runat="server" CssClass="botonesInput" Text="Salir" Visible="False"></asp:button>

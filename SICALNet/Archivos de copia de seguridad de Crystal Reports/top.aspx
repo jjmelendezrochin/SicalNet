@@ -1,4 +1,4 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿
 <%@ Page language="c#" Codebehind="top.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Reports.top" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
@@ -8,7 +8,14 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<asp:literal id="ltrRefresh" runat="server"></asp:literal><LINK rel="stylesheet" type="text/css" href="..\..\styloDESC.CSS">
+		<asp:literal id="ltrRefresh" runat="server"></asp:literal>
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">
 		function MostrarTabla() {
 			var seleccion = document.getElementById("lstReporte").selectedIndex;
@@ -108,8 +115,14 @@
 
 			return true;
 		}
-		
-		
+				
+		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
 		</script>
 		<style type="text/css">
 			#divWait { HEIGHT: 100%; WIDTH: 100%; POSITION: fixed; TEXT-ALIGN: center; LEFT: 0px; Z-INDEX: 9999; DISPLAY: none; TOP: 0px; BACKGROUND-COLOR: white }
@@ -120,7 +133,9 @@
 		<table style="BORDER-COLLAPSE: collapse" border="0" width="800" align="center">
 			<TBODY>
 				<tr>
-					<td bgColor="#003366" colSpan="6" align="left"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+					<td colSpan="6" align="left">
+						<div id="sicalMenu"></div>
+					</td>
 				</tr>
 			</TBODY>
 		</table>
@@ -172,7 +187,7 @@
 						</td>
 						<td>
 							<asp:textbox id="txtInitial" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"></asp:textbox>
-							<asp:image id="imgInitial" onmouseup="GetDate('txtInitial');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+							<asp:image id="imgInitial" OnClientClick="return GetDate('txtInitial');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:image>
 						</td>
 						<td align="center">
@@ -180,7 +195,7 @@
 						</td>
 						<td>
 							<asp:textbox id="txtFinal" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"></asp:textbox>
-							<asp:image id="imgFinal" onmouseup="GetDate('txtFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+							<asp:image id="imgFinal" OnClientClick="return GetDate('txtFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Final Date"></asp:image>
 						</td>
 					</tr>

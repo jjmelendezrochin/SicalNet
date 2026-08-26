@@ -130,10 +130,10 @@
 								<TD vAlign="top" align="center" width="150">
 									<asp:button id="btnAgregarMensaje" runat="server" CssClass="botonesInput" Width="108px" Text="Mensaje de piso"></asp:button></TD>
 								<TD vAlign="top" align="center" width="140">
-									<asp:button onmouseup="isDigit(this.value,this)" id="btnLiberar" CssClass="botonesInput" Runat="server"
+									<asp:button OnClientClick="return isDigit(this.value,this)" id="btnLiberar" CssClass="botonesInput" Runat="server"
 										Width="80px" Text="Liberar"></asp:button></TD>
 								<TD vAlign="top" align="center" width="140">
-									<asp:button onmouseup="isDigit(this.value,this)" id="btnAgregar" CssClass="botonesInput" Runat="server"
+									<asp:button OnClientClick="return isDigit(this.value,this)" id="btnAgregar" CssClass="botonesInput" Runat="server"
 										Width="80px" Text="Aceptar"></asp:button></TD>
 								<TD vAlign="top" align="center" width="140">
 									<asp:button id="btnCancel" CssClass="botonesInput" Runat="server" Width="80px" Text="Regresar"></asp:button></TD>

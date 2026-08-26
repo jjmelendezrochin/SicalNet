@@ -1,35 +1,49 @@
 ﻿<%@ Register TagPrefix="uc1" TagName="FormAditivosGrid" Src="../../Controls/FormAditivosGrid.ascx" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <%@ Page language="c#" Codebehind="FormAditivos.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.FormAditivos" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="JavaScript">
-<!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+		<!--
+		<!--
+		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+			document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+		  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+		}
+		MM_reloadPage(true);
+		// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+		  window.open(theURL,winName,features);
+		}
 
-//-->
+		//-->
 
-function ShowTitle()
-{
-	window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de Aditivos"
-}
+		function ShowTitle()
+		{
+			window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de Aditivos"
+		}
 		</script>
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
 		<!--onload="if ('<%= Session["errMsg"]%>' != '') alert('<%= Session["errMsg"]%>')"-->
+
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0"
 		marginheight="0" marginwidth="0">
@@ -37,8 +51,8 @@ function ShowTitle()
 			<div align="center">
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
 					<tr>
-						<td class="contenido" colSpan="3" bgColor="#003366">
-							<uc1:mainMenu id="MainMenu1" runat="server"></uc1:mainMenu>
+						<td class="contenido" colSpan="3">
+							<div id="sicalMenu"></div>
 						</td>
 					</tr>
 					<tr>
@@ -60,7 +74,7 @@ function ShowTitle()
 					<TR>
 						<TD class="contenido" width="21" height="131"></TD>
 						<TD class="contenido" width="700" height="131">
-							<TABLE class="tan-border" id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
+							<TABLE  id="Table1" cellSpacing="12" cellPadding="0" width="700" border="0">
 								<TR vAlign="top">
 									<TD class="letraAzulBold" colSpan="4" height="13">Seleccione el Color, Espesor, 
 										Línea y Planta</TD>
@@ -96,12 +110,12 @@ function ShowTitle()
 								<TR vAlign="top">
 									<TD>
 										<P align="right">&nbsp;</P>
-									</TD>
-									<TD></TD>
+									</TD>									
 									<TD>
 										<P align="right">
 											<asp:button id="cmdEditForm" runat="server" CssClass="botonesInput" Text="Aceptar"></asp:button></P>
 									</TD>
+									<TD></TD>
 									<TD>
 										<asp:button id="cmdCancelar" runat="server" CssClass="botonesInput" Text="Cancelar"></asp:button></TD>
 								</TR>
@@ -112,8 +126,8 @@ function ShowTitle()
 					<tr>
 						<td class="contenido" width="21">&nbsp;</td>
 						<td class="contenido" width="700">
-							<DIV align="left">
-								<TABLE class="tan-border" id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
+							<DIV align="center">
+								<TABLE  id="tableComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="2" height="13">
@@ -152,10 +166,9 @@ function ShowTitle()
 						<td class="contenido" width="20">&nbsp;</td>
 					</tr>
 					<tr>
-						<td width="21">&nbsp;</td>
-						<td>
-							<div>
-								<TABLE class="tan-border" id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
+						<td colspan="3">
+							<div align="center">
+								<TABLE  id="tableNewComponents" cellSpacing="12" cellPadding="0" width="700"
 									border="0" runat="server" visible="false">
 									<TR vAlign="top">
 										<TD class="letraAzulBold" colSpan="4" height="13">
@@ -186,7 +199,7 @@ function ShowTitle()
 											<asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label></TD>
 										<TD width="122">
 											<P align="right">
-												<asp:button id="AddFormAditivos" runat="server" CssClass="botonesInput" Width="64px" Text="Agregar"
+												<asp:button id="AddFormAditivos" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar"
 													CausesValidation="False"></asp:button></P>
 										</TD>
 										<TD></TD>
@@ -194,20 +207,18 @@ function ShowTitle()
 								</TABLE>
 							</div>
 						</td>
-						<TD>&nbsp;</TD>
+						
 					</tr>
 					<tr>
-						<td></td>
-						<td>
-							<TABLE class="tan-border" id="ew" width="700" border="0">
+						<td colspan="3">
+							<TABLE  id="ew" width="700" border="0">
 								<tr>
 									<td align="center">
 										<asp:button id="cmdSalir" runat="server" CssClass="botonesInput" Text="Salir" Visible="False"></asp:button>
 									</td>
 								</tr>
 							</TABLE>
-						</td>
-						<td></td>
+						</td>						
 					</tr>
 				</table>
 			</div>

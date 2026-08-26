@@ -1,6 +1,6 @@
 <%@ Page language="c#" Codebehind="ConsultCuradoReport.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Reports.ConsultCuradoReport" %>
 <%@ Register TagPrefix="cr" Namespace="CrystalDecisions.Web" Assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -9,15 +9,36 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
 				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
 			}    
 		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
+		<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
+				<TBODY>
+					<tr>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
+						</td>
+					</tr>
+		</table>
 		<form id="ConsultReport" method="post" runat="server">
 			<center>
 				<br>
@@ -46,14 +67,15 @@
 					runat="server" CssClass="standard-text" Width="121px"></asp:textbox>
 				<asp:button CssClass="botonesInput" id="cmdprint" style="Z-INDEX: 114; POSITION: absolute; TOP: 280px; LEFT: 752px"
 					Runat="server" Text="Imprimir"></asp:button>
-				<asp:image onmouseup="GetDate('txtFechaFinal');" id="imgProgrammaFinal" style="Z-INDEX: 113; POSITION: absolute; TOP: 216px; LEFT: 912px"
-					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:image>
-				<asp:image onmouseup="GetDate('txtLibFinal');" id="imgLieractionFinal" style="Z-INDEX: 112; POSITION: absolute; TOP: 216px; LEFT: 1080px"
-					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:image>
-				<asp:image onmouseup="GetDate('txtLibInicial');" id="imgLieractionInitial" style="Z-INDEX: 111; POSITION: absolute; TOP: 136px; LEFT: 1080px"
-					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:image>
-				<asp:image onmouseup="GetDate('txtFechaInicial');" id="imgProgrammaInitial" style="Z-INDEX: 110; POSITION: absolute; TOP: 136px; LEFT: 912px"
-					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:image>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<asp:imagebutton OnClientClick="return GetDate('txtFechaFinal');" id="imgProgrammaFinal" style="Z-INDEX: 113; POSITION: absolute; TOP: 216px; LEFT: 912px"
+					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+				<asp:imagebutton OnClientClick="return GetDate('txtLibFinal');" id="imgLieractionFinal" style="Z-INDEX: 112; POSITION: absolute; TOP: 216px; LEFT: 1080px"
+					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+				<asp:imagebutton OnClientClick="return GetDate('txtLibInicial');" id="imgLieractionInitial" style="Z-INDEX: 111; POSITION: absolute; TOP: 136px; LEFT: 1080px"
+					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+				<asp:imagebutton OnClientClick="return GetDate('txtFechaInicial');" id="imgProgrammaInitial" style="Z-INDEX: 110; POSITION: absolute; TOP: 136px; LEFT: 912px"
+					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 				<asp:label CssClass="standard-text" id="LblSequencia2" style="Z-INDEX: 105; POSITION: absolute; TOP: 184px; LEFT: 464px"
 					Runat="server">Secuencia Final</asp:label>
 				<asp:label CssClass="standard-text" id="LblSecquencia1" style="Z-INDEX: 104; POSITION: absolute; TOP: 104px; LEFT: 464px"
@@ -70,6 +92,7 @@
 					runat="server" Width="143px" Height="22px">Fecha Liberacion Final</asp:label>
 				<asp:label CssClass="standard-text" id="LblLiberacion1" style="Z-INDEX: 109; POSITION: absolute; TOP: 104px; LEFT: 968px"
 					runat="server" Width="152px" Height="22px">Fecha Liberacion inicial</asp:label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<asp:button CssClass="botonesInput" id="cmdCancelar" style="Z-INDEX: 115; POSITION: absolute; TOP: 280px; LEFT: 832px"
 					Runat="server" Text="Regresar"></asp:button>
 				<asp:dropdownlist id="cboFamilia" style="Z-INDEX: 116; POSITION: absolute; TOP: 216px; LEFT: 288px"

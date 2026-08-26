@@ -1,4 +1,4 @@
-﻿<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+﻿
 <%@ Page language="c#" Codebehind="ConsultReactionWO.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ConsultReactionWO" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
@@ -8,7 +8,12 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<LINK rel="stylesheet" type="text/css" href="../../styloDESC.CSS">
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">		
 			function GetDate(CtrlName)        
 			{            
@@ -20,13 +25,22 @@
 			}		
 			
 		</script>
+		<script type="text/javascript">document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					SicalMenu.init("sicalMenu");
+				}
+			);
+		</script>
 	</HEAD>
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="ConsultReactionWO" method="post" runat="server">
-			<table style="BORDER-COLLAPSE: collapse" align="center">
+			<table align="center" width="700" height="0" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
 					<tr>
-						<td bgColor="#003366" colSpan="5" align="left"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td align="left" colSpan="5">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td colSpan="5" align="center"><br>
@@ -42,11 +56,13 @@
 					</tr>
 					<tr>
 						<td><asp:textbox id="txtFechaInicial" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"
-								Width="100px"></asp:textbox><asp:image id="imgInitial" onmouseup="GetDate('txtFechaInicial');" Runat="server" AlternateText="Inicial Date"
-								ImageUrl="../../Images/icon-calendar.gif"></asp:image></td>
+								Width="100px"></asp:textbox>
+							<asp:imagebutton id="imgInitial" OnClientClick="return GetDate('txtFechaInicial');" Runat="server" AlternateText="Inicial Date"
+								ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></td>
 						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"
-								Width="100px"></asp:textbox><asp:image id="imgFinal" onmouseup="GetDate('txtFechaFinal');" Runat="server" AlternateText="Inicial Date"
-								ImageUrl="../../Images/icon-calendar.gif"></asp:image></td>
+								Width="100px"></asp:textbox>
+							<asp:imagebutton id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" AlternateText="Inicial Date"
+								ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboLinea" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboStatus" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:button id="cmdGo" CssClass="botonesInput" Runat="server" Text="Aceptar"></asp:button></td>
@@ -61,9 +77,23 @@
 						<TD></TD>
 					</TR>
 					<tr>
-						<td colSpan="5"><asp:datagrid id="dgdOTReaccion" runat="server" Font-Names="Verdana" BorderStyle="None" Width="700px"
-								BorderColor="White" DataKeyField="IdOrdenTrabajo" AllowSorting="True" FontSize="11px" Font-Name="Verdana"
-								AutoGenerateColumns="False" CellPadding="2">
+						<td colSpan="5" align="center">
+							<br />
+							<asp:datagrid id="dgdOTReaccion" 
+								runat="server" 
+								Font-Names="Verdana" 
+								BorderStyle="None" Width="700px"
+								BorderColor="White" 
+								DataKeyField="IdOrdenTrabajo" 
+								AllowSorting="True" 
+								FontSize="11px" 								
+								AutoGenerateColumns="False" 
+								CellPadding="2"								
+								AllowPaging="True"
+								PagerStyle-Mode="NumericPages"
+								PagerStyle-HorizontalAlign="Right"
+								CssClass="GridView grid-header">
+
 								<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 								<Columns>
 									<asp:TemplateColumn HeaderText="Fecha">
@@ -102,12 +132,33 @@
 											</asp:label>
 										</ItemTemplate>
 									</asp:TemplateColumn>
-									<asp:ButtonColumn Text="Consultar" HeaderText="Consultar" CommandName="Select">
-										<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-										<ItemStyle CssClass="grid-item"></ItemStyle>
-									</asp:ButtonColumn>
+									<asp:TemplateColumn HeaderText="Editar">
+                                    <HeaderStyle
+                                        HorizontalAlign="Center"
+                                        Width="8%"
+                                        CssClass="grid-header"
+                                        VerticalAlign="Middle"></HeaderStyle>
+                                    <ItemStyle CssClass="grid-edit-column"></ItemStyle>
+                                    <ItemTemplate>
+                                        <asp:ImageButton
+                                            ID="Imagebutton5"
+                                            runat="server"
+                                            CausesValidation="false"
+                                            ImageUrl="../../images/icon-pencil.gif"
+                                            NAME="Imagebutton1"
+                                            CommandName="Select"
+                                            AlternateText="Editar"
+                                            ToolTip="Ajustar tanque"></asp:ImageButton>
+                                    </ItemTemplate>
+                                </asp:TemplateColumn>									
 								</Columns>
-							</asp:datagrid></td>
+								<PagerStyle
+									HorizontalAlign="Center"
+									Mode="NumericPages"
+									CssClass="grid-pager">
+								</PagerStyle>
+							</asp:datagrid>
+						</td>
 					</tr>
 				</TBODY>
 			</table>

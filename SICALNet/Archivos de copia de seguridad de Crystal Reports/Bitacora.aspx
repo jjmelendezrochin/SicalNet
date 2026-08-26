@@ -1,5 +1,5 @@
 <%@ Page language="c#" Codebehind="Bitacora.aspx.cs" AutoEventWireup="false" ValidateRequest="True" Inherits="BitacoraExportacion1.Bitacora" %>
-<%@ Register TagPrefix="uc1" TagName="mainMenu" Src="../../Controls/mainMenu.ascx" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -21,7 +21,7 @@
 			<table cellSpacing="0" cellPadding="0" border="0" width="100%" height="100%">
 				<TR>
 					<td vAlign="top" align="center">
-						<table cellSpacing="0" cellPadding="0" border="0" class="tan-border" width="700">
+						<table cellSpacing="0" cellPadding="0" border="0"  width="700">
 							<TR>
 								<td>&nbsp;</td>
 							</TR>
@@ -66,7 +66,7 @@
 													<HeaderStyle HorizontalAlign="Center" Width="140px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 													<ItemStyle Width="70px" CssClass="grid-first-item"></ItemStyle>
 													<ItemTemplate>
-														<asp:label id=Label1 Width="150px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.FechaValue") %>' Runat="server" Visible="true" CssClass="standard-text">
+														<asp:label id=Label1 Width="150px" Text='<%#DataBinder.Eval(Container, "DataItem.FechaValue") %>' Runat="server" Visible="true" CssClass="standard-text">
 														</asp:label>
 													</ItemTemplate>
 													<FooterStyle HorizontalAlign="Right"></FooterStyle>
@@ -75,7 +75,7 @@
 													<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 													<ItemStyle Width="50px" CssClass="grid-first-item"></ItemStyle>
 													<ItemTemplate>
-														<asp:label id=Label2 Width="130px" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.NombreValue") %>' Runat="server" Visible="true" CssClass="standard-text">
+														<asp:label id=Label2 Width="130px" Text='<%#DataBinder.Eval(Container, "DataItem.NombreValue") %>' Runat="server" Visible="true" CssClass="standard-text">
 														</asp:label><br>
 													</ItemTemplate>
 													<FooterStyle HorizontalAlign="Left"></FooterStyle>
@@ -86,7 +86,7 @@
 														Tamaño
 													</HeaderTemplate>
 													<ItemTemplate>
-														<asp:Label id=Label4 CssClass="standard-text" Text='&nbsp;<%# DataBinder.Eval(Container, "DataItem.TamañoValue") %>' Width="150px" Visible="true" Runat="server">
+														<asp:Label id=Label4 CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.TamañoValue") %>' Width="150px" Visible="true" Runat="server">
 														</asp:Label>
 													</ItemTemplate>
 												</asp:TemplateColumn>
