@@ -7,7 +7,13 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">	
 			function showWaitControls()
 			{
@@ -115,7 +121,7 @@
 						<table align="center" width="100%">
 							<TR height="40">
 								<TD align="center" width="150" vAlign="top">
-									<asp:button id="cmdMensaje" runat="server" CssClass="botonesInput" Width="100px" Text="Mensaje de Piso"></asp:button></TD>
+									<asp:button id="cmdMensaje" runat="server" CssClass="botonesInput" Width="190px" Text="Mensaje de Piso"></asp:button></TD>
 								<TD align="center" width="140" vAlign="top">
 									<asp:button id="cmdLiberar" runat="server" CssClass="botonesInput" Width="80px" Text="Liberar"></asp:button></TD>
 								<TD align="center" width="140" vAlign="top">
