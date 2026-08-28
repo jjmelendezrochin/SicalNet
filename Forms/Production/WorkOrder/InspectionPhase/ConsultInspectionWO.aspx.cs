@@ -59,14 +59,16 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 				BindEntryFields();
 				string tmpInit = (string) Session["InitialDate"];
 				string tmpFin = (string) Session["FinalDate"];
+				// tmpInit = tmpInit.Replace(".", "").ToLower();
+				// tmpFin = tmpFin.Replace(".", "").ToLower();
 
 				String sFechaIni = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 				String sFechaFin = System.DateTime.Now.ToString("dd-MMM-yyyy").Replace(".", "").ToLower();
 
 				if (tmpInit == null || tmpFin ==null)
 				{
-					txtFechaInicial.Text=System.DateTime.Now.ToString("dd-MMM-yyyy");
-					txtFechaFinal.Text=System.DateTime.Now.ToString("dd-MMM-yyyy");
+					txtFechaInicial.Text= sFechaIni;
+					txtFechaFinal.Text	= sFechaFin;
 				}
 				else
 				{
@@ -268,7 +270,24 @@ namespace UserInterface.Forms.Production.WorkOrder.InspectionPhase
 
 					if (Sts == PendingStatus) 
 					{
-						throw new Exception(string.Format("La Secuencia {0} esta en estado PENDIENTE, no puede ser Consultada",Secuencia));
+						string mensaje = string.Format(
+							"La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada",
+							Secuencia
+						);
+
+						mensaje = mensaje.Replace("\\", "\\\\")
+										 .Replace("'", "\\'")
+										 .Replace("\r", "")
+										 .Replace("\n", "\\n");
+
+						Page.ClientScript.RegisterStartupScript(
+							this.GetType(),
+							"SecuenciaPendiente",
+							"SicalAlert.mostrar('" + mensaje + "', 'advertencia', 'Secuencia pendiente');",
+							true
+						);
+
+						return;
 					}			
 
 					string Fecha2 =((Label)e.Item.FindControl("ItemFecha")).Text.ToString();

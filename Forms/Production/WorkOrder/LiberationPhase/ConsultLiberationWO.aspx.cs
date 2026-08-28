@@ -50,9 +50,9 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 		protected System.Web.UI.WebControls.Button btnImprimir;
 		protected System.Web.UI.WebControls.Button cmdEjecutaReporte;
 		protected System.Web.UI.WebControls.Image Image1;
-		protected System.Web.UI.WebControls.TextBox txtSecuenciasSelectionFormula;
-		protected System.Web.UI.WebControls.TextBox txtSecuencias;
-		protected System.Web.UI.WebControls.TextBox txtOrdenes;
+		protected System.Web.UI.WebControls.HiddenField txtSecuenciasSelectionFormula;
+		protected System.Web.UI.WebControls.HiddenField txtSecuencias;
+		protected System.Web.UI.WebControls.HiddenField txtOrdenes;
 	
 		// Aqui se hace referencia al área 12 del catálogo de áreas
 		// que es la fase de inspección de la tabla de Area
@@ -350,9 +350,15 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 
 			// Validación de secuencia mayor a cero
 			if (i==0) 
-			{
-				Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-					"alert('"+"Favor de seleccionar alguna secuencia para imprimir"+"');</script>");
+			{				
+				string mensaje = string.Format("Favor de seleccionar alguna secuencia para imprimir");
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"Liberación",
+					"SicalAlert.mostrar('" + mensaje + "', 'advertencia');",
+					true
+				);
 				return;
 			}
 
@@ -420,8 +426,8 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 
 			try{				
 				// Lectura de secuencias selection formula
-				string secuencias = this.txtSecuencias.Text;
-				string ordenes = this.txtOrdenes.Text;
+				string secuencias = this.txtSecuencias.Value;
+				string ordenes = this.txtOrdenes.Value;
 
 				oLog.Add("Las secuencias son " +  secuencias);
 				oLog.Add("Las ordenes son  " +  ordenes);
@@ -536,7 +542,7 @@ namespace UserInterface.Forms.Production.WorkOrder.LiberationPhase
 				// ***********************************************************
 
 				// Lectura de secuencias selection formula
-				string txtSecuenciasSelectionFormula = this.txtSecuenciasSelectionFormula.Text;
+				string txtSecuenciasSelectionFormula = this.txtSecuenciasSelectionFormula.Value;
 				oLog.Add("Selection Formula " + txtSecuenciasSelectionFormula);
 
 				// Impresión de reporte

@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="NumeroPaquete.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT.NumeroPaquete" %>
+ï»¿<%@ Page language="c#" Codebehind="NumeroPaquete.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT.NumeroPaquete" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
   <HEAD>
@@ -7,7 +7,13 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="..\..\..\..\styloDESC.CSS" type="text/css" rel="stylesheet">
+	
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
   </HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="NumeroPaquete" method="post" runat="server">
@@ -29,7 +35,7 @@
 					<td></td>
 					<td><b>
 							<asp:label id="Label5" runat="server" CssClass="standard-text">
-								<b>Láminas útiles:</b></asp:label></b>
+								<b>LÃ¡minas Ãºtiles:</b></asp:label></b>
 						<asp:label id="lblLaminas" runat="server" CssClass="standard-text"></asp:label></td>
 				</tr>
 				<tr>
@@ -40,7 +46,7 @@
 				<tr>
 					<td></td>
 					<td vAlign="bottom" align="right"><asp:button id="cmdAnterior" CssClass="botonesInput" Runat="server" Text="<- Anterior"></asp:button></td>
-					<td><asp:button id="btnOk" CssClass="botonesInput" Width="80px" Runat="server" Text="Siguiente ->"></asp:button></td>
+					<td><asp:button id="btnOk" CssClass="botonesInput" Width="100px" Runat="server" Text="Siguiente ->"></asp:button></td>
 				</tr>
 			</table>
 		</form>

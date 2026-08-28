@@ -31,15 +31,19 @@
 		    {
 		    
 				// Colocando la lista de secuencias
-				var txtSecuencias = document.getElementById('txtSecuencias');
-				var txtOrdenes = document.getElementById('txtOrdenes');
+				// var txtSecuencias = document.getElementById('txtSecuencias');
+				// var txtOrdenes = document.getElementById('txtOrdenes');
+
+                var txtSecuencias = document.getElementById('<%= txtSecuencias.ClientID %>');
+                var txtOrdenes = document.getElementById('<%= txtOrdenes.ClientID %>');
+
 				txtSecuencias.value="";
 				txtSecuencias.value=listasecuencias;
 				txtOrdenes.value = "";
 				txtOrdenes.value=listaordenes;
 				
 				// Colocando las secuencias del selection formula que vienen en la 2a variable
-				var txtSecuenciasSelectionFormula = document.getElementById('txtSecuenciasSelectionFormula');
+                var txtSecuenciasSelectionFormula = document.getElementById('<%= txtSecuenciasSelectionFormula.ClientID %>');
 				txtSecuenciasSelectionFormula.value="";
 				txtSecuenciasSelectionFormula.value=selectionformula_secuencias;
 				
@@ -77,7 +81,7 @@
 				alert('Algo salio mal');
 		    }
 		    	  
-		</script>
+        </script>
 
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
@@ -143,9 +147,9 @@
 								Height="0px"
 								Visible="False">
 							</asp:button>
-						<asp:textbox id="txtSecuenciasSelectionFormula" Runat="server" Width="0px" Height="0px" Visible="False"></asp:textbox>
-						<asp:textbox id="txtSecuencias" Runat="server" Width="0px" Height="0px" Visible="False"></asp:textbox>
-						<asp:textbox id="txtOrdenes" Runat="server" Width="0px" Height="0px" Visible="False"></asp:textbox>
+						<asp:HiddenField id="txtSecuenciasSelectionFormula" Runat="server"></asp:HiddenField>
+						<asp:HiddenField id="txtSecuencias" Runat="server"></asp:HiddenField>
+						<asp:HiddenField id="txtOrdenes" Runat="server"></asp:HiddenField>
 					</td>
 					</TD></tr>
 				<TR>

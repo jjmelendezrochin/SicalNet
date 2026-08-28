@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="EnvioPTFinal.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT.EnvioPTFinal" %>
+ï»¿<%@ Page language="c#" Codebehind="EnvioPTFinal.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT.EnvioPTFinal" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -7,20 +7,33 @@
 		<meta name="CODE_LANGUAGE" Content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<LINK href="../../../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language=javascript>	
 			function showWaitControls()
 			{
 				waitControls.style.display='';
-			}		
+			}
+			
 			function getConfirm(Button)
 			{
-				if(window.confirm("¿Estás seguro que deseas liberar esta secuencia?"))
-				{
-				document.forms[0].elements[Button].click()
-				}
-			} 
-		</script>
+                SicalAlert.confirmar(
+                    "Â¿EstÃ¡s seguro que deseas liberar esta secuencia?",
+                    "Confirmar liberaciÃ³n",
+                    function () {
+                        document.forms[0].elements[Button].click();
+                    }
+                );
+
+                return false;
+            }
+
+        </script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="EnvioPTFinal" method="post" runat="server">
@@ -46,7 +59,7 @@
 						<td><asp:textbox id="txtUTEC" Runat="server" ReadOnly="True" CssClass="Standard-text" Width="250px"
 								BorderStyle="Groove"></asp:textbox></td>
 						<td>
-							<asp:Label id="Label4" runat="server" CssClass="standard-text">Láminas:</asp:Label></td>
+							<asp:Label id="Label4" runat="server" CssClass="standard-text">LÃ¡minas:</asp:Label></td>
 						<td><asp:textbox id="txtCantidad" Runat="server" ReadOnly="True" CssClass="Standard-text" BorderStyle="Groove"></asp:textbox></td>
 					</tr>
 					<tr width="50px">
@@ -138,15 +151,15 @@
 								<TBODY>
 									<TR>
 										<TD vAlign="top" align="center" width="120">
-											<asp:button id="cmdMsgPiso" CssClass="botonesInput" Width="100px" Runat="server" Text="Mensaje de Piso"></asp:button></TD>
+											<asp:button id="cmdMsgPiso" CssClass="botonesInput" Width="200px" Runat="server" Text="Mensaje de Piso"></asp:button></TD>
 										<TD vAlign="top" align="center" width="120">
-											<asp:button id="btnBack" CssClass="botonesInput" Width="80px" Runat="server" Text="<-Anterior"></asp:button></TD>
+											<asp:button id="btnBack" CssClass="botonesInput" Width="90px" Runat="server" Text="<-Anterior"></asp:button></TD>
 										<TD vAlign="top" align="center" width="120">
 											<asp:button id="btnLiberar" CssClass="botonesInput" Width="80px" Runat="server" Text="Liberar"></asp:button></TD>
 										<TD vAlign="top" align="center" width="120">
 											<asp:button id="btnAgregar" CssClass="botonesInput" Width="80px" Runat="server" Text="Aceptar"></asp:button></TD>
 										<TD vAlign="top" align="center" width="120">
-											<asp:button id="btnCancelar" CssClass="botonesInput" Width="80px" Runat="server" Text="Regresar"></asp:button></TD>
+											<asp:button id="btnCancelar" CssClass="botonesInput" Width="90px" Runat="server" Text="Regresar"></asp:button></TD>
 										<TD vAlign="top" align="center" width="100">
 											<DIV id="waitControls" style="DISPLAY: none">
 											<TABLE id="Table1" width="50">

@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="ConsultInspectionWorkOrders.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.InspectionPhase.ConsultInspectionWorkOrders" %>
+ï»¿<%@ Page language="c#" Codebehind="ConsultInspectionWorkOrders.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.WorkOrder.InspectionPhase.ConsultInspectionWorkOrders" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -7,26 +7,61 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<LINK rel="stylesheet" type="text/css" href="../../../../styloDESC.CSS">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">	
 			function showWaitControls()
 			{
 				waitControls.style.display='';
-			}		
-		function getConfirmQuarentine(Button)
-			{
-				if(window.confirm("¿Estás seguro que deseas liberar la secuencia a fase de Pendientes/Cuarentena?"))
+			}
+
+			function getConfirmQuarentine(Button)
 				{
-				document.forms[0].elements[Button].click()
+				var btn = document.getElementById(Button);
+
+				if (btn.getAttribute("data-confirmado") == "1") {
+					btn.removeAttribute("data-confirmado");
+					return true;
 				}
-			} 
+
+				SicalAlert.confirmar(
+					"Â¿EstÃ¡s seguro que deseas liberar la secuencia a fase de Pendientes/Cuarentena?",
+					"Confirmar liberaciÃ³n",
+					function () {
+						btn.setAttribute("data-confirmado", "1");
+						btn.click();
+					}
+				);
+
+				return false;
+			}
+
 			function getConfirmEnvio(Button)
 			{
-				if(window.confirm("¿Estás seguro que deseas liberar la secuencia a la fase de Envío de Producto Terminado?"))
-				{
-				document.forms[0].elements[Button].click()
-				}
-			} 
+                var btn = document.getElementById(Button);
+
+                if (btn.getAttribute("data-confirmado") == "1") {
+                    btn.removeAttribute("data-confirmado");
+                    return true;
+                }
+
+                SicalAlert.confirmar(
+                    "Â¿EstÃ¡s seguro que deseas liberar la secuencia a la fase de EnvÃ­o de Producto Terminado?",
+                    "Confirmar liberaciÃ³n",
+                    function () {
+                        btn.setAttribute("data-confirmado", "1");
+                        btn.click();
+                    }
+                );
+
+                return false;
+			}
+
 		function showid(id)
 		{
 			var r1id=id.concat("_0")
@@ -69,13 +104,13 @@
 			}
 				
 		}
-		</script>
+        </script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="ConsultInspectionWorkOrders" method="post" runat="server">
 			<table align="center">
 				<tr>
-					<td colSpan="4" align="center"><asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14"> Fase de Inspección</asp:label>
+					<td colSpan="4" align="center"><asp:label id="lblTitle" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14"> Fase de InspecciÃ³n</asp:label>
 						<hr>
 					</td>
 				</tr>
@@ -90,7 +125,7 @@
 					<td><asp:label id="lblUtec" runat="server" Width="98px" Height="16px" CssClass="standard-text">UTEC</asp:label></td>
 					<td><asp:textbox id="txtUtec" Width="250px" CssClass="Standard-text" Runat="server" ReadOnly="True"
 							BorderStyle="Groove"></asp:textbox></td>
-					<td><asp:label id="lblCantidad" runat="server" Width="98px" Height="16px" CssClass="standard-text">Láminas</asp:label></td>
+					<td><asp:label id="lblCantidad" runat="server" Width="98px" Height="16px" CssClass="standard-text">LÃ¡minas</asp:label></td>
 					<td><asp:textbox id="txtCantidad" CssClass="Standard-text" Runat="server" ReadOnly="True" BorderStyle="Groove"></asp:textbox></td>
 				</tr>
 				<tr>
@@ -145,10 +180,10 @@
 					<TD colSpan="4"></TD>
 				</TR>
 				<TR>
-					<TD colSpan="4"><asp:label id="Label2" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14">Detalle por Lámina</asp:label></TD>
+					<TD colSpan="4"><asp:label id="Label2" runat="server" Font-Names="Arial Narrow" Font-Bold="True" Font-Size="14">Detalle por LÃ¡mina</asp:label></TD>
 				</TR>
 				<TR>
-					<TD colSpan="4"><asp:datagrid id="dgdDefecto" runat="server" Font-Names="Verdana" Width="700px" BorderStyle="None"
+					<TD colSpan="4"><asp:datagrid id="dgdDefecto" runat="server" Font-Names="Verdana" Width="900px" BorderStyle="None"
 							AutoGenerateColumns="False" Font-Name="Verdana" FontSize="11px" AllowSorting="True" BorderColor="Gray"
 							CellPadding="2" BackColor="Transparent" style="Z-INDEX: 0">
 							<HeaderStyle Font-Bold="True" BackColor="DarkGray"></HeaderStyle>
@@ -206,21 +241,21 @@
 					<TD colSpan="4"><asp:label id="Label3" runat="server" CssClass="standard-text">Mensaje de Piso</asp:label></TD>
 				</TR>
 				<TR>
-					<TD colSpan="4"><asp:textbox id="txtPiso" runat="server" Width="700px" Height="48px" CssClass="standard-text"
+					<TD colSpan="4"><asp:textbox id="txtPiso" runat="server" Width="100%" Height="48px" CssClass="standard-text"
 							ReadOnly="True" BorderStyle="Groove" TextMode="MultiLine"></asp:textbox></TD>
 				</TR>
 				<TR>
-					<TD colSpan="4">
-						<table width="700" align="center">
+					<TD colSpan="6">
+						<table width="100%" align="center">
 							<TR>
-								<TD vAlign="top" width="120" align="center"><asp:button id="btnMensaje" Width="115px" CssClass="botonesInput" Runat="server" Text="Mensaje de Piso"></asp:button></TD>
-								<TD vAlign="top" width="140" align="center"><asp:button id="btnQuarentine" OnClientClick="return getConfirmQuarentine(this.id)" Width="156px" CssClass="botonesInput"
+								<TD vAlign="top" width="120" align="center"><asp:button id="btnMensaje" Width="200px" CssClass="botonesInput" Runat="server" Text="Mensaje de Piso"></asp:button></TD>
+								<TD vAlign="top" width="140" align="center"><asp:button id="btnQuarentine" OnClientClick="return getConfirmQuarentine(this.id)" Width="180px" CssClass="botonesInput"
 										Runat="server" Text="Liberar Pend./Cuarentena"></asp:button></TD>
-								<TD vAlign="top" width="150" align="center">&nbsp;&nbsp;&nbsp;
-									<asp:button id="btnLiberar" OnClientClick="return getConfirmEnvio(this.id)" Width="145px" CssClass="botonesInput"
+								<TD vAlign="top" width="150" align="center">
+									<asp:button id="btnLiberar" OnClientClick="return getConfirmEnvio(this.id)" Width="180px" CssClass="botonesInput"
 										Runat="server" Text="Liberar a Entrega de PT"></asp:button></TD>
 								<TD vAlign="top" width="120" align="center"><asp:button id="btnAceptar" Width="80px" CssClass="botonesInput" Runat="server" Text="Aceptar"></asp:button></TD>
-								<TD vAlign="top" width="120" align="center"><asp:button id="btnCancelar" runat="server" Width="80px" CssClass="botonesInput" Text="Regresar"></asp:button></TD>
+								<TD vAlign="top" width="120" align="center"><asp:button id="btnCancelar" runat="server" Width="90px" CssClass="botonesInput" Text="Regresar"></asp:button></TD>
 								<TD vAlign="top" width="100" align="center">
 									<DIV style="DISPLAY: none" id="waitControls">
 										<TABLE id="Table1" width="50">
