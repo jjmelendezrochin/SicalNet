@@ -7,7 +7,13 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language=javascript>	
 		function showWaitControls()
 		{
@@ -97,12 +103,25 @@
 						<TD  colSpan="5"><FONT size="2"><B><asp:label id="Label1" runat="server" CssClass="standard-text">Empaque</asp:label></B></FONT></TD>
 					</TR>
 					<TR>
-						<TD colSpan="5"><asp:datagrid id="dgdEmpaque" runat="server" Width="100%" Height="120px" BorderStyle="None" AutoGenerateColumns="False"
-								Font-Name="Verdana" FontSize="11px" AllowSorting="True" Font-Names="Verdana" CellPadding="2" BackColor="#E0E0E0">
+						<TD colSpan="5">
+							<asp:datagrid 
+								id="dgdEmpaque" 
+								runat="server" 
+								Width="100%" 
+								BorderStyle="None" 
+								AutoGenerateColumns="False"
+								Font-Name="Verdana" 
+								FontSize="11px" 
+								AllowSorting="True" 
+								Font-Names="Verdana" 
+								CellPadding="2" 
+								CssClass="GridView grid-header" 
+								OnSelectedIndexChanged="dgdEmpaque_SelectedIndexChanged">
+								
 								<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 								<Columns>
 									<asp:TemplateColumn HeaderText="Material">
-										<HeaderStyle HorizontalAlign="Center" Width="100px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+										<HeaderStyle HorizontalAlign="Center" Width="100px" CssClass="grid-header" VerticalAlign="Middle" Height="10px"></HeaderStyle>
 										<ItemStyle Width="60px" CssClass="grid-item"></ItemStyle>
 										<ItemTemplate>
 											<asp:label id="lblMaterial" Text='<%# DataBinder.Eval(Container, "DataItem.CodigoSAP") %>' Runat="server" CssClass="standard-text">
@@ -110,7 +129,7 @@
 										</ItemTemplate>
 									</asp:TemplateColumn>
 									<asp:TemplateColumn HeaderText="Descripcion">
-										<HeaderStyle HorizontalAlign="Center" Width="300px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+										<HeaderStyle HorizontalAlign="Center" Width="300px" CssClass="grid-header" VerticalAlign="Middle" Height="10px"></HeaderStyle>
 										<ItemStyle Width="300px" CssClass="grid-first-item"></ItemStyle>
 										<ItemTemplate>
 											<asp:Label ID="lblDesc" Runat=server Text='<%# DataBinder.Eval(Container, "DataItem.Descripcion") %>' CssClass="standard-text">
@@ -118,7 +137,7 @@
 										</ItemTemplate>
 									</asp:TemplateColumn>
 									<asp:TemplateColumn HeaderText="Cantidad">
-										<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+										<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle" Height="10px"></HeaderStyle>
 										<ItemStyle Width="150px" CssClass="grid-first-item"></ItemStyle>
 										<ItemTemplate>
 											<asp:Label ID="lblCantidade" Runat=server Text='<%# DataBinder.Eval(Container,"DataItem.Cantidad")%>' CssClass="standard-text">
@@ -169,7 +188,7 @@
 								<HeaderStyle Font-Bold="True" CssClass="grid-header"></HeaderStyle>
 								<Columns>
 									<asp:TemplateColumn HeaderText="No Lamina">
-										<HeaderStyle HorizontalAlign="Center" Width="100px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+										<HeaderStyle HorizontalAlign="Center" Width="100px" CssClass="grid-header" VerticalAlign="Middle" Height="10px"></HeaderStyle>
 										<ItemStyle Width="60px" CssClass="grid-item"></ItemStyle>
 										<ItemTemplate>
 											<asp:label id="lblLamina" Text='<%# DataBinder.Eval(Container, "DataItem.NoLamina") %>' Runat="server" CssClass="standard-text">
@@ -179,7 +198,7 @@
 										</ItemTemplate>
 									</asp:TemplateColumn>
 									<asp:TemplateColumn HeaderText="Calidad de Lamina">
-										<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+										<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle" Height="10px"></HeaderStyle>
 										<ItemStyle Width="10px" CssClass="grid-first-item"></ItemStyle>
 										<ItemTemplate>
 											<asp:RadioButtonList ID="RDLCalidad" Runat="server" RepeatDirection="Horizontal" CssClass="standard-text" onclick="showid(this.id)">
@@ -192,7 +211,7 @@
 										</ItemTemplate>
 									</asp:TemplateColumn>
 									<asp:TemplateColumn HeaderText="Defecto">
-										<HeaderStyle HorizontalAlign="Center" Width="100px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+										<HeaderStyle HorizontalAlign="Center" Width="100px" CssClass="grid-header" VerticalAlign="Middle" Height="10px"></HeaderStyle>
 										<ItemStyle Width="100px" CssClass="grid-first-item"></ItemStyle>
 										<ItemTemplate>
 											<asp:DropDownList id="ddlDefecto" CssClass="standard-text" Runat="server" style="DISPLAY: none"></asp:DropDownList>
@@ -201,7 +220,7 @@
 										</ItemTemplate>
 									</asp:TemplateColumn>
 									<asp:TemplateColumn HeaderText="Area Destino">
-										<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+										<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle" Height="10px"></HeaderStyle>
 										<ItemStyle Width="150px" CssClass="grid-first-item"></ItemStyle>
 										<ItemTemplate>
 											<asp:Label ID="lblArea" Runat="server" CssClass="standard-text"></asp:Label>
@@ -221,7 +240,7 @@
 					</TR>
 					<TR>
 						<TD align="center" width=150 vAlign=top>
-							<asp:Button id="btnMensaje" CssClass="botonesInput" Runat="server" Text="Mensaje de Piso" Width="100px"></asp:Button></TD>
+							<asp:Button id="btnMensaje" CssClass="botonesInput" Runat="server" Text="Mensaje de Piso" Width="200px"></asp:Button></TD>
 						<TD align="center" width=140 vAlign=top>
 							<asp:Button id="btnLiberar" Width="80px" CssClass="botonesInput" Runat="server" Text="Liberar"></asp:Button></TD>
 						<TD align="center" width=140 vAlign=top>

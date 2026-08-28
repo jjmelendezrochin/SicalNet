@@ -486,6 +486,9 @@ namespace UserInterface.Forms.Production
 
 		}
 
+        protected void dgdEmpaque_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-	}
+        }
+    }
 }

@@ -1,0 +1,74 @@
+27/08/2026 07:14:45 p. m. - Secuencias seleccionadas 5
+27/08/2026 07:14:45 p. m. - Lista secuencias 326071701 _ 126071801 _ 126071701 _ 326072201 _ 326072101
+27/08/2026 07:14:45 p. m. - Lista datos en cbb 326071701 | 5491979 | 26671 | 240X120 4.0 CRISTAL PP/SR | 17 | 14 _ 126071801 | 5492238 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 126071701 | 5491891 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 326072201 | 5492653 | 30422 | 240X120 3.0 L-715 GM PCH/R EX | 18 | 18 _ 326072101 | 5492569 | 68941 | 240X180 6.0 CRISTAL PPS/SR NW | 12 | 12
+27/08/2026 07:14:45 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="326071701" OR {Vw_etiqueta_liberacion.Secuencia}="126071801" OR {Vw_etiqueta_liberacion.Secuencia}="126071701" OR {Vw_etiqueta_liberacion.Secuencia}="326072201" OR {Vw_etiqueta_liberacion.Secuencia}="326072101"
+27/08/2026 07:14:45 p. m. - servercbb localhost
+27/08/2026 07:14:45 p. m. - Lista listaordenes 5491979 _ 5492238 _ 5491891 _ 5492653 _ 5492569
+27/08/2026 07:14:48 p. m. - Secuencias seleccionadas 5
+27/08/2026 07:14:48 p. m. - Lista secuencias 326071701 _ 126071801 _ 126071701 _ 326072201 _ 326072101
+27/08/2026 07:14:48 p. m. - Lista datos en cbb 326071701 | 5491979 | 26671 | 240X120 4.0 CRISTAL PP/SR | 17 | 14 _ 126071801 | 5492238 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 126071701 | 5491891 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 326072201 | 5492653 | 30422 | 240X120 3.0 L-715 GM PCH/R EX | 18 | 18 _ 326072101 | 5492569 | 68941 | 240X180 6.0 CRISTAL PPS/SR NW | 12 | 12
+27/08/2026 07:14:48 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="326071701" OR {Vw_etiqueta_liberacion.Secuencia}="126071801" OR {Vw_etiqueta_liberacion.Secuencia}="126071701" OR {Vw_etiqueta_liberacion.Secuencia}="326072201" OR {Vw_etiqueta_liberacion.Secuencia}="326072101"
+27/08/2026 07:14:48 p. m. - servercbb localhost
+27/08/2026 07:14:48 p. m. - Lista listaordenes 5491979 _ 5492238 _ 5491891 _ 5492653 _ 5492569
+27/08/2026 07:14:49 p. m. - Secuencias seleccionadas 5
+27/08/2026 07:14:49 p. m. - Lista secuencias 326071701 _ 126071801 _ 126071701 _ 326072201 _ 326072101
+27/08/2026 07:14:49 p. m. - Lista datos en cbb 326071701 | 5491979 | 26671 | 240X120 4.0 CRISTAL PP/SR | 17 | 14 _ 126071801 | 5492238 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 126071701 | 5491891 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 326072201 | 5492653 | 30422 | 240X120 3.0 L-715 GM PCH/R EX | 18 | 18 _ 326072101 | 5492569 | 68941 | 240X180 6.0 CRISTAL PPS/SR NW | 12 | 12
+27/08/2026 07:14:49 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="326071701" OR {Vw_etiqueta_liberacion.Secuencia}="126071801" OR {Vw_etiqueta_liberacion.Secuencia}="126071701" OR {Vw_etiqueta_liberacion.Secuencia}="326072201" OR {Vw_etiqueta_liberacion.Secuencia}="326072101"
+27/08/2026 07:14:49 p. m. - servercbb localhost
+27/08/2026 07:14:49 p. m. - Lista listaordenes 5491979 _ 5492238 _ 5491891 _ 5492653 _ 5492569
+27/08/2026 07:14:50 p. m. - Secuencias seleccionadas 5
+27/08/2026 07:14:50 p. m. - Lista secuencias 326071701 _ 126071801 _ 126071701 _ 326072201 _ 326072101
+27/08/2026 07:14:50 p. m. - Lista datos en cbb 326071701 | 5491979 | 26671 | 240X120 4.0 CRISTAL PP/SR | 17 | 14 _ 126071801 | 5492238 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 126071701 | 5491891 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 326072201 | 5492653 | 30422 | 240X120 3.0 L-715 GM PCH/R EX | 18 | 18 _ 326072101 | 5492569 | 68941 | 240X180 6.0 CRISTAL PPS/SR NW | 12 | 12
+27/08/2026 07:14:50 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="326071701" OR {Vw_etiqueta_liberacion.Secuencia}="126071801" OR {Vw_etiqueta_liberacion.Secuencia}="126071701" OR {Vw_etiqueta_liberacion.Secuencia}="326072201" OR {Vw_etiqueta_liberacion.Secuencia}="326072101"
+27/08/2026 07:14:50 p. m. - servercbb localhost
+27/08/2026 07:14:50 p. m. - Lista listaordenes 5491979 _ 5492238 _ 5491891 _ 5492653 _ 5492569
+27/08/2026 07:15:02 p. m. - Secuencias seleccionadas 5
+27/08/2026 07:15:02 p. m. - Lista secuencias 326071701 _ 126071801 _ 126071701 _ 326072201 _ 326072101
+27/08/2026 07:15:02 p. m. - Lista datos en cbb 326071701 | 5491979 | 26671 | 240X120 4.0 CRISTAL PP/SR | 17 | 14 _ 126071801 | 5492238 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 126071701 | 5491891 | 30150 | 240X120 4.0 CRISTAL P-30 PCPF/R | 2 | 2 _ 326072201 | 5492653 | 30422 | 240X120 3.0 L-715 GM PCH/R EX | 18 | 18 _ 326072101 | 5492569 | 68941 | 240X180 6.0 CRISTAL PPS/SR NW | 12 | 12
+27/08/2026 07:15:02 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="326071701" OR {Vw_etiqueta_liberacion.Secuencia}="126071801" OR {Vw_etiqueta_liberacion.Secuencia}="126071701" OR {Vw_etiqueta_liberacion.Secuencia}="326072201" OR {Vw_etiqueta_liberacion.Secuencia}="326072101"
+27/08/2026 07:15:02 p. m. - servercbb localhost
+27/08/2026 07:15:02 p. m. - Lista listaordenes 5491979 _ 5492238 _ 5491891 _ 5492653 _ 5492569
+27/08/2026 07:25:42 p. m. - Secuencias seleccionadas 0
+27/08/2026 07:26:13 p. m. - Secuencias seleccionadas 0
+27/08/2026 07:32:25 p. m. - Secuencias seleccionadas 3
+27/08/2026 07:32:25 p. m. - Lista secuencias 126072201 _ 126072101 _ 126072301
+27/08/2026 07:32:25 p. m. - Lista datos en cbb 126072201 | 5492637 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072101 | 5492506 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072301 | 5492854 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 3
+27/08/2026 07:32:25 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="126072201" OR {Vw_etiqueta_liberacion.Secuencia}="126072101" OR {Vw_etiqueta_liberacion.Secuencia}="126072301"
+27/08/2026 07:32:25 p. m. - servercbb localhost
+27/08/2026 07:32:25 p. m. - Lista listaordenes 5492637 _ 5492506 _ 5492854
+27/08/2026 07:32:27 p. m. - Secuencias seleccionadas 3
+27/08/2026 07:32:27 p. m. - Lista secuencias 126072201 _ 126072101 _ 126072301
+27/08/2026 07:32:27 p. m. - Lista datos en cbb 126072201 | 5492637 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072101 | 5492506 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072301 | 5492854 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 3
+27/08/2026 07:32:27 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="126072201" OR {Vw_etiqueta_liberacion.Secuencia}="126072101" OR {Vw_etiqueta_liberacion.Secuencia}="126072301"
+27/08/2026 07:32:27 p. m. - servercbb localhost
+27/08/2026 07:32:27 p. m. - Lista listaordenes 5492637 _ 5492506 _ 5492854
+27/08/2026 07:32:28 p. m. - Secuencias seleccionadas 3
+27/08/2026 07:32:28 p. m. - Lista secuencias 126072201 _ 126072101 _ 126072301
+27/08/2026 07:32:28 p. m. - Lista datos en cbb 126072201 | 5492637 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072101 | 5492506 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072301 | 5492854 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 3
+27/08/2026 07:32:28 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="126072201" OR {Vw_etiqueta_liberacion.Secuencia}="126072101" OR {Vw_etiqueta_liberacion.Secuencia}="126072301"
+27/08/2026 07:32:28 p. m. - servercbb localhost
+27/08/2026 07:32:28 p. m. - Lista listaordenes 5492637 _ 5492506 _ 5492854
+27/08/2026 07:40:33 p. m. - Secuencias seleccionadas 3
+27/08/2026 07:40:33 p. m. - Lista secuencias 126072201 _ 126072101 _ 126072301
+27/08/2026 07:40:33 p. m. - Lista datos en cbb 126072201 | 5492637 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072101 | 5492506 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072301 | 5492854 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 3
+27/08/2026 07:40:33 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="126072201" OR {Vw_etiqueta_liberacion.Secuencia}="126072101" OR {Vw_etiqueta_liberacion.Secuencia}="126072301"
+27/08/2026 07:40:33 p. m. - servercbb localhost
+27/08/2026 07:40:33 p. m. - Lista listaordenes 5492637 _ 5492506 _ 5492854
+27/08/2026 07:59:19 p. m. - Secuencias seleccionadas 2
+27/08/2026 07:59:19 p. m. - Lista secuencias 126072201 _ 126072101
+27/08/2026 07:59:19 p. m. - Lista datos en cbb 126072201 | 5492637 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072101 | 5492506 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4
+27/08/2026 07:59:19 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="126072201" OR {Vw_etiqueta_liberacion.Secuencia}="126072101"
+27/08/2026 07:59:19 p. m. - servercbb localhost
+27/08/2026 07:59:19 p. m. - Lista listaordenes 5492637 _ 5492506
+27/08/2026 07:59:21 p. m. - Secuencias seleccionadas 2
+27/08/2026 07:59:21 p. m. - Lista secuencias 126072201 _ 126072101
+27/08/2026 07:59:21 p. m. - Lista datos en cbb 126072201 | 5492637 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072101 | 5492506 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4
+27/08/2026 07:59:21 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="126072201" OR {Vw_etiqueta_liberacion.Secuencia}="126072101"
+27/08/2026 07:59:21 p. m. - servercbb localhost
+27/08/2026 07:59:21 p. m. - Lista listaordenes 5492637 _ 5492506
+27/08/2026 08:09:20 p. m. - Secuencias seleccionadas 2
+27/08/2026 08:09:21 p. m. - Lista secuencias 126072201 _ 126072101
+27/08/2026 08:09:21 p. m. - Lista datos en cbb 126072201 | 5492637 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4 _ 126072101 | 5492506 | 99787 | 240X120 4.0 CLEAR STRIPES PFPCH/R EX (TEXTURIZA PI | 4 | 4
+27/08/2026 08:09:21 p. m. - Secuencias {Vw_etiqueta_liberacion.Secuencia}="126072201" OR {Vw_etiqueta_liberacion.Secuencia}="126072101"
+27/08/2026 08:09:21 p. m. - servercbb localhost
+27/08/2026 08:09:21 p. m. - Lista listaordenes 5492637 _ 5492506

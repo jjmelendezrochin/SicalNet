@@ -1975,3 +1975,15 @@ button.btn-cancelar,
     font-size: 15px;
     font-weight: bold;
 }
+
+
+.grid-header-compact {
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 4px 10px !important;
+    vertical-align: middle !important;
+    line-height: 20px !important;
+    background-color: #0B628C;
+    color: white;
+    font-weight: bold;
+}

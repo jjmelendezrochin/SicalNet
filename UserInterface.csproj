@@ -156,6 +156,8 @@
     <Content Include="Controls\Zonas.ascx" />
     <Content Include="Forms\Production\ConsultarCuredWO.aspx" />
     <Content Include="Forms\Production\ConsultReactionWO1.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasEnvioPT\EnvioPTFinal.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasEnvioPT\NumeroPaquete.aspx" />
     <Content Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCuredWO.aspx" />
     <Content Include="Forms\Structures\imagenes\ico-bullet.gif" />
     <Content Include="Forms\Structures\imagenes\spacer.gif" />
@@ -244,8 +246,6 @@
     <Content Include="Forms\Production\WorkOrder\PartidasColor\NoOfVasos.aspx" />
     <Content Include="Forms\Production\WorkOrder\PartidasColor\VasosDetails.aspx" />
     <Content Include="Forms\Production\WorkOrder\PartidasEnvioPT\ConsultEnvioPT.aspx" />
-    <Content Include="Forms\Production\WorkOrder\PartidasEnvioPT\EnvioPTFinal.aspx" />
-    <Content Include="Forms\Production\WorkOrder\PartidasEnvioPT\NumeroPaquete.aspx" />
     <Content Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCured.aspx" />
     <Content Include="Forms\Production\WorkOrder\PartidasRecepcionPT\ConsultRecepcionPT.aspx" />
     <Content Include="Forms\Production\WorkOrder\PartidasRecepcionPT\ConsultRecepcionPT1.aspx" />
@@ -642,6 +642,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ColorWOReport.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasEnvioPT\EnvioPTFinal.aspx.cs">
+      <DependentUpon>EnvioPTFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasEnvioPT\NumeroPaquete.aspx.cs">
+      <DependentUpon>NumeroPaquete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCuredWO.aspx.cs">
       <DependentUpon>Consultar_PostCuredWO.aspx</DependentUpon>
@@ -1660,6 +1668,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasEnvioPT\ConsultEnvioPT.aspx.resx">
       <DependentUpon>ConsultEnvioPT.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasEnvioPT\EnvioPTFinal.aspx.resx">
+      <DependentUpon>EnvioPTFinal.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasEnvioPT\NumeroPaquete.aspx.resx">
+      <DependentUpon>NumeroPaquete.aspx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasEnvioPT\ProductoTerminado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
