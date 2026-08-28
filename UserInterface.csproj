@@ -154,7 +154,9 @@
     <Content Include="Controls\WebUserControl1.ascx" />
     <Content Include="Controls\WorkOrdersGrid.ascx" />
     <Content Include="Controls\Zonas.ascx" />
+    <Content Include="Forms\Production\ConsultarCuredWO.aspx" />
     <Content Include="Forms\Production\ConsultReactionWO1.aspx" />
+    <Content Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCuredWO.aspx" />
     <Content Include="Forms\Structures\imagenes\ico-bullet.gif" />
     <Content Include="Forms\Structures\imagenes\spacer.gif" />
     <Content Include="Forms\Structures\images\ico-bullet.gif" />
@@ -627,6 +629,10 @@
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Forms\Production\ConsultarCuredWO.aspx.cs">
+      <DependentUpon>ConsultarCuredWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Forms\Production\ConsultReactionWO1.aspx.cs">
       <DependentUpon>ConsultReactionWO1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -636,6 +642,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ColorWOReport.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCuredWO.aspx.cs">
+      <DependentUpon>Consultar_PostCuredWO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\Reports\PrintStickerAdditovesS.cs">
       <AutoGen>True</AutoGen>
@@ -1491,6 +1501,9 @@
     <EmbeddedResource Include="Forms\Production\ConsultarCured.aspx.resx">
       <DependentUpon>ConsultarCured.aspx.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\ConsultarCuredWO.aspx.resx">
+      <DependentUpon>ConsultarCuredWO.aspx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Production\ConsultAssembleWO.aspx.resx">
       <DependentUpon>ConsultAssembleWO.aspx.cs</DependentUpon>
     </EmbeddedResource>
@@ -1654,6 +1667,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCured.aspx.resx">
       <DependentUpon>Consultar_PostCured.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasPostCurado\Consultar_PostCuredWO.aspx.resx">
+      <DependentUpon>Consultar_PostCuredWO.aspx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Production\WorkOrder\PartidasRecepcionPT\ConsultRecepcionPT.aspx.resx">
       <DependentUpon>ConsultRecepcionPT.aspx.cs</DependentUpon>

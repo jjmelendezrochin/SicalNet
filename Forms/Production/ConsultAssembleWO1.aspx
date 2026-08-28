@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="ConsultAssembleWO1.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ConsultAssembleWO1" %>
+﻿<%@ Page language="c#" Codebehind="ConsultAssembleWO1.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Production.ConsultAssembleWO1" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -7,7 +7,13 @@
 		<meta name="CODE_LANGUAGE" Content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">
 			function showWaitControls()
 			{
@@ -38,7 +44,7 @@
 						<td><asp:textbox id="txtUTEC" Runat="server" ReadOnly="True" CssClass="Standard-text" Width="250px"
 								BorderStyle="Groove"></asp:textbox></td>
 						<td>
-							<asp:Label id="Label5" runat="server" CssClass="standard-text">L�minas</asp:Label></td>
+							<asp:Label id="Label5" runat="server" CssClass="standard-text">Láminas</asp:Label></td>
 						<td><asp:textbox id="txtCantidad" Runat="server" ReadOnly="True" CssClass="Standard-text" BorderStyle="Groove"></asp:textbox></td>
 					</tr>
 					<tr>
@@ -99,13 +105,13 @@
 							<table align="center" width="100%">
 								<TR height="40">
 									<TD vAlign="top" align="center" width="150">
-										<asp:button id="btnAgregarMensaje" runat="server" CssClass="botonesInput" Width="113px" Text="Mensaje de piso"></asp:button></TD>
+										<asp:button id="btnAgregarMensaje" runat="server" CssClass="botonesInput" Width="200px" Text="Mensaje de piso"></asp:button></TD>
 									<TD vAlign="top" align="center" width="140">
 										<asp:Button id="btnLiberar" runat="server" CssClass="botonesInput" Width="80px" Text="Liberar"></asp:Button></TD>
 									<TD vAlign="top" align="center" width="140">
 										<asp:button id="btnAgregar" CssClass="botonesInput" Width="80px" Runat="server" Text="Aceptar"></asp:button></TD>
 									<TD vAlign="top" align="center" width="140">
-										<asp:button id="btnCancel" CssClass="botonesInput" Width="80px" Runat="server" Text="Regresar"></asp:button></TD>
+										<asp:button id="btnCancel" CssClass="botonesInput" Width="90px" Runat="server" Text="Regresar"></asp:button></TD>
 									<TD vAlign="top" align="center" width="100">
 										<DIV id="waitControls" style="DISPLAY: none">
 											<TABLE id="Table1" width="100">

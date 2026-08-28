@@ -72,7 +72,7 @@
 						<asp:dropdownlist id="cboStatus" runat="server" CssClass="standard-text"></asp:dropdownlist>
 					</td>
 					<td>
-						<asp:button id="cmdAceptar" runat="server" Width="62px" Text="Aceptar" CssClass="botonesInput"></asp:button>
+						<asp:button id="cmdAceptar" runat="server" Width="80px" Text="Aceptar" CssClass="botonesInput"></asp:button>
 					</td>
 				</tr>
 				<TR>

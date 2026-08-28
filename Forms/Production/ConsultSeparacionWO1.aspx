@@ -7,7 +7,13 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language=javascript>	
 			function showWaitControls()
 			{
@@ -73,13 +79,13 @@
 							<TABLE width="100%" align="center">
 								<TR height="40">
 									<TD vAlign="top" align="center" width="150">
-										<asp:button id="cmdAgregar" CssClass="botonesInput" Width="102px" Runat="server" Text="Mensaje de piso"></asp:button></TD>
+										<asp:button id="cmdAgregar" CssClass="botonesInput" Width="200px" Runat="server" Text="Mensaje de piso"></asp:button></TD>
 									<TD vAlign="top" align="center" width="140">
 										<asp:button id="cmdLiberar" CssClass="botonesInput" Width="80px" Runat="server" Text="Liberar"></asp:button></TD>
 									<TD vAlign="top" align="center" width="140">
 										<asp:button id="btnAgregar" CssClass="botonesInput" Width="80px" Runat="server" Text="Aceptar"></asp:button></TD>
 									<TD vAlign="top" align="center" width="140">
-										<asp:button id="btnCancelar" CssClass="botonesInput" Width="80px" Runat="server" Text="Regresar"></asp:button></TD>
+										<asp:button id="btnCancelar" CssClass="botonesInput" Width="90px" Runat="server" Text="Regresar"></asp:button></TD>
 									<TD vAlign="top" align="center" width="100">
 										<DIV id="waitControls" style="DISPLAY: none">
 										<TABLE id="Table1" width="50">
