@@ -2,12 +2,48 @@
 
 <meta name="vs_defaultClientScript" content="JavaScript">
 <script language="javascript">
-	
-function GetDate()        
-{   
-   var txtFechaValue = document.forms[0].elements['grdProgram_txtFecha'].value;
-	ChildWindow = window.open('../Production/Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=grdProgram_txtFecha' + '&txtDate=' + txtFechaValue, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-}
+
+    function GetDate(LaFecha, CtrlName) {
+
+        var ancho = 470;
+        var alto = 570;
+
+        var izquierda =
+            Math.max(0, (screen.availWidth - ancho) / 2);
+
+        var arriba =
+            Math.max(0, (screen.availHeight - alto) / 2);
+
+        var url =
+            '../Production/Calendar.aspx'
+            + '?FormName=' + encodeURIComponent(document.forms[0].name)
+            + '&CtrlName=' + encodeURIComponent(CtrlName)
+            + '&txtDate=' + encodeURIComponent(LaFecha);
+
+        ChildWindow = window.open(
+            url,
+            'PopUpCalendar',
+            'width=' + ancho
+            + ',height=' + alto
+            + ',left=' + Math.round(izquierda)
+            + ',top=' + Math.round(arriba)
+            + ',toolbar=no'
+            + ',menubar=no'
+            + ',location=no'
+            + ',status=no'
+            + ',scrollbars=no'
+            + ',resizable=no'
+        );
+
+        if (ChildWindow) {
+            ChildWindow.focus();
+        }
+
+        return false;
+    }
+
+
+
 
 function OperacionBorrar(Button,strOperationType){
 	Button.click();
@@ -75,13 +111,15 @@ function ShowHide(CtrlName)
 									Width="99px"
 									MaxLength="11">
 								</asp:textbox>
+
 									<asp:imagebutton 
 										id="imgInitial" 
-										OnClientClick="return GetDate();" 
+										OnClientClick="return GetDate(document.forms[0].elements['grdProgram_txtFecha'].value,'grdProgram_txtFecha');" 
 										Runat="server" 
 										ImageUrl="../Images/icon-calendar.gif"
 										AlternateText="Inicial Date">
 									</asp:imagebutton>
+
 								<asp:regularexpressionvalidator id="revFecha" CssClass="standard-text" runat="server" ErrorMessage="Fecha incorrecta"
 									ControlToValidate="txtFecha" ValidationExpression="(^((31(?!-(feb|abr|jun|sep|nov)))|((30|29)(?!-feb?))|(29(?=-feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ene|feb|mar|may|abr|jul|jun|ago|oct|sep|nov|dic)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(FEB|ABR|JUN|SEP|NOV)))|((30|29)(?!-FEB?))|(29(?=-FEB?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(ENE|FEB|MAR|MAY|ABR|JUL|JUN|AGO|OCT|SEP|NOV|DIC)-((1[6-9]|[2-9]\d)\d{2})$)|(^((31(?!-(Feb|Abr|Jun|Sep|Nov)))|((30|29)(?!-Feb?))|(29(?=-Feb?-(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])-(Ene|Feb|Mar|May|Abr|Jul|Jun|Ago|Oct|Sep|Nov|Dic)-((1[6-9]|[2-9]\d)\d{2})$)"
 									Display="Dynamic"></asp:regularexpressionvalidator>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
