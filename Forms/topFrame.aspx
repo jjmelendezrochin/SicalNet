@@ -223,7 +223,7 @@
             </div>
 
             <div class="sical-title-sub">
-                Sistema de Control de Producción de Plastiglas-Versatec
+                Sistema de Control de Producción de Plastiglas-Verzatec
             </div>
 
         </div>
@@ -236,7 +236,7 @@
         <div class="sical-company">
 
             <div class="sical-company-name">
-                PLASTIGLAS DE MÉXICO, EMPRESA DE VERSATEC
+                PLASTIGLAS DE MÉXICO, EMPRESA DE VERZATEC
             </div>
 
             <div class="sical-company-system">

@@ -40,7 +40,11 @@ namespace WebApplication1
 			{
 				prcFillCombo();
 				
-				btnCloseWindow.Attributes.Add("onclick", "javascript:Close();");
+	
+				btnCloseWindow.Attributes.Add(
+					"onclick",
+					"Close(); return false;"
+				);
 
 				try
 				{
