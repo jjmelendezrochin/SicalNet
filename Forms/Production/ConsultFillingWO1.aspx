@@ -7,17 +7,27 @@
 		<meta content="C#" name="CODE_LANGUAGE">
 		<meta content="JavaScript" name="vs_defaultClientScript">
 		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 		<script language="javascript">
 		function isDigit(num,button) 
 			{
 				var string="1234567890"
 				var KCT=document.getElementById("txtKCT").value
 				if(KCT.length==0)
-				{
-					alert(" El KCT debe ser especificado ")
-					return true
-				}	
+				{					
+                    SicalAlert.mostrar(
+                        "El KCT debe ser especificado",
+                        "advertencia"
+                    );
+					return false
+				}
+
 				for(i=0;i<KCT.length;i++)
 				{
 					if (string.indexOf(KCT.charAt(i))==-1)
@@ -36,7 +46,7 @@
 			{
 				waitControls.style.display='';
 			}		
-		</script>
+        </script>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<form id="ConsultFillingWO1" method="post" runat="server">
@@ -128,7 +138,7 @@
 						<table width="100%" align="center">
 							<TR height="40">
 								<TD vAlign="top" align="center" width="150">
-									<asp:button id="btnAgregarMensaje" runat="server" CssClass="botonesInput" Width="108px" Text="Mensaje de piso"></asp:button></TD>
+									<asp:button id="btnAgregarMensaje" runat="server" CssClass="botonesInput" Width="200px" Text="Mensaje de piso"></asp:button></TD>
 								<TD vAlign="top" align="center" width="140">
 									<asp:button OnClientClick="return isDigit(this.value,this)" id="btnLiberar" CssClass="botonesInput" Runat="server"
 										Width="80px" Text="Liberar"></asp:button></TD>
@@ -136,7 +146,7 @@
 									<asp:button OnClientClick="return isDigit(this.value,this)" id="btnAgregar" CssClass="botonesInput" Runat="server"
 										Width="80px" Text="Aceptar"></asp:button></TD>
 								<TD vAlign="top" align="center" width="140">
-									<asp:button id="btnCancel" CssClass="botonesInput" Runat="server" Width="80px" Text="Regresar"></asp:button></TD>
+									<asp:button id="btnCancel" CssClass="botonesInput" Runat="server" Width="90px" Text="Regresar"></asp:button></TD>
 								<TD vAlign="top" align="center" width="100">
 									<DIV id="waitControls" style="DISPLAY: none" title="100">
 										<TABLE id="Table1" width="100">

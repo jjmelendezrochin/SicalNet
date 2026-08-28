@@ -210,7 +210,16 @@ namespace UserInterface.Forms.Production
 
 					if (Sts == PendingStatus) 
 					{
-						throw new Exception(string.Format("La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada",secuance));
+						string mensaje = string.Format("La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada", secuance);
+
+						ClientScript.RegisterStartupScript(
+							this.GetType(),
+							"CubaOcupada",
+							"SicalAlert.mostrar('" + mensaje + "', 'advertencia');",
+							true
+						);
+
+						
 					}			
 
 					for (int iLoop=0; iLoop < dgdWorkOrder.Items.Count; iLoop++)

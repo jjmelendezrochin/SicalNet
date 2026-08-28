@@ -270,9 +270,9 @@ namespace UserInterface.Forms.Production
 
 				if ((IddStatus == IdCancelStatus)||(IddStatus == IdPendienteStatus)) 
 				{
-					string ScriptString="<script language='javascript'>alert('La secuencia " + Secuencia + " esta en estado PENDIENTE, no puede ser consultada');</script>"; 
-					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
-					//lblErrorMsg.Text = "Una secuencia en estado PENDIENTE no se puede consultar";
+					string mensaje="La secuencia " + Secuencia + " esta en estado PENDIENTE, no puede ser consultada";
+					MostrarAlerta(mensaje);
+
 					return;
 				}
 
@@ -365,37 +365,15 @@ namespace UserInterface.Forms.Production
 
 		}
 
-//		private void btnLiberer_Click(object sender, System.EventArgs e)
-//		{
-//			OrdenesTrabajoInfo WOInfo = new OrdenesTrabajoInfo(txtSecuencia.Text,6,2,DateTime.Now.Date.ToString("dd/MMM/yyyy"),this.Context.User.Identity.Name);
-//			SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
-//			WorkOrder.UpdateStatus(WOInfo);
-//			FlujoAreaInfo FAInfo=new FlujoAreaInfo(6,0);
-//			SICALNet.BusinessLogicLayer.FlujoArea FArea= new SICALNet.BusinessLogicLayer.FlujoArea();
-//			ArrayList FAreaList = new ArrayList();
-//			FAreaList = (ArrayList) FArea.Load(FAInfo);
-//			FAInfo = (FlujoAreaInfo)FAreaList[0];
-//			OrdenesTrabajoInfo WOInfo2 = new OrdenesTrabajoInfo(txtSecuencia.Text,5,0);
-//			SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder2 = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
-//			int i = WorkOrder2.GetStatus(WOInfo2);
-//			if (i==2) 
-//			{
-//				OrdenesTrabajoInfo WOInfo1 = new OrdenesTrabajoInfo(txtSecuencia.Text,FAInfo.IdAreaPadre,1);
-//				SICALNet.BusinessLogicLayer.OrdenesTrabajo WorkOrder1 = new SICALNet.BusinessLogicLayer.OrdenesTrabajo();
-//				WorkOrder.UpdateWO(WOInfo);
-//				Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-//					"alert('"+"La Orden de Trabajo se libero exitosamente"+"')"+
-//					"<" + "/script>");
-//			}
-//			else
-//			{
-//				Page.RegisterStartupScript("alert", "<script language='JavaScript'>"+
-//					"alert('"+"Fase de Mezclas no se libero "+"')"+
-//					"<" + "/script>");
-//			}
-//
-//			
-//		}
+		private void MostrarAlerta(string mensaje)
+		{
+			ClientScript.RegisterStartupScript(
+				this.GetType(),
+				"SicalAlerta",
+				"SicalAlert.mostrar('" + mensaje.Replace("\\", "\\\\").Replace("'", "\\'") + "');",
+				true
+			);
+		}
 
 		private void dgdWorkOrder_SelectedIndexChanged(object sender, System.EventArgs e)
 		{

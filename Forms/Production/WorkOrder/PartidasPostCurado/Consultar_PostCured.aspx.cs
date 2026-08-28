@@ -115,7 +115,26 @@ namespace UserInterface.Forms.Production.Work_Order.Post_Cured
 
 					if (Sts == PendingStatus) 
 					{
-						throw new Exception(string.Format("La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada",secuance));
+						// throw new Exception(string.Format("La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada",secuance));
+
+						string mensaje = string.Format(
+							"La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada",
+							secuance
+						);
+
+						mensaje = mensaje.Replace("\\", "\\\\")
+											.Replace("'", "\\'")
+											.Replace("\r", "")
+											.Replace("\n", "\\n");
+
+						Page.ClientScript.RegisterStartupScript(
+							this.GetType(),
+							"SecuenciaPendiente",
+							"SicalAlert.mostrar('" + mensaje + "', 'advertencia', 'Secuencia pendiente');",
+							true
+						);
+
+						return;
 					}			
 								
 					for (int iLoop=0; iLoop < dgdPostCuredWO.Items.Count; iLoop++)

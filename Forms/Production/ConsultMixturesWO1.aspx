@@ -7,7 +7,14 @@
 		<meta name="CODE_LANGUAGE" content="C#">
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		<LINK rel="stylesheet" type="text/css" href="../../styloDESC.CSS">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+
 		<script language="javascript">
 			var previousvalue=0;
 			var prepreviousvalue;
@@ -487,10 +494,10 @@
 						<td colSpan="4" align="right">
 							<TABLE width="100%" align="center">
 								<TR height="40">
-									<TD vAlign="top" width="150" align="center"><asp:button id="btnAgregarMensaje" CssClass="botonesInput" Runat="server" Width="119px" Text="Mensaje de piso"></asp:button></TD>
+									<TD vAlign="top" width="150" align="center"><asp:button id="btnAgregarMensaje" CssClass="botonesInput" Runat="server" Width="200px" Text="Mensaje de piso"></asp:button></TD>
 									<TD vAlign="top" width="140" align="center"><asp:button id="cmdLiberar" CssClass="botonesInput" Runat="server" Width="80px" Text="Liberar"></asp:button></TD>
 									<TD vAlign="top" width="140" align="center"><asp:button id="btnAgregar" CssClass="botonesInput" Runat="server" Width="80px" Text="Aceptar"></asp:button></TD>
-									<TD vAlign="top" width="140" align="center"><asp:button id="btnCancel" CssClass="botonesInput" Runat="server" Width="80px" Text="Regresar"></asp:button></TD>
+									<TD vAlign="top" width="140" align="center"><asp:button id="btnCancel" CssClass="botonesInput" Runat="server" Width="90px" Text="Regresar"></asp:button></TD>
 									<TD vAlign="top" width="100" align="center">
 										<DIV style="DISPLAY: none" id="waitControls">
 											<TABLE id="Table1" width="50">

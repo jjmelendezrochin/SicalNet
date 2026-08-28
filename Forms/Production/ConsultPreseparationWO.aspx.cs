@@ -270,8 +270,28 @@ namespace UserInterface.Forms.Production
 
 					if (Status == PendingStatus) 
 					{
-						string sequence= ((Label)e.Item.FindControl("ItemSecuencia")).Text;
-						throw new Exception(string.Format("La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada",sequence));
+						
+						string sequence = ((Label)e.Item.FindControl("ItemSecuencia")).Text;
+
+						string mensaje = string.Format(
+							"La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada",
+							sequence
+						);
+
+						mensaje = mensaje.Replace("\\", "\\\\")
+										 .Replace("'", "\\'")
+										 .Replace("\r", "")
+										 .Replace("\n", "\\n");
+
+						Page.ClientScript.RegisterStartupScript(
+							this.GetType(),
+							"SecuenciaPendiente",
+							"SicalAlert.mostrar('" + mensaje + "', 'advertencia', 'Secuencia pendiente');",
+							true
+						);
+
+						return;
+
 					}
 
 
