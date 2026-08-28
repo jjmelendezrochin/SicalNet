@@ -391,6 +391,7 @@
     <Content Include="Login.aspx" />
     <Content Include="LogOut.aspx" />
     <Content Include="Menu.css" />
+    <Content Include="Scripts\sical-calendario.js" />
     <Content Include="Scripts\sical-menu.js" />
     <Content Include="Css\nuevoestilo.css" />
     <Content Include="Test.aspx" />
