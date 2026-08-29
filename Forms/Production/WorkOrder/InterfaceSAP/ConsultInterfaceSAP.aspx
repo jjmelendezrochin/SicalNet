@@ -13,13 +13,10 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{   
-				ChildWindow = window.open('..\\..\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			} 
 			function CheckAllDataGridCheckBoxes() 
 			{			 
 				for(i=0;i<document.forms[0].length;i++)
@@ -100,10 +97,10 @@
 					</tr>
 					<tr>
 						<td><asp:textbox id="txtInitial" Width="99px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox>
-							<asp:imagebutton OnClientClick="return GetDate('txtInitial');" id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+							<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtInitial'].value,'txtInitial');" id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:imagebutton></td>
 						<td><asp:textbox id="txtFinal" Width="99px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"></asp:textbox>
-							<asp:imagebutton OnClientClick="return GetDate('txtFinal');" id="imgFinal" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+							<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFinal'].value,'txtFinal');" id="imgFinal" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
 								AlternateText="Final Date"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboStatus" Width="100px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<TD><asp:dropdownlist id="cboLinea" Width="100px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></TD>
@@ -141,7 +138,7 @@
 						<TD style="WIDTH: 166px; HEIGHT: 22px">
 							<asp:textbox id="txtFechaInterfaz" Width="99px" CssClass="Standard-text" Runat="server" BorderStyle="Groove"
 								MaxLength="11"></asp:textbox>
-							<asp:imagebutton OnClientClick="return GetDate('txtFinal');" id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
+							<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFinal'].value,'txtFinal');" id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif"
 								AlternateText="Final Date"></asp:imagebutton></TD>
 						<TD style="HEIGHT: 22px" align="center"><asp:button id="btnSel" CssClass="botonesInput" Text="Aceptar" Runat="server"></asp:button></TD>
 						<TD style="HEIGHT: 22px" align="left"></TD>

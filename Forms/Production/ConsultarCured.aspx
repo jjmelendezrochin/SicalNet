@@ -14,12 +14,10 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			} 
+
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Curado"
@@ -57,11 +55,11 @@
 						<td align="left"><asp:label id="Status" Text="Status" Runat="server" CssClass="standard-text">Status</asp:label></td>
 					<tr align="center">
 						<td align="left"><asp:textbox id="txtFecha" Width="99px" Runat="server" CssClass="Standard-text" BorderStyle="Groove" MaxLength="11"></asp:textbox>
-							<asp:imagebutton OnClientClick="return GetDate('txtFecha');" id="imgInitial" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+							<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFecha'].value,'txtFecha');" id="imgInitial" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:imagebutton></td>
 						<td align="left"><asp:textbox id="txtFechaFinal" Width="99px" Runat="server" CssClass="Standard-text" BorderStyle="Groove"
 								MaxLength="11"></asp:textbox>
-							<asp:imagebutton OnClientClick="return GetDate('txtFechaFinal');" id="imgFinal" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+							<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" id="imgFinal" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 								AlternateText="Inicial Date"></asp:imagebutton></td>
 						<td align="left"><asp:dropdownlist id="cboLinea" Runat="server" CssClass="Standard-text"></asp:dropdownlist></td>
 						<td align="left"><asp:dropdownlist id="cboStatus" Runat="server" CssClass="Standard-text"></asp:dropdownlist></td>

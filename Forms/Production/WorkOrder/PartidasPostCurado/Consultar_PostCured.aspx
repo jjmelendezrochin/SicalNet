@@ -14,12 +14,10 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{   
-				ChildWindow = window.open('..\\..\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			}    
+
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Post Curado"
@@ -57,11 +55,11 @@
 						<td><asp:textbox id="txtFecha" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
 								MaxLength="11"></asp:textbox>
 							<asp:imagebutton id="imgInitial" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Inicial Date"
-								OnClientClick="return GetDate('txtFecha');"></asp:imagebutton></td>
+								OnClientClick="return GetDate(document.forms[0].elements['txtFecha'].value,'txtFecha');"></asp:imagebutton></td>
 						<td><asp:textbox id="txtFechaFinal" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
 								MaxLength="11"></asp:textbox>
 							<asp:imagebutton id="Image1" Runat="server" ImageUrl="../../../../Images/icon-calendar.gif" AlternateText="Final Date"
-								OnClientClick="return GetDate('txtFechaFinal');"></asp:imagebutton></td>
+								OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboLinea" Runat="server" CssClass="Standard-text"></asp:dropdownlist></td>
 						<td><asp:DropDownList ID="cboStatus" Runat="server" CssClass="Standard-text"></asp:DropDownList></td>
 						<td><asp:Button ID="btnSel" Runat="server" Text="Aceptar" CssClass="botonesInput"></asp:Button></td>

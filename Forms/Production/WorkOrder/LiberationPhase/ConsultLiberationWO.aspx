@@ -14,14 +14,12 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('..\\..\\..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			}  
+
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Liberación"
@@ -113,9 +111,9 @@
 				</tr>
 				<tr>
 					<td><asp:textbox id="txtFechaInicial" runat="server" CssClass="standard-text" Width="100px" MaxLength="11"
-							BorderStyle="Groove">10-Sep-2019</asp:textbox><asp:imagebutton id="ImgFechaInicial" OnClientClick="return GetDate('txtFechaInicial');" runat="server" ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
+							BorderStyle="Groove">10-Sep-2019</asp:textbox><asp:imagebutton id="ImgFechaInicial" OnClientClick="return GetDate(document.forms[0].elements['txtFechaInicial'].value,'txtFechaInicial');" runat="server" ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
 					<td><asp:textbox id="txtFechaFinal" runat="server" CssClass="standard-text" Width="100px" MaxLength="11"
-							BorderStyle="Groove">10-Sep-2019</asp:textbox><asp:imagebutton id="ImgFechaFinal" OnClientClick="return GetDate('txtFechaFinal');" runat="server" ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
+							BorderStyle="Groove">10-Sep-2019</asp:textbox><asp:imagebutton id="ImgFechaFinal" OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" runat="server" ImageUrl="../../../../Images/icon-calendar.gif"></asp:imagebutton></td>
 					<td><asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text" Width="125px"></asp:dropdownlist></td>
 					<td><asp:dropdownlist id="cboStatus" runat="server" CssClass="standard-text" Width="125px"></asp:dropdownlist></td>
 					<td><asp:button id="cmdAceptar" runat="server" CssClass="botonesInput" Text="Aceptar" Width="80px"></asp:button></td>

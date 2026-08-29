@@ -14,13 +14,11 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{   
-				ChildWindow = window.open('..\\..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=270,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=yes,resizable=no");
-			}    
+
 		</script>
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
@@ -65,7 +63,7 @@
 									<td style="WIDTH: 366px"><asp:dropdownlist id="cboLinea" Width="125px" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 									<td style="WIDTH: 369px"><asp:textbox id="txtSecInicial" runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox></td>
 									<td style="WIDTH: 306px"><asp:textbox id="txtFechaInicial" Width="125px" CssClass="Standard-text" Runat="server" MaxLength="11"></asp:textbox>
-										<asp:imagebutton OnClientClick="return GetDate('txtFechaInicial');" id="imgPrgInit" Runat="server" ImageUrl="../../../Images/icon-calendar.gif"
+										<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFechaInicial'].value,'txtFechaInicial');" id="imgPrgInit" Runat="server" ImageUrl="../../../Images/icon-calendar.gif"
 											AlternateText="Inicial Date"></asp:imagebutton></td>
 									<td></td>
 								</tr>
@@ -87,7 +85,7 @@
 									<td style="WIDTH: 366px"><asp:dropdownlist id="cboCodigo" Width="125px" CssClass="standard-text" Runat="server"></asp:dropdownlist></td>
 									<td style="WIDTH: 369px"><asp:textbox id="txtSecFinal" runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox></td>
 									<td style="WIDTH: 306px"><asp:textbox id="txtFechaFinal" Width="125px" CssClass="Standard-text" Runat="server" MaxLength="11"></asp:textbox>
-										<asp:imagebutton OnClientClick="return GetDate('txtFechaFinal');" id="Image2" Runat="server" ImageUrl="../../../Images/icon-calendar.gif"
+										<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" id="Image2" Runat="server" ImageUrl="../../../Images/icon-calendar.gif"
 											AlternateText="Inicial Date"></asp:imagebutton></td>
 									<td></td>
 								</tr>

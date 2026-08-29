@@ -13,12 +13,10 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 		
 		<script language="JavaScript">  
-			function GetDate(CtrlName)        
-			{   
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			}    
+			   
 
 			function ShowTitle()
 			{
@@ -62,11 +60,15 @@
 				<tr>
 					<td style="HEIGHT: 2px"><asp:textbox id="txtFecha" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton OnClientClick="return GetDate('txtFecha');" id="imgInitial" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+						<asp:imagebutton 
+							OnClientClick="return GetDate(document.forms[0].elements['txtFecha'].value,'txtFecha');" 
+							id="imgInitial" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 							AlternateText="Inicial Date"></asp:imagebutton></td>
 					<td style="HEIGHT: 2px"><asp:textbox id="txtFechaFinal" Runat="server" Width="100px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton OnClientClick="return GetDate('txtFechaFinal');" id="imgFinal" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+						<asp:imagebutton 
+							OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" 
+							id="imgFinal" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
 							AlternateText="Inicial Date"></asp:imagebutton></td>
 					<TD style="HEIGHT: 2px"><asp:dropdownlist id="cboLinea" Runat="server" CssClass="standard-text"></asp:dropdownlist></TD>
 					<td style="HEIGHT: 2px"><asp:button id="cmdConsultar" runat="server" Text="Consultar" CssClass="botonesInput" OnClick="cmdConsultar_Click1"></asp:button></td>

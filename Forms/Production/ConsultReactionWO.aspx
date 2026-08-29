@@ -13,12 +13,10 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			}    
+			 
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Reacción"
@@ -57,11 +55,11 @@
 					<tr>
 						<td><asp:textbox id="txtFechaInicial" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"
 								Width="100px"></asp:textbox>
-							<asp:imagebutton id="imgInitial" OnClientClick="return GetDate('txtFechaInicial');" Runat="server" AlternateText="Inicial Date"
+							<asp:imagebutton id="imgInitial" OnClientClick="return GetDate(document.forms[0].elements['txtFechaInicial'].value,'txtFechaInicial');" Runat="server" AlternateText="Inicial Date"
 								ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></td>
 						<td><asp:textbox id="txtFechaFinal" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"
 								Width="100px"></asp:textbox>
-							<asp:imagebutton id="imgFinal" OnClientClick="return GetDate('txtFechaFinal');" Runat="server" AlternateText="Inicial Date"
+							<asp:imagebutton id="imgFinal" OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" Runat="server" AlternateText="Inicial Date"
 								ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></td>
 						<td><asp:dropdownlist id="cboLinea" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboStatus" CssClass="Standard-text" Runat="server"></asp:dropdownlist></td>

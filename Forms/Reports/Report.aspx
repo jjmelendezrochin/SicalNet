@@ -14,12 +14,10 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=270,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=yes,resizable=no");
-			}    
+ 
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Reportes"
@@ -32,6 +30,12 @@
 				}
 			);
 		</script>
+	    <style type="text/css">
+            .auto-style1 {
+                right: 730px;
+                bottom: 157px;
+            }
+        </style>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<center>
@@ -113,28 +117,28 @@
 					TOP: 144px; 
 					LEFT: 776px" 
 					id="imgFInicial"
-					OnClientClick="return GetDate('txtFechaInicial');" 
+					OnClientClick="return GetDate(document.forms[0].elements['txtFechaInicial'].value,'txtFechaInicial');" 
 					runat="server" 
-					ImageUrl="../../Images/icon-calendar.gif">
+					ImageUrl="../../Images/icon-calendar.gif" CssClass="auto-style1">
 				</asp:imagebutton>
 				<asp:label style="Z-INDEX: 107; POSITION: absolute; TOP: 192px; LEFT: 656px" id="lblFechaFinal"
 					runat="server" Width="142px" Height="22px" CssClass="standard-text"> Fecha Programa Final</asp:label>
 				<asp:textbox style="Z-INDEX: 108; POSITION: absolute; TOP: 216px; LEFT: 656px" id="txtFechaFinal"
 					runat="server" Width="119px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox>
 				<asp:imagebutton style="Z-INDEX: 109; POSITION: absolute; TOP: 216px; LEFT: 776px" id="imgFFinal"
-					OnClientClick="return GetDate('txtFechaFinal');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+					OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 				<asp:label style="Z-INDEX: 110; POSITION: absolute; TOP: 128px; LEFT: 840px" id="lblLibInicial"
 					runat="server" Width="154px" Height="22px" CssClass="standard-text">Fecha Liberacion Inicial</asp:label>
 				<asp:textbox style="Z-INDEX: 111; POSITION: absolute; TOP: 144px; LEFT: 840px" id="txtLibInicial"
 					runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox>
 				<asp:imagebutton style="Z-INDEX: 112; POSITION: absolute; TOP: 144px; LEFT: 960px" id="imgLInicial"
-					OnClientClick="return GetDate('txtLibInicial');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+					OnClientClick="return GetDate(document.forms[0].elements['txtLibInicial'].value,'txtLibInicial');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 				<asp:label style="Z-INDEX: 113; POSITION: absolute; TOP: 192px; LEFT: 840px" id="lblLibFinal"
 					runat="server" Width="154px" Height="22px" CssClass="standard-text">Fecha Liberacion Final</asp:label>
 				<asp:textbox style="Z-INDEX: 114; POSITION: absolute; TOP: 216px; LEFT: 840px" id="txtLibFinal"
 					runat="server" Width="121px" CssClass="standard-text" BorderStyle="Groove"></asp:textbox>
 				<asp:imagebutton style="Z-INDEX: 115; POSITION: absolute; TOP: 216px; LEFT: 960px" id="imgLFinal"
-					OnClientClick="return GetDate('txtLibFinal');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+					OnClientClick="return GetDate(document.forms[0].elements['txtLibFinal'].value,'txtLibFinal');" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<asp:button style="Z-INDEX: 116; POSITION: absolute; TOP: 256px; LEFT: 616px" id="cmdprint"
 					CssClass="botonesInput" Text="Imprimir" Runat="server"></asp:button>

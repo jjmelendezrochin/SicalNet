@@ -10,7 +10,7 @@
         Math.max(0, (screen.availHeight - alto) / 2);
 
     var url =
-        '../Production/Calendar.aspx'
+        '/SicalNet/Forms/Production/Calendar.aspx'
         + '?FormName=' + encodeURIComponent(document.forms[0].name)
         + '&CtrlName=' + encodeURIComponent(CtrlName)
         + '&txtDate=' + encodeURIComponent(LaFecha);

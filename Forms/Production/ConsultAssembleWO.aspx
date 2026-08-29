@@ -15,12 +15,10 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			}    
+
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Armando"
@@ -59,11 +57,11 @@
 					<tr>
 						<td><asp:textbox id="txtFecha" runat="server" Width="101px" CssClass="Standard-text" BorderStyle="Groove"
 								MaxLength="11"></asp:textbox>
-							<asp:imagebutton id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFecha');"></asp:imagebutton>
+							<asp:imagebutton id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate(document.forms[0].elements['txtFecha'].value,'txtFecha');"></asp:imagebutton>
 						</td>
 						<td><asp:TextBox id="txtFechaTo" runat="server" Width="101px" CssClass="Standard-text" BorderStyle="Groove"
 								MaxLength="11"></asp:TextBox>
-							<asp:ImageButton id="ImgFechaTo" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFechaTo');"></asp:ImageButton>
+							<asp:ImageButton id="ImgFechaTo" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate(document.forms[0].elements['txtFechaTo'].value,'txtFechaTo');"></asp:ImageButton>
 						</td>
 						<td><asp:dropdownlist id="cboLinea" runat="server" CssClass="Standard-text" Width="125px"></asp:dropdownlist></td>
 						<td><asp:dropdownlist id="cboStatus" runat="server" CssClass="Standard-text" Width="125px"></asp:dropdownlist></td>

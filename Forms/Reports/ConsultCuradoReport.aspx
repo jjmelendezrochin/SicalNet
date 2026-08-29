@@ -15,12 +15,9 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			}    
 		</script>
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
@@ -29,6 +26,11 @@
 				}
 			);
 		</script>
+	    <style type="text/css">
+            .auto-style1 {
+                right: 594px;
+            }
+        </style>
 	</HEAD>
 	<body MS_POSITIONING="GridLayout">
 		<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
@@ -68,14 +70,14 @@
 				<asp:button CssClass="botonesInput" id="cmdprint" style="Z-INDEX: 114; POSITION: absolute; TOP: 280px; LEFT: 752px"
 					Runat="server" Text="Imprimir"></asp:button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<asp:imagebutton OnClientClick="return GetDate('txtFechaFinal');" id="imgProgrammaFinal" style="Z-INDEX: 113; POSITION: absolute; TOP: 216px; LEFT: 912px"
+				<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" id="imgProgrammaFinal" style="Z-INDEX: 113; POSITION: absolute; TOP: 216px; LEFT: 912px"
 					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
-				<asp:imagebutton OnClientClick="return GetDate('txtLibFinal');" id="imgLieractionFinal" style="Z-INDEX: 112; POSITION: absolute; TOP: 216px; LEFT: 1080px"
+				<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtLibFinal'].value,'txtLibFinal');" id="imgLieractionFinal" style="Z-INDEX: 112; POSITION: absolute; TOP: 216px; LEFT: 1080px"
 					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
-				<asp:imagebutton OnClientClick="return GetDate('txtLibInicial');" id="imgLieractionInitial" style="Z-INDEX: 111; POSITION: absolute; TOP: 136px; LEFT: 1080px"
+				<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtLibInicial'].value,'txtLibInicial');" id="imgLieractionInitial" style="Z-INDEX: 111; POSITION: absolute; TOP: 136px; LEFT: 1080px"
 					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
-				<asp:imagebutton OnClientClick="return GetDate('txtFechaInicial');" id="imgProgrammaInitial" style="Z-INDEX: 110; POSITION: absolute; TOP: 136px; LEFT: 912px"
-					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
+				<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFechaInicial'].value,'txtFechaInicial');" id="imgProgrammaInitial" style="Z-INDEX: 110; POSITION: absolute; TOP: 136px; LEFT: 912px"
+					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif" CssClass="auto-style1"></asp:imagebutton>
 				<asp:label CssClass="standard-text" id="LblSequencia2" style="Z-INDEX: 105; POSITION: absolute; TOP: 184px; LEFT: 464px"
 					Runat="server">Secuencia Final</asp:label>
 				<asp:label CssClass="standard-text" id="LblSecquencia1" style="Z-INDEX: 104; POSITION: absolute; TOP: 104px; LEFT: 464px"
