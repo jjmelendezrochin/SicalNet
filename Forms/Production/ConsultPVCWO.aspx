@@ -14,14 +14,12 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<asp:Literal id="ltrRefresh" runat="server"></asp:Literal>
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			}    
+  
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de PVC"
@@ -58,9 +56,9 @@
 				</TR>
 				<TR>
 					<TD><asp:textbox id="txtFecha" runat="server" Width="101px" CssClass="Standard-text" BorderStyle="Groove"
-							ToolTip="* formato: dd-MMM-aaaa" MaxLength="11"></asp:textbox><asp:imagebutton OnClientClick="return GetDate('txtFecha');" id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></TD>
+							ToolTip="* formato: dd-MMM-aaaa" MaxLength="11"></asp:textbox><asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFecha'].value,'txtFecha');" id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></TD>
 					<TD><asp:textbox id="txtFechaFinal" runat="server" Width="101px" CssClass="Standard-text" BorderStyle="Groove"
-							ToolTip="* formato: dd-MMM-aaaa" MaxLength="11"></asp:textbox><asp:imagebutton OnClientClick="return GetDate('txtFechaFinal');" id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></TD>
+							ToolTip="* formato: dd-MMM-aaaa" MaxLength="11"></asp:textbox><asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></TD>
 					<TD><asp:dropdownlist id="cboLinea" runat="server" Width="125px" CssClass="Standard-text"></asp:dropdownlist></TD>
 					<TD><asp:dropdownlist id="cboStatus" runat="server" Width="125px" CssClass="Standard-text"></asp:dropdownlist></TD>
 					<TD><asp:button id="cmdAceptar" CssClass="botonesInput" Runat="server" Text="Aceptar"></asp:button></TD>

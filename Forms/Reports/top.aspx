@@ -15,6 +15,7 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script language="javascript">
 		function MostrarTabla() {
@@ -53,10 +54,7 @@
 			}
 		}
 		
-		function GetDate(CtrlName)        
-			{   
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			} 
+
 
 		function Exportar() {
 			var seleccion = document.getElementById("lstReporte").selectedIndex;
@@ -187,16 +185,25 @@
 						</td>
 						<td>
 							<asp:textbox id="txtInitial" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"></asp:textbox>
-							<asp:image id="imgInitial" OnClientClick="return GetDate('txtInitial');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
-								AlternateText="Inicial Date"></asp:image>
+							<asp:imagebutton 
+								id="imgInitial" 
+								OnClientClick="return GetDate(document.forms[0].elements['txtInitial'].value,'txtInitial');" 
+								Runat="server" ImageUrl="../../Images/icon-calendar.gif"
+								AlternateText="Inicial Date">
+							</asp:imagebutton>
 						</td>
 						<td align="center">
 							<asp:label id="lblFinal" Runat="server" Font-Size="Smaller">Fecha Final</asp:label>
 						</td>
 						<td>
 							<asp:textbox id="txtFinal" CssClass="Standard-text" Runat="server" MaxLength="11" BorderStyle="Groove"></asp:textbox>
-							<asp:image id="imgFinal" OnClientClick="return GetDate('txtFinal');" Runat="server" ImageUrl="../../Images/icon-calendar.gif"
-								AlternateText="Final Date"></asp:image>
+							<asp:imagebutton 
+								id="imgFinal" 
+								OnClientClick="return GetDate(document.forms[0].elements['txtFinal'].value,'txtFinal');" 
+								Runat="server" 
+								ImageUrl="../../Images/icon-calendar.gif"
+								AlternateText="Final Date">
+							</asp:imagebutton>
 						</td>
 					</tr>
 					<TR>

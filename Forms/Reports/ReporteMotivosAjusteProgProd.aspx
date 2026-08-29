@@ -13,12 +13,11 @@
 
         <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
         <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 
 		<script language="javascript">		
-            function GetDate(CtrlName) {
-                ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=270,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=yes,resizable=no");
-            }
+            
             function ShowTitle() {
                 window.frames["top"].document.title = "SICAL  - Ajustes Reporte Programa de Producción"
             }
@@ -192,7 +191,7 @@
                             ID="imgFInicial"
                             runat="server"
                             ImageUrl="../../Images/icon-calendar.gif"
-                            OnClientClick="return GetDate('txtFechaInicial');">
+                            OnClientClick="return GetDate(document.forms[0].elements['txtFechaInicial'].value,'txtFechaInicial');">
                         </asp:ImageButton>
 
                         <asp:RegularExpressionValidator
@@ -223,7 +222,7 @@
                             ID="imgFFinal"
                             runat="server"
                             ImageUrl="../../Images/icon-calendar.gif"
-                            OnClientClick="return GetDate('txtFechaFinal');">
+                            OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');">
                         </asp:ImageButton>
 
                         <asp:RegularExpressionValidator

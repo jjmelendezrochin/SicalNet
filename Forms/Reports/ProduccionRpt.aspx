@@ -14,12 +14,9 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script language="javascript">	
-		function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=270,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=yes,resizable=no");
-			} 
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Reportes"
@@ -69,13 +66,13 @@
 						<asp:Label id="Label5" runat="server" CssClass="standard-text">Fecha programa Inicial</asp:Label>
 						<asp:textbox id="txtFechaInicial" runat="server" Width="126px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="cmdCalInicial" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFechaInicial');"></asp:imagebutton>
+						<asp:imagebutton id="cmdCalInicial" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate(document.forms[0].elements['txtFechaInicial'].value,'txtFechaInicial');"></asp:imagebutton>
 					</td>
 					<td>
 						<asp:Label id="Label6" runat="server" CssClass="standard-text">Fecha Liberación Inicial</asp:Label>
 						<asp:textbox id="txtLibInicial" runat="server" Width="128px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtLibInicial');" OnClick="Imagebutton1_Click"></asp:imagebutton>
+						<asp:imagebutton id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate(document.forms[0].elements['txtLibInicial'].value,'txtLibInicial');" OnClick="Imagebutton1_Click"></asp:imagebutton>
 					</td>
 				</tr>
 				<TR>
@@ -109,13 +106,13 @@
 						<asp:Label id="Label11" runat="server" CssClass="standard-text">Fecha programa Final:</asp:Label>
 						<asp:textbox id="txtFechaFinal" runat="server" Width="126px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="Imagebutton2" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFechaFinal');"></asp:imagebutton>
+						<asp:imagebutton id="Imagebutton2" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');"></asp:imagebutton>
 					</td>
 					<td>
 						<asp:Label id="Label12" runat="server" CssClass="standard-text">Fecha Liberación Final:</asp:Label>
 						<asp:textbox id="txtLibFinal" runat="server" Width="128px" CssClass="Standard-text" BorderStyle="Groove"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="Imagebutton3" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtLibFinal');"></asp:imagebutton>
+						<asp:imagebutton id="Imagebutton3" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate(document.forms[0].elements['txtLibFinal'].value,'txtLibFinal');"></asp:imagebutton>
 					</td>
 				</tr>
 				<tr>

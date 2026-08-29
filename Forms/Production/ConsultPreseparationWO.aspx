@@ -15,12 +15,9 @@
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 
 		<script language="javascript">		
-			function GetDate(CtrlName)        
-			{            
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			}    
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  -Ordenes de Trabajo - Fase de Preseparación"
@@ -58,12 +55,12 @@
 				<tr>
 					<td><asp:textbox id="txtFecha" runat="server" Width="101px" BorderStyle="Groove" CssClass="standard-text"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFecha');"></asp:imagebutton>
+						<asp:imagebutton id="cmdCalendar" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate(document.forms[0].elements['txtFecha'].value,'txtFecha');"></asp:imagebutton>
 					</td>
 					<td>
 						<asp:textbox id="txtFechaFinal" runat="server" Width="101px" BorderStyle="Groove" CssClass="standard-text"
 							MaxLength="11"></asp:textbox>
-						<asp:imagebutton id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate('txtFecha');"></asp:imagebutton>
+						<asp:imagebutton id="Imagebutton1" runat="server" ImageUrl="../../Images/icon-calendar.gif" OnClientClick="return GetDate(document.forms[0].elements['txtFecha'].value,'txtFecha');"></asp:imagebutton>
 					</td>
 					<td>
 						<asp:dropdownlist id="cboLinea" runat="server" CssClass="standard-text"></asp:dropdownlist>

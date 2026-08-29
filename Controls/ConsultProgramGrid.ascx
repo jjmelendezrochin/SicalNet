@@ -2,10 +2,6 @@
 
 <script language="javascript">
 
-	function GetDate(CtrlName)        
-	{   
-		ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-	}    
 
 	function ShowHide(CtrlName)
 	{
@@ -37,12 +33,12 @@
 	<TR>
 		<TD>
 			<asp:textbox id="txtFrom" Runat="server" CssClass="Standard-text" Width="100px" MaxLength="11"></asp:textbox>
-			<asp:imagebutton OnClientClick="return GetDate('ConsultPrgGridControl_txtFrom');" id="imgFrom" name="imgFrom" Runat="server"
+			<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['ConsultPrgGridControl_txtFrom'].value,'ConsultPrgGridControl_txtFrom');" id="imgFrom" name="imgFrom" Runat="server"
 				ImageUrl="../Images/icon-calendar.gif" AlternateText="Inicial Date"></asp:imagebutton>
 		</TD>
 		<TD>
 			<asp:textbox id="txtTo" Runat="server" CssClass="Standard-text" Width="100px" MaxLength="11"></asp:textbox>
-			<asp:imagebutton OnClientClick="return GetDate('ConsultPrgGridControl_txtTo');" id="imgTo" Runat="server" ImageUrl="../Images/icon-calendar.gif"
+			<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['ConsultPrgGridControl_txtTo'].value,'ConsultPrgGridControl_txtTo');" id="imgTo" Runat="server" ImageUrl="../Images/icon-calendar.gif"
 				AlternateText="Final Date"></asp:imagebutton>
 		</TD>
 		<TD>
