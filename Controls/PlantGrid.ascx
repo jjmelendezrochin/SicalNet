@@ -83,19 +83,19 @@
                     </EditItemTemplate>
                 </asp:TemplateColumn>
                 <asp:TemplateColumn HeaderText="Nombre SAP">
-                    <HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+                    <HeaderStyle HorizontalAlign="Center" Width="100px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
                     <ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
                     <ItemTemplate>
                         <asp:Label ID="ItemDenomSAP" Text='<%#DataBinder.Eval(Container, "DataItem.Denominacion_sap") %>' runat="server" CssClass="standard-text">
                         </asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="EditDenomSAP" Width="120" runat="server" BorderStyle="Groove" Text='<%#DataBinder.Eval(Container, "DataItem.Denominacion_sap") %>' CssClass="Standard-text" MaxLength="10">
+                        <asp:TextBox ID="EditDenomSAP" Width="100" runat="server" BorderStyle="Groove" Text='<%#DataBinder.Eval(Container, "DataItem.Denominacion_sap") %>' CssClass="Standard-text" MaxLength="10">
                         </asp:TextBox>
                     </EditItemTemplate>
                 </asp:TemplateColumn>
                 <asp:TemplateColumn HeaderText="% de Merma">
-                    <HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+                    <HeaderStyle HorizontalAlign="Center" Width="80px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
                     <ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
                     <ItemTemplate>
                         <asp:Label ID="ItemMerma" Text='<%#DataBinder.Eval(Container, "DataItem.Merma") %>' runat="server" CssClass="standard-text">

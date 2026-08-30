@@ -70,81 +70,131 @@ namespace UserInterface.Forms.Structures
 		{
 			try
 			{
-			Validation pltVdlt = new Validation();
+				Validation pltVdlt = new Validation();
 
-			//int IdPlanta;
-			string Description;
-			string DenomSAP;
-			float Merma;
-			float PorcentajeColor;
+				string Description;
+				string DenomSAP;
+				float Merma;
+				float PorcentajeColor;
 
-		
-
-			// to check plantaid whether its correct or not
-			/*try {IdPlanta=Convert.ToInt32(txtPlantId.Text);}
-			catch	{
-				throw new Exception("Planta Information ID should be Numeric");}
-			if (IdPlanta<=0)
-				throw new Exception("Planta Information ID should be greater than Zero");*/
-
-			//to check the description whether its correct or not
-			//if ((pltVdlt.IsAlphaNumeric(txtDescription.Text.Trim())==false) || (txtDescription.Text.Trim()==""))
-			
-				if (!pltVdlt.IsAlphaNumeric(txtDescription.Text))
+				if (txtDescription.Text.Trim() == string.Empty || 
+					this.txtDenomSAP.Text.Trim() == string.Empty ||
+					int.Parse(this.txtMerma.Text.Trim()) == 0 ||
+					int.Parse(this.txtRendimientoColor.Text.Trim()) == 0
+					)
+					throw new Exception("Debe capturar todos los datos para esta planta.");
+				try
 				{
-					lblErrorMsg.Text = "InValid Descripcion";
-					return;
+					Merma = (float)Double.Parse(txtMerma.Text);
+				}
+				catch
+				{
+					throw new Exception(
+						"Proporcione un valor de Merma válido para la Planta."
+					);
 				}
 
-				try 
-					{Merma=(float)Double.Parse(txtMerma.Text);}
-				catch	
-					{throw new Exception("Proporcione un valor de Merma válido para la Planta");}
+				try
+				{
+					PorcentajeColor =
+						(float)Double.Parse(this.txtRendimientoColor.Text);
+				}
+				catch
+				{
+					throw new Exception(
+						"Proporcione un valor de Porcentaje de Rendimiento de Color válido para la Planta."
+					);
+				}
 
-				try 
-				{PorcentajeColor=(float)Double.Parse(this.txtRendimientoColor.Text);}
-				catch	
-				{throw new Exception("Proporcione un valor de Porcentaje de Rendimiento de Color válido para la Planta");}
-
-
-
-			 if(txtDescription.Text.Trim()==string.Empty)
-				throw new Exception("Debe capturar una descripción para esta planta");
-
-		
-				// to initialize the Stoage Material info into business entities
-				//IdPlanta = Convert.ToInt32(txtPlantId.Text);
 				Description = txtDescription.Text.Trim();
-				DenomSAP= txtDenomSAP.Text.Trim();
+				DenomSAP = txtDenomSAP.Text.Trim();
 
-				//to assign the planta info into business entity lager
-				PlantaInfo plantaInfo = new PlantaInfo(0,Description,DenomSAP,Merma,PorcentajeColor); //IdPlanta,Description,Zona
+				PlantaInfo plantaInfo =
+					new PlantaInfo(
+						0,
+						Description,
+						DenomSAP,
+						Merma,
+						PorcentajeColor
+					);
 
-				//to get an instance for business logic layer
-				SICALNet.BusinessLogicLayer.Planta planta = new SICALNet.BusinessLogicLayer.Planta();
-				//to Call the Insert Planta Information method
+				SICALNet.BusinessLogicLayer.Planta planta =
+					new SICALNet.BusinessLogicLayer.Planta();
+
 				planta.InsertPlanta(plantaInfo);
-				// Bitacora guardado de de planta nueva
-				SICALNet.BusinessLogicLayer.Bitacora  BLLBitacora= new SICALNet.BusinessLogicLayer.Bitacora();
-				BLLBitacora.Insertcomando("Se crea nueva planta: " + plantaInfo.Description,this.User.Identity.Name.ToString());
 
-				//to fill the datagrid
+				// Bitácora: guardado de planta nueva
+				SICALNet.BusinessLogicLayer.Bitacora BLLBitacora =
+					new SICALNet.BusinessLogicLayer.Bitacora();
+
+				BLLBitacora.Insertcomando(
+					"Se crea nueva planta: " + plantaInfo.Description,
+					this.User.Identity.Name.ToString()
+				);
+
+				// Actualizar grid
 				plantGridControl.BindGrid();
-				prcErrorDisplay(null,"NoError");
-				txtDescription.Text = string.Empty;
-				txtDenomSAP.Text=string.Empty;
-				txtMerma.Text="0";
-				txtRendimientoColor.Text="0";
-			}
-			catch(System.Data.SqlClient.SqlException)
-			{
-				prcErrorDisplay(null,"Este ID identificador ya esta en uso para otra planta");				
-			}
-			catch
-			{				
-				throw;
-			}
 
+				// Limpiar controles
+				txtDescription.Text = string.Empty;
+				txtDenomSAP.Text = string.Empty;
+				txtMerma.Text = "0";
+				txtRendimientoColor.Text = "0";
+
+				// Mensaje de éxito
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'La planta fue registrada correctamente.'," +
+					"'Planta registrada'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"PlantaGuardada",
+					ScriptString
+				);
+			}
+			catch (System.Data.SqlClient.SqlException)
+			{
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'Este ID identificador ya está en uso para otra planta.'," +
+					"'Error'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorPlanta",
+					ScriptString
+				);
+			}
+			catch (Exception errHand)
+			{
+				string mensaje =
+					errHand.Message
+						.Replace("\\", "\\\\")
+						.Replace("'", "\\'")
+						.Replace("\r", "")
+						.Replace("\n", "\\n");
+
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Error'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
+			}
 		}
 
 		//to display the error msg in the label box and write the error the error msg into error log file

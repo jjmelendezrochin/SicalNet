@@ -156,19 +156,44 @@ namespace UserInterface.Forms.Administration
 			performSearch(txtCriterio.Text,cboCriterio.SelectedItem.Value);
 		}
 
-		private void dgdUsers_ItemCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
+		private void dgdUsers_ItemCommand( object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
 			if (e.CommandName.Equals("Release"))
 			{
-				string _userLogin = ((Label) e.Item.FindControl("ItemLogin")).Text.Trim();
-				string _userName = ((Label) e.Item.FindControl("ItemNombre")).Text.Trim();
-				HttpContext.Current.Cache.Remove(_userLogin.ToLower());
+				string _userLogin =
+					((Label)e.Item.FindControl("ItemLogin")).Text.Trim();
 
-				Response.Write("<script language='javascript'>alert('La cuenta ["+_userLogin+"] del usuario ["+_userName+"] ha quedado liberada !')</script>");
+				string _userName =
+					((Label)e.Item.FindControl("ItemNombre")).Text.Trim();
+
+				HttpContext.Current.Cache.Remove(
+					_userLogin.ToLower()
+				);
+
+				string mensaje =
+					"La cuenta [" + _userLogin +
+					"] del usuario [" + _userName +
+					"] ha quedado liberada.";
+
+				mensaje = mensaje
+					.Replace("\\", "\\\\")
+					.Replace("'", "\\'")
+					.Replace("\r", "")
+					.Replace("\n", "\\n");
+
+				string script =
+					"SicalAlert.mostrar('" + mensaje + "');";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"UsuarioLiberado",
+					script,
+					true
+				);
 			}
 		}
 
-        protected void btnNuevo_Click1(object sender, EventArgs e)
+		protected void btnNuevo_Click1(object sender, EventArgs e)
         {
 
         }

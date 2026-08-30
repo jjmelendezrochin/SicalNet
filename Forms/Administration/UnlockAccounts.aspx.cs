@@ -67,8 +67,22 @@ namespace UserInterface.Forms.Administration
 			catch (Exception errHand)
 			{
 				//to display the msg for user
-				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);				
+				string mensaje = errHand.Message
+				.Replace("\\", "\\\\")
+				.Replace("'", "\\'")
+				.Replace("\r", "")
+				.Replace("\n", "\\n");
+
+				string ScriptString =
+					"<script type='text/javascript'>" +
+					"SicalAlert.mostrar('" + mensaje + "');" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ClientScript",
+					ScriptString
+				);
 			}
 		}
 
@@ -109,7 +123,17 @@ namespace UserInterface.Forms.Administration
 				string _userName = ((Label) e.Item.FindControl("ItemNombre")).Text.Trim();
 				HttpContext.Current.Cache.Remove(_userLogin);
 
-				Response.Write("<script language='javascript'>alert('La cuenta ["+_userLogin+"] del usuario ["+_userName+"] ha quedado liberada !')</script>");
+				// string mensaje = string.Format("La Secuencia {0} está en estado PENDIENTE, aún no puede ser Consultada", secuance);
+				string mensaje = string.Format("La cuenta[{0}] del usuario[{1}] ha quedado liberada!", _userLogin, _userName);
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"Liberación de cuentas",
+					"SicalAlert.mostrar('" + mensaje + "', 'advertencia');",
+					true
+				);
+
+				// Response.Write("<script language='javascript'>alert('La cuenta ["+_userLogin+"] del usuario ["+_userName+"] ha quedado liberada !')</script>");
 			}
 
 		}
