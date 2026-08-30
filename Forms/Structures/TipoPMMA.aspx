@@ -30,8 +30,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			{
 					window.frames["top"].document.title = "SICAL  - Cat�logos - Cat�logo de Tipos de prepolimeros"
 			}
-		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		</script>		
 
 		<script type="text/javascript">document.addEventListener(
 			  "DOMContentLoaded",

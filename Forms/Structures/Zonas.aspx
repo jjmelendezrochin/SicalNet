@@ -14,20 +14,30 @@
 
 		</script>
 		<script language="JavaScript">
-			function ConfirmOperation(Button)
-			{
-				/*if (confirm("Esta seguro que desea insertar esta cuba?")) 
-				{
-					Button.click();
-				}*/
-			}
+            function ConfirmarInsertarZona(button) {
+
+                SicalAlert.confirmar(
+                    "¿Está seguro que desea insertar esta Zona?",
+                    "Confirmar inserción",
+                    function () {
+
+                        // Evita volver a ejecutar la confirmación
+                        button.onclick = null;
+
+                        // Ejecuta el postback original
+                        button.click();
+                    }
+                );
+
+                return false;
+            }
 		
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de ollas"
 			}
 			
-		</script>		
+        </script>		
 
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
@@ -89,7 +99,11 @@
 													<TR>
 														<TD height="5" width="47"><asp:label id="Label2" runat="server" CssClass="standard-text">Denominación</asp:label></TD>
 														<td height="5"><asp:textbox style="Z-INDEX: 0" id="txtDenominacion" runat="server" CssClass="standard-text"
-																Width="100%" MaxLength="100"></asp:textbox><asp:requiredfieldvalidator id="Requiredfieldvalidator2" runat="server" ErrorMessage="El campo denominaci�n es un campo requerido"
+																Width="100%" MaxLength="100">
+														               </asp:textbox>
+															<asp:requiredfieldvalidator id="Requiredfieldvalidator2" 
+																runat="server" 
+																ErrorMessage="El campo denominación es un campo requerido"
 																ControlToValidate="txtDenominacion">*</asp:requiredfieldvalidator></td>
 													</TR>
 													<TR>

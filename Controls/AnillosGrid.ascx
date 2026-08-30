@@ -23,13 +23,15 @@
     }
 </script>
 
-<P class="contenido" align="left"><asp:datagrid id="dgdAnillos" Width="500px" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
+<P class="contenido" align="left">
+	<asp:datagrid id="dgdAnillos" Width="500px" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
 		AllowPaging="True" runat="server" Font-Names="Verdana" AutoGenerateColumns="False" Font-Name="Verdana" FontSize="11px" AllowSorting="True"
-		DataKeyField="IdAnillo">
+		DataKeyField="IdAnillo" 
+		CssClass="GridView grid-header">
 		<HeaderStyle CssClass="grid-header"></HeaderStyle>
 		<Columns>
 			<asp:TemplateColumn HeaderText="Id">
-				<HeaderStyle HorizontalAlign="Center" Width="10px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+				<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="10px" CssClass="grid-first-item"></ItemStyle>
 				<ItemTemplate>
 					<asp:label id=ItemAnilloId Width="40px" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.IdAnillo") %>' Runat="server">
@@ -41,7 +43,7 @@
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 			<asp:TemplateColumn HeaderText="C&#243;digo Sap">
-				<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+				<HeaderStyle HorizontalAlign="Center" Width="120px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
 					<asp:label id=ItemCodigoSap CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.CodigoSap") %>' Runat="server">
@@ -65,7 +67,7 @@
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 			<asp:TemplateColumn HeaderText="L&#237;nea I">
-				<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+				<HeaderStyle HorizontalAlign="Center" Width="120px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
 					<asp:label id=ItemLI CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LI") %>' Runat="server">
@@ -77,7 +79,7 @@
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 			<asp:TemplateColumn HeaderText="L&#237;nea II">
-				<HeaderStyle HorizontalAlign="Center" Width="150px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+				<HeaderStyle HorizontalAlign="Center" Width="120px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
 					<asp:label id=ItemLII CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LII") %>' Runat="server">
@@ -89,7 +91,7 @@
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 			<asp:TemplateColumn HeaderText="L&#237;nea III">
-				<HeaderStyle HorizontalAlign="Center" Width="180px" VerticalAlign="Middle"></HeaderStyle>
+				<HeaderStyle HorizontalAlign="Center" Width="120px" VerticalAlign="Middle"></HeaderStyle>
 				<ItemTemplate>
 					<asp:label style="Z-INDEX: 0" id=ItemLIII CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LIII") %>' Runat="server">
 					</asp:label>
@@ -100,7 +102,7 @@
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 			<asp:TemplateColumn HeaderText="Editar">
-				<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
+				<HeaderStyle HorizontalAlign="Center" Width="80px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
 				<ItemStyle CssClass="grid-edit-column"></ItemStyle>
 				<ItemTemplate>
 					<asp:imagebutton id="Imagebutton5" runat="server" AlternateText="Edit" CommandName="Edit" NAME="Imagebutton1"
@@ -118,6 +120,10 @@
 				</EditItemTemplate>
 			</asp:TemplateColumn>
 		</Columns>
-		<PagerStyle HorizontalAlign="Right" Mode="NumericPages"></PagerStyle>
+		<PagerStyle
+			HorizontalAlign="Center"
+			Mode="NumericPages"
+			CssClass="grid-pager">
+		</PagerStyle>
 	</asp:datagrid></P>
 <P class="contenido" align="left"><asp:label id="lblErrorMsg" runat="server" CssClass="standard-text"></asp:label></P>

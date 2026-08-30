@@ -14,26 +14,42 @@
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 		
 		<script language="JavaScript">
-<!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+		<!--
+		<!--
+		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+			document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+		  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+		}
+		MM_reloadPage(true);
+		// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
-			function ShowTitle()
-			{
-					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Tamaño de Vidrios"
-			}
-		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+		  window.open(theURL,winName,features);
+		}
+		//-->
+		function ShowTitle()
+		{
+				window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Tamaño de Vidrios"
+		}
+
+        function ConfirmarInsertarMedidaVidrio(button) {
+
+            SicalAlert.confirmar(
+                "¿Está seguro que desea insertar esta medida de vidrio?",
+                "Confirmar inserción",
+                function () {
+
+                    button.onclick = null;
+                    button.click();
+                }
+            );
+
+            return false;
+        }
+
+        </script>
+		
 
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
@@ -147,7 +163,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 													<TABLE id="Table2" border="0" cellSpacing="0" cellPadding="0">
 														<TR>
 															<TD width="40%">
-																<asp:button id="cmdAdd" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar"></asp:button>
+																<asp:button id="cmdAdd" runat="server" CssClass="botonesInput" Width="80px" Text="Agregar" OnClick="cmdAdd_Click1"></asp:button>
 															</TD>
 															<TD width="20%"></TD>
 															<TD width="40%">

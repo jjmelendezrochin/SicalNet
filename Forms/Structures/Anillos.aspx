@@ -7,20 +7,28 @@
 	<HEAD>
 		<title>Guía de estilo</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
+
 		<script language="JavaScript">
 <!--
 <!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+			function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+			  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+				document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+			  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+			}
+			MM_reloadPage(true);
+			// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
+			function MM_openBrWindow(theURL,winName,features) { //v2.0
+			  window.open(theURL,winName,features);
+			}
 //-->
 
 			function ShowTitle()
@@ -28,6 +36,14 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Plantas"
 			}
 		</script>
+
+		<script type="text/javascript">document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    SicalMenu.init("sicalMenu");
+                }
+            );
+        </script>
 		
 	</HEAD>
 	<body onload="ShowTitle()" leftMargin="0" topMargin="0" bgColor="#ffffff" text="#000000"
@@ -36,7 +52,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			<div align="center">
 				<table border="0" cellSpacing="0" cellPadding="0" width="740">
 					<tr>
-						<td class="contenido" bgColor="#003366" colSpan="2"><uc1:mainmenu id="MainMenu1" runat="server"></uc1:mainmenu></td>
+						<td class="contenido" bgColor="#003366" colSpan="2">
+							<div id="sicalMenu"></div>
+						</td>
 					</tr>
 					<tr>
 						<td width="20">&nbsp;</td>
@@ -96,11 +114,14 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 												<TD>
 													<TABLE id="Table2" border="0" cellSpacing="0" cellPadding="0">
 														<TR>
-															<TD height="20"><asp:button id="cmdAgregar" runat="server" CssClass="botonesInput" Width="64px" CausesValidation="False"
-																	Text="Agregar"></asp:button><asp:button style="Z-INDEX: 0" id="cmdConsultar" runat="server" CssClass="botonesInput" Width="64px"
-																	CausesValidation="False" Text="Consultar"></asp:button>
-																<asp:button style="Z-INDEX: 0" id="cmdTodos" runat="server" CssClass="botonesInput" Width="64px"
-																	Text="Todos" CausesValidation="False"></asp:button></TD>
+															<TD height="20" align="center">
+																<asp:button id="cmdAgregar" runat="server" CssClass="botonesInput" Width="100px" CausesValidation="False"
+																	Text="Agregar"></asp:button><br /><br />
+																<asp:button style="Z-INDEX: 0" id="cmdConsultar" runat="server" CssClass="botonesInput" Width="100px"
+																	CausesValidation="False" Text="Consultar"></asp:button><br /><br />
+																<asp:button style="Z-INDEX: 0" id="cmdTodos" runat="server" CssClass="botonesInput" Width="100px"
+																	Text="Todos" CausesValidation="False"></asp:button>
+															</TD>
 															<TD height="20"></TD>
 														</TR>
 													</TABLE>

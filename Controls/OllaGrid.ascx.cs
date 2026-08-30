@@ -189,9 +189,9 @@ namespace UserInterface.Controls
 				// prcErrorDisplay(errHand,"Error");				
 
 				throw;
-			}
-			
+			}			
 		}
+
 		private void dgdOlla_CancelCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
 			//to set the view mode

@@ -73,7 +73,7 @@
 											</TR>
 											<TR>
 												<TD width="47" height="22"><asp:label id="Label4" runat="server" CssClass="standard-text" Width="53px">Piezas</asp:label></TD>
-												<td><asp:textbox id="txtPiezas" runat="server" CssClass="standard-text" Width="100%" MaxLength="6"></asp:textbox><asp:requiredfieldvalidator id="RequiredFieldValidatorPiezas" runat="server" ControlToValidate="txtPiezas" ErrorMessage="El n�mero de Piezas es un campo requerido">*</asp:requiredfieldvalidator><asp:rangevalidator id="RangeValidatorPiezas" runat="server" ControlToValidate="txtPiezas" ErrorMessage="RangeValidator" MaximumValue="999999" MinimumValue="1" Type="Integer">*</asp:rangevalidator></td>
+												<td><asp:textbox id="txtPiezas" runat="server" CssClass="standard-text" Width="100%" MaxLength="6"></asp:textbox><asp:requiredfieldvalidator id="RequiredFieldValidatorPiezas" runat="server" ControlToValidate="txtPiezas" ErrorMessage="El número de Piezas es un campo requerido">*</asp:requiredfieldvalidator><asp:rangevalidator id="RangeValidatorPiezas" runat="server" ControlToValidate="txtPiezas" ErrorMessage="RangeValidator" MaximumValue="999999" MinimumValue="1" Type="Integer">*</asp:rangevalidator></td>
 											</TR>
 											<TR>
 												<TD align="middle" colSpan="2"><asp:checkbox id="chkActivo" runat="server" CssClass="standard-text" Text="Activo"></asp:checkbox></TD>
