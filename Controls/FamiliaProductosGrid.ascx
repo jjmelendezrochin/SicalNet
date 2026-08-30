@@ -23,7 +23,7 @@
     }
 
 </script>
-<LINK rel="stylesheet" type="text/css" href="../styloDESC.CSS">
+
 <P class="contenido" align="left">
 	<asp:datagrid id="dgdFamiliaProductos" Width="550px" runat="server" Font-Names="Verdana" CellPadding="2"
 		AutoGenerateColumns="False" Font-Name="Verdana" FontSize="11px" AllowSorting="True" DataKeyField="IdFamiliaProductos"

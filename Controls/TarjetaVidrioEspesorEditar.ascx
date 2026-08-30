@@ -1,6 +1,6 @@
 <%@ Control Language="c#" AutoEventWireup="false" Codebehind="TarjetaVidrioEspesorEditar.ascx.cs" Inherits="UserInterface.Controls.TarjetaVidrioEspesorEditar" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
 <head>
-<LINK rel="stylesheet" type="text/css" href="../styloDESC.CSS">
+
 </head>
 <table style="WIDTH: 448px; HEIGHT: 96px" border="0">
 	<thead>

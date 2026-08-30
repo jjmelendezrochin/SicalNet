@@ -3,7 +3,7 @@
 	<HEAD>
 		<TITLE>MedidaGrid</TITLE>
 	</HEAD>
-	<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
+	
 	<script language="javascript">
         function ConfirmOperation(Button, strOperationType) {
             if (Button._sicalConfirmado) {

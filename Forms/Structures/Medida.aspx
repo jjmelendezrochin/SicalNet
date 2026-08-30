@@ -20,18 +20,17 @@ function MM_reloadPage(init) {  //reloads the window if Nav4 resized
   else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
 }
 MM_reloadPage(true);
-// -->
+			// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
+			function MM_openBrWindow(theURL,winName,features) { //v2.0
+			  window.open(theURL,winName,features);
+			}
+			//-->
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Medidas"
 			}
-		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		</script>		
 
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
