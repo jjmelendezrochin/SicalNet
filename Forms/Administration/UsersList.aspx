@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
     
     <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>">
+    <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 
     <script language="JavaScript">
@@ -29,16 +29,25 @@
         window.open(theURL, winName, features);
     }
 
+     function ShowTitle() {
+        window.frames["top"].document.title = "SICAL  - Administración - Catálogo Usuarios"
+    }
+
     function ConfirmOperation(Button) {
-        if (confirm("¿Está seguro que desea liberar la cuenta del usuario?")) {
-            Button.click()
-        }
+         SicalAlert.confirmar(
+            "¿Está seguro que desea liberar la cuenta del usuario?",
+            "Confirmar liberación",
+             function () {
+                 Button.onclick = null;
+                 Button.click();
+            }
+        );
+
+        return false;
     }
     //-->
 
-    function ShowTitle() {
-        window.frames["top"].document.title = "SICAL  - Administración - Catálogo Usuarios"
-    }
+    
     </script>
 
     <script type="text/javascript">
@@ -53,7 +62,7 @@
 </head>
 <body onload="ShowTitle()">
     <form id="ConsultColorWO" method="post" runat="server">
-        <table style="border-collapse: collapse" height="227" width="800" align="center">
+        <table style="border-collapse: collapse"; height="227"; width="1000"; align="center">
             <tbody>
                 <tr>
                     <td align="left" colspan="4">
@@ -102,12 +111,17 @@
                     </td>
                 </tr>
                 <tr>
-                    <td width="20%" colspan="4">
+                    <td colspan="4">
                         <hr>
                     </td>
                 </tr>
+                </tbody>
+            </table>
+
+        <table style="border-collapse: collapse"; height="227"; width="1200"; align="center">
+            <tbody>
                 <tr>
-                    <td align="center" colspan="4" height="294" valign="top">
+                    <td align="center" colspan="4" height="294" width="100%" valign="top">
                         <asp:DataGrid
                             ID="dgdUsers"
                             runat="server"
@@ -122,7 +136,7 @@
                             AllowPaging="True"
                             PagerStyle-HorizontalAlign="Right"
                             PagerStyle-Mode="NumericPages"
-                            Width="80%"
+                            Width="100%"
                             ShowFooter="True"
                             Font-Size="Small"
                             CssClass="GridView grid-users">
@@ -202,12 +216,12 @@
                                 <asp:TemplateColumn HeaderText="Turno">
                                     <HeaderStyle
                                         HorizontalAlign="Left"
-                                        Width="6%"
+                                        Width="10%"
                                         CssClass="grid-header"
                                         VerticalAlign="Middle"></HeaderStyle>
 
                                     <ItemStyle
-                                        Width="6%"
+                                        Width="10%"
                                         CssClass="grid-item"></ItemStyle>
 
                                     <ItemTemplate>
@@ -268,7 +282,7 @@
                                 <asp:TemplateColumn HeaderText="Activo">
                                     <HeaderStyle
                                         HorizontalAlign="Center"
-                                        Width="4%"
+                                        Width="10%"
                                         CssClass="grid-header"
                                         VerticalAlign="Middle"></HeaderStyle>
 
@@ -291,7 +305,7 @@
                                 <asp:TemplateColumn HeaderText="Editar">
                                     <HeaderStyle
                                         HorizontalAlign="Center"
-                                        Width="5%"
+                                        Width="10%"
                                         CssClass="grid-header"
                                         VerticalAlign="Middle"></HeaderStyle>
 
@@ -316,7 +330,7 @@
                                 <asp:TemplateColumn HeaderText="Liberar">
                                     <HeaderStyle
                                         HorizontalAlign="Center"
-                                        Width="5%"
+                                        Width="10%"
                                         CssClass="grid-header"
                                         VerticalAlign="Middle"></HeaderStyle>
 

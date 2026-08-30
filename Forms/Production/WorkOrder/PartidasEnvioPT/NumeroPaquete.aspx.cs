@@ -153,7 +153,7 @@ namespace UserInterface.Forms.Production.WorkOrder.PartidasEnvioPT
 					"&Fecha=" + Fecha
 				);
 			}
-			catch (Exception ex)
+			catch
 			{
 				string ScriptString =
 			   "<script type='text/javascript'>" +

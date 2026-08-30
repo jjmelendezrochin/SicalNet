@@ -9,37 +9,49 @@
         <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
-        <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>">
+        <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 		<script language="JavaScript">
 <!--
 <!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
+        function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+          if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+            document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+          else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+        }
+        MM_reloadPage(true);
 // -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
+        function MM_openBrWindow(theURL,winName,features) { //v2.0
+          window.open(theURL,winName,features);
+        }
 
-function ConfirmOperation(Button)
-{
-	if (confirm("¿Está seguro que desea liberar la cuenta del usuario?")) 
-	{
-		Button.click()
-	}
-}
+        var liberarConfirmado = false;
+
+        function ConfirmOperation(Button) {
+            if (liberarConfirmado) {
+                liberarConfirmado = false;
+                return true;
+            }
+
+            SicalAlert.confirmar(
+                "¿Está seguro que desea liberar la cuenta del usuario?",
+                "Confirmar liberación",
+                function () {
+                    liberarConfirmado = true;
+                    Button.click();
+                }
+            );
+
+            return false;
+        }
 //-->
 
-			function ShowTitle()
-			{
-					window.frames["top"].document.title = "SICAL  - Administración - Catálogo Usuarios"
-			}	
-		</script>
+		function ShowTitle()
+		{
+				window.frames["top"].document.title = "SICAL  - Administración - Catálogo Usuarios"
+		}	
+        </script>
 		
 		
 

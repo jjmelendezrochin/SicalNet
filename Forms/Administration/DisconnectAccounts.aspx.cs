@@ -140,23 +140,52 @@ namespace UserInterface.Forms.Administration
 						new TimeSpan(0, 1, 0), 
 						System.Web.Caching.CacheItemPriority.Default,
 						myCallBack);
- 
-					//FormsAuthentication.SignOut();
-				
+ 				
 					dgdUsers.CurrentPageIndex=0;			
 					performSearch(txtCriterio.Text,cboCriterio.SelectedItem.Value);
-					Response.Write("<script language='javascript'>alert('La cuenta ["+_userLogin+"] del usuario ["+_userName+"] ha sido desconectada !')</script>");
+					
+					string mensaje = string.Format(
+						"La cuenta [{0}] del usuario [{1}] ha sido desconectada !",
+						_userLogin, _userName
+					);
+
+					mensaje = mensaje.Replace("\\", "\\\\")
+									 .Replace("'", "\\'")
+									 .Replace("\r", "")
+									 .Replace("\n", "\\n");
+
+					Page.ClientScript.RegisterStartupScript(
+						this.GetType(),
+						"SecuenciaPendiente",
+						"SicalAlert.mostrar('" + mensaje + "', 'advertencia', 'Secuencia pendiente');",
+						true
+					);
+
 				}
 				else
-				{
-					Response.Write("<script language='javascript'>alert('La cuenta ["+_userLogin+"] del usuario ["+_userName+"] no puede ser desconectada ya que esta en uso !')</script>");
+				{					
+					string mensaje = string.Format(
+						"La cuenta [{0}] del usuario [{1}] no puede ser desconectada ya que esta en uso !",
+						_userLogin, _userName
+					);
+
+					mensaje = mensaje.Replace("\\", "\\\\")
+									 .Replace("'", "\\'")
+									 .Replace("\r", "")
+									 .Replace("\n", "\\n");
+
+					Page.ClientScript.RegisterStartupScript(
+						this.GetType(),
+						"SecuenciaPendiente",
+						"SicalAlert.mostrar('" + mensaje + "', 'advertencia', 'Secuencia pendiente');",
+						true
+					);
 				}
 			}
 		}
-		/*** modificado por alejandro.hernandez@nasoft.com 01/03/2006 ***/
+
+		
 		private string createWhereString(string criteriaId)
-//		private string createWhereString(string criteriaText,string criteriaId)
-		/*** fin de modificación ***/
 		{
 			string resultString=string.Empty;
 			switch (criteriaId)

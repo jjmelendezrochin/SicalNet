@@ -218,17 +218,39 @@ namespace UserInterface.Forms.Administration
 					editProfile(Convert.ToInt32(currentProfileId));
 
 				//to display the msg for user
-				string ScriptString="<script language='javascript'>alert('El perfil ha sido salvado exitosamente');self.location.href='Profiles.aspx';</script>"; 
-				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
-				
-				//Response.Redirect("Profiles.aspx");
+				string mensaje = "El perfil ha sido salvado exitosamente";
+
+				string ScriptString =
+					"<script type='text/javascript'>" +
+					"SicalAlert.mostrar('" + mensaje + "');" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ClientScript",
+					ScriptString
+				);
 
 			}			
 			catch (Exception errHand)
 			{
 				//to display the msg for user
-				string ScriptString="<script language='javascript'>alert('"+ errHand.Message +"');</script>"; 
-				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
+				string mensaje = errHand.Message
+				.Replace("\\", "\\\\")
+				.Replace("'", "\\'")
+				.Replace("\r", "")
+				.Replace("\n", "\\n");
+
+				string ScriptString =
+					"<script type='text/javascript'>" +
+					"SicalAlert.mostrar('" + mensaje + "');" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ClientScript",
+					ScriptString
+				);
 			}
 		}
 
