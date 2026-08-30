@@ -163,13 +163,30 @@ namespace UserInterface.Forms.Structures
 				}
 				
 			}
-			catch
+			catch (Exception errHand)
 			{
-				// prcErrorDisplay(ex,"Error");
+				string mensaje =
+					errHand.Message
+						.Replace("\\", "\\\\")
+						.Replace("'", "\\'")
+						.Replace("\r", "")
+						.Replace("\n", "\\n");
 
-				throw;
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
 			}
-		}	
+		}
 
 		private void clearControl()
 		{						

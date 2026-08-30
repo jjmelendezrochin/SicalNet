@@ -22,7 +22,7 @@
         return false;
     }
 </script>
-<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
+
 <P class="contenido" align="left"><asp:datagrid id="dgdPeso" Width="650px" runat="server" Font-Names="Verdana" CellPadding="2" AutoGenerateColumns="False"
 		Font-Name="Verdana" FontSize="11px" AllowSorting="True" BorderColor="White" BorderStyle="None" AllowPaging="True" PagerStyle-Mode="NumericPages"
 		PagerStyle-HorizontalAlign="Right">

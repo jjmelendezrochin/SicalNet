@@ -107,7 +107,7 @@ namespace UserInterface.Structures
 			
 			if((!utlValidate.IsNumber(txtOtro.Text.Trim())) && (txtOtro.Text.Length>0))
 			{
-				lblErrorMsg.Text ="El campo 'OTRA CANTIDAD' debe ser numérico";
+				lblErrorMsg.Text ="El campo 'OTRA ESPESOR' debe ser numérico";
 				//Clear();
 				RegisterStartupScript("focus","<SCRIPT language='javascript'>" + "document.all('" +txtIdEspesor.ClientID + "').focus();" + "</SCRIPT>");
 				return;

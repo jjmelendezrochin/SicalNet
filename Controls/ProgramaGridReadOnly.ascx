@@ -58,7 +58,7 @@ function ShowHide(CtrlName)
 	}				
 }
 </script>
-<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
+
 <TABLE id="Table1" border="0">
 	<TBODY>
 		<TR vAlign="top">

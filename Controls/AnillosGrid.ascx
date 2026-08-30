@@ -22,7 +22,7 @@
         return false;
     }
 </script>
-<LINK rel="stylesheet" type="text/css" href="../styloDESC.CSS">
+
 <P class="contenido" align="left"><asp:datagrid id="dgdAnillos" Width="500px" PagerStyle-HorizontalAlign="Right" PagerStyle-Mode="NumericPages"
 		AllowPaging="True" runat="server" Font-Names="Verdana" AutoGenerateColumns="False" Font-Name="Verdana" FontSize="11px" AllowSorting="True"
 		DataKeyField="IdAnillo">

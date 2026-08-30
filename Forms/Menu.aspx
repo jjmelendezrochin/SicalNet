@@ -17,7 +17,7 @@ MM_reloadPage(true);
 // -->
 //-->
 		</script>
-		<LINK href="../styloDESC.CSS" type="text/css" rel="stylesheet">
+		
 	</HEAD>
 	<body bgColor="#ffffff" leftMargin="0" topMargin="0" marginwidth="0" marginheight="0">
 		<div align="center">

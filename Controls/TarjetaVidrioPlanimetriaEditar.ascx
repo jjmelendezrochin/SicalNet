@@ -1,7 +1,7 @@
 <%@ Control Language="c#" AutoEventWireup="false" Codebehind="TarjetaVidrioPlanimetriaEditar.ascx.cs" Inherits="UserInterface.Controls.TarjetaVidrioPlanimetriaEditar" TargetSchema="http://schemas.microsoft.com/intellisense/ie5"%>
 <HEAD>
 </HEAD>
-<LINK rel="stylesheet" type="text/css" href="../styloDESC.CSS">
+
 <table style="WIDTH: 448px; HEIGHT: 96px" border="0">
 	<thead>
 		<TR>

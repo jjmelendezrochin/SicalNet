@@ -27,7 +27,7 @@
             return false;
         }
     </script>
-    <link href="../styloDESC.CSS" type="text/css" rel="stylesheet">
+    
     <meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
     <meta content="C#" name="CODE_LANGUAGE">
     <meta content="JavaScript" name="vs_defaultClientScript">
