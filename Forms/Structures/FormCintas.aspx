@@ -34,7 +34,7 @@
 			window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de Cintas"
 		}
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
 				function () {

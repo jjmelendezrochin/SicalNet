@@ -38,18 +38,40 @@ namespace UserInterface.Forms.Structures
 		{
 			if (!Page.IsPostBack)
 			{
-				cmdFProducto.Attributes.Add("onclick", "if(confirm('¿Está seguro que desea insertar esta Zona?')){}else{return false}"); 
-				SICALNet.BusinessEntities.UsuarioInfo theUser = new SICALNet.BusinessEntities.UsuarioInfo(this.Context.User.Identity.Name, string.Empty, string.Empty, 0, 0, string.Empty, 0, string.Empty, 0, string.Empty, true);
-				SICALNet.BusinessLogicLayer.Usuario BLLUser = new SICALNet.BusinessLogicLayer.Usuario();
-				theUser  = BLLUser.Load(theUser);
+				cmdFProducto.Attributes.Add(
+					"onclick",
+					"return ConfirmarInsertarZona(this);"
+				);
 
-				SICALNet.BusinessLogicLayer.LineaProduccion  BRlinea = new SICALNet.BusinessLogicLayer.LineaProduccion();
-				IList tipoRs= (IList)BRlinea.SelectLinePdt(theUser);				
-				cboLinea.DataSource= tipoRs;
-				cboLinea.DataValueField="IdLinea";
-				cboLinea.DataTextField="Description";
-				cboLinea.DataBind();	
-	
+				SICALNet.BusinessEntities.UsuarioInfo theUser =
+					new SICALNet.BusinessEntities.UsuarioInfo(
+						this.Context.User.Identity.Name,
+						string.Empty,
+						string.Empty,
+						0,
+						0,
+						string.Empty,
+						0,
+						string.Empty,
+						0,
+						string.Empty,
+						true
+					);
+
+				SICALNet.BusinessLogicLayer.Usuario BLLUser =
+					new SICALNet.BusinessLogicLayer.Usuario();
+
+				theUser = BLLUser.Load(theUser);
+
+				SICALNet.BusinessLogicLayer.LineaProduccion BRlinea =
+					new SICALNet.BusinessLogicLayer.LineaProduccion();
+
+				IList tipoRs = (IList)BRlinea.SelectLinePdt(theUser);
+
+				cboLinea.DataSource = tipoRs;
+				cboLinea.DataValueField = "IdLinea";
+				cboLinea.DataTextField = "Description";
+				cboLinea.DataBind();
 			}
 		}
 

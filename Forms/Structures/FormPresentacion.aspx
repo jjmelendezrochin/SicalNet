@@ -31,7 +31,7 @@
 			window.frames["top"].document.title = "SICAL  - Estructuras - Formulaciones de Presentaciones"
 		}
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
 				function () {

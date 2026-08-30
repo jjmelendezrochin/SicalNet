@@ -33,7 +33,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Familia de Producto"
 			}
 		</script>
-		<!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+		
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
 				function () {

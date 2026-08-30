@@ -11,21 +11,30 @@
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
-		</script>
 		<script language="JavaScript">
-			function ConfirmOperation(Button)
-			{
-				/*if (confirm("Esta seguro que desea insertar esta cuba?")) 
-				{
-					Button.click();
-				}*/
-			}
+            function ConfirmarInsertarCuba(button) {
+
+                SicalAlert.confirmar(
+                    "¿Está seguro que desea insertar esta cuba?",
+                    "Confirmar inserción",
+                    function () {
+
+                        // Evita que vuelva a ejecutar el OnClientClick
+                        button.onclick = null;
+
+                        // Ejecuta el postback del botón
+                        button.click();
+                    }
+                );
+
+                return false;
+            }			
 		
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de ollas"
 			}			
-		</script>		
+        </script>		
 
 		<script type="text/javascript">document.addEventListener(
 				"DOMContentLoaded",
@@ -129,7 +138,8 @@
 							</td>
 							<td>&nbsp;</td>
 						</tr>
-					</TBODY></table>
+					</TBODY>
+				</table>
 			</div>
 		</form>
 	</body>

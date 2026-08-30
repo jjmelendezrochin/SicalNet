@@ -34,7 +34,7 @@
         window.frames["top"].document.title = "SICAL  - Estructuras - Formulación de Color"
     }
     </script>
-    <!-- <LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet"> -->
+    
     <style type="text/css">
         .auto-style1 {
             height: 11px;

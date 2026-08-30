@@ -120,9 +120,28 @@ namespace UserInterface.Forms.Structures
 			{
 				prcErrorDisplay(errHand,"El ID Identificador ya esta siendo usado.");				
 			}
-			catch
-			{				
-				throw;
+			catch (Exception errHand)
+			{
+				string mensaje =
+					errHand.Message
+						.Replace("\\", "\\\\")
+						.Replace("'", "\\'")
+						.Replace("\r", "")
+						.Replace("\n", "\\n");
+
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
 			}
 		}
 

@@ -53,9 +53,11 @@ namespace UserInterface.Forms.Structures
 		protected Controls.VidriosTamanio VidriosTamanio1;
 
 		private void Page_Load(object sender, System.EventArgs e)
-		{
-			// Introducir aquí el código de usuario para inicializar la página
-			cmdAdd.Attributes.Add("onclick", "if(confirm('¿Está seguro que desea insertar esta medida de vidrio?')){}else{return false}"); 
+		{	
+			cmdAdd.Attributes.Add(
+				"onclick",
+				"return ConfirmarInsertarMedidaVidrio(this);"
+			);
 		}
 
 		#region Código generado por el Diseñador de Web Forms
@@ -88,23 +90,15 @@ namespace UserInterface.Forms.Structures
 		{
 			// TODO: AGREGAR FUNCIONALIDAD PARA INSERTAR MODIFICAR Y BORRAR UN REGISTRO
 
-//			if(txtAnchoVidrio.Text.Trim() =="" || this.txtLargoVidrio.Text.Trim() =="" ||
-//				this.txtLargoNormal.Text.Trim() =="" || this.txtLargoVidrio.Text.Trim() =="" 
-//				|| this.txtEspesor.Text.Trim() =="" || this.txtGrosor.Text.Trim() =="" )
-//			{
-//				lblErrorMsg.Text ="Debe capturar los datos marcados con (*) que son requeridos";
-//				Clear();
-//				RegisterStartupScript("focus","<SCRIPT language='javascript'>" + "document.all('" +txtMedidaVidrio.ClientID + "').focus();" + "</SCRIPT>");		
-//				return;
-//			}
 
 			this.txtMedida.Text=this.txtLargoNormal.Text + "X" + this.txtAnchoNormal.Text + "X" + this.txtGrosor.Text ;
 			this.txtMedidaVidrio.Text=this.txtLargoVidrio.Text+ "X" + this.txtAnchoVidrio.Text + "X" + this.txtGrosor.Text ;
-
-			VidrioInfo belVidrioTamanio=new VidrioInfo(this.txtMedida.Text,this.txtMedidaVidrio.Text,int.Parse(this.txtAnchoNormal.Text), int.Parse(this.txtLargoNormal.Text), int.Parse(this.txtAnchoVidrio.Text), int.Parse(this.txtLargoVidrio.Text), float.Parse(this.txtEspesor.Text), this.txtGrosor.Text);
-			SICALNet.BusinessLogicLayer.VidrioTamanio bllVidrioTamanio=new SICALNet.BusinessLogicLayer.VidrioTamanio();
+			
 			try
 			{
+				VidrioInfo belVidrioTamanio = new VidrioInfo(this.txtMedida.Text, this.txtMedidaVidrio.Text, int.Parse(this.txtAnchoNormal.Text), int.Parse(this.txtLargoNormal.Text), int.Parse(this.txtAnchoVidrio.Text), int.Parse(this.txtLargoVidrio.Text), float.Parse(this.txtEspesor.Text), this.txtGrosor.Text);
+				SICALNet.BusinessLogicLayer.VidrioTamanio bllVidrioTamanio = new SICALNet.BusinessLogicLayer.VidrioTamanio();
+
 				if (bllVidrioTamanio.InsertVidrioTamanio(belVidrioTamanio)) 
 				{							
 					// alta de medida en la bitacora
@@ -125,9 +119,28 @@ namespace UserInterface.Forms.Structures
 			{
 				prcErrorDisplay(errHand, "Este identificador ya esta en uso para otra medida");
 			}
-			catch
+			catch (Exception errHand)
 			{
-				throw;
+				string mensaje =
+					errHand.Message
+						.Replace("\\", "\\\\")
+						.Replace("'", "\\'")
+						.Replace("\r", "")
+						.Replace("\n", "\\n");
+
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
 			}
 		}
 
@@ -183,7 +196,10 @@ namespace UserInterface.Forms.Structures
 		{
 			
 		}
-	
 
-	}
+        protected void cmdAdd_Click1(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
