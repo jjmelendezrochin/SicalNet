@@ -426,6 +426,7 @@ namespace UserInterface.Controls
 
 		private void dgdPeso_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdPeso.EditItemIndex = -1;
 			dgdPeso.CurrentPageIndex = e.NewPageIndex;
 			BindGrid(System.Convert.ToBoolean(lblallowedit.Text));
 		}

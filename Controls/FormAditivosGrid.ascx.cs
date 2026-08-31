@@ -269,6 +269,7 @@ namespace UserInterface.Controls
 
 		private void dgdFormAditivos_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdFormAditivos.EditItemIndex = -1;
 			dgdFormAditivos.CurrentPageIndex = e.NewPageIndex;
 			BindGrid(this.idcolor,this.idespesor,this.idlinea,this.idplanta);
 		}

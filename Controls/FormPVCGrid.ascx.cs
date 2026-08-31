@@ -265,6 +265,7 @@ namespace UserInterface.Controls
 
 		private void dgdFormPVC_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdFormPVC.EditItemIndex = -1;
 			dgdFormPVC.CurrentPageIndex = e.NewPageIndex;
 			BindGrid(_IdFamiliaProducto,_IdMedida,_IdEspesor,_IdPlanta, _IdAcabado, _IdLinea,  System.Convert.ToBoolean(lblallowedit.Text));
 		}

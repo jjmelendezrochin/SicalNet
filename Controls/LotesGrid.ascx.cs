@@ -133,6 +133,7 @@ namespace UserInterface.Controls
 
 		private void dgdLote_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdLote.EditItemIndex = -1;		
 			dgdLote.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

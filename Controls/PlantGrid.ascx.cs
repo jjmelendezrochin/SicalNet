@@ -233,6 +233,7 @@ namespace UserInterface.Controls
 
 		private void dgdPlant_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdPlant.EditItemIndex = -1;
 			dgdPlant.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

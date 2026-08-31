@@ -151,7 +151,6 @@
     <Content Include="Controls\TarjetaVidriosPlanimetria.ascx" />
     <Content Include="Controls\TipoPMMAGrid.ascx" />
     <Content Include="Controls\VidriosTamanio.ascx" />
-    <Content Include="Controls\WebUserControl1.ascx" />
     <Content Include="Controls\WorkOrdersGrid.ascx" />
     <Content Include="Controls\Zonas.ascx" />
     <Content Include="Forms\Production\ConsultarCuredWO.aspx" />
@@ -541,10 +540,6 @@
     </Compile>
     <Compile Include="Controls\VidriosTamanio.ascx.cs">
       <DependentUpon>VidriosTamanio.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\WebUserControl1.ascx.cs">
-      <DependentUpon>WebUserControl1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\WorkOrdersGrid.ascx.cs">

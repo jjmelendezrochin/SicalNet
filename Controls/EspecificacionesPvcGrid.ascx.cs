@@ -135,6 +135,7 @@ namespace UserInterface.Controls
 
 		private void dgdEspecificaciones_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdEspecificaciones.EditItemIndex = -1;
 			dgdEspecificaciones.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

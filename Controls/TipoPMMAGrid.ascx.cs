@@ -245,6 +245,7 @@ namespace UserInterface.Controls
 
 		private void dgdTipoPMMA_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdTipoPMMA.EditItemIndex = -1;
 			dgdTipoPMMA.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

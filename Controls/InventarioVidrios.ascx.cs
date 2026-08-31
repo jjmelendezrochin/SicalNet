@@ -169,6 +169,7 @@ namespace UserInterface.Controls
 
 		private void dgdInventarioVidrios_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdInventarioVidrios.EditItemIndex = -1;
 			dgdInventarioVidrios.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();	
 		}

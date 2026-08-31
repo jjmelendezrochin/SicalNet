@@ -193,6 +193,7 @@ namespace UserInterface.Controls
 
 		private void dgdEspesor_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdEspesor.EditItemIndex = -1;
 			dgdEspesor.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

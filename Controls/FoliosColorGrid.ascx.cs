@@ -105,6 +105,7 @@ namespace UserInterface.Controls
 
 		private void dgdFoliosColor_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdFoliosColor.EditItemIndex = -1;
 			dgdFoliosColor.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

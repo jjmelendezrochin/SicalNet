@@ -103,6 +103,7 @@ namespace UserInterface.Controls
 
 		private void dgdVidriosTamanio_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdVidriosTamanio.EditItemIndex = -1;
 			dgdVidriosTamanio.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();	
 		}
