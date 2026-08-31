@@ -32,7 +32,7 @@
 		<Columns>
 			<asp:TemplateColumn HeaderText="Id">
 				<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-				<ItemStyle Width="10px" CssClass="grid-first-item"></ItemStyle>
+				<ItemStyle Width="40px" CssClass="grid-first-item"></ItemStyle>
 				<ItemTemplate>
 					<asp:label id=ItemAnilloId Width="40px" CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.IdAnillo") %>' Runat="server">
 					</asp:label>
@@ -44,7 +44,7 @@
 			</asp:TemplateColumn>
 			<asp:TemplateColumn HeaderText="C&#243;digo Sap">
 				<HeaderStyle HorizontalAlign="Center" Width="120px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
+				<ItemStyle Width="120px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
 					<asp:label id=ItemCodigoSap CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.CodigoSap") %>' Runat="server">
 					</asp:label>
@@ -68,7 +68,7 @@
 			</asp:TemplateColumn>
 			<asp:TemplateColumn HeaderText="L&#237;nea I">
 				<HeaderStyle HorizontalAlign="Center" Width="120px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
+				<ItemStyle Width="120px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
 					<asp:label id=ItemLI CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LI") %>' Runat="server">
 					</asp:label>
@@ -80,7 +80,7 @@
 			</asp:TemplateColumn>
 			<asp:TemplateColumn HeaderText="L&#237;nea II">
 				<HeaderStyle HorizontalAlign="Center" Width="120px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
-				<ItemStyle Width="150px" CssClass="grid-item"></ItemStyle>
+				<ItemStyle Width="12px" CssClass="grid-item"></ItemStyle>
 				<ItemTemplate>
 					<asp:label id=ItemLII CssClass="standard-text" Text='<%#DataBinder.Eval(Container, "DataItem.LII") %>' Runat="server">
 					</asp:label>

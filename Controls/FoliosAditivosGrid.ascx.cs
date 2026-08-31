@@ -104,6 +104,7 @@ namespace UserInterface.Controls
 
 		private void dgdFoliosAditivos_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdFoliosAditivos.EditItemIndex = -1;
 			dgdFoliosAditivos.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

@@ -296,6 +296,7 @@ namespace UserInterface.Controls
 
 		private void dgdFormPresentacion_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdFormPresentacion.EditItemIndex = -1;
 			dgdFormPresentacion.CurrentPageIndex = e.NewPageIndex;
 			BindGrid(_IdPresentacion,_IdMedida,_IdPlanta,System.Convert.ToBoolean(lblallowedit.Text));
 		}

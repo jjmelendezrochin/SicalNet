@@ -104,6 +104,7 @@ namespace UserInterface.Controls
 
 		private void dgdCubas_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdCubas.EditItemIndex = -1;
 			dgdCubas.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

@@ -94,6 +94,7 @@ namespace UserInterface.Controls
 		
 		private void dgdAnillos_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdAnillos.EditItemIndex = -1;
 			dgdAnillos.CurrentPageIndex = e.NewPageIndex;
 			BindGrid(string.Empty);
 		}
@@ -126,18 +127,19 @@ namespace UserInterface.Controls
 
 		private void dgdAnillos_EditCommand_1(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
-			lblErrorMsg.Text="";
-			// Primero se filtra del dato
-			string itemCodigoSap = (((Label)e.Item.FindControl("ItemCodigoSap")).Text);			
-			//this.ConsultaAnillo(itemCodigoSap);
+			lblErrorMsg.Text = "";
 
-			// Se edita el datos
-			dgdAnillos.EditItemIndex =(int) e.Item.ItemIndex;
-			BindGrid(itemCodigoSap);
+			// Activar edición sobre el registro seleccionado
+			dgdAnillos.EditItemIndex = e.Item.ItemIndex;
+
+			// Mantener la lista completa para conservar la paginación
+			BindGrid(string.Empty);
 		}
 
 		private void dgdAnillos_CancelCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
+			lblErrorMsg.Text = "";
+
 			//to set the view mode
 			dgdAnillos.EditItemIndex = -1;
 			//to fill the datagrid

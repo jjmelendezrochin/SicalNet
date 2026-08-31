@@ -283,6 +283,7 @@ namespace UserInterface.Controls
 
 		private void dgdFamiliaProductos_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdFamiliaProductos.EditItemIndex = -1;
 			dgdFamiliaProductos.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

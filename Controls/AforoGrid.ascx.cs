@@ -140,23 +140,32 @@ namespace UserInterface.Controls
 
 		private void dgdAforo_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdAforo.EditItemIndex = -1;
 			dgdAforo.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}
 
 		private void dgdAforo_EditCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
-			lblErrorMsg.Text="";
-			sColor = ((Label) e.Item.FindControl("ItemIdColor")).Text.Trim();
+			lblErrorMsg.Text = "";
 
-			SICALNet.BusinessLogicLayer.Aforo aforo = new SICALNet.BusinessLogicLayer.Aforo();
-			AforoInfo aforoinfo = new AforoInfo(0,sColor,0,0);
-			IList lista = (IList) aforo.ConsultaAforo(aforoinfo);
+			// Obtener el color del registro seleccionado.
+			// Esta variable se utiliza posteriormente en ItemDataBound
+			// para seleccionar el color correspondiente en cboColor.
+			sColor = ((Label)e.Item.FindControl("ItemIdColor")).Text.Trim();
 
-			ItemDescripcionhtml.Value = ((Label)e.Item.FindControl("ItemIdColor")).Text;
-			dgdAforo.EditItemIndex =(int) e.Item.ItemIndex;
-			dgdAforo.DataSource = lista;
-			dgdAforo.DataBind();
+			// Guardar la descripción/color seleccionado
+			ItemDescripcionhtml.Value =
+				((Label)e.Item.FindControl("ItemIdColor")).Text;
+
+			// El ItemIndex corresponde al índice del registro
+			// dentro de la página actual.
+			dgdAforo.EditItemIndex = e.Item.ItemIndex;
+
+			// Recargar TODOS los registros.
+			// De esta manera conservamos el mismo PageCount
+			// y CurrentPageIndex sigue siendo válido.
+			BindGrid();
 		}
 
 		private void dgdAforo_CancelCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)

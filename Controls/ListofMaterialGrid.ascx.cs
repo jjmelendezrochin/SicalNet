@@ -288,6 +288,7 @@ namespace UserInterface.Controls
 
 		private void dgdLstMat_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdLstMat.EditItemIndex = -1;
 			dgdLstMat.CurrentPageIndex = e.NewPageIndex;
 			BindGrid();
 		}

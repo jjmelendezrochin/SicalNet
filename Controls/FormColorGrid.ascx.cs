@@ -213,6 +213,7 @@ namespace UserInterface.Controls
 
 		private void dgdFormColor_PageIndexChanged(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
 		{
+			dgdFormColor.EditItemIndex = -1;
 			dgdFormColor.CurrentPageIndex = e.NewPageIndex;
 			BindGrid(_idColor,_idPlanta,System.Convert.ToBoolean(lblallowedit.Text));
 		}
