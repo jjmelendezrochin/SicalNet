@@ -204,22 +204,39 @@ namespace UserInterface.Forms.Structures
 			}
 			catch(System.Data.SqlClient.SqlException errHand)
 			{
-				//to display the msg for user
-				/*** modificado por alejandro.hernandez@nasoft.com 07/03/2006 ***/
-				string ScriptString="<script language='javascript'>alert('["+ errHand.Number + "]El ID Identificador ya esta siendo usado');</script>"; 
-//				string ScriptString="<script language='javascript'>alert('El ID Identificador ya esta siendo usado');</script>"; 
-				/*** fin modificación ***/
+				string mensaje = "'["+ errHand.Number + "]El ID Identificador ya esta siendo usado'";
 
-				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
-				// se quita la siguente linea para que sea desplegado el mensaje
-				//throw;
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
 			}
 			catch
 			{
-				// alta correcta
-				//throw;
-				string ScriptString="<script language='javascript'>alert('Alta de temperatura correcta');</script>"; 
-				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
+				string mensaje = "Alta de temperatura correcta";
+
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
 			}
 		}
 

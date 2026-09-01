@@ -204,7 +204,11 @@ if (confirm("Esta seguro que desea editar este registro?")) {
 								</EditItemTemplate>
 							</asp:TemplateColumn>
 						</Columns>
-						<PagerStyle HorizontalAlign="Right" PageButtonCount="20" Mode="NumericPages"></PagerStyle>
+						<PagerStyle
+							HorizontalAlign="Center"
+							Mode="NumericPages"
+							CssClass="grid-pager">
+						</PagerStyle>
 					</asp:datagrid></td>
 			</tr>
 			<tr>

@@ -68,7 +68,7 @@
     </Reference>
     <Reference Include="Interop.OWC10, Version=1.2.0.0, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>bin\Interop.OWC10.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data">
@@ -162,6 +162,9 @@
     <Content Include="Forms\Structures\imagenes\spacer.gif" />
     <Content Include="Forms\Structures\images\ico-bullet.gif" />
     <Content Include="Forms\Structures\images\spacer.gif" />
+    <Content Include="Forms\Structures\InvVidrios.aspx" />
+    <Content Include="Forms\Structures\UpdateMaterialList.aspx" />
+    <Content Include="Forms\Structures\UpdateMaterialListDta.aspx" />
     <Content Include="Scripts\sical-alertas.js" />
     <Content Include="Css\sical-menu.css" />
     <Content Include="CustomError\404Page.aspx" />
@@ -656,6 +659,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PrintStickerAdditovesS.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\InvVidrios.aspx.cs">
+      <DependentUpon>InvVidrios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\UpdateMaterialList.aspx.cs">
+      <DependentUpon>UpdateMaterialList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Structures\UpdateMaterialListDta.aspx.cs">
+      <DependentUpon>UpdateMaterialListDta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Helpers\Funciones.cs" />
     <Compile Include="Helpers\Mensajes.cs" />
@@ -1885,6 +1900,9 @@
     <EmbeddedResource Include="Forms\Structures\Espesor.aspx.resx">
       <DependentUpon>Espesor.aspx.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structures\InvVidrios.aspx.resx">
+      <DependentUpon>InvVidrios.aspx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Structures\Linea.aspx.resx">
       <DependentUpon>Linea.aspx.cs</DependentUpon>
     </EmbeddedResource>
@@ -1896,6 +1914,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Structures\Presentacion.aspx.resx">
       <DependentUpon>Presentacion.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structures\UpdateMaterialList.aspx.resx">
+      <DependentUpon>UpdateMaterialList.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Structures\UpdateMaterialListDta.aspx.resx">
+      <DependentUpon>UpdateMaterialListDta.aspx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

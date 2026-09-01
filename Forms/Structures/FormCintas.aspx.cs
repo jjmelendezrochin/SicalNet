@@ -227,11 +227,28 @@ namespace UserInterface.Forms.Structures
 			{
 				prcErrorDisplay(errHand,"El componente que desea agregar ya pertenece a la formulación.","Warning");
 			}
-			catch
+			catch (Exception errHand)
 			{
-				// prcErrorDisplay(errHand,errHand.Message,"Error");
+				string mensaje =
+					errHand.Message
+						.Replace("\\", "\\\\")
+						.Replace("'", "\\'")
+						.Replace("\r", "")
+						.Replace("\n", "\\n");
 
-				throw;
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
 			}
 		}
 

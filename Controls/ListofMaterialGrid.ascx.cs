@@ -172,38 +172,68 @@ namespace UserInterface.Controls
 			BindGrid();
 		}
 
-		private void dgdLstMat_DeleteCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
+		private void dgdLstMat_DeleteCommand(
+	object source,
+	System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{
 			try
 			{
-				//to assign the control box values into variables
-				string Codigo= ((Label)e.Item.FindControl("lblCodigo")).Text;
-				//to assign the values into BEL
-				ListMaterialInfo BELstMat= new ListMaterialInfo(Codigo);
-				//to create the BBL
-				SICALNet.BusinessLogicLayer.ListMaterial BLLLstMat= new SICALNet.BusinessLogicLayer.ListMaterial();
-				//to Call the Delete method
-				BLLLstMat.DeleteListMaterial(BELstMat);
-				
-				//to set the normal mode
-				dgdLstMat.EditItemIndex = -1;
-				//to fill the datagrid
-				BindGrid();
-				//throw new Exception("La formulación de color fue eliminada");
-				string ScriptString="<script language='javascript'>alert('La formulación de color fue eliminada');</script>"; 
-				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
+				// Obtener el código del registro
+				string Codigo = ((Label)e.Item.FindControl("lblCodigo")).Text;
 
+				// Crear entidad
+				ListMaterialInfo BELstMat =
+					new ListMaterialInfo(Codigo);
+
+				// Crear capa de negocio
+				SICALNet.BusinessLogicLayer.ListMaterial BLLLstMat =
+					new SICALNet.BusinessLogicLayer.ListMaterial();
+
+				// Eliminar registro
+				BLLLstMat.DeleteListMaterial(BELstMat);
+
+				// Salir del modo edición
+				dgdLstMat.EditItemIndex = -1;
+
+				// Recargar grid
+				BindGrid();
+
+				// Mostrar mensaje de confirmación
+				string ScriptString =
+					"SicalAlert.mostrar(" +
+					"'La formulación de color fue eliminada correctamente.'," +
+					"'Operación realizada'" +
+					");";
+
+				Page.ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"FormulacionEliminada",
+					ScriptString,
+					true
+				);
 			}
-			catch
+			catch (Exception ex)
 			{
-				//to display the msg for user
-				string ScriptString="<script language='javascript'>alert('Ya existe una formulación de color para el color solicitado');</script>"; 
-				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);								
+				string mensaje =
+					ex.Message.Replace("\\", "\\\\")
+							  .Replace("'", "\\'")
+							  .Replace("\r", " ")
+							  .Replace("\n", " ");
+
+				string ScriptString =
+					"SicalAlert.mostrar(" +
+					"'No fue posible eliminar la formulación de color. " +
+					mensaje + "'," +
+					"'Error'" +
+					");";
+
+				Page.ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorEliminarFormulacion",
+					ScriptString,
+					true
+				);
 			}
-//			catch
-//			{				
-//				throw;
-//			}
 		}
 
 		private void dgdLstMat_UpdateCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
@@ -249,20 +279,43 @@ namespace UserInterface.Controls
 				dgdLstMat.EditItemIndex = -1;
 				//to fill the datagrid
 				BindGrid();
-				//throw new Exception("Los Datos fueron actualizados existosamente"); 
-				string ScriptString="<script language='javascript'>alert('Los Datos fueron actualizados existosamente');</script>"; 
-				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
+				
+				// Mostrar mensaje de confirmación
+				string ScriptString =
+					"SicalAlert.mostrar(" +
+					"'Los Datos fuero actualizados exitosamente.'," +
+					"'Operación realizada'" +
+					");";
+
+				Page.ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"FormulacionEliminada",
+					ScriptString,
+					true
+				);
 			}
-			catch
+			catch (Exception ex)
 			{
-				//to display the msg for user
-				string ScriptString="<script language='javascript'>alert('El ID Identificador ya esta siendo usado por el sistema');</script>"; 
-				Page.ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
-			}
-//			catch
-//			{
-//				throw;
-//			}
+				string mensaje =
+					ex.Message.Replace("\\", "\\\\")
+							  .Replace("'", "\\'")
+							  .Replace("\r", " ")
+							  .Replace("\n", " ");
+
+				string ScriptString =
+					"SicalAlert.mostrar(" +
+					"'El ID Identificador ya esta siendo usado por el sistema. " +
+					mensaje + "'," +
+					"'Error'" +
+					");";
+
+				Page.ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorEliminarFormulacion",
+					ScriptString,
+					true
+				);
+			}			
 		}
 
 		private void dgdLstMat_ItemCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
