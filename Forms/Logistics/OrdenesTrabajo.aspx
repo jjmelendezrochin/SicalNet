@@ -22,7 +22,9 @@
 		{
 			window.frames["top"].document.title = "SICAL  - Logística - Generar Ordenes de Trabajo";
 		}
-		</script>
+
+
+        </script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		
 		<script type="text/javascript">document.addEventListener(

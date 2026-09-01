@@ -104,92 +104,170 @@ namespace UserInterface.Forms.Logistics
 		}
 		#endregion
 
-//		private void ValidateImportFile(string file)
-//		{
-//		}
+		//		private void ValidateImportFile(string file)
+		//		{
+		//		}
 
 		private void AddPrograma_Click(object sender, System.EventArgs e)
 		{
-			if(this.fileInput.PostedFile.FileName==string.Empty && sender!=null)
+			if (sender != null &&
+				(this.fileInput.PostedFile == null ||
+				 this.fileInput.PostedFile.FileName == string.Empty))
 			{
-				this.lblErrMsg.Text="Debe especificar el archivo que contiene el programa de producción";
+				this.lblErrMsg.Text =
+					"Debe especificar el archivo que contiene el programa de producción";
+
+				string scriptArchivo =
+					"SicalAlert.mostrar(" +
+					"\"Debe especificar el archivo que contiene el programa de producción\", " +
+					"\"warning\", " +
+					"\"Archivo requerido\");";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ArchivoRequerido",
+					scriptArchivo,
+					true
+				);
+
 				return;
 			}
+
 			try
 			{
-				//string fullPath, fileName; int Pos;
 				string fileName;
-				//fullPath = fileInput.PostedFile.FileName;	
-				//Pos = fullPath.LastIndexOf("\\");
-				//fileName = fullPath.Substring(Pos, fullPath.Length - Pos);
-				//fileInput.PostedFile.SaveAs(Server.MapPath("") + fileName);
-				SICALNet.BusinessLogicLayer.Programa Programa = new SICALNet.BusinessLogicLayer.Programa();
-				/*
-				 * Descripción:
-				 *	Obtiene la información del Programa de Producción, verifica si ya se ha cargado uno previamente
-				 *	para la fecha y línea contenida en el nuevo programa, en caso de ser así muestra un mensaje
-				 *	para confirmar la importación del Programa de Importación.	
-				 * Autor:
-				 *	Ing. Ariel Martínez Morales
-				 * Fecha
-				 *	04-08-2005
-				 */		
-				this.lblErrMsg.Text="";
-				this.dgdPrograma.Visible=false;
 
-				if(!this.ConfirmImportData)
+				SICALNet.BusinessLogicLayer.Programa Programa =
+					new SICALNet.BusinessLogicLayer.Programa();
+
+				this.lblErrMsg.Text = "";
+				this.dgdPrograma.Visible = false;
+
+				if (!this.ConfirmImportData)
 				{
-					fileName = System.IO.Path.GetFileName(fileInput.PostedFile.FileName);
-					this.ImportFileName=Server.MapPath("") + fileName;
-					//se guarda el archivo "posteado"
+					fileName = System.IO.Path.GetFileName(
+						fileInput.PostedFile.FileName
+					);
+
+					this.ImportFileName =
+						System.IO.Path.Combine(Server.MapPath(""), fileName);
+
 					fileInput.PostedFile.SaveAs(this.ImportFileName);
 
-					SICALNet.BusinessEntities.ProgramaInfo objProgramInfo = Programa.GetProgramInfoFromImportExcelFile(this.ImportFileName);
+					SICALNet.BusinessEntities.ProgramaInfo objProgramInfo =
+						Programa.GetProgramInfoFromImportExcelFile(
+							this.ImportFileName
+						);
 
-					if(Programa.IsExistPrograma(objProgramInfo))
+					if (Programa.IsExistPrograma(objProgramInfo))
 					{
-						System.Text.StringBuilder script = new System.Text.StringBuilder();
-						script.Append("<SCRIPT Language=\"JavaScript\">\n");
-						script.Append("	ConfirmImport(\"");
-						script.Append(string.Format("Ya existe un Programa de Producción para la Fecha {0} y Línea de Producción {1}, ¿Desea agregar más secuencias?", objProgramInfo.Fecha, objProgramInfo.IdLinea.ToString()));
-						script.Append("\")\n");
-						script.Append("</SCRIPT>\n");
-						this.AddPrograma.Attributes.Add("onclick", "return ConfirmImport(\""+string.Format("Ya existe un Programa de Producción para la Fecha {0} y Línea de Producción {1}, ¿Desea agregar más secuencias?", objProgramInfo.Fecha, objProgramInfo.IdLinea.ToString())+"\");");
+						string mensaje = string.Format(
+							"Ya existe un Programa de Producción para la Fecha {0} " +
+							"y Línea de Producción {1}, ¿desea agregar más secuencias?",
+							objProgramInfo.Fecha,
+							objProgramInfo.IdLinea
+						);
 
-						script = new System.Text.StringBuilder();
-						script.Append("<SCRIPT Language=\"JavaScript\">\n");
-						script.Append("if(confirm(\""+string.Format("Ya existe un Programa de Producción para la Fecha {0} y Línea de Producción {1}, ¿Desea agregar más secuencias?", objProgramInfo.Fecha, objProgramInfo.IdLinea.ToString())+"\"))");
-						script.Append("	document.forms[0].submit();");
-						script.Append("</SCRIPT>\n");
-						
-						this.RegisterStartupScript("ConfirmMessage", script.ToString());
-						this.ConfirmImportData=true;						
+						string mensajeJavaScript =
+							System.Web.HttpUtility.JavaScriptStringEncode(mensaje);
+
+						string scriptConfirmacion =
+							"SicalAlert.confirmar(" +
+							"\"" + mensajeJavaScript + "\", " +
+							"\"Confirmar carga\", " +
+							"function () {" +
+								"showWaitControls();" +
+								"document.forms[0].submit();" +
+							"}" +
+							");";
+
+						this.ConfirmImportData = true;
+
+						ClientScript.RegisterStartupScript(
+							this.GetType(),
+							"ConfirmMessage",
+							scriptConfirmacion,
+							true
+						);
+
 						return;
 					}
 				}
-				// Termina modificación
 
-				dgdPrograma.DataSource = (IList) Programa.ImportExcelFile(this.ImportFileName, this.ConfirmImportData, this.User.Identity.Name.ToString());
+				dgdPrograma.DataSource = (IList)Programa.ImportExcelFile(
+					this.ImportFileName,
+					this.ConfirmImportData,
+					this.User.Identity.Name
+				);
+
 				dgdPrograma.DataBind();
-				//se apaga la bandera prendida en la confirmación de importación
-				this.ConfirmImportData=false;
-				
-				if(dgdPrograma.DataSource == null)
-				{	
+
+				this.ConfirmImportData = false;
+
+				if (dgdPrograma.DataSource == null)
+				{
 					lblErrMsg.ForeColor = Color.Green;
-					lblErrMsg.Text = "El programa de producción se cargo a la base de datos con éxito";
+					lblErrMsg.Text =
+						"El programa de producción se cargó a la base de datos con éxito";
+
+					string scriptExito =
+						"SicalAlert.mostrar(" +
+						"\"El programa de producción se cargó a la base de datos con éxito\", " +
+						"\"success\", " +
+						"\"Carga concluida\");";
+
+					ClientScript.RegisterStartupScript(
+						this.GetType(),
+						"CargaConcluida",
+						scriptExito,
+						true
+					);
 				}
 				else
 				{
 					dgdPrograma.Visible = true;
 					lblErrMsg.ForeColor = Color.Red;
-					lblErrMsg.Text = "No se cargo el programa de producción....por favor verifique los siguientes detalles de error...";
+					lblErrMsg.Text =
+						"No se cargó el programa de producción. " +
+						"Por favor, verifique los detalles de error.";
+
+					string scriptErrorValidacion =
+						"SicalAlert.mostrar(" +
+						"\"No se cargó el programa de producción. " +
+						"Por favor, verifique los detalles de error.\", " +
+						"\"error\", " +
+						"\"Error de validación\");";
+
+					ClientScript.RegisterStartupScript(
+						this.GetType(),
+						"ErrorValidacion",
+						scriptErrorValidacion,
+						true
+					);
 				}
 			}
-			catch
+			catch (Exception ex)
 			{
-				throw;			
-			}			
+				this.ConfirmImportData = false;
+				lblErrMsg.ForeColor = Color.Red;
+				lblErrMsg.Text = ex.Message;
+
+				string mensajeError =
+					System.Web.HttpUtility.JavaScriptStringEncode(ex.Message);
+
+				string scriptError =
+					"SicalAlert.mostrar(" +
+					"\"" + mensajeError + "\", " +
+					"\"error\", " +
+					"\"Error al cargar el programa\");";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorCargaPrograma",
+					scriptError,
+					true
+				);
+			}
 		}
 	}
 }

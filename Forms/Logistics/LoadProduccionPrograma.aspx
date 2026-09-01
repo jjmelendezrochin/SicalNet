@@ -49,17 +49,28 @@
 					}
 				}
 			}
-			function checkInputFile()
-			{
-				if(document.forms[0].fileInput.value=="")
-				{
-					alert("Debe especificar el archivo de importación a cargar");
-					waitControls.style.display='none';
-					return false;
-				}
-				return true;
+
+            function checkInputFile() {
+                if (document.forms[0].fileInput.value == "") {
+                    var waitControls = document.getElementById("waitControls");
+
+                    if (waitControls != null) {
+                        waitControls.style.display = "none";
+                    }
+
+                    SicalAlert.mostrar(
+                        "Debe especificar el archivo de importación a cargar",
+                        "warning",
+                        "Archivo requerido"
+                    );
+
+                    return false;
+                }
+
+                return true;
 			}
         </script>
+
 		<script type="text/javascript">document.addEventListener(
 			"DOMContentLoaded",
 			function () {
@@ -96,11 +107,11 @@
 								runat="server">&nbsp;<INPUT id="hdnFileInput" type="hidden" runat="server"></TD>
 						<TD align="center"></TD>
 						<TD align="center"><asp:button id="AddPrograma" runat="server" CssClass="standard-text" CausesValidation="False"
-								Text="Cargar Programa" Width="126px"></asp:button></TD>
+								Text="Cargar Programa" Width="180px"></asp:button></TD>
 					</TR>
 					<TR>
 						<TD class="Normal" align="center" colSpan="4">
-							<!--<DIV id="waitControls" style="DISPLAY: none">-->
+							<DIV id="waitControls" style="DISPLAY: none">
 								<TABLE>
 									<TR>
 										<TD align="center"><asp:image id="Image2" runat="server" ImageUrl="../../images/waitImage.gif"></asp:image></TD>
