@@ -417,12 +417,30 @@ namespace UserInterface.Forms.Structures
 						throw new Exception("Debe capturar la descripción");
 				else
 					throw new Exception("El codigo SAP debe ser un número");
-				}			
-				catch
-				{
-					// prcErrorDisplay(errHand,"Error");			
-					throw;
-				}				
+				}
+			catch (Exception errHand)
+			{
+				string mensaje =
+					errHand.Message
+						.Replace("\\", "\\\\")
+						.Replace("'", "\\'")
+						.Replace("\r", "")
+						.Replace("\n", "\\n");
+
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
+			}
 		}
 
 		private void MaterialClear()
@@ -454,9 +472,28 @@ namespace UserInterface.Forms.Structures
 					prcEnableDisable("0100010101");
 
 			}
-			catch
+			catch (Exception errHand)
 			{
-				throw;
+				string mensaje =
+					errHand.Message
+						.Replace("\\", "\\\\")
+						.Replace("'", "\\'")
+						.Replace("\r", "")
+						.Replace("\n", "\\n");
+
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
 			}
 		}
 		
@@ -573,12 +610,28 @@ namespace UserInterface.Forms.Structures
 				//to show or hide the fn\inished product details
 				prcToshowFinishPdt();				
 			}
-			catch
+			catch (Exception errHand)
 			{
-				// prcErrorDisplay(errHand,"Error");
-				
-				//throw;
-				RegisterClientScriptBlock("", "<script language='JavaScript'> alert('No existe un material para el Código SAP proporcionado'); </script>");
+				string mensaje =
+					errHand.Message
+						.Replace("\\", "\\\\")
+						.Replace("'", "\\'")
+						.Replace("\r", "")
+						.Replace("\n", "\\n");
+
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
 			}
 		}
 
@@ -604,12 +657,28 @@ namespace UserInterface.Forms.Structures
 			{
 				prcErrorDisplay(errHand,"El detalle de este material esta referenciado a otro catálogo");
 			}
-			catch
+			catch (Exception errHand)
 			{
-				
-				// prcErrorDisplay(errHand,"Error");
+				string mensaje =
+					errHand.Message
+						.Replace("\\", "\\\\")
+						.Replace("'", "\\'")
+						.Replace("\r", "")
+						.Replace("\n", "\\n");
 
-				throw;
+				string ScriptString =
+					"<script language='javascript'>" +
+					"SicalAlert.mostrar(" +
+					"'" + mensaje + "'," +
+					"'Aviso'" +
+					");" +
+					"</script>";
+
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"ErrorValidacion",
+					ScriptString
+				);
 			}
 
 		}

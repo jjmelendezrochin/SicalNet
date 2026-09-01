@@ -180,24 +180,6 @@ namespace UserInterface.Controls
 			}
 		}
 
-		//to set the focus into the corresponding textbox using javascript
-//		private void prcSetFocus(int itemIdx,int colPosition, string cntlName,System.Web.UI.WebControls.DataGridCommandEventArgs dgdArgs)
-//		{
-//			//to get an instance for footer textbox
-//			TextBox obj_Cntl=(TextBox)dgdArgs.Item.FindControl(cntlName);
-//
-//			//if the footer textbox instance is null to get the instance from edit item
-//			if (obj_Cntl==null)
-//				obj_Cntl=(TextBox)dgdColour.Items[itemIdx].Cells[colPosition].FindControl(cntlName);				
-//			if (obj_Cntl==null)
-//				obj_Cntl=(TextBox)dgdColour.Controls[0].Controls[dgdColour.Controls[0].Controls.Count-1].Controls[0].FindControl(cntlName);
-//
-//			//to set the focus
-//			Page.RegisterStartupScript("focus", "<script language='JavaScript'>"+
-//				"PlantaForm." + obj_Cntl.ClientID + ".focus();"+
-//				"PlantaForm." + obj_Cntl.ClientID + ".select();" +
-//				"<" + "/script>");
-//		}
 
 		private void dgdColour_DeleteCommand(object source, System.Web.UI.WebControls.DataGridCommandEventArgs e)
 		{

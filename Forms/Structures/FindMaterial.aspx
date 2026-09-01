@@ -20,7 +20,9 @@
 					<TD>
 						<asp:datagrid id="dgdFindMaterial" runat="server" ShowFooter="True" Width="550px" Font-Names="Verdana"
 							CellPadding="2" AutoGenerateColumns="False" Font-Name="Verdana" FontSize="11px" AllowSorting="True"
-							BorderColor="White" BorderStyle="None" CssClass="GridView grid-header">
+							BorderColor="White" BorderStyle="None" 
+							CssClass="GridView grid-header">
+							<HeaderStyle CssClass="grid-header"></HeaderStyle>
 							<Columns>
 								<asp:TemplateColumn Visible="False" HeaderText="Characteristic">
 									<HeaderStyle HorizontalAlign="Center" Width="40px" CssClass="grid-header" VerticalAlign="Middle"></HeaderStyle>
