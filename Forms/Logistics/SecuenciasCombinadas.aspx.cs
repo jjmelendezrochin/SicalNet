@@ -175,26 +175,66 @@ namespace UserInterface.Forms.Logistics
 		{
 			if (secuenciasSeleccionadas())
 			{
-				string selectedSequences=string.Empty;
+				string selectedSequences = string.Empty;
+
 				if (secuenciasMismoTipo(out selectedSequences))
 				{
 					performCombination(selectedSequences);
-					string ScriptString="<script language='javascript'>alert('Las secuencias seleccionadas fueron combinadas exitosamente');</script>"; 
-					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
-					BindGrid(txtFecha.Text.Trim(),txtFechaFinal.Text.Trim(),Convert.ToInt32(cboLinea.SelectedItem.Value));
+
+					string script =
+						"SicalAlert.mostrar(" +
+						"\"Las secuencias seleccionadas fueron combinadas correctamente.\", " +
+						"\"success\", " +
+						"\"Combinación concluida\"" +
+						");";
+
+					ClientScript.RegisterStartupScript(
+						this.GetType(),
+						"CombinacionExitosa",
+						script,
+						true
+					);
+
+					BindGrid(
+						txtFecha.Text.Trim(),
+						txtFechaFinal.Text.Trim(),
+						Convert.ToInt32(cboLinea.SelectedItem.Value)
+					);
 				}
 				else
 				{
-					string ScriptString="<script language='javascript'>alert('Las secuencias seleccionadas son de distintos materiales. Solo materiales del mismo código pueden combinarse. Seleccione secuencias que sean del mismo material (mismo CodigoSAP)');</script>"; 
-					ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
+					string script =
+						"SicalAlert.mostrar(" +
+						"\"Las secuencias seleccionadas son de distintos materiales. " +
+						"Solo pueden combinarse materiales que tengan el mismo código SAP.\", " +
+						"\"warning\", " +
+						"\"Materiales diferentes\"" +
+						");";
+
+					ClientScript.RegisterStartupScript(
+						this.GetType(),
+						"MaterialesDiferentes",
+						script,
+						true
+					);
 				}
 			}
 			else
 			{
-				string ScriptString="<script language='javascript'>alert('Seleccione cuando menos dos secuencias que desee combinar.');</script>"; 
-				ClientScript.RegisterStartupScript(this.GetType(),"ClientScript",ScriptString);
-			}
+				string script =
+					"SicalAlert.mostrar(" +
+					"\"Seleccione cuando menos dos secuencias que desee combinar.\", " +
+					"\"warning\", " +
+					"\"Secuencias requeridas\"" +
+					");";
 
+				ClientScript.RegisterStartupScript(
+					this.GetType(),
+					"SecuenciasRequeridas",
+					script,
+					true
+				);
+			}
 		}
 
 		private void performCombination(string secs)

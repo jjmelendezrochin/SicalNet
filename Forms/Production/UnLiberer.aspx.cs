@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Data;
@@ -72,7 +72,11 @@ namespace UserInterface.Forms.Production
 			//Validate that the user provided a sequence
 			if (selectedSequence==string.Empty)
 			{
-				MessageDisplay("Por favor indique el número de secuencia que desea reactivar");
+				MessageDisplay(
+					"Por favor, indique el nÃºmero de secuencia que desea reactivar.",
+					"warning",
+					"Secuencia requerida"
+				);
 				return;
 			}
 
@@ -81,7 +85,11 @@ namespace UserInterface.Forms.Production
 			ArrayList existingProgram = (ArrayList) BLLProgram.Load(selectedSequence);
 			if (existingProgram.Count<=0)
 			{
-				MessageDisplay(string.Format("La secuencia -{0}- no existe",selectedSequence));
+				MessageDisplay(
+					string.Format("La secuencia -{0}- no existe.", selectedSequence),
+					"warning",
+					"Secuencia no encontrada"
+				);
 				return;
 			}
 
@@ -113,21 +121,47 @@ namespace UserInterface.Forms.Production
 				{
 					txtSecuencia.Text=string.Empty;
 					BindList();
-					MessageDisplay(string.Format("La secuencia -{0}- fue reactivada exitosamente",selectedSequence));
+					MessageDisplay(
+						string.Format("La secuencia -{0}- fue reactivada correctamente.", selectedSequence),
+						"success",
+						"Secuencia reactivada"
+					);
 				}
 				else
-					MessageDisplay(string.Format("La secuencia -{0}- no fue reactivada, debido a que no se encuentra liberada !!",selectedSequence));
+				{
+					MessageDisplay(
+						string.Format("La secuencia -{0}- no fue reactivada porque no se encuentra liberada.", selectedSequence),
+						"warning",
+						"No fue posible reactivar"
+					);
+				}
 			}
 			else
 			{
-				MessageDisplay(string.Format("Por favor indique el área (o las áreas) en donde desea reactivar la secuencia -{0}- ",selectedSequence));
+				MessageDisplay(
+					string.Format("Por favor, indique el Ã¡rea o las Ã¡reas donde desea reactivar la secuencia -{0}-.", selectedSequence),
+					"warning",
+					"Ãrea requerida"
+				);
 			}
 
 		}
 
-		private void MessageDisplay(string Msg)
+		private void MessageDisplay(string mensaje, string tipo, string titulo)
 		{
-			Page.RegisterStartupScript("ClientSc","<script language=JavaScript> alert('" + Msg + "') </script>");
+			string script = string.Format(
+				"SicalAlert.mostrar(\"{0}\", \"{1}\", \"{2}\");",
+				HttpUtility.JavaScriptStringEncode(mensaje),
+				HttpUtility.JavaScriptStringEncode(tipo),
+				HttpUtility.JavaScriptStringEncode(titulo)
+			);
+
+			ClientScript.RegisterStartupScript(
+				this.GetType(),
+				"SicalAlert_" + Guid.NewGuid().ToString("N"),
+				script,
+				true
+			);
 		}
 
 

@@ -49,21 +49,24 @@ function ShowHide(CtrlName)
     .auto-style1 {
         width: 660px;
     }
+    .auto-style2 {
+        width: 249px;
+    }
 </style>
 <TABLE id="Table1" border="0">
 	<TBODY>
 		<TR vAlign="top">
 			<TD colSpan="3" align="center">
-				<TABLE style="HEIGHT: 40px; WIDTH: 521px" id="Table2">
+				<TABLE style="HEIGHT: 40px; WIDTH: 700px" id="Table2">
 					<TR>
 						<TD><asp:label id="lblLinea" CssClass="standard-text" Text="Linea de produccion" Runat="server">Linea de producción</asp:label></TD>
 						<TD><asp:label id="IdLote" CssClass="standard-text" Text="Número de Lote" Runat="server">Número de Lote</asp:label></TD>
-						<TD><asp:label id="lblDate" CssClass="standard-text" Text="Fecha del Programma" Runat="server">Fecha del Programa</asp:label><asp:label id="Label3" CssClass="standard-text" Text="(dd-MMM-yyyy)" Runat="server" ForeColor="Red"> * (dd-MMM-aaaa)</asp:label></TD>
+						<TD class="auto-style2"><asp:label id="lblDate" CssClass="standard-text" Text="Fecha del Programma" Runat="server">Fecha del Programa</asp:label><asp:label id="Label3" CssClass="standard-text" Text="(dd-MMM-yyyy)" Runat="server" ForeColor="Red"> * (dd-MMM-aaaa)</asp:label></TD>
 					</TR>
 					<TR>
 						<TD><asp:dropdownlist id="ddlIdLinea" CssClass="standard-text" Runat="server" AutoPostBack="True"></asp:dropdownlist></TD>
 						<TD><asp:dropdownlist id="ddlLote" CssClass="standard-text" Runat="server"></asp:dropdownlist></TD>
-						<TD colSpan="2">
+						<TD colSpan="2" class="auto-style2">
 							<center>
 								<asp:textbox id="txtFecha" CssClass="Standard-text" Runat="server" BorderStyle="Groove" 
 									Width="99px"
