@@ -68,7 +68,7 @@
 		<form id="ConsultColorWO" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" height="227" width="800" align="center">
 				<TBODY>
-					<tr>
+					<tr class="sical-menu-row">
 						<td align="left" colSpan="4">							
 							<div id="sicalMenu"></div>
 						</td>

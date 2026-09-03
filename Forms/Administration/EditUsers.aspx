@@ -45,7 +45,7 @@ function CheckUnCheckAll(CtrlName)
 		<form id="ConsultColorWO" method="post" runat="server">
 			<table width="800" align="center" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
-					<tr>
+					<tr class="sical-menu-row">
 						<td align="left" colSpan="4">
 							<div id="sicalMenu"></div>
 						</td>

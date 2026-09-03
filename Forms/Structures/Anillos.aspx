@@ -51,7 +51,7 @@
 		<form id="PlantaForm" method="post" runat="server">
 			<div align="center">
 				<table border="0" cellSpacing="0" cellPadding="0" width="740">
-					<tr>
+					<tr class="sical-menu-row">
 						<td class="contenido" bgColor="#003366" colSpan="2">
 							<div id="sicalMenu"></div>
 						</td>

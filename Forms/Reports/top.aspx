@@ -130,7 +130,7 @@
 	<body MS_POSITIONING="GridLayout" onload="HideWait();">
 		<table style="BORDER-COLLAPSE: collapse" border="0" width="800" align="center">
 			<TBODY>
-				<tr>
+				<tr class="sical-menu-row">
 					<td colSpan="6" align="left">
 						<div id="sicalMenu"></div>
 					</td>

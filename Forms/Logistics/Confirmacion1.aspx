@@ -3,9 +3,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
-		<title>Confirmaci�n de Ajustes al Programa de Producci�n</title>
+		<title>Confirmación de Ajustes al Programa de Producci�n</title>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-		<LINK rel="stylesheet" type="text/css" href="../../styloDESC.CSS">
+		
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
+		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+
 	</HEAD>
 	<body leftMargin="0" topMargin="0" bgColor="#ffffff" text="#000000" marginwidth="0" marginheight="0"
 		ms_positioning="GridLayout">

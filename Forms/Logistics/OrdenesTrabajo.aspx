@@ -39,7 +39,7 @@
 		<form id="PdtLogForm" method="post" runat="server">
 			<table align="center" width="700" style="BORDER-COLLAPSE: collapse">
 				<TBODY>
-					<tr>
+					<tr class="sical-menu-row">
 						<td align="left" colSpan="5">
 							<div id="sicalMenu"></div>
 						</td>

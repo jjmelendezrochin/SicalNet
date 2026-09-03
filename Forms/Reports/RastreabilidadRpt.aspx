@@ -33,11 +33,12 @@
 		<center>
 			<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
 				<TBODY>
-					<tr>
+					<tr class="sical-menu-row">
 						<td align="left" colSpan="5">
 							<div id="sicalMenu"></div>
 						</td>
 					</tr>
+				</TBODY>
 			</table>
 			<form id="RastreabilidadRpt" method="post" runat="server">				
 				<asp:TextBox id="txtSecuencia" style="Z-INDEX: 100; POSITION: absolute; TOP: 144px; LEFT: 592px"

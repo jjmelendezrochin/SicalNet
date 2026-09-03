@@ -37,7 +37,7 @@
 <body ms_positioning="GridLayout" onload="ShowTitle()">
     <form id="AdjustTanque" method="post" runat="server">
         <table align="center">
-            <tr>
+            <tr class="sical-menu-row">
                 <td align="left" colspan="5">
                     <div id="sicalMenu"></div>
                 </td>

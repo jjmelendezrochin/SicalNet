@@ -44,7 +44,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 		<form id="TipoPMMAForm" method="post" runat="server">
 			<div align="center">
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
-					<tr>
+					<tr class="sical-menu-row">
 						<td class="contenido" colSpan="2">
 							<div id="sicalMenu"></div>
 						</td>

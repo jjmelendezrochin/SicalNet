@@ -85,7 +85,7 @@
 		<form id="ConsultColorWO" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" border="0" width="800" align="center">
 				<TBODY>
-					<tr>
+					<tr class="sical-menu-row">
 						<td colSpan="6" align="left">
 							<div id="sicalMenu"></div>
 						</td>
@@ -141,10 +141,10 @@
 					</tr>
 					<tr>
 						<td align="center"><asp:button id="btnImprimirEqu" runat="server" Text="Imp. Etiquetas" CssClass="botonesInput"
-								Width="98px" Visible="False"></asp:button></td>
-						<td align="center"><asp:button id="btnRpt" runat="server" Text="Rep. Formulación" CssClass="botonesInput" Width="124px"
+								Width="120px" Visible="False"></asp:button></td>
+						<td align="center"><asp:button id="btnRpt" runat="server" Text="Rep. Formulación" CssClass="botonesInput" Width="140px"
 								Visible="False"></asp:button>&nbsp;</td>
-						<td align="center"><asp:button id="btnCard" runat="server" Text="Tarj. Formulación" CssClass="botonesInput" Width="124px"
+						<td align="center"><asp:button id="btnCard" runat="server" Text="Tarj. Formulación" CssClass="botonesInput" Width="140px"
 								Visible="False"></asp:button></td>
 						<td align="center"><asp:button id="btnLiberado" runat="server" Text="Liberar" CssClass="botonesInput" Visible="False"></asp:button></td>
 						<td align="center"><asp:button id="btnAgregar" runat="server" Text="Salvar" CssClass="botonesInput" Visible="False"></asp:button></td>

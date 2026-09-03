@@ -33,7 +33,7 @@
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<form id="ProduccionRpt" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" width="700" align="center">				
-					<tr>
+					<tr class="sical-menu-row">
 						<td align="left" colSpan="5">
 							<div id="sicalMenu"></div>
 						</td>

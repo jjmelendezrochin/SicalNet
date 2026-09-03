@@ -45,7 +45,7 @@
 		<form id="PresentacionForm" method="post" runat="server">
 			<div align="center">
 				<table width="740" border="0" cellspacing="0" cellpadding="0">
-					<tr>
+					<tr class="sical-menu-row">
 						<td colspan="2" class="contenido">
 							<div id="sicalMenu"></div>
 						</td>

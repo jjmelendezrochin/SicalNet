@@ -6,36 +6,42 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
+
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
 
 		<script language="JavaScript">
-<!--
-<!--
-function MM_reloadPage(init) {  //reloads the window if Nav4 resized
-  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
-    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
-  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
-}
-MM_reloadPage(true);
-// -->
+		<!--
+		<!--
+		function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+		  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+			document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+		  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+		}
+		MM_reloadPage(true);
+		// -->
 
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+		  window.open(theURL,winName,features);
+		}
 
-function ConfirmOperation(Button,strOperationType)
-{
-	if (confirm("¿Está seguro que desea "+strOperationType+" este perfil?")) 
-	{
-		Button.click()
-	}
-}
+            function ConfirmOperation(Button, strOperationType) {
+                SicalAlert.confirmar(
+                    "¿Está seguro que desea " + strOperationType + " este perfil?",
+                    "Confirmar operación",
+                    function () {
+                        Button.click();
+                    }
+                );
+
+                return false;
+            }
 //-->
 			function ShowTitle()
 			{
 					window.frames["top"].document.title = "SICAL  - Administración - Catálogo de Perfiles"
 			}	
-		</script>
+        </script>
 		
 
 		<script type="text/javascript">
@@ -52,7 +58,7 @@ function ConfirmOperation(Button,strOperationType)
 		<form id="ConsultColorWO" method="post" runat="server">
 			<table width="800" align="center" style="BORDER-COLLAPSE: collapse" height="227">
 				<TBODY>
-					<tr>
+					<tr class="sical-menu-row">
 						<td align="left" colSpan="4">
 							<div id="sicalMenu"></div>
 						</td>

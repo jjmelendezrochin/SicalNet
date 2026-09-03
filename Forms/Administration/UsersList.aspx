@@ -62,10 +62,10 @@
 </head>
 <body onload="ShowTitle()">
     <form id="ConsultColorWO" method="post" runat="server">
-        <table style="border-collapse: collapse"; height="227"; width="1000"; align="center">
+        <table style="border-collapse: collapse; margin-top: 0; padding-top: 0;"; height="227"; width="1000"; align="center">
             <tbody>
-                <tr>
-                    <td align="left" colspan="4">
+                <tr class="sical-menu-row">
+                    <td align="left" colspan="4"  style="padding: 0; margin: 0; vertical-align: top;">
                         <div id="sicalMenu"></div>
                     </td>
                 </tr>

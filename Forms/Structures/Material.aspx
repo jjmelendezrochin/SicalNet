@@ -48,7 +48,7 @@
 			<div style="width: 900px; margin-left: auto; margin-right: auto;">
 				<table cellSpacing="0" cellPadding="0" width="900" border="0">
 					<TBODY>
-						<tr>
+						<tr class="sical-menu-row">
 							<td align="left" colSpan="5">
 								<div id="sicalMenu"></div>
 							</td>

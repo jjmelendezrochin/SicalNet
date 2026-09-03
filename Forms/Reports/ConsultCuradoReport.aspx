@@ -35,7 +35,7 @@
 	<body MS_POSITIONING="GridLayout">
 		<table style="BORDER-COLLAPSE: collapse" width="700" align="center">
 				<TBODY>
-					<tr>
+					<tr class="sical-menu-row">
 						<td align="left" colSpan="5">
 							<div id="sicalMenu"></div>
 						</td>
