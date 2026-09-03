@@ -35,7 +35,7 @@
 
     <!-- Menú -->
     <table align="center">
-        <tr>
+        <tr class="sical-menu-row">
             <td align="left" colspan="5">
                 <div id="sicalMenu"></div>
             </td>

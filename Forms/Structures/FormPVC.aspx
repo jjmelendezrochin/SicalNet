@@ -58,7 +58,7 @@
 		<form id="FormulationofPVC" method="post" runat="server">
 			<div align="center">
 				<table border="0" cellSpacing="0" cellPadding="0" width="740">
-					<tr>
+					<tr class="sical-menu-row">
 						<td class="contenido" colSpan="3">
 							<div id="sicalMenu"></div>
 						</td>

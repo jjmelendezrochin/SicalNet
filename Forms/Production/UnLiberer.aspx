@@ -36,7 +36,7 @@
 	<body onload="ShowTitle()" MS_POSITIONING="GridLayout">
 		<form id="UnLiberer" method="post" runat="server">
 			<table align="center" style="BORDER-COLLAPSE: collapse" class="auto-style1">
-				<tr>
+				<tr class="sical-menu-row">
 					<td align="left" colSpan="5">
 						<div id="sicalMenu"></div>
 					</td>

@@ -1,4 +1,4 @@
-<%@ Page language="c#" Codebehind="UpdateMaterialList.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.UpdateMaterialList" %>
+﻿<%@ Page language="c#" Codebehind="UpdateMaterialList.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.UpdateMaterialList" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
@@ -51,7 +51,7 @@ function ShowTitle()
 		<form id="UpdateMaterialList" method="post" runat="server">
 			<div align="center">
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
-					<tr>
+					<tr class="sical-menu-row">
 						<td class="contenido" colSpan="3">
 							<div id="sicalMenu"></div>
 						</td>

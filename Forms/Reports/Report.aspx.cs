@@ -196,74 +196,85 @@ namespace UserInterface.Forms.Reports
 			string reportName = "";
 			string redirectPath = "";
 			string SelFormula="";
-			
-			rptHelper = new Reports.ReportHelper();
-			Reports.ConsultReacion reporte = new Reports.ConsultReacion();
 
-			campoFecha= new ParameterValues();
-			valorFecha= new ParameterDiscreteValue();
+            try
+            {            
+				rptHelper = new Reports.ReportHelper();
+				Reports.ConsultReaccion reporte = new Reports.ConsultReaccion();
 
-			if ( txtFechaInicial.Text !=  String.Empty && txtFechaFinal.Text != string.Empty)   
-				valorFecha.Value=string.Format("Del {0} al {1}",txtFechaInicial.Text,txtFechaFinal.Text);
-			else
-				valorFecha.Value="";
+				campoFecha= new ParameterValues();
+				valorFecha= new ParameterDiscreteValue();
 
-			campoFecha.Add(valorFecha);
+				if ( txtFechaInicial.Text !=  String.Empty && txtFechaFinal.Text != string.Empty)   
+					valorFecha.Value=string.Format("Del {0} al {1}",txtFechaInicial.Text,txtFechaFinal.Text);
+				else
+					valorFecha.Value="";
 
-			campoLinea= new ParameterValues();
-			valorLinea= new ParameterDiscreteValue();
+				campoFecha.Add(valorFecha);
 
-			if (cboLinea.SelectedItem.Text != const_All)
-				valorLinea.Value=string.Format("Reporte Fase de Reacción Linea: {0}",cboLinea.SelectedItem.Text);
-			else
-				valorLinea.Value="Reporte Fase de Reacción ";
+				campoLinea= new ParameterValues();
+				valorLinea= new ParameterDiscreteValue();
 
-			campoLinea.Add(valorLinea);
+				if (cboLinea.SelectedItem.Text != const_All)
+					valorLinea.Value=string.Format("Reporte Fase de Reacción Linea: {0}",cboLinea.SelectedItem.Text);
+				else
+					valorLinea.Value="Reporte Fase de Reacción ";
+
+				campoLinea.Add(valorLinea);
 				
 
-			campoPlanta= new ParameterValues(); 
-			valorPlanta= new ParameterDiscreteValue();
-			if (cboLinea.SelectedItem.Text == const_All) 
-			{
-				valorPlanta.Value=const_All;
-				reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
-			}
-			else
-			{
-				valorPlanta.Value="";
-				reporte.Section1.ReportObjects["FldAllPlanta"].Width =0;  
-			}  
-			campoPlanta.Add(valorPlanta);
+				campoPlanta= new ParameterValues(); 
+				valorPlanta= new ParameterDiscreteValue();
+				if (cboLinea.SelectedItem.Text == const_All) 
+				{
+					valorPlanta.Value=const_All;
+					// reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;
+					reporte.Section1.ReportObjects["FldAllPlanta"].Width = 0;
+				}
+				else
+				{
+					valorPlanta.Value="";
+					reporte.Section1.ReportObjects["FldAllPlanta"].Width =0;  
+				}  
+				campoPlanta.Add(valorPlanta);
 
-			campoUser= new ParameterValues();
-			valorUser= new ParameterDiscreteValue();
-			valorUser.Value=Context.User.Identity.Name;
-			campoUser.Add(valorUser);
+				campoUser= new ParameterValues();
+				valorUser= new ParameterDiscreteValue();
+				valorUser.Value=Context.User.Identity.Name;
+				campoUser.Add(valorUser);
 
 				
-			campoSystem= new ParameterValues();
-			valorSystem= new ParameterDiscreteValue();
-			valorSystem.Value="SICAL";
-			campoSystem.Add(valorSystem);
+				campoSystem= new ParameterValues();
+				valorSystem= new ParameterDiscreteValue();
+				valorSystem.Value="SICAL";
+				campoSystem.Add(valorSystem);
 					
-			reporte.DataDefinition.ParameterFields["Title"].ApplyCurrentValues(campoLinea);
-			reporte.DataDefinition.ParameterFields["Title1"].ApplyCurrentValues(campoFecha);
-			reporte.DataDefinition.ParameterFields["Plant"].ApplyCurrentValues(campoPlanta);
-			reporte.DataDefinition.ParameterFields["UserName"].ApplyCurrentValues(campoUser);
-			reporte.DataDefinition.ParameterFields["System"].ApplyCurrentValues(campoSystem);
+				reporte.DataDefinition.ParameterFields["Title"].ApplyCurrentValues(campoLinea);
+				reporte.DataDefinition.ParameterFields["Title1"].ApplyCurrentValues(campoFecha);
+				reporte.DataDefinition.ParameterFields["Plant"].ApplyCurrentValues(campoPlanta);
+				reporte.DataDefinition.ParameterFields["UserName"].ApplyCurrentValues(campoUser);
+				reporte.DataDefinition.ParameterFields["System"].ApplyCurrentValues(campoSystem);
 
-			if (cboLinea.SelectedItem.Text != const_All)
-				SelFormula = "{OTReaccion.IdLinea}=" + Convert.ToInt32(cboLinea.SelectedItem.Value);
-			if (txtFechaInicial.Text != null && txtFechaFinal.Text != null && txtFechaInicial.Text != "" && txtFechaFinal.Text != "")
-				SelFormula = SelFormula + " " + (SelFormula!=string.Empty?"AND":"") + " {OTReaccion.Fecha}>=Date(" + DateTime.Parse(txtFechaInicial.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("MM") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("dd") + ") AND {OTReaccion.Fecha}<=Date(" + DateTime.Parse(txtFechaFinal.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("MM") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("dd") + ")";
+				if (cboLinea.SelectedItem.Text != const_All)
+					SelFormula = "{OTReaccion.IdLinea}=" + Convert.ToInt32(cboLinea.SelectedItem.Value);
+				if (txtFechaInicial.Text != null && txtFechaFinal.Text != null && txtFechaInicial.Text != "" && txtFechaFinal.Text != "")
+					SelFormula = SelFormula + " " + (SelFormula!=string.Empty?"AND":"") + " {OTReaccion.Fecha}>=Date(" + DateTime.Parse(txtFechaInicial.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("MM") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("dd") + ") AND {OTReaccion.Fecha}<=Date(" + DateTime.Parse(txtFechaFinal.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("MM") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("dd") + ")";
 
 			
-			reporte.DataDefinition.RecordSelectionFormula=SelFormula;
+				reporte.DataDefinition.RecordSelectionFormula=SelFormula;
 			
-			rptHelper.setPermission(reporte);
-			reportName = rptHelper.exportReport(reporte,"PartidasReaccionReport",User.Identity.Name  );
-			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
-			Response.Redirect(redirectPath);
+				rptHelper.setPermission(reporte);
+				reportName = rptHelper.exportReport(reporte,"PartidasReaccionReport",User.Identity.Name  );
+				redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName + ".pdf";
+				Response.Redirect(redirectPath);
+			}
+			catch (Exception ex)
+			{
+				Response.Write("<pre>");
+				Response.Write(Server.HtmlEncode(ex.ToString()));
+				Response.Write("</pre>");
+				Response.End();
+			}
 		}
 
 		/*** agregado por alejandro.hernandez@nasoft.com 03/03/2006 ***/
@@ -399,97 +410,108 @@ namespace UserInterface.Forms.Reports
 		/*** agregado por alejandro.hernandez@nasoft.com 03/03/2006 ***/
 		private void ImprimeColor()
 		{
-			ParameterValues campoPlanta= new ParameterValues();
-			ParameterValues campoFecha= new ParameterValues();
+			ParameterValues campoPlanta = new ParameterValues();
+			ParameterValues campoFecha = new ParameterValues();
 			Reports.ReportHelper rptHelper = new Reports.ReportHelper();
-			ParameterDiscreteValue valorFecha= new ParameterDiscreteValue();
+			ParameterDiscreteValue valorFecha = new ParameterDiscreteValue();
 			ParameterDiscreteValue valorPlanta = new ParameterDiscreteValue();
-			ParameterValues campoUser= new ParameterValues();
-			ParameterDiscreteValue valorUser= new ParameterDiscreteValue();
-			ParameterValues campoLinea= new ParameterValues();
-			ParameterDiscreteValue valorLinea= new ParameterDiscreteValue();
-			ParameterValues campoSecuencia= new ParameterValues();
-			ParameterDiscreteValue valorSecuencia= new ParameterDiscreteValue();
+			ParameterValues campoUser = new ParameterValues();
+			ParameterDiscreteValue valorUser = new ParameterDiscreteValue();
+			ParameterValues campoLinea = new ParameterValues();
+			ParameterDiscreteValue valorLinea = new ParameterDiscreteValue();
+			ParameterValues campoSecuencia = new ParameterValues();
+			ParameterDiscreteValue valorSecuencia = new ParameterDiscreteValue();
 			/*** comentado por alejandro.hernandez@nasoft.com 07/03/2006 ***/
 			//			ParameterValues campoSystem= new ParameterValues();
 			//			ParameterDiscreteValue valorSystem= new ParameterDiscreteValue();
 
 			string reportName = "";
 			string redirectPath = "";
-			string SelFormula="";
+			string SelFormula = "";
 
-			/*** comentado por alejandro.hernandez@nasoft.com 07/03/2006 ***/
-			//			string Title = "Reporte Fase de Color";
-			rptHelper = new Reports.ReportHelper();
-			Reports.PartidasColorReports reporte = new Reports.PartidasColorReports();
+            try { 
+				/*** comentado por alejandro.hernandez@nasoft.com 07/03/2006 ***/
+				//			string Title = "Reporte Fase de Color";
+				rptHelper = new Reports.ReportHelper();
+				Reports.PartidasColorReports reporte = new Reports.PartidasColorReports();
 
-			campoFecha= new ParameterValues();
-			valorFecha= new ParameterDiscreteValue();
-			if ( txtFechaInicial.Text !=  String.Empty && txtFechaFinal.Text != string.Empty)
-				valorFecha.Value=string.Format("Del {0} al {1}",txtFechaInicial.Text,txtFechaFinal.Text);
-			else
-				valorFecha.Value=string.Empty;
-			campoFecha.Add(valorFecha);
-				
-			campoSecuencia= new ParameterValues();
-			valorSecuencia= new ParameterDiscreteValue();
 
-			if ( txtSecInicial.Text !=  String.Empty && txtSecFinal.Text != string.Empty)   
-				valorSecuencia.Value=string.Format("Del {0} al {1}",txtSecInicial.Text,txtSecFinal.Text);
-			else
-				valorSecuencia.Value="";
 
-			campoSecuencia.Add(valorSecuencia);
+				campoFecha = new ParameterValues();
+				valorFecha = new ParameterDiscreteValue();
+				if (txtFechaInicial.Text != String.Empty && txtFechaFinal.Text != string.Empty)
+					valorFecha.Value = string.Format("Del {0} al {1}", txtFechaInicial.Text, txtFechaFinal.Text);
+				else
+					valorFecha.Value = string.Empty;
+				campoFecha.Add(valorFecha);
 
-			campoLinea= new ParameterValues();
-			valorLinea= new ParameterDiscreteValue();
-			valorLinea.Value=string.Format("Linea: {0}",cboLinea.SelectedItem.Text);
-			campoLinea.Add(valorLinea);
+				campoSecuencia = new ParameterValues();
+				valorSecuencia = new ParameterDiscreteValue();
 
-			campoPlanta= new ParameterValues();
-			valorPlanta= new ParameterDiscreteValue();
-			if (cboLinea.SelectedItem.Text == const_All) 
-			{
-				valorPlanta.Value=const_All;
-				reporte.Section1.ReportObjects["FldAllPlanta"].Width =3015;  
-				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =0;  
+				if (txtSecInicial.Text != String.Empty && txtSecFinal.Text != string.Empty)
+					valorSecuencia.Value = string.Format("Del {0} al {1}", txtSecInicial.Text, txtSecFinal.Text);
+				else
+					valorSecuencia.Value = "";
+
+				campoSecuencia.Add(valorSecuencia);
+
+				campoLinea = new ParameterValues();
+				valorLinea = new ParameterDiscreteValue();
+				valorLinea.Value = string.Format("Linea: {0}", cboLinea.SelectedItem.Text);
+				campoLinea.Add(valorLinea);
+
+				campoPlanta = new ParameterValues();
+				valorPlanta = new ParameterDiscreteValue();
+				if (cboLinea.SelectedItem.Text == const_All)
+				{
+					valorPlanta.Value = const_All;
+					reporte.Section1.ReportObjects["FldAllPlanta"].Width = 3015;
+					reporte.Section1.ReportObjects["FldSinglePlanta"].Width = 0;
+				}
+				else
+				{
+					valorPlanta.Value = "";
+					reporte.Section1.ReportObjects["FldAllPlanta"].Width = 0;
+					reporte.Section1.ReportObjects["FldSinglePlanta"].Width = 3015;
+				}
+				campoPlanta.Add(valorPlanta);
+
+				campoUser = new ParameterValues();
+				valorUser = new ParameterDiscreteValue();
+				valorUser.Value = Context.User.Identity.Name;
+				campoUser.Add(valorUser);
+
+				reporte.DataDefinition.ParameterFields["Title1"].ApplyCurrentValues(campoFecha);
+				reporte.DataDefinition.ParameterFields["Title"].ApplyCurrentValues(campoLinea);
+				reporte.DataDefinition.ParameterFields["Title2"].ApplyCurrentValues(campoSecuencia);
+				reporte.DataDefinition.ParameterFields["UserName"].ApplyCurrentValues(campoUser);
+				reporte.DataDefinition.ParameterFields["Plant"].ApplyCurrentValues(campoPlanta);
+
+				if (cboLinea.SelectedItem.Text != const_All)
+					SelFormula = "{ProgramaProduccion.IdLinea}=" + cboLinea.SelectedItem.Value;
+				if (txtFechaInicial.Text != null && txtFechaFinal.Text != null && txtFechaInicial.Text != "" && txtFechaFinal.Text != "")
+					SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " {ProgramaProduccion.Fecha}>=Date(" + DateTime.Parse(txtFechaInicial.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("MM") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("dd") + ") AND {ProgramaProduccion.Fecha}<=Date(" + DateTime.Parse(txtFechaFinal.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("MM") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("dd") + ")";
+				if (txtSecInicial.Text != null && txtSecFinal.Text != null && txtSecInicial.Text != "" && txtSecFinal.Text != "")
+					SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " Val({OrdenesTrabajo.Secuencia}) >= " + txtSecInicial.Text + " AND " + "Val({OrdenesTrabajo.Secuencia}) <= " + txtSecFinal.Text;
+				if (txtLibInicial.Text != null && txtLibFinal.Text != null && txtLibInicial.Text != "" && txtLibFinal.Text != "")
+					SelFormula = SelFormula + " " + (SelFormula != string.Empty ? "AND" : "") + " {OrdenesTrabajo.FechaLiberacion}>=Date(" + DateTime.Parse(txtLibInicial.Text).ToString("yyyy") + "," + DateTime.Parse(txtLibInicial.Text).ToString("MM") + "," + DateTime.Parse(txtLibInicial.Text).ToString("dd") + ") AND {OrdenesTrabajo.FechaLiberacion}<=Date(" + DateTime.Parse(txtLibFinal.Text).ToString("yyyy") + "," + DateTime.Parse(txtLibFinal.Text).ToString("MM") + "," + DateTime.Parse(txtLibFinal.Text).ToString("dd") + ")";
+
+				SelFormula = SelFormula + " AND {OrdenesTrabajo.IdArea}=1 AND {OrdenesTrabajo.IdStatus}=5";
+				reporte.DataDefinition.RecordSelectionFormula = SelFormula;
+				rptHelper.setPermission(reporte);
+				reportName = rptHelper.exportReport(reporte, "PartidasColorReport", User.Identity.Name);
+
+				redirectPath = ConfigurationManager.AppSettings["reportsWebPath"] + reportName + ".pdf";
+				Response.Redirect(redirectPath);
 			}
-			else
-			{
-				valorPlanta.Value="";
-				reporte.Section1.ReportObjects["FldAllPlanta"].Width =0;  
-				reporte.Section1.ReportObjects["FldSinglePlanta"].Width =3015;  
-			}
-			campoPlanta.Add(valorPlanta);
-
-			campoUser= new ParameterValues();
-			valorUser= new ParameterDiscreteValue();
-			valorUser.Value=Context.User.Identity.Name;
-			campoUser.Add(valorUser);
-
-			reporte.DataDefinition.ParameterFields["Title1"].ApplyCurrentValues(campoFecha);
-			reporte.DataDefinition.ParameterFields["Title"].ApplyCurrentValues(campoLinea);
-			reporte.DataDefinition.ParameterFields["Title2"].ApplyCurrentValues(campoSecuencia);
-			reporte.DataDefinition.ParameterFields["UserName"].ApplyCurrentValues(campoUser);
-			reporte.DataDefinition.ParameterFields["Plant"].ApplyCurrentValues(campoPlanta);
-
-			if (cboLinea.SelectedItem.Text != const_All)
-				SelFormula = "{ProgramaProduccion.IdLinea}=" + cboLinea.SelectedItem.Value;
-			if (txtFechaInicial.Text != null && txtFechaFinal.Text != null && txtFechaInicial.Text != "" && txtFechaFinal.Text != "")
-				SelFormula = SelFormula + " " + (SelFormula!=string.Empty?"AND":"") + " {ProgramaProduccion.Fecha}>=Date(" + DateTime.Parse(txtFechaInicial.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("MM") + "," + DateTime.Parse(txtFechaInicial.Text).ToString("dd") + ") AND {ProgramaProduccion.Fecha}<=Date(" + DateTime.Parse(txtFechaFinal.Text).ToString("yyyy") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("MM") + "," + DateTime.Parse(txtFechaFinal.Text).ToString("dd") + ")";
-			if (txtSecInicial.Text!= null && txtSecFinal.Text!= null && txtSecInicial.Text!= "" && txtSecFinal.Text!= "")
-				SelFormula = SelFormula + " " + (SelFormula!=string.Empty?"AND":"") + " Val({OrdenesTrabajo.Secuencia}) >= " + txtSecInicial.Text+ " AND " + "Val({OrdenesTrabajo.Secuencia}) <= " + txtSecFinal.Text;
-			if (txtLibInicial.Text != null && txtLibFinal.Text != null && txtLibInicial.Text != "" && txtLibFinal.Text != "")
-				SelFormula = SelFormula + " " + (SelFormula!=string.Empty?"AND":"") + " {OrdenesTrabajo.FechaLiberacion}>=Date(" + DateTime.Parse(txtLibInicial.Text).ToString("yyyy") + "," + DateTime.Parse(txtLibInicial.Text).ToString("MM") + "," + DateTime.Parse(txtLibInicial.Text).ToString("dd") + ") AND {OrdenesTrabajo.FechaLiberacion}<=Date(" + DateTime.Parse(txtLibFinal.Text).ToString("yyyy") + "," + DateTime.Parse(txtLibFinal.Text).ToString("MM") + "," + DateTime.Parse(txtLibFinal.Text).ToString("dd") + ")";
-	
-			SelFormula = SelFormula + " AND {OrdenesTrabajo.IdArea}=1 AND {OrdenesTrabajo.IdStatus}=5";
-			reporte.DataDefinition.RecordSelectionFormula=SelFormula;
-			rptHelper.setPermission(reporte);
-			reportName = rptHelper.exportReport(reporte,"PartidasColorReport",User.Identity.Name);
-
-			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
-			Response.Redirect(redirectPath);
-		}
+			catch (Exception ex)
+				{
+					Response.Write("<pre>");
+					Response.Write(Server.HtmlEncode(ex.ToString()));
+					Response.Write("</pre>");
+					Response.End();
+				}
+}
 
 		/*** agregado por alejandro.hernandez@nasoft.com 03/03/2006 ***/
 		private void ImprimeAditivos()
@@ -2686,9 +2708,19 @@ namespace UserInterface.Forms.Reports
 			String sFechaIni = this.txtFechaInicial.Text;
 			String sFechaFin = this.txtFechaFinal.Text;
 
-			if(sFechaIni=="" || sFechaFin=="")
+			UserInterface.Helpers.Funciones fn = new UserInterface.Helpers.Funciones();
+			sFechaIni = fn.ConvertirFechaMesNumero(sFechaIni);
+			sFechaFin = fn.ConvertirFechaMesNumero(sFechaFin);
+
+			if (sFechaIni=="" || sFechaFin=="")
 			{
-				Page.RegisterStartupScript("ClientScript","<script language=JavaScript>alert('Favor de especificar fecha inicial y final');</script>");		
+				ClientScript.RegisterStartupScript(
+					  this.GetType(),
+					  "FechaRequerida",
+					  "SicalAlert.mostrar('Favor de especificar fecha inicial y final');",
+					  true
+				  );
+
 				return;
 			}
 
@@ -2869,6 +2901,11 @@ namespace UserInterface.Forms.Reports
 			redirectPath=ConfigurationManager.AppSettings["reportsWebPath"]+ reportName +  ".pdf";
 			Response.Redirect(redirectPath);
 		}
-		// ********************
-	}
+
+        protected void cmdReporteInspeccion_Click1(object sender, EventArgs e)
+        {
+
+        }
+        // ********************
+    }
 }

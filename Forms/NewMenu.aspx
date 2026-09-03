@@ -47,7 +47,7 @@
 		<form id="NewMenu" method="post" runat="server">
 			<div align="center">
 				<table border="0" cellSpacing="0" cellPadding="0" width="800">
-					<tr>						
+					<tr class="sical-menu-row">						
                         <td align="left" colSpan="4">
 							<div id="sicalMenu"></div>
 						</td>

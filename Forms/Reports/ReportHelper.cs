@@ -110,8 +110,13 @@ namespace UserInterface.Forms.Reports
 						
 					}
 				}
-				catch // (Exception exe)
+				catch (Exception ex)
 				{
+					throw new Exception(
+						"Error Crystal Reports en tabla " + tbl.Name +
+						": " + ex.Message,
+						ex
+					);
 				}
 			}			
 		}

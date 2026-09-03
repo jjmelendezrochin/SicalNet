@@ -30,7 +30,7 @@ html {
 
 body {
     margin: 0;
-    padding: 10px;
+    padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #263746;
@@ -1986,4 +1986,50 @@ button.btn-cancelar,
     background-color: #0B628C;
     color: white;
     font-weight: bold;
+}
+
+
+
+/* =========================================================
+   AJUSTE DEL MENÚ PRINCIPAL EN PÁGINAS INTERNAS
+   ========================================================= */
+
+#sicalMenu {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+    #sicalMenu table,
+    #sicalMenu ul,
+    #sicalMenu nav {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+/* Los formularios WebForms no deben generar separación */
+form {
+    margin: 0;
+    padding: 0;
+}
+
+#sicalMenu {
+    position: relative;
+}
+
+
+.sical-menu-row {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.sical-menu-row td {
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: top !important;
+}
+
+#sicalMenu {
+    margin: 0 !important;
+    padding: 0 !important;
 }

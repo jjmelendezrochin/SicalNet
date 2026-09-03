@@ -36,7 +36,7 @@
 	<body MS_POSITIONING="GridLayout" onload="ShowTitle()">
 		<form id="ConsultSeparacionWO" method="post" runat="server">
 			<table align="center" style="BORDER-COLLAPSE: collapse">
-				<tr>
+				<tr class="sical-menu-row">
 					<td align="left" colSpan="5">
 						<div id="sicalMenu"></div>
 					</td>

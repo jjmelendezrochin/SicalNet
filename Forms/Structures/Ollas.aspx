@@ -33,7 +33,7 @@
 			<div align="center">
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
 					<TBODY>
-						<tr>
+						<tr class="sical-menu-row">
 							<td class="contenido" colSpan="3">
 								<div id="sicalMenu"></div>
 							</td>

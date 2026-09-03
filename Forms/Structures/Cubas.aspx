@@ -50,7 +50,7 @@
 			<div align="center">
 				<table border="0" cellSpacing="0" cellPadding="0" width="846" style="align-items:center">
 					<TBODY>
-						<tr>
+						<tr class="sical-menu-row">
 							<td class="contenido" colSpan="3">
 								<div id="sicalMenu"></div>
 							</td>

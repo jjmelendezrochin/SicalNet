@@ -62,7 +62,7 @@
         onsubmit="return checkInputFile();">
         <table style="border-collapse: collapse" width="700" align="center">
             <tbody>
-                <tr>
+                <tr class="sical-menu-row"
                     <td align="left" colspan="5">
                         <div id="sicalMenu"></div>
                     </td>

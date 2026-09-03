@@ -28,7 +28,7 @@
     <form id="Bitacora" method="post" runat="server">
         <div align="center">
             <table cellspacing="0" cellpadding="0" border="0" width="740">
-                <tr>
+                <tr class="sical-menu-row">
                     <td valign="top" align="center">
                         <div id="sicalMenu"></div>
                     </td>

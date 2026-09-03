@@ -36,7 +36,7 @@
 
     <form id="ConsultReactionWO1" method="post" runat="server">
         <table align="center" width="100">
-            <tr>
+            <tr class="sical-menu-row">
                 <td align="left" colspan="5">
                     <div id="sicalMenu"></div>
                 </td>

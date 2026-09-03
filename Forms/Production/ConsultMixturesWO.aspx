@@ -34,7 +34,7 @@
 	<body onload="ShowTitle();" MS_POSITIONING="GridLayout">
 		<form id="ConsultMixturesWO" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" align="center">
-				<tr>
+				<tr class="sical-menu-row">
 					<td colSpan="5" align="left">
 						<div id="sicalMenu"></div>
 					</td>

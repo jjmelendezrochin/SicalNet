@@ -690,6 +690,10 @@ namespace UserInterface.Forms.Reports
 			pIns.DefectsRpt(string.Empty,string.Empty,Convert.ToInt32(cmbMedida.SelectedItem.Value),cmbColor.SelectedItem.Value,Convert.ToInt32(cmbFamilia.SelectedItem.Value),Prg_Ini,Prg_Fin,Lib_Ini,Lib_Fin,Convert.ToInt32(cmbLinea.SelectedItem.Value));
 			*/
 
+			UserInterface.Helpers.Funciones fn = new UserInterface.Helpers.Funciones();
+			txtFechaInicial.Text = fn.ConvertirFechaMesNumero(txtFechaInicial.Text);
+			txtFechaFinal.Text = fn.ConvertirFechaMesNumero(txtFechaFinal.Text);
+
 			Reports.ReportHelper rptHelper = new Reports.ReportHelper();
 			Reports.ProduccionRptSAP reporte = new Reports.ProduccionRptSAP();
 

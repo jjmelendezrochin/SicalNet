@@ -86,7 +86,7 @@
 		<form id="ConsultAditivosWO" method="post" runat="server">
 			<table style="BORDER-COLLAPSE: collapse" align="center">
 				<TBODY>
-					<tr>
+					<tr class="sical-menu-row">
 						<td colSpan="5" align="left">
 							<div id="sicalMenu"></div>
 						</td>

@@ -50,7 +50,7 @@
 
 					<TBODY>
 						<!-- MENÚ -->
-						<tr>
+						<tr class="sical-menu-row">
 							<td class="contenido">
 								<div id="sicalMenu"></div>
 							</td>
