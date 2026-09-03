@@ -31,13 +31,17 @@
 	<body text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0" onload="ShowTitle()" marginheight="0" marginwidth="0">
 		<form id="OllasForm" method="post" runat="server">
 			<div align="center">
+				<table style="border-collapse: collapse; margin-top: 0; padding-top: 0;"; width="1000"; align="center">
+					<tbody>
+					<tr class="sical-menu-row">
+						<td class="contenido" colSpan="3">
+							<div id="sicalMenu"></div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
 				<table cellSpacing="0" cellPadding="0" width="740" border="0">
-					<TBODY>
-						<tr class="sical-menu-row">
-							<td class="contenido" colSpan="3">
-								<div id="sicalMenu"></div>
-							</td>
-						</tr>
+					<TBODY>						
 						<tr>
 							<td width="20">&nbsp;</td>
 							<td width="700"><IMG height="7" src="imagenes/ico-bullet.gif" width="7">&nbsp;

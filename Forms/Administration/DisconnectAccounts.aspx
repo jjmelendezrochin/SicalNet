@@ -65,7 +65,7 @@
 	</HEAD>
 	<body onload="ShowTitle()">
 		<form id="ConsultColorWO" method="post" runat="server">
-			<table style="BORDER-COLLAPSE: collapse" height="227" width="80%" align="center">
+			<table style="BORDER-COLLAPSE: collapse" height="227" width="1000" align="center">
 				<TBODY>
 					<tr class="sical-menu-row">
 						<td align="left" colSpan="4">
@@ -286,7 +286,7 @@
 
                                     <HeaderStyle
                                         HorizontalAlign="Center"
-                                        Width="8%"
+                                        Width="15%"
                                         CssClass="grid-header"
                                         VerticalAlign="Middle">
                                     </HeaderStyle>

@@ -51,13 +51,17 @@
 		bgColor="#ffffff" text="#000000" marginheight="0" marginwidth="0">
 		<form id="OllasForm" method="post" runat="server">
 			<div align="center">
+				<table style="border-collapse: collapse; margin-top: 0; padding-top: 0;"; width="1000"; align="center">
+					<tbody>
+					<tr class="sical-menu-row">
+						<td class="contenido" colSpan="3">
+							<div id="sicalMenu"></div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
 				<table border="0" cellSpacing="0" cellPadding="0" width="846">
-					<TBODY>
-						<tr class="sical-menu-row">
-							<td class="contenido" colSpan="3">
-								<div id="sicalMenu"></div>
-							</td>
-						</tr>
+					<TBODY>						
 						<tr>
 							<td width="20">&nbsp;</td>
 							<td width="700"><IMG src="imagenes/ico-bullet.gif" width="7" height="7">&nbsp;
