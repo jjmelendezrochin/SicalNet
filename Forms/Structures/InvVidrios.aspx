@@ -58,20 +58,25 @@
 		marginwidth="0" marginheight="0">
 		<form id="MedidaForm" method="post" runat="server">
 			<DIV align="center">
-				<table border="0" cellSpacing="0" cellPadding="0" width="80%">
-					<tr>
-						<td class="contenido"colSpan="2">
-							<div id="sicalMenu"></div>
-						</td>
-					</tr>
-					<tr>
-						<td width="20">&nbsp;</td>
-						<td width="700"><IMG src="imagenes/ico-bullet.gif" width="7" height="7">&nbsp;
+				<table style="border-collapse: collapse; margin-top: 0; padding-top: 0;"; width="1000"; align="center">
+					<tbody>
+                        <tr class="sical-menu-row">
+                            <td align="left" colspan="4" style="padding: 0; margin: 0; vertical-align: top;">
+                                <div id="sicalMenu"></div>
+                            </td>
+                        </tr>
+					</tbody>
+				</table>
+				<table border="0" cellSpacing="0" cellPadding="0" width="80%">					
+                    <tr>
+                        <td width="20">&nbsp;</td>
+                        <td width="700">
+                            <img src="imagenes/ico-bullet.gif" width="7" height="7">&nbsp;
 							<span class="titulo">
-								<SPAN class="letraAzulBold">Inventario de Vidrios</SPAN>
-							</span></td>
-						<td width="20">&nbsp;</td>
-					</tr>
+                                <span class="letraAzulBold">Inventario de Vidrios</span>
+                            </span></td>
+                        <td width="20">&nbsp;</td>
+                    </tr>
 					<tr>
 						<td width="20">&nbsp;</td>
 						<td width="80%">
@@ -276,7 +281,7 @@
 					</tr>
 				</table>
 			</DIV>
-			</TR></TABLE>
+			
 			<DIV align="center">
 				<table style="Z-INDEX: 0" width="730" height="82">
 					<TR>

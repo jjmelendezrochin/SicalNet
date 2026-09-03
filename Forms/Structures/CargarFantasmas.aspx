@@ -60,13 +60,18 @@
 <body ms_positioning="GridLayout">
     <form id="LoadProduccionPrograma" method="post" enctype="multipart/form-data" runat="server"
         onsubmit="return checkInputFile();">
-        <table style="border-collapse: collapse" width="700" align="center">
+
+          <table style="border-collapse: collapse; margin-top: 0; padding-top: 0;"; width="1000"; align="center">
             <tbody>
-                <tr class="sical-menu-row"
-                    <td align="left" colspan="5">
+                <tr class="sical-menu-row">
+                    <td align="left" colspan="4"  style="padding: 0; margin: 0; vertical-align: top;">
                         <div id="sicalMenu"></div>
                     </td>
                 </tr>
+            </tbody>
+        </table>
+        <table style="border-collapse: collapse" width="700" align="center">
+            <tbody>                
                 <tr>
                     <td align="center" colspan="3">
                         <br>
