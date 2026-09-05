@@ -401,7 +401,6 @@
     <Content Include="Scripts\sical-calendario.js" />
     <Content Include="Scripts\sical-menu.js" />
     <Content Include="Css\nuevoestilo.css" />
-    <Content Include="Test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1433,10 +1432,6 @@
     </Compile>
     <Compile Include="Menu\MenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ARIALN.TTF" />

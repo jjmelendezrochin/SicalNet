@@ -17,10 +17,20 @@ namespace UserInterface.Forms
 	/// </summary>
 	public class topFrame : System.Web.UI.Page
 	{
-	
+
+		protected System.Web.UI.WebControls.Label lblUsuario;
 		private void Page_Load(object sender, System.EventArgs e)
-		{			
-	
+		{
+			SICALNet.BusinessEntities.UsuarioInfo objUsuarioInfo =
+				  new SICALNet.BusinessEntities.UsuarioInfo(User.Identity.Name);
+
+			SICALNet.BusinessLogicLayer.Usuario objUsuario =
+				new SICALNet.BusinessLogicLayer.Usuario();
+
+			SICALNet.BusinessEntities.UsuarioInfo objUser =
+				objUsuario.Load(objUsuarioInfo);
+
+			this.lblUsuario.Text = objUser.Nombre;
 		}
 
 		#region Web Form Designer generated code
