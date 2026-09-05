@@ -73,7 +73,7 @@ if (confirm("Esta seguro que desea editar este registro?")) {
 						Enabled="False"></asp:textbox></td>
 				<td style="HEIGHT: 23px" align="center">
 					<asp:button style="Z-INDEX: 0" id="cmdMostrarTodos" Text="Mostrar Todos" CssClass="botonesInput"
-						Width="84px" runat="server" CausesValidation="False"></asp:button></td>
+						Width="120px" runat="server" CausesValidation="False"></asp:button></td>
 				<td style="HEIGHT: 23px" align="center"><asp:button id="Button1" CssClass="botonesInput" Text="Buscar" runat="server" CausesValidation="False"></asp:button></td>
 			</tr>
 			<tr>

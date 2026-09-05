@@ -67,9 +67,10 @@
 					runat="server" CssClass="standard-text" Width="121px"></asp:textbox>
 				<asp:textbox id="txtSecInicial" style="Z-INDEX: 129; POSITION: absolute; TOP: 136px; LEFT: 464px"
 					runat="server" CssClass="standard-text" Width="121px"></asp:textbox>
-				<asp:button CssClass="botonesInput" id="cmdprint" style="Z-INDEX: 114; POSITION: absolute; TOP: 280px; LEFT: 752px"
+				<asp:button CssClass="botonesInput" id="cmdprint" style="Z-INDEX: 114; POSITION: absolute; TOP: 280px; LEFT: 780px;" Width="80px"
 					Runat="server" Text="Imprimir"></asp:button>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
 				<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" id="imgProgrammaFinal" style="Z-INDEX: 113; POSITION: absolute; TOP: 216px; LEFT: 912px"
 					Runat="server" AlternateText="Inicial Date" ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton>
 				<asp:imagebutton OnClientClick="return GetDate(document.forms[0].elements['txtLibFinal'].value,'txtLibFinal');" id="imgLieractionFinal" style="Z-INDEX: 112; POSITION: absolute; TOP: 216px; LEFT: 1080px"
@@ -95,7 +96,9 @@
 				<asp:label CssClass="standard-text" id="LblLiberacion1" style="Z-INDEX: 109; POSITION: absolute; TOP: 104px; LEFT: 968px"
 					runat="server" Width="152px" Height="22px">Fecha Liberacion inicial</asp:label>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<asp:button CssClass="botonesInput" id="cmdCancelar" style="Z-INDEX: 115; POSITION: absolute; TOP: 280px; LEFT: 832px"
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<asp:button CssClass="botonesInput" id="cmdCancelar" style="Z-INDEX: 115; POSITION: absolute; TOP: 280px; left: 990px;"
 					Runat="server" Text="Regresar"></asp:button>
 				<asp:dropdownlist id="cboFamilia" style="Z-INDEX: 116; POSITION: absolute; TOP: 216px; LEFT: 288px"
 					runat="server" Width="152px" Height="24px" CssClass="standard-text"></asp:dropdownlist>

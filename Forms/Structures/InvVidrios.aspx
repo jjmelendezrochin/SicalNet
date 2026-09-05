@@ -1,4 +1,4 @@
-<%@ Register TagPrefix="uc1" TagName="InventarioVidrios" Src="../../Controls/InventarioVidrios.ascx" %>
+ï»¿<%@ Register TagPrefix="uc1" TagName="InventarioVidrios" Src="../../Controls/InventarioVidrios.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="TarjetaVidriosHistorial" Src="../../Controls/TarjetaVidriosHistorial.ascx" %>
 <%@ Register TagPrefix="uc1" TagName="TarjetaVidriosPlanimetria" Src="../../Controls/TarjetaVidriosPlanimetria.ascx" %>
 <%@ Page language="c#" Codebehind="InvVidrios.aspx.cs" AutoEventWireup="false" Inherits="UserInterface.Forms.Structures.InvVidrios" %>
@@ -10,22 +10,18 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <HTML>
 	<HEAD>
-		<title>Guía de estilo</title>
-		<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+		<title>GuÃ­a de estilo</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		
-
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/sical-menu.css") %>" />
 		<link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Css/nuevoestilo.css") %>" />
 
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-menu.js") %>"></script>
 		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-alertas.js") %>"></script>
+		<script type="text/javascript" src="<%= ResolveUrl("~/Scripts/sical-calendario.js") %>"></script>
 		
 		<script language="JavaScript">
 			<!--
-			function GetDate(CtrlName)        
-			{   
-				ChildWindow = window.open('..\\Production\\Calendar.aspx?FormName=' + document.forms[0].name + '&CtrlName=' + CtrlName + '&txtDate=' + document.forms[0].elements[CtrlName].value, "PopUpCalendar", "width=250,height=300,top=200,left=200,toolbars=no,scrollbars=no,status=no,resizable=no");
-			} 
 			
 			function MM_reloadPage(init) {  //reloads the window if Nav4 resized
 			  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
@@ -41,7 +37,7 @@
 			//-->
 			function ShowTitle()
 			{
-					window.frames["top"].document.title = "SICAL  - Catálogos - Catálogo de Tamaño de Vidrios"
+					window.frames["top"].document.title = "SICAL  - CatÃ¡logos - CatÃ¡logo de TamaÃ±o de Vidrios"
 			}
         </script>
 		
@@ -99,8 +95,9 @@
 											<TR>
 												<TD width="50%"><asp:textbox id="txtIdVidrio" runat="server" CssClass="standard-text" Height="21px" Enabled="False"
 														Width="24px"></asp:textbox></TD>
-												<TD><asp:textbox style="Z-INDEX: 0" id="txtFechaCapa" runat="server" CssClass="standard-text" Width="100px"></asp:textbox><asp:image style="Z-INDEX: 0" id="Image1" onmouseup="GetDate('txtFechaCapa');" ImageUrl="../../Images/icon-calendar.gif"
-														AlternateText="Inicial Date" Runat="server"></asp:image><asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator5" runat="server" ControlToValidate="txtFechaCapa"
+												<TD><asp:textbox style="Z-INDEX: 0" id="txtFechaCapa" runat="server" CssClass="standard-text" Width="100px"></asp:textbox>
+													<asp:imagebutton style="Z-INDEX: 0" id="Image1" onmouseup="GetDate(document.forms[0].elements['txtFechaCapa'].value,'txtFechaCapa');" ImageUrl="../../Images/icon-calendar.gif"
+														AlternateText="Inicial Date" Runat="server"></asp:imagebutton><asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator5" runat="server" ControlToValidate="txtFechaCapa"
 														ErrorMessage="Fecha de Capa es un campo requerido">*</asp:requiredfieldvalidator></TD>
 											<TR>
 												<TD width="50%"><asp:label id="Label4" runat="server" CssClass="standard-text">Clave Fabricante:</asp:label></TD>
@@ -109,8 +106,9 @@
 											<TR>
 												<TD width="50%"><asp:textbox id="txtClaveFabricante" runat="server" CssClass="standard-text" Height="21px" Width="100px"></asp:textbox><asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator3" runat="server" ControlToValidate="txtClaveFabricante"
 														ErrorMessage="Fabricante es un campo requerido">*</asp:requiredfieldvalidator></TD>
-												<TD><asp:textbox style="Z-INDEX: 0" id="txtFechaInicio" runat="server" CssClass="standard-text" Width="100px"></asp:textbox><asp:image style="Z-INDEX: 0" id="imgFrom" onmouseup="GetDate('txtFechaInicio');" ImageUrl="../../Images/icon-calendar.gif"
-														AlternateText="Inicial Date" Runat="server"></asp:image><asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator4" runat="server" ControlToValidate="txtFechaInicio"
+												<TD><asp:textbox style="Z-INDEX: 0" id="txtFechaInicio" runat="server" CssClass="standard-text" Width="100px"></asp:textbox>
+													<asp:imagebutton style="Z-INDEX: 0" id="imgFrom" onmouseup="GetDate(document.forms[0].elements['txtFechaInicio'].value,'txtFechaInicio');" ImageUrl="../../Images/icon-calendar.gif"
+														AlternateText="Inicial Date" Runat="server"></asp:imagebutton><asp:requiredfieldvalidator style="Z-INDEX: 0" id="Requiredfieldvalidator4" runat="server" ControlToValidate="txtFechaInicio"
 														ErrorMessage="Fecha de Inicio es un campo requerido">*</asp:requiredfieldvalidator></TD>
 											</TR>
 											<TR>
@@ -131,7 +129,7 @@
 														<asp:ListItem Value="-- Tama&#241;o --" Selected="True">-- Tama&#241;o --</asp:ListItem>
 													</asp:dropdownlist></TD>
 												<TD><asp:dropdownlist id="cboClasificacionCalidad" runat="server" CssClass="standard-text">
-														<asp:ListItem Selected="True">-- Clasificación --</asp:ListItem>
+														<asp:ListItem Selected="True">-- ClasificaciÃ³n --</asp:ListItem>
 													</asp:dropdownlist></TD>
 											</TR>
 											<TR>
@@ -147,7 +145,7 @@
 													</asp:dropdownlist></TD>
 											</TR>
 											<TR>
-												<TD width="50%"><asp:label id="Label12" runat="server" CssClass="standard-text">Línea:</asp:label></TD>
+												<TD width="50%"><asp:label id="Label12" runat="server" CssClass="standard-text">LÃ­nea:</asp:label></TD>
 												<TD width="50%"><asp:label id="Label13" runat="server" CssClass="standard-text">Lote:</asp:label></TD>
 											</TR>
 											<TR>
@@ -157,21 +155,21 @@
 												<TD height="27"><asp:textbox id="txtLote" runat="server" CssClass="standard-text" Width="90px"></asp:textbox></TD>
 											</TR>
 											<TR>
-												<TD width="50%"><asp:label style="Z-INDEX: 0" id="Label15" runat="server" CssClass="standard-text" Width="179px">Clasificación Conservación:</asp:label></TD>
+												<TD width="50%"><asp:label style="Z-INDEX: 0" id="Label15" runat="server" CssClass="standard-text" Width="179px">ClasificaciÃ³n ConservaciÃ³n:</asp:label></TD>
 												<TD width="50%">
 													<P><asp:label style="Z-INDEX: 0" id="Label16" runat="server" CssClass="standard-text" Width="56px">Espesor:</asp:label></P>
 												</TD>
 											</TR>
 											<TR>
 												<TD width="50%"><asp:dropdownlist style="Z-INDEX: 0" id="cboClasificacionConservacion" runat="server" CssClass="standard-text">
-														<asp:ListItem Value="-- Linea --" Selected="True">-- Clasificación --</asp:ListItem>
+														<asp:ListItem Value="-- Linea --" Selected="True">-- ClasificaciÃ³n --</asp:ListItem>
 													</asp:dropdownlist></TD>
 												<TD><asp:dropdownlist style="Z-INDEX: 0" id="cboEspesor" runat="server" CssClass="standard-text">
 														<asp:ListItem Value="-- Espesor --" Selected="True">-- Espesor --</asp:ListItem>
 													</asp:dropdownlist></TD>
 											</TR>
 											<TR>
-												<TD width="50%"><asp:label style="Z-INDEX: 0" id="Label2" runat="server" CssClass="standard-text" Width="179px">Costo de factura en dólares:</asp:label></TD>
+												<TD width="50%"><asp:label style="Z-INDEX: 0" id="Label2" runat="server" CssClass="standard-text" Width="179px">Costo de factura en dÃ³lares:</asp:label></TD>
 												<TD width="50%">
 													<P><asp:label style="Z-INDEX: 0" id="Label17" runat="server" CssClass="standard-text" Width="152px">Costo de factura en pesos:</asp:label></P>
 												</TD>
@@ -187,33 +185,36 @@
 												</TD>
 											</TR>
 											<TR>
-												<TD width="50%"><asp:textbox style="Z-INDEX: 0" id="txtFechaRotura" runat="server" CssClass="standard-text" Width="100px"></asp:textbox><asp:image style="Z-INDEX: 0" id="Image4" onmouseup="GetDate('txtFechaRotura');" ImageUrl="../../Images/icon-calendar.gif"
-														AlternateText="Inicial Date" Runat="server"></asp:image></TD>
+												<TD width="50%"><asp:textbox style="Z-INDEX: 0" id="txtFechaRotura" runat="server" CssClass="standard-text" Width="100px"></asp:textbox>
+													<asp:imagebutton style="Z-INDEX: 0" id="Image4" onmouseup="GetDate(document.forms[0].elements['txtFechaRotura'].value,'txtFechaRotura');" ImageUrl="../../Images/icon-calendar.gif"
+														AlternateText="Inicial Date" Runat="server"></asp:imagebutton></TD>
 												<TD></TD>
 											</TR>
 											<TR>
-												<TD width="50%"><asp:label style="Z-INDEX: 0" id="Label14" runat="server" CssClass="standard-text" Width="179px">Fecha Amortización:</asp:label></TD>
+												<TD width="50%"><asp:label style="Z-INDEX: 0" id="Label14" runat="server" CssClass="standard-text" Width="179px">Fecha AmortizaciÃ³n:</asp:label></TD>
 												<TD width="50%">
 													<P><asp:label style="Z-INDEX: 0" id="Label18" runat="server" CssClass="standard-text" Width="152px">Causa:</asp:label></P>
 												</TD>
 											</TR>
 											<TR>
 												<TD width="50%"><asp:textbox style="Z-INDEX: 0" id="txtFechaAmortizacion" runat="server" CssClass="standard-text"
-														Width="100px"></asp:textbox><asp:image style="Z-INDEX: 0" id="Image2" onmouseup="GetDate('txtFechaAmortizacion');" ImageUrl="../../Images/icon-calendar.gif"
-														AlternateText="Inicial Date" Runat="server"></asp:image></TD>
+														Width="100px"></asp:textbox>
+													<asp:imagebutton style="Z-INDEX: 0" id="Image2" onmouseup="GetDate(document.forms[0].elements['txtFechaAmortizacion'].value,'txtFechaAmortizacion');" ImageUrl="../../Images/icon-calendar.gif"
+														AlternateText="Inicial Date" Runat="server"></asp:imagebutton></TD>
 												<TD><asp:dropdownlist style="Z-INDEX: 0" id="cboCausaAmortizacion" runat="server" CssClass="standard-text">
 														<asp:ListItem Value="-- Tipo --" Selected="True">-- Causa --</asp:ListItem>
 													</asp:dropdownlist></TD>
 											</TR>
 											<TR>
-												<TD width="50%"><asp:label style="Z-INDEX: 0" id="Label19" runat="server" CssClass="standard-text" Width="179px">Fecha Daño:</asp:label></TD>
+												<TD width="50%"><asp:label style="Z-INDEX: 0" id="Label19" runat="server" CssClass="standard-text" Width="179px">Fecha DaÃ±o:</asp:label></TD>
 												<TD width="50%">
 													<P><asp:label style="Z-INDEX: 0" id="Label20" runat="server" CssClass="standard-text" Width="152px">Causa:</asp:label></P>
 												</TD>
 											</TR>
 											<TR>
-												<TD width="50%"><asp:textbox style="Z-INDEX: 0" id="txtFechaDanio" runat="server" CssClass="standard-text" Width="100px"></asp:textbox><asp:image style="Z-INDEX: 0" id="Image3" onmouseup="GetDate('txtFechaDanio');" ImageUrl="../../Images/icon-calendar.gif"
-														AlternateText="Inicial Date" Runat="server"></asp:image></TD>
+												<TD width="50%"><asp:textbox style="Z-INDEX: 0" id="txtFechaDanio" runat="server" CssClass="standard-text" Width="100px"></asp:textbox>
+													<asp:imagebutton style="Z-INDEX: 0" id="Image3" onmouseup="GetDate(document.forms[0].elements['txtFechaDanio'].value,'txtFechaDanio');" ImageUrl="../../Images/icon-calendar.gif"
+														AlternateText="Inicial Date" Runat="server"></asp:imagebutton></TD>
 												<TD><asp:dropdownlist style="Z-INDEX: 0" id="cboCausaDanio" runat="server" CssClass="standard-text">
 														<asp:ListItem Value="-- Tipo --" Selected="True">-- Causa --</asp:ListItem>
 													</asp:dropdownlist></TD>
@@ -240,8 +241,8 @@
 														</tr>
 													</TABLE>
 													<P><asp:regularexpressionvalidator style="Z-INDEX: 0" id="RegularExpressionValidator2" runat="server" Width="328px"
-															ControlToValidate="txtNumeroVidrio" ErrorMessage="Clave Interna debe ser numérica" Font-Size="Smaller" ValidationExpression="[0-9]*"></asp:regularexpressionvalidator><asp:regularexpressionvalidator style="Z-INDEX: 0" id="RegularExpressionValidator1" runat="server" Width="304px"
-															ControlToValidate="txtLote" ErrorMessage="Lote debe ser numérico" Font-Size="Smaller" ValidationExpression="[0-9]*"></asp:regularexpressionvalidator></P>
+															ControlToValidate="txtNumeroVidrio" ErrorMessage="Clave Interna debe ser numÃ©rica" Font-Size="Smaller" ValidationExpression="[0-9]*"></asp:regularexpressionvalidator><asp:regularexpressionvalidator style="Z-INDEX: 0" id="RegularExpressionValidator1" runat="server" Width="304px"
+															ControlToValidate="txtLote" ErrorMessage="Lote debe ser numÃ©rico" Font-Size="Smaller" ValidationExpression="[0-9]*"></asp:regularexpressionvalidator></P>
 												</TD>
 											</TR>
 										</TABLE>
@@ -256,7 +257,7 @@
 													<TABLE id="Table4" width="100%" height="100%">
 														<TR>
 															<TD align="left"><asp:label style="Z-INDEX: 0" id="lblTarjeta" runat="server" CssClass="standard-text" Font-Size="X-Small"
-																	Font-Bold="True">Tarjeta de Identificación de Vidrios</asp:label></TD>
+																	Font-Bold="True">Tarjeta de IdentificaciÃ³n de Vidrios</asp:label></TD>
 														</TR>
 														<TR>
 															<TD align="left"><uc1:tarjetavidrioshistorial id="TarjetaVidriosHistorial1" runat="server"></uc1:tarjetavidrioshistorial></TD>
@@ -299,17 +300,17 @@
 								Width="71px" Height="15px">Fecha Inicial</asp:label>
 							<asp:textbox style="Z-INDEX: 0" id="txtFechaInicial" runat="server" CssClass="standard-text"
 								Width="121px" BorderStyle="Groove"></asp:textbox>
-							<asp:imagebutton style="Z-INDEX: 0" id="imgFInicial" onmouseup="GetDate('txtFechaInicial');" runat="server"
+							<asp:imagebutton style="Z-INDEX: 0" id="imgFInicial" onmouseup="GetDate(document.forms[0].elements['txtFechaInicial'].value,'txtFechaInicial');" runat="server"
 								ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></td>
 						<TD height="24">
 							<asp:label style="Z-INDEX: 0" id="Label23" runat="server" CssClass="standard-text" Width="72px"
 								Height="13px">Fecha Final</asp:label>
 							<asp:textbox style="Z-INDEX: 0" id="txtFechaFinal" runat="server" CssClass="standard-text" Width="121px"
 								BorderStyle="Groove"></asp:textbox>
-							<asp:imagebutton style="Z-INDEX: 0" id="imgFFinal" onmouseup="GetDate('txtFechaFinal');" runat="server"
+							<asp:imagebutton style="Z-INDEX: 0" id="imgFFinal" onmouseup="GetDate(document.forms[0].elements['txtFechaFinal'].value,'txtFechaFinal');" runat="server"
 								ImageUrl="../../Images/icon-calendar.gif"></asp:imagebutton></TD>
 						<TD height="24">
-							<asp:label style="Z-INDEX: 0" id="Label24" runat="server" CssClass="standard-text" Width="104px">Clasificación:</asp:label><br>
+							<asp:label style="Z-INDEX: 0" id="Label24" runat="server" CssClass="standard-text" Width="104px">ClasificaciÃ³n:</asp:label><br>
 							<asp:dropdownlist style="Z-INDEX: 0" id="cboClasificacionReporte" runat="server" CssClass="standard-text"
 								Width="108px">
 								<asp:ListItem Value="-- Clasificaci&#243;n --" Selected="True">-- Clasificaci&#243;n --</asp:ListItem>
@@ -323,11 +324,11 @@
 						</td>
 						<td width="156" align="center">
 							<asp:button style="Z-INDEX: 0" id="cmdReporteUsoxLinea" runat="server" CssClass="botonesInput"
-								Width="150px" Text="Reporte Uso x Línea" CausesValidation="False"></asp:button></td>
+								Width="150px" Text="Reporte Uso x LÃ­nea" CausesValidation="False"></asp:button></td>
 						<td align="center" colspan="3">
 							<asp:button style="Z-INDEX: 0" id="cmdReporteRDA" runat="server" CssClass="botonesInput" 
 								Width="250px"
-								Text="Reporte Rotos, Dañados y Amortizados" CausesValidation="False"></asp:button></td>
+								Text="Reporte Rotos, DaÃ±ados y Amortizados" CausesValidation="False"></asp:button></td>
 					</TR>
 				</table>
 			</DIV>

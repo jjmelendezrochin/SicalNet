@@ -29,6 +29,7 @@ bin/*.dll
 bin/UserInterface.dll
 bin/UserInterface.pdb
 obj/*
+Reportes/*
 
 # Resultados de compilación
 *.dll
