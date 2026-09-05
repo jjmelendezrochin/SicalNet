@@ -4,7 +4,7 @@
 <HTML>
 	<HEAD>
 		<title>Bitácora de piso</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<LINK href="../../styloDESC.CSS" type="text/css" rel="stylesheet">
 	</HEAD>
 	<body text="#000000" bgColor="#ffffff" leftMargin="0" topMargin="0" marginwidth="0" marginheight="0"

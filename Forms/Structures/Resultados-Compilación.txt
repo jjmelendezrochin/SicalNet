@@ -1,0 +1,4 @@
+﻿Operación Compilar iniciada..
+1>------ Operación Compilar iniciada: proyecto: UserInterface, configuración: Debug Any CPU ------
+1>  UserInterface -> C:\inetpub\wwwroot\SicalNET\bin\UserInterface.dll
+========== Compilar: 1 correctos, 0 incorrectos, 5 actualizados, 0 omitidos ==========
